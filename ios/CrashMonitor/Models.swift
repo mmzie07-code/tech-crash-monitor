@@ -24,7 +24,7 @@ struct Snapshot: Codable {
 
 enum API {
     // Point at wherever the daily engine publishes latest.json (static host or API).
-    static let url = URL(string: "http://localhost:4175/data/latest.json")!
+    static let url = URL(string: "https://mmzie07-code.github.io/tech-crash-monitor/data/latest.json")!
     static func load() async throws -> Snapshot {
         let (data, _) = try await URLSession.shared.data(from: url)
         return try JSONDecoder().decode(Snapshot.self, from: data)
