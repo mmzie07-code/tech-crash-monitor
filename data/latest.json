@@ -1,12 +1,12 @@
 {
  "date": "2026-09-29",
- "generated": "2026-09-29T16:52:49.462346Z",
- "level": "Low",
- "score": 17,
+ "generated": "2026-09-29T22:22:15.503105Z",
+ "level": "Elevated",
+ "score": 29,
  "stretch": 33,
- "trigger": 0,
- "warnings": 2,
- "evaluated": 7,
+ "trigger": 20,
+ "warnings": 3,
+ "evaluated": 8,
  "total": 10,
  "checks": [
   {
@@ -14,9 +14,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 30.0,
+   "value": 30.1,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 30.0; price is 10.5% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 30.1; price is 10.7% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -26,9 +26,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": 4.9,
+   "value": 4.7,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved +4.9% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved +4.7% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -62,9 +62,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "warn",
-   "value": 0.79,
+   "value": 0.78,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 5.27%, +0.79 pts over 3 months.",
+   "detail": "10Y yield 5.26%, +0.78 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -86,9 +86,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 16.2,
+   "value": 16.0,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 16.2 is 1.02x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 16.0 is 1.01x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -98,9 +98,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "ok",
-   "value": -1.4,
+   "value": -1.3,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -1.4% from 1y high; above 50-day, above 200-day avg.",
+   "detail": "QQQ -1.3% from 1y high; above 50-day, above 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -109,11 +109,11 @@
    "id": 9,
    "name": "Insider selling",
    "group": "trigger",
-   "status": "unknown",
-   "value": null,
-   "threshold": null,
-   "detail": "SEC EDGAR unreachable or no history",
-   "source": "not yet connected",
+   "status": "warn",
+   "value": 2.13,
+   "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1794M in 90 days vs $842M per-90d baseline (2.13x); bought $0.0M.",
+   "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
   },
@@ -122,15 +122,15 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "ok",
-   "value": 7.5,
+   "value": 7.2,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH +12.1% over 10 days (+7.5 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH +12.0% over 10 days (+7.2 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 736.63,
+ "qqq_last": 737.93,
  "qqq_series": [
   [
    "2025-10-01",
@@ -1130,7 +1130,7 @@
   ],
   [
    "2026-09-29",
-   736.63
+   737.93
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns."
