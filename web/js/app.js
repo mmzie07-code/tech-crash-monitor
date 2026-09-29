@@ -1,5 +1,6 @@
 const $ = (s) => document.querySelector(s);
-const state = { snap: null, mk: null, done: {} };
+const state = { snap: null, mk: null, brief: null, done: {} };
+const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 try { state.done = JSON.parse(localStorage.getItem("ml_done") || "{}"); } catch (e) {}
 const saveDone = () => { try { localStorage.setItem("ml_done", JSON.stringify(state.done)); } catch (e) {} };
 const DISC = "Educational content only. Not investment advice. Investing involves risk, including loss of money, and short-term forecasts, including ours, are frequently wrong.";
@@ -11,7 +12,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk] = await Promise.all([loadJson("latest.json"), loadJson("markets.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -38,6 +39,7 @@ function home() {
   <p class="lead">Plain-English lessons for people starting out, and a daily view of the whole market for people who already are: stocks, sectors, rates, and the risks building underneath. Real data, honest limits, no hype.</p>
   <a class="btn" href="#/learn">Start the crash course</a><a class="btn ghost" href="#/markets">See today's markets</a></section>
   <h2 style="margin-top:1.2em">Markets today</h2>${tiles(state.mk && state.mk.indices)}
+  ${state.brief ? `<a class="card" href="#/markets/brief" style="color:inherit;display:block;margin-top:14px"><span class="pill g">Daily brief</span><h3>${esc(state.brief.headline)}</h3><p class="small muted" style="margin:0">Read today's full brief →</p></a>` : ""}
   <div class="cards">
    <a class="card" href="#/learn" style="color:inherit"><span class="pill">Learn</span><h3>A crash course in 8 short lessons</h3><p class="muted">From "what is a stock?" to spotting bubbles. Quizzes, a glossary, and practice trading with fake money.</p><div class="bar"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><p class="small muted" style="margin:6px 0 0">${doneCount()} of ${MODULES.length} complete</p></a>
    <a class="card" href="#/markets" style="color:inherit"><span class="pill g">Markets</span><h3>The whole market, daily</h3><p class="muted">Indices, all 11 sectors, rates, the dollar, oil, gold and more, plus a daily briefing and outlooks from today to next year.</p></a></div>
@@ -71,6 +73,18 @@ function rowList(rows) {
    <div class="small" style="text-align:right;min-width:150px">${chg(r.d1, r.kind)} 1d<br>${chg(r.m1, r.kind)} 1m · ${chg(r.ytd, r.kind)} YTD</div></div>`).join("") : `<div class="muted">Data unavailable.</div>`;
 }
 
+function briefView() {
+  const d = state.brief;
+  if (!d) return `<div class="card muted">Today's brief isn't available yet.</div>`;
+  const link = (h) => /^https?:\/\//.test(h.link) ? `<a href="${esc(h.link)}" target="_blank" rel="noopener noreferrer">${esc(h.title)}</a>` : esc(h.title);
+  return `<div class="card big"><span class="pill g">Market close ${esc(d.date)}</span><h2 style="margin-top:8px">${esc(d.headline)}</h2>
+   ${d.summary ? `<p>${esc(d.summary)}</p><p class="small muted">Summary written by AI from the data below. It can contain mistakes.</p>` : ""}</div>
+   ${d.sections.map((s) => `<div class="card"><h3>${esc(s.title)}</h3><ul style="margin:.3em 0 0;padding-left:20px">${s.bullets.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}
+   <div class="card"><h3>Headlines</h3><p class="small muted">Titles and links only. Click through to read the full story at the source.</p>
+   ${d.headlines.map((h) => `<div class="item"><div><div>${link(h)}</div><div class="small muted">${esc(h.source)}</div></div></div>`).join("")}</div>
+   <p class="small muted">${esc(d.disclaimer)} New here? Start with the <a href="#/learn">crash course</a>.</p>`;
+}
+
 function markets(tab) {
   tab = tab || "overview"; const m = state.mk; let b = "";
   if (tab === "overview") {
@@ -83,9 +97,7 @@ function markets(tab) {
     <p class="small muted">Prices from Yahoo Finance, updated each trading day after the close${m ? " (snapshot " + m.indices[0].date + ")" : ""}. Sector figures use the SPDR sector ETFs.</p>
     <a class="card" href="#/watch" style="color:inherit;display:block"><span class="pill w">Featured</span><h3>AI &amp; Tech Watch</h3><p class="muted small" style="margin:0">Is there an AI bubble? Ten warning signs, tracked daily.</p></a>`;
   } else if (tab === "brief") {
-    b = `<div class="card"><span class="pill w">Coming next</span><h3>Today's briefing</h3>
-    <div class="ph">Each trading day, an AI-written summary of the biggest news across the whole market, what moved, and why it may matter, with sources linked. Not built yet.</div></div>
-    <div class="card"><h3>What's on the calendar</h3><div class="ph">Fed meetings, CPI, jobs data, and major earnings for the week ahead. Not built yet.</div></div>`;
+    b = briefView();
   } else {
     b = `<p class="muted">How current events could affect the market, by time horizon. These will be <b>scenarios with stated assumptions</b>, not predictions, and each will say what would prove it wrong.</p>
     <div class="hz">${HORIZONS.map(([h, d]) => `<div class="card"><h3>${h}</h3><p class="muted small">${d}</p><div class="ph">Not built yet</div></div>`).join("")}</div>`;

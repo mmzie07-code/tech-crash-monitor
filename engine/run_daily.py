@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets
+import markets, brief
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -46,6 +46,11 @@ def main():
         print("markets: %s" % {k: len(v) for k, v in mk.items() if isinstance(v, list)})
     except Exception as e:
         print("markets snapshot failed:", e)
+    try:
+        json.dump(brief.build(), open(os.path.join(DATA, "brief.json"), "w"), indent=1)
+        print("brief written")
+    except Exception as e:
+        print("brief failed:", e)
     print("%s  score=%s (%s)  stretch=%s trigger=%s  %d/%d warnings" % (
         snap["date"], s["score"], snap["level"], s["stretch"], s["trigger"], s["warnings"], s["evaluated"]))
     for c in checks:

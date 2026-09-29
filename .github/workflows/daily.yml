@@ -24,19 +24,20 @@ jobs:
       - name: Run engine
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: adds an AI-written summary paragraph
         run: python engine/run_daily.py
       - name: Save data back to the repo
         run: |
           git config user.name "crash-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/latest.json data/history.json data/markets.json data/cache/form4_*.json
+          git add data/latest.json data/history.json data/markets.json data/brief.json data/cache/form4_*.json
           git commit -m "Daily update $(date -u +%F)" || echo "no changes"
           git push
       - name: Assemble site
         run: |
           mkdir -p site/data
           cp -R web/. site/
-          cp data/latest.json data/history.json data/markets.json site/data/
+          cp data/latest.json data/history.json data/markets.json data/brief.json site/data/
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - id: deploy
