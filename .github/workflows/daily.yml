@@ -1,0 +1,44 @@
+name: Daily update
+on:
+  schedule:
+    - cron: "30 21 * * 1-5"   # 21:30 UTC weekdays = after the US close in both EST and EDT
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: daily
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install yfinance
+      - name: Run engine
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
+        run: python engine/run_daily.py
+      - name: Save data back to the repo
+        run: |
+          git config user.name "crash-monitor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/latest.json data/history.json data/cache/form4_*.json
+          git commit -m "Daily update $(date -u +%F)" || echo "no changes"
+          git push
+      - name: Assemble site
+        run: |
+          mkdir -p site/web site/data
+          cp web/index.html site/web/
+          cp data/latest.json data/history.json site/data/
+          echo '<meta http-equiv="refresh" content="0; url=web/">' > site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
