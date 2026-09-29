@@ -22,7 +22,7 @@ const MODULES = [
   { id: 3, title: "Risk and diversification", mins: 10, blurb: "Why not to put everything in one place, and what 'risk' really means." },
   { id: 4, title: "Index funds and ETFs", mins: 8, blurb: "The simple, low-cost way most long-term investors start." },
   { id: 5, title: "Reading charts and indicators", mins: 10, blurb: "Trends, averages, and what a chart can and cannot tell you." },
-  { id: 6, title: "Bubbles and crashes", mins: 12, blurb: "2000, 2008, 2022: what happened, and how our live monitor watches for warning signs." },
+  { id: 6, title: "Bubbles and crashes", mins: 12, blurb: "2000, 2008, 2022: what happened, and how our AI & Tech Watch monitors for warning signs." },
   { id: 7, title: "Scams, hype, and your own brain", mins: 9, blurb: "Meme stocks, pump-and-dumps, FOMO, and how to protect yourself." },
   { id: 8, title: "Building your plan", mins: 10, blurb: "Goals, time horizon, and practicing with paper trading before real money." }];
 

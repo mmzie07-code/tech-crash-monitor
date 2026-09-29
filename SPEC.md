@@ -1,11 +1,20 @@
-# Tech Crash Monitor: spec and roadmap
+# Market Lab (working name): spec and roadmap
+
+## Product (v0.3)
+An educational site for ages 16+ that covers the whole market, with AI/tech bubble tracking as one featured section.
+- **Learn**: 8-lesson crash course (lesson 1 built), glossary, quizzes, progress saved on-device. Paper trading planned.
+- **Markets**: indices, 11 sectors, rates/dollar/oil/gold/bitcoin, global indices (live). Daily brief and Today-to-next-year outlook (planned, scenario-based, never point predictions).
+- **AI & Tech Watch**: the 10-check crash-risk monitor described below.
+- Guardrails: no stock tips, no ads/tracking, no personal data, disclaimer on every page, honest about forecast limits.
+
+## Crash monitor (AI & Tech Watch)
 
 Goal: a daily 0-100 crash-risk score for AI/tech stocks, from a 10-item checklist, split into
 **stretch** (how fragile) and **trigger** (what could pop it). Web + iOS, later multi-user.
 
 ## Layout
 - `engine/`  Python 3 (stdlib only). `run_daily.py` fetches data, scores checks, writes `data/latest.json` + `data/history.json`.
-- `web/`     Static dashboard reading `data/latest.json`. Preview: `crash-monitor` server, then `/web/index.html`.
+- `web/`     The site (hash-routed static app: index.html, css/, js/). Content lives in `js/content.js`. Reads `data/latest.json` and `data/markets.json`.
 - `ios/`     SwiftUI source (needs full Xcode, not installed here; create an iOS App project and drop these files in).
 
 ## Check status (v0.1)

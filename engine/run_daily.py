@@ -2,6 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
+import markets
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -39,6 +40,12 @@ def main():
     hist = [h for h in hist if h["date"] != snap["date"]] + [dict(
         date=snap["date"], score=s["score"], stretch=s["stretch"], trigger=s["trigger"], level=snap["level"])]
     json.dump(hist, open(hp, "w"), indent=1)
+    try:
+        mk = markets.build()
+        json.dump(mk, open(os.path.join(DATA, "markets.json"), "w"), indent=1)
+        print("markets: %s" % {k: len(v) for k, v in mk.items() if isinstance(v, list)})
+    except Exception as e:
+        print("markets snapshot failed:", e)
     print("%s  score=%s (%s)  stretch=%s trigger=%s  %d/%d warnings" % (
         snap["date"], s["score"], snap["level"], s["stretch"], s["trigger"], s["warnings"], s["evaluated"]))
     for c in checks:
