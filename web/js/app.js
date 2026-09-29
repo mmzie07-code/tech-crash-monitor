@@ -58,38 +58,6 @@ function learn() {
   <div class="card"><span class="pill w">Coming soon</span><h3>Paper trading</h3><p class="muted" style="margin:0">Practice with $10,000 of pretend money and real prices. No risk, real lessons.</p></div>`;
 }
 
-function lesson(id) {
-  const m = MODULES.find((x) => x.id === +id);
-  if (!m || !m.live) return `<p>That lesson isn't ready yet. <a href="#/learn">Back to the course</a></p>`;
-  const body = m.body.map(([t, x]) => t === "h" ? `<h2>${x}</h2>` : t === "c" ? `<div class="callout">${x}</div>` : `<p>${x}</p>`).join("");
-  const quiz = m.quiz.map((q, i) => `<div class="q" data-i="${i}"><b>${i + 1}. ${q.q}</b>${q.o.map((o, j) => `<button class="opt" data-j="${j}">${o}</button>`).join("")}<div class="small muted fb"></div></div>`).join("");
-  return `<div class="lesson"><a href="#/learn" class="small">← Course</a><h1 style="font-size:clamp(28px,5vw,40px)">${m.id}. ${m.title}</h1>
-  <p class="muted">${m.mins} min · You'll learn to: ${m.goals.join("; ")}.</p>${body}<h2>Check yourself</h2>${quiz}
-  <div id="res" class="card" style="display:none"></div>
-  <div class="ph" style="margin-top:22px">Live example: <a href="#/watch">see how AI &amp; Tech Watch uses these ideas today</a></div></div>`;
-}
-
-function wireQuiz(id) {
-  const m = MODULES.find((x) => x.id === +id); if (!m || !m.quiz) return;
-  const got = {};
-  document.querySelectorAll(".q").forEach((box) => {
-    const i = +box.dataset.i;
-    box.querySelectorAll(".opt").forEach((b) => b.onclick = () => {
-      if (got[i] !== undefined) return;
-      const j = +b.dataset.j, ok = j === m.quiz[i].a; got[i] = ok;
-      b.classList.add(ok ? "right" : "wrong");
-      if (!ok) box.querySelectorAll(".opt")[m.quiz[i].a].classList.add("right");
-      box.querySelector(".fb").textContent = (ok ? "Correct. " : "Not quite. ") + m.quiz[i].why;
-      if (Object.keys(got).length === m.quiz.length) {
-        const n = Object.values(got).filter(Boolean).length, pass = n >= 2, r = $("#res");
-        if (pass) { state.done[m.id] = true; saveDone(); }
-        r.style.display = "block";
-        r.innerHTML = `<h3>${n} of ${m.quiz.length} correct ${pass ? "· Lesson complete 🎉" : "· Try reading it again"}</h3><a class="btn" href="#/learn">${pass ? "Back to the course" : "Review"}</a>`;
-      }
-    });
-  });
-}
-
 function mTabs(cur) {
   return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
 }
@@ -154,7 +122,7 @@ function route() {
   const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1]), watch: () => watch(), about: () => about() };
   $("#view").innerHTML = (views[a] || views.home)();
   document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a)));
-  if (a === "learn" && h[1]) wireQuiz(h[1]);
+  if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
   window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
