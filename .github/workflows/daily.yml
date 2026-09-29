@@ -34,10 +34,9 @@ jobs:
           git push
       - name: Assemble site
         run: |
-          mkdir -p site/web site/data
-          cp web/index.html site/web/
+          mkdir -p site/data
+          cp -R web/. site/
           cp data/latest.json data/history.json site/data/
-          echo '<meta http-equiv="refresh" content="0; url=web/">' > site/index.html
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - id: deploy
