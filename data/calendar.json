@@ -1,0 +1,214 @@
+{
+ "generated": "2026-09-29T23:10:53.971961Z",
+ "today": "2026-09-29",
+ "timezone": "US Eastern",
+ "events": [
+  {
+   "date": "2026-09-30",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Personal income and spending, including PCE inflation",
+   "importance": "high",
+   "why": "Includes the PCE price index, the inflation gauge the Fed watches most closely, plus how much households earn and spend. Hot inflation can push rate-cut hopes back and hit stocks.",
+   "extra": null
+  },
+  {
+   "date": "2026-09-30",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Micron Technology (MU) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $31.35.",
+   "extra": {
+    "market_cap_b": 1190,
+    "eps_forecast": "$31.35"
+   }
+  },
+  {
+   "date": "2026-09-30",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "GDP third estimate: revised economic growth",
+   "importance": "medium",
+   "why": "A revision to the earlier GDP number. Big revisions can change the story about how strong the economy is.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-01",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Accenture (ACN) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.19.",
+   "extra": {
+    "market_cap_b": 116,
+    "eps_forecast": "$3.19"
+   }
+  },
+  {
+   "date": "2026-10-01",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Nike (NKE) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.44.",
+   "extra": {
+    "market_cap_b": 54,
+    "eps_forecast": "$0.44"
+   }
+  },
+  {
+   "date": "2026-10-01",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-06",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Trade balance (imports and exports)",
+   "importance": "low",
+   "why": "Shows whether the US is buying more from the world than it sells. Matters more when tariffs and trade policy are in the news.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-08",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Pepsico (PEP) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.30.",
+   "extra": {
+    "market_cap_b": 175,
+    "eps_forecast": "$2.30"
+   }
+  },
+  {
+   "date": "2026-10-08",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-15",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-28",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "importance": "high",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-29",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "GDP advance estimate: first look at economic growth",
+   "importance": "high",
+   "why": "GDP measures the size of the US economy. The first estimate shows whether growth is speeding up or slowing, which shapes expectations for company profits and Fed policy.",
+   "extra": null
+  },
+  {
+   "date": "2026-10-29",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Personal income and spending, including PCE inflation",
+   "importance": "high",
+   "why": "Includes the PCE price index, the inflation gauge the Fed watches most closely, plus how much households earn and spend. Hot inflation can push rate-cut hopes back and hit stocks.",
+   "extra": null
+  },
+  {
+   "date": "2026-11-04",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Trade balance (imports and exports)",
+   "importance": "low",
+   "why": "Shows whether the US is buying more from the world than it sells. Matters more when tariffs and trade policy are in the news.",
+   "extra": null
+  },
+  {
+   "date": "2026-12-09",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "importance": "high",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM. This meeting also includes new economic projections.",
+   "extra": null
+  },
+  {
+   "date": "2027-01-27",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "importance": "high",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM.",
+   "extra": null
+  },
+  {
+   "date": "2027-03-17",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "importance": "high",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM. This meeting also includes new economic projections.",
+   "extra": null
+  }
+ ],
+ "failed": [],
+ "key_releases": [
+  {
+   "name": "Jobs report (Employment Situation)",
+   "what": "How many jobs the economy added last month and the unemployment rate. Published by the BLS, usually on the first Friday of the month at 8:30 AM ET.",
+   "why": "Strong jobs can mean a healthy economy but also fewer rate cuts. Weak jobs can spark recession worries. Both can move markets."
+  },
+  {
+   "name": "CPI (Consumer Price Index)",
+   "what": "The most-watched inflation number: how fast everyday prices are rising. Published monthly by the BLS.",
+   "why": "Inflation above expectations tends to push interest rates (and pressure on stocks) higher. Below expectations often lifts stocks."
+  },
+  {
+   "name": "PCE inflation",
+   "what": "The inflation gauge the Fed prefers, released with the BEA's personal income report.",
+   "why": "The Fed's 2% inflation target is measured with PCE, so this number directly shapes rate decisions."
+  },
+  {
+   "name": "FOMC decision",
+   "what": "The Federal Reserve's committee meets eight times a year to set short-term interest rates.",
+   "why": "Rates affect borrowing costs everywhere and how much investors will pay for stocks. The words in the statement matter as much as the decision."
+  },
+  {
+   "name": "GDP",
+   "what": "The total output of the US economy. Released quarterly in three estimates: advance, second and third.",
+   "why": "Shows if the economy is growing or shrinking, which drives company profit expectations."
+  },
+  {
+   "name": "Retail sales and consumer spending",
+   "what": "How much shoppers spent last month. Published monthly by the Census Bureau.",
+   "why": "US consumers drive about two-thirds of the economy, so weak spending is an early warning."
+  },
+  {
+   "name": "ISM / PMI surveys",
+   "what": "Monthly surveys of purchasing managers. A reading above 50 signals expansion, below 50 contraction.",
+   "why": "A fast, forward-looking read on business conditions."
+  }
+ ],
+ "notes": [
+  "CPI and the jobs report come from the BLS, which blocks automated access, so their dates are not listed here. See bls.gov/schedule.",
+  "Dates and times can change. Always confirm with the official source before relying on a time."
+ ]
+}

@@ -98,6 +98,14 @@ def build():
                                                 ("%+.2f pts" % r["d1"]) if r["kind"] == "yield" else pct(r["d1"])))
     S.append(dict(title="Rates, currencies, commodities", bullets=macro))
     S.append(dict(title="Why it may matter", bullets=notes(mk)))
+    try:
+        cal = json.load(open(os.path.join(DATA, "calendar.json")))
+        today = cal["today"]
+        nxt = [e for e in cal["events"] if e["date"] >= today and e["importance"] == "high"][:4]
+        if nxt:
+            S.append(dict(title="Coming up", bullets=["%s, %s: %s" % (dt.date.fromisoformat(e["date"]).strftime("%a %b %-d"), e["time"] + (" ET" if e["time"][:1].isdigit() else ""), e["title"]) for e in nxt]))
+    except Exception:
+        pass
     prev = [h for h in hist if h["date"] < snap["date"]]
     delta = ""
     if prev and prev[-1].get("score") is not None:

@@ -1,6 +1,6 @@
 {
  "date": "2026-09-29",
- "generated": "2026-09-29T23:10:22.347624Z",
+ "generated": "2026-09-29T23:11:11.554925Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.17%, with 4 of 11 sectors up.",
  "sections": [
   {
@@ -37,6 +37,15 @@
     "Oil -3.57% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
     "Gold moved -2.52%. Investors often buy gold when they are worried about inflation or turmoil.",
     "A 2.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+   ]
+  },
+  {
+   "title": "Coming up",
+   "bullets": [
+    "Wed Sep 30, 8:30 AM ET: Personal income and spending, including PCE inflation",
+    "Wed Sep 30, After close: Micron Technology (MU) reports earnings",
+    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
+    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth"
    ]
   },
   {
