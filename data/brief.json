@@ -1,6 +1,6 @@
 {
  "date": "2026-09-29",
- "generated": "2026-09-29T23:06:55.362506Z",
+ "generated": "2026-09-29T23:10:22.347624Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.17%, with 4 of 11 sectors up.",
  "sections": [
   {
@@ -26,16 +26,16 @@
     "VIX (fear gauge): 16.04 (-0.19% today)",
     "10-year Treasury yield: 5.26% (+0.02 pts today)",
     "US dollar index: 101.38 (+0.17% today)",
-    "Crude oil: 89.36 (-3.50% today)",
-    "Gold: 4,211.00 (-2.55% today)",
-    "Bitcoin: 83,574.17 (+0.09% today)"
+    "Crude oil: 89.29 (-3.57% today)",
+    "Gold: 4,212.40 (-2.52% today)",
+    "Bitcoin: 83,761.09 (+0.31% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil -3.50% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "Gold moved -2.55%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "Oil -3.57% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "Gold moved -2.52%. Investors often buy gold when they are worried about inflation or turmoil.",
     "A 2.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
