@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, done: {} };
+const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, quotes: null, done: {} };
 const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 try { state.done = JSON.parse(localStorage.getItem("ml_done") || "{}"); } catch (e) {}
 const saveDone = () => { try { localStorage.setItem("ml_done", JSON.stringify(state.done)); } catch (e) {} };
@@ -12,7 +12,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -57,7 +57,7 @@ function learn() {
   return `<h1>Crash course</h1><p class="lead muted">Eight short lessons. Go at your own pace; progress saves on this device.</p>
   <div class="bar" style="margin:14px 0 22px"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><div class="mods">${rows}</div>
   <h2 style="margin-top:1.6em">Glossary</h2><div class="cards">${GLOSSARY.map(([t, d]) => `<div class="card"><b>${t}</b><p class="muted small" style="margin:4px 0 0">${d}</p></div>`).join("")}</div>
-  <div class="card"><span class="pill w">Coming soon</span><h3>Paper trading</h3><p class="muted" style="margin:0">Practice with $10,000 of pretend money and real prices. No risk, real lessons.</p></div>`;
+  <a class="card" href="#/practice" style="color:inherit;display:block"><span class="pill g">New</span><h3>Practice trading</h3><p class="muted" style="margin:0">Try investing with $10,000 of pretend money and real prices. No risk, real lessons, and goals that test what you learned.</p></a>`;
 }
 
 function mTabs(cur) {
@@ -193,10 +193,11 @@ function about() {
 
 function route() {
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
-  const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), watch: () => watch(), about: () => about() };
+  const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || '', h[2]), watch: () => watch(), about: () => about() };
   $("#view").innerHTML = (views[a] || views.home)();
   document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a)));
   if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
+  if (a === "practice") wirePractice(h[1] || "", h[2]);
   window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);

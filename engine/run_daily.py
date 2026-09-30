@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed, outlook
+import markets, brief, calendar_feed, outlook, quotes
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -46,6 +46,11 @@ def main():
         print("markets: %s" % {k: len(v) for k, v in mk.items() if isinstance(v, list)})
     except Exception as e:
         print("markets snapshot failed:", e)
+    try:
+        json.dump(quotes.build(), open(os.path.join(DATA, "quotes.json"), "w"), separators=(",", ":"))
+        print("quotes written")
+    except Exception as e:
+        print("quotes failed:", e)
     try:
         json.dump(calendar_feed.build(), open(os.path.join(DATA, "calendar.json"), "w"), indent=1)
         print("calendar written")
