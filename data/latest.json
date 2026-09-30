@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T20:25:36.973334Z",
+ "generated": "2026-09-30T20:33:55.977484Z",
  "level": "Elevated",
  "score": 25,
  "stretch": 33,
@@ -86,9 +86,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 16.4,
+   "value": 16.3,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 16.4 is 1.03x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 16.3 is 1.03x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
