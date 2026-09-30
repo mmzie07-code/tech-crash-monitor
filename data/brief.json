@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T20:34:46.651783Z",
+ "generated": "2026-09-30T20:50:00.840663Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
@@ -25,10 +25,10 @@
    "bullets": [
     "VIX (fear gauge): 16.34 (+1.87% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.49 (+0.12% today)",
-    "Crude oil: 90.54 (+1.30% today)",
-    "Gold: 4,188.30 (+0.21% today)",
-    "Bitcoin: 83,601.17 (-0.03% today)"
+    "US dollar index: 101.48 (+0.11% today)",
+    "Crude oil: 90.37 (+1.11% today)",
+    "Gold: 4,189.60 (+0.24% today)",
+    "Bitcoin: 83,642.28 (+0.02% today)"
    ]
   },
   {
@@ -57,10 +57,16 @@
  ],
  "headlines": [
   {
-   "title": "Meta stock enjoys best month since 2022 on AI momentum",
+   "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/meta-stock-best-month-2013-ai.html",
-   "published": "Wed, 30 Sep 2026 20:08:47"
+   "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+   "published": "Wed, 30 Sep 2026 20:49:06"
+  },
+  {
+   "title": "Fed watchdog finds renovation failures, but no grounds for criminal referral",
+   "source": "CNBC",
+   "link": "https://www.cnbc.com/2026/09/30/fed-inspector-general-report-powell-trump.html",
+   "published": "Wed, 30 Sep 2026 20:17:49"
   },
   {
    "title": "Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained",
@@ -69,16 +75,16 @@
    "published": "Wed, 30 Sep 2026 20:16:17"
   },
   {
-   "title": "Sen. Hawley: OpenAI CEO Sam Altman declined to testify at rogue AI hearing",
+   "title": "Elon Musk, Palmer Luckey and Newt Gingrich to help Pentagon with warfare initiative, Hegseth says",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/hawley-openai-sam-altman-rogue-ai.html",
-   "published": "Wed, 30 Sep 2026 19:34:11"
+   "link": "https://www.cnbc.com/2026/09/30/musk-luckey-gingrich-pentagon-hegseth-.html",
+   "published": "Wed, 30 Sep 2026 20:42:01"
   },
   {
-   "title": "Micron beats on earnings and issues strong guidance as global memory shortage continues",
-   "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
-   "published": "Wed, 30 Sep 2026 20:30:09"
+   "title": "I\u2019m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/im-71-and-still-working-i-earn-108-000-a-year-am-i-doing-the-right-thing-aaedcaa4?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 20:45:00"
   },
   {
    "title": "U.S. bond yields post biggest jump in a generation as global rout rattles investors",
@@ -97,12 +103,6 @@
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/billionaires-like-ken-griffin-are-doling-out-tons-of-money-to-prove-that-a-college-degree-still-matters-63e50332?mod=mw_rss_topstories",
    "published": "Wed, 30 Sep 2026 19:21:00"
-  },
-  {
-   "title": "My friend\u2019s pet-sitting business grosses $300,000 a year, but she pays herself $50,000. Should I start one too?",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-friend-grosses-300-000-a-year-with-her-pet-sitting-business-she-pays-herself-50-000-should-i-do-the-same-8ab5cba3?mod=mw_rss_topstories",
-   "published": "Wed, 30 Sep 2026 19:00:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
