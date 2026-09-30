@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T21:50:23.331029Z",
+ "generated": "2026-09-30T22:50:19.876221Z",
  "level": "Elevated",
  "score": 25,
  "stretch": 33,
@@ -112,7 +112,7 @@
    "status": "warn",
    "value": 2.12,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1790M in 90 days vs $844M per-90d baseline (2.12x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1791M in 90 days vs $844M per-90d baseline (2.12x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1

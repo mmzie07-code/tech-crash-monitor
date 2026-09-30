@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T21:55:42.959369Z",
+ "generated": "2026-09-30T22:55:09.879535Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
@@ -25,10 +25,10 @@
    "bullets": [
     "VIX (fear gauge): 16.34 (+1.87% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.45 (+0.08% today)",
-    "Crude oil: 90.34 (+1.07% today)",
-    "Gold: 4,189.10 (+0.22% today)",
-    "Bitcoin: 83,705.88 (+0.10% today)"
+    "US dollar index: 101.46 (+0.09% today)",
+    "Crude oil: 90.05 (+0.75% today)",
+    "Gold: 4,185.70 (+0.14% today)",
+    "Bitcoin: 83,723.09 (+0.12% today)"
    ]
   },
   {
@@ -57,6 +57,12 @@
  ],
  "headlines": [
   {
+   "title": "Trump 'thinking about' diesel export ban, but says it could have 'negative impact' on gasoline",
+   "source": "CNBC",
+   "link": "https://www.cnbc.com/2026/09/30/trump-diesel-export-ban-gas.html",
+   "published": "Wed, 30 Sep 2026 22:43:53"
+  },
+  {
    "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
    "source": "CNBC",
    "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
@@ -69,16 +75,16 @@
    "published": "Wed, 30 Sep 2026 20:51:44"
   },
   {
-   "title": "Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained",
+   "title": "Google rolls out Gemini 4 Argon, its most advanced AI model",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/iran-war-strait-hormuz-gulf-oil-fuel.html",
-   "published": "Wed, 30 Sep 2026 20:16:17"
+   "link": "https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html",
+   "published": "Wed, 30 Sep 2026 22:27:09"
   },
   {
-   "title": "Inside Man: How Chinese spies used lies, love and betrayal to target the Federal Reserve",
-   "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/john-rogers-fed-china-espionage-case.html",
-   "published": "Wed, 30 Sep 2026 17:21:23"
+   "title": "Google shows it\u2019s not out of the AI race just yet",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/google-shows-its-not-out-of-the-ai-race-just-yet-75e19860?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 22:51:00"
   },
   {
    "title": "The 15 worst-performing S&P 500 stocks during a dismal September",
@@ -97,12 +103,6 @@
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/this-is-the-big-risk-that-stock-investors-should-be-watching-as-rising-bond-yields-menace-markets-904cae0a?mod=mw_rss_topstories",
    "published": "Wed, 30 Sep 2026 20:59:00"
-  },
-  {
-   "title": "A brutal September for bonds points to an even darker October",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/a-brutal-september-for-bonds-points-to-an-even-darker-october-239d0fb5?mod=mw_rss_topstories",
-   "published": "Wed, 30 Sep 2026 20:56:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
