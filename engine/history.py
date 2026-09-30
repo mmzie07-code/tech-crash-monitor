@@ -70,6 +70,20 @@ def sector_index(members):
     return out[1:] if len(out) > 1 else None
 
 
+def write_sparks():
+    """Per-sector bundle of the last year of closes for each top-50 stock, so sector pages can show a chart on every row without 50 separate downloads."""
+    sectors = json.load(open(os.path.join(DATA, "sectors.json")))["sectors"]
+    out_dir = os.path.join(DATA, "sparks")
+    os.makedirs(out_dir, exist_ok=True)
+    for sec in sectors:
+        bundle = {}
+        for t in sec["top"]:
+            h = load(t["symbol"])
+            if h and len(h) > 30:
+                bundle[t["symbol"]] = {"t0": h[-252:][0][0], "c": [round(c, 1 if c >= 20 else 2) for _, c in h[-252:]]}
+        json.dump(bundle, open(os.path.join(out_dir, sec["key"] + ".json"), "w"), separators=(",", ":"))
+
+
 def main(limit=None):
     sectors = json.load(open(os.path.join(DATA, "sectors.json")))["sectors"]
     syms = []
@@ -97,8 +111,13 @@ def main(limit=None):
         idx = sector_index([(t["symbol"], t["cap_b"]) for t in s["top"]])
         if idx:
             save("_S_" + s["key"], [(dt.date.fromordinal(EPOCH.toordinal() + d).isoformat(), c) for d, c in idx])
+    write_sparks()
     print("history done: ok", ok, "failed", bad)
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]) if len(sys.argv) > 1 else None)
+    if len(sys.argv) > 1 and sys.argv[1] == "sparks":
+        write_sparks()
+        print("sparks written")
+    else:
+        main(int(sys.argv[1]) if len(sys.argv) > 1 else None)

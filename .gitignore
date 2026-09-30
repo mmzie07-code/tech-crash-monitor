@@ -3,3 +3,4 @@ data/cache/*.json
 __pycache__/
 .DS_Store
 data/hist/
+data/sparks/
