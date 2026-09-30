@@ -20,7 +20,7 @@ function loadP() {
     saveP();
   }
 }
-function saveP() { try { localStorage.setItem("ml_paper", JSON.stringify(P)); } catch (e) { storeOK = false; } }
+function saveP(bump = true) { if (bump || !P.updated) P.updated = new Date().toISOString(); try { localStorage.setItem("ml_paper", JSON.stringify(P)); } catch (e) { storeOK = false; } if (typeof queueSync === "function") queueSync(); }
 
 function totals() {
   const q = Q(); let inv = 0, cost = 0;
@@ -31,7 +31,7 @@ function recordHist() {
   const d = state.quotes.date, t = totals(), spy = Q().SPY, last = P.hist[P.hist.length - 1];
   const row = { d, v: Math.round(t.total * 100) / 100, spy: spy ? spy.price : null };
   if (last && last.d === d) P.hist[P.hist.length - 1] = row; else P.hist.push(row);
-  saveP();
+  saveP(false);
 }
 function weights() {
   const q = Q(), t = totals(), out = {};

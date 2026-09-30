@@ -8,6 +8,16 @@ async function getHist(sym) {
 const pctTxt = (v) => v == null ? "-" : `<span style="color:${v > 0 ? "var(--ok)" : v < 0 ? "var(--bad)" : "var(--mut)"};font-weight:600">${v > 0 ? "+" : ""}${v.toFixed(2)}%</span>`;
 function retOver(d, n) { const c = d.c; return c.length > n ? (c[c.length - 1] / c[c.length - 1 - n] - 1) * 100 : null; }
 
+// Live market data through the authenticated Supabase function (signed-in users and the owner only).
+const liveOK = () => typeof AUTH !== "undefined" && AUTH.enabled && AUTH.ready && !AUTH.failed && signedIn();
+async function liveGet(params) {
+  const r = await fetch(fnUrl() + "?" + params, { headers: await apiHeaders() });
+  if (!r.ok) throw new Error("live " + r.status);
+  return r.json();
+}
+const liveChartFor = (sym) => liveOK() ? (range) => liveGet("action=chart&symbol=" + encodeURIComponent(sym) + "&range=" + range) : null;
+const unixToDay = (ts) => Math.floor(ts / 86400) - 10957; // days since 2000-01-01
+
 async function exploreHome() {
   if (!state.sectors) return `<h1>Explore</h1><div class="card muted">Sector data isn't available right now.</div>`;
   const hists = await Promise.all(state.sectors.sectors.map((s) => getHist("_S_" + s.key)));
@@ -52,29 +62,33 @@ async function stockPage(sym) {
   sym = decodeURIComponent(sym).toUpperCase();
   const row = state.search && state.search.stocks.find((r) => r[0] === sym);
   const top = state.sectors && state.sectors.sectors.flatMap((s) => s.top.map((t) => ({ ...t, sector: s.key }))).find((t) => t.symbol === sym);
-  const q = Q()[sym], h = await getHist(sym);
-  const name = (top && top.name) || (row && row[1]) || (q && q.name) || sym;
+  const q = Q()[sym];
+  let h = await getHist(sym), liveName = null;
+  if (!h && liveOK()) {  // not one of the pre-loaded stocks: pull a year of daily prices on demand
+    try { const j = await liveGet("action=chart&symbol=" + encodeURIComponent(sym) + "&range=1y"); if (j.c && j.c.length > 20) { h = { t: j.t.map(unixToDay), c: j.c }; liveName = j.name; } } catch (e) {}
+  }
+  const name = (top && top.name) || (row && row[1]) || (q && q.name) || liveName || sym;
   const secKey = (top && top.sector) || (row && row[2]) || null;
   const price = h ? h.c[h.c.length - 1] : top ? top.price : row ? row[4] : q ? q.price : null;
-  if (price == null) return `<p>We couldn't find “${esc(sym)}”. <a href="#/explore">Browse sectors</a> or try the search box.</p>`;
+  if (price == null) return `<p>We couldn't find “${esc(sym)}”. ${liveOK() ? "" : "Sign in to look up any listed stock. "}<a href="#/explore">Browse sectors</a> or try the search box.</p>`;
   const cap = top ? top.cap_b : row ? row[3] : null, d1 = top ? top.d1 : row ? row[5] : q ? q.d1 : null;
-  afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true }); });
+  afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true, live: liveChartFor(sym) }); });
   let stats = "";
   if (h) {
     const c = h.c, last252 = c.slice(-252);
     stats = `<div class="hz"><div class="card"><div class="small muted">52-week range</div><b>$${Math.min(...last252).toFixed(2)} – $${Math.max(...last252).toFixed(2)}</b></div>
      <div class="card"><div class="small muted">1 month</div><b>${pctTxt(retOver(h, 21))}</b></div><div class="card"><div class="small muted">3 months</div><b>${pctTxt(retOver(h, 63))}</b></div>
-     <div class="card"><div class="small muted">1 year</div><b>${pctTxt(retOver(h, 252))}</b></div><div class="card"><div class="small muted">5 years</div><b>${pctTxt(retOver(h, c.length - 1))}</b></div></div>`;
+     <div class="card"><div class="small muted">1 year</div><b>${pctTxt(retOver(h, 252))}</b></div>${h.c.length > 400 ? `<div class="card"><div class="small muted">5 years</div><b>${pctTxt(retOver(h, c.length - 1))}</b></div>` : ""}</div>`;
   }
   const peers = secKey && state.sectors ? state.sectors.sectors.find((s) => s.key === secKey).top.filter((t) => t.symbol !== sym).slice(0, 6) : [];
   return `<a href="#/explore${secKey ? "/" + secKey : ""}" class="small">← ${secKey ? esc(SECTOR_NAME(secKey)) : "Explore"}</a>
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(name)}</h1>
    <div class="muted">${esc(sym)}${secKey ? ` · <a href="#/explore/${secKey}">${esc(SECTOR_NAME(secKey))}</a>` : ""}${top && top.industry ? ` · ${esc(top.industry)}` : ""}</div></div>
    <a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div>
-  <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}Price history isn't loaded for this company yet. Live charts for every stock arrive with accounts.</div></div>`}</div>
+  <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}
-  <p class="small muted">Prices are end-of-day. Learn what these numbers mean in <a href="#/learn/1">Lesson 1</a> and <a href="#/learn/5">Lesson 5</a>. Not investment advice.</p>`;
+  <p class="small muted">Prices are end-of-day unless you open a 1D or 1W chart (live, about 15 minutes delayed). Learn what these numbers mean in <a href="#/learn/1">Lesson 1</a> and <a href="#/learn/5">Lesson 5</a>. Not investment advice.</p>`;
 }
 
 // ---- global search ----
@@ -88,6 +102,7 @@ function wireSearch() {
     for (const r of rows) if (r[0].toLowerCase() === q) res.push(r);
     for (const r of rows) if (res.length < 8 && r[0].toLowerCase().startsWith(q) && !res.includes(r)) res.push(r);
     for (const r of rows) if (res.length < 8 && r[1].toLowerCase().includes(q) && !res.includes(r)) res.push(r);
+    if (res.length < 3 && q.length >= 2 && liveOK()) { clearTimeout(box._t); box._t = setTimeout(() => liveSearch(q, out, box), 350); }
     out.innerHTML = res.slice(0, 8).map((r) => `<a href="#/stock/${encodeURIComponent(r[0])}" data-sym="${esc(r[0])}"><b>${esc(r[0])}</b> <span class="small muted">${esc(r[1])}</span><span class="small" style="float:right">$${r[4]}</span></a>`).join("") || `<div class="small muted" style="padding:10px">No matches.</div>`;
     out.style.display = "block";
   };
@@ -95,4 +110,16 @@ function wireSearch() {
   box.addEventListener("keydown", (e) => { if (e.key === "Enter") { const a = out.querySelector("a"); if (a) { location.hash = a.getAttribute("href"); box.blur(); out.style.display = "none"; } } if (e.key === "Escape") { out.style.display = "none"; box.blur(); } });
   out.addEventListener("click", () => { out.style.display = "none"; box.value = ""; });
   document.addEventListener("click", (e) => { if (!e.target.closest(".gsw")) out.style.display = "none"; });
+}
+
+async function liveSearch(q, out, box) {
+  if (box.value.trim().toLowerCase() !== q) return;
+  try {
+    const j = await liveGet("action=search&q=" + encodeURIComponent(q));
+    const have = new Set([...out.querySelectorAll("a")].map((a) => a.dataset.sym));
+    const more = (j.results || []).filter((r) => !have.has(r.symbol)).slice(0, 6);
+    if (!more.length) return;
+    out.insertAdjacentHTML("beforeend", more.map((r) => `<a href="#/stock/${encodeURIComponent(r.symbol)}" data-sym="${esc(r.symbol)}"><b>${esc(r.symbol)}</b> <span class="small muted">${esc(r.name)}</span><span class="small muted" style="float:right">live</span></a>`).join(""));
+    out.style.display = "block";
+  } catch (e) {}
 }

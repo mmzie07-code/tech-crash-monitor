@@ -3,16 +3,18 @@
 // Secrets required (set with `supabase secrets set`): OWNER_KEY, ALLOWED_ORIGIN.  SUPABASE_URL / SUPABASE_ANON_KEY are provided automatically.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const ORIGIN = Deno.env.get("ALLOWED_ORIGIN") ?? "https://mmzie07-code.github.io";
+// ALLOWED_ORIGIN may be a comma-separated list, e.g. "https://mmzie07-code.github.io,http://localhost:4175"
+const ORIGINS = (Deno.env.get("ALLOWED_ORIGIN") ?? "https://mmzie07-code.github.io").split(",").map((x) => x.trim()).filter(Boolean);
 const OWNER_KEY = Deno.env.get("OWNER_KEY") ?? "";
-const cors = {
-  "Access-Control-Allow-Origin": ORIGIN,
-  "Access-Control-Allow-Headers": "authorization, x-owner-key, content-type, apikey, x-client-info",
-  "Access-Control-Allow-Methods": "GET, OPTIONS",
-  "Vary": "Origin",
-};
-const json = (body: unknown, status = 200, extra: Record<string, string> = {}) =>
-  new Response(JSON.stringify(body), { status, headers: { ...cors, "content-type": "application/json", ...extra } });
+function corsFor(req: Request): Record<string, string> {
+  const o = req.headers.get("origin") ?? "";
+  return {
+    "Access-Control-Allow-Origin": ORIGINS.includes(o) ? o : ORIGINS[0],
+    "Access-Control-Allow-Headers": "authorization, x-owner-key, content-type, apikey, x-client-info",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Vary": "Origin",
+  };
+}
 
 function safeEqual(a: string, b: string): boolean {
   if (!a || !b || a.length !== b.length) return false;
@@ -55,6 +57,9 @@ async function yahoo(url: string, ttlMs: number) {
 }
 
 Deno.serve(async (req) => {
+  const cors = corsFor(req);
+  const json = (body: unknown, status = 200) =>
+    new Response(JSON.stringify(body), { status, headers: { ...cors, "content-type": "application/json" } });
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   const who = await whoIsCalling(req);
   if (!who) return json({ error: "Sign in required" }, 401);

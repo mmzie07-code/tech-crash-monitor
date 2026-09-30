@@ -12,7 +12,8 @@ async function authInit() {
     AUTH.sb = window.supabase.createClient(window.ANALYTIC.supabaseUrl, window.ANALYTIC.supabaseAnonKey, { auth: { persistSession: true, autoRefreshToken: true } });
     const { data } = await AUTH.sb.auth.getSession();
     AUTH.user = data.session ? data.session.user : null;
-    AUTH.sb.auth.onAuthStateChange((_e, session) => { AUTH.user = session ? session.user : null; renderAuthButton(); route(); });
+    if (AUTH.user) setTimeout(() => typeof syncPull === "function" && syncPull(), 0);
+    AUTH.sb.auth.onAuthStateChange((_e, session) => { const was = AUTH.user; AUTH.user = session ? session.user : null; renderAuthButton(); route(); if (AUTH.user && !was && typeof syncPull === "function") setTimeout(syncPull, 0); });
     const k = (() => { try { return localStorage.getItem("ml_owner"); } catch (e) { return null; } })();
     if (k) AUTH.owner = await checkOwnerKey(k);
   } catch (e) { AUTH.failed = true; }
