@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T20:20:42.323382Z",
+ "generated": "2026-09-30T20:26:39.830495Z",
  "as_of": "2026-09-30",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -36,7 +36,7 @@
    },
    "bull": [
     "S&P 500 is close to its 1-year high (1.9% below it).",
-    "VIX at 16.5: investors are relatively calm.",
+    "VIX at 16.4: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
@@ -84,7 +84,7 @@
    },
    "bull": [
     "S&P 500 is close to its 1-year high (1.9% below it).",
-    "VIX at 16.5: investors are relatively calm.",
+    "VIX at 16.4: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
@@ -138,7 +138,7 @@
    },
    "bull": [
     "S&P 500 is close to its 1-year high (1.9% below it).",
-    "VIX at 16.5: investors are relatively calm.",
+    "VIX at 16.4: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
@@ -199,7 +199,7 @@
    },
    "bull": [
     "S&P 500 is close to its 1-year high (1.9% below it).",
-    "VIX at 16.5: investors are relatively calm.",
+    "VIX at 16.4: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
@@ -266,7 +266,7 @@
    },
    "bull": [
     "S&P 500 is close to its 1-year high (1.9% below it).",
-    "VIX at 16.5: investors are relatively calm.",
+    "VIX at 16.4: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
     "QQQ trailing P/E is 30.2, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],

@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T20:20:42.379978Z",
+ "generated": "2026-09-30T20:26:39.876193Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
@@ -23,12 +23,12 @@
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.49 (+2.81% today)",
+    "VIX (fear gauge): 16.40 (+2.24% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.49 (+0.12% today)",
-    "Crude oil: 90.54 (+1.30% today)",
-    "Gold: 4,188.70 (+0.22% today)",
-    "Bitcoin: 83,608.30 (-0.02% today)"
+    "US dollar index: 101.51 (+0.14% today)",
+    "Crude oil: 90.50 (+1.25% today)",
+    "Gold: 4,188.50 (+0.21% today)",
+    "Bitcoin: 83,693.72 (+0.09% today)"
    ]
   },
   {
@@ -75,10 +75,10 @@
    "published": "Wed, 30 Sep 2026 19:34:11"
   },
   {
-   "title": "Micron beats on revenue and earnings as global memory shortage continues",
+   "title": "Micron beats on earnings and issues strong guidance as global memory shortage continues",
    "source": "CNBC",
    "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
-   "published": "Wed, 30 Sep 2026 20:19:48"
+   "published": "Wed, 30 Sep 2026 20:24:51"
   },
   {
    "title": "U.S. bond yields post biggest jump in a generation as global rout rattles investors",
