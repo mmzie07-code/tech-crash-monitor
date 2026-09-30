@@ -43,3 +43,29 @@ async function marketPage(sym) {
   ${info.etf ? `<div class="card"><h3>Want to follow it in practice?</h3><p class="small muted" style="margin:0 0 8px">You can't buy an index directly, but funds track it. <a href="#/stock/${info.etf}">${info.etf}</a> is a popular one, and you can try it in <a href="#/practice/trade/${info.etf}">practice trading</a>.</p></div>` : ""}
   <p class="small muted">Levels are closing values; 1D and 1W charts are live (about 15 minutes delayed) for signed-in users. New to this? <a href="#/learn/${info.lesson}">Lesson ${info.lesson}</a> explains the ideas. Educational only, not investment advice.</p>`;
 }
+
+// ---- link helpers: turn plain-text names/tickers into links so there are no dead ends ----
+function nameLinkTable() {
+  const out = [];
+  const mk = state.mk || {};
+  ["indices", "global", "macro"].forEach((g) => (mk[g] || []).forEach((r) => { out.push([r.name, "#/market/" + encodeURIComponent(r.symbol)]); }));
+  Object.entries(MARKET_INFO).forEach(([sym, i]) => out.push([i.name, "#/market/" + encodeURIComponent(sym)]));
+  (mk.sectors || []).forEach((r) => { const k = SECTOR_ETF_KEY[r.symbol]; if (k) out.push([r.name, "#/explore/" + k]); });
+  if (state.sectors) state.sectors.sectors.forEach((s) => out.push([s.name, "#/explore/" + s.key]));
+  return out.sort((a, b) => b[0].length - a[0].length);
+}
+function linkNames(text) {
+  let html = esc(text); const held = [];
+  const seen = new Set();
+  for (const [name, href] of nameLinkTable()) {
+    if (seen.has(name)) continue; seen.add(name);
+    const en = esc(name);
+    if (!html.includes(en)) continue;
+    html = html.split(en).join("\u0000" + (held.push(`<a href="${href}">${en}</a>`) - 1) + "\u0000");
+  }
+  return html.replace(/\u0000(\d+)\u0000/g, (_, i) => held[+i]);
+}
+const LINKABLE_TICKERS = ["MSFT", "GOOGL", "AMZN", "META", "NVDA", "AVGO", "QQQ", "SMH"];
+function linkTickers(text) {
+  return esc(text).replace(new RegExp("\\b(" + LINKABLE_TICKERS.join("|") + ")\\b", "g"), (m) => `<a href="#/stock/${m}">${m}</a>`);
+}

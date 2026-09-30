@@ -99,7 +99,7 @@ function outlookView(key) {
    <div class="card" style="padding:12px"><div class="small muted">Stayed within ±${thr}%</div><b style="font-size:20px">${100 - st.below - st.above}%</b></div>
    <div class="card" style="padding:12px"><div class="small muted">Rose more than ${thr}%</div><b style="font-size:20px;color:var(--ok)">${st.above}%</b></div></div></div>` : "";
   const evs = h.events.length ? h.events.map((e) => `<div class="item"><span class="dot" style="background:${e.importance === "high" ? "var(--bad)" : "var(--warn)"}"></span><div><b>${esc(e.title)}</b><div class="small muted">${new Date(e.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })} · ${esc(e.time)}${/^\d/.test(e.time) ? " ET" : ""}</div></div></div>`).join("") : `<p class="small muted">No major scheduled events found in this window.</p>`;
-  const lst = (arr, c) => arr.length ? `<ul style="margin:.3em 0 0;padding-left:18px">${arr.map((x) => `<li class="small" style="color:var(--tx)">${esc(x)}</li>`).join("")}</ul>` : `<p class="small muted">Nothing notable right now.</p>`;
+  const lst = (arr, c) => arr.length ? `<ul style="margin:.3em 0 0;padding-left:18px">${arr.map((x) => `<li class="small" style="color:var(--tx)">${linkNames(x)}</li>`).join("")}</ul>` : `<p class="small muted">Nothing notable right now.</p>`;
   return `<p class="muted">How markets <i>have behaved</i> over each time horizon, and what's pushing on them right now. <b>This is not a forecast.</b> Nobody can reliably predict price moves, including us.</p>
   <div class="tabs">${pills}</div>
   <div class="card big"><span class="pill">${esc(h.label)}</span><h2 style="margin-top:8px">${key === "today" || key === "tomorrow" ? "One trading day" : "Over the next " + (key === "week" ? "week" : key === "month" ? "month" : "year")}: what history says</h2>
@@ -145,7 +145,7 @@ function calView(filter) {
   const col = { high: "var(--bad)", medium: "var(--warn)", low: "var(--unk)" }, kind = { fed: "Fed", data: "Data", earnings: "Earnings" };
   const list = Object.keys(groups).sort().map((d) => `<div class="card"><h3>${label(d)}</h3>${groups[d].map((e) => `<details class="item" style="display:block"><summary style="cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center">
     <span class="dot" style="background:${col[e.importance]};margin:0" title="${e.importance} importance"></span><span style="flex:1"><b>${esc(e.title)}</b><br><span class="small muted">${esc(e.time)}${/^\d/.test(e.time) ? " ET" : ""}</span></span><span class="pill">${kind[e.kind]}</span></summary>
-    <p class="small muted" style="margin:8px 0 0 22px">${esc(e.why)}</p></details>`).join("")}</div>`).join("");
+    <p class="small muted" style="margin:8px 0 0 22px">${esc(e.why)}</p>${(() => { const m = /\(([A-Z.\-]+)\) reports/.exec(e.title); return m ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/stock/${esc(m[1])}">View ${esc(m[1])} chart →</a> · <a href="#/markets/earnings">Earnings results</a></p>` : e.kind === "fed" ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/market/%5ETNX">10-year yield chart →</a> · <a href="#/learn/3">Why rates matter</a></p>` : ""; })()}</details>`).join("")}</div>`).join("");
   return `<p class="muted">What's scheduled that could move markets. Tap an event to see why it matters. Times are US Eastern. <span class="dot" style="display:inline-block;background:var(--bad)"></span> high <span class="dot" style="display:inline-block;background:var(--warn)"></span> medium <span class="dot" style="display:inline-block;background:var(--unk)"></span> low importance</p>
   <div class="tabs">${chips}</div>${list || `<div class="card muted">Nothing scheduled in this category.</div>`}
   <details class="card"><summary style="cursor:pointer"><b>Key releases explained</b> <span class="small muted">(what each one is and why traders care)</span></summary>
@@ -159,7 +159,7 @@ function briefView() {
   const link = (h) => /^https?:\/\//.test(h.link) ? `<a href="${esc(h.link)}" target="_blank" rel="noopener noreferrer">${esc(h.title)}</a>` : esc(h.title);
   return `<div class="card big"><span class="pill g">Market close ${esc(d.date)}</span><h2 style="margin-top:8px">${esc(d.headline)}</h2>
    ${d.summary ? `<p>${esc(d.summary)}</p><p class="small muted">Summary written by AI from the data below. It can contain mistakes.</p>` : ""}</div>
-   ${d.sections.map((s) => `<div class="card"><h3>${esc(s.title)}</h3><ul style="margin:.3em 0 0;padding-left:20px">${s.bullets.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}
+   ${d.sections.map((s) => `<div class="card"><h3>${esc(s.title)}</h3><ul style="margin:.3em 0 0;padding-left:20px">${s.bullets.map((x) => `<li>${linkNames(x)}</li>`).join("")}</ul></div>`).join("")}
    <div class="card"><h3>Headlines</h3><p class="small muted">Titles and links only. Click through to read the full story at the source.</p>
    ${d.headlines.map((h) => `<div class="item"><div><div>${link(h)}</div><div class="small muted">${esc(h.source)}</div></div></div>`).join("")}</div>
    <p class="small muted">${esc(d.disclaimer)} New here? Start with the <a href="#/learn">crash course</a>.</p>`;
@@ -192,10 +192,10 @@ function watch() {
   const s = state.snap;
   return `<span class="pill w">Featured section</span><h1>AI &amp; Tech Watch</h1>
   <p class="muted">Are AI and tech stocks in a bubble, and are the warning signs of a crash flashing? Ten signs, checked every trading day.</p>` + (!s ? `<div class="card">Data unavailable.</div>` : `${snapCard(false)}
-    <div class="card"><h3>QQQ (Nasdaq-100), 1 year</h3>${spark(s.qqq_series.map((x) => x[1]))}</div>
+    <div class="card"><h3><a href="#/stock/QQQ" style="color:inherit">QQQ (Nasdaq-100)</a>, 1 year</h3>${spark(s.qqq_series.map((x) => x[1]))}</div>
     <div class="card"><h3>The checklist</h3>${s.checks.map((c) => `<div class="item"><div class="dot" style="background:${COL[c.status]}"></div><div>
      <b>${c.id}. ${c.name}</b> <span class="pill">${c.group}</span>${c.proxy ? '<span class="pill w">proxy</span>' : ""}${c.weight === 0 ? '<span class="pill">context only</span>' : ""}
-     <div class="small muted">${c.detail}</div>${c.threshold ? `<div class="small muted">Warns at: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
+     <div class="small muted">${linkTickers(c.detail)}</div>${c.threshold ? `<div class="small muted">Warns at: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
     <p class="small muted">${s.evaluated} of ${s.total} checks are live. Thresholds were tested on 1999–2026 history: the combined score raised crash odds only about 1.7–2x. See <a href="#/about">how it works</a>.</p>`);
 }
 

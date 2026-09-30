@@ -58,10 +58,10 @@ async function exploreHome() {
   }
   const cards = secs.map((s, i) => {
     const h = hists[i], y1 = h ? retOver(h, 252) : null, m1 = h ? retOver(h, 21) : null, spark = h ? h.c.slice(-126) : null, up = spark && spark[spark.length - 1] >= spark[0];
-    return `<a class="card" href="#/explore/${s.key}" style="color:inherit;display:block"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px"><div><h3 style="margin:0">${esc(s.name)}</h3>
+    return `<div class="card" style="cursor:pointer" onclick="if(!event.target.closest('a'))location.hash='#/explore/${s.key}'"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px"><div><h3 style="margin:0"><a href="#/explore/${s.key}" style="color:inherit">${esc(s.name)}</a></h3>
      <div class="small muted">${s.companies.toLocaleString()} companies · ${capStr(s.total_cap_b)}</div></div><div class="small" style="text-align:right">1M ${pctTxt(m1)}<br>1Y ${pctTxt(y1)}</div></div>
      ${spark ? svgLines([spark], [up ? "var(--ok)" : "var(--bad)"], 60) : ""}
-     <div class="small muted">${(SECTOR_INFO[s.key] || {}).type || ""} · Top: ${s.top.slice(0, 3).map((t) => esc(t.symbol)).join(", ")}</div></a>`;
+     <div class="small muted">${(SECTOR_INFO[s.key] || {}).type || ""} · Top: ${s.top.slice(0, 3).map((t) => `<a href="#/stock/${esc(t.symbol)}" title="${esc(t.name)}">${esc(t.symbol)}</a>`).join(", ")}</div></div>`;
   }).join("");
   return `<h1>Explore</h1><p class="muted">See how each part of the market is doing, then tap a sector to read about it and browse its 50 largest companies.</p>${perf}
   <h2 style="margin-top:1.2em">All sectors</h2><div class="cards">${cards}</div>
