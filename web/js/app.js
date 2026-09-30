@@ -65,6 +65,7 @@ function learn() {
 function mTabs(cur) {
   return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
 }
+const SECTOR_ETF_KEY = { XLK: "technology", XLC: "communication", XLY: "consumer-discretionary", XLP: "consumer-staples", XLF: "financials", XLV: "health-care", XLI: "industrials", XLE: "energy", XLU: "utilities", XLB: "materials", XLRE: "real-estate" };
 function heat(v) {
   if (v == null) return "var(--card)";
   const a = Math.min(Math.abs(v) / 2.5, 1) * 0.55 + 0.08;
@@ -170,7 +171,7 @@ function markets(tab, sub) {
     const sec = m && m.sectors ? [...m.sectors].sort((a, b) => b.d1 - a.d1) : [];
     b = `<h2>Major indices</h2>${tiles(m && m.indices)}
     <h2>Sectors today</h2><p class="muted small">Which parts of the economy are leading or lagging. Green is up, red is down.</p>
-    <div class="hz">${sec.map((r) => `<div class="card" style="background:${heat(r.d1)}"><div class="small">${r.name}</div><div style="font-weight:800;font-size:20px">${chg(r.d1, r.kind)}</div><div class="small muted">${chg(r.ytd, r.kind)} YTD</div></div>`).join("")}</div>
+    <div class="hz">${sec.map((r) => `<a class="card" href="#/explore/${SECTOR_ETF_KEY[r.symbol] || ""}" style="background:${heat(r.d1)};color:inherit;display:block"><div class="small">${r.name}</div><div style="font-weight:800;font-size:20px">${chg(r.d1, r.kind)}</div><div class="small muted">${chg(r.ytd, r.kind)} YTD</div><div class="small" style="margin-top:4px;color:var(--brand)">See sector →</div></a>`).join("")}</div>
     <h2>Rates, currencies &amp; commodities</h2><div class="card">${rowList(m && m.macro)}</div>
     <h2>Around the world</h2><div class="card">${rowList(m && m.global)}</div>
     <p class="small muted">Prices from Yahoo Finance, updated each trading day after the close${m ? " (snapshot " + m.indices[0].date + ")" : ""}. Sector figures use the SPDR sector ETFs.</p>
