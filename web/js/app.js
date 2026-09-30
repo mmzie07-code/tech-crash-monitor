@@ -6,9 +6,10 @@ const saveDone = () => { try { localStorage.setItem("ml_done", JSON.stringify(st
 const DISC = "Educational content only. Not investment advice. Investing involves risk, including loss of money, and short-term forecasts, including ours, are frequently wrong.";
 const COL = { warn: "var(--warn)", ok: "var(--ok)", unknown: "var(--unk)" };
 
+let DATA_BASE = null; // "data/" on the live site, "../data/" in the local preview; found once, then reused
 async function loadJson(name) {
-  for (const base of ["data/", "../data/"]) {
-    try { const r = await fetch(base + name + "?" + Date.now()); if (r.ok) return await r.json(); } catch (e) {}
+  for (const base of DATA_BASE ? [DATA_BASE] : ["data/", "../data/"]) {
+    try { const r = await fetch(base + name + "?" + Date.now()); if (r.ok) { DATA_BASE = base; return await r.json(); } } catch (e) {}
   }
   return null;
 }

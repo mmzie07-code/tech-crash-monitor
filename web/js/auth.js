@@ -37,8 +37,8 @@ async function apiHeaders() {
   return h;
 }
 
-function signedIn() { return !AUTH.enabled || AUTH.user || AUTH.owner; }
-function gateView(a) { return AUTH.enabled && !signedIn() && !OPEN_ROUTES.includes(a) ? loginView("Sign in to use The Analytic") : null; }
+function signedIn() { return !AUTH.enabled || !!AUTH.user || AUTH.owner; }
+function gateView(a) { return AUTH.enabled && window.ANALYTIC.requireLogin && !signedIn() && !OPEN_ROUTES.includes(a) ? loginView("Sign in to use The Analytic") : null; }
 
 function renderAuthButton() {
   const el = $("#authbtn"); if (!el) return;

@@ -2,9 +2,7 @@
 const SECTOR_NAME = (key) => ((state.sectors && state.sectors.sectors.find((s) => s.key === key)) || {}).name || key;
 const capStr = (b) => (b >= 1000 ? "$" + (b / 1000).toFixed(2) + "T" : b >= 1 ? "$" + b.toFixed(1) + "B" : "$" + (b * 1000).toFixed(0) + "M");
 async function getHist(sym) {
-  for (const base of ["data/hist/", "../data/hist/"]) {
-    try { const r = await fetch(base + sym.replace("^", "_") + ".json"); if (r.ok) return await r.json(); } catch (e) {}
-  }
+  try { const r = await fetch((DATA_BASE || "data/") + "hist/" + sym.replace("^", "_") + ".json"); if (r.ok) return await r.json(); } catch (e) {}
   return null;
 }
 const pctTxt = (v) => v == null ? "-" : `<span style="color:${v > 0 ? "var(--ok)" : v < 0 ? "var(--bad)" : "var(--mut)"};font-weight:600">${v > 0 ? "+" : ""}${v.toFixed(2)}%</span>`;
