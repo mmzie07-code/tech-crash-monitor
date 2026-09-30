@@ -65,15 +65,18 @@ def c5_rates(d):
 
 
 def c6_credit(d):
-    s = d.get("HY")
-    if not s:
-        return pending(6, "Credit stress", "trigger", "FRED unreachable this run")
-    v = [c for _, c in s]
-    chg = v[-1] - v[-21]
-    warn = chg > 0.4 or v[-1] > 4.5
-    return result(6, "Credit stress", "trigger", "warn" if warn else "ok", round(v[-1], 2),
-                  "spread > 4.5 or +0.40 in 20d",
-                  "High-yield spread %.2f%%, %+.2f pts over 20 trading days." % (v[-1], chg), "FRED (BAMLH0A0HYM2)")
+    """Credit-stress proxy: junk bonds (HYG) vs Treasuries (IEF). Falling ratio = lenders demanding more to hold risky debt.
+    (The official FRED spread is unreachable from this machine and from GitHub Actions.)"""
+    h, i = dict(d["HYG"]), dict(d["IEF"])
+    days = sorted(set(h) & set(i))
+    r = [h[x] / i[x] for x in days]
+    if len(r) < 22:
+        return pending(6, "Credit stress", "trigger", "not enough bond-fund history")
+    chg = (r[-1] / r[-21] - 1) * 100
+    return result(6, "Credit stress (junk bonds vs Treasuries)", "trigger", "warn" if chg < -2 else "ok", round(chg, 1),
+                  "HYG falls > 2% vs IEF in 20 days",
+                  "High-yield bond fund is %+.1f%% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt." % chg,
+                  "Yahoo Finance (HYG, IEF)", True)
 
 
 def c7_sentiment(d):
@@ -142,12 +145,8 @@ CHECKS = [c1_price_stretch, c2_concentration, c3_capex, c5_rates, c6_credit, c7_
 
 def load_data():
     d = {}
-    for sym in ["QQQ", "QQQE", "SMH", "^TNX", "^VIX"]:
+    for sym in ["QQQ", "QQQE", "SMH", "^TNX", "^VIX", "HYG", "IEF"]:
         d[sym] = yahoo_closes(sym)
-    try:
-        d["HY"] = fred_series("BAMLH0A0HYM2")
-    except Exception:
-        d["HY"] = None
     try:
         import yfinance
         d["PE"] = yfinance.Ticker("QQQ").info.get("trailingPE")

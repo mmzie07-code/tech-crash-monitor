@@ -1,110 +1,108 @@
 {
- "date": "2026-09-29",
- "generated": "2026-09-29T23:14:37.236240Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.17%, with 4 of 11 sectors up.",
+ "date": "2026-09-30",
+ "generated": "2026-09-30T20:17:23.752492Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.17% today, -0.53% this month, +11.84% this year",
-    "Dow Jones: -0.26% today, -4.13% this month, +6.13% this year",
-    "Nasdaq Composite: -0.09% today, +1.50% this month, +15.33% this year",
-    "Russell 2000: -0.35% today, -5.53% this month, +11.95% this year"
+    "S&P 500: -0.25% today, -0.45% this month, +11.56% this year",
+    "Dow Jones: -0.86% today, -4.29% this month, +5.22% this year",
+    "Nasdaq Composite: +0.24% today, +1.86% this month, +15.60% this year",
+    "Russell 2000: -0.39% today, -5.40% this month, +11.51% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Utilities +1.17%, Communication +0.26%, Industrials +0.21%",
-    "Lagging: Energy -0.90%, Materials -0.75%, Consumer Staples -0.52%",
-    "4 of 11 sectors rose."
+    "Leading: Technology +0.64%, Energy -0.06%, Consumer Discretionary -0.28%",
+    "Lagging: Consumer Staples -1.53%, Health Care -1.35%, Industrials -1.27%",
+    "1 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.04 (-0.19% today)",
-    "10-year Treasury yield: 5.26% (+0.02 pts today)",
-    "US dollar index: 101.38 (+0.17% today)",
-    "Crude oil: 89.38 (-3.48% today)",
-    "Gold: 4,211.90 (+1.04% today)",
-    "Bitcoin: 83,806.57 (+0.36% today)"
+    "VIX (fear gauge): 16.51 (+2.93% today)",
+    "10-year Treasury yield: 5.29% (+0.04 pts today)",
+    "US dollar index: 101.50 (+0.13% today)",
+    "Crude oil: 90.61 (+1.38% today)",
+    "Gold: 4,186.60 (+0.17% today)",
+    "Bitcoin: 83,558.04 (-0.08% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil -3.48% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "Gold moved +1.04%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 2.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 2.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Wed Sep 30, 8:30 AM ET: Personal income and spending, including PCE inflation",
     "Wed Sep 30, After close: Micron Technology (MU) reports earnings",
     "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth"
+    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth",
+    "Thu Oct 29, 8:30 AM ET: Personal income and spending, including PCE inflation"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 29, Elevated risk.",
+    "Crash-risk score 25, Elevated risk (-4 from 29 on 2026-09-29).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
-    "8 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
+    "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Trump tries to rename AI 'super intelligence' as polls show him sinking on key issue",
+   "title": "Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/29/trump-ai-super-intelligence.html",
-   "published": "Tue, 29 Sep 2026 22:42:35"
+   "link": "https://www.cnbc.com/2026/09/30/iran-war-strait-hormuz-gulf-oil-fuel.html",
+   "published": "Wed, 30 Sep 2026 20:16:17"
   },
   {
-   "title": "The Fed's main inflation measure will be released Wednesday. Here's what to expect",
+   "title": "Google rolls out Gemini 4 Argon, its most advanced AI model",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/29/the-feds-main-inflation-measure-will-be-released-wednesday-heres-what-to-expect.html",
-   "published": "Tue, 29 Sep 2026 20:51:43"
+   "link": "https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html",
+   "published": "Wed, 30 Sep 2026 20:15:23"
   },
   {
-   "title": "30-year Treasury bond yield scales to highest level since 2002",
+   "title": "Sen. Hawley: OpenAI CEO Sam Altman declined to testify at rogue AI hearing",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/29/treasury-yields-bonds.html",
-   "published": "Tue, 29 Sep 2026 20:03:39"
+   "link": "https://www.cnbc.com/2026/09/30/hawley-openai-sam-altman-rogue-ai.html",
+   "published": "Wed, 30 Sep 2026 19:34:11"
   },
   {
-   "title": "Goldman Sachs CEO succession planning faces one big problem",
+   "title": "Meta stock enjoys best month since 2022 on AI momentum",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/29/goldman-sachs-ceo-succession-planning.html",
-   "published": "Tue, 29 Sep 2026 20:50:10"
+   "link": "https://www.cnbc.com/2026/09/30/meta-stock-best-month-2013-ai.html",
+   "published": "Wed, 30 Sep 2026 20:08:47"
   },
   {
-   "title": "\u2018We lived within our means\u2019: I earned $30,000 as a pastor and still retired comfortably. Why don\u2019t you tell people that?",
+   "title": "U.S. bond yields post biggest jump in a generation as global rout rattles investors",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/we-lived-within-our-means-i-earned-30-000-as-a-pastor-and-still-retired-comfortably-why-dont-you-tell-people-that-6b9f231e?mod=mw_rss_topstories",
-   "published": "Tue, 29 Sep 2026 23:03:00"
+   "link": "https://www.marketwatch.com/story/u-s-bond-yields-head-for-biggest-jump-in-a-generation-as-global-rout-rattles-investors-7dede2f2?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 19:42:00"
   },
   {
-   "title": "\u2018I\u2019d rather be on a beach in Bali\u2019: My husband resents my $8 million net worth. Should I pay for his retirement?",
+   "title": "Paramount\u2019s mega debt sale reveals how higher bond yields are squeezing corporate America",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/i-feel-like-hes-holding-me-back-i-have-8-million-my-husband-resents-my-success-should-i-pay-for-more-things-08a4221b?mod=mw_rss_topstories",
-   "published": "Tue, 29 Sep 2026 22:00:00"
+   "link": "https://www.marketwatch.com/story/paramounts-mega-debt-sale-reveals-how-higher-bond-yields-are-squeezing-corporate-america-e9694ec3?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 19:42:00"
   },
   {
-   "title": "Hollywood\u2019s big debt deal hits a wall of higher yields as Paramount finances Warner Bros. buyout",
+   "title": "Billionaires like Ken Griffin are doling out tons of money to prove that a college degree still matters",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/hollywoods-big-debt-deal-hits-a-wall-of-higher-yields-as-paramount-finances-warner-bros-buyout-6ee6e3b8?mod=mw_rss_topstories",
-   "published": "Tue, 29 Sep 2026 21:56:00"
+   "link": "https://www.marketwatch.com/story/billionaires-like-ken-griffin-are-doling-out-tons-of-money-to-prove-that-a-college-degree-still-matters-63e50332?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 19:21:00"
   },
   {
-   "title": "Could SpaceX be worth $12 trillion one day? Citi says Starship gets it a step closer.",
+   "title": "My friend\u2019s pet-sitting business grosses $300,000 a year, but she pays herself $50,000. Should I start one too?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/could-spacex-be-worth-12-trillion-one-day-citi-says-starship-gets-it-a-step-closer-6ce44961?mod=mw_rss_topstories",
-   "published": "Tue, 29 Sep 2026 21:53:00"
+   "link": "https://www.marketwatch.com/story/my-friend-grosses-300-000-a-year-with-her-pet-sitting-business-she-pays-herself-50-000-should-i-do-the-same-8ab5cba3?mod=mw_rss_topstories",
+   "published": "Wed, 30 Sep 2026 19:00:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
