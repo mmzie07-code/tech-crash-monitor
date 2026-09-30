@@ -37,3 +37,23 @@ def fred_series(series_id):
         if len(row) == 2 and row[1] not in ("", ".") and row[0][:2] == "20":
             out.append((row[0], float(row[1])))
     return out
+
+
+def yahoo_history(symbol, start_year=1985):
+    """Full daily history by pulling 5-year windows (Yahoo returns monthly bars for range=max)."""
+    out = {}
+    y = start_year
+    while y < dt.date.today().year + 1:
+        p1 = int(dt.datetime(y, 1, 1).timestamp())
+        p2 = int(dt.datetime(y + 5, 1, 1).timestamp())
+        try:
+            j = json.loads(_get("https://query1.finance.yahoo.com/v8/finance/chart/%s?period1=%d&period2=%d&interval=1d" % (symbol, p1, p2)))
+            r = j["chart"]["result"][0]
+            for t, c in zip(r.get("timestamp", []), r["indicators"]["quote"][0]["close"]):
+                if c is not None:
+                    out[dt.datetime.utcfromtimestamp(t).date().isoformat()] = float(c)
+        except Exception:
+            pass
+        y += 5
+        time.sleep(0.3)
+    return sorted(out.items())

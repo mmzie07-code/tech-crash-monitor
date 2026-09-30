@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed
+import markets, brief, calendar_feed, outlook
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -51,6 +51,11 @@ def main():
         print("calendar written")
     except Exception as e:
         print("calendar failed:", e)
+    try:
+        json.dump(outlook.build(), open(os.path.join(DATA, "outlook.json"), "w"), indent=1)
+        print("outlook written")
+    except Exception as e:
+        print("outlook failed:", e)
     try:
         json.dump(brief.build(), open(os.path.join(DATA, "brief.json"), "w"), indent=1)
         print("brief written")
