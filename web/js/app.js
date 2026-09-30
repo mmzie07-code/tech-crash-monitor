@@ -31,8 +31,8 @@ function chg(v, kind) {
   return `<span style="color:${c};font-weight:700">${v > 0 ? "+" : ""}${v.toFixed(2)}${u}</span>`;
 }
 function tiles(rows) {
-  return rows && rows.length ? `<div class="hz">${rows.map((r) => `<div class="card"><div class="small muted">${r.name}</div><div style="font-size:22px;font-weight:800">${r.last.toLocaleString()}</div>
-   <div class="small">${chg(r.d1, r.kind)} today · ${chg(r.ytd, r.kind)} YTD</div></div>`).join("")}</div>` : `<div class="card muted">Data unavailable.</div>`;
+  return rows && rows.length ? `<div class="hz">${rows.map((r) => `<a class="card" href="#/market/${encodeURIComponent(r.symbol)}" style="color:inherit;display:block"><div class="small muted">${r.name}</div><div style="font-size:22px;font-weight:800">${r.last.toLocaleString()}</div>
+   <div class="small">${chg(r.d1, r.kind)} today · ${chg(r.ytd, r.kind)} YTD</div><div class="small" style="color:var(--brand);margin-top:4px">View chart →</div></a>`).join("")}</div>` : `<div class="card muted">Data unavailable.</div>`;
 }
 
 function home() {
@@ -71,8 +71,8 @@ function heat(v) {
   return `color-mix(in srgb, ${v >= 0 ? "var(--ok)" : "var(--bad)"} ${Math.round(a * 100)}%, var(--card))`;
 }
 function rowList(rows) {
-  return rows && rows.length ? rows.map((r) => `<div class="item" style="align-items:center"><div style="flex:1"><b>${r.name}</b><div class="small muted">${r.last.toLocaleString()}${r.from_high < -0.5 ? " · " + r.from_high + "% from 1y high" : " · near 1y high"}</div></div>
-   <div class="small" style="text-align:right;min-width:150px">${chg(r.d1, r.kind)} 1d<br>${chg(r.m1, r.kind)} 1m · ${chg(r.ytd, r.kind)} YTD</div></div>`).join("") : `<div class="muted">Data unavailable.</div>`;
+  return rows && rows.length ? rows.map((r) => `<a class="item" href="#/market/${encodeURIComponent(r.symbol)}" style="align-items:center;color:inherit"><div style="flex:1"><b>${r.name}</b><div class="small muted">${r.last.toLocaleString()}${r.from_high < -0.5 ? " · " + r.from_high + "% from 1y high" : " · near 1y high"}</div></div>
+   <div class="small" style="text-align:right;min-width:150px">${chg(r.d1, r.kind)} 1d<br>${chg(r.m1, r.kind)} 1m · ${chg(r.ytd, r.kind)} YTD</div></a>`).join("") : `<div class="muted">Data unavailable.</div>`;
 }
 
 function rangeBar(st, thr) {
@@ -217,7 +217,7 @@ async function route() {
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
   const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
-    explore: () => (h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), login: () => loginView() };
+    explore: () => (h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
   const pending = (typeof gateView === "function" && gateView(a)) || (views[a] || views.home)();

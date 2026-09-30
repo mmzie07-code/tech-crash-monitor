@@ -17,7 +17,7 @@ function sliceRange(data, r) {
 function mountChart(el, data, opts = {}) {
   const money = opts.money !== false, id = "ch" + Math.random().toString(36).slice(2, 7);
   let rng = "1Y", view = null, cmpOn = false;
-  const fmt = (v) => (money ? "$" : "") + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const fmt = (v) => opts.unit === "yield" ? v.toFixed(2) + "%" : (money ? "$" : "") + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   el.innerHTML = `<div class="chh"><div class="chp" id="${id}p"></div><div class="chc small" id="${id}c"></div><div class="small muted" id="${id}d"></div></div>
    <div class="chw"><svg id="${id}s" viewBox="0 0 600 220" preserveAspectRatio="none" style="width:100%;height:220px;touch-action:pan-y;cursor:crosshair"></svg></div>
    <div class="chr">${RANGES.map(([l, n]) => `<button data-r="${l}" ${n === "live" && !opts.live ? 'disabled title="Sign in for live intraday charts"' : ""}>${l}</button>`).join("")}</div>
@@ -27,7 +27,7 @@ function mountChart(el, data, opts = {}) {
     const v = view, cur = v.c[i], base = v.base != null ? v.base : v.c[0], ch = cur - base, pc = (cur / base - 1) * 100, up = ch >= 0;
     P.textContent = fmt(cur);
     const cmp = v.comp ? ` <span class="muted">· ${opts.compare.name} ${(v.comp[i] / v.comp[0] - 1) * 100 >= 0 ? "+" : ""}${((v.comp[i] / v.comp[0] - 1) * 100).toFixed(2)}%</span>` : "";
-    C.innerHTML = `<span style="color:${up ? "var(--ok)" : "var(--bad)"};font-weight:700">${up ? "▲" : "▼"} ${money ? "$" : ""}${Math.abs(ch).toFixed(2)} (${up ? "+" : ""}${pc.toFixed(2)}%)</span> <span class="muted">${i === v.c.length - 1 ? (v.intraday ? (rng === "1D" ? "today" : "past 5 days") : "over " + rng) : "vs " + (v.base != null ? "previous close" : v.intraday ? fmtStamp(v.t[0]) : fmtDate(v.t[0]))}</span>${cmp}`;
+    C.innerHTML = `<span style="color:${up ? "var(--ok)" : "var(--bad)"};font-weight:700">${up ? "▲" : "▼"} ${opts.unit === "yield" ? Math.abs(ch).toFixed(2) + " pts" : (money ? "$" : "") + Math.abs(ch).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " (" + (up ? "+" : "") + pc.toFixed(2) + "%)"}</span> <span class="muted">${i === v.c.length - 1 ? (v.intraday ? (rng === "1D" ? "today" : "past 5 days") : "over " + rng) : "vs " + (v.base != null ? "previous close" : v.intraday ? fmtStamp(v.t[0]) : fmtDate(v.t[0]))}</span>${cmp}`;
     D.textContent = v.intraday ? fmtStamp(v.t[i]) : fmtDate(v.t[i]);
   }
   async function draw() {

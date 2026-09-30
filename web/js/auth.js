@@ -1,6 +1,6 @@
 // Accounts (Supabase Auth) + owner bypass key. Dormant until js/config.js has a supabaseUrl.
 const AUTH = { enabled: !!(window.ANALYTIC && window.ANALYTIC.supabaseUrl), sb: null, user: null, owner: false, ready: false };
-const OPEN_ROUTES = ["home", "about", "login"];
+const OPEN_ROUTES = ["home", "about", "login", "terms", "privacy"];
 const fnUrl = () => window.ANALYTIC.supabaseUrl.replace(/\/$/, "") + "/functions/v1/market";
 
 function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
@@ -79,7 +79,7 @@ function loginView(title) {
   <div class="tabs"><a href="#" data-lm="in" class="${up ? "" : "on"}">Sign in</a><a href="#" data-lm="up" class="${up ? "on" : ""}">Create account</a></div>
   <form id="af" class="card ctl"><label>Email<input name="email" type="email" required autocomplete="email" style="display:block;width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:inherit"></label>
    <label>Password<input name="pw" type="password" required minlength="${up ? 10 : 1}" autocomplete="${up ? "new-password" : "current-password"}" style="display:block;width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:inherit"></label>
-   ${up ? `<label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input name="age" type="checkbox" style="margin-top:4px"><span class="small">I am 16 or older and I agree that this site is for education only and is not investment advice.</span></label>` : ""}
+   ${up ? `<label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input name="age" type="checkbox" style="margin-top:4px"><span class="small">I am 16 or older. I agree to the <a href="#/terms" target="_blank" rel="noopener">Terms of Use</a> and <a href="#/privacy" target="_blank" rel="noopener">Privacy Policy</a>, and I understand this site is for education only, not investment advice.</span></label>` : ""}
    <button class="btn" type="submit">${up ? "Create account" : "Sign in"}</button><div id="am" class="small" role="status"></div>
    ${up ? "" : `<a href="#" id="forgot" class="small">Forgot your password?</a>`}</form>
   <details><summary class="small muted" style="cursor:pointer">Owner access</summary><form id="ownerform" class="ctl" style="margin-top:8px"><input name="key" type="password" placeholder="Owner key" autocomplete="off" style="padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit"><button class="btn ghost" type="submit">Use key</button></form></details>

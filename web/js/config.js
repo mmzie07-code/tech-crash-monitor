@@ -5,4 +5,5 @@ window.ANALYTIC = {
   supabaseUrl: "https://oyhyrrimnxhwayfgztai.supabase.co",
   supabaseAnonKey: "sb_publishable_7jAzwMFLFiiiT0o9uNnWlw_AAMO7aRv",
   requireLogin: true,
+  contactEmail: "",  // public contact address shown on the Terms and Privacy pages (set this before launch)
 };

@@ -8,7 +8,9 @@ DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 HIST = os.path.join(DATA, "hist")
 UA = {"User-Agent": "Mozilla/5.0"}  # Yahoo 429s long browser UAs
 EPOCH = dt.date(2000, 1, 1)
-EXTRA = ["SPY", "QQQ", "DIA", "IWM", "VTI", "VOO", "VXUS", "AGG", "GLD"]
+EXTRA = ["SPY", "QQQ", "DIA", "IWM", "VTI", "VOO", "VXUS", "AGG", "GLD",
+         # market overview items (indices, global, rates, currency, commodities, crypto)
+         "^GSPC", "^DJI", "^IXIC", "^RUT", "^FTSE", "^STOXX50E", "^N225", "^HSI", "^VIX", "^TNX", "DX-Y.NYB", "CL=F", "GC=F", "BTC-USD"]
 
 
 def day(iso):
