@@ -40,6 +40,9 @@ jobs:
         run: |
           mkdir -p site/data
           cp -R web/. site/
+          B=$(date -u +%Y%m%d%H%M%S)
+          sed -i "s/__BUILD__/$B/g" site/index.html
+          echo "{\"v\":\"$B\"}" > site/version.json
           cp data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/outlook.json data/quotes.json site/data/
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

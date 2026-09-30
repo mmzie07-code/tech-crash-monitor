@@ -202,3 +202,17 @@ function route() {
 }
 window.addEventListener("hashchange", route);
 loadSnap().then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); });
+
+// Stale-page guard: GitHub Pages lets browsers cache index.html for ~10 minutes. If a newer build exists, offer a refresh.
+(function checkVersion() {
+  if (!window.BUILD || window.BUILD.indexOf("__") === 0) return;
+  fetch("version.json?" + Date.now(), { cache: "no-store" }).then((r) => r.json()).then((j) => {
+    if (j.v && j.v !== window.BUILD) {
+      const b = document.createElement("div");
+      b.style.cssText = "position:fixed;left:12px;right:12px;bottom:76px;z-index:50;background:var(--tx);color:var(--bg);padding:12px 16px;border-radius:12px;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:var(--shadow)";
+      b.innerHTML = '<span>A new version of Market Lab is available.</span><button class="btn" style="padding:8px 14px">Refresh</button>';
+      b.querySelector("button").onclick = () => { location.href = location.pathname + "?v=" + j.v + location.hash; };
+      document.body.appendChild(b);
+    }
+  }).catch(() => {});
+})();
