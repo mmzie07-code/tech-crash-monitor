@@ -139,7 +139,7 @@ async function stockPage(sym) {
   return `<a href="#/explore${secKey ? "/" + secKey : ""}" class="small">← ${secKey ? esc(SECTOR_NAME(secKey)) : "Explore"}</a>
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(name)}</h1>
    <div class="muted">${esc(sym)}${secKey ? ` · <a href="#/explore/${secKey}">${esc(SECTOR_NAME(secKey))}</a>` : ""}${top && top.industry ? ` · ${esc(top.industry)}` : ""}</div></div>
-   <a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div>
+   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div></div>
   <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}

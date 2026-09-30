@@ -22,7 +22,7 @@ function recapPage(id) {
     ${r.sectors ? `<p class="small" style="margin:10px 0 0">Best sector: <b>${linkNames(r.sectors.best.name)}</b> ${pctTxt(r.sectors.best.move)} · Weakest: <b>${linkNames(r.sectors.worst.name)}</b> ${pctTxt(r.sectors.worst.move)}</p>` : ""}</div>`
     : `<div class="card"><h3>How markets reacted</h3><p class="small muted" style="margin:0">Markets were closed or we don't have price data for this date.</p></div>`;
   return `<a href="#/markets/calendar" class="small">← Calendar</a><div style="margin-top:6px"><span class="pill">${esc(KIND_LABEL[r.kind] || r.kind)}</span><span class="pill g">Recap</span></div>
-  <h1 style="margin:6px 0 0">${esc(r.title)}</h1><p class="muted">${when} · ${esc(r.time)}${/^\d/.test(r.time) ? " ET" : ""}</p>
+  <h1 style="margin:6px 0 0">${esc(r.title)}</h1><p class="muted" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">${when} · ${esc(r.time)}${/^\d/.test(r.time) ? " ET" : ""} ${heartBtn("event", r.id, { label: r.title, date: r.date, time: r.time })}</p>
   <div class="card big"><h2 style="margin:0 0 8px">${esc(r.headline)}</h2>${r.bullets.map((b) => `<p style="margin:0 0 8px">${linkNames(b)}</p>`).join("")}</div>
   ${ch}${react}
   ${r.context && r.context.length ? `<div class="card"><h3>Putting it in context</h3>${r.context.map((c) => `<p class="small" style="margin:0 0 8px">${esc(c)}</p>`).join("")}</div>` : ""}

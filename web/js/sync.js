@@ -31,6 +31,7 @@ async function syncPull() {
     const merged = Object.assign({}, (lp.data && lp.data.data) || {}, localJson("ml_done") || {});  // finished lessons never un-finish
     if (JSON.stringify(merged) !== JSON.stringify(state.done)) { state.done = merged; try { localStorage.setItem("ml_done", JSON.stringify(merged)); } catch (e) {} changed = true; }
     await syncPush();
+    if (typeof pullFollows === "function") await pullFollows();
     if (changed) route();
   } catch (e) {}
 }
