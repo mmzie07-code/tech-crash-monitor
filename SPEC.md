@@ -1,4 +1,4 @@
-# Market Lab (working name): spec and roadmap
+# The Analytic: spec and roadmap
 
 ## Product (v0.3)
 An educational site for ages 16+ that covers the whole market, with AI/tech bubble tracking as one featured section.

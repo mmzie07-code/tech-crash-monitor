@@ -20,6 +20,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
+      - name: Restore price-history cache
+        uses: actions/cache@v4
+        with:
+          path: data/hist
+          key: hist-${{ github.run_id }}
+          restore-keys: hist-
       - run: pip install yfinance
       - name: Run engine
         env:
@@ -30,7 +36,7 @@ jobs:
         run: |
           git config user.name "crash-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/outlook.json data/quotes.json data/cache/form4_*.json
+          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/outlook.json data/quotes.json data/earnings.json data/sectors.json data/search.json data/gics.json data/cache/form4_*.json
           git commit -m "Daily update $(date -u +%F)" || echo "no changes"
           for i in 1 2 3; do
             git pull --rebase -X theirs origin main && git push && break
@@ -43,7 +49,8 @@ jobs:
           B=$(date -u +%Y%m%d%H%M%S)
           sed -i "s/__BUILD__/$B/g" site/index.html
           echo "{\"v\":\"$B\"}" > site/version.json
-          cp data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/outlook.json data/quotes.json site/data/
+          mkdir -p site/data/hist && cp data/hist/*.json site/data/hist/
+          cp data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/outlook.json data/quotes.json data/earnings.json data/sectors.json data/search.json data/gics.json site/data/
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - id: deploy

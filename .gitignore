@@ -2,3 +2,4 @@ data/cache/*.json
 !data/cache/form4_*.json
 __pycache__/
 .DS_Store
+data/hist/

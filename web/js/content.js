@@ -1,5 +1,5 @@
 // All course text lives here. Edit freely; the app renders whatever is in these lists.
-const BRAND = "Market Lab"; // working name
+const BRAND = "The Analytic";
 
 const LESSONS = {}; // filled in by js/lessons/l1.js ... l8.js
 

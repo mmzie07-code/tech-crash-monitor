@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, quotes: null, done: {} };
+const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, quotes: null, earnings: null, sectors: null, search: null, keepScroll: false, done: {} };
 const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 try { state.done = JSON.parse(localStorage.getItem("ml_done") || "{}"); } catch (e) {}
 const saveDone = () => { try { localStorage.setItem("ml_done", JSON.stringify(state.done)); } catch (e) {} };
@@ -12,7 +12,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -61,7 +61,7 @@ function learn() {
 }
 
 function mTabs(cur) {
-  return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["calendar", "Calendar"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
 }
 function heat(v) {
   if (v == null) return "var(--card)";
@@ -113,6 +113,22 @@ function outlookView(key) {
    <li>New to this? <a href="#/learn/3">Lesson 3 (risk)</a> and <a href="#/learn/6">Lesson 6 (bubbles and crashes)</a> explain why time horizon matters more than predictions.</li></ul></div>`;
 }
 
+function earningsView(date) {
+  const e = state.earnings;
+  if (!e || !e.days.length) return `<div class="card muted">No earnings data yet. Check back after the next reporting day.</div>`;
+  const day = e.days.find((d) => d.date === date) || e.days[0];
+  const pills = e.days.slice(0, 7).map((d) => `<a class="${d.date === day.date ? "on" : ""}" href="#/markets/earnings/${d.date}">${new Date(d.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}</a>`).join("");
+  const chip = (c) => c.eps == null ? `<span class="pill w">Pending</span>` : c.eps_estimate == null ? `<span class="pill">Reported</span>` : c.eps > c.eps_estimate ? `<span class="pill g">Beat</span>` : c.eps < c.eps_estimate ? `<span class="pill" style="background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)">Missed</span>` : `<span class="pill">Matched</span>`;
+  return `<p class="muted">The 10 highest-valued companies that reported earnings each day, with the key facts. "Beat" or "missed" compares earnings per share (profit per share) to what analysts expected. A beat doesn't guarantee the stock rises: what matters most is how results compare to <i>expectations</i> and what the company says about the future.</p>
+  <div class="tabs">${pills}</div>
+  <p class="small muted">${day.reported_total} companies reported on ${new Date(day.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}. Showing the ${day.top.length} largest by market value.</p>
+  ${day.top.map((c, i) => `<div class="card"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><span class="small muted">#${i + 1} by market value</span><h3 style="margin:2px 0"><a href="#/stock/${esc(c.symbol)}">${esc(c.name)}</a> <span class="muted">(${esc(c.symbol)})</span></h3>
+   <div class="small muted">Market value ${capStr(c.market_cap_b)}</div></div>${chip(c)}</div>
+   <ul style="margin:.5em 0 0;padding-left:20px">${c.bullets.map((x) => `<li class="small">${esc(x)}</li>`).join("")}</ul>
+   <p class="small muted" style="margin:10px 0 0">${e.ai_summaries && c.ai_summary ? esc(c.ai_summary) : "AI-written summary of the full report: coming soon."} · <a href="${esc(c.filings)}" target="_blank" rel="noopener noreferrer">SEC filings</a></p></div>`).join("")}
+  <p class="small muted">${esc(e.note)} Educational only, not investment advice.</p>`;
+}
+
 function calView(filter) {
   const c = state.cal;
   if (!c) return `<div class="card muted">The calendar isn't available right now.</div>`;
@@ -159,6 +175,8 @@ function markets(tab, sub) {
     <a class="card" href="#/watch" style="color:inherit;display:block"><span class="pill w">Featured</span><h3>AI &amp; Tech Watch</h3><p class="muted small" style="margin:0">Is there an AI bubble? Ten warning signs, tracked daily.</p></a>`;
   } else if (tab === "brief") {
     b = briefView();
+  } else if (tab === "earnings") {
+    b = earningsView(sub);
   } else if (tab === "calendar") {
     b = calView(sub);
   } else {
@@ -191,17 +209,29 @@ function about() {
   <h2>Who it's for</h2><p>Ages 16 and up. We collect no personal information and show no ads.</p><h2>Important</h2><p>${DISC}</p></div>`;
 }
 
-function route() {
+const afterRender = [];
+let routeToken = 0;
+async function route() {
+  const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
-  const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || '', h[2]), watch: () => watch(), about: () => about() };
-  $("#view").innerHTML = (views[a] || views.home)();
-  document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a)));
+  const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
+    explore: () => (h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), login: () => loginView() };
+  afterRender.length = 0;
+  if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
+  const pending = (typeof gateView === "function" && gateView(a)) || (views[a] || views.home)();
+  if (pending && pending.then) $("#view").innerHTML = `<div class="card muted">Loading…</div>`;
+  const html = await pending;
+  if (token !== routeToken) return; // a newer navigation won
+  $("#view").innerHTML = html;
+  document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a === "stock" ? "explore" : a)));
   if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
   if (a === "practice") wirePractice(h[1] || "", h[2]);
-  window.scrollTo(0, 0);
+  afterRender.forEach((fn) => fn());
+  wireSearch();
+  if (!keepScroll) window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
-loadSnap().then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); });
+Promise.all([loadSnap(), authInit()]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); });
 
 // Stale-page guard: GitHub Pages lets browsers cache index.html for ~10 minutes. If a newer build exists, offer a refresh.
 (function checkVersion() {
@@ -210,7 +240,7 @@ loadSnap().then(() => { $("#brand").textContent = BRAND; $("#disc").textContent 
     if (j.v && j.v !== window.BUILD) {
       const b = document.createElement("div");
       b.style.cssText = "position:fixed;left:12px;right:12px;bottom:76px;z-index:50;background:var(--tx);color:var(--bg);padding:12px 16px;border-radius:12px;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:var(--shadow)";
-      b.innerHTML = '<span>A new version of Market Lab is available.</span><button class="btn" style="padding:8px 14px">Refresh</button>';
+      b.innerHTML = '<span>A new version of The Analytic is available.</span><button class="btn" style="padding:8px 14px">Refresh</button>';
       b.querySelector("button").onclick = () => { location.href = location.pathname + "?v=" + j.v + location.hash; };
       document.body.appendChild(b);
     }

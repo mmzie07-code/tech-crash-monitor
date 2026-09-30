@@ -3,7 +3,14 @@ const START_CASH = 10000, BROAD = ["SPY", "VOO", "VTI", "VXUS"];
 let P = null, storeOK = true, searchText = "", typeFilter = "all";
 const sgn = (v, d = 2) => { if (Math.abs(v) < 0.5 * Math.pow(10, -d)) v = 0; return (v > 0 ? "+" : "") + v.toFixed(d); };
 const colr = (v) => (v > 0 ? "var(--ok)" : v < 0 ? "var(--bad)" : "var(--mut)");
-const Q = () => Object.fromEntries(((state.quotes && state.quotes.quotes) || []).map((q) => [q.symbol, q]));
+let _qMemo = null, _qSrc = null;
+function liteFromSearch(r) { return { symbol: r[0], name: r[1], sector: (typeof SECTOR_NAME === "function" ? SECTOR_NAME(r[2]) : r[2]), price: r[4], date: state.quotes.date, d1: r[5], w1: null, m1: null, y1: null, lo52: null, hi52: null, etf: false, spark: [], lite: true }; }
+function Q() {
+  if (_qMemo && _qSrc === state.quotes) return _qMemo;
+  const m = Object.fromEntries(((state.quotes && state.quotes.quotes) || []).map((q) => [q.symbol, q]));
+  ((state.search && state.search.stocks) || []).forEach((r) => { if (!m[r[0]]) m[r[0]] = liteFromSearch(r); });
+  _qSrc = state.quotes; return (_qMemo = m);
+}
 
 function loadP() {
   try { P = JSON.parse(localStorage.getItem("ml_paper") || "null"); } catch (e) { storeOK = false; }
@@ -99,7 +106,7 @@ function portfolioView() {
 }
 
 function listRows() {
-  const q = state.quotes.quotes, s = searchText.trim().toLowerCase();
+  const s = searchText.trim().toLowerCase(), q = s || typeFilter === "stock" ? Object.values(Q()) : state.quotes.quotes;
   const all = q.filter((x) => (typeFilter === "all" || (typeFilter === "etf") === x.etf) && (!s || x.symbol.toLowerCase().includes(s) || x.name.toLowerCase().includes(s)));
   return (all.length > 40 ? `<div class="small muted">Showing 40 of ${all.length}. Type in the search box to narrow it down.</div>` : "") + all
     .slice(0, 40).map((x) => `<a class="mod" href="#/practice/trade/${x.symbol}" style="padding:12px"><div class="t"><b>${esc(x.symbol)}</b> <span class="small muted">${esc(x.name)}</span><div class="small muted">${esc(x.sector)}</div></div>
@@ -111,16 +118,16 @@ function tradeView(sym) {
   if (!sym || !q[sym]) {
     return `<div class="ctl" style="grid-template-columns:1fr auto"><input id="ps" placeholder="Search a company or fund (Apple, SPY, bonds...)" value="${esc(searchText)}" style="padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit">
      <select id="pf" style="padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit"><option value="all">All</option><option value="stock" ${typeFilter === "stock" ? "selected" : ""}>Stocks</option><option value="etf" ${typeFilter === "etf" ? "selected" : ""}>Funds (ETFs)</option></select></div>
-     <div class="mods" id="plist">${listRows()}</div><p class="small muted">${state.quotes.quotes.length} well-known stocks and funds. New to funds? Read <a href="#/learn/4">Lesson 4</a>.</p>${PNOTE}`;
+     <div class="mods" id="plist">${listRows()}</div><p class="small muted">Featured: ${state.quotes.quotes.length} well-known stocks and funds. Search to find any of ${(state.search ? state.search.stocks.length : 0).toLocaleString()} US-listed companies. New to funds? Read <a href="#/learn/4">Lesson 4</a>.</p>${PNOTE}`;
   }
   const x = q[sym], held = P.holdings[sym], t = totals();
   const span = x.hi52 - x.lo52, at = span ? (x.price - x.lo52) / span * 100 : 50;
   return `<a href="#/practice/trade" class="small">← All investments</a>
   <div class="card big"><span class="pill">${esc(x.sector)}</span>${x.etf ? '<span class="pill g">Fund</span>' : ""}<h2 style="margin-top:8px">${esc(x.name)} <span class="muted">(${esc(x.symbol)})</span></h2>
    <div class="strip"><div class="num" style="font-size:40px">$${x.price.toFixed(2)}</div><div class="small">${x.d1 != null ? `<span style="color:${colr(x.d1)}">${sgn(x.d1)}% today</span><br>` : ""}as of ${esc(x.date)} close</div></div>
-   ${svgLines([x.spark], ["var(--brand)"], 100)}
+   ${x.lite ? `<p class="small muted"><a href="#/stock/${esc(sym)}">See the full interactive chart and stats</a></p>` : `${svgLines([x.spark], ["var(--brand)"], 100)}
    <p class="small muted">Past 3 months. 1 week ${x.w1 == null ? "-" : sgn(x.w1) + "%"} · 1 month ${x.m1 == null ? "-" : sgn(x.m1) + "%"} · 1 year ${x.y1 == null ? "-" : sgn(x.y1) + "%"}</p>
-   <div class="small muted">52-week range: $${x.lo52} to $${x.hi52}</div><div class="bar" style="margin:4px 0"><i style="width:${at.toFixed(0)}%"></i></div>
+   <div class="small muted">52-week range: $${x.lo52} to $${x.hi52}</div><div class="bar" style="margin:4px 0"><i style="width:${at.toFixed(0)}%"></i></div>`}
    ${held ? `<p class="small">You own ${+held.sh.toFixed(4)} shares (${money(held.sh * x.price)}).</p>` : ""}</div>
   <div class="card"><h3>Place a practice order</h3>
    <div class="tabs"><a href="#" id="sb" class="on">Buy</a><a href="#" id="ss">Sell</a></div>
