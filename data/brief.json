@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T20:17:23.752492Z",
+ "generated": "2026-09-30T20:20:42.379978Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
@@ -23,12 +23,12 @@
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.51 (+2.93% today)",
+    "VIX (fear gauge): 16.49 (+2.81% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.50 (+0.13% today)",
-    "Crude oil: 90.61 (+1.38% today)",
-    "Gold: 4,186.60 (+0.17% today)",
-    "Bitcoin: 83,558.04 (-0.08% today)"
+    "US dollar index: 101.49 (+0.12% today)",
+    "Crude oil: 90.54 (+1.30% today)",
+    "Gold: 4,188.70 (+0.22% today)",
+    "Bitcoin: 83,608.30 (-0.02% today)"
    ]
   },
   {
@@ -57,16 +57,16 @@
  ],
  "headlines": [
   {
+   "title": "Meta stock enjoys best month since 2022 on AI momentum",
+   "source": "CNBC",
+   "link": "https://www.cnbc.com/2026/09/30/meta-stock-best-month-2013-ai.html",
+   "published": "Wed, 30 Sep 2026 20:08:47"
+  },
+  {
    "title": "Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained",
    "source": "CNBC",
    "link": "https://www.cnbc.com/2026/09/30/iran-war-strait-hormuz-gulf-oil-fuel.html",
    "published": "Wed, 30 Sep 2026 20:16:17"
-  },
-  {
-   "title": "Google rolls out Gemini 4 Argon, its most advanced AI model",
-   "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html",
-   "published": "Wed, 30 Sep 2026 20:15:23"
   },
   {
    "title": "Sen. Hawley: OpenAI CEO Sam Altman declined to testify at rogue AI hearing",
@@ -75,10 +75,10 @@
    "published": "Wed, 30 Sep 2026 19:34:11"
   },
   {
-   "title": "Meta stock enjoys best month since 2022 on AI momentum",
+   "title": "Micron beats on revenue and earnings as global memory shortage continues",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/meta-stock-best-month-2013-ai.html",
-   "published": "Wed, 30 Sep 2026 20:08:47"
+   "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+   "published": "Wed, 30 Sep 2026 20:19:48"
   },
   {
    "title": "U.S. bond yields post biggest jump in a generation as global rout rattles investors",
