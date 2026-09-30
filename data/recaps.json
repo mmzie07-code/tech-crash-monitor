@@ -1,0 +1,1066 @@
+{
+ "generated": "2026-09-30T23:57:19.376159Z",
+ "ai_analysis_enabled": false,
+ "recaps": [
+  {
+   "id": "2026-09-30-earnings-micron-technology-mu-reports-earnings",
+   "date": "2026-09-30",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Micron Technology (MU) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "headline": "Personal income increased $66.6 billion (0.2 percent at a monthly rate) in August.",
+   "bullets": [
+    "Bureau of Economic Analysis (BEA).",
+    "Disposable personal income (DPI)-personal income less personal current taxes-increased $68.6 billion (0.3 percent), and personal consumption expenditures (PCE) increased $190.8 billion (0.9 percent).",
+    "Personal outlays-the sum of PCE, personal interest payments, and personal current transfer payments-increased $190.7 billion in August."
+   ],
+   "changes": null,
+   "lesson": 3,
+   "context": [
+    "Headline economic numbers matter most when they differ from what analysts expected. We don't have consensus forecasts, so judge the market reaction below as a guide to whether this was a surprise."
+   ],
+   "sources": [
+    {
+     "label": "BEA release",
+     "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.25,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.24,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.86,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.39,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.09,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 1.87,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 0.15,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 0.72,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": 0.13,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Information Technology",
+     "move": 0.48
+    },
+    "worst": {
+     "name": "Consumer Staples",
+     "move": -1.56
+    }
+   },
+   "id": "2026-09-30-data-personal-income-and-spending-including-pce-infla",
+   "date": "2026-09-30",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Personal income and spending, including PCE inflation",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+   "generated": "2026-09-30T23:57:24.224593Z"
+  },
+  {
+   "headline": "Real gross domestic product (GDP) increased at an annual rate of 2.2 percent in the second quarter of 2026 (April, May, and June).",
+   "bullets": [
+    "Bureau of Economic Analysis (BEA).",
+    "In the first quarter, real GDP increased 2.5 percent (revised).",
+    "The contributors to the increase in real GDP in the second quarter were consumer spending, investment, and exports."
+   ],
+   "changes": null,
+   "lesson": 3,
+   "context": [
+    "Headline economic numbers matter most when they differ from what analysts expected. We don't have consensus forecasts, so judge the market reaction below as a guide to whether this was a surprise."
+   ],
+   "sources": [
+    {
+     "label": "BEA release",
+     "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.25,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.24,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.86,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.39,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.09,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 1.87,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 0.15,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 0.72,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": 0.13,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Information Technology",
+     "move": 0.48
+    },
+    "worst": {
+     "name": "Consumer Staples",
+     "move": -1.56
+    }
+   },
+   "id": "2026-09-30-data-gdp-third-estimate-revised-economic-growth",
+   "date": "2026-09-30",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "GDP third estimate: revised economic growth",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd",
+   "generated": "2026-09-30T23:57:24.484805Z"
+  },
+  {
+   "id": "2026-09-30-fed-fed-speaks-governor-lisa-d-cook",
+   "date": "2026-09-30",
+   "time": "3:25 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Lisa D. Cook",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-29-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-09-29",
+   "time": "3:00 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://vimeo.com/event/6186977/6099e85d01",
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-29-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-09-29",
+   "time": "12:40 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://youtube.com/live/ZcKwcEHku7w",
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-29-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-09-29",
+   "time": "11:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-28-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-09-28",
+   "time": "8:15 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://teams.microsoft.com/meet/212992571985590?p=yY3nvqkkrbQw6RMUL6",
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-28-fed-fed-speaks-governor-lisa-d-cook",
+   "date": "2026-09-28",
+   "time": "1:25 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Lisa D. Cook",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "headline": "The Treasury sold 7-Year notes at a 5.085% yield with demand below average.",
+   "bullets": [
+    "High yield (the highest rate accepted): 5.085%.",
+    "Bid-to-cover ratio: 2.42 (bids received per dollar sold).",
+    "That is below the average of 2.49 over the previous 8 7-Year auctions.",
+    "Size: $44B offered, $50.6B accepted."
+   ],
+   "changes": null,
+   "context": [
+    "Demand was weaker than usual. Weak auctions can push yields up; strong ones keep them steady."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Auction results",
+     "url": "https://www.treasurydirect.gov/auctions/results/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.02,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.01,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.31,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.11,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.05,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.19,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 3.23,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -0.47,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 2.66,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.0,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Communication Services",
+     "move": 1.85
+    },
+    "worst": {
+     "name": "Materials",
+     "move": -1.15
+    }
+   },
+   "id": "2026-09-24-treasury-treasury-auction-7-year-note",
+   "date": "2026-09-24",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 7-Year Note",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/results/",
+   "generated": "2026-09-30T23:57:22.531222Z"
+  },
+  {
+   "headline": "The Treasury sold 5-Year notes at a 5.033% yield with demand below average.",
+   "bullets": [
+    "High yield (the highest rate accepted): 5.033%.",
+    "Bid-to-cover ratio: 2.21 (bids received per dollar sold).",
+    "That is below the average of 2.33 over the previous 8 5-Year auctions.",
+    "Size: $70B offered, $80.5B accepted."
+   ],
+   "changes": null,
+   "context": [
+    "Demand was weaker than usual. Weak auctions can push yields up; strong ones keep them steady."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Auction results",
+     "url": "https://www.treasurydirect.gov/auctions/results/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.75,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -1.13,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.68,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -1.77,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.14,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.5,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 6.83,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -1.33,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -2.57,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -2.08,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Energy",
+     "move": 0.94
+    },
+    "worst": {
+     "name": "Materials",
+     "move": -1.92
+    }
+   },
+   "id": "2026-09-23-treasury-treasury-auction-5-year-note",
+   "date": "2026-09-23",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 5-Year Note",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/results/",
+   "generated": "2026-09-30T23:57:22.187328Z"
+  },
+  {
+   "id": "2026-09-23-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-09-23",
+   "time": "10:05 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.chicagofed.org/events/2026/housing-affordability-community-development-summit",
+   "lesson": 3
+  },
+  {
+   "headline": "The Treasury sold 2-Year notes at a 4.787% yield with demand above average.",
+   "bullets": [
+    "High yield (the highest rate accepted): 4.787%.",
+    "Bid-to-cover ratio: 2.63 (bids received per dollar sold).",
+    "That is above the average of 2.63 over the previous 8 2-Year auctions.",
+    "Size: $69B offered, $79.4B accepted."
+   ],
+   "changes": null,
+   "context": [
+    "Demand was about the same than usual. Weak auctions can push yields up; strong ones keep them steady."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Auction results",
+     "url": "https://www.treasurydirect.gov/auctions/results/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.0,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.45,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.36,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": 0.51,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.01,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.17,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": -4.44,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -0.17,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -1.24,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.5,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Materials",
+     "move": 2.31
+    },
+    "worst": {
+     "name": "Financials",
+     "move": -1.82
+    }
+   },
+   "id": "2026-09-22-treasury-treasury-auction-2-year-note",
+   "date": "2026-09-22",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 2-Year Note",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/results/",
+   "generated": "2026-09-30T23:57:21.570548Z"
+  },
+  {
+   "id": "2026-09-22-fed-fed-speaks-vice-chair-philip-n-jefferson",
+   "date": "2026-09-22",
+   "time": "10:20 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.newyorkfed.org/newsevents/events/markets/2026/0922-2026",
+   "lesson": 3
+  },
+  {
+   "id": "2026-09-18-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-09-18",
+   "time": "9:30 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/live/WRJnz2auuZs",
+   "lesson": 3
+  },
+  {
+   "headline": "The Fed raised interest rates to a target range of 3-3/4 to 4 percent.",
+   "bullets": [
+    "Decision: The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate."
+   ],
+   "changes": {
+    "since": "2026-07-29",
+    "added": [
+     "Economic activity is expanding at a solid pace.",
+     "While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient.",
+     "Productivity growth is strong, and capital investment is robust.",
+     "Inflation remains elevated.",
+     "Today's policy action will support a timelier return to the Committee's 2 percent goal."
+    ],
+    "removed": [
+     "Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East.",
+     "Productivity growth and capital investment are strong.",
+     "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy.",
+     "Voting against the monetary policy action were Beth M. Hammack, Neel Kashkari, and Lorie K. Logan, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+    ]
+   },
+   "context": [
+    "On the 38 previous Fed decision days we have data for, the S&P 500 moved an average of 1.03% (up 16 times, down 21). This time it moved -0.45%, a smaller move than typical.",
+    "The decision came out at 2:00 PM and daily figures include the hours before it, so not all of the day's move is a reaction to the Fed."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Fed statement",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    {
+     "label": "Press conference",
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomcpressconf20260916.htm"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.45,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -0.01,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -1.21,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.4,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.01,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.66,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 2.97,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 1.26,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -3.21,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": 0.71,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Information Technology",
+     "move": 0.3
+    },
+    "worst": {
+     "name": "Energy",
+     "move": -2.86
+    }
+   },
+   "id": "2026-09-16-fed-fed-interest-rate-decision-fomc",
+   "date": "2026-09-16",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "generated": "2026-09-30T23:57:20.723601Z"
+  },
+  {
+   "headline": "The Treasury sold 3-Year notes at a 4.474% yield with demand above average.",
+   "bullets": [
+    "High yield (the highest rate accepted): 4.474%.",
+    "Bid-to-cover ratio: 2.72 (bids received per dollar sold).",
+    "That is above the average of 2.62 over the previous 8 3-Year auctions.",
+    "Size: $58B offered, $58.0B accepted."
+   ],
+   "changes": null,
+   "context": [
+    "Demand was stronger than usual. Weak auctions can push yields up; strong ones keep them steady."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Auction results",
+     "url": "https://www.treasurydirect.gov/auctions/results/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.58,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -0.32,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -1.18,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.52,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": -0.32,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 2.75,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -0.84,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 1.69,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.86,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Energy",
+     "move": 1.48
+    },
+    "worst": {
+     "name": "Health Care",
+     "move": -2.9
+    }
+   },
+   "id": "2026-09-08-treasury-treasury-auction-3-year-note",
+   "date": "2026-09-08",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 3-Year Note",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/results/",
+   "generated": "2026-09-30T23:57:20.200687Z"
+  },
+  {
+   "id": "2026-09-03-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-09-03",
+   "time": "8:30 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://events.reutersevents.com/reuters/newsmaker/christopherwaller",
+   "lesson": 3
+  },
+  {
+   "headline": "The Fed published its Beige Book on regional business conditions.",
+   "bullets": [
+    "It summarizes anecdotes from businesses in each Fed district about hiring, prices and demand."
+   ],
+   "changes": null,
+   "context": [
+    "Words like 'softening' or 'slight growth' are compared with the previous edition."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Beige Book",
+     "url": "https://www.federalreserve.gov/monetarypolicy/beigebook/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": 0.46,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.45,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": 0.56,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": 1.13,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.0,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": -0.11,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": -6.98,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 0.41,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 0.88,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.13,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Materials",
+     "move": 1.73
+    },
+    "worst": {
+     "name": "Real Estate",
+     "move": -0.6
+    }
+   },
+   "id": "2026-09-02-fed-fed-beige-book",
+   "date": "2026-09-02",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed Beige Book",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.federalreserve.gov/monetarypolicy/beigebook/",
+   "generated": "2026-09-30T23:57:19.633708Z"
+  },
+  {
+   "id": "2026-09-01-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-09-01",
+   "time": "9:05 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://jpmchase.zoom.us/j/95033879625",
+   "lesson": 3
+  }
+ ]
+}

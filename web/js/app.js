@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, quotes: null, earnings: null, sectors: null, search: null, keepScroll: false, done: {} };
+const state = { snap: null, mk: null, brief: null, cal: null, outlook: null, quotes: null, earnings: null, recaps: null, sectors: null, search: null, keepScroll: false, done: {} };
 const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 try { state.done = JSON.parse(localStorage.getItem("ml_done") || "{}"); } catch (e) {}
 const saveDone = () => { try { localStorage.setItem("ml_done", JSON.stringify(state.done)); } catch (e) {} if (typeof queueSync === "function") queueSync(); };
@@ -13,7 +13,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -136,18 +136,18 @@ function calView(filter) {
   const c = state.cal;
   if (!c) return `<div class="card muted">The calendar isn't available right now.</div>`;
   filter = filter || "all";
-  const chips = [["all", "All"], ["fed", "Fed"], ["data", "Economic data"], ["earnings", "Earnings"]].map(([k, l]) => `<a class="${filter === k ? "on" : ""}" href="#/markets/calendar/${k}">${l}</a>`).join("");
+  const chips = [["all", "All"], ["fed", "Fed"], ["data", "Economic data"], ["treasury", "Treasury"], ["earnings", "Earnings"]].map(([k, l]) => `<a class="${filter === k ? "on" : ""}" href="#/markets/calendar/${k}">${l}</a>`).join("");
   const today = new Date(c.today + "T12:00:00"), day = 864e5;
   const label = (iso) => { const d = new Date(iso + "T12:00:00"), n = Math.round((d - today) / day);
     return (n === 0 ? "Today · " : n === 1 ? "Tomorrow · " : "") + d.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" }); };
   const evs = c.events.filter((e) => filter === "all" || e.kind === filter);
   const groups = {}; evs.forEach((e) => (groups[e.date] = groups[e.date] || []).push(e));
-  const col = { high: "var(--bad)", medium: "var(--warn)", low: "var(--unk)" }, kind = { fed: "Fed", data: "Data", earnings: "Earnings" };
+  const col = { high: "var(--bad)", medium: "var(--warn)", low: "var(--unk)" }, kind = { fed: "Fed", data: "Data", treasury: "Treasury", earnings: "Earnings" };
   const list = Object.keys(groups).sort().map((d) => `<div class="card"><h3>${label(d)}</h3>${groups[d].map((e) => `<details class="item" style="display:block"><summary style="cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center">
     <span class="dot" style="background:${col[e.importance]};margin:0" title="${e.importance} importance"></span><span style="flex:1"><b>${esc(e.title)}</b><br><span class="small muted">${esc(e.time)}${/^\d/.test(e.time) ? " ET" : ""}</span></span><span class="pill">${kind[e.kind]}</span></summary>
-    <p class="small muted" style="margin:8px 0 0 22px">${esc(e.why)}</p>${(() => { const m = /\(([A-Z.\-]+)\) reports/.exec(e.title); return m ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/stock/${esc(m[1])}">View ${esc(m[1])} chart →</a> · <a href="#/markets/earnings">Earnings results</a></p>` : e.kind === "fed" ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/market/%5ETNX">10-year yield chart →</a> · <a href="#/learn/3">Why rates matter</a></p>` : ""; })()}</details>`).join("")}</div>`).join("");
+    <p class="small muted" style="margin:8px 0 0 22px">${esc(e.why)}</p>${recapFor(e.id) ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/recap/${encodeURIComponent(e.id)}"><b>Read the recap →</b></a></p>` : ""}${e.link && e.source ? `<p class="small" style="margin:4px 0 0 22px"><a href="${esc(e.link)}" target="_blank" rel="noopener noreferrer">${esc(e.source)} →</a></p>` : ""}${(() => { const m = /\(([A-Z.\-]+)\) reports/.exec(e.title); return m ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/stock/${esc(m[1])}">View ${esc(m[1])} chart →</a> · <a href="#/markets/earnings">Earnings results</a></p>` : e.kind === "fed" ? `<p class="small" style="margin:4px 0 0 22px"><a href="#/market/%5ETNX">10-year yield chart →</a> · <a href="#/learn/3">Why rates matter</a></p>` : ""; })()}</details>`).join("")}</div>`).join("");
   return `<p class="muted">What's scheduled that could move markets. Tap an event to see why it matters. Times are US Eastern. <span class="dot" style="display:inline-block;background:var(--bad)"></span> high <span class="dot" style="display:inline-block;background:var(--warn)"></span> medium <span class="dot" style="display:inline-block;background:var(--unk)"></span> low importance</p>
-  <div class="tabs">${chips}</div>${list || `<div class="card muted">Nothing scheduled in this category.</div>`}
+  ${filter === "all" ? recentRecapsCard() : ""}<div class="tabs">${chips}</div>${list || `<div class="card muted">Nothing scheduled in this category.</div>`}
   <details class="card"><summary style="cursor:pointer"><b>Key releases explained</b> <span class="small muted">(what each one is and why traders care)</span></summary>
    ${c.key_releases.map((k) => `<div class="item" style="display:block"><b>${esc(k.name)}</b><div class="small">${esc(k.what)}</div><div class="small muted"><b>Why it matters:</b> ${esc(k.why)}</div></div>`).join("")}</details>
   <div class="card"><p class="small muted" style="margin:0">${c.notes.map(esc).join(" ")} <a href="https://www.bls.gov/schedule/news_release/" target="_blank" rel="noopener noreferrer">BLS release schedule</a>${c.failed.length ? " · Some sources failed to load today: " + esc(c.failed.join(", ")) : ""}</p></div>`;
@@ -218,7 +218,7 @@ async function route() {
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
   const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
-    explore: () => (h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
+    explore: () => (h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
   const pending = (typeof gateView === "function" && gateView(a)) || (views[a] || views.home)();

@@ -106,6 +106,12 @@ def build():
             S.append(dict(title="Coming up", bullets=["%s, %s: %s" % (dt.date.fromisoformat(e["date"]).strftime("%a %b %-d"), e["time"] + (" ET" if e["time"][:1].isdigit() else ""), e["title"]) for e in nxt]))
     except Exception:
         pass
+    try:
+        rc = [r for r in json.load(open(os.path.join(DATA, "recaps.json")))["recaps"] if r["status"] == "final" and r["date"] >= (dt.date.today() - dt.timedelta(days=2)).isoformat()][:5]
+        if rc:
+            S.append(dict(title="Just happened", bullets=["%s: %s" % (r["title"].split(" (")[0], r["headline"]) for r in rc]))
+    except Exception:
+        pass
     prev = [h for h in hist if h["date"] < snap["date"]]
     delta = ""
     if prev and prev[-1].get("score") is not None:
