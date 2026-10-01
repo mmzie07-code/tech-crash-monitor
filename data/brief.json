@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
- "generated": "2026-10-01T00:03:38.759417Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
+ "generated": "2026-10-01T00:08:54.710377Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 4 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
@@ -15,9 +15,9 @@
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +0.64%, Energy -0.06%, Consumer Discretionary -0.28%",
-    "Lagging: Consumer Staples -1.53%, Health Care -1.35%, Industrials -1.27%",
-    "1 of 11 sectors rose."
+    "Leading: Utilities +1.17%, Communication +0.26%, Industrials +0.21%",
+    "Lagging: Energy -0.90%, Materials -0.75%, Consumer Staples -0.52%",
+    "4 of 11 sectors rose."
    ]
   },
   {
@@ -25,16 +25,16 @@
    "bullets": [
     "VIX (fear gauge): 16.34 (+1.87% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.48 (+0.10% today)",
-    "Crude oil: 89.91 (+0.59% today)",
-    "Gold: 4,185.80 (+0.15% today)",
-    "Bitcoin: 83,550.01 (-0.09% today)"
+    "US dollar index: 101.50 (+0.12% today)",
+    "Crude oil: 89.95 (+0.64% today)",
+    "Gold: 4,185.50 (+0.14% today)",
+    "Bitcoin: 83,488.51 (-0.16% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 2.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 2.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -56,7 +56,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (-4 from 29 on 2026-09-29).",
+    "Crash-risk score 25, Elevated risk.",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
