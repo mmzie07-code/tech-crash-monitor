@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated": "2026-09-30T23:57:24.583191Z",
+ "generated": "2026-10-01T00:03:38.759417Z",
  "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
@@ -25,10 +25,10 @@
    "bullets": [
     "VIX (fear gauge): 16.34 (+1.87% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.46 (+0.09% today)",
-    "Crude oil: 90.09 (+0.79% today)",
-    "Gold: 4,183.90 (+0.10% today)",
-    "Bitcoin: 83,564.98 (-0.07% today)"
+    "US dollar index: 101.48 (+0.10% today)",
+    "Crude oil: 89.91 (+0.59% today)",
+    "Gold: 4,185.80 (+0.15% today)",
+    "Bitcoin: 83,550.01 (-0.09% today)"
    ]
   },
   {
@@ -40,10 +40,10 @@
   {
    "title": "Coming up",
    "bullets": [
-    "Wed Sep 30, 8:30 AM ET: Personal income and spending, including PCE inflation",
-    "Wed Sep 30, After close: Micron Technology (MU) reports earnings",
     "Wed Oct 7, 2:00 PM ET: FOMC minutes (meeting of September 15-16)",
-    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)"
+    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
+    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth",
+    "Thu Oct 29, 8:30 AM ET: Personal income and spending, including PCE inflation"
    ]
   },
   {

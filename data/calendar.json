@@ -1,78 +1,8 @@
 {
- "generated": "2026-09-30T23:55:43.854283Z",
- "today": "2026-09-30",
+ "generated": "2026-10-01T00:03:30.031932Z",
+ "today": "2026-10-01",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-09-30-data-personal-income-and-spending-including-pce-infla",
-   "date": "2026-09-30",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Personal income and spending, including PCE inflation",
-   "importance": "high",
-   "why": "A US government economic release.",
-   "extra": {
-    "bea_key": "personal income and outlays, august 2026"
-   },
-   "source": "BEA",
-   "link": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026"
-  },
-  {
-   "id": "2026-09-30-earnings-micron-technology-mu-reports-earnings",
-   "date": "2026-09-30",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Micron Technology (MU) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $31.41.",
-   "extra": {
-    "market_cap_b": 1203,
-    "eps_forecast": "$31.41"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-09-30-fed-fed-speaks-governor-lisa-d-cook",
-   "date": "2026-09-30",
-   "time": "3:25 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Lisa D. Cook",
-   "importance": "medium",
-   "why": "Topic: Rural Economy. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Lisa D. Cook",
-    "location": "At the 2026 Investing in Rural America Conference, Asheville, N.C."
-   },
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-09-30-data-gdp-third-estimate-revised-economic-growth",
-   "date": "2026-09-30",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "GDP third estimate: revised economic growth",
-   "importance": "medium",
-   "why": "A US government economic release.",
-   "extra": {
-    "bea_key": "gdp, (third estimate), industries, corpo"
-   },
-   "source": "BEA",
-   "link": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd"
-  },
-  {
-   "id": "2026-09-30-data-g-20-finance-companies",
-   "date": "2026-09-30",
-   "time": "Time TBA",
-   "kind": "data",
-   "title": "G.20 - Finance Companies",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. Publication date for this release is approximate.",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-10-01-fed-fed-speaks-governor-lisa-d-cook",
    "date": "2026-10-01",
