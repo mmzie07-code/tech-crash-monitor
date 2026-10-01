@@ -68,3 +68,6 @@ nav.main a{white-space:nowrap;padding:8px 11px}.gsw input{min-width:150px}header
 .hm-t b,.hm-t span{white-space:nowrap;overflow:hidden;text-overflow:clip;max-width:100%}.hm-t{padding:0 1px}
 .logo-img{width:34px;height:34px;border-radius:9px;display:block;background:#fff;box-shadow:0 0 0 1px var(--line)}
 @media(max-width:640px){.logo span{display:none}}
+
+nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;color:var(--mut)}nav.main a.sec.on,nav.main a.sec:hover{color:var(--tx)}
+@media(max-width:640px){.hero .btn+.btn{margin-left:0}.hero .btn{margin-bottom:8px}}

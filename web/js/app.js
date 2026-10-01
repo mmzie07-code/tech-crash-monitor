@@ -37,14 +37,15 @@ function tiles(rows) {
 
 function home() {
   return `<section class="hero"><span class="pill">For ages 16+</span><h1>Understand the market.<br><span class="grad">Follow it every day.</span></h1>
-  <p class="lead">Plain-English lessons for people starting out, and a daily view of the whole market for people who already are: stocks, sectors, rates, and the risks building underneath. Real data, honest limits, no hype.</p>
-  <a class="btn" href="#/learn">Start the crash course</a><a class="btn ghost" href="#/markets">See today's markets</a>
+  <p class="lead">A daily view of the whole market: stocks, sectors, rates, the economic calendar, and the risks building underneath. Real data, honest limits, no hype.</p>
+  <a class="btn" href="#/markets">See today's markets</a><a class="btn ghost" href="#/explore">Explore sectors &amp; stocks</a>
+  <p class="small" style="margin-top:14px">New to investing? <a href="#/learn">Take the crash course</a> or <a href="#/practice">try practice trading</a>.</p>
   ${typeof AUTH !== "undefined" && AUTH.enabled && window.ANALYTIC.requireLogin && !signedIn() ? `<p class="small muted" style="margin-top:14px">Free account required · <a href="#/login">Sign in or create one</a> · ages 16+</p>` : ""}</section>
   <h2 style="margin-top:1.2em">Markets today</h2>${tiles(state.mk && state.mk.indices)}
   ${state.brief ? `<a class="card" href="#/markets/brief" style="color:inherit;display:block;margin-top:14px"><span class="pill g">Daily brief</span><h3>${esc(state.brief.headline)}</h3><p class="small muted" style="margin:0">Read today's full brief →</p></a>` : ""}
   <div class="cards">
-   <a class="card" href="#/learn" style="color:inherit"><span class="pill">Learn</span><h3>A crash course in 8 short lessons</h3><p class="muted">From "what is a stock?" to spotting bubbles. Quizzes, a glossary, and practice trading with fake money.</p><div class="bar"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><p class="small muted" style="margin:6px 0 0">${doneCount()} of ${MODULES.length} complete</p></a>
-   <a class="card" href="#/markets" style="color:inherit"><span class="pill g">Markets</span><h3>The whole market, daily</h3><p class="muted">Indices, all 11 sectors, rates, the dollar, oil, gold and more, plus a daily briefing and outlooks from today to next year.</p></a></div>
+   <a class="card" href="#/markets" style="color:inherit"><span class="pill g">Markets</span><h3>The whole market, daily</h3><p class="muted">Indices, all 11 sectors, rates, the dollar, oil, gold and more, plus a daily briefing and outlooks from today to next year.</p></a>
+   <a class="card" href="#/learn" style="color:inherit"><span class="pill">Learn</span><h3>A crash course in 8 short lessons</h3><p class="muted">From "what is a stock?" to spotting bubbles. Quizzes, a glossary, and practice trading with fake money.</p><div class="bar"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><p class="small muted" style="margin:6px 0 0">${doneCount()} of ${MODULES.length} complete</p></a></div>
   <h2>Featured: AI &amp; Tech Watch</h2><p class="muted">One of the biggest questions in markets right now is whether AI and tech stocks are in a bubble. We track ten warning signs and test them against history.</p>${snapCard(true)}
   <h2 style="margin-top:1.4em">Why trust this?</h2>
   <div class="cards"><div class="card"><h3>We show our homework</h3><p class="muted small">Every number links to its data source, and we backtested our warning signs. Some of our own ideas failed, and we say so.</p></div>
