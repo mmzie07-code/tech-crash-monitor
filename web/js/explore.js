@@ -63,7 +63,7 @@ async function exploreHome() {
      ${spark ? svgLines([spark], [up ? "var(--ok)" : "var(--bad)"], 60) : ""}
      <div class="small muted">${(SECTOR_INFO[s.key] || {}).type || ""} · Top: ${s.top.slice(0, 3).map((t) => `<a href="#/stock/${esc(t.symbol)}" title="${esc(t.name)}">${esc(t.symbol)}</a>`).join(", ")}</div></div>`;
   }).join("");
-  return `<h1>Explore</h1><p class="muted">See how each part of the market is doing, then tap a sector to read about it and browse its 50 largest companies.</p>${perf}
+  return `<h1>Explore</h1>${exploreTabs("")}<p class="muted">See how each part of the market is doing, then tap a sector to read about it and browse its 50 largest companies.</p>${perf}
   <h2 style="margin-top:1.2em">All sectors</h2><div class="cards">${cards}</div>
   <p class="small muted">Sectors follow the standard S&amp;P GICS classification. Sector lines are market-cap-weighted indexes built from each sector's 50 largest companies, in price terms (dividends excluded). Not investment advice.</p>`;
 }
@@ -139,7 +139,7 @@ async function stockPage(sym) {
   return `<a href="#/explore${secKey ? "/" + secKey : ""}" class="small">← ${secKey ? esc(SECTOR_NAME(secKey)) : "Explore"}</a>
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(name)}</h1>
    <div class="muted">${esc(sym)}${secKey ? ` · <a href="#/explore/${secKey}">${esc(SECTOR_NAME(secKey))}</a>` : ""}${top && top.industry ? ` · ${esc(top.industry)}` : ""}</div></div>
-   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div></div>
+   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn ghost" href="#/explore/compare/${esc(sym)}">Compare</a><a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div></div>
   <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}
