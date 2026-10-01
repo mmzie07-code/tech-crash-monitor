@@ -1,40 +1,42 @@
 {
- "date": "2026-09-30",
- "generated": "2026-10-01T03:13:37.143349Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
+ "date": "2026-10-01",
+ "generated": "2026-10-01T16:08:14.277863Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.15%, with 4 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.25% today, -0.45% this month, +11.56% this year",
-    "Dow Jones: -0.86% today, -4.29% this month, +5.22% this year",
-    "Nasdaq Composite: +0.24% today, +1.86% this month, +15.60% this year",
-    "Russell 2000: -0.39% today, -5.40% this month, +11.51% this year"
+    "S&P 500: -0.15% today, +0.12% this month, +11.40% this year",
+    "Dow Jones: -0.26% today, -3.77% this month, +4.95% this year",
+    "Nasdaq Composite: -0.20% today, +2.71% this month, +15.37% this year",
+    "Russell 2000: -0.36% today, -4.56% this month, +11.11% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +0.64%, Energy -0.06%, Consumer Discretionary -0.28%",
-    "Lagging: Consumer Staples -1.53%, Health Care -1.35%, Industrials -1.27%",
-    "1 of 11 sectors rose."
+    "Leading: Energy +1.44%, Industrials +0.64%, Technology +0.26%",
+    "Lagging: Health Care -1.00%, Materials -0.99%, Communication -0.88%",
+    "4 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.34 (+1.87% today)",
-    "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.58 (+0.13% today)",
-    "Crude oil: 89.65 (-0.85% today)",
-    "Gold: 4,190.50 (+0.09% today)",
-    "Bitcoin: 83,421.44 (-0.24% today)"
+    "VIX (fear gauge): 17.25 (+5.57% today)",
+    "10-year Treasury yield: 5.25% (-0.04 pts today)",
+    "US dollar index: 102.10 (+0.64% today)",
+    "Crude oil: 92.93 (+2.78% today)",
+    "Gold: 4,191.50 (+0.11% today)",
+    "Bitcoin: 84,200.00 (+0.77% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 2.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil +2.78% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "The US dollar moved +0.64%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
+    "A 2.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -49,6 +51,7 @@
   {
    "title": "Just happened",
    "bullets": [
+    "Micron Technology: Micron Technology reported earnings: beat estimates.",
     "Personal income and spending, including PCE inflation: Personal income increased $66.6 billion (0.2 percent at a monthly rate) in August.",
     "GDP third estimate: revised economic growth: Real gross domestic product (GDP) increased at an annual rate of 2.2 percent in the second quarter of 2026 (April, May, and June)."
    ]
@@ -56,7 +59,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-09-29).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-09-30).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -64,52 +67,52 @@
  ],
  "headlines": [
   {
-   "title": "Trump 'thinking about' diesel export ban, but says it could have 'negative impact' on gasoline",
+   "title": "10-year Treasury yield climbs to a 24-year high amid relentless global bond sell-off",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/trump-diesel-export-ban-gas.html",
-   "published": "Wed, 30 Sep 2026 22:43:53"
+   "link": "https://www.cnbc.com/2026/10/01/us-treasury-bond-yield.html",
+   "published": "Thu, 01 Oct 2026 15:59:12"
   },
   {
-   "title": "Passengers and crew foil co-pilot's apparent attempt to crash FlyDubai flight to Israel",
+   "title": "GM reports 5.5% decline in third-quarter U.S. sales as EV sales drop",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/dubai-israel-flight-pilot-crash-indian.html",
-   "published": "Thu, 01 Oct 2026 01:09:18"
+   "link": "https://www.cnbc.com/2026/10/01/us-auto-sales-q3.html",
+   "published": "Thu, 01 Oct 2026 16:05:41"
   },
   {
-   "title": "Trump touts $200 billion South Korean investment plan as Alaska LNG project hangs in balance",
+   "title": "Trump Accounts have auto-enrolled more than 60 million children, Treasury says",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/trump-south-korea-investment-alaska-lng-nuclear-power.html",
-   "published": "Thu, 01 Oct 2026 02:29:34"
+   "link": "https://www.cnbc.com/2026/10/01/treasury-trump-accounts-auto-enroll-more-than-60-million-children.html",
+   "published": "Thu, 01 Oct 2026 16:06:45"
   },
   {
-   "title": "AI race heats up as OpenAI flags alleged model-copying campaign",
+   "title": "Judge dismisses Reflecting Pool case permanently, cites risk Trump will force new charges",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/openai-chinas-moonshot-ai-kimi.html",
-   "published": "Thu, 01 Oct 2026 02:14:43"
+   "link": "https://www.cnbc.com/2026/10/01/reflecting-pool-vandalism-dismissed-hearn-trump.html",
+   "published": "Thu, 01 Oct 2026 15:48:19"
   },
   {
-   "title": "Cars have become unaffordable for many Americans. Here\u2019s what the numbers show.",
+   "title": "30-year mortgage rate posts biggest jump in four years",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/heres-the-most-you-should-be-spending-on-your-car-payment-whether-you-make-60-000-or-over-150-000-ee1c228c?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 02:35:00"
+   "link": "https://www.marketwatch.com/story/30-year-mortgage-rate-posts-biggest-jump-in-four-years-e288f596?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 16:06:00"
   },
   {
-   "title": "\u2018I\u2019m never selling\u2019: I\u2019m 47 and buy bitcoin with every dollar I earn. Am I crazy?",
+   "title": "Tesla\u2019s delivery report is just around the corner. Expect a sales drop.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/im-never-selling-im-47-and-buy-bitcoin-with-every-dollar-i-earn-am-i-crazy-364d2a64?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 00:45:00"
+   "link": "https://www.marketwatch.com/story/teslas-delivery-report-is-just-around-the-corner-expect-a-sales-drop-45d5503b?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 15:43:00"
   },
   {
-   "title": "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
+   "title": "U.S. manufacturers say inflation is bad and not getting any better",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/i-have-a-low-interest-rate-im-80-years-old-should-i-move-out-of-my-house-because-of-dangerous-stairs-389c3c7b?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 00:20:00"
+   "link": "https://www.marketwatch.com/story/u-s-manufacturers-say-inflation-is-bad-and-not-getting-any-better-8281edef?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 15:19:00"
   },
   {
-   "title": "I\u2019m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
+   "title": "\u2018We lived within our means\u2019: I earned $30,000 as a pastor and still retired comfortably. Why don\u2019t you tell people that?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/im-71-and-still-working-i-earn-108-000-a-year-am-i-doing-the-right-thing-aaedcaa4?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 00:11:00"
+   "link": "https://www.marketwatch.com/story/we-lived-within-our-means-i-earned-30-000-as-a-pastor-and-still-retired-comfortably-why-dont-you-tell-people-that-6b9f231e?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 15:00:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",

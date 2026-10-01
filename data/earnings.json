@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T03:12:20.494581Z",
+ "generated": "2026-10-01T16:07:22.262957Z",
  "ai_summaries": false,
  "days": [
   {
@@ -9,7 +9,7 @@
     {
      "symbol": "ACN",
      "name": "Accenture",
-     "market_cap_b": 118.2,
+     "market_cap_b": 122.4,
      "eps": null,
      "eps_estimate": 3.19,
      "surprise_pct": null,
@@ -17,6 +17,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $3.19.",
+      "Stock moved +18.4% on Oct 1.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -25,7 +26,7 @@
     {
      "symbol": "NKE",
      "name": "Nike",
-     "market_cap_b": 53.2,
+     "market_cap_b": 52.5,
      "eps": null,
      "eps_estimate": 0.43,
      "surprise_pct": null,
@@ -33,6 +34,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.43.",
+      "Stock moved +1.2% on Oct 1 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -41,7 +43,7 @@
     {
      "symbol": "MKC",
      "name": "McCormick & Company, Incorporated",
-     "market_cap_b": 13.0,
+     "market_cap_b": 12.5,
      "eps": null,
      "eps_estimate": 0.75,
      "surprise_pct": null,
@@ -49,31 +51,16 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.75.",
+      "Stock moved -3.2% on Oct 1.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MKC&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "MKC.V",
-     "name": "McCormick & Company, Incorporated",
-     "market_cap_b": 13.0,
-     "eps": null,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MKC.V&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "AYI",
      "name": "Acuity",
-     "market_cap_b": 9.2,
+     "market_cap_b": 9.3,
      "eps": null,
      "eps_estimate": 5.27,
      "surprise_pct": null,
@@ -89,7 +76,7 @@
     {
      "symbol": "VFS",
      "name": "VinFast Auto",
-     "market_cap_b": 7.4,
+     "market_cap_b": 7.3,
      "eps": null,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -122,19 +109,19 @@
   },
   {
    "date": "2026-09-30",
-   "reported_total": 17,
+   "reported_total": 19,
    "top": [
     {
      "symbol": "MU",
      "name": "Micron Technology",
      "market_cap_b": 1202.9,
-     "eps": null,
+     "eps": 33.19,
      "eps_estimate": 31.41,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 5.67,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $31.41.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $33.19 versus $31.41 expected, so the company beat estimates by 5.7%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -143,14 +130,14 @@
     {
      "symbol": "JBL",
      "name": "Jabil",
-     "market_cap_b": 33.4,
-     "eps": null,
-     "eps_estimate": 3.88,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "market_cap_b": 30.1,
+     "eps": 4.17,
+     "eps_estimate": 3.89,
+     "surprise_pct": 7.2,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $3.88.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.17 versus $3.89 expected, so the company beat estimates by 7.2%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -159,14 +146,14 @@
     {
      "symbol": "FDS",
      "name": "FactSet Research Systems",
-     "market_cap_b": 9.2,
-     "eps": null,
+     "market_cap_b": 9.6,
+     "eps": 4.52,
      "eps_estimate": 4.32,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 4.63,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $4.32.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.52 versus $4.32 expected, so the company beat estimates by 4.6%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -175,14 +162,14 @@
     {
      "symbol": "CAG",
      "name": "ConAgra Brands",
-     "market_cap_b": 6.8,
-     "eps": null,
+     "market_cap_b": 6.5,
+     "eps": 0.41,
      "eps_estimate": 0.31,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 32.26,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.31.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.41 versus $0.31 expected, so the company beat estimates by 32.3%.",
       "Stock moved -4.9% on Sep 30.",
       "Covers the quarter ending Aug 2026."
      ],
@@ -190,32 +177,32 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CAG&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "SA",
-     "name": "Seabridge Gold",
-     "market_cap_b": 3.1,
-     "eps": null,
+     "symbol": "CALM",
+     "name": "Cal-Maine Foods",
+     "market_cap_b": 3.2,
+     "eps": -1.26,
      "eps_estimate": null,
      "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
-      "Covers the quarter ending Jun 2026."
+      "Earnings per share were $-1.26 (no analyst consensus available).",
+      "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SA&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CALM&type=8-K&dateb=&owner=include&count=10"
     },
     {
      "symbol": "PRGS",
      "name": "Progress Software",
      "market_cap_b": 1.6,
-     "eps": null,
+     "eps": 1.38,
      "eps_estimate": 1.16,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 18.97,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.16.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.38 versus $1.16 expected, so the company beat estimates by 19.0%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -230,7 +217,7 @@
     {
      "symbol": "CCL",
      "name": "Carnival Corporation",
-     "market_cap_b": 34.4,
+     "market_cap_b": 33.0,
      "eps": 1.43,
      "eps_estimate": 1.36,
      "surprise_pct": 5.15,
@@ -247,7 +234,7 @@
     {
      "symbol": "KMX",
      "name": "CarMax",
-     "market_cap_b": 8.4,
+     "market_cap_b": 7.8,
      "eps": 1.16,
      "eps_estimate": 0.68,
      "surprise_pct": 70.59,
@@ -263,7 +250,7 @@
     {
      "symbol": "UEC",
      "name": "Uranium Energy",
-     "market_cap_b": 4.6,
+     "market_cap_b": 4.7,
      "eps": -0.07,
      "eps_estimate": -0.04,
      "surprise_pct": -75.0,
@@ -296,12 +283,12 @@
   },
   {
    "date": "2026-09-28",
-   "reported_total": 26,
+   "reported_total": 24,
    "top": [
     {
      "symbol": "JEF",
      "name": "Jefferies Financial Group",
-     "market_cap_b": 9.0,
+     "market_cap_b": 8.9,
      "eps": 1.09,
      "eps_estimate": 1.04,
      "surprise_pct": 4.81,
@@ -317,7 +304,7 @@
     {
      "symbol": "MTN",
      "name": "Vail Resorts",
-     "market_cap_b": 5.0,
+     "market_cap_b": 4.9,
      "eps": -5.34,
      "eps_estimate": -5.4,
      "surprise_pct": 1.11,
@@ -333,7 +320,7 @@
     {
      "symbol": "AIR",
      "name": "AAR",
-     "market_cap_b": 4.3,
+     "market_cap_b": 4.1,
      "eps": 1.49,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -349,7 +336,7 @@
     {
      "symbol": "IDT",
      "name": "IDT",
-     "market_cap_b": 1.9,
+     "market_cap_b": 2.0,
      "eps": 0.94,
      "eps_estimate": null,
      "surprise_pct": null,

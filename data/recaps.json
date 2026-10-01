@@ -1,26 +1,108 @@
 {
- "generated": "2026-10-01T03:13:33.871999Z",
+ "generated": "2026-10-01T16:08:13.075629Z",
  "ai_analysis_enabled": false,
  "recaps": [
   {
+   "headline": "Micron Technology reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $33.19 versus $31.41 expected, so the company beat estimates by 5.7%.",
+    "Covers the quarter ending Aug 2026.",
+    "Stock moved -1.63% on the next trading day."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MU&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "MU",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.25,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.24,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.86,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.39,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.08,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 1.87,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 0.17,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 1.16,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.08,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Information Technology",
+     "move": 0.49
+    },
+    "worst": {
+     "name": "Consumer Staples",
+     "move": -1.53
+    }
+   },
    "id": "2026-09-30-earnings-micron-technology-mu-reports-earnings",
    "date": "2026-09-30",
    "time": "After close",
    "kind": "earnings",
    "title": "Micron Technology (MU) reports earnings",
-   "status": "pending",
-   "headline": "Recap coming soon.",
-   "bullets": [
-    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
-   ],
-   "reaction": [],
-   "sectors": null,
-   "changes": null,
-   "context": [],
-   "sources": [],
+   "status": "final",
    "ai_analysis": null,
    "link": null,
-   "lesson": 3
+   "generated": "2026-10-01T16:08:14.275938Z"
   },
   {
    "headline": "Personal income increased $66.6 billion (0.2 percent at a monthly rate) in August.",

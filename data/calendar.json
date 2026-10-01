@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T03:13:22.107175Z",
+ "generated": "2026-10-01T16:08:05.740638Z",
  "today": "2026-10-01",
  "timezone": "US Eastern",
  "events": [
@@ -72,7 +72,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.19.",
    "extra": {
-    "market_cap_b": 118,
+    "market_cap_b": 122,
     "eps_forecast": "$3.19"
    },
    "source": "",
@@ -184,7 +184,7 @@
    "kind": "treasury",
    "title": "Treasury auction: 3-Year Note",
    "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
+   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $58B.",
    "extra": {
     "term": "3-Year",
     "type": "Note",
@@ -238,7 +238,7 @@
    "kind": "treasury",
    "title": "Treasury auction: 9-Year 10-Month Note",
    "importance": "low",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
+   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $39B.",
    "extra": {
     "term": "9-Year 10-Month",
     "type": "Note",
@@ -256,7 +256,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 176,
+    "market_cap_b": 173,
     "eps_forecast": "$2.29"
    },
    "source": "",
@@ -269,7 +269,7 @@
    "kind": "treasury",
    "title": "Treasury auction: 29-Year 10-Month Bond",
    "importance": "low",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
+   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $22B.",
    "extra": {
     "term": "29-Year 10-Month",
     "type": "Bond",
@@ -299,7 +299,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.96.",
    "extra": {
-    "market_cap_b": 56,
+    "market_cap_b": 55,
     "eps_forecast": "$1.96"
    },
    "source": "",
