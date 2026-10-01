@@ -23,7 +23,9 @@ jobs:
       - name: Restore price-history cache
         uses: actions/cache@v4
         with:
-          path: data/hist
+          path: |
+            data/hist
+            data/hist-ohlc
           key: hist-${{ github.run_id }}
           restore-keys: hist-
       - run: pip install yfinance
@@ -49,7 +51,7 @@ jobs:
           B=$(date -u +%Y%m%d%H%M%S)
           sed -i "s/__BUILD__/$B/g" site/index.html
           echo "{\"v\":\"$B\"}" > site/version.json
-          mkdir -p site/data/hist site/data/sparks && cp data/hist/*.json site/data/hist/ && cp data/sparks/*.json site/data/sparks/
+          mkdir -p site/data/hist site/data/hist-ohlc site/data/sparks && cp data/hist/*.json site/data/hist/ && cp data/hist-ohlc/*.json site/data/hist-ohlc/ && cp data/sparks/*.json site/data/sparks/
           cp data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/outlook.json data/quotes.json data/earnings.json data/sectors.json data/search.json data/gics.json site/data/
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

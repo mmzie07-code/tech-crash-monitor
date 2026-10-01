@@ -42,7 +42,8 @@ function limited(who: string): boolean {
   return ++h.n > 120;
 }
 
-const RANGES: Record<string, [string, string]> = { "1d": ["1d", "5m"], "5d": ["5d", "15m"], "1mo": ["1mo", "1d"], "3mo": ["3mo", "1d"], "6mo": ["6mo", "1d"], "ytd": ["ytd", "1d"], "1y": ["1y", "1d"], "5y": ["5y", "1wk"], "max": ["max", "1mo"] };
+// Finest interval Yahoo allows for each span: 1 day = every minute, 5 days = 5-minute, 1 month = 30-minute, 3 months = hourly.
+const RANGES: Record<string, [string, string]> = { "1d": ["1d", "1m"], "5d": ["5d", "5m"], "1mo": ["1mo", "30m"], "3mo": ["3mo", "1h"], "6mo": ["6mo", "1d"], "ytd": ["ytd", "1d"], "1y": ["1y", "1d"], "5y": ["5y", "1wk"], "max": ["max", "1mo"] };
 const SYMBOL = /^[A-Za-z0-9.\-^=]{1,12}$/;
 
 async function yahoo(url: string, ttlMs: number) {
@@ -80,13 +81,14 @@ Deno.serve(async (req) => {
     if (action === "chart") {
       const pair = RANGES[u.searchParams.get("range") ?? "1y"];
       if (!pair) return json({ error: "Bad range" }, 400);
-      const d: any = await yahoo(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=${pair[0]}&interval=${pair[1]}`, pair[0] === "1d" || pair[0] === "5d" ? 60_000 : 600_000);
+      const d: any = await yahoo(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=${pair[0]}&interval=${pair[1]}`, pair[0] === "1d" ? 20_000 : pair[0] === "5d" ? 60_000 : pair[0] === "1mo" || pair[0] === "3mo" ? 300_000 : 600_000);
       const r = d.chart?.result?.[0];
       if (!r) return json({ error: "No data" }, 404);
-      const close = r.indicators.quote[0].close as (number | null)[];
-      const t: number[] = [], c: number[] = [];
-      r.timestamp.forEach((ts: number, i: number) => { if (close[i] != null) { t.push(ts); c.push(Math.round(close[i]! * 100) / 100); } });
-      return json({ symbol: sym, range: u.searchParams.get("range") ?? "1y", interval: pair[1], t, c, previousClose: r.meta?.chartPreviousClose ?? null, currency: r.meta?.currency ?? "USD", name: r.meta?.longName ?? r.meta?.shortName ?? sym });
+      const qd = r.indicators.quote[0], close = qd.close as (number | null)[], open = qd.open as (number | null)[], high = qd.high as (number | null)[], low = qd.low as (number | null)[];
+      const t: number[] = [], c: number[] = [], o: number[] = [], h: number[] = [], l: number[] = [];
+      const r2 = (x: number | null | undefined, fallback: number) => Math.round((x ?? fallback) * 100) / 100;
+      r.timestamp.forEach((ts: number, i: number) => { if (close[i] != null) { const cl = r2(close[i], 0); t.push(ts); c.push(cl); o.push(r2(open?.[i], cl)); h.push(r2(high?.[i], cl)); l.push(r2(low?.[i], cl)); } });
+      return json({ symbol: sym, range: u.searchParams.get("range") ?? "1y", interval: pair[1], t, c, o, h, l, previousClose: r.meta?.chartPreviousClose ?? null, currency: r.meta?.currency ?? "USD", name: r.meta?.longName ?? r.meta?.shortName ?? sym });
     }
     if (action === "quote") {
       const d: any = await yahoo(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=1d&interval=1d`, 60_000);

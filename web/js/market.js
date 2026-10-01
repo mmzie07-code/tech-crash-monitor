@@ -26,7 +26,7 @@ async function marketPage(sym) {
   const last = h ? h.c[h.c.length - 1] : row ? row.last : null;
   if (last == null) return `<p>No data for ${esc(info.name)} right now. <a href="#/markets">Back to Markets</a></p>`;
   const spx = sym !== "^GSPC" && kind === "price" ? await getHist("^GSPC") : null;
-  afterRender.push(() => { if (h) mountChart($("#mktchart"), h, { money: false, unit: isYield ? "yield" : "level", live: liveChartFor(sym), compare: spx ? { name: "S&P 500", data: spx } : null }); });
+  afterRender.push(() => { if (h) mountChart($("#mktchart"), h, { money: false, unit: isYield ? "yield" : "level", live: liveChartFor(sym), ohlcSym: sym, compare: spx ? { name: "S&P 500", data: spx } : null }); });
   const ret = (n) => { if (!h || h.c.length <= n) return null; const a = h.c[h.c.length - 1], b = h.c[h.c.length - 1 - n]; return isYield ? a - b : (a / b - 1) * 100; };
   const fmtR = (v) => v == null ? "-" : isYield ? `<span style="color:${v > 0 ? "var(--bad)" : v < 0 ? "var(--ok)" : "var(--mut)"};font-weight:600">${v > 0 ? "+" : ""}${v.toFixed(2)} pts</span>` : pctTxt(v);
   let stats = "";

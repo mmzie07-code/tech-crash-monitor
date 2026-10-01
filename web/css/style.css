@@ -71,3 +71,16 @@ nav.main a{white-space:nowrap;padding:8px 11px}.gsw input{min-width:150px}header
 
 nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;color:var(--mut)}nav.main a.sec.on,nav.main a.sec:hover{color:var(--tx)}
 @media(max-width:640px){.hero .btn+.btn{margin-left:0}.hero .btn{margin-bottom:8px}}
+
+/* chart: layered HTML dots (always circles), live pulse, chart-type toggle */
+.chw{position:relative}.chtop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ctog{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none;margin-top:4px}
+.ctog button{border:0;background:transparent;color:var(--mut);font:inherit;font-size:12px;font-weight:700;padding:6px 12px;cursor:pointer}.ctog button.on{background:var(--tx);color:var(--bg)}
+.cdot{position:absolute;width:11px;height:11px;border-radius:50%;background:var(--dot,var(--ok));border:2px solid var(--card);box-sizing:content-box;transform:translate(-50%,-50%);pointer-events:none;z-index:2}
+.cdot.live{animation:liveblink 1.4s ease-in-out infinite}
+.cdot.live::after{content:"";position:absolute;left:50%;top:50%;width:100%;height:100%;border-radius:50%;background:var(--dot,var(--ok));transform:translate(-50%,-50%) scale(1);opacity:.5;animation:livepulse 1.4s ease-out infinite}
+@keyframes liveblink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes livepulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.55}100%{transform:translate(-50%,-50%) scale(3.4);opacity:0}}
+.livetag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--bad);margin-right:8px}
+.livetag i{width:7px;height:7px;border-radius:50%;background:var(--bad);display:inline-block;animation:liveblink 1.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.cdot.live,.cdot.live::after,.livetag i{animation:none}}

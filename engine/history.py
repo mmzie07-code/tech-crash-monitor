@@ -8,6 +8,8 @@ DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 HIST = os.path.join(DATA, "hist")
 UA = {"User-Agent": "Mozilla/5.0"}  # Yahoo 429s long browser UAs
 EPOCH = dt.date(2000, 1, 1)
+OHLC = os.path.join(DATA, "hist-ohlc")
+_OHLC = {}  # filled by fetch(): date, close, open, high, low
 EXTRA = ["SPY", "QQQ", "DIA", "IWM", "VTI", "VOO", "VXUS", "AGG", "GLD",
          # market overview items (indices, global, rates, currency, commodities, crypto)
          "^GSPC", "^DJI", "^IXIC", "^RUT", "^FTSE", "^STOXX50E", "^N225", "^HSI", "^VIX", "^TNX", "DX-Y.NYB", "CL=F", "GC=F", "BTC-USD"]
@@ -23,10 +25,12 @@ def fetch(sym, rng="5y", tries=4):
         try:
             with urlreq.urlopen(urlreq.Request(url, headers=UA), timeout=25) as r:
                 res = json.loads(r.read())["chart"]["result"][0]
-            out = [(dt.datetime.utcfromtimestamp(t).date().isoformat(), c) for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c is not None]
-            if len(out) < 20:
+            q = res["indicators"]["quote"][0]
+            rows = [(dt.datetime.utcfromtimestamp(t).date().isoformat(), c, o, h, l) for t, c, o, h, l in zip(res["timestamp"], q["close"], q.get("open") or [None] * 9999, q.get("high") or [None] * 9999, q.get("low") or [None] * 9999) if c is not None]
+            if len(rows) < 20:
                 raise ValueError("short")
-            return out
+            _OHLC[sym] = rows
+            return [(d, c) for d, c, _, _, _ in rows]
         except Exception as e:
             if "404" in str(e):
                 raise
@@ -37,6 +41,18 @@ def fetch(sym, rng="5y", tries=4):
 def save(sym, series):
     os.makedirs(HIST, exist_ok=True)
     json.dump({"t": [day(d) for d, _ in series], "c": [round(c, 2) for _, c in series]}, open(os.path.join(HIST, sym.replace("^", "_") + ".json"), "w"), separators=(",", ":"))
+
+
+def save_ohlc(sym):
+    """Open/high/low/close history for the candlestick view (kept separate so line charts stay light)."""
+    rows = _OHLC.get(sym)
+    if not rows:
+        return
+    os.makedirs(OHLC, exist_ok=True)
+    r2 = lambda v, c: round(v if v is not None else c, 2)
+    json.dump({"t": [day(d) for d, *_ in rows], "o": [r2(o, c) for _, c, o, _, _ in rows], "h": [r2(h, c) for _, c, _, h, _ in rows],
+               "l": [r2(l, c) for _, c, _, _, l in rows], "c": [round(c, 2) for _, c, *_ in rows]},
+              open(os.path.join(OHLC, sym.replace("^", "_") + ".json"), "w"), separators=(",", ":"))
 
 
 def load(sym):
@@ -103,6 +119,7 @@ def main(limit=None):
     for i, sym in enumerate(syms):
         try:
             save(sym, fetch(sym))
+            save_ohlc(sym)
             ok += 1
         except Exception:
             bad += 1  # keep any previous file

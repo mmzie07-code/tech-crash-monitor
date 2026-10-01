@@ -1,6 +1,10 @@
 // Explore: sectors -> top 50 companies -> stock pages, plus global search.
 const SECTOR_NAME = (key) => ((state.sectors && state.sectors.sectors.find((s) => s.key === key)) || {}).name || key;
 const capStr = (b) => (b >= 1000 ? "$" + (b / 1000).toFixed(2) + "T" : b >= 1 ? "$" + b.toFixed(1) + "B" : "$" + (b * 1000).toFixed(0) + "M");
+async function getOhlc(sym) {  // open/high/low/close history for the candlestick view
+  try { const r = await fetch((DATA_BASE || "data/") + "hist-ohlc/" + sym.replace("^", "_") + ".json"); if (r.ok) return await r.json(); } catch (e) {}
+  return null;
+}
 async function getHist(sym) {
   try { const r = await fetch((DATA_BASE || "data/") + "hist/" + sym.replace("^", "_") + ".json"); if (r.ok) return await r.json(); } catch (e) {}
   return null;
@@ -116,18 +120,18 @@ async function stockPage(sym) {
   const row = state.search && state.search.stocks.find((r) => r[0] === sym);
   const top = state.sectors && state.sectors.sectors.flatMap((s) => s.top.map((t) => ({ ...t, sector: s.key }))).find((t) => t.symbol === sym);
   const q = Q()[sym];
-  let h = await getHist(sym), liveName = null;
+  let h = await getHist(sym), liveName = null, liveOhlc = null;
   const secForCompare = (top && top.sector) || (row && row[2]) || null;
   const secHist = secForCompare ? await getHist("_S_" + secForCompare) : null;
   if (!h && liveOK()) {  // not one of the pre-loaded stocks: pull a year of daily prices on demand
-    try { const j = await liveGet("action=chart&symbol=" + encodeURIComponent(sym) + "&range=1y"); if (j.c && j.c.length > 20) { h = { t: j.t.map(unixToDay), c: j.c }; liveName = j.name; } } catch (e) {}
+    try { const j = await liveGet("action=chart&symbol=" + encodeURIComponent(sym) + "&range=1y"); if (j.c && j.c.length > 20) { h = { t: j.t.map(unixToDay), c: j.c }; liveName = j.name; if (j.o) liveOhlc = { t: h.t, o: j.o, h: j.h, l: j.l, c: j.c }; } } catch (e) {}
   }
   const name = (top && top.name) || (row && row[1]) || (q && q.name) || liveName || sym;
   const secKey = (top && top.sector) || (row && row[2]) || null;
   const price = h ? h.c[h.c.length - 1] : top ? top.price : row ? row[4] : q ? q.price : null;
   if (price == null) return `<p>We couldn't find “${esc(sym)}”. ${liveOK() ? "" : "Sign in to look up any listed stock. "}<a href="#/explore">Browse sectors</a> or try the search box.</p>`;
   const cap = top ? top.cap_b : row ? row[3] : null, d1 = top ? top.d1 : row ? row[5] : q ? q.d1 : null;
-  afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true, live: liveChartFor(sym), compare: secHist ? { name: SECTOR_NAME(secForCompare) + " sector", data: secHist } : null }); });
+  afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true, live: liveChartFor(sym), ohlcSym: liveOhlc ? null : sym, ohlcData: liveOhlc, compare: secHist ? { name: SECTOR_NAME(secForCompare) + " sector", data: secHist } : null }); });
   let stats = "";
   if (h) {
     const c = h.c, last252 = c.slice(-252);
