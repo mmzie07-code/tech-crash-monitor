@@ -45,14 +45,7 @@ jobs:
             sleep 5
           done
       - name: Assemble site
-        run: |
-          mkdir -p site/data
-          cp -R web/. site/
-          B=$(date -u +%Y%m%d%H%M%S)
-          sed -i "s/__BUILD__/$B/g" site/index.html
-          echo "{\"v\":\"$B\"}" > site/version.json
-          mkdir -p site/data/hist site/data/hist-ohlc site/data/sparks && cp data/hist/*.json site/data/hist/ && cp data/hist-ohlc/*.json site/data/hist-ohlc/ && cp data/sparks/*.json site/data/sparks/
-          cp data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/outlook.json data/quotes.json data/earnings.json data/sectors.json data/search.json data/gics.json site/data/
+        run: bash scripts/assemble_site.sh
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - id: deploy

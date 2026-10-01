@@ -1,0 +1,46 @@
+name: Quick publish
+# Publishes website changes (anything under web/) in about a minute by reusing the stock history saved by the last nightly run.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "scripts/**"
+      - ".github/workflows/site.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: daily
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Restore stock history from the last nightly run
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/hist
+            data/hist-ohlc
+          key: hist-none
+          restore-keys: hist-
+      - name: Make sure history exists (full download only if the cache was lost)
+        run: |
+          if [ ! -f data/hist/_GSPC.json ]; then echo "cache empty: downloading history"; python engine/history.py; fi
+      - name: Build the per-sector chart bundles
+        run: python engine/history.py sparks
+      - name: Assemble site
+        run: bash scripts/assemble_site.sh
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: deploy
+        uses: actions/deploy-pages@v4

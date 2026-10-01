@@ -5,3 +5,4 @@ __pycache__/
 data/hist/
 data/sparks/
 data/hist-ohlc/
+site/
