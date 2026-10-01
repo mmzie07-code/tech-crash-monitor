@@ -1,42 +1,43 @@
 {
  "date": "2026-10-01",
- "generated": "2026-10-01T16:08:14.277863Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.15%, with 4 of 11 sectors up.",
+ "generated": "2026-10-01T21:50:25.327077Z",
+ "headline": "US stocks finished little changed. The S&P 500 rose 0.19%, with 5 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.15% today, +0.12% this month, +11.40% this year",
-    "Dow Jones: -0.26% today, -3.77% this month, +4.95% this year",
-    "Nasdaq Composite: -0.20% today, +2.71% this month, +15.37% this year",
-    "Russell 2000: -0.36% today, -4.56% this month, +11.11% this year"
+    "S&P 500: +0.19% today, +0.46% this month, +11.78% this year",
+    "Dow Jones: +0.04% today, -3.49% this month, +5.26% this year",
+    "Nasdaq Composite: +0.04% today, +2.96% this month, +15.65% this year",
+    "Russell 2000: +0.35% today, -3.89% this month, +11.90% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +1.44%, Industrials +0.64%, Technology +0.26%",
-    "Lagging: Health Care -1.00%, Materials -0.99%, Communication -0.88%",
-    "4 of 11 sectors rose."
+    "Leading: Energy +1.95%, Technology +1.05%, Industrials +0.99%",
+    "Lagging: Health Care -1.32%, Communication -0.93%, Real Estate -0.56%",
+    "5 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 17.25 (+5.57% today)",
-    "10-year Treasury yield: 5.25% (-0.04 pts today)",
-    "US dollar index: 102.10 (+0.64% today)",
-    "Crude oil: 92.93 (+2.78% today)",
-    "Gold: 4,191.50 (+0.11% today)",
-    "Bitcoin: 84,200.00 (+0.77% today)"
+    "VIX (fear gauge): 16.39 (+0.31% today)",
+    "10-year Treasury yield: 5.24% (-0.06 pts today)",
+    "US dollar index: 102.00 (+0.54% today)",
+    "Crude oil: 92.91 (+2.75% today)",
+    "Gold: 4,207.80 (+0.50% today)",
+    "Bitcoin: 84,475.33 (+1.10% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +2.78% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The US dollar moved +0.64%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "A 2.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil +2.75% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "The 10-year yield moved -0.06 points to 5.24%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "The US dollar moved +0.54%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
+    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -67,52 +68,52 @@
  ],
  "headlines": [
   {
-   "title": "10-year Treasury yield climbs to a 24-year high amid relentless global bond sell-off",
+   "title": "Nike shares drop as retailer posts disappointing sales, announces layoffs as part of restructuring",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/us-treasury-bond-yield.html",
-   "published": "Thu, 01 Oct 2026 15:59:12"
+   "link": "https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html",
+   "published": "Thu, 01 Oct 2026 21:34:44"
   },
   {
-   "title": "GM reports 5.5% decline in third-quarter U.S. sales as EV sales drop",
+   "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/us-auto-sales-q3.html",
-   "published": "Thu, 01 Oct 2026 16:05:41"
+   "link": "https://www.cnbc.com/2026/10/01/trump-fed-powell-lisa-cook-michael-barr-removal.html",
+   "published": "Thu, 01 Oct 2026 21:14:49"
   },
   {
-   "title": "Trump Accounts have auto-enrolled more than 60 million children, Treasury says",
+   "title": "Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/treasury-trump-accounts-auto-enroll-more-than-60-million-children.html",
-   "published": "Thu, 01 Oct 2026 16:06:45"
+   "link": "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html",
+   "published": "Thu, 01 Oct 2026 19:29:26"
   },
   {
-   "title": "Judge dismisses Reflecting Pool case permanently, cites risk Trump will force new charges",
+   "title": "Europe\u2019s winter energy crunch may already be underway. Two U.S. stocks that may benefit",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/reflecting-pool-vandalism-dismissed-hearn-trump.html",
-   "published": "Thu, 01 Oct 2026 15:48:19"
+   "link": "https://www.cnbc.com/2026/10/01/europes-winter-energy-crunch-may-already-be-underway-two-us-stocks-that-may-benefit.html",
+   "published": "Thu, 01 Oct 2026 20:41:38"
   },
   {
-   "title": "30-year mortgage rate posts biggest jump in four years",
+   "title": "The hidden silver lining of high interest rates: safer, cheaper retirement income",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/30-year-mortgage-rate-posts-biggest-jump-in-four-years-e288f596?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 16:06:00"
+   "link": "https://www.marketwatch.com/story/the-hidden-silver-lining-of-high-interest-rates-safer-cheaper-retirement-income-36e2e077?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 21:27:00"
   },
   {
-   "title": "Tesla\u2019s delivery report is just around the corner. Expect a sales drop.",
+   "title": "Nike\u2019s troubles are mounting, and sales could fall further",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/teslas-delivery-report-is-just-around-the-corner-expect-a-sales-drop-45d5503b?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 15:43:00"
+   "link": "https://www.marketwatch.com/story/nikes-troubles-are-mounting-and-sales-could-fall-further-2c19699d?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 21:09:00"
   },
   {
-   "title": "U.S. manufacturers say inflation is bad and not getting any better",
+   "title": "The stock market is anything but normal right now \u2014 and these charts show it",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/u-s-manufacturers-say-inflation-is-bad-and-not-getting-any-better-8281edef?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 15:19:00"
+   "link": "https://www.marketwatch.com/story/the-stock-market-is-anything-but-normal-right-now-and-these-charts-show-it-91ea187d?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 21:01:00"
   },
   {
-   "title": "\u2018We lived within our means\u2019: I earned $30,000 as a pastor and still retired comfortably. Why don\u2019t you tell people that?",
+   "title": "Here\u2019s how much more groceries, clothing and household appliances could cost as diesel prices keep surging",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/we-lived-within-our-means-i-earned-30-000-as-a-pastor-and-still-retired-comfortably-why-dont-you-tell-people-that-6b9f231e?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 15:00:00"
+   "link": "https://www.marketwatch.com/story/heres-how-much-more-groceries-clothing-and-household-appliances-could-cost-as-diesel-prices-keep-surging-771c9247?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 20:58:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",

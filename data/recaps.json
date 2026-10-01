@@ -1,7 +1,87 @@
 {
- "generated": "2026-10-01T16:08:13.075629Z",
+ "generated": "2026-10-01T21:50:23.359029Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-01-fed-fed-speaks-governor-lisa-d-cook",
+   "date": "2026-10-01",
+   "time": "3:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Lisa D. Cook",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-01-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-10-01",
+   "time": "3:00 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/watch?v=UosIN7C-ZCE",
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-01-fed-fed-speaks-vice-chair-philip-n-jefferson",
+   "date": "2026-10-01",
+   "time": "1:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://darden-virginia.zoom.us/j/92232791521",
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-01-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-10-01",
+   "time": "10:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/live/1fK5omRbOvM?si=9mToIa7-cn6iDC9F",
+   "lesson": 3
+  },
   {
    "headline": "Micron Technology reported earnings: beat estimates.",
    "bullets": [

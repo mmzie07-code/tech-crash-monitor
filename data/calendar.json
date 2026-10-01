@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T16:08:05.740638Z",
+ "generated": "2026-10-01T21:50:16.512210Z",
  "today": "2026-10-01",
  "timezone": "US Eastern",
  "events": [
@@ -176,6 +176,21 @@
    "extra": null,
    "source": "Federal Reserve",
    "link": null
+  },
+  {
+   "id": "2026-10-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-10-06",
+   "time": "10:45 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: Modernizing Regulation and Supervision. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the 2026 Community Banking Research Conference, St. Louis, Missouri"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.communitybanking.org/"
   },
   {
    "id": "2026-10-06-treasury-treasury-auction-3-year-note",
