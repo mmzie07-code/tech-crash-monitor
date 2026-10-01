@@ -43,7 +43,7 @@ function limited(who: string): boolean {
 }
 
 // Finest interval Yahoo allows for each span: 1 day = every minute, 5 days = 5-minute, 1 month = 30-minute, 3 months = hourly.
-const RANGES: Record<string, [string, string]> = { "1d": ["1d", "1m"], "5d": ["5d", "5m"], "1mo": ["1mo", "30m"], "3mo": ["3mo", "1h"], "6mo": ["6mo", "1d"], "ytd": ["ytd", "1d"], "1y": ["1y", "1d"], "5y": ["5y", "1wk"], "max": ["max", "1mo"] };
+const RANGES: Record<string, [string, string]> = { "1d": ["1d", "1m"], "5d": ["5d", "5m"], "1mo": ["1mo", "30m"], "3mo": ["3mo", "1h"], "5d1m": ["5d", "1m"], "1mo5m": ["1mo", "5m"], "6mo": ["6mo", "1d"], "ytd": ["ytd", "1d"], "1y": ["1y", "1d"], "5y": ["5y", "1wk"], "max": ["max", "1mo"] };
 const SYMBOL = /^[A-Za-z0-9.\-^=]{1,12}$/;
 
 async function yahoo(url: string, ttlMs: number) {
@@ -81,7 +81,7 @@ Deno.serve(async (req) => {
     if (action === "chart") {
       const pair = RANGES[u.searchParams.get("range") ?? "1y"];
       if (!pair) return json({ error: "Bad range" }, 400);
-      const d: any = await yahoo(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=${pair[0]}&interval=${pair[1]}`, pair[0] === "1d" ? 20_000 : pair[0] === "5d" ? 60_000 : pair[0] === "1mo" || pair[0] === "3mo" ? 300_000 : 600_000);
+      const d: any = await yahoo(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=${pair[0]}&interval=${pair[1]}`, pair[0] === "1d" ? 20_000 : pair[0] === "5d" ? 60_000 : pair[1] === "5m" ? 120_000 : pair[0] === "1mo" || pair[0] === "3mo" ? 300_000 : 600_000);
       const r = d.chart?.result?.[0];
       if (!r) return json({ error: "No data" }, 404);
       const qd = r.indicators.quote[0], close = qd.close as (number | null)[], open = qd.open as (number | null)[], high = qd.high as (number | null)[], low = qd.low as (number | null)[];

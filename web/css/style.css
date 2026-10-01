@@ -84,3 +84,10 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .livetag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--bad);margin-right:8px}
 .livetag i{width:7px;height:7px;border-radius:50%;background:var(--bad);display:inline-block;animation:liveblink 1.4s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.cdot.live,.cdot.live::after,.livetag i{animation:none}}
+
+/* candle chart: price labels, time axis, zoom controls */
+.ylab{position:absolute;right:6px;font-size:10px;font-weight:700;color:var(--mut);background:color-mix(in srgb,var(--card) 80%,transparent);padding:0 4px;border-radius:4px;pointer-events:none}
+.xaxis{display:flex;justify-content:space-between;margin-top:2px;font-size:11px}
+.zoombar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:8px 0 2px}
+.zb{display:inline-flex;gap:6px;flex-wrap:wrap}.zb button{border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-size:14px;font-weight:700;min-width:38px;height:34px;padding:0 12px;border-radius:999px;cursor:pointer}
+.zb button:hover{border-color:var(--brand)}
