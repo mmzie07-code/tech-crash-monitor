@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
- "generated": "2026-10-01T00:23:43.965481Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 4 of 11 sectors up.",
+ "generated": "2026-10-01T03:13:37.143349Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 1 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
@@ -15,9 +15,9 @@
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Utilities +1.17%, Communication +0.26%, Industrials +0.21%",
-    "Lagging: Energy -0.90%, Materials -0.75%, Consumer Staples -0.52%",
-    "4 of 11 sectors rose."
+    "Leading: Technology +0.64%, Energy -0.06%, Consumer Discretionary -0.28%",
+    "Lagging: Consumer Staples -1.53%, Health Care -1.35%, Industrials -1.27%",
+    "1 of 11 sectors rose."
    ]
   },
   {
@@ -25,16 +25,16 @@
    "bullets": [
     "VIX (fear gauge): 16.34 (+1.87% today)",
     "10-year Treasury yield: 5.29% (+0.04 pts today)",
-    "US dollar index: 101.50 (+0.12% today)",
-    "Crude oil: 90.22 (+0.94% today)",
-    "Gold: 4,182.10 (+0.06% today)",
-    "Bitcoin: 83,423.41 (-0.24% today)"
+    "US dollar index: 101.58 (+0.13% today)",
+    "Crude oil: 89.65 (-0.85% today)",
+    "Gold: 4,190.50 (+0.09% today)",
+    "Bitcoin: 83,421.44 (-0.24% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 2.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 2.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -56,7 +56,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk.",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-09-29).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -70,22 +70,34 @@
    "published": "Wed, 30 Sep 2026 22:43:53"
   },
   {
-   "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
+   "title": "Passengers and crew foil co-pilot's apparent attempt to crash FlyDubai flight to Israel",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
-   "published": "Wed, 30 Sep 2026 20:59:05"
+   "link": "https://www.cnbc.com/2026/10/01/dubai-israel-flight-pilot-crash-indian.html",
+   "published": "Thu, 01 Oct 2026 01:09:18"
   },
   {
-   "title": "Sen. Hawley: OpenAI CEO Sam Altman declined to testify at rogue AI hearing",
+   "title": "Trump touts $200 billion South Korean investment plan as Alaska LNG project hangs in balance",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/hawley-openai-sam-altman-rogue-ai.html",
-   "published": "Wed, 30 Sep 2026 20:51:44"
+   "link": "https://www.cnbc.com/2026/10/01/trump-south-korea-investment-alaska-lng-nuclear-power.html",
+   "published": "Thu, 01 Oct 2026 02:29:34"
   },
   {
-   "title": "David Ellison names Ynon Kreiz co-CEO of Paramount and Warner Bros. Discovery",
+   "title": "AI race heats up as OpenAI flags alleged model-copying campaign",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/09/30/david-ellison-ynon-kreiz-co-ceo-paramount-wbd.html",
-   "published": "Wed, 30 Sep 2026 23:01:40"
+   "link": "https://www.cnbc.com/2026/10/01/openai-chinas-moonshot-ai-kimi.html",
+   "published": "Thu, 01 Oct 2026 02:14:43"
+  },
+  {
+   "title": "Cars have become unaffordable for many Americans. Here\u2019s what the numbers show.",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/heres-the-most-you-should-be-spending-on-your-car-payment-whether-you-make-60-000-or-over-150-000-ee1c228c?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 02:35:00"
+  },
+  {
+   "title": "\u2018I\u2019m never selling\u2019: I\u2019m 47 and buy bitcoin with every dollar I earn. Am I crazy?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/im-never-selling-im-47-and-buy-bitcoin-with-every-dollar-i-earn-am-i-crazy-364d2a64?mod=mw_rss_topstories",
+   "published": "Thu, 01 Oct 2026 00:45:00"
   },
   {
    "title": "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
@@ -98,18 +110,6 @@
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/im-71-and-still-working-i-earn-108-000-a-year-am-i-doing-the-right-thing-aaedcaa4?mod=mw_rss_topstories",
    "published": "Thu, 01 Oct 2026 00:11:00"
-  },
-  {
-   "title": "Google shows it\u2019s not out of the AI race just yet",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/google-shows-its-not-out-of-the-ai-race-just-yet-75e19860?mod=mw_rss_topstories",
-   "published": "Wed, 30 Sep 2026 22:51:00"
-  },
-  {
-   "title": "The 15 worst-performing S&P 500 stocks during a dismal September",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-15-worst-performing-s-p-500-stocks-during-a-dismal-september-991f8a07?mod=mw_rss_topstories",
-   "published": "Wed, 30 Sep 2026 21:22:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
