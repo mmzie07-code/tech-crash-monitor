@@ -1,158 +1,8 @@
 {
- "generated": "2026-10-01T21:50:16.512210Z",
- "today": "2026-10-01",
+ "generated": "2026-10-02T21:50:40.366889Z",
+ "today": "2026-10-02",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-01-fed-fed-speaks-governor-lisa-d-cook",
-   "date": "2026-10-01",
-   "time": "3:30 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Lisa D. Cook",
-   "importance": "medium",
-   "why": "Topic: Global Central Banking. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Lisa D. Cook",
-    "location": "At the Central Banking Seminar (Virtual)"
-   },
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-10-01",
-   "time": "3:00 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Modernizing Financial Regulation: Initial Observations from eSLR. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At the Atlantic Council\u2019s Conversation with Michelle W. Bowman, Washington, D.C."
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.youtube.com/watch?v=UosIN7C-ZCE"
-  },
-  {
-   "id": "2026-10-01-fed-fed-speaks-vice-chair-philip-n-jefferson",
-   "date": "2026-10-01",
-   "time": "1:30 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-   "importance": "medium",
-   "why": "Topic: U.S. Economy and Monetary Policy. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair Philip N. Jefferson",
-    "location": "At a Talk and Q&A with Federal Reserve Board Vice Chair Philip N. Jefferson, Charlottesville, Va."
-   },
-   "source": "Federal Reserve",
-   "link": "https://darden-virginia.zoom.us/j/92232791521"
-  },
-  {
-   "id": "2026-10-01-fed-fed-speaks-governor-christopher-j-waller",
-   "date": "2026-10-01",
-   "time": "10:00 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Christopher J. Waller",
-   "importance": "medium",
-   "why": "Topic: Federal Reserve Economic Data. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Christopher J. Waller",
-    "location": "At FRED Con: Navigating Trust, AI & Storytelling in a World of Data, St. Louis, Mo."
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.youtube.com/live/1fK5omRbOvM?si=9mToIa7-cn6iDC9F"
-  },
-  {
-   "id": "2026-10-01-earnings-accenture-acn-reports-earnings",
-   "date": "2026-10-01",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Accenture (ACN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.19.",
-   "extra": {
-    "market_cap_b": 122,
-    "eps_forecast": "$3.19"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-earnings-nike-nke-reports-earnings",
-   "date": "2026-10-01",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Nike (NKE) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.43.",
-   "extra": {
-    "market_cap_b": 53,
-    "eps_forecast": "$0.43"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-data-g-5-foreign-exchange-rates",
-   "date": "2026-10-01",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "G.5 - Foreign Exchange Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-data-h-4-1-factors-affecting-reserve-balances",
-   "date": "2026-10-01",
-   "time": "4:30 PM",
-   "kind": "data",
-   "title": "H.4.1 - Factors Affecting Reserve Balances",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-data-cp-commercial-paper",
-   "date": "2026-10-01",
-   "time": "1:00 PM",
-   "kind": "data",
-   "title": "CP - Commercial Paper",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-data-h-15-selected-interest-rates",
-   "date": "2026-10-01",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.15 - Selected Interest Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-10-01-data-weekly-jobless-claims",
-   "date": "2026-10-01",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-10-02-data-h-8-assets-and-liabilities-of-commercial-banks-i",
    "date": "2026-10-02",
@@ -263,6 +113,21 @@
    "link": "https://www.treasurydirect.gov/auctions/upcoming/"
   },
   {
+   "id": "2026-10-08-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-10-08",
+   "time": "4:30 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "importance": "medium",
+   "why": "Topic: Economic Outlook. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Christopher J. Waller",
+    "location": "At the Central Bank of the Republic of T\u00fcrkiye (TCMB) \u0130stanbul Economic Forum, \u00dcmraniye/\u0130stanbul, T\u00fcrkiye "
+   },
+   "source": "Federal Reserve",
+   "link": "https://istanbulef.org/eng/yayin/"
+  },
+  {
    "id": "2026-10-08-earnings-pepsico-pep-reports-earnings",
    "date": "2026-10-08",
    "time": "Before open",
@@ -271,7 +136,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 173,
+    "market_cap_b": 171,
     "eps_forecast": "$2.29"
    },
    "source": "",
@@ -354,6 +219,18 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-10-22-data-weekly-jobless-claims",
+   "date": "2026-10-22",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {

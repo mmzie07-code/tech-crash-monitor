@@ -19,5 +19,12 @@
   "stretch": 33,
   "trigger": 17,
   "level": "Elevated"
+ },
+ {
+  "date": "2026-10-02",
+  "score": 25,
+  "stretch": 33,
+  "trigger": 17,
+  "level": "Elevated"
  }
 ]

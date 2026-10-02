@@ -1,43 +1,40 @@
 {
- "date": "2026-10-01",
- "generated": "2026-10-01T21:50:25.327077Z",
- "headline": "US stocks finished little changed. The S&P 500 rose 0.19%, with 5 of 11 sectors up.",
+ "date": "2026-10-02",
+ "generated": "2026-10-02T21:50:51.399540Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.73%, with 10 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.19% today, +0.46% this month, +11.78% this year",
-    "Dow Jones: +0.04% today, -3.49% this month, +5.26% this year",
-    "Nasdaq Composite: +0.04% today, +2.96% this month, +15.65% this year",
-    "Russell 2000: +0.35% today, -3.89% this month, +11.90% this year"
+    "S&P 500: +0.73% today, +0.73% this month, +12.60% this year",
+    "Dow Jones: +0.49% today, -3.55% this month, +5.78% this year",
+    "Nasdaq Composite: +1.19% today, +3.71% this month, +17.02% this year",
+    "Russell 2000: +0.94% today, -4.07% this month, +12.94% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +1.95%, Technology +1.05%, Industrials +0.99%",
-    "Lagging: Health Care -1.32%, Communication -0.93%, Real Estate -0.56%",
-    "5 of 11 sectors rose."
+    "Leading: Consumer Discretionary +1.13%, Technology +1.01%, Industrials +0.78%",
+    "Lagging: Health Care -0.01%, Financials +0.06%, Energy +0.19%",
+    "10 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.39 (+0.31% today)",
-    "10-year Treasury yield: 5.24% (-0.06 pts today)",
-    "US dollar index: 102.00 (+0.54% today)",
-    "Crude oil: 92.91 (+2.75% today)",
-    "Gold: 4,207.80 (+0.50% today)",
-    "Bitcoin: 84,475.33 (+1.10% today)"
+    "VIX (fear gauge): 15.31 (-6.59% today)",
+    "10-year Treasury yield: 5.28% (+0.04 pts today)",
+    "US dollar index: 101.92 (-0.17% today)",
+    "Crude oil: 91.26 (-1.73% today)",
+    "Gold: 4,172.10 (-0.72% today)",
+    "Bitcoin: 84,509.37 (-0.41% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +2.75% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved -0.06 points to 5.24%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The US dollar moved +0.54%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "No unusually large moves in rates, oil, the dollar, gold or volatility today. Quiet days are normal, and most days are unremarkable."
    ]
   },
   {
@@ -60,7 +57,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-09-30).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-01).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -68,52 +65,52 @@
  ],
  "headlines": [
   {
-   "title": "Nike shares drop as retailer posts disappointing sales, announces layoffs as part of restructuring",
+   "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html",
-   "published": "Thu, 01 Oct 2026 21:34:44"
+   "link": "https://www.cnbc.com/2026/10/02/ford-q3-sales.html",
+   "published": "Fri, 02 Oct 2026 17:20:33"
   },
   {
-   "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
+   "title": "Men are losing ground in the labor market. Here's why",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/trump-fed-powell-lisa-cook-michael-barr-removal.html",
-   "published": "Thu, 01 Oct 2026 21:14:49"
+   "link": "https://www.cnbc.com/2026/10/02/men-labor-market-jobs-report.html",
+   "published": "Fri, 02 Oct 2026 17:38:59"
   },
   {
-   "title": "Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East",
+   "title": "FAA says Boeing 737 Max software glitch not a flight-safety issue",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html",
-   "published": "Thu, 01 Oct 2026 19:29:26"
+   "link": "https://www.cnbc.com/2026/10/02/faa-says-boeing-737-max-10-software-glitch-not-a-flight-safety-issue.html",
+   "published": "Fri, 02 Oct 2026 19:19:15"
   },
   {
-   "title": "Europe\u2019s winter energy crunch may already be underway. Two U.S. stocks that may benefit",
+   "title": "DOJ says it will not reopen criminal probe into former Fed Chair Powell",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/01/europes-winter-energy-crunch-may-already-be-underway-two-us-stocks-that-may-benefit.html",
-   "published": "Thu, 01 Oct 2026 20:41:38"
+   "link": "https://www.cnbc.com/2026/10/02/doj-says-it-will-not-reopen-criminal-probe-into-former-fed-chair-powell.html",
+   "published": "Fri, 02 Oct 2026 20:32:54"
   },
   {
-   "title": "The hidden silver lining of high interest rates: safer, cheaper retirement income",
+   "title": "Why mixing politics with your stock portfolio might be costing you money",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-hidden-silver-lining-of-high-interest-rates-safer-cheaper-retirement-income-36e2e077?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 21:27:00"
+   "link": "https://www.marketwatch.com/story/why-mixing-politics-with-your-stock-portfolio-might-be-costing-you-money-5b4aabfb?mod=mw_rss_topstories",
+   "published": "Fri, 02 Oct 2026 20:43:00"
   },
   {
-   "title": "Nike\u2019s troubles are mounting, and sales could fall further",
+   "title": "Does AI have a soul? Pope Leo and Anthropic clash.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nikes-troubles-are-mounting-and-sales-could-fall-further-2c19699d?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 21:09:00"
+   "link": "https://www.marketwatch.com/story/does-ai-have-a-soul-pope-leo-and-anthropic-clash-0c1669fb?mod=mw_rss_topstories",
+   "published": "Fri, 02 Oct 2026 20:40:00"
   },
   {
-   "title": "The stock market is anything but normal right now \u2014 and these charts show it",
+   "title": "My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-stock-market-is-anything-but-normal-right-now-and-these-charts-show-it-91ea187d?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 21:01:00"
+   "link": "https://www.marketwatch.com/story/my-wife-never-went-back-to-work-after-raising-our-kids-do-i-have-to-share-my-retirement-savings-50-50-f0727f82?mod=mw_rss_topstories",
+   "published": "Fri, 02 Oct 2026 20:30:00"
   },
   {
-   "title": "Here\u2019s how much more groceries, clothing and household appliances could cost as diesel prices keep surging",
+   "title": "Europe\u2019s leaders rush to release diesel from stockpiles as fuel shock hangs over U.S. midterms",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/heres-how-much-more-groceries-clothing-and-household-appliances-could-cost-as-diesel-prices-keep-surging-771c9247?mod=mw_rss_topstories",
-   "published": "Thu, 01 Oct 2026 20:58:00"
+   "link": "https://www.marketwatch.com/story/europes-leaders-rush-to-release-diesel-from-stockpiles-as-fuel-shock-hangs-over-u-s-midterms-80bf0f38?mod=mw_rss_topstories",
+   "published": "Fri, 02 Oct 2026 20:26:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
