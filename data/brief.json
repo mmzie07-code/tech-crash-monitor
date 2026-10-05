@@ -1,34 +1,34 @@
 {
- "date": "2026-10-02",
- "generated": "2026-10-02T21:50:51.399540Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.73%, with 10 of 11 sectors up.",
+ "date": "2026-10-05",
+ "generated": "2026-10-05T21:52:48.425724Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.66%, with 10 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.73% today, +0.73% this month, +12.60% this year",
-    "Dow Jones: +0.49% today, -3.55% this month, +5.78% this year",
-    "Nasdaq Composite: +1.19% today, +3.71% this month, +17.02% this year",
-    "Russell 2000: +0.94% today, -4.07% this month, +12.94% this year"
+    "S&P 500: +0.66% today, +0.34% this month, +13.35% this year",
+    "Dow Jones: +0.18% today, -4.50% this month, +5.96% this year",
+    "Nasdaq Composite: +1.05% today, +3.36% this month, +18.26% this year",
+    "Russell 2000: +0.50% today, -4.08% this month, +13.51% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Consumer Discretionary +1.13%, Technology +1.01%, Industrials +0.78%",
-    "Lagging: Health Care -0.01%, Financials +0.06%, Energy +0.19%",
+    "Leading: Materials +1.31%, Communication +1.17%, Energy +1.00%",
+    "Lagging: Real Estate -0.34%, Industrials +0.09%, Utilities +0.35%",
     "10 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.31 (-6.59% today)",
-    "10-year Treasury yield: 5.28% (+0.04 pts today)",
-    "US dollar index: 101.92 (-0.17% today)",
-    "Crude oil: 91.26 (-1.73% today)",
-    "Gold: 4,172.10 (-0.72% today)",
-    "Bitcoin: 84,509.37 (-0.41% today)"
+    "VIX (fear gauge): 15.52 (+1.37% today)",
+    "10-year Treasury yield: 5.31% (+0.03 pts today)",
+    "US dollar index: 102.12 (+0.19% today)",
+    "Crude oil: 89.30 (-1.99% today)",
+    "Gold: 4,167.60 (+0.13% today)",
+    "Bitcoin: 85,897.69 (-0.67% today)"
    ]
   },
   {
@@ -41,23 +41,15 @@
    "title": "Coming up",
    "bullets": [
     "Wed Oct 7, 2:00 PM ET: FOMC minutes (meeting of September 15-16)",
-    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth",
-    "Thu Oct 29, 8:30 AM ET: Personal income and spending, including PCE inflation"
-   ]
-  },
-  {
-   "title": "Just happened",
-   "bullets": [
-    "Micron Technology: Micron Technology reported earnings: beat estimates.",
-    "Personal income and spending, including PCE inflation: Personal income increased $66.6 billion (0.2 percent at a monthly rate) in August.",
-    "GDP third estimate: revised economic growth: Real gross domestic product (GDP) increased at an annual rate of 2.2 percent in the second quarter of 2026 (April, May, and June)."
+    "Tue Oct 13, Before open: J P Morgan Chase & Co (JPM) reports earnings",
+    "Tue Oct 13, Before open: Johnson & Johnson (JNJ) reports earnings",
+    "Wed Oct 14, Before open: ASML Holding N.V. (ASML) reports earnings"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-01).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-02).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -65,52 +57,52 @@
  ],
  "headlines": [
   {
-   "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
+   "title": "'We had a threat': Trump explains U.S. moving long-range bombers from UK",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/02/ford-q3-sales.html",
-   "published": "Fri, 02 Oct 2026 17:20:33"
+   "link": "https://www.cnbc.com/2026/10/05/trump-bombers-uk-iran.html",
+   "published": "Mon, 05 Oct 2026 20:53:33"
   },
   {
-   "title": "Men are losing ground in the labor market. Here's why",
+   "title": "House Democrat targets candidate prediction market trades after opponent\u2019s Kalshi penalty",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/02/men-labor-market-jobs-report.html",
-   "published": "Fri, 02 Oct 2026 17:38:59"
+   "link": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html",
+   "published": "Mon, 05 Oct 2026 21:24:25"
   },
   {
-   "title": "FAA says Boeing 737 Max software glitch not a flight-safety issue",
+   "title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/02/faa-says-boeing-737-max-10-software-glitch-not-a-flight-safety-issue.html",
-   "published": "Fri, 02 Oct 2026 19:19:15"
+   "link": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html",
+   "published": "Mon, 05 Oct 2026 20:08:19"
   },
   {
-   "title": "DOJ says it will not reopen criminal probe into former Fed Chair Powell",
+   "title": "SpaceX stock climbs to highest since June, returning Musk to trillionaire status",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/02/doj-says-it-will-not-reopen-criminal-probe-into-former-fed-chair-powell.html",
-   "published": "Fri, 02 Oct 2026 20:32:54"
+   "link": "https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html",
+   "published": "Mon, 05 Oct 2026 20:10:13"
   },
   {
-   "title": "Why mixing politics with your stock portfolio might be costing you money",
+   "title": "This new AI model could help America close a technological gap with China",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/why-mixing-politics-with-your-stock-portfolio-might-be-costing-you-money-5b4aabfb?mod=mw_rss_topstories",
-   "published": "Fri, 02 Oct 2026 20:43:00"
+   "link": "https://www.marketwatch.com/story/this-new-ai-model-could-help-america-close-a-technological-gap-with-china-c1d74492?mod=mw_rss_topstories",
+   "published": "Mon, 05 Oct 2026 21:43:00"
   },
   {
-   "title": "Does AI have a soul? Pope Leo and Anthropic clash.",
+   "title": "Microsoft\u2019s blazing stock comeback isn\u2019t even close to being over, analyst says",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/does-ai-have-a-soul-pope-leo-and-anthropic-clash-0c1669fb?mod=mw_rss_topstories",
-   "published": "Fri, 02 Oct 2026 20:40:00"
+   "link": "https://www.marketwatch.com/story/microsofts-blazing-stock-comeback-isnt-even-close-to-being-over-analyst-says-265f7b6d?mod=mw_rss_topstories",
+   "published": "Mon, 05 Oct 2026 21:27:00"
   },
   {
-   "title": "My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50?",
+   "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-wife-never-went-back-to-work-after-raising-our-kids-do-i-have-to-share-my-retirement-savings-50-50-f0727f82?mod=mw_rss_topstories",
-   "published": "Fri, 02 Oct 2026 20:30:00"
+   "link": "https://www.marketwatch.com/story/western-digital-and-seagate-shares-bounce-back-as-analysts-downplay-the-toshiba-threat-4979dbff?mod=mw_rss_topstories",
+   "published": "Mon, 05 Oct 2026 21:25:00"
   },
   {
-   "title": "Europe\u2019s leaders rush to release diesel from stockpiles as fuel shock hangs over U.S. midterms",
+   "title": "This rare stock-market divide means an elevated chance of a big surge \u2014 or a deep plunge",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/europes-leaders-rush-to-release-diesel-from-stockpiles-as-fuel-shock-hangs-over-u-s-midterms-80bf0f38?mod=mw_rss_topstories",
-   "published": "Fri, 02 Oct 2026 20:26:00"
+   "link": "https://www.marketwatch.com/story/this-rare-stock-market-divide-means-an-elevated-chance-of-a-big-surge-or-a-deep-plunge-cf2cb4e5?mod=mw_rss_topstories",
+   "published": "Mon, 05 Oct 2026 21:12:00"
   },
   {
    "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",

@@ -1,20 +1,8 @@
 {
- "generated": "2026-10-02T21:50:40.366889Z",
- "today": "2026-10-02",
+ "generated": "2026-10-05T21:52:36.796385Z",
+ "today": "2026-10-05",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-02-data-h-8-assets-and-liabilities-of-commercial-banks-i",
-   "date": "2026-10-02",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.8 - Assets and Liabilities of Commercial Banks in the U.S.",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-10-05-data-h-10-foreign-exchange-rates",
    "date": "2026-10-05",
@@ -136,7 +124,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 171,
+    "market_cap_b": 172,
     "eps_forecast": "$2.29"
    },
    "source": "",
@@ -186,6 +174,96 @@
    "link": null
   },
   {
+   "id": "2026-10-13-earnings-j-p-morgan-chase-co-jpm-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "J P Morgan Chase & Co (JPM) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.88.",
+   "extra": {
+    "market_cap_b": 884,
+    "eps_forecast": "$5.88"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-13-earnings-johnson-johnson-jnj-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Johnson & Johnson (JNJ) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.90.",
+   "extra": {
+    "market_cap_b": 617,
+    "eps_forecast": "$2.90"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-13-earnings-unitedhealth-group-incorporated-unh-reports-earn",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "UnitedHealth Group Incorporated (UNH) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.12.",
+   "extra": {
+    "market_cap_b": 334,
+    "eps_forecast": "$4.12"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-13-earnings-the-goldman-sachs-group-gs-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "The Goldman Sachs Group (GS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.05.",
+   "extra": {
+    "market_cap_b": 263,
+    "eps_forecast": "$14.05"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-13-earnings-citigroup-c-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Citigroup (C) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.66.",
+   "extra": {
+    "market_cap_b": 216,
+    "eps_forecast": "$2.66"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-14-earnings-asml-holding-n-v-asml-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "ASML Holding N.V. (ASML) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.54.",
+   "extra": {
+    "market_cap_b": 720,
+    "eps_forecast": "$12.54"
+   },
+   "source": "",
+   "link": null
+  },
+  {
    "id": "2026-10-14-fed-fed-beige-book",
    "date": "2026-10-14",
    "time": "2:00 PM",
@@ -196,6 +274,81 @@
    "extra": null,
    "source": "Federal Reserve",
    "link": "https://www.federalreserve.gov/monetarypolicy/beigebook/"
+  },
+  {
+   "id": "2026-10-14-earnings-bank-of-america-bac-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Bank of America (BAC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.13.",
+   "extra": {
+    "market_cap_b": 376,
+    "eps_forecast": "$1.13"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-14-earnings-morgan-stanley-ms-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Morgan Stanley (MS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.97.",
+   "extra": {
+    "market_cap_b": 299,
+    "eps_forecast": "$2.97"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-14-earnings-wells-fargo-company-wfc-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Wells Fargo & Company (WFC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
+   "extra": {
+    "market_cap_b": 243,
+    "eps_forecast": "$1.85"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-14-earnings-blackrock-blk-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "BlackRock (BLK) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.19.",
+   "extra": {
+    "market_cap_b": 164,
+    "eps_forecast": "$14.19"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-14-earnings-fastenal-company-fast-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Fastenal Company (FAST) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.34.",
+   "extra": {
+    "market_cap_b": 58,
+    "eps_forecast": "$0.34"
+   },
+   "source": "",
+   "link": null
   },
   {
    "id": "2026-10-15-data-weekly-jobless-claims",
@@ -402,6 +555,32 @@
    "extra": null,
    "source": "Federal Reserve",
    "link": null
+  },
+  {
+   "id": "2026-11-17-data-g-17-industrial-production-and-capacity-utilizat",
+   "date": "2026-11-17",
+   "time": "9:15 AM",
+   "kind": "data",
+   "title": "G.17 - Industrial Production and Capacity Utilization",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-fed-fomc-minutes-meeting-of-october-27-28",
+   "date": "2026-11-18",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "FOMC minutes (meeting of October 27-28)",
+   "importance": "high",
+   "why": "A detailed record of what Fed officials discussed at their last meeting, published three weeks later. Markets look for clues about future rate moves.",
+   "extra": {
+    "meeting": "Meeting of October 27-28"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
   },
   {
    "id": "2026-12-09-fed-fed-interest-rate-decision-fomc",

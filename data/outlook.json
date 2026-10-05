@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-02T21:50:48.839848Z",
- "as_of": "2026-10-02",
+ "generated": "2026-10-05T21:52:46.056408Z",
+ "as_of": "2026-10-05",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10318,
+    "n": 10319,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -17,12 +17,12 @@
     "p75": 0.6,
     "p90": 1.2,
     "below": 12,
-    "above": 14,
+    "above": 13,
     "worst": -20.5,
     "best": 11.6
    },
    "similar": {
-    "n": 2555,
+    "n": 2556,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -35,12 +35,12 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.0% below it).",
-    "VIX at 15.3: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.3% below it).",
+    "VIX at 15.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.28% and rose 0.48 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.31% and rose 0.55 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
    ],
    "events": []
@@ -50,7 +50,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10318,
+    "n": 10319,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -58,12 +58,12 @@
     "p75": 0.6,
     "p90": 1.2,
     "below": 12,
-    "above": 14,
+    "above": 13,
     "worst": -20.5,
     "best": 11.6
    },
    "similar": {
-    "n": 2555,
+    "n": 2556,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -76,22 +76,35 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.0% below it).",
-    "VIX at 15.3: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.3% below it).",
+    "VIX at 15.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.28% and rose 0.48 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.31% and rose 0.55 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
    ],
-   "events": []
+   "events": [
+    {
+     "date": "2026-10-06",
+     "time": "10:45 AM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-06",
+     "time": "1:00 PM",
+     "title": "Treasury auction: 3-Year Note",
+     "importance": "medium"
+    }
+   ]
   },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10314,
+    "n": 10315,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -104,7 +117,7 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2551,
+    "n": 2552,
     "up": 57,
     "median": 0.3,
     "p10": -2.2,
@@ -117,12 +130,12 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.0% below it).",
-    "VIX at 15.3: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.3% below it).",
+    "VIX at 15.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.28% and rose 0.48 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.31% and rose 0.55 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -170,7 +183,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10298,
+    "n": 10299,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -196,12 +209,12 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.0% below it).",
-    "VIX at 15.3: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.3% below it).",
+    "VIX at 15.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.28% and rose 0.48 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.31% and rose 0.55 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -210,6 +223,24 @@
      "date": "2026-10-07",
      "time": "2:00 PM",
      "title": "FOMC minutes (meeting of September 15-16)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "J P Morgan Chase & Co (JPM) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "Johnson & Johnson (JNJ) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "ASML Holding N.V. (ASML) reports earnings",
      "importance": "high"
     },
     {
@@ -237,7 +268,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10067,
+    "n": 10068,
     "up": 80,
     "median": 12.0,
     "p10": -11.8,
@@ -250,7 +281,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2381,
+    "n": 2382,
     "up": 85,
     "median": 10.6,
     "p10": -7.6,
@@ -263,13 +294,13 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.0% below it).",
-    "VIX at 15.3: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.3% below it).",
+    "VIX at 15.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 30.6, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 30.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is 5.28% and rose 0.48 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.31% and rose 0.55 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -284,6 +315,12 @@
      "date": "2026-10-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
      "importance": "high"
     },
     {

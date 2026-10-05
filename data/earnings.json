@@ -1,7 +1,29 @@
 {
- "generated": "2026-10-02T21:49:53.275914Z",
+ "generated": "2026-10-05T21:51:44.561669Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-10-05",
+   "reported_total": 3,
+   "top": [
+    {
+     "symbol": "AEHR",
+     "name": "Aehr Test Systems",
+     "market_cap_b": 3.5,
+     "eps": null,
+     "eps_estimate": 0.05,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.05.",
+      "Covers the quarter ending Aug 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AEHR&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-10-01",
    "reported_total": 5,
