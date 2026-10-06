@@ -1,7 +1,128 @@
 {
- "generated": "2026-10-05T21:52:46.101729Z",
+ "generated": "2026-10-06T21:50:48.924306Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "headline": "The Treasury sold 3-Year notes at a 4.932% yield with demand below average.",
+   "bullets": [
+    "High yield (the highest rate accepted): 4.932%.",
+    "Bid-to-cover ratio: 2.62 (bids received per dollar sold).",
+    "That is below the average of 2.63 over the previous 8 3-Year auctions.",
+    "Size: $58B offered, $59.4B accepted."
+   ],
+   "changes": null,
+   "context": [
+    "Demand was about the same than usual. Weak auctions can push yields up; strong ones keep them steady."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Auction results",
+     "url": "https://www.treasurydirect.gov/auctions/results/"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": 0.58,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.45,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": 0.49,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -0.59,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.04,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": -0.31,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": -3.29,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": 0.86,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 0.54,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.23,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Utilities",
+     "move": 2.59
+    },
+    "worst": {
+     "name": "Health Care",
+     "move": -0.09
+    }
+   },
+   "id": "2026-10-06-treasury-treasury-auction-3-year-note",
+   "date": "2026-10-06",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 3-Year Note",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/upcoming/",
+   "generated": "2026-10-06T21:50:52.633727Z"
+  },
+  {
+   "id": "2026-10-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-10-06",
+   "time": "10:45 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.communitybanking.org/",
+   "lesson": 3
+  },
   {
    "id": "2026-10-01-fed-fed-speaks-governor-lisa-d-cook",
    "date": "2026-10-01",

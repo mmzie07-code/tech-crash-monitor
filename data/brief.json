@@ -1,40 +1,40 @@
 {
- "date": "2026-10-05",
- "generated": "2026-10-05T21:52:48.425724Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.66%, with 10 of 11 sectors up.",
+ "date": "2026-10-06",
+ "generated": "2026-10-06T21:50:52.793103Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.58%, with 10 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.66% today, +0.34% this month, +13.35% this year",
-    "Dow Jones: +0.18% today, -4.50% this month, +5.96% this year",
-    "Nasdaq Composite: +1.05% today, +3.36% this month, +18.26% this year",
-    "Russell 2000: +0.50% today, -4.08% this month, +13.51% this year"
+    "S&P 500: +0.58% today, +1.30% this month, +14.00% this year",
+    "Dow Jones: +0.49% today, -3.54% this month, +6.49% this year",
+    "Nasdaq Composite: +0.45% today, +4.12% this month, +18.78% this year",
+    "Russell 2000: -0.59% today, -4.88% this month, +12.84% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Materials +1.31%, Communication +1.17%, Energy +1.00%",
-    "Lagging: Real Estate -0.34%, Industrials +0.09%, Utilities +0.35%",
+    "Leading: Utilities +2.98%, Consumer Discretionary +1.18%, Real Estate +1.06%",
+    "Lagging: Health Care -0.17%, Communication +0.04%, Financials +0.24%",
     "10 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.52 (+1.37% today)",
-    "10-year Treasury yield: 5.31% (+0.03 pts today)",
-    "US dollar index: 102.12 (+0.19% today)",
-    "Crude oil: 89.30 (-1.99% today)",
-    "Gold: 4,167.60 (+0.13% today)",
-    "Bitcoin: 85,897.69 (-0.67% today)"
+    "VIX (fear gauge): 15.01 (-3.29% today)",
+    "10-year Treasury yield: 5.27% (-0.04 pts today)",
+    "US dollar index: 101.86 (-0.30% today)",
+    "Crude oil: 89.91 (+0.54% today)",
+    "Gold: 4,192.70 (+0.86% today)",
+    "Bitcoin: 85,577.58 (-0.24% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "No unusually large moves in rates, oil, the dollar, gold or volatility today. Quiet days are normal, and most days are unremarkable."
+    "A 3.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -47,9 +47,15 @@
    ]
   },
   {
+   "title": "Just happened",
+   "bullets": [
+    "Treasury auction: 3-Year Note: The Treasury sold 3-Year notes at a 4.932% yield with demand below average."
+   ]
+  },
+  {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-02).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-05).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -57,70 +63,52 @@
  ],
  "headlines": [
   {
-   "title": "'We had a threat': Trump explains U.S. moving long-range bombers from UK",
+   "title": "Chart: A look at the S&P 500's remarkable and defiant trip to a new record",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/05/trump-bombers-uk-iran.html",
-   "published": "Mon, 05 Oct 2026 20:53:33"
+   "link": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
+   "published": "Tue, 06 Oct 2026 20:50:54"
   },
   {
-   "title": "House Democrat targets candidate prediction market trades after opponent\u2019s Kalshi penalty",
+   "title": "Trump hedges on paying back government for ads that already aired",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html",
-   "published": "Mon, 05 Oct 2026 21:24:25"
+   "link": "https://www.cnbc.com/2026/10/05/trump-ads-election.html",
+   "published": "Tue, 06 Oct 2026 21:32:32"
   },
   {
-   "title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
+   "title": "Anthropic expands Claude Startups program in bid to snag founders and fast-growing companies",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html",
-   "published": "Mon, 05 Oct 2026 20:08:19"
+   "link": "https://www.cnbc.com/2026/10/06/anthropic-claude-startups-program.html",
+   "published": "Tue, 06 Oct 2026 18:06:40"
   },
   {
-   "title": "SpaceX stock climbs to highest since June, returning Musk to trillionaire status",
+   "title": "Rebounding oil exports through Strait of Hormuz are vulnerable to stepped-up Iranian tanker attacks",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/05/spacex-stock-climbs-highest-since-june-returning-musk-to-trillionaire.html",
-   "published": "Mon, 05 Oct 2026 20:10:13"
+   "link": "https://www.cnbc.com/2026/10/06/crude-oil-tanker-strait-hormuz-iran-attack.html",
+   "published": "Tue, 06 Oct 2026 16:19:10"
   },
   {
-   "title": "This new AI model could help America close a technological gap with China",
+   "title": "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-new-ai-model-could-help-america-close-a-technological-gap-with-china-c1d74492?mod=mw_rss_topstories",
-   "published": "Mon, 05 Oct 2026 21:43:00"
+   "link": "https://www.marketwatch.com/story/my-brother-in-law-convinced-his-parents-to-sign-over-their-home-and-savings-to-buy-a-3-million-compound-do-i-intervene-03fb96b7?mod=mw_rss_topstories",
+   "published": "Tue, 06 Oct 2026 21:15:00"
   },
   {
-   "title": "Microsoft\u2019s blazing stock comeback isn\u2019t even close to being over, analyst says",
+   "title": "Oct. 9 has loomed large in stock-market history. Why investors still shouldn\u2019t buy into an October jinx.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/microsofts-blazing-stock-comeback-isnt-even-close-to-being-over-analyst-says-265f7b6d?mod=mw_rss_topstories",
-   "published": "Mon, 05 Oct 2026 21:27:00"
+   "link": "https://www.marketwatch.com/story/oct-9-has-loomed-large-in-stock-market-history-why-investors-still-shouldnt-buy-into-an-october-jinx-81d7149b?mod=mw_rss_topstories",
+   "published": "Tue, 06 Oct 2026 20:37:00"
   },
   {
-   "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
+   "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/western-digital-and-seagate-shares-bounce-back-as-analysts-downplay-the-toshiba-threat-4979dbff?mod=mw_rss_topstories",
-   "published": "Mon, 05 Oct 2026 21:25:00"
+   "link": "https://www.marketwatch.com/story/google-makes-a-fresh-bet-on-nuclear-power-as-the-ai-energy-crunch-intensifies-a757c296?mod=mw_rss_topstories",
+   "published": "Tue, 06 Oct 2026 20:24:00"
   },
   {
-   "title": "This rare stock-market divide means an elevated chance of a big surge \u2014 or a deep plunge",
+   "title": "Marvell just impressed Wall Street with \u2018good numbers plus a better story\u2019",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-rare-stock-market-divide-means-an-elevated-chance-of-a-big-surge-or-a-deep-plunge-cf2cb4e5?mod=mw_rss_topstories",
-   "published": "Mon, 05 Oct 2026 21:12:00"
-  },
-  {
-   "title": "Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?",
-   "source": "Yahoo Finance",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/ennis-ebf-grows-sales-earns-015226342.html",
-   "published": "2026-09-23T01:52:26Z"
-  },
-  {
-   "title": "Strive CEO: Bitcoin Could \u2018Go to Infinity' as Dollar Debt Crisis Breaks",
-   "source": "Yahoo Finance",
-   "link": "https://finance.yahoo.com/markets/crypto/articles/strive-ceo-bitcoin-could-infinity-015100441.html",
-   "published": "2026-09-23T01:51:00Z"
-  },
-  {
-   "title": "Westinghouse Air Brake (WAB) Signs $700 Million-Plus Rail Services Deal. Can Profits Grow?",
-   "source": "Yahoo Finance",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/westinghouse-air-brake-wab-signs-014350177.html",
-   "published": "2026-09-23T01:43:50Z"
+   "link": "https://www.marketwatch.com/story/marvell-just-impressed-wall-street-with-good-numbers-plus-a-better-story-57fbbf23?mod=mw_rss_topstories",
+   "published": "Tue, 06 Oct 2026 20:21:00"
   }
  ],
  "summary": null,

@@ -1,20 +1,8 @@
 {
- "generated": "2026-10-05T21:52:36.796385Z",
- "today": "2026-10-05",
+ "generated": "2026-10-06T21:50:39.099552Z",
+ "today": "2026-10-06",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-05-data-h-10-foreign-exchange-rates",
-   "date": "2026-10-05",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.10 - Foreign Exchange Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-10-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
    "date": "2026-10-06",
@@ -31,32 +19,18 @@
    "link": "https://www.communitybanking.org/"
   },
   {
-   "id": "2026-10-06-treasury-treasury-auction-3-year-note",
-   "date": "2026-10-06",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 3-Year Note",
-   "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $58B.",
-   "extra": {
-    "term": "3-Year",
-    "type": "Note",
-    "cusip": "91282CRQ6"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
-  },
-  {
    "id": "2026-10-06-data-trade-balance-imports-and-exports",
    "date": "2026-10-06",
    "time": "8:30 AM",
    "kind": "data",
    "title": "Trade balance (imports and exports)",
    "importance": "low",
-   "why": "Shows whether the US is buying more from the world than it sells. Matters more when tariffs and trade policy are in the news.",
-   "extra": null,
-   "source": "",
-   "link": null
+   "why": "A US government economic release.",
+   "extra": {
+    "bea_key": "u.s. international trade in goods and se"
+   },
+   "source": "BEA",
+   "link": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026"
   },
   {
    "id": "2026-10-07-fed-fomc-minutes-meeting-of-september-15-16",
@@ -124,7 +98,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 172,
+    "market_cap_b": 171,
     "eps_forecast": "$2.29"
    },
    "source": "",
@@ -180,10 +154,10 @@
    "kind": "earnings",
    "title": "J P Morgan Chase & Co (JPM) reports earnings",
    "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.88.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.94.",
    "extra": {
     "market_cap_b": 884,
-    "eps_forecast": "$5.88"
+    "eps_forecast": "$5.94"
    },
    "source": "",
    "link": null
@@ -197,7 +171,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.90.",
    "extra": {
-    "market_cap_b": 617,
+    "market_cap_b": 610,
     "eps_forecast": "$2.90"
    },
    "source": "",
@@ -212,7 +186,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.12.",
    "extra": {
-    "market_cap_b": 334,
+    "market_cap_b": 340,
     "eps_forecast": "$4.12"
    },
    "source": "",
@@ -225,10 +199,25 @@
    "kind": "earnings",
    "title": "The Goldman Sachs Group (GS) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.05.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.89.",
    "extra": {
-    "market_cap_b": 263,
-    "eps_forecast": "$14.05"
+    "market_cap_b": 260,
+    "eps_forecast": "$13.89"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-13-earnings-wells-fargo-company-wfc-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Wells Fargo & Company (WFC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
+   "extra": {
+    "market_cap_b": 246,
+    "eps_forecast": "$1.85"
    },
    "source": "",
    "link": null
@@ -255,10 +244,10 @@
    "kind": "earnings",
    "title": "ASML Holding N.V. (ASML) reports earnings",
    "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.54.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.47.",
    "extra": {
-    "market_cap_b": 720,
-    "eps_forecast": "$12.54"
+    "market_cap_b": 717,
+    "eps_forecast": "$12.47"
    },
    "source": "",
    "link": null
@@ -282,10 +271,10 @@
    "kind": "earnings",
    "title": "Bank of America (BAC) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.13.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.12.",
    "extra": {
-    "market_cap_b": 376,
-    "eps_forecast": "$1.13"
+    "market_cap_b": 378,
+    "eps_forecast": "$1.12"
    },
    "source": "",
    "link": null
@@ -297,25 +286,10 @@
    "kind": "earnings",
    "title": "Morgan Stanley (MS) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.97.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.88.",
    "extra": {
     "market_cap_b": 299,
-    "eps_forecast": "$2.97"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-14-earnings-wells-fargo-company-wfc-reports-earnings",
-   "date": "2026-10-14",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Wells Fargo & Company (WFC) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
-   "extra": {
-    "market_cap_b": 243,
-    "eps_forecast": "$1.85"
+    "eps_forecast": "$2.88"
    },
    "source": "",
    "link": null
@@ -327,10 +301,10 @@
    "kind": "earnings",
    "title": "BlackRock (BLK) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.19.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.04.",
    "extra": {
-    "market_cap_b": 164,
-    "eps_forecast": "$14.19"
+    "market_cap_b": 165,
+    "eps_forecast": "$14.04"
    },
    "source": "",
    "link": null
@@ -346,6 +320,111 @@
    "extra": {
     "market_cap_b": 58,
     "eps_forecast": "$0.34"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-taiwan-semiconductor-manufacturing-company-tsm-r",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Taiwan Semiconductor Manufacturing Company (TSM) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.45.",
+   "extra": {
+    "market_cap_b": 2520,
+    "eps_forecast": "$4.45"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-the-charles-schwab-schw-reports-earnings",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "The Charles Schwab (SCHW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.66.",
+   "extra": {
+    "market_cap_b": 169,
+    "eps_forecast": "$1.66"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-prologis-pld-reports-earnings",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Prologis (PLD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.58.",
+   "extra": {
+    "market_cap_b": 121,
+    "eps_forecast": "$1.58"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-the-bank-of-new-york-mellon-corporation-bny-repo",
+   "date": "2026-10-15",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "The Bank Of New York Mellon Corporation (BNY) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.27.",
+   "extra": {
+    "market_cap_b": 98,
+    "eps_forecast": "$2.27"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-u-s-bancorp-usb-reports-earnings",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "U.S. Bancorp (USB) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.32.",
+   "extra": {
+    "market_cap_b": 89,
+    "eps_forecast": "$1.32"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-pnc-financial-services-group-inc-the-pnc-reports",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "PNC Financial Services Group, Inc. (The) (PNC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.98.",
+   "extra": {
+    "market_cap_b": 88,
+    "eps_forecast": "$4.98"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-15-earnings-marsh-mrsh-reports-earnings",
+   "date": "2026-10-15",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Marsh (MRSH) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.96.",
+   "extra": {
+    "market_cap_b": 81,
+    "eps_forecast": "$1.96"
    },
    "source": "",
    "link": null
