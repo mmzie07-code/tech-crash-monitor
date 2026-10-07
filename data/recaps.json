@@ -1,7 +1,105 @@
 {
- "generated": "2026-10-06T21:50:48.924306Z",
+ "generated": "2026-10-07T21:52:40.720448Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "headline": "The Fed published the minutes of its last meeting.",
+   "bullets": [
+    "Markets read the minutes for hints about future rate changes and how divided officials were."
+   ],
+   "changes": null,
+   "context": [
+    "Minutes are backward-looking, so they move markets mainly when they reveal more disagreement or urgency than the original statement showed."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Minutes",
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.22,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -0.22,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.66,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -1.31,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.01,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.44,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 0.47,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -1.2,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -0.56,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -2.8,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Health Care",
+     "move": 1.18
+    },
+    "worst": {
+     "name": "Materials",
+     "move": -2.16
+    }
+   },
+   "id": "2026-10-07-fed-fomc-minutes-meeting-of-september-15-16",
+   "date": "2026-10-07",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "FOMC minutes (meeting of September 15-16)",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "generated": "2026-10-07T21:52:43.357471Z"
+  },
   {
    "headline": "The Treasury sold 3-Year notes at a 4.932% yield with demand below average.",
    "bullets": [

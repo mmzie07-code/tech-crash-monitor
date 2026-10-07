@@ -1,37 +1,8 @@
 {
- "generated": "2026-10-06T21:50:39.099552Z",
- "today": "2026-10-06",
+ "generated": "2026-10-07T21:52:31.590939Z",
+ "today": "2026-10-07",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-10-06",
-   "time": "10:45 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Modernizing Regulation and Supervision. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At the 2026 Community Banking Research Conference, St. Louis, Missouri"
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.communitybanking.org/"
-  },
-  {
-   "id": "2026-10-06-data-trade-balance-imports-and-exports",
-   "date": "2026-10-06",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Trade balance (imports and exports)",
-   "importance": "low",
-   "why": "A US government economic release.",
-   "extra": {
-    "bea_key": "u.s. international trade in goods and se"
-   },
-   "source": "BEA",
-   "link": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026"
-  },
   {
    "id": "2026-10-07-fed-fomc-minutes-meeting-of-september-15-16",
    "date": "2026-10-07",
@@ -59,22 +30,6 @@
    "link": null
   },
   {
-   "id": "2026-10-07-treasury-treasury-auction-9-year-10-month-note",
-   "date": "2026-10-07",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 9-Year 10-Month Note",
-   "importance": "low",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $39B.",
-   "extra": {
-    "term": "9-Year 10-Month",
-    "type": "Note",
-    "cusip": "91282CRF0"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
-  },
-  {
    "id": "2026-10-08-fed-fed-speaks-governor-christopher-j-waller",
    "date": "2026-10-08",
    "time": "4:30 AM",
@@ -98,7 +53,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 171,
+    "market_cap_b": 172,
     "eps_forecast": "$2.29"
    },
    "source": "",
@@ -139,10 +94,10 @@
    "kind": "earnings",
    "title": "Delta Air Lines (DAL) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.96.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.93.",
    "extra": {
     "market_cap_b": 55,
-    "eps_forecast": "$1.96"
+    "eps_forecast": "$1.93"
    },
    "source": "",
    "link": null
@@ -156,7 +111,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.94.",
    "extra": {
-    "market_cap_b": 884,
+    "market_cap_b": 881,
     "eps_forecast": "$5.94"
    },
    "source": "",
@@ -171,7 +126,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.90.",
    "extra": {
-    "market_cap_b": 610,
+    "market_cap_b": 614,
     "eps_forecast": "$2.90"
    },
    "source": "",
@@ -186,7 +141,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.12.",
    "extra": {
-    "market_cap_b": 340,
+    "market_cap_b": 338,
     "eps_forecast": "$4.12"
    },
    "source": "",
@@ -199,10 +154,10 @@
    "kind": "earnings",
    "title": "The Goldman Sachs Group (GS) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.89.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.35.",
    "extra": {
-    "market_cap_b": 260,
-    "eps_forecast": "$13.89"
+    "market_cap_b": 261,
+    "eps_forecast": "$13.35"
    },
    "source": "",
    "link": null
@@ -246,7 +201,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.47.",
    "extra": {
-    "market_cap_b": 717,
+    "market_cap_b": 707,
     "eps_forecast": "$12.47"
    },
    "source": "",
@@ -288,7 +243,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.88.",
    "extra": {
-    "market_cap_b": 299,
+    "market_cap_b": 300,
     "eps_forecast": "$2.88"
    },
    "source": "",
@@ -303,7 +258,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.04.",
    "extra": {
-    "market_cap_b": 165,
+    "market_cap_b": 167,
     "eps_forecast": "$14.04"
    },
    "source": "",
@@ -333,7 +288,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.45.",
    "extra": {
-    "market_cap_b": 2520,
+    "market_cap_b": 2501,
     "eps_forecast": "$4.45"
    },
    "source": "",
@@ -348,7 +303,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.66.",
    "extra": {
-    "market_cap_b": 169,
+    "market_cap_b": 167,
     "eps_forecast": "$1.66"
    },
    "source": "",
@@ -363,7 +318,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.58.",
    "extra": {
-    "market_cap_b": 121,
+    "market_cap_b": 122,
     "eps_forecast": "$1.58"
    },
    "source": "",
@@ -423,7 +378,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.96.",
    "extra": {
-    "market_cap_b": 81,
+    "market_cap_b": 82,
     "eps_forecast": "$1.96"
    },
    "source": "",
@@ -438,6 +393,66 @@
    "importance": "low",
    "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
    "extra": null,
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-16-earnings-hdfc-bank-limited-hdb-reports-earnings",
+   "date": "2026-10-16",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "HDFC Bank Limited (HDB) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.40.",
+   "extra": {
+    "market_cap_b": 115,
+    "eps_forecast": "$0.40"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-16-earnings-icici-bank-limited-ibn-reports-earnings",
+   "date": "2026-10-16",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "ICICI Bank Limited (IBN) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.40.",
+   "extra": {
+    "market_cap_b": 100,
+    "eps_forecast": "$0.40"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-16-earnings-the-travelers-companies-trv-reports-earnings",
+   "date": "2026-10-16",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "The Travelers Companies (TRV) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.82.",
+   "extra": {
+    "market_cap_b": 75,
+    "eps_forecast": "$6.82"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-16-earnings-truist-financial-tfc-reports-earnings",
+   "date": "2026-10-16",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Truist Financial (TFC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.12.",
+   "extra": {
+    "market_cap_b": 57,
+    "eps_forecast": "$1.12"
+   },
    "source": "",
    "link": null
   },

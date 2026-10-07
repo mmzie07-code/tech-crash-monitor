@@ -1,23 +1,61 @@
 {
- "generated": "2026-10-06T21:49:46.282387Z",
+ "generated": "2026-10-07T21:51:34.758726Z",
  "ai_summaries": false,
  "days": [
   {
-   "date": "2026-10-06",
-   "reported_total": 10,
+   "date": "2026-10-07",
+   "reported_total": 4,
    "top": [
     {
-     "symbol": "STZ",
-     "name": "Constellation Brands",
-     "market_cap_b": 19.4,
+     "symbol": "LEVI",
+     "name": "Levi Strauss &",
+     "market_cap_b": 7.9,
      "eps": null,
-     "eps_estimate": 3.62,
+     "eps_estimate": 0.36,
      "surprise_pct": null,
      "timing": "time-after-hours",
      "bullets": [
       "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $3.62.",
-      "Stock moved +2.1% on Oct 6 (before the report came out). Reaction comes the next session.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.36.",
+      "Covers the quarter ending Aug 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LEVI&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "APLD",
+     "name": "Applied Digital",
+     "market_cap_b": 7.6,
+     "eps": null,
+     "eps_estimate": -0.25,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-0.25.",
+      "Covers the quarter ending Aug 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APLD&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "reported_total": 11,
+   "top": [
+    {
+     "symbol": "STZ",
+     "name": "Constellation Brands",
+     "market_cap_b": 19.8,
+     "eps": 3.74,
+     "eps_estimate": 3.62,
+     "surprise_pct": 3.31,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.74 versus $3.62 expected, so the company beat estimates by 3.3%.",
+      "Stock moved +2.1% on Oct 6.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -26,14 +64,14 @@
     {
      "symbol": "RPM",
      "name": "RPM International",
-     "market_cap_b": 12.2,
-     "eps": null,
+     "market_cap_b": 12.6,
+     "eps": 1.98,
      "eps_estimate": 1.95,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1.54,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.95.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.98 versus $1.95 expected, so the company beat estimates by 1.5%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -42,14 +80,15 @@
     {
      "symbol": "LW",
      "name": "Lamb Weston Holdings",
-     "market_cap_b": 6.1,
-     "eps": null,
+     "market_cap_b": 6.6,
+     "eps": 0.75,
      "eps_estimate": 0.59,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 27.12,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.59.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.75 versus $0.59 expected, so the company beat estimates by 27.1%.",
+      "Stock moved +7.5% on Oct 6.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -58,14 +97,14 @@
     {
      "symbol": "PENG",
      "name": "Penguin Solutions",
-     "market_cap_b": 3.1,
-     "eps": null,
+     "market_cap_b": 3.3,
+     "eps": 0.91,
      "eps_estimate": 0.61,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 49.18,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.61.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.91 versus $0.61 expected, so the company beat estimates by 49.2%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -74,14 +113,14 @@
     {
      "symbol": "NEOG",
      "name": "Neogen",
-     "market_cap_b": 2.8,
-     "eps": null,
+     "market_cap_b": 2.6,
+     "eps": 0.07,
      "eps_estimate": 0.04,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 75.0,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.04.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.07 versus $0.04 expected, so the company beat estimates by 75.0%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -90,14 +129,14 @@
     {
      "symbol": "WS",
      "name": "Worthington Steel",
-     "market_cap_b": 2.0,
-     "eps": null,
+     "market_cap_b": 1.9,
+     "eps": 0.57,
      "eps_estimate": 1.16,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -50.86,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.16.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.57 versus $1.16 expected, so the company missed estimates by 50.9%.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -112,7 +151,7 @@
     {
      "symbol": "AEHR",
      "name": "Aehr Test Systems",
-     "market_cap_b": 3.4,
+     "market_cap_b": 3.0,
      "eps": -0.05,
      "eps_estimate": 0.05,
      "surprise_pct": null,

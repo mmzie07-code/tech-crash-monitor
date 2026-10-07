@@ -1,40 +1,41 @@
 {
- "date": "2026-10-06",
- "generated": "2026-10-06T21:50:52.793103Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.58%, with 10 of 11 sectors up.",
+ "date": "2026-10-07",
+ "generated": "2026-10-07T21:52:43.359501Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.22%, with 1 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.58% today, +1.30% this month, +14.00% this year",
-    "Dow Jones: +0.49% today, -3.54% this month, +6.49% this year",
-    "Nasdaq Composite: +0.45% today, +4.12% this month, +18.78% this year",
-    "Russell 2000: -0.59% today, -4.88% this month, +12.84% this year"
+    "S&P 500: -0.22% today, +1.67% this month, +13.75% this year",
+    "Dow Jones: -0.66% today, -3.04% this month, +5.78% this year",
+    "Nasdaq Composite: -0.22% today, +4.23% this month, +18.52% this year",
+    "Russell 2000: -1.31% today, -5.64% this month, +11.36% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Utilities +2.98%, Consumer Discretionary +1.18%, Real Estate +1.06%",
-    "Lagging: Health Care -0.17%, Communication +0.04%, Financials +0.24%",
-    "10 of 11 sectors rose."
+    "Leading: Health Care +1.03%, Utilities -0.02%, Consumer Staples -0.12%",
+    "Lagging: Industrials -2.18%, Materials -1.51%, Real Estate -1.29%",
+    "1 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.01 (-3.29% today)",
-    "10-year Treasury yield: 5.27% (-0.04 pts today)",
-    "US dollar index: 101.86 (-0.30% today)",
-    "Crude oil: 89.91 (+0.54% today)",
-    "Gold: 4,192.70 (+0.86% today)",
-    "Bitcoin: 85,577.58 (-0.24% today)"
+    "VIX (fear gauge): 15.08 (+0.47% today)",
+    "10-year Treasury yield: 5.28% (+0.01 pts today)",
+    "US dollar index: 102.28 (+0.44% today)",
+    "Crude oil: 88.94 (-0.56% today)",
+    "Gold: 4,136.70 (-1.20% today)",
+    "Bitcoin: 83,155.31 (-2.81% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 3.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Gold moved -1.20%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 3.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -49,13 +50,14 @@
   {
    "title": "Just happened",
    "bullets": [
+    "FOMC minutes: The Fed published the minutes of its last meeting.",
     "Treasury auction: 3-Year Note: The Treasury sold 3-Year notes at a 4.932% yield with demand below average."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-05).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-06).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -63,52 +65,52 @@
  ],
  "headlines": [
   {
-   "title": "Chart: A look at the S&P 500's remarkable and defiant trip to a new record",
+   "title": "Fed officials see another hike coming, but no sign as to when, minutes show",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
-   "published": "Tue, 06 Oct 2026 20:50:54"
+   "link": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
+   "published": "Wed, 07 Oct 2026 18:42:36"
   },
   {
-   "title": "Trump hedges on paying back government for ads that already aired",
+   "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/05/trump-ads-election.html",
-   "published": "Tue, 06 Oct 2026 21:32:32"
+   "link": "https://www.cnbc.com/2026/10/07/microsoft-starts-taking-preorders-for-2599-surface-laptop-ultra.html",
+   "published": "Wed, 07 Oct 2026 20:26:13"
   },
   {
-   "title": "Anthropic expands Claude Startups program in bid to snag founders and fast-growing companies",
+   "title": "Supertanker chartered from Gulf Coast to China for $76 million, 10 times higher than pre-war level",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/06/anthropic-claude-startups-program.html",
-   "published": "Tue, 06 Oct 2026 18:06:40"
+   "link": "https://www.cnbc.com/2026/10/07/supertanker-from-us-to-china-chartered-for-76-million-source.html",
+   "published": "Wed, 07 Oct 2026 20:33:34"
   },
   {
-   "title": "Rebounding oil exports through Strait of Hormuz are vulnerable to stepped-up Iranian tanker attacks",
+   "title": "Trump awarding medals to Musk, Dell, Nadella and other tech execs at science summit",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/06/crude-oil-tanker-strait-hormuz-iran-attack.html",
-   "published": "Tue, 06 Oct 2026 16:19:10"
+   "link": "https://www.cnbc.com/2026/10/07/trump-awarding-medals-to-musk-dell-nadella-at-science-summit.html",
+   "published": "Wed, 07 Oct 2026 21:32:55"
   },
   {
-   "title": "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
+   "title": "Higher yields are taking their toll on all areas of the stock market, except the one that matters",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-brother-in-law-convinced-his-parents-to-sign-over-their-home-and-savings-to-buy-a-3-million-compound-do-i-intervene-03fb96b7?mod=mw_rss_topstories",
-   "published": "Tue, 06 Oct 2026 21:15:00"
+   "link": "https://www.marketwatch.com/story/higher-yields-are-taking-their-toll-on-all-areas-of-the-stock-market-except-the-one-that-matters-69a90322?mod=mw_rss_topstories",
+   "published": "Wed, 07 Oct 2026 20:58:00"
   },
   {
-   "title": "Oct. 9 has loomed large in stock-market history. Why investors still shouldn\u2019t buy into an October jinx.",
+   "title": "Options traders are betting on a dramatic drop in interest rates",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/oct-9-has-loomed-large-in-stock-market-history-why-investors-still-shouldnt-buy-into-an-october-jinx-81d7149b?mod=mw_rss_topstories",
-   "published": "Tue, 06 Oct 2026 20:37:00"
+   "link": "https://www.marketwatch.com/story/options-traders-are-betting-on-a-dramatic-drop-in-interest-rates-141066fb?mod=mw_rss_topstories",
+   "published": "Wed, 07 Oct 2026 20:36:00"
   },
   {
-   "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies",
+   "title": "Fed\u2019s minutes show no appetite for a series of interest-rate hikes",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/google-makes-a-fresh-bet-on-nuclear-power-as-the-ai-energy-crunch-intensifies-a757c296?mod=mw_rss_topstories",
-   "published": "Tue, 06 Oct 2026 20:24:00"
+   "link": "https://www.marketwatch.com/story/fed-minutes-show-no-appetite-for-a-series-of-interest-rate-hikes-8b1c6436?mod=mw_rss_topstories",
+   "published": "Wed, 07 Oct 2026 19:35:00"
   },
   {
-   "title": "Marvell just impressed Wall Street with \u2018good numbers plus a better story\u2019",
+   "title": "Microsoft and Nvidia are teaming up on a supercharged AI laptop",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/marvell-just-impressed-wall-street-with-good-numbers-plus-a-better-story-57fbbf23?mod=mw_rss_topstories",
-   "published": "Tue, 06 Oct 2026 20:21:00"
+   "link": "https://www.marketwatch.com/story/microsoft-and-nvidia-are-teaming-up-on-a-supercharged-ai-laptop-f58b28d8?mod=mw_rss_topstories",
+   "published": "Wed, 07 Oct 2026 19:12:00"
   }
  ],
  "summary": null,
