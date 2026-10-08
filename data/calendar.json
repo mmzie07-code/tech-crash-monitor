@@ -1,34 +1,8 @@
 {
- "generated": "2026-10-07T21:52:31.590939Z",
- "today": "2026-10-07",
+ "generated": "2026-10-08T21:53:17.970514Z",
+ "today": "2026-10-08",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-07-fed-fomc-minutes-meeting-of-september-15-16",
-   "date": "2026-10-07",
-   "time": "2:00 PM",
-   "kind": "fed",
-   "title": "FOMC minutes (meeting of September 15-16)",
-   "importance": "high",
-   "why": "A detailed record of what Fed officials discussed at their last meeting, published three weeks later. Markets look for clues about future rate moves.",
-   "extra": {
-    "meeting": "Meeting of September 15-16"
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-  },
-  {
-   "id": "2026-10-07-data-g-19-consumer-credit",
-   "date": "2026-10-07",
-   "time": "3:00 PM",
-   "kind": "data",
-   "title": "G.19 - Consumer Credit",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-10-08-fed-fed-speaks-governor-christopher-j-waller",
    "date": "2026-10-08",
@@ -53,27 +27,11 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.29.",
    "extra": {
-    "market_cap_b": 172,
+    "market_cap_b": 169,
     "eps_forecast": "$2.29"
    },
    "source": "",
    "link": null
-  },
-  {
-   "id": "2026-10-08-treasury-treasury-auction-29-year-10-month-bond",
-   "date": "2026-10-08",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 29-Year 10-Month Bond",
-   "importance": "low",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $22B.",
-   "extra": {
-    "term": "29-Year 10-Month",
-    "type": "Bond",
-    "cusip": "912810UW6"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
   },
   {
    "id": "2026-10-08-data-weekly-jobless-claims",
@@ -111,7 +69,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.94.",
    "extra": {
-    "market_cap_b": 881,
+    "market_cap_b": 876,
     "eps_forecast": "$5.94"
    },
    "source": "",
@@ -124,13 +82,28 @@
    "kind": "earnings",
    "title": "Johnson & Johnson (JNJ) reports earnings",
    "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.90.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.82.",
    "extra": {
-    "market_cap_b": 614,
-    "eps_forecast": "$2.90"
+    "market_cap_b": 623,
+    "eps_forecast": "$2.82"
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-10-13-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-10-13",
+   "time": "3:45 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "importance": "medium",
+   "why": "Topic: AI. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Christopher J. Waller",
+    "location": "At the Bloomberg New Economy Forum 2026, New Delhi, India"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.youtube.com/@BloombergNewEconomy"
   },
   {
    "id": "2026-10-13-earnings-unitedhealth-group-incorporated-unh-reports-earn",
@@ -141,7 +114,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.12.",
    "extra": {
-    "market_cap_b": 338,
+    "market_cap_b": 337,
     "eps_forecast": "$4.12"
    },
    "source": "",
@@ -154,10 +127,10 @@
    "kind": "earnings",
    "title": "The Goldman Sachs Group (GS) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.35.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.90.",
    "extra": {
-    "market_cap_b": 261,
-    "eps_forecast": "$13.35"
+    "market_cap_b": 258,
+    "eps_forecast": "$12.90"
    },
    "source": "",
    "link": null
@@ -171,7 +144,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
    "extra": {
-    "market_cap_b": 246,
+    "market_cap_b": 243,
     "eps_forecast": "$1.85"
    },
    "source": "",
@@ -186,7 +159,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.66.",
    "extra": {
-    "market_cap_b": 216,
+    "market_cap_b": 214,
     "eps_forecast": "$2.66"
    },
    "source": "",
@@ -201,11 +174,26 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $12.47.",
    "extra": {
-    "market_cap_b": 707,
+    "market_cap_b": 696,
     "eps_forecast": "$12.47"
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-10-14-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-10-14",
+   "time": "10:55 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: To be announced.. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the Bangkok Economic Festival 2026"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.youtube.com/live/V7H5F2C5PNc"
   },
   {
    "id": "2026-10-14-fed-fed-beige-book",
@@ -228,7 +216,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.12.",
    "extra": {
-    "market_cap_b": 378,
+    "market_cap_b": 374,
     "eps_forecast": "$1.12"
    },
    "source": "",
@@ -243,7 +231,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.88.",
    "extra": {
-    "market_cap_b": 300,
+    "market_cap_b": 298,
     "eps_forecast": "$2.88"
    },
    "source": "",
@@ -258,7 +246,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $14.04.",
    "extra": {
-    "market_cap_b": 167,
+    "market_cap_b": 166,
     "eps_forecast": "$14.04"
    },
    "source": "",
@@ -273,7 +261,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.34.",
    "extra": {
-    "market_cap_b": 58,
+    "market_cap_b": 57,
     "eps_forecast": "$0.34"
    },
    "source": "",
@@ -288,11 +276,26 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.45.",
    "extra": {
-    "market_cap_b": 2501,
+    "market_cap_b": 2449,
     "eps_forecast": "$4.45"
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-10-15-fed-fed-speaks-chairman-kevin-warsh",
+   "date": "2026-10-15",
+   "time": "11:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Chairman Kevin Warsh",
+   "importance": "medium",
+   "why": "Topic: Conversation between IMF Managing Director Georgieva and Federal Reserve Chaiman Warsh. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Chairman Kevin Warsh",
+    "location": "At the Fireside Chat with International Monetary Fund (IMF) Managing Director Kristalina Georgieva, Bangkok, Thailand"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.youtube.com/watch?v=T20jWBJ66X0&list=PLGHsBhoupusk&index=31"
   },
   {
    "id": "2026-10-15-earnings-the-charles-schwab-schw-reports-earnings",
@@ -303,7 +306,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.66.",
    "extra": {
-    "market_cap_b": 167,
+    "market_cap_b": 165,
     "eps_forecast": "$1.66"
    },
    "source": "",
@@ -318,7 +321,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.58.",
    "extra": {
-    "market_cap_b": 122,
+    "market_cap_b": 121,
     "eps_forecast": "$1.58"
    },
    "source": "",
@@ -327,13 +330,13 @@
   {
    "id": "2026-10-15-earnings-the-bank-of-new-york-mellon-corporation-bny-repo",
    "date": "2026-10-15",
-   "time": "Time TBA",
+   "time": "Before open",
    "kind": "earnings",
    "title": "The Bank Of New York Mellon Corporation (BNY) reports earnings",
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.27.",
    "extra": {
-    "market_cap_b": 98,
+    "market_cap_b": 97,
     "eps_forecast": "$2.27"
    },
    "source": "",
@@ -346,10 +349,10 @@
    "kind": "earnings",
    "title": "U.S. Bancorp (USB) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.32.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.33.",
    "extra": {
-    "market_cap_b": 89,
-    "eps_forecast": "$1.32"
+    "market_cap_b": 88,
+    "eps_forecast": "$1.33"
    },
    "source": "",
    "link": null
@@ -361,10 +364,10 @@
    "kind": "earnings",
    "title": "PNC Financial Services Group, Inc. (The) (PNC) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.98.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.97.",
    "extra": {
-    "market_cap_b": 88,
-    "eps_forecast": "$4.98"
+    "market_cap_b": 87,
+    "eps_forecast": "$4.97"
    },
    "source": "",
    "link": null
@@ -378,7 +381,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.96.",
    "extra": {
-    "market_cap_b": 82,
+    "market_cap_b": 83,
     "eps_forecast": "$1.96"
    },
    "source": "",
@@ -405,7 +408,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.40.",
    "extra": {
-    "market_cap_b": 115,
+    "market_cap_b": 114,
     "eps_forecast": "$0.40"
    },
    "source": "",
@@ -433,10 +436,10 @@
    "kind": "earnings",
    "title": "The Travelers Companies (TRV) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.82.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.86.",
    "extra": {
     "market_cap_b": 75,
-    "eps_forecast": "$6.82"
+    "eps_forecast": "$6.86"
    },
    "source": "",
    "link": null
@@ -448,10 +451,10 @@
    "kind": "earnings",
    "title": "Truist Financial (TFC) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.12.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.17.",
    "extra": {
-    "market_cap_b": 57,
-    "eps_forecast": "$1.12"
+    "market_cap_b": 56,
+    "eps_forecast": "$1.17"
    },
    "source": "",
    "link": null
