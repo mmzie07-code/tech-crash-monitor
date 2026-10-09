@@ -1,42 +1,41 @@
 {
- "date": "2026-10-08",
- "generated": "2026-10-08T21:53:30.652107Z",
- "headline": "US stocks finished lower. The S&P 500 fell 0.47%, with 8 of 11 sectors up.",
+ "date": "2026-10-09",
+ "generated": "2026-10-09T21:51:55.088459Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.59%, with 9 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.47% today, +1.69% this month, +13.22% this year",
-    "Dow Jones: +0.10% today, -2.19% this month, +5.89% this year",
-    "Nasdaq Composite: -1.25% today, +3.58% this month, +17.03% this year",
-    "Russell 2000: +0.03% today, -4.35% this month, +11.40% this year"
+    "S&P 500: +0.59% today, +2.90% this month, +13.90% this year",
+    "Dow Jones: +0.83% today, -0.79% this month, +6.76% this year",
+    "Nasdaq Composite: +0.64% today, +4.92% this month, +17.78% this year",
+    "Russell 2000: +0.46% today, -2.90% this month, +11.91% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +2.97%, Consumer Staples +2.11%, Financials +0.89%",
-    "Lagging: Technology -1.79%, Health Care -0.39%, Utilities -0.19%",
-    "8 of 11 sectors rose."
+    "Leading: Real Estate +1.86%, Health Care +1.58%, Consumer Discretionary +1.02%",
+    "Lagging: Communication -1.51%, Energy -0.25%, Consumer Staples +0.01%",
+    "9 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.41 (+2.19% today)",
-    "10-year Treasury yield: 5.23% (-0.05 pts today)",
-    "US dollar index: 102.10 (-0.14% today)",
-    "Crude oil: 91.18 (+3.29% today)",
-    "Gold: 4,158.30 (+0.43% today)",
-    "Bitcoin: 81,573.84 (-2.04% today)"
+    "VIX (fear gauge): 14.84 (-3.70% today)",
+    "10-year Treasury yield: 5.24% (+0.01 pts today)",
+    "US dollar index: 102.23 (+0.09% today)",
+    "Crude oil: 91.66 (+0.19% today)",
+    "Gold: 4,220.30 (+1.52% today)",
+    "Bitcoin: 82,467.96 (+0.97% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +3.29% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved -0.05 points to 5.23%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "A 4.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Gold moved +1.52%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 3.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -51,14 +50,13 @@
   {
    "title": "Just happened",
    "bullets": [
-    "FOMC minutes: The Fed published the minutes of its last meeting.",
-    "Treasury auction: 3-Year Note: The Treasury sold 3-Year notes at a 4.932% yield with demand below average."
+    "FOMC minutes: The Fed published the minutes of its last meeting."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-07).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-08).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -66,52 +64,52 @@
  ],
  "headlines": [
   {
-   "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
+   "title": "Trump strikes deal with Putin to supply Russian diesel to U.S. and global markets",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
-   "published": "Thu, 08 Oct 2026 21:19:14"
+   "link": "https://www.cnbc.com/2026/10/09/trump-putin-russian-diesel-us-global-markets.html",
+   "published": "Fri, 09 Oct 2026 20:20:57"
   },
   {
-   "title": "SpaceX deal to acquire spectrum license hammers shares of AT&T, Verizon and T-Mobile",
+   "title": "Americans' debt problems are flashing a warning not seen since the Great Recession",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/08/spacex-spectrum-license-att-verizon-tmobile.html",
-   "published": "Thu, 08 Oct 2026 21:35:10"
+   "link": "https://www.cnbc.com/2026/10/09/american-debt-delinquency.html",
+   "published": "Fri, 09 Oct 2026 19:18:24"
   },
   {
-   "title": "Treasury yields are 'really, really high' but can come down soon, Bessent's new advisor says",
+   "title": "Trump Media advisor Katie Zacharia offered White House press secretary role",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/08/treasury-yields-david-zervos.html",
-   "published": "Thu, 08 Oct 2026 20:06:31"
+   "link": "https://www.cnbc.com/2026/10/09/katie-zacharia-white-house-press-secretary.html",
+   "published": "Fri, 09 Oct 2026 19:25:28"
   },
   {
-   "title": "Major League Baseball proposes shortening its regular season as it pushes for a salary cap",
+   "title": "Junk bonds are 'flashing yellow.' Watch these warning signs",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/08/major-league-baseball-proposes-shorter-season-amid-salary-cap-push.html",
-   "published": "Thu, 08 Oct 2026 20:16:21"
+   "link": "https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html",
+   "published": "Fri, 09 Oct 2026 20:51:25"
   },
   {
-   "title": "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
+   "title": "Is iPhone 18 demand cooling off? Here\u2019s how deep Apple reportedly is cutting component orders.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-brother-in-law-convinced-his-parents-to-sign-over-their-home-and-savings-to-buy-a-3-million-compound-do-i-intervene-03fb96b7?mod=mw_rss_topstories",
-   "published": "Thu, 08 Oct 2026 21:45:00"
+   "link": "https://www.marketwatch.com/story/is-iphone-18-demand-cooling-off-heres-how-deep-apple-reportedly-is-cutting-component-orders-a44244ee?mod=mw_rss_topstories",
+   "published": "Fri, 09 Oct 2026 21:30:00"
   },
   {
-   "title": "PepsiCo CEO\u2019s message to employees: If you\u2019re not producing growth, you\u2019re out",
+   "title": "AI chip stocks wobble even as investors get clarity on a key OpenAI issue",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/pepsico-ceos-message-to-employees-if-youre-not-producing-growth-youre-out-13af0335?mod=mw_rss_topstories",
-   "published": "Thu, 08 Oct 2026 21:43:00"
+   "link": "https://www.marketwatch.com/story/nvidia-and-micron-shares-bounce-as-investors-get-clarity-on-a-key-openai-matter-ba76ed20?mod=mw_rss_topstories",
+   "published": "Fri, 09 Oct 2026 21:27:00"
   },
   {
-   "title": "I\u2019m a 68-year-old widow and give money to my two adult children. Am I putting my retirement at risk?",
+   "title": "Microsoft is nearing a big milestone that solidifies its revival",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/im-a-68-year-old-widow-my-two-adult-children-keep-asking-me-for-money-are-they-taking-advantage-of-me-f725374e?mod=mw_rss_topstories",
-   "published": "Thu, 08 Oct 2026 21:15:00"
+   "link": "https://www.marketwatch.com/story/microsoft-is-nearing-a-big-milestone-that-solidifies-its-revival-580d1ba8?mod=mw_rss_topstories",
+   "published": "Fri, 09 Oct 2026 21:24:00"
   },
   {
-   "title": "Feel like a pumpkin-spice burrito? Analysts try to wrap their heads around a possible Starbucks-Chipotle tie-up.",
+   "title": "\u2018I feel like a loser\u2019: I check my ETFs every day. They\u2019re up one minute, down the next. Should I be worried?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/feel-like-a-pumpkin-spice-burrito-analysts-try-to-wrap-their-heads-around-a-possible-starbucks-chipotle-tie-up-5b8519fd?mod=mw_rss_topstories",
-   "published": "Thu, 08 Oct 2026 21:07:00"
+   "link": "https://www.marketwatch.com/story/i-feel-like-a-loser-my-etfs-go-up-one-day-and-crash-the-next-is-this-a-bad-sign-0c9848b2?mod=mw_rss_topstories",
+   "published": "Fri, 09 Oct 2026 21:15:00"
   }
  ],
  "summary": null,

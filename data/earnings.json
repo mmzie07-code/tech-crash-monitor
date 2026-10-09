@@ -1,7 +1,29 @@
 {
- "generated": "2026-10-08T21:52:25.269483Z",
+ "generated": "2026-10-09T21:51:07.920126Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-10-09",
+   "reported_total": 4,
+   "top": [
+    {
+     "symbol": "DAL",
+     "name": "Delta Air Lines",
+     "market_cap_b": 54.0,
+     "eps": null,
+     "eps_estimate": 1.8,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.80.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAL&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-10-08",
    "reported_total": 10,
@@ -9,14 +31,14 @@
     {
      "symbol": "PEP",
      "name": "Pepsico",
-     "market_cap_b": 168.9,
-     "eps": null,
+     "market_cap_b": 175.2,
+     "eps": 2.34,
      "eps_estimate": 2.29,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 2.18,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.29.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.34 versus $2.29 expected, so the company beat estimates by 2.2%.",
       "Stock moved +3.7% on Oct 8.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -26,14 +48,14 @@
     {
      "symbol": "NG",
      "name": "Novagold Resources",
-     "market_cap_b": 2.8,
-     "eps": null,
+     "market_cap_b": 2.7,
+     "eps": -0.08,
      "eps_estimate": -0.08,
      "surprise_pct": null,
-     "timing": "time-pre-market",
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.08.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $-0.08 versus $-0.08 expected, so the company matched estimates.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -42,14 +64,14 @@
     {
      "symbol": "NRIX",
      "name": "Nurix Therapeutics",
-     "market_cap_b": 2.4,
-     "eps": null,
+     "market_cap_b": 2.3,
+     "eps": -1.03,
      "eps_estimate": -0.56,
      "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.56.",
+      "Earnings per share were $-1.03 versus $-0.56 expected, so the company missed estimates.",
       "Covers the quarter ending Aug 2026."
      ],
      "ai_summary": null,
@@ -58,14 +80,14 @@
     {
      "symbol": "ODC",
      "name": "Oil-Dri Corporation Of America",
-     "market_cap_b": 1.3,
-     "eps": null,
+     "market_cap_b": 1.2,
+     "eps": 1.0,
      "eps_estimate": null,
      "surprise_pct": null,
-     "timing": "time-after-hours",
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.00 (no analyst consensus available).",
       "Covers the quarter ending Jul 2026."
      ],
      "ai_summary": null,
@@ -80,7 +102,7 @@
     {
      "symbol": "LEVI",
      "name": "Levi Strauss &",
-     "market_cap_b": 7.5,
+     "market_cap_b": 7.3,
      "eps": 0.48,
      "eps_estimate": 0.36,
      "surprise_pct": 33.33,
@@ -96,7 +118,7 @@
     {
      "symbol": "APLD",
      "name": "Applied Digital",
-     "market_cap_b": 7.1,
+     "market_cap_b": 7.2,
      "eps": -0.76,
      "eps_estimate": -0.26,
      "surprise_pct": -192.31,
@@ -113,12 +135,12 @@
   },
   {
    "date": "2026-10-06",
-   "reported_total": 11,
+   "reported_total": 10,
    "top": [
     {
      "symbol": "STZ",
      "name": "Constellation Brands",
-     "market_cap_b": 20.2,
+     "market_cap_b": 20.9,
      "eps": 3.74,
      "eps_estimate": 3.62,
      "surprise_pct": 3.31,
@@ -135,7 +157,7 @@
     {
      "symbol": "RPM",
      "name": "RPM International",
-     "market_cap_b": 12.5,
+     "market_cap_b": 12.7,
      "eps": 1.98,
      "eps_estimate": 1.95,
      "surprise_pct": 1.54,
@@ -151,7 +173,7 @@
     {
      "symbol": "LW",
      "name": "Lamb Weston Holdings",
-     "market_cap_b": 6.6,
+     "market_cap_b": 6.8,
      "eps": 0.75,
      "eps_estimate": 0.59,
      "surprise_pct": 27.12,
@@ -184,7 +206,7 @@
     {
      "symbol": "NEOG",
      "name": "Neogen",
-     "market_cap_b": 2.5,
+     "market_cap_b": 2.6,
      "eps": 0.07,
      "eps_estimate": 0.04,
      "surprise_pct": 75.0,
