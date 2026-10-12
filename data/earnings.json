@@ -1,22 +1,22 @@
 {
- "generated": "2026-10-09T21:51:07.920126Z",
+ "generated": "2026-10-12T21:51:49.740150Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-10-09",
-   "reported_total": 4,
+   "reported_total": 7,
    "top": [
     {
      "symbol": "DAL",
      "name": "Delta Air Lines",
      "market_cap_b": 54.0,
-     "eps": null,
+     "eps": 1.72,
      "eps_estimate": 1.8,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": -4.44,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.80.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.72 versus $1.80 expected, so the company missed estimates by 4.4%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,

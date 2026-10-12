@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-09T21:51:53.113649Z",
- "as_of": "2026-10-09",
- "regime": "S&P 500 above its 200-day average and the market is calm (VIX under 15)",
+ "generated": "2026-10-12T21:52:41.187189Z",
+ "as_of": "2026-10-12",
+ "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
   "today": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10323,
+    "n": 10324,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,42 +22,35 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2850,
-    "up": 55,
+    "n": 2560,
+    "up": 53,
     "median": 0.0,
-    "p10": -0.7,
-    "p25": -0.3,
-    "p75": 0.4,
-    "p90": 0.7,
-    "below": 4,
-    "above": 3,
-    "worst": -3.7,
-    "best": 1.9
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
    },
    "bull": [
     "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 14.8: investors are relatively calm.",
+    "VIX at 15.2: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.30 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
    ],
-   "events": [
-    {
-     "date": "2026-10-09",
-     "time": "Before open",
-     "title": "Delta Air Lines (DAL) reports earnings",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10323,
+    "n": 10324,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -70,35 +63,78 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2850,
-    "up": 55,
+    "n": 2560,
+    "up": 53,
     "median": 0.0,
-    "p10": -0.7,
-    "p25": -0.3,
-    "p75": 0.4,
-    "p90": 0.7,
-    "below": 4,
-    "above": 3,
-    "worst": -3.7,
-    "best": 1.9
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
    },
    "bull": [
     "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 14.8: investors are relatively calm.",
+    "VIX at 15.2: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.30 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
    ],
-   "events": []
+   "events": [
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "J P Morgan Chase & Co (JPM) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "Johnson & Johnson (JNJ) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "3:45 AM",
+     "title": "Fed speaks: Governor Christopher J. Waller",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "UnitedHealth Group Incorporated (UNH) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "The Goldman Sachs Group (GS) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "Wells Fargo & Company (WFC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-13",
+     "time": "Before open",
+     "title": "Citigroup (C) reports earnings",
+     "importance": "medium"
+    }
+   ]
   },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10319,
+    "n": 10320,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -111,35 +147,29 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2850,
+    "n": 2557,
     "up": 58,
-    "median": 0.2,
-    "p10": -1.6,
-    "p25": -0.6,
-    "p75": 1.0,
-    "p90": 1.6,
-    "below": 4,
-    "above": 2,
-    "worst": -10.9,
-    "best": 3.5
+    "median": 0.3,
+    "p10": -2.2,
+    "p25": -0.9,
+    "p75": 1.4,
+    "p90": 2.2,
+    "below": 7,
+    "above": 7,
+    "worst": -11.7,
+    "best": 7.3
    },
    "bull": [
     "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 14.8: investors are relatively calm.",
+    "VIX at 15.2: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.30 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-10-09",
-     "time": "Before open",
-     "title": "Delta Air Lines (DAL) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-10-13",
      "time": "Before open",
@@ -205,6 +235,12 @@
      "time": "Before open",
      "title": "Bank of America (BAC) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "Morgan Stanley (MS) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -213,7 +249,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10303,
+    "n": 10304,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -226,25 +262,25 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2846,
-    "up": 65,
-    "median": 1.0,
-    "p10": -2.8,
-    "p25": -0.8,
-    "p75": 2.4,
-    "p90": 3.6,
-    "below": 3,
-    "above": 2,
-    "worst": -29.3,
-    "best": 10.1
+    "n": 2545,
+    "up": 64,
+    "median": 1.1,
+    "p10": -4.1,
+    "p25": -1.3,
+    "p75": 3.2,
+    "p90": 4.6,
+    "below": 7,
+    "above": 8,
+    "worst": -33.0,
+    "best": 13.6
    },
    "bull": [
     "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 14.8: investors are relatively calm.",
+    "VIX at 15.2: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.30 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -274,6 +310,12 @@
      "importance": "high"
     },
     {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "Tesla, Inc. (TSLA) reports earnings",
+     "importance": "high"
+    },
+    {
      "date": "2026-10-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
@@ -298,9 +340,9 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10072,
+    "n": 10073,
     "up": 80,
-    "median": 12.0,
+    "median": 12.1,
     "p10": -11.8,
     "p25": 2.8,
     "p75": 20.4,
@@ -311,26 +353,26 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2823,
-    "up": 87,
-    "median": 11.0,
-    "p10": -1.2,
-    "p25": 4.0,
-    "p75": 16.6,
-    "p90": 23.6,
-    "below": 0,
-    "above": 31,
-    "worst": -19.3,
-    "best": 41.2
+    "n": 2387,
+    "up": 85,
+    "median": 10.6,
+    "p10": -7.5,
+    "p25": 4.3,
+    "p75": 19.4,
+    "p90": 27.0,
+    "below": 6,
+    "above": 37,
+    "worst": -44.7,
+    "best": 50.4
    },
    "bull": [
     "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 14.8: investors are relatively calm.",
+    "VIX at 15.2: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 28.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 30.4, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.30 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -361,6 +403,12 @@
     },
     {
      "date": "2027-03-17",
+     "time": "2:00 PM",
+     "title": "Fed interest-rate decision (FOMC)",
+     "importance": "high"
+    },
+    {
+     "date": "2027-04-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
      "importance": "high"
