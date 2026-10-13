@@ -1,40 +1,40 @@
 {
- "date": "2026-10-12",
- "generated": "2026-10-12T21:52:43.041811Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.06%, with 8 of 11 sectors up.",
+ "date": "2026-10-13",
+ "generated": "2026-10-13T22:04:52.794733Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.02%, with 5 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.06% today, +1.96% this month, +13.83% this year",
-    "Dow Jones: +0.38% today, -1.37% this month, +7.17% this year",
-    "Nasdaq Composite: -0.44% today, +3.47% this month, +17.26% this year",
-    "Russell 2000: -0.45% today, -3.77% this month, +11.41% this year"
+    "S&P 500: -0.02% today, +2.43% this month, +13.81% this year",
+    "Dow Jones: -0.35% today, -1.43% this month, +6.80% this year",
+    "Nasdaq Composite: -0.15% today, +3.89% this month, +17.08% this year",
+    "Russell 2000: -0.40% today, -3.76% this month, +10.97% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +1.43%, Consumer Staples +1.17%, Communication +0.97%",
-    "Lagging: Technology -1.22%, Consumer Discretionary -0.51%, Industrials -0.06%",
-    "8 of 11 sectors rose."
+    "Leading: Energy +1.80%, Communication +0.74%, Utilities +0.58%",
+    "Lagging: Health Care -1.35%, Financials -0.42%, Industrials -0.28%",
+    "5 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.21 (+2.49% today)",
-    "10-year Treasury yield: 5.24% (-0.00 pts today)",
-    "US dollar index: 102.58 (+0.36% today)",
-    "Crude oil: 93.16 (+1.43% today)",
-    "Gold: 4,195.90 (-0.48% today)",
-    "Bitcoin: 82,360.00 (-1.58% today)"
+    "VIX (fear gauge): 15.27 (+0.39% today)",
+    "10-year Treasury yield: 5.22% (-0.02 pts today)",
+    "US dollar index: 102.21 (-0.36% today)",
+    "Crude oil: 94.79 (+1.12% today)",
+    "Gold: 4,184.20 (-0.15% today)",
+    "Bitcoin: 83,423.11 (+2.03% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 2.6-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 3.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -49,7 +49,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-09).",
+    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-12).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -57,52 +57,52 @@
  ],
  "headlines": [
   {
-   "title": "Trump defends Russia diesel deal after bipartisan pushback: 'I made the right choice'",
+   "title": "More Republicans come out against Trump's diesel deal with Putin",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/12/trump-russia-diesel-putin.html",
-   "published": "Mon, 12 Oct 2026 18:32:03"
+   "link": "https://www.cnbc.com/2026/10/13/trump-russia-diesel-republicans.html",
+   "published": "Tue, 13 Oct 2026 18:19:42"
   },
   {
-   "title": "Elon Musk gives $276 million to Republican groups, becomes biggest known 2026 midterm donor",
+   "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/12/elon-musk-republican-donations-2026-midterm-election.html",
-   "published": "Mon, 12 Oct 2026 21:17:58"
+   "link": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
+   "published": "Tue, 13 Oct 2026 21:44:46"
   },
   {
-   "title": "Rep. Ilhan Omar blasts federal criminal raid on home: 'I will not be silenced'",
+   "title": "Bank of America fined $1.2 billion over money-laundering violations",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/12/ilhan-omar-home-raided-dhs-immigration-investigation.html",
-   "published": "Mon, 12 Oct 2026 18:29:28"
+   "link": "https://www.cnbc.com/2026/10/13/bank-of-america-treasury-money-laundering.html",
+   "published": "Tue, 13 Oct 2026 20:45:01"
   },
   {
-   "title": "Trump 'not happy' with Kimberly Guilfoyle, weighs firing her as ambassador to Greece",
+   "title": "The latest inflation data is expected to show price increases are accelerating",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/12/trump-kimberly-guilfoyle-ambassador.html",
-   "published": "Mon, 12 Oct 2026 21:51:05"
+   "link": "https://www.cnbc.com/2026/10/13/september-consumer-price-index-inflation.html",
+   "published": "Tue, 13 Oct 2026 18:05:57"
   },
   {
-   "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors",
+   "title": "Chip stocks suffer worst stretch in 16 months as AI fatigue grips the market",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nvidia-and-amd-shares-fall-as-new-ai-announcements-fail-to-re-energize-investors-4a0dd766?mod=mw_rss_topstories",
-   "published": "Mon, 12 Oct 2026 21:19:00"
+   "link": "https://www.marketwatch.com/story/ai-fatigue-is-gripping-the-market-and-driving-chip-stocks-toward-their-worst-stretch-in-16-months-6dc78ece?mod=mw_rss_topstories",
+   "published": "Tue, 13 Oct 2026 21:02:00"
   },
   {
-   "title": "\u2018The house is worth $925,000\u2019: My sister moved in with our mother, 78, and says she deserves the family home. Is she right?",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-sister-moved-in-with-our-widowed-mother-78-and-says-she-deserves-the-family-home-is-she-right-7981835d?mod=mw_rss_topstories",
-   "published": "Mon, 12 Oct 2026 21:16:00"
-  },
-  {
-   "title": "Why Ciena, Lumentum and other optical stocks were among the market\u2019s biggest losers on Monday",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/why-ciena-lumentum-and-other-optical-stocks-were-among-the-markets-biggest-losers-on-monday-b3e53f6a?mod=mw_rss_topstories",
-   "published": "Mon, 12 Oct 2026 20:46:00"
-  },
-  {
-   "title": "\u2018The prospectus looks impressive\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
+   "title": "\u2018I am a pretty cautious person\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/the-prospectus-looks-impressive-my-financial-adviser-wants-me-to-invest-350-000-in-a-uae-data-center-is-this-risky-d5d3747c?mod=mw_rss_topstories",
-   "published": "Mon, 12 Oct 2026 20:45:00"
+   "published": "Tue, 13 Oct 2026 21:01:00"
+  },
+  {
+   "title": "The SpaceX threat could loom over AT&T\u2019s stock for a prolonged stretch, analyst cautions",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/the-spacex-threat-could-loom-over-at-ts-stock-for-a-prolonged-stretch-analyst-cautions-71436853?mod=mw_rss_topstories",
+   "published": "Tue, 13 Oct 2026 20:42:00"
+  },
+  {
+   "title": "Six Flags\u2019 stock slumps near 17-year low after fatal incident",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/six-flags-stock-slumps-near-52-week-lows-after-fatal-accident-3f938112?mod=mw_rss_topstories",
+   "published": "Tue, 13 Oct 2026 20:41:00"
   }
  ],
  "summary": null,

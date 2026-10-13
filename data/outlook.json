@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-12T21:52:41.187189Z",
- "as_of": "2026-10-12",
+ "generated": "2026-10-13T22:04:49.998614Z",
+ "as_of": "2026-10-13",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10324,
+    "n": 10325,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,7 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2560,
+    "n": 2561,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -35,53 +35,12 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 15.2: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.2% below it).",
+    "VIX at 15.3: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
-    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
-   ],
-   "events": []
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10324,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 2560,
-    "up": 53,
-    "median": 0.0,
-    "p10": -1.0,
-    "p25": -0.4,
-    "p75": 0.5,
-    "p90": 1.0,
-    "below": 10,
-    "above": 11,
-    "worst": -4.1,
-    "best": 2.9
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 15.2: investors are relatively calm.",
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.22% and rose 0.26 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
    ],
    "events": [
@@ -129,12 +88,102 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10325,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 2561,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (0.2% below it).",
+    "VIX at 15.3: investors are relatively calm.",
+    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
+   ],
+   "bear": [
+    "10-year yield is 5.22% and rose 0.26 points in a month; rising rates pressure expensive stocks.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk."
+   ],
+   "events": [
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "ASML Holding N.V. (ASML) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "10:55 PM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "2:00 PM",
+     "title": "Fed Beige Book",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "Bank of America (BAC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "Morgan Stanley (MS) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "BlackRock (BLK) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "Progressive Corporation (The) (PGR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-14",
+     "time": "Before open",
+     "title": "Fastenal Company (FAST) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10320,
+    "n": 10321,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -147,12 +196,12 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2557,
+    "n": 2558,
     "up": 58,
     "median": 0.3,
     "p10": -2.2,
     "p25": -0.9,
-    "p75": 1.4,
+    "p75": 1.3,
     "p90": 2.2,
     "below": 7,
     "above": 7,
@@ -160,12 +209,12 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 15.2: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.2% below it).",
+    "VIX at 15.3: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.22% and rose 0.26 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -249,7 +298,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10304,
+    "n": 10305,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -262,7 +311,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2545,
+    "n": 2546,
     "up": 64,
     "median": 1.1,
     "p10": -4.1,
@@ -275,12 +324,12 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 15.2: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.2% below it).",
+    "VIX at 15.3: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.22% and rose 0.26 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
@@ -340,7 +389,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10073,
+    "n": 10074,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -366,13 +415,13 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.1% below it).",
-    "VIX at 15.2: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (0.2% below it).",
+    "VIX at 15.3: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 30.4, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 28.5, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is 5.24% and rose 0.27 points in a month; rising rates pressure expensive stocks.",
+    "10-year yield is 5.22% and rose 0.26 points in a month; rising rates pressure expensive stocks.",
     "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); score 25, Elevated risk.",
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],

@@ -1,7 +1,67 @@
 {
- "generated": "2026-10-12T21:52:41.243229Z",
+ "generated": "2026-10-13T22:04:50.044434Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-13-earnings-j-p-morgan-chase-co-jpm-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "J P Morgan Chase & Co (JPM) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-13-earnings-johnson-johnson-jnj-reports-earnings",
+   "date": "2026-10-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Johnson & Johnson (JNJ) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-13-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-10-13",
+   "time": "3:45 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/@BloombergNewEconomy",
+   "lesson": 3
+  },
   {
    "id": "2026-10-08-fed-fed-speaks-governor-christopher-j-waller",
    "date": "2026-10-08",
