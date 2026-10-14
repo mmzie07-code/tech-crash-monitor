@@ -1,108 +1,118 @@
 {
- "date": "2026-10-13",
- "generated": "2026-10-13T22:04:52.794733Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.02%, with 5 of 11 sectors up.",
+ "date": "2026-10-14",
+ "generated": "2026-10-14T22:05:28.139970Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 1.11%, with 3 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.02% today, +2.43% this month, +13.81% this year",
-    "Dow Jones: -0.35% today, -1.43% this month, +6.80% this year",
-    "Nasdaq Composite: -0.15% today, +3.89% this month, +17.08% this year",
-    "Russell 2000: -0.40% today, -3.76% this month, +10.97% this year"
+    "S&P 500: -1.11% today, +1.76% this month, +12.55% this year",
+    "Dow Jones: -0.09% today, -0.91% this month, +6.69% this year",
+    "Nasdaq Composite: -1.88% today, +2.74% this month, +14.88% this year",
+    "Russell 2000: -1.93% today, -4.90% this month, +8.82% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +1.80%, Communication +0.74%, Utilities +0.58%",
-    "Lagging: Health Care -1.35%, Financials -0.42%, Industrials -0.28%",
-    "5 of 11 sectors rose."
+    "Leading: Health Care +2.53%, Consumer Staples +2.22%, Energy +0.64%",
+    "Lagging: Technology -2.98%, Communication -1.30%, Industrials -0.97%",
+    "3 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 15.27 (+0.39% today)",
-    "10-year Treasury yield: 5.22% (-0.02 pts today)",
-    "US dollar index: 102.21 (-0.36% today)",
-    "Crude oil: 94.79 (+1.12% today)",
-    "Gold: 4,184.20 (-0.15% today)",
-    "Bitcoin: 83,423.11 (+2.03% today)"
+    "VIX (fear gauge): 16.87 (+10.48% today)",
+    "10-year Treasury yield: 5.19% (-0.03 pts today)",
+    "US dollar index: 102.55 (+0.37% today)",
+    "Crude oil: 95.17 (+1.09% today)",
+    "Gold: 4,127.30 (-1.20% today)",
+    "Bitcoin: 81,672.30 (-1.71% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 3.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX (expected volatility) jumped +10.48% to 16.9. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "Gold moved -1.20%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 5.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Tue Oct 13, Before open: J P Morgan Chase & Co (JPM) reports earnings",
-    "Tue Oct 13, Before open: Johnson & Johnson (JNJ) reports earnings",
     "Wed Oct 14, Before open: ASML Holding N.V. (ASML) reports earnings",
-    "Thu Oct 15, Before open: Taiwan Semiconductor Manufacturing Company (TSM) reports earnings"
+    "Thu Oct 15, Before open: Taiwan Semiconductor Manufacturing Company (TSM) reports earnings",
+    "Wed Oct 21, After close: Tesla, Inc. (TSLA) reports earnings",
+    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)"
+   ]
+  },
+  {
+   "title": "Just happened",
+   "bullets": [
+    "Fed Beige Book: The Fed published its Beige Book on regional business conditions.",
+    "J P Morgan Chase & Co: J P Morgan Chase & Co reported earnings: missed estimates.",
+    "Johnson & Johnson: Johnson & Johnson reported earnings: beat estimates."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 25, Elevated risk (unchanged from 25 on 2026-10-12).",
-    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling.",
+    "Crash-risk score 50, High risk (+25 from 25 on 2026-10-13).",
+    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "More Republicans come out against Trump's diesel deal with Putin",
+   "title": "Container ship sinks in Strait of Hormuz as Iran steps up attacks",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/13/trump-russia-diesel-republicans.html",
-   "published": "Tue, 13 Oct 2026 18:19:42"
+   "link": "https://www.cnbc.com/2026/10/14/container-ship-sinks-strait-hormuz-as-iran-war-attacks.html",
+   "published": "Wed, 14 Oct 2026 19:22:00"
   },
   {
-   "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
+   "title": "OpenAI bugging suspect booked one-way ticket to Saudi Arabia with family before arrest",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html",
-   "published": "Tue, 13 Oct 2026 21:44:46"
+   "link": "https://www.cnbc.com/2026/10/14/openai-alfozan-recording-raed-ventures.html",
+   "published": "Wed, 14 Oct 2026 21:18:13"
   },
   {
-   "title": "Bank of America fined $1.2 billion over money-laundering violations",
+   "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/13/bank-of-america-treasury-money-laundering.html",
-   "published": "Tue, 13 Oct 2026 20:45:01"
+   "link": "https://www.cnbc.com/2026/10/14/dell-stock-barclays-enterprise-ai.html",
+   "published": "Wed, 14 Oct 2026 20:19:25"
   },
   {
-   "title": "The latest inflation data is expected to show price increases are accelerating",
+   "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/13/september-consumer-price-index-inflation.html",
-   "published": "Tue, 13 Oct 2026 18:05:57"
+   "link": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
+   "published": "Wed, 14 Oct 2026 21:09:20"
   },
   {
-   "title": "Chip stocks suffer worst stretch in 16 months as AI fatigue grips the market",
+   "title": "CoreWeave\u2019s AI bonds tumble, raising red flags for the wider market",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/ai-fatigue-is-gripping-the-market-and-driving-chip-stocks-toward-their-worst-stretch-in-16-months-6dc78ece?mod=mw_rss_topstories",
-   "published": "Tue, 13 Oct 2026 21:02:00"
+   "link": "https://www.marketwatch.com/story/coreweave-sparks-worry-about-broader-credit-market-stress-as-its-bonds-tumble-887458e4?mod=mw_rss_topstories",
+   "published": "Wed, 14 Oct 2026 22:03:00"
   },
   {
-   "title": "\u2018I am a pretty cautious person\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
+   "title": "From a record high to a 10% drop in just two months: Why small-cap stocks have unraveled so fast",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-prospectus-looks-impressive-my-financial-adviser-wants-me-to-invest-350-000-in-a-uae-data-center-is-this-risky-d5d3747c?mod=mw_rss_topstories",
-   "published": "Tue, 13 Oct 2026 21:01:00"
+   "link": "https://www.marketwatch.com/story/from-a-record-high-to-a-10-drop-in-just-two-months-why-small-cap-stocks-have-unraveled-so-fast-1cf0f4d5?mod=mw_rss_topstories",
+   "published": "Wed, 14 Oct 2026 21:54:00"
   },
   {
-   "title": "The SpaceX threat could loom over AT&T\u2019s stock for a prolonged stretch, analyst cautions",
+   "title": "Bank of America adds a profit miss to the misery of a $1.2 billion government fine",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-spacex-threat-could-loom-over-at-ts-stock-for-a-prolonged-stretch-analyst-cautions-71436853?mod=mw_rss_topstories",
-   "published": "Tue, 13 Oct 2026 20:42:00"
+   "link": "https://www.marketwatch.com/story/bank-of-america-adds-a-profit-miss-to-the-misery-of-a-1-2-billion-government-fine-d4420bfa?mod=mw_rss_topstories",
+   "published": "Wed, 14 Oct 2026 21:40:00"
   },
   {
-   "title": "Six Flags\u2019 stock slumps near 17-year low after fatal incident",
+   "title": "The COLA wars are coming for Social Security",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/six-flags-stock-slumps-near-52-week-lows-after-fatal-accident-3f938112?mod=mw_rss_topstories",
-   "published": "Tue, 13 Oct 2026 20:41:00"
+   "link": "https://www.marketwatch.com/story/the-cola-wars-are-coming-for-social-security-10c177f1?mod=mw_rss_topstories",
+   "published": "Wed, 14 Oct 2026 21:19:00"
   }
  ],
  "summary": null,
