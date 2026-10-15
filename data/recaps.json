@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-14T22:05:25.703520Z",
+ "generated": "2026-10-15T22:04:12.898041Z",
  "ai_analysis_enabled": false,
  "recaps": [
   {
-   "id": "2026-10-14-earnings-asml-holding-n-v-asml-reports-earnings",
-   "date": "2026-10-14",
+   "id": "2026-10-15-earnings-taiwan-semiconductor-manufacturing-company-tsm-r",
+   "date": "2026-10-15",
    "time": "Before open",
    "kind": "earnings",
-   "title": "ASML Holding N.V. (ASML) reports earnings",
+   "title": "Taiwan Semiconductor Manufacturing Company (TSM) reports earnings",
    "status": "pending",
    "headline": "Recap coming soon.",
    "bullets": [
@@ -21,6 +21,129 @@
    "ai_analysis": null,
    "link": null,
    "lesson": 3
+  },
+  {
+   "id": "2026-10-15-fed-fed-speaks-chairman-kevin-warsh",
+   "date": "2026-10-15",
+   "time": "11:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Chairman Kevin Warsh",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/watch?v=T20jWBJ66X0&list=PLGHsBhoupusk&index=31",
+   "lesson": 3
+  },
+  {
+   "headline": "ASML Holding N.V. reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $14.89 versus $12.47 expected, so the company beat estimates by 19.4%.",
+    "Stock moved -3.9% on Oct 14.",
+    "Covers the quarter ending Sep 2026.",
+    "Stock moved +0.45% on the next trading day."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ASML&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "ASML",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -1.11,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -1.88,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.09,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -1.93,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.36,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 10.48,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -1.66,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 1.01,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -1.84,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Health Care",
+     "move": 2.56
+    },
+    "worst": {
+     "name": "Information Technology",
+     "move": -2.75
+    }
+   },
+   "id": "2026-10-14-earnings-asml-holding-n-v-asml-reports-earnings",
+   "date": "2026-10-14",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "ASML Holding N.V. (ASML) reports earnings",
+   "status": "final",
+   "ai_analysis": null,
+   "link": null,
+   "generated": "2026-10-15T22:04:15.638009Z"
   },
   {
    "headline": "The Fed published its Beige Book on regional business conditions.",
