@@ -1,120 +1,117 @@
 {
- "date": "2026-10-15",
- "generated": "2026-10-15T22:04:15.914239Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.33%, with 8 of 11 sectors up.",
+ "date": "2026-10-16",
+ "generated": "2026-10-16T22:02:57.340317Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 1.09%, with 6 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.33% today, +2.55% this month, +12.91% this year",
-    "Dow Jones: +1.08% today, +1.39% this month, +7.84% this year",
-    "Nasdaq Composite: +0.08% today, +2.83% this month, +14.97% this year",
-    "Russell 2000: +1.38% today, -3.20% this month, +10.33% this year"
+    "S&P 500: -1.09% today, +0.28% this month, +11.68% this year",
+    "Dow Jones: -0.34% today, +0.43% this month, +7.48% this year",
+    "Nasdaq Composite: -2.15% today, -1.05% this month, +12.50% this year",
+    "Russell 2000: -1.66% today, -5.33% this month, +8.50% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Health Care +1.86%, Materials +1.79%, Consumer Discretionary +1.71%",
-    "Lagging: Energy -1.58%, Technology -0.65%, Utilities -0.17%",
-    "8 of 11 sectors rose."
+    "Leading: Energy +2.52%, Utilities +1.34%, Consumer Staples +1.08%",
+    "Lagging: Technology -3.02%, Communication -1.89%, Consumer Discretionary -0.84%",
+    "6 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.46 (-2.43% today)",
-    "10-year Treasury yield: 5.09% (-0.10 pts today)",
-    "US dollar index: 102.00 (-0.53% today)",
-    "Crude oil: 96.12 (+1.08% today)",
-    "Gold: 4,192.50 (+2.06% today)",
-    "Bitcoin: 82,344.36 (+0.96% today)"
+    "VIX (fear gauge): 19.99 (+21.45% today)",
+    "10-year Treasury yield: 5.10% (+0.01 pts today)",
+    "US dollar index: 101.78 (-0.22% today)",
+    "Crude oil: 99.04 (+1.09% today)",
+    "Gold: 4,186.70 (+0.40% today)",
+    "Bitcoin: 81,578.10 (-0.69% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The 10-year yield moved -0.10 points to 5.09%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The US dollar moved -0.53%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "Gold moved +2.06%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 3.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX (expected volatility) jumped +21.45% to 20.0. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "A 5.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Thu Oct 15, Before open: Taiwan Semiconductor Manufacturing Company (TSM) reports earnings",
     "Wed Oct 21, After close: Meta Platforms (META) reports earnings",
     "Wed Oct 21, After close: Tesla, Inc. (TSLA) reports earnings",
-    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)"
+    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
+    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth"
    ]
   },
   {
    "title": "Just happened",
    "bullets": [
+    "Taiwan Semiconductor Manufacturing Company: Taiwan Semiconductor Manufacturing Company reported earnings: beat estimates.",
     "ASML Holding N.V.: ASML Holding N.V. reported earnings: beat estimates.",
-    "Fed Beige Book: The Fed published its Beige Book on regional business conditions.",
-    "J P Morgan Chase & Co: J P Morgan Chase & Co reported earnings: missed estimates.",
-    "Johnson & Johnson: Johnson & Johnson reported earnings: beat estimates."
+    "Fed Beige Book: The Fed published its Beige Book on regional business conditions."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 50, High risk (unchanged from 50 on 2026-10-14).",
-    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Crash-risk score 75, Severe risk (+25 from 50 on 2026-10-15).",
+    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "CoreWeave credit default swaps hit distress levels as investors sour on AI debt",
+   "title": "Brent oil touches $110 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html",
-   "published": "Thu, 15 Oct 2026 21:33:24"
+   "link": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html",
+   "published": "Fri, 16 Oct 2026 20:02:21"
   },
   {
-   "title": "Trump says 'if Ken Paxton loses' Texas Senate race, blame Cornyn and Karl Rove",
+   "title": "Katie Zacharia out as Trump's White House press secretary",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/15/trump-paxton-texas-talarico.html",
-   "published": "Thu, 15 Oct 2026 21:42:14"
+   "link": "https://www.cnbc.com/2026/10/16/trump-katie-zacharia-white-house.html",
+   "published": "Fri, 16 Oct 2026 21:26:15"
   },
   {
-   "title": "Porsche reveals Mission S concept car that previews new design identity",
+   "title": "Apple\u2019s $1,999 iPhone Duo puts the company's status-symbol power to the test",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/15/porsche-mission-s-concept-car.html",
-   "published": "Thu, 15 Oct 2026 20:30:01"
+   "link": "https://www.cnbc.com/2026/10/16/apple-iphone-duo-demand-price.html",
+   "published": "Fri, 16 Oct 2026 18:55:17"
   },
   {
-   "title": "KFC to switch to Coca-Cola beverages in U.S. restaurants for the first time in decades",
+   "title": "Wall Street's fear gauge is ripping. Traders see it going even higher",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/15/kfc-coca-cola-pepsi-switch.html",
-   "published": "Thu, 15 Oct 2026 21:03:50"
+   "link": "https://www.cnbc.com/2026/10/16/wall-streets-fear-gauge-is-ripping-traders-see-it-going-even-higher.html",
+   "published": "Fri, 16 Oct 2026 19:28:10"
   },
   {
-   "title": "How a midterm sweep by Democrats could turn this tech selloff into a tech crash",
+   "title": "Nowhere to hide: Tech selloff hits software and chip stocks alike",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/how-a-midterm-sweep-by-democrats-could-turn-this-tech-selloff-into-a-tech-crash-a1d1a82f?mod=mw_rss_topstories",
-   "published": "Thu, 15 Oct 2026 21:56:00"
+   "link": "https://www.marketwatch.com/story/nowhere-to-hide-tech-selloff-hits-software-and-chip-stocks-alike-6d96773c?mod=mw_rss_topstories",
+   "published": "Fri, 16 Oct 2026 21:59:00"
   },
   {
-   "title": "Nvidia and other chip stocks face renewed pressure as AI fears swell",
+   "title": "This Senate race where data centers are a crucial issue has more spending than any other midterm clash",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/micron-nvidia-and-other-chip-stocks-face-renewed-pressure-as-ai-fears-swell-4e0dc989?mod=mw_rss_topstories",
-   "published": "Thu, 15 Oct 2026 21:23:00"
+   "link": "https://www.marketwatch.com/story/this-senate-race-where-data-centers-are-a-crucial-issue-has-more-spending-than-any-other-midterm-clash-5152b43d?mod=mw_rss_topstories",
+   "published": "Fri, 16 Oct 2026 21:43:00"
   },
   {
-   "title": "Don\u2019t ditch tech stocks just yet. Make these moves to take advantage of the latest AI reset.",
+   "title": "Could an Anthropic IPO put your 401(k) at risk? The AI safety debate hits a new dimension.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/dont-ditch-tech-stocks-just-yet-make-these-moves-to-take-advantage-of-the-latest-ai-reset-cb70c7b2?mod=mw_rss_topstories",
-   "published": "Thu, 15 Oct 2026 21:21:00"
+   "link": "https://www.marketwatch.com/story/could-an-anthropic-ipo-put-your-401-k-at-risk-the-ai-safety-debate-hits-a-new-dimension-db3f09f7?mod=mw_rss_topstories",
+   "published": "Fri, 16 Oct 2026 21:35:00"
   },
   {
-   "title": "CoreWeave\u2019s polarizing stock rebounds as Wall Street squares off about AI spending",
+   "title": "The bond market shrugged off two inflation shocks. Why stock investors should pay attention.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/coreweave-investors-are-feeling-spooked-as-the-companys-stock-and-bonds-see-fresh-pressure-ba39a931?mod=mw_rss_topstories",
-   "published": "Thu, 15 Oct 2026 21:03:00"
+   "link": "https://www.marketwatch.com/story/the-bond-market-shrugged-off-two-inflation-shocks-why-stock-investors-should-pay-attention-5da4f771?mod=mw_rss_topstories",
+   "published": "Fri, 16 Oct 2026 21:30:00"
   }
  ],
  "summary": null,

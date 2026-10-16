@@ -1,22 +1,191 @@
 {
- "generated": "2026-10-15T22:03:17.821657Z",
+ "generated": "2026-10-16T22:02:06.761343Z",
  "ai_summaries": false,
  "days": [
   {
-   "date": "2026-10-15",
-   "reported_total": 27,
+   "date": "2026-10-16",
+   "reported_total": 16,
    "top": [
     {
-     "symbol": "TSM",
-     "name": "Taiwan Semiconductor Manufacturing Company",
-     "market_cap_b": 2230.2,
+     "symbol": "HDB",
+     "name": "HDFC Bank Limited",
+     "market_cap_b": 120.7,
      "eps": null,
-     "eps_estimate": 4.45,
+     "eps_estimate": 0.4,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.40.",
+      "Stock moved +1.3% on Oct 16.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HDB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "IBN",
+     "name": "ICICI Bank Limited",
+     "market_cap_b": 105.4,
+     "eps": null,
+     "eps_estimate": 0.4,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.40.",
+      "Stock moved +1.9% on Oct 16.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IBN&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TRV",
+     "name": "The Travelers Companies",
+     "market_cap_b": 80.1,
+     "eps": null,
+     "eps_estimate": 7.07,
      "surprise_pct": null,
      "timing": "time-pre-market",
      "bullets": [
       "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $4.45.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $7.07.",
+      "Stock moved +1.5% on Oct 16.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TRV&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TFC",
+     "name": "Truist Financial",
+     "market_cap_b": 56.9,
+     "eps": null,
+     "eps_estimate": 1.17,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.17.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TFC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MTB",
+     "name": "M&T Bank",
+     "market_cap_b": 31.6,
+     "eps": null,
+     "eps_estimate": 4.98,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $4.98.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MTB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "CFG",
+     "name": "Citizens Financial Group",
+     "market_cap_b": 26.7,
+     "eps": null,
+     "eps_estimate": 1.38,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.38.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CFG&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "RF",
+     "name": "Regions Financial",
+     "market_cap_b": 23.3,
+     "eps": null,
+     "eps_estimate": 0.67,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.67.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RF&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BANF",
+     "name": "BancFirst",
+     "market_cap_b": 3.6,
+     "eps": null,
+     "eps_estimate": 1.93,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.93.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BANF&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "RBCAA",
+     "name": "Republic Bancorp",
+     "market_cap_b": 1.8,
+     "eps": null,
+     "eps_estimate": 1.66,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.66.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RBCAA&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "LADR",
+     "name": "Ladder Capital",
+     "market_cap_b": 1.1,
+     "eps": null,
+     "eps_estimate": 0.21,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.21.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LADR&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "reported_total": 33,
+   "top": [
+    {
+     "symbol": "TSM",
+     "name": "Taiwan Semiconductor Manufacturing Company",
+     "market_cap_b": 2190.0,
+     "eps": 4.6,
+     "eps_estimate": 4.45,
+     "surprise_pct": 3.37,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.60 versus $4.45 expected, so the company beat estimates by 3.4%.",
       "Stock moved -1.8% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -26,14 +195,14 @@
     {
      "symbol": "SCHW",
      "name": "The Charles Schwab",
-     "market_cap_b": 167.4,
-     "eps": null,
+     "market_cap_b": 162.8,
+     "eps": 1.69,
      "eps_estimate": 1.66,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1.81,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.66.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.69 versus $1.66 expected, so the company beat estimates by 1.8%.",
       "Stock moved -2.7% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -43,14 +212,14 @@
     {
      "symbol": "PLD",
      "name": "Prologis",
-     "market_cap_b": 123.7,
-     "eps": null,
+     "market_cap_b": 120.3,
+     "eps": 1.6,
      "eps_estimate": 1.58,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1.27,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.58.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.60 versus $1.58 expected, so the company beat estimates by 1.3%.",
       "Stock moved -2.7% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -60,14 +229,14 @@
     {
      "symbol": "BNY",
      "name": "The Bank Of New York Mellon Corporation",
-     "market_cap_b": 93.4,
-     "eps": null,
+     "market_cap_b": 96.4,
+     "eps": 2.37,
      "eps_estimate": 2.26,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 4.87,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.26.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.37 versus $2.26 expected, so the company beat estimates by 4.9%.",
       "Stock moved +3.2% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -77,14 +246,14 @@
     {
      "symbol": "USB",
      "name": "U.S. Bancorp",
-     "market_cap_b": 87.7,
-     "eps": null,
+     "market_cap_b": 89.4,
+     "eps": 1.34,
      "eps_estimate": 1.32,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1.52,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.32.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.34 versus $1.32 expected, so the company beat estimates by 1.5%.",
       "Stock moved +2.0% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -92,33 +261,16 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=USB&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "PNC",
-     "name": "PNC Financial Services Group, Inc. (The)",
-     "market_cap_b": 86.1,
-     "eps": null,
-     "eps_estimate": 4.97,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $4.97.",
-      "Stock moved -0.4% on Oct 15.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PNC&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "MRSH",
      "name": "Marsh",
-     "market_cap_b": 85.1,
-     "eps": null,
+     "market_cap_b": 89.0,
+     "eps": 2.03,
      "eps_estimate": 1.96,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 3.57,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.96.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.03 versus $1.96 expected, so the company beat estimates by 3.6%.",
       "Stock moved +4.6% on Oct 15.",
       "Covers the quarter ending Sep 2026."
      ],
@@ -126,16 +278,33 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRSH&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "PNC",
+     "name": "PNC Financial Services Group, Inc. (The)",
+     "market_cap_b": 85.7,
+     "eps": 5.09,
+     "eps_estimate": 4.97,
+     "surprise_pct": 2.41,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $5.09 versus $4.97 expected, so the company beat estimates by 2.4%.",
+      "Stock moved -0.4% on Oct 15.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PNC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "IBKR",
      "name": "Interactive Brokers Group",
-     "market_cap_b": 38.1,
-     "eps": null,
+     "market_cap_b": 39.0,
+     "eps": 0.67,
      "eps_estimate": 0.67,
      "surprise_pct": null,
-     "timing": "time-after-hours",
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.67.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.67 versus $0.67 expected, so the company matched estimates.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -144,14 +313,14 @@
     {
      "symbol": "ERIC",
      "name": "Ericsson",
-     "market_cap_b": 32.3,
-     "eps": null,
+     "market_cap_b": 36.1,
+     "eps": 0.18,
      "eps_estimate": 0.14,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 28.57,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.14.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.18 versus $0.14 expected, so the company beat estimates by 28.6%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -160,14 +329,14 @@
     {
      "symbol": "JBHT",
      "name": "J.B. Hunt Transport Services",
-     "market_cap_b": 21.8,
-     "eps": null,
+     "market_cap_b": 22.1,
+     "eps": 1.82,
      "eps_estimate": 1.81,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 0.55,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.81.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.82 versus $1.81 expected, so the company beat estimates by 0.6%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -182,7 +351,7 @@
     {
      "symbol": "ASML",
      "name": "ASML Holding N.V.",
-     "market_cap_b": 635.9,
+     "market_cap_b": 638.8,
      "eps": 14.89,
      "eps_estimate": 12.47,
      "surprise_pct": 19.41,
@@ -199,7 +368,7 @@
     {
      "symbol": "BAC",
      "name": "Bank of America",
-     "market_cap_b": 359.4,
+     "market_cap_b": 361.5,
      "eps": 1.08,
      "eps_estimate": 1.11,
      "surprise_pct": -2.7,
@@ -216,7 +385,7 @@
     {
      "symbol": "MS",
      "name": "Morgan Stanley",
-     "market_cap_b": 285.1,
+     "market_cap_b": 286.0,
      "eps": 3.03,
      "eps_estimate": 2.83,
      "surprise_pct": 7.07,
@@ -233,7 +402,7 @@
     {
      "symbol": "BLK",
      "name": "BlackRock",
-     "market_cap_b": 166.3,
+     "market_cap_b": 173.6,
      "eps": 15.93,
      "eps_estimate": 14.01,
      "surprise_pct": 13.7,
@@ -250,7 +419,7 @@
     {
      "symbol": "PGR",
      "name": "Progressive Corporation (The)",
-     "market_cap_b": 124.1,
+     "market_cap_b": 124.3,
      "eps": 4.6,
      "eps_estimate": 4.46,
      "surprise_pct": 3.14,
@@ -267,7 +436,7 @@
     {
      "symbol": "FAST",
      "name": "Fastenal",
-     "market_cap_b": 59.7,
+     "market_cap_b": 57.8,
      "eps": 0.35,
      "eps_estimate": 0.34,
      "surprise_pct": 2.94,
@@ -284,7 +453,7 @@
     {
      "symbol": "STT",
      "name": "State Street",
-     "market_cap_b": 45.8,
+     "market_cap_b": 46.0,
      "eps": 3.69,
      "eps_estimate": 3.65,
      "surprise_pct": 1.1,
@@ -300,7 +469,7 @@
     {
      "symbol": "HOMB",
      "name": "Home BancShares",
-     "market_cap_b": 5.7,
+     "market_cap_b": 5.8,
      "eps": 0.65,
      "eps_estimate": 0.64,
      "surprise_pct": 1.56,
@@ -316,7 +485,7 @@
     {
      "symbol": "CHRN",
      "name": "ChronoScale Holdings",
-     "market_cap_b": 2.2,
+     "market_cap_b": 2.3,
      "eps": -0.18,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -349,12 +518,12 @@
   },
   {
    "date": "2026-10-13",
-   "reported_total": 15,
+   "reported_total": 13,
    "top": [
     {
      "symbol": "JPM",
      "name": "J P Morgan Chase & Co",
-     "market_cap_b": 891.2,
+     "market_cap_b": 891.9,
      "eps": 5.75,
      "eps_estimate": 5.94,
      "surprise_pct": -3.2,
@@ -371,7 +540,7 @@
     {
      "symbol": "JNJ",
      "name": "Johnson & Johnson",
-     "market_cap_b": 611.9,
+     "market_cap_b": 610.4,
      "eps": 2.59,
      "eps_estimate": 2.53,
      "surprise_pct": 2.37,
@@ -388,7 +557,7 @@
     {
      "symbol": "UNH",
      "name": "UnitedHealth Group Incorporated",
-     "market_cap_b": 355.1,
+     "market_cap_b": 365.0,
      "eps": 4.69,
      "eps_estimate": 4.12,
      "surprise_pct": 13.83,
@@ -405,7 +574,7 @@
     {
      "symbol": "GS",
      "name": "The Goldman Sachs Group",
-     "market_cap_b": 255.9,
+     "market_cap_b": 259.5,
      "eps": 17.01,
      "eps_estimate": 12.9,
      "surprise_pct": 31.86,
@@ -422,7 +591,7 @@
     {
      "symbol": "WFC",
      "name": "Wells Fargo &",
-     "market_cap_b": 244.6,
+     "market_cap_b": 250.2,
      "eps": 1.87,
      "eps_estimate": 1.85,
      "surprise_pct": 1.08,
@@ -439,7 +608,7 @@
     {
      "symbol": "C",
      "name": "Citigroup",
-     "market_cap_b": 205.1,
+     "market_cap_b": 206.7,
      "eps": 2.85,
      "eps_estimate": 2.66,
      "surprise_pct": 7.14,
@@ -456,7 +625,7 @@
     {
      "symbol": "DPZ",
      "name": "Domino's Pizza",
-     "market_cap_b": 9.7,
+     "market_cap_b": 10.0,
      "eps": 4.6,
      "eps_estimate": 4.33,
      "surprise_pct": 6.24,
@@ -488,7 +657,7 @@
     {
      "symbol": "AZZ",
      "name": "AZZ",
-     "market_cap_b": 4.1,
+     "market_cap_b": 3.9,
      "eps": 2.0,
      "eps_estimate": 1.82,
      "surprise_pct": 9.89,
@@ -504,7 +673,7 @@
     {
      "symbol": "FBK",
      "name": "FB Financial",
-     "market_cap_b": 2.5,
+     "market_cap_b": 2.6,
      "eps": 1.21,
      "eps_estimate": 1.21,
      "surprise_pct": null,

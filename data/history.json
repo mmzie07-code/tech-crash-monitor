@@ -89,5 +89,12 @@
   "stretch": 33,
   "trigger": 50,
   "level": "High"
+ },
+ {
+  "date": "2026-10-16",
+  "score": 75,
+  "stretch": 33,
+  "trigger": 83,
+  "level": "Severe"
  }
 ]
