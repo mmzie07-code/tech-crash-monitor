@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated": "2026-10-16T22:02:57.340317Z",
+ "generated": "2026-10-18T19:14:52.749095Z",
  "headline": "US stocks finished lower. The S&P 500 fell 1.09%, with 6 of 11 sectors up.",
  "sections": [
   {
@@ -25,10 +25,10 @@
    "bullets": [
     "VIX (fear gauge): 19.99 (+21.45% today)",
     "10-year Treasury yield: 5.10% (+0.01 pts today)",
-    "US dollar index: 101.78 (-0.22% today)",
-    "Crude oil: 99.04 (+1.09% today)",
-    "Gold: 4,186.70 (+0.40% today)",
-    "Bitcoin: 81,578.10 (-0.69% today)"
+    "US dollar index: 101.84 (-0.16% today)",
+    "Crude oil: 99.02 (+1.07% today)",
+    "Gold: 4,181.10 (+0.26% today)",
+    "Bitcoin: 81,040.37 (-0.42% today)"
    ]
   },
   {
@@ -43,16 +43,8 @@
    "bullets": [
     "Wed Oct 21, After close: Meta Platforms (META) reports earnings",
     "Wed Oct 21, After close: Tesla, Inc. (TSLA) reports earnings",
-    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth"
-   ]
-  },
-  {
-   "title": "Just happened",
-   "bullets": [
-    "Taiwan Semiconductor Manufacturing Company: Taiwan Semiconductor Manufacturing Company reported earnings: beat estimates.",
-    "ASML Holding N.V.: ASML Holding N.V. reported earnings: beat estimates.",
-    "Fed Beige Book: The Fed published its Beige Book on regional business conditions."
+    "Tue Oct 27, After close: Visa (V) reports earnings",
+    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)"
    ]
   },
   {
@@ -66,52 +58,52 @@
  ],
  "headlines": [
   {
-   "title": "Brent oil touches $110 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries",
+   "title": "Bessent warns Zelenskyy to 'be very careful' about claims U.S. is throttling Starlink",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html",
-   "published": "Fri, 16 Oct 2026 20:02:21"
+   "link": "https://www.cnbc.com/2026/10/18/bessent-zelenskyy-starlink-ukarine-war.html",
+   "published": "Sun, 18 Oct 2026 16:44:10"
   },
   {
-   "title": "Katie Zacharia out as Trump's White House press secretary",
+   "title": "Iran says it has a 'new operational plan' if the U.S. resumes attacks, as shipping vessels report strikes",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/16/trump-katie-zacharia-white-house.html",
-   "published": "Fri, 16 Oct 2026 21:26:15"
+   "link": "https://www.cnbc.com/2026/10/18/iran-us-war-rezaei-operational-plan-shipping-attacks.html",
+   "published": "Sun, 18 Oct 2026 13:52:24"
   },
   {
-   "title": "Apple\u2019s $1,999 iPhone Duo puts the company's status-symbol power to the test",
+   "title": "Why hedge funds could be making a bond market shock more likely",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/16/apple-iphone-duo-demand-price.html",
-   "published": "Fri, 16 Oct 2026 18:55:17"
+   "link": "https://www.cnbc.com/2026/10/18/hedge-funds-bond-market-turmoil.html",
+   "published": "Sun, 18 Oct 2026 06:13:05"
   },
   {
-   "title": "Wall Street's fear gauge is ripping. Traders see it going even higher",
+   "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/16/wall-streets-fear-gauge-is-ripping-traders-see-it-going-even-higher.html",
-   "published": "Fri, 16 Oct 2026 19:28:10"
+   "link": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
+   "published": "Sun, 18 Oct 2026 12:00:01"
   },
   {
-   "title": "Nowhere to hide: Tech selloff hits software and chip stocks alike",
+   "title": "My wife says we can\u2019t afford to retire. I vetoed her $8,000 trip to Italy. We\u2019re in our 60s and have $4 million. Do I keep working?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nowhere-to-hide-tech-selloff-hits-software-and-chip-stocks-alike-6d96773c?mod=mw_rss_topstories",
-   "published": "Fri, 16 Oct 2026 21:59:00"
+   "link": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories",
+   "published": "Sun, 18 Oct 2026 17:00:00"
   },
   {
-   "title": "This Senate race where data centers are a crucial issue has more spending than any other midterm clash",
+   "title": "\u2018Some people did everything right\u2019: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-senate-race-where-data-centers-are-a-crucial-issue-has-more-spending-than-any-other-midterm-clash-5152b43d?mod=mw_rss_topstories",
-   "published": "Fri, 16 Oct 2026 21:43:00"
+   "link": "https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories",
+   "published": "Sun, 18 Oct 2026 16:15:00"
   },
   {
-   "title": "Could an Anthropic IPO put your 401(k) at risk? The AI safety debate hits a new dimension.",
+   "title": "My sister moved in with our mother, 78, and says she deserves the $925,000 family home. Is she right?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/could-an-anthropic-ipo-put-your-401-k-at-risk-the-ai-safety-debate-hits-a-new-dimension-db3f09f7?mod=mw_rss_topstories",
-   "published": "Fri, 16 Oct 2026 21:35:00"
+   "link": "https://www.marketwatch.com/story/my-sister-moved-in-with-our-widowed-mother-78-and-says-she-deserves-the-family-home-is-she-right-7981835d?mod=mw_rss_topstories",
+   "published": "Sun, 18 Oct 2026 16:00:00"
   },
   {
-   "title": "The bond market shrugged off two inflation shocks. Why stock investors should pay attention.",
+   "title": "I\u2019m 64 with two sons, but only one works in the family business. Is it ethical to leave him 70% of the company?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-bond-market-shrugged-off-two-inflation-shocks-why-stock-investors-should-pay-attention-5da4f771?mod=mw_rss_topstories",
-   "published": "Fri, 16 Oct 2026 21:30:00"
+   "link": "https://www.marketwatch.com/story/im-64-years-old-with-two-sons-but-only-one-works-in-the-family-firm-should-i-leave-him-70-of-the-business-2fe6c382?mod=mw_rss_topstories",
+   "published": "Sun, 18 Oct 2026 15:15:00"
   }
  ],
  "summary": null,

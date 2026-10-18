@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T22:02:54.834484Z",
+ "generated": "2026-10-18T19:14:50.720544Z",
  "as_of": "2026-10-16",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -42,32 +42,7 @@
     "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); score 75, Severe risk."
    ],
-   "events": [
-    {
-     "date": "2026-10-16",
-     "time": "Time TBA",
-     "title": "HDFC Bank Limited (HDB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Time TBA",
-     "title": "ICICI Bank Limited (IBN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Before open",
-     "title": "The Travelers Companies (TRV) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Before open",
-     "title": "Truist Financial (TFC) reports earnings",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -150,30 +125,6 @@
    ],
    "events": [
     {
-     "date": "2026-10-16",
-     "time": "Time TBA",
-     "title": "HDFC Bank Limited (HDB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Time TBA",
-     "title": "ICICI Bank Limited (IBN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Before open",
-     "title": "The Travelers Companies (TRV) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-16",
-     "time": "Before open",
-     "title": "Truist Financial (TFC) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-10-20",
      "time": "Before open",
      "title": "GE Aerospace (GE) reports earnings",
@@ -219,6 +170,30 @@
      "date": "2026-10-20",
      "time": "Before open",
      "title": "General Motors Company (GM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "Meta Platforms (META) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "Tesla, Inc. (TSLA) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "Lam Research (LRCX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "Before open",
+     "title": "Philip Morris International (PM) reports earnings",
      "importance": "medium"
     }
    ]
@@ -276,6 +251,12 @@
      "importance": "high"
     },
     {
+     "date": "2026-10-27",
+     "time": "After close",
+     "title": "Visa (V) reports earnings",
+     "importance": "high"
+    },
+    {
      "date": "2026-10-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
@@ -291,6 +272,12 @@
      "date": "2026-10-29",
      "time": "8:30 AM",
      "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
      "importance": "high"
     }
    ]

@@ -1,80 +1,8 @@
 {
- "generated": "2026-10-16T22:02:47.384814Z",
- "today": "2026-10-16",
+ "generated": "2026-10-18T19:14:43.146105Z",
+ "today": "2026-10-18",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-16-earnings-hdfc-bank-limited-hdb-reports-earnings",
-   "date": "2026-10-16",
-   "time": "Time TBA",
-   "kind": "earnings",
-   "title": "HDFC Bank Limited (HDB) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.40.",
-   "extra": {
-    "market_cap_b": 121,
-    "eps_forecast": "$0.40"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-16-earnings-icici-bank-limited-ibn-reports-earnings",
-   "date": "2026-10-16",
-   "time": "Time TBA",
-   "kind": "earnings",
-   "title": "ICICI Bank Limited (IBN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.40.",
-   "extra": {
-    "market_cap_b": 105,
-    "eps_forecast": "$0.40"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-16-earnings-the-travelers-companies-trv-reports-earnings",
-   "date": "2026-10-16",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "The Travelers Companies (TRV) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $7.07.",
-   "extra": {
-    "market_cap_b": 80,
-    "eps_forecast": "$7.07"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-16-earnings-truist-financial-tfc-reports-earnings",
-   "date": "2026-10-16",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Truist Financial (TFC) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.17.",
-   "extra": {
-    "market_cap_b": 57,
-    "eps_forecast": "$1.17"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-16-data-g-17-industrial-production-and-capacity-utilizat",
-   "date": "2026-10-16",
-   "time": "9:15 AM",
-   "kind": "data",
-   "title": "G.17 - Industrial Production and Capacity Utilization",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-10-20-earnings-ge-aerospace-ge-reports-earnings",
    "date": "2026-10-20",
@@ -316,38 +244,6 @@
    "link": null
   },
   {
-   "id": "2026-10-21-treasury-treasury-auction-19-year-10-month-bond",
-   "date": "2026-10-21",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 19-Year 10-Month Bond",
-   "importance": "low",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $13B.",
-   "extra": {
-    "term": "19-Year 10-Month",
-    "type": "Bond",
-    "cusip": "912810UX4"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
-  },
-  {
-   "id": "2026-10-22-treasury-treasury-auction-5-year-note",
-   "date": "2026-10-22",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 5-Year Note",
-   "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations. Offering size: $26B.",
-   "extra": {
-    "term": "5-Year",
-    "type": "Note",
-    "cusip": "91282CRR4"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
-  },
-  {
    "id": "2026-10-22-earnings-procter-gamble-company-the-pg-reports-earnings",
    "date": "2026-10-22",
    "time": "Before open",
@@ -525,36 +421,199 @@
    "link": null
   },
   {
-   "id": "2026-10-26-treasury-treasury-auction-2-year-note",
+   "id": "2026-10-26-earnings-verizon-communications-vz-reports-earnings",
    "date": "2026-10-26",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 2-Year Note",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Verizon Communications (VZ) reports earnings",
    "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.27.",
    "extra": {
-    "term": "2-Year",
-    "type": "Note",
-    "cusip": "91282CRU7"
+    "market_cap_b": 184,
+    "eps_forecast": "$1.27"
    },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
+   "source": "",
+   "link": null
   },
   {
-   "id": "2026-10-27-treasury-treasury-auction-5-year-note",
-   "date": "2026-10-27",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 5-Year Note",
+   "id": "2026-10-26-earnings-welltower-well-reports-earnings",
+   "date": "2026-10-26",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Welltower (WELL) reports earnings",
    "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.64.",
    "extra": {
-    "term": "5-Year",
-    "type": "Note",
-    "cusip": "91282CRT0"
+    "market_cap_b": 169,
+    "eps_forecast": "$1.64"
    },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-26-earnings-cadence-design-systems-cdns-reports-earnings",
+   "date": "2026-10-26",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Cadence Design Systems (CDNS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.60.",
+   "extra": {
+    "market_cap_b": 89,
+    "eps_forecast": "$1.60"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-26-earnings-nucor-nue-reports-earnings",
+   "date": "2026-10-26",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Nucor (NUE) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.71.",
+   "extra": {
+    "market_cap_b": 58,
+    "eps_forecast": "$5.71"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-26-earnings-public-storage-psa-reports-earnings",
+   "date": "2026-10-26",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Public Storage (PSA) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.27.",
+   "extra": {
+    "market_cap_b": 55,
+    "eps_forecast": "$4.27"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-visa-v-reports-earnings",
+   "date": "2026-10-27",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Visa (V) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.43.",
+   "extra": {
+    "market_cap_b": 714,
+    "eps_forecast": "$3.43"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-coca-cola-company-the-ko-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Coca-Cola Company (The) (KO) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.87.",
+   "extra": {
+    "market_cap_b": 396,
+    "eps_forecast": "$0.87"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-hsbc-holdings-hsbc-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "HSBC Holdings (HSBC) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.13.",
+   "extra": {
+    "market_cap_b": 323,
+    "eps_forecast": "$2.13"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-novartis-ag-nvs-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Novartis AG (NVS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.25.",
+   "extra": {
+    "market_cap_b": 287,
+    "eps_forecast": "$2.25"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-southern-copper-scco-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Southern Copper (SCCO) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.07.",
+   "extra": {
+    "market_cap_b": 168,
+    "eps_forecast": "$2.07"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-seagate-technology-holdings-plc-stx-reports-earn",
+   "date": "2026-10-27",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Seagate Technology Holdings PLC (STX) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $7.11.",
+   "extra": {
+    "market_cap_b": 158,
+    "eps_forecast": "$7.11"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-boeing-company-the-ba-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Boeing Company (The) (BA) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of ($0.17).",
+   "extra": {
+    "market_cap_b": 149,
+    "eps_forecast": "($0.17)"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-10-27-earnings-s-p-global-spgi-reports-earnings",
+   "date": "2026-10-27",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "S&P Global (SPGI) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.42.",
+   "extra": {
+    "market_cap_b": 125,
+    "eps_forecast": "$4.42"
+   },
+   "source": "",
+   "link": null
   },
   {
    "id": "2026-10-27-data-h-6-money-stock-measures",
@@ -583,22 +642,6 @@
    "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
   },
   {
-   "id": "2026-10-28-treasury-treasury-auction-2-year-note",
-   "date": "2026-10-28",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 2-Year Note",
-   "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
-   "extra": {
-    "term": "2-Year",
-    "type": "Note",
-    "cusip": "91282CRS2"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
-  },
-  {
    "id": "2026-10-29-data-gdp-advance-estimate-first-look-at-economic-grow",
    "date": "2026-10-29",
    "time": "8:30 AM",
@@ -621,22 +664,6 @@
    "extra": null,
    "source": "",
    "link": null
-  },
-  {
-   "id": "2026-10-29-treasury-treasury-auction-7-year-note",
-   "date": "2026-10-29",
-   "time": "1:00 PM",
-   "kind": "treasury",
-   "title": "Treasury auction: 7-Year Note",
-   "importance": "medium",
-   "why": "The Treasury borrows by auctioning bonds. Strong demand keeps borrowing costs (yields) steady; weak demand can push yields higher, which affects mortgage rates and stock valuations.",
-   "extra": {
-    "term": "7-Year",
-    "type": "Note",
-    "cusip": "91282CRV5"
-   },
-   "source": "TreasuryDirect",
-   "link": "https://www.treasurydirect.gov/auctions/upcoming/"
   },
   {
    "id": "2026-10-29-data-weekly-jobless-claims",
@@ -866,6 +893,42 @@
    "title": "G.20 - Finance Companies",
    "importance": "low",
    "why": "A routine Federal Reserve statistical release. Publication date for this release is approximate.",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-01-data-g-5-foreign-exchange-rates",
+   "date": "2026-12-01",
+   "time": "4:15 PM",
+   "kind": "data",
+   "title": "G.5 - Foreign Exchange Rates",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-01-data-cp-commercial-paper",
+   "date": "2026-12-01",
+   "time": "1:00 PM",
+   "kind": "data",
+   "title": "CP - Commercial Paper",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-01-data-h-15-selected-interest-rates",
+   "date": "2026-12-01",
+   "time": "4:15 PM",
+   "kind": "data",
+   "title": "H.15 - Selected Interest Rates",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
    "link": null
