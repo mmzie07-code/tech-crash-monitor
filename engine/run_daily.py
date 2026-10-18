@@ -29,7 +29,7 @@ def main():
     checks = run_all(d)
     s = summarize(checks)
     q = d["QQQ"]
-    snap = dict(date=q[-1][0], generated=dt.datetime.utcnow().isoformat() + "Z", level=level(s["score"]),
+    snap = dict(date=q[-1][0], generated=dt.datetime.utcnow().isoformat() + "Z", level=level(s["score"]), health=100 - s["score"],
                 **s, checks=checks, qqq_last=round(q[-1][1], 2),
                 qqq_series=[[x, round(c, 2)] for x, c in q[-250:]],
                 disclaimer="Educational analysis only. Not investment advice. Past signals do not predict future returns.")
@@ -38,7 +38,7 @@ def main():
     hp = os.path.join(DATA, "history.json")
     hist = json.load(open(hp)) if os.path.exists(hp) else []
     hist = [h for h in hist if h["date"] != snap["date"]] + [dict(
-        date=snap["date"], score=s["score"], stretch=s["stretch"], trigger=s["trigger"], level=snap["level"])]
+        date=snap["date"], score=s["score"], health=100 - s["score"], stretch=s["stretch"], trigger=s["trigger"], level=snap["level"])]
     json.dump(hist, open(hp, "w"), indent=1)
     try:
         mk = markets.build()

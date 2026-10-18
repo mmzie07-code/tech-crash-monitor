@@ -94,3 +94,8 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 
 @media print{header.top,footer,.tabbar,.noprint,.gsw,#authbtn,#wl,.version-banner{display:none!important}
  body{background:#fff;color:#000}main{padding:0}.card,.wid{box-shadow:none!important;border:1px solid #ccc!important;break-inside:avoid}a{color:#000;text-decoration:none}.tw{overflow:visible}input[type=range]{display:none}}
+
+/* health gauge */
+.gauge{position:relative;text-align:center}.gnum{font-size:46px;font-weight:800;line-height:1;margin-top:-4px;letter-spacing:-.02em}.gnum span{font-size:15px;font-weight:700;opacity:.6;margin-left:2px}.glab{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.needle{transform-origin:130px 128px;transform:rotate(var(--a));animation:needle 1.3s cubic-bezier(.2,.9,.3,1.1)}@keyframes needle{from{transform:rotate(-90deg)}}
+@media(prefers-reduced-motion:reduce){.needle{animation:none}}

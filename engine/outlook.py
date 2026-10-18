@@ -74,7 +74,7 @@ def drivers(snap, mk, cal, h):
         down.append("Oil is up %.0f%% in a month, which can feed inflation." % oil["m1"])
     flashing = [c for c in snap["checks"] if c["status"] == "warn" and c["weight"] > 0]
     if flashing:
-        down.append("AI & Tech Watch has %d warning sign(s) flashing (%s); score %d, %s risk." % (len(flashing), "; ".join(c["name"] for c in flashing), snap["score"], snap["level"]))
+        down.append("AI & Tech Watch has %d warning sign(s) flashing (%s); health score %d out of 100." % (len(flashing), "; ".join(c["name"] for c in flashing), 100 - snap["score"]))
     else:
         up.append("AI & Tech Watch shows no weighted warning signs today.")
     c10 = chk.get(10)

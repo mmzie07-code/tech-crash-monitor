@@ -17,12 +17,29 @@ async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
+// Health score: 100 = no warning signs (green, right), 0 = many warning signs (red, left). The engine's internal "risk score" is 100 minus this.
+const healthOf = (risk) => (risk == null ? null : Math.max(0, Math.min(100, 100 - risk)));
+const HEALTH_ZONES = [[76, "Healthy", "var(--ok)", "No major warning signs"], [51, "Caution", "var(--warn)", "A few warning signs are flashing"], [26, "Warning", "#f97316", "Several warning signs are flashing"], [0, "Danger", "var(--bad)", "Most warning signs are flashing"]];
+const healthZone = (h) => HEALTH_ZONES.find(([min]) => h >= min);
+function gauge(h) {
+  const cx = 130, cy = 128, r = 98, pt = (deg, rad = r) => [(cx - rad * Math.cos(deg * Math.PI / 180)).toFixed(1), (cy - rad * Math.sin(deg * Math.PI / 180)).toFixed(1)];
+  const seg = (from, to, col) => { const [x1, y1] = pt(from * 1.8), [x2, y2] = pt(to * 1.8); return `<path d="M${x1} ${y1} A${r} ${r} 0 0 1 ${x2} ${y2}" fill="none" stroke="${col}" stroke-width="20" stroke-linecap="butt"/>`; };
+  const z = healthZone(h), ang = (h - 50) * 1.8;
+  const ticks = [0, 25, 50, 75, 100].map((v) => { const [x1, y1] = pt(v * 1.8, r + 14), [x2, y2] = pt(v * 1.8, r - 14); return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--card)" stroke-width="3"/>`; }).join("");
+  return `<div class="gauge" role="img" aria-label="Market health ${h} out of 100, ${z[1]}"><svg viewBox="0 0 260 150" style="width:100%;display:block">
+   ${seg(0, 25, "var(--bad)")}${seg(25, 50, "#f97316")}${seg(50, 75, "var(--warn)")}${seg(75, 100, "var(--ok)")}${ticks}
+   <g class="needle" style="--a:${ang}deg"><polygon points="${cx - 5},${cy} ${cx + 5},${cy} ${cx},${cy - r + 22}" fill="var(--tx)"/></g><circle cx="${cx}" cy="${cy}" r="9" fill="var(--tx)"/><circle cx="${cx}" cy="${cy}" r="3.5" fill="var(--card)"/>
+   <text x="14" y="146" font-size="10" font-weight="800" fill="var(--bad)">DANGER</text><text x="246" y="146" font-size="10" font-weight="800" fill="var(--ok)" text-anchor="end">HEALTHY</text></svg>
+   <div class="gnum" style="color:${z[2]}">${h}<span>/100</span></div><div class="glab" style="color:${z[2]}">${z[1]}</div></div>`;
+}
+
 function snapCard(link) {
   const s = state.snap;
   if (!s) return `<div class="card"><div class="muted">Live monitor unavailable right now.</div></div>`;
-  return `<div class="card big"><div class="strip"><div><div class="num" style="color:${lvlColor(s.level)}">${s.score}</div><div class="small muted">crash-risk score, ${s.date}</div></div>
-  <div style="flex:1;min-width:200px"><h3>AI &amp; Tech Watch: ${s.level} risk</h3><p class="muted small" style="margin:0">${s.warnings} of ${s.evaluated} warning signs flashing. Stretch ${s.stretch ?? "-"} · Trigger ${s.trigger ?? "-"}</p></div>
-  ${link ? `<a class="btn ghost" href="#/watch">Open AI &amp; Tech Watch</a>` : ""}</div></div>`;
+  const h = healthOf(s.score), z = healthZone(h);
+  return `<div class="card big"><div class="strip" style="align-items:center;gap:22px"><div style="width:230px;max-width:100%">${gauge(h)}</div>
+  <div style="flex:1;min-width:200px"><h3>AI &amp; Tech Watch: ${z[1]}</h3><p class="muted small" style="margin:0 0 6px">${z[3]}: ${s.warnings} of ${s.evaluated} checks are flashing. <b>Higher is better</b>: 100 means all clear, 0 means danger. Updated ${s.date}.</p>
+  ${link ? `<a class="btn ghost" href="#/watch">See what's behind it</a>` : ""}</div></div></div>`;
 }
 
 function chg(v, kind) {
@@ -191,13 +208,28 @@ function markets(tab, sub) {
 
 function watch() {
   const s = state.snap;
-  return `<span class="pill w">Featured section</span><h1>AI &amp; Tech Watch</h1>
-  <p class="muted">Are AI and tech stocks in a bubble, and are the warning signs of a crash flashing? Ten signs, checked every trading day.</p>` + (!s ? `<div class="card">Data unavailable.</div>` : `${snapCard(false)}
-    <div class="card"><h3><a href="#/stock/QQQ" style="color:inherit">QQQ (Nasdaq-100)</a>, 1 year</h3>${spark(s.qqq_series.map((x) => x[1]))}</div>
-    <div class="card"><h3>The checklist</h3>${s.checks.map((c) => `<div class="item"><div class="dot" style="background:${COL[c.status]}"></div><div>
-     <b>${c.id}. ${c.name}</b> <span class="pill">${c.group}</span>${c.proxy ? '<span class="pill w">proxy</span>' : ""}${c.weight === 0 ? '<span class="pill">context only</span>' : ""}
-     <div class="small muted">${linkTickers(c.detail)}</div>${c.threshold ? `<div class="small muted">Warns at: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
-    <p class="small muted">${s.evaluated} of ${s.total} checks are live. Thresholds were tested on 1999–2026 history: the combined score raised crash odds only about 1.7–2x. See <a href="#/about">how it works</a>.</p>`);
+  const head = `<span class="pill w">Featured section</span><h1>AI &amp; Tech Watch</h1>
+  <p class="muted">Are AI and tech stocks in a bubble, and are the warning signs of a crash flashing? Ten signs, checked every trading day, combined into one health score.</p>`;
+  if (!s) return head + `<div class="card">Data unavailable.</div>`;
+  const h = healthOf(s.score), z = healthZone(h), hf = healthOf(s.stretch), ht = healthOf(s.trigger);
+  const wtxt = (c) => (c.weight === 2 ? "counts double" : c.weight === 1 ? "counts" : "shown for context, not scored");
+  const flashing = s.checks.filter((c) => c.status === "warn" && c.weight > 0);
+  return head + `<div class="card big"><div class="strip" style="align-items:center;gap:26px"><div style="width:300px;max-width:100%">${gauge(h)}</div>
+   <div style="flex:1;min-width:230px"><h2 style="margin:0 0 4px">${z[1]}</h2><p style="margin:0 0 10px">${z[3]}. <b>${s.warnings} of ${s.evaluated}</b> checks are flashing${flashing.length ? ": " + flashing.map((c) => esc(c.name)).join(", ") : ""}.</p>
+    <div class="hz" style="margin:0"><div class="card" style="padding:10px"><div class="small muted">How stretched things are</div><b style="font-size:18px">${hf == null ? "-" : hf}</b><span class="small muted">/100</span></div><div class="card" style="padding:10px"><div class="small muted">Crash triggers</div><b style="font-size:18px">${ht == null ? "-" : ht}</b><span class="small muted">/100</span></div></div>
+    <p class="small muted" style="margin:8px 0 0">Updated ${esc(s.date)}. Like a fuel gauge: <b>needle to the green side is good</b>, into the red means concern.</p></div></div></div>
+  <div class="card"><h3>How the number works</h3>
+   <ol class="small" style="margin:.3em 0 0;padding-left:20px"><li>Ten warning signs are checked every trading day. Each is either <b style="color:var(--ok)">clear</b> or <b style="color:var(--warn)">flashing</b>.</li>
+   <li>Signs that tested best in history <b>count double</b>; some count once; a few are shown only for context.</li>
+   <li><b>Health = 100 minus the share of warning-sign weight that is flashing.</b> So more warnings means a <b>lower</b> number and a needle moving toward red.</li></ol>
+   <div class="tw"><table><tr><th>Score</th><th>Zone</th><th>Meaning</th></tr>${HEALTH_ZONES.map(([min, name, col, text], i) => `<tr><td><b style="color:${col}">${i === 0 ? "76–100" : i === 1 ? "51–75" : i === 2 ? "26–50" : "0–25"}</b></td><td><b style="color:${col}">${name}</b></td><td class="small">${text}</td></tr>`).join("")}</table></div>
+   <p class="small" style="margin:8px 0 0"><b>A low score means the odds of a sharp drop are higher than usual. It does not mean a crash is certain.</b> In our testing, even in the worst zone, most periods were <i>not</i> followed by a 15% fall.</p>
+   <p class="small muted" style="margin:6px 0 0"><b>Stretch</b> checks measure how fragile things are (valuations, concentration, spending versus revenue). <b>Trigger</b> checks look for what could pop it (rising rates, credit stress, chip stocks weakening). Both are shown above on the same scale, where higher is better.</p></div>
+  <div class="card"><h3><a href="#/stock/QQQ" style="color:inherit">QQQ (Nasdaq-100)</a>, 1 year</h3>${spark(s.qqq_series.map((x) => x[1]))}</div>
+  <div class="card"><h3>The ten checks</h3>${s.checks.map((c) => `<div class="item"><div class="dot" style="background:${COL[c.status]}"></div><div>
+   <b>${c.id}. ${c.name}</b> <span class="pill">${c.group}</span>${c.proxy ? '<span class="pill w">proxy</span>' : ""}<span class="pill">${wtxt(c)}</span>
+   <div class="small muted">${linkTickers(c.detail)}</div>${c.threshold ? `<div class="small muted">Flashes when: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
+  <p class="small muted">${s.evaluated} of ${s.total} checks are live. We tested the thresholds on 1999–2026 history: when the health score fell to 75 or below, a 15%+ drop in the next 60 days was only about 1.7–2x as likely as normal. That's a modest tilt, not a prediction. See <a href="#/about">how it works</a>.</p>`;
 }
 
 function spark(v) {
@@ -207,8 +239,8 @@ function spark(v) {
 
 function about() {
   return `<div class="lesson"><h1>How it works</h1><p class="muted">${BRAND} is an educational project. It is not a broker, adviser, or source of trading signals.</p>
-  <h2>Markets</h2><p>The Markets section tracks major indices, the 11 stock sectors, rates, the dollar, oil, gold and bitcoin from Yahoo Finance, updated each trading day.</p><h2>The Outlook</h2><p>For each time horizon (today to next year) we show what the S&amp;P 500 has actually done in the past since 1985, and what it did in conditions like today's (same trend and fear level). We do not forecast prices. The lists of factors pushing up or down are live readings from our data, and the calendar shows what's scheduled.</p><h2>AI &amp; Tech Watch</h2><p>Ten warning signs for AI and tech stocks: valuation, concentration, the AI spending gap, earnings, rates, credit, fear, trend, insider selling, and chip-stock weakness. Each turns "warning" or "clear", and a weighted score summarises them.</p>
-  <div class="callout"><b>We tested it.</b> Replaying 1999–2026, the combined score made a 15%+ drop in the next 60 days about 1.7–2x as likely as normal. That is a modest tilt, not a prediction. Two of our original ideas (low VIX and stretched prices as warnings) did not work, so we dropped or down-weighted them.</div>
+  <h2>Markets</h2><p>The Markets section tracks major indices, the 11 stock sectors, rates, the dollar, oil, gold and bitcoin from Yahoo Finance, updated each trading day.</p><h2>The Outlook</h2><p>For each time horizon (today to next year) we show what the S&amp;P 500 has actually done in the past since 1985, and what it did in conditions like today's (same trend and fear level). We do not forecast prices. The lists of factors pushing up or down are live readings from our data, and the calendar shows what's scheduled.</p><h2>AI &amp; Tech Watch</h2><p>Ten warning signs for AI and tech stocks: valuation, concentration, the AI spending gap, earnings, rates, credit, fear, trend, insider selling, and chip-stock weakness. Each turns "warning" or "clear", and a weighted health score summarises them (100 = all clear, 0 = danger).</p>
+  <div class="callout"><b>We tested it.</b> Replaying 1999–2026, whenever the health score fell to 75 or below, a 15%+ drop in the next 60 days was about 1.7–2x as likely as normal. That is a modest tilt, not a prediction. Two of our original ideas (low VIX and stretched prices as warnings) did not work, so we dropped or down-weighted them.</div>
   <h2>Data sources</h2><p>Market prices (Yahoo Finance), company filings and insider trades (SEC EDGAR). Updated each trading day.</p>
   <h2>Who it's for</h2><p>Ages 16 and up. We collect no personal information and show no ads.</p><h2>Important</h2><p>${DISC}</p></div>`;
 }

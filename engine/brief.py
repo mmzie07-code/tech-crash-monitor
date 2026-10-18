@@ -114,11 +114,13 @@ def build():
         pass
     prev = [h for h in hist if h["date"] < snap["date"]]
     delta = ""
+    health = 100 - snap["score"]
+    zone = "Healthy" if health > 75 else "Caution" if health > 50 else "Warning" if health > 25 else "Danger"
     if prev and prev[-1].get("score") is not None:
-        d = snap["score"] - prev[-1]["score"]
-        delta = " (%s from %d on %s)" % ("unchanged" if d == 0 else "%+d" % d, prev[-1]["score"], prev[-1]["date"])
+        d = health - (100 - prev[-1]["score"])
+        delta = " (%s from %d on %s)" % ("unchanged" if d == 0 else "%+d" % d, 100 - prev[-1]["score"], prev[-1]["date"])
     flash = [c["name"] for c in snap["checks"] if c["status"] == "warn"]
-    S.append(dict(title="AI & Tech Watch", bullets=["Crash-risk score %d, %s risk%s." % (snap["score"], snap["level"], delta),
+    S.append(dict(title="AI & Tech Watch", bullets=["Market health score %d out of 100 (%s; higher is better)%s." % (health, zone, delta),
                                                     ("Warning signs flashing: " + "; ".join(flash) + ".") if flash else "No warning signs flashing.",
                                                     "%d of %d checks are live. The score is a modest tilt in odds, not a prediction." % (snap["evaluated"], snap["total"])]))
     out = dict(date=mk["indices"][0]["date"] if mk.get("indices") else snap["date"], generated=dt.datetime.utcnow().isoformat() + "Z",
