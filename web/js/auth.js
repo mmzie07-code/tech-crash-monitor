@@ -1,6 +1,6 @@
 // Accounts (Supabase Auth) + owner bypass key. Dormant until js/config.js has a supabaseUrl.
 const AUTH = { enabled: !!(window.ANALYTIC && window.ANALYTIC.supabaseUrl), sb: null, user: null, owner: false, ready: false };
-const OPEN_ROUTES = ["home", "about", "login", "terms", "privacy"];
+const OPEN_ROUTES = ["home", "about", "login", "terms", "privacy", "methodology"];
 const fnUrl = () => window.ANALYTIC.supabaseUrl.replace(/\/$/, "") + "/functions/v1/market";
 
 function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }

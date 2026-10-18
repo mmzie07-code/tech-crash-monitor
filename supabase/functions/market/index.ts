@@ -76,6 +76,21 @@ Deno.serve(async (req) => {
         .map((x: any) => ({ symbol: x.symbol, name: x.shortname ?? x.longname ?? x.symbol, exchange: x.exchDisp, type: x.quoteType }));
       return json({ results });
     }
+    if (action === "news") {  // headlines only (title, source, link); the publisher owns the story
+      const qn = (u.searchParams.get("q") ?? "").replace(/[^\w .&'-]/g, "").trim().slice(0, 60);
+      if (!qn) return json({ items: [] });
+      const key = `https://news.google.com/rss/search?q=${encodeURIComponent(qn + " when:14d")}&hl=en-US&gl=US&ceid=US:en`;
+      const hit = cache.get(key);
+      let xml: string;
+      if (hit && Date.now() - hit.at < 600_000) xml = hit.body as string;
+      else { const r = await fetch(key, { headers: { "User-Agent": "Mozilla/5.0" } }); if (!r.ok) throw new Error("news upstream " + r.status); xml = await r.text(); cache.set(key, { at: Date.now(), body: xml }); }
+      const dec = (s: string) => s.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").trim();
+      const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 8).map((m) => {
+        const b = m[1], title = dec(/<title>([\s\S]*?)<\/title>/.exec(b)?.[1] ?? ""), src = dec(/<source[^>]*>([\s\S]*?)<\/source>/.exec(b)?.[1] ?? "");
+        return { title: src && title.endsWith(" - " + src) ? title.slice(0, -(src.length + 3)) : title, source: src, link: dec(/<link>([\s\S]*?)<\/link>/.exec(b)?.[1] ?? ""), published: dec(/<pubDate>([\s\S]*?)<\/pubDate>/.exec(b)?.[1] ?? "") };
+      });
+      return json({ items });
+    }
     const sym = (u.searchParams.get("symbol") ?? "").toUpperCase();
     if (!SYMBOL.test(sym)) return json({ error: "Bad symbol" }, 400);
     if (action === "chart") {

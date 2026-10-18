@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps
+import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -54,6 +54,16 @@ def main():
         history.main()
     except Exception as e:
         print("universe/history failed:", e)
+    try:
+        fo, missing = fundamentals.build()
+        json.dump(fo, open(os.path.join(DATA, "fundamentals.json"), "w"), separators=(",", ":"))
+        print("fundamentals written: %d companies" % len(fo["stocks"]))
+    except Exception as e:
+        print("fundamentals failed:", e)
+    try:
+        snapshots.main()
+    except Exception as e:
+        print("snapshots failed:", e)
     try:
         json.dump(earnings.build(), open(os.path.join(DATA, "earnings.json"), "w"), indent=1)
         print("earnings written")

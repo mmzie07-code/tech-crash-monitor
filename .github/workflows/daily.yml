@@ -2,7 +2,12 @@ name: Daily update
 on:
   schedule:
     - cron: "30 21 * * 1-5"   # 21:30 UTC weekdays = after the US close in both EST and EDT
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      snap_limit:
+        description: "Company snapshots to refresh (default 200; use 600 to refresh all)"
+        required: false
+        default: "200"
 permissions:
   contents: write
   pages: write
@@ -26,11 +31,13 @@ jobs:
           path: |
             data/hist
             data/hist-ohlc
+            data/snap
           key: hist-${{ github.run_id }}
           restore-keys: hist-
       - run: pip install yfinance
       - name: Run engine
         env:
+          SNAP_LIMIT: ${{ github.event.inputs.snap_limit || '200' }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: adds an AI-written summary paragraph
         run: python engine/run_daily.py
@@ -38,7 +45,7 @@ jobs:
         run: |
           git config user.name "crash-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/event_archive.json data/outlook.json data/quotes.json data/earnings.json data/sectors.json data/search.json data/gics.json data/cache/form4_*.json
+          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/event_archive.json data/outlook.json data/quotes.json data/fundamentals.json data/earnings.json data/sectors.json data/search.json data/gics.json data/cache/form4_*.json
           git commit -m "Daily update $(date -u +%F)" || echo "no changes"
           for i in 1 2 3; do
             git pull --rebase -X theirs origin main && git push && break

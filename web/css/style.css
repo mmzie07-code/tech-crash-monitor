@@ -91,3 +91,6 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .zoombar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:8px 0 2px}
 .zb{display:inline-flex;gap:6px;flex-wrap:wrap}.zb button{border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-size:14px;font-weight:700;min-width:38px;height:34px;padding:0 12px;border-radius:999px;cursor:pointer}
 .zb button:hover{border-color:var(--brand)}
+
+@media print{header.top,footer,.tabbar,.noprint,.gsw,#authbtn,#wl,.version-banner{display:none!important}
+ body{background:#fff;color:#000}main{padding:0}.card,.wid{box-shadow:none!important;border:1px solid #ccc!important;break-inside:avoid}a{color:#000;text-decoration:none}.tw{overflow:visible}input[type=range]{display:none}}
