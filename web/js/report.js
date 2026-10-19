@@ -79,6 +79,18 @@ function peerMultiples(m) {
   return rows.slice(0, 12);
 }
 const median = (a) => { const v = a.filter((x) => x != null && isFinite(x)).sort((x, y) => x - y); return v.length ? (v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2) : null; };
+// Context for any single result: where does this same model land, on average, for the largest companies today?
+function marketGap() {
+  if (state.gap !== undefined) return state.gap;
+  const ratios = [];
+  for (const r of state.search.stocks.slice(0, 50)) {
+    if (DCF_SPECIAL[r[2]]) continue;
+    const m = modelInputs(r[0]); if (m.error) continue;
+    const A = initA(m); if (!(A.margin > 0.005)) continue;
+    const v = runDCF(m, A).perShare; if (v > 0) ratios.push(v / m.price);
+  }
+  return (state.gap = ratios.length >= 10 ? { n: ratios.length, med: median(ratios) } : null);
+}
 
 // ---------- the page ----------
 let RPT = null;
@@ -149,6 +161,8 @@ function drawResults() {
   const warn = []; if (meaningful && base.tvShare > 0.75) warn.push(`About ${Math.round(base.tvShare * 100)}% of this value comes from the years after year 7 (the terminal value), which makes it very sensitive to long-run assumptions.`);
   if (meaningful && (base.perShare > m.price * 5 || base.perShare < m.price * 0.2)) warn.push("The model lands very far from the market price. A gap that big usually reflects an assumption, not a bargain.");
   if (m.rf > 0.048) warn.push(`Treasury yields are high right now (${pct1(m.rf, 2)}). A high risk-free rate raises the discount rate and lowers every cash-flow value, which is one reason most stocks look expensive in this model today.`);
+  const gap = meaningful ? marketGap() : null;
+  if (gap && (gap.med < 0.8 || gap.med > 1.25)) warn.push(`For context: across the ${gap.n} largest US companies this model can value, its default value is typically about ${Math.round(gap.med * 100)}% of the market price today. A gap on its own is not unusual, so compare this company with the peers below rather than with the price alone.`);
   if (m.beta < 0.5) warn.push("Measured beta is low, which pushes the discount rate down and values up. Defensive stocks can look cheaper in a DCF than they really are.");
   top.innerHTML = `<div class="card big" style="margin-top:14px"><span class="pill g">What's priced in</span><p style="font-size:18px;margin:8px 0 0">${story}</p></div>
    <div class="card"><h3>Valuation range</h3>${range}${warn.map((t) => `<p class="small" style="color:var(--warn);margin:8px 0 0">⚠ ${esc(t)}</p>`).join("")}</div>`;
