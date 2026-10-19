@@ -1,41 +1,41 @@
 {
- "date": "2026-10-16",
- "generated": "2026-10-18T19:14:52.749095Z",
- "headline": "US stocks finished lower. The S&P 500 fell 1.09%, with 6 of 11 sectors up.",
+ "date": "2026-10-19",
+ "generated": "2026-10-19T22:28:11.484040Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.41%, with 3 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -1.09% today, +0.28% this month, +11.68% this year",
-    "Dow Jones: -0.34% today, +0.43% this month, +7.48% this year",
-    "Nasdaq Composite: -2.15% today, -1.05% this month, +12.50% this year",
-    "Russell 2000: -1.66% today, -5.33% this month, +8.50% this year"
+    "S&P 500: +0.41% today, +0.53% this month, +12.13% this year",
+    "Dow Jones: -0.07% today, +0.55% this month, +7.41% this year",
+    "Nasdaq Composite: +1.11% today, -0.35% this month, +13.75% this year",
+    "Russell 2000: +0.25% today, -4.62% this month, +8.77% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +2.52%, Utilities +1.34%, Consumer Staples +1.08%",
-    "Lagging: Technology -3.02%, Communication -1.89%, Consumer Discretionary -0.84%",
-    "6 of 11 sectors rose."
+    "Leading: Consumer Discretionary +1.78%, Technology +1.36%, Materials +0.06%",
+    "Lagging: Utilities -2.01%, Real Estate -1.16%, Financials -0.83%",
+    "3 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 19.99 (+21.45% today)",
-    "10-year Treasury yield: 5.10% (+0.01 pts today)",
-    "US dollar index: 101.84 (-0.16% today)",
-    "Crude oil: 99.02 (+1.07% today)",
-    "Gold: 4,181.10 (+0.26% today)",
-    "Bitcoin: 81,040.37 (-0.42% today)"
+    "VIX (fear gauge): 18.44 (-7.75% today)",
+    "10-year Treasury yield: 5.14% (+0.04 pts today)",
+    "US dollar index: 101.97 (+0.13% today)",
+    "Crude oil: 98.24 (-3.13% today)",
+    "Gold: 4,160.30 (-0.50% today)",
+    "Bitcoin: 81,943.90 (-0.09% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The VIX (expected volatility) jumped +21.45% to 20.0. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "A 5.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil -3.13% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "A 3.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -50,60 +50,60 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Crash-risk score 75, Severe risk (+25 from 50 on 2026-10-15).",
-    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Market health score 38 out of 100 (Warning; higher is better) (+13 from 25 on 2026-10-16).",
+    "Warning signs flashing: AI capex vs revenue gap; Rates rising; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Bessent warns Zelenskyy to 'be very careful' about claims U.S. is throttling Starlink",
+   "title": "Tech stocks had a nice oversold bounce on Monday. Earnings this week will determine if it's for real",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/18/bessent-zelenskyy-starlink-ukarine-war.html",
-   "published": "Sun, 18 Oct 2026 16:44:10"
+   "link": "https://www.cnbc.com/2026/10/19/tech-stocks-rebound-meta-tesla-earnings.html",
+   "published": "Mon, 19 Oct 2026 20:57:14"
   },
   {
-   "title": "Iran says it has a 'new operational plan' if the U.S. resumes attacks, as shipping vessels report strikes",
+   "title": "OpenAI bugging suspect Alfozan held without bail after Saudi government offers to pay",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/18/iran-us-war-rezaei-operational-plan-shipping-attacks.html",
-   "published": "Sun, 18 Oct 2026 13:52:24"
+   "link": "https://www.cnbc.com/2026/10/19/openai-bugging-suspect-alfozan-saudi-royal-family.html",
+   "published": "Mon, 19 Oct 2026 20:54:40"
   },
   {
-   "title": "Why hedge funds could be making a bond market shock more likely",
+   "title": "Trump says he'd meet with Putin and Xi, criticizes Zelenskyy",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/18/hedge-funds-bond-market-turmoil.html",
-   "published": "Sun, 18 Oct 2026 06:13:05"
+   "link": "https://www.cnbc.com/2026/10/19/trump-putin-xi-zelenskyy.html",
+   "published": "Mon, 19 Oct 2026 21:00:02"
   },
   {
-   "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+   "title": "Saudi Arabia postpones big investor conference to 2027 as Iran-backed Houthis escalate attacks on kingdom",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/18/ai-wearables-privacy-wiretap-laws.html",
-   "published": "Sun, 18 Oct 2026 12:00:01"
+   "link": "https://www.cnbc.com/2026/10/19/saudi-arabia-postpones-fii-investor-conference-to-2027.html",
+   "published": "Mon, 19 Oct 2026 19:37:51"
   },
   {
-   "title": "My wife says we can\u2019t afford to retire. I vetoed her $8,000 trip to Italy. We\u2019re in our 60s and have $4 million. Do I keep working?",
+   "title": "Blood clots are \u2018incredibly common,\u2019 even for pro athletes like Jalen Hurts. Here\u2019s what to know.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories",
-   "published": "Sun, 18 Oct 2026 17:00:00"
+   "link": "https://www.marketwatch.com/story/blood-clots-are-incredibly-common-even-for-pro-athletes-like-jalen-hurts-heres-what-to-know-e20071ef?mod=mw_rss_topstories",
+   "published": "Mon, 19 Oct 2026 21:58:00"
   },
   {
-   "title": "\u2018Some people did everything right\u2019: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?",
+   "title": "When should you dump your target-date funds?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories",
-   "published": "Sun, 18 Oct 2026 16:15:00"
+   "link": "https://www.marketwatch.com/story/when-should-you-dump-your-target-date-funds-18082148?mod=mw_rss_topstories",
+   "published": "Mon, 19 Oct 2026 21:37:00"
   },
   {
-   "title": "My sister moved in with our mother, 78, and says she deserves the $925,000 family home. Is she right?",
+   "title": "Credit markets have entered uncharted territory as the riskiest junk bonds send a warning to investors",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-sister-moved-in-with-our-widowed-mother-78-and-says-she-deserves-the-family-home-is-she-right-7981835d?mod=mw_rss_topstories",
-   "published": "Sun, 18 Oct 2026 16:00:00"
+   "link": "https://www.marketwatch.com/story/credit-markets-have-entered-uncharted-territory-as-the-riskiest-junk-bonds-send-a-warning-to-investors-816a05d5?mod=mw_rss_topstories",
+   "published": "Mon, 19 Oct 2026 21:36:00"
   },
   {
-   "title": "I\u2019m 64 with two sons, but only one works in the family business. Is it ethical to leave him 70% of the company?",
+   "title": "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life \u2014 but here\u2019s I\u2019m still hopeful",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/im-64-years-old-with-two-sons-but-only-one-works-in-the-family-firm-should-i-leave-him-70-of-the-business-2fe6c382?mod=mw_rss_topstories",
-   "published": "Sun, 18 Oct 2026 15:15:00"
+   "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
+   "published": "Mon, 19 Oct 2026 21:30:00"
   }
  ],
  "summary": null,

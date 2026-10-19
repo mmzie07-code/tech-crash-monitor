@@ -1,49 +1,183 @@
 {
- "generated": "2026-10-18T19:13:58.010483Z",
+ "generated": "2026-10-19T22:27:05.394369Z",
  "ai_summaries": false,
  "days": [
   {
-   "date": "2026-10-16",
-   "reported_total": 16,
+   "date": "2026-10-19",
+   "reported_total": 29,
    "top": [
     {
-     "symbol": "HDB",
-     "name": "HDFC Bank Limited",
-     "market_cap_b": 120.7,
-     "eps": 0.44,
-     "eps_estimate": 0.4,
+     "symbol": "FITB",
+     "name": "Fifth Third Bancorp",
+     "market_cap_b": 45.7,
+     "eps": null,
+     "eps_estimate": 1.09,
      "surprise_pct": null,
-     "timing": "time-not-supplied",
+     "timing": "time-pre-market",
      "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.44 versus $0.40 expected, so the company beat estimates.",
-      "Stock moved +1.3% on Oct 16.",
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.09.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HDB&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FITB&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "IBN",
-     "name": "ICICI Bank Limited",
-     "market_cap_b": 105.4,
-     "eps": 0.39,
-     "eps_estimate": 0.4,
+     "symbol": "STLD",
+     "name": "Steel Dynamics",
+     "market_cap_b": 34.5,
+     "eps": null,
+     "eps_estimate": 5.42,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $5.42.",
+      "Stock moved +1.9% on Oct 19 (before the report came out). Reaction comes the next session.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=STLD&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "WRB",
+     "name": "W.R. Berkley",
+     "market_cap_b": 28.0,
+     "eps": null,
+     "eps_estimate": 1.14,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.14.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WRB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "CCK",
+     "name": "Crown Holdings",
+     "market_cap_b": 12.4,
+     "eps": null,
+     "eps_estimate": 2.25,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.25.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CCK&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "PAC",
+     "name": "Grupo Aeroportuario Del Pacifico, S.A. de C.V.",
+     "market_cap_b": 12.1,
+     "eps": null,
+     "eps_estimate": 2.72,
      "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.39 versus $0.40 expected, so the company missed estimates.",
-      "Stock moved +1.9% on Oct 16.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.72.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IBN&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PAC&type=8-K&dateb=&owner=include&count=10"
     },
+    {
+     "symbol": "SMMT",
+     "name": "Summit Therapeutics Inc.",
+     "market_cap_b": 11.7,
+     "eps": null,
+     "eps_estimate": -0.28,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-0.28.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SMMT&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "AGNC",
+     "name": "AGNC Investment",
+     "market_cap_b": 10.3,
+     "eps": null,
+     "eps_estimate": 0.39,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.39.",
+      "Stock moved -3.2% on Oct 19 (before the report came out). Reaction comes the next session.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AGNC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "WTFC",
+     "name": "Wintrust Financial",
+     "market_cap_b": 9.7,
+     "eps": null,
+     "eps_estimate": 3.29,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.29.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WTFC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ZION",
+     "name": "Zions Bancorporation N.A.",
+     "market_cap_b": 9.2,
+     "eps": null,
+     "eps_estimate": 1.64,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.64.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ZION&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "WAL",
+     "name": "Western Alliance Bancorporation",
+     "market_cap_b": 8.1,
+     "eps": null,
+     "eps_estimate": 2.43,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.43.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WAL&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "reported_total": 14,
+   "top": [
     {
      "symbol": "TRV",
      "name": "The Travelers Companies",
-     "market_cap_b": 80.1,
+     "market_cap_b": 81.2,
      "eps": 9.18,
      "eps_estimate": 7.07,
      "surprise_pct": 29.84,
@@ -60,7 +194,7 @@
     {
      "symbol": "TFC",
      "name": "Truist Financial",
-     "market_cap_b": 56.9,
+     "market_cap_b": 57.5,
      "eps": 1.16,
      "eps_estimate": 1.17,
      "surprise_pct": -0.85,
@@ -76,7 +210,7 @@
     {
      "symbol": "MTB",
      "name": "M&T Bank",
-     "market_cap_b": 31.6,
+     "market_cap_b": 31.1,
      "eps": 5.08,
      "eps_estimate": 4.98,
      "surprise_pct": 2.01,
@@ -108,7 +242,7 @@
     {
      "symbol": "RF",
      "name": "Regions Financial",
-     "market_cap_b": 23.3,
+     "market_cap_b": 23.4,
      "eps": 0.73,
      "eps_estimate": 0.67,
      "surprise_pct": 8.96,
@@ -124,7 +258,7 @@
     {
      "symbol": "BANF",
      "name": "BancFirst",
-     "market_cap_b": 3.6,
+     "market_cap_b": 3.7,
      "eps": 1.85,
      "eps_estimate": 1.93,
      "surprise_pct": null,
@@ -156,7 +290,7 @@
     {
      "symbol": "LADR",
      "name": "Ladder Capital",
-     "market_cap_b": 1.1,
+     "market_cap_b": 1.2,
      "eps": 0.35,
      "eps_estimate": 0.21,
      "surprise_pct": 66.67,
@@ -168,6 +302,22 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LADR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MCBS",
+     "name": "MetroCity Bankshares",
+     "market_cap_b": 1.0,
+     "eps": 0.67,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.67 (no analyst consensus available).",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCBS&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
