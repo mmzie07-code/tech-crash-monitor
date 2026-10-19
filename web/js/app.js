@@ -262,7 +262,7 @@ async function route() {
   document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a === "stock" || a === "report" ? "explore" : a)));
   if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
   if (a === "practice") wirePractice(h[1] || "", h[2]);
-  afterRender.forEach((fn) => fn());
+  afterRender.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });   // one failing task (e.g. left over from a page you just left) must not stop the rest
   wireSearch();
   wireHearts();
   const wlc = document.querySelector("#wl b"); if (wlc) wlc.textContent = FOLLOWS.length || "";
