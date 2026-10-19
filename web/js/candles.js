@@ -16,7 +16,7 @@ function mountCandleChart(el, data, opts = {}) {
   el._gen = (el._gen || 0) + 1; const gen = el._gen;
   const id = "cd" + Math.random().toString(36).slice(2, 7), money = opts.money !== false;
   const fmt = (v) => opts.unit === "yield" ? v.toFixed(2) + "%" : (money ? "$" : "") + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const tiers = {}, fetched = {};   // key -> bars [{t,o,h,l,c}], key -> ms of last fetch
+  const tiers = {}, fetched = {}, failed = {};   // key -> bars [{t,o,h,l,c}], key -> ms of last fetch, key -> last live fetch failed
   let w0 = 0, w1 = 0, vis = null, info = null, hovering = false, preset = "1D", loading = false, drag = null;
   const pointers = new Map();
 
@@ -49,11 +49,11 @@ function mountCandleChart(el, data, opts = {}) {
       let j; try { j = await opts.live(t.range); } catch (e) { j = await opts.live({ m1: "1d", m5: "5d", h1: "3mo" }[key]); }   // older server: use whatever it offers
       if (!j.o) throw new Error("no ohlc");
       tiers[key] = j.t.map((ts, i) => ({ t: ts, o: j.o[i], h: j.h[i], l: j.l[i], c: j.c[i] }));
-      fetched[key] = Date.now();
+      fetched[key] = Date.now(); failed[key] = false;
       if (key === "m1" && j.previousClose) tiers.prevClose = j.previousClose;
       const last = tiers[key][tiers[key].length - 1];
       if (key === "m1") info = { price: last.c, ts: last.t, open: Date.now() / 1000 - last.t < LIVE_FRESH_SECONDS };
-    } catch (e) { tiers[key] = tiers[key] || null; fetched[key] = Date.now(); }
+    } catch (e) { tiers[key] = tiers[key] || null; fetched[key] = Date.now(); failed[key] = true; }
     return tiers[key];
   }
   const lowerBound = (bars, t) => { let a = 0, b = bars.length; while (a < b) { const m = (a + b) >> 1; if (bars[m].t < t) a = m + 1; else b = m; } return a; };
@@ -140,7 +140,7 @@ function mountCandleChart(el, data, opts = {}) {
     q("x0").textContent = axisLabel(list[0].t, span, intr); q("xm").textContent = axisLabel(list[n >> 1].t, span, intr); q("x1").textContent = axisLabel(list[n - 1].t, span, intr);
     const spanTxt = span < 3600 ? Math.round(span / 60) + " min" : span < 2 * 86400 ? (span / 3600).toFixed(1) + " hours" : span < 120 * 86400 ? Math.round(span / 86400) + " days" : (span / 86400 / 365).toFixed(1) + " years";
     const cname = v.tier === "m1" ? "1 minute" : v.tier === "m5" ? "5 minutes" : v.tier === "h1" ? "1 hour" : v.label === "daily" ? "1 day" : v.label === "weekly" ? "1 week" : v.label.replace("every ", "");
-    q("z").textContent = `Each candle = ${cname} · showing ${spanTxt}`;
+    q("z").textContent = `Each candle = ${cname} · showing ${spanTxt}` + (opts.live && failed.m1 && span < 2 * 86400 && v.tier !== "m1" ? " · Live minute data didn't load just now, so this is coarser. It retries about once a minute." : "");
     const isLive = !!(info && info.open && opts.live && v.tier === "m1" && w1 >= bounds().end);
     liveDot.style.display = isLive ? "" : "none";
     if (isLive) { liveDot.style.setProperty("--dot", list[n - 1].c >= list[n - 1].o ? "var(--ok)" : "var(--bad)"); liveDot.style.left = (X(n - 1) / W) * 100 + "%"; liveDot.style.top = Y(list[n - 1].c) + "px"; }

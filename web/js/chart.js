@@ -74,7 +74,10 @@ function mountChart(el, data, opts = {}) {
         return { t: j.t, c: j.c, intraday: true, base: r.live === "1d" && j.previousClose ? j.previousClose : null };
       } catch (e) {
         if (my !== token) return null;
-        if (!r.days) { rng = "1Y"; return loadView(RANGES.find((x) => x.l === "1Y"), quiet); }  // no daily fallback for 1D/1W
+        if (!r.days) {  // no daily fallback for 1D/1W: keep the chosen range, say what happened, let them retry (a background refresh stays silent and keeps the current chart)
+          if (!quiet) { P.textContent = "Live prices unavailable"; C.innerHTML = `<span class="muted">Couldn't load live prices just now. Tap ${r.l} to try again, or pick a longer range.</span>`; D.textContent = ""; svg.innerHTML = ""; liveDot.style.display = "none"; el.querySelectorAll(".chr button").forEach((b) => b.classList.toggle("on", b.dataset.r === rng)); }
+          return null;
+        }
       }
     }
     if (my !== token) return null;
