@@ -37,7 +37,7 @@ function patchDaily(data, info) {
 //          live: async ("1d"|"5d"|"1mo"|"3mo"|...) => {t:[unix secs], c, o, h, l, previousClose} | null,
 //          ohlcSym: "NVDA" | ohlcData: {t,o,h,l,c}  (enables the Candles toggle) }
 function mountChart(el, data, opts = {}) {
-  const canCandle = !!(opts.ohlcSym || opts.ohlcData || opts.live);
+  const canCandle = !!(opts.ohlcSym || opts.ohlcData || opts.live) && !opts.lineOnly;
   try { if (canCandle && typeof mountCandleChart === "function" && localStorage.getItem("ml_ctype") === "candle") return mountCandleChart(el, data, opts); } catch (e) {}
   el._gen = (el._gen || 0) + 1; const gen = el._gen;
   const money = opts.money !== false, id = "ch" + Math.random().toString(36).slice(2, 7);

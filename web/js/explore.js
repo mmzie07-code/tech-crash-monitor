@@ -88,8 +88,13 @@ async function sectorPage(key) {
   let rows = s.top.filter((t) => !industryFilter || t.industry === industryFilter).map((t) => ({ ...t, perf: perfOf(t.symbol) }));
   const all50 = s.top.map((t) => ({ ...t, perf: perfOf(t.symbol) })).filter((t) => t.perf != null).sort((a, b) => b.perf - a.perf);
   rows.sort((a, b) => sortKey === "d1" ? b.d1 - a.d1 : sortKey === "best" ? (b.perf ?? -999) - (a.perf ?? -999) : sortKey === "worst" ? (a.perf ?? 999) - (b.perf ?? 999) : b.cap_b - a.cap_b);
+  // 1D/1W: the sector's ETF, scaled so today's close lands on the index's current level (so the percent moves match the ETF's)
+  const etf = Object.keys(SECTOR_ETF_KEY).find((e) => SECTOR_ETF_KEY[e] === key), etfRow = etf && state.mk && state.mk.sectors && state.mk.sectors.find((r) => r.symbol === etf);
+  const k = h && etfRow && etfRow.last ? h.c[h.c.length - 1] / etfRow.last : null;
+  const scaled = (j) => { const f = (a) => (a ? a.map((v) => (v == null ? v : v * k)) : a); return { ...j, c: f(j.c), o: f(j.o), h: f(j.h), l: f(j.l), previousClose: j.previousClose != null ? j.previousClose * k : j.previousClose }; };
+  const secLive = k && liveOK() ? (range) => liveGet("action=chart&symbol=" + encodeURIComponent(etf) + "&range=" + range).then(scaled) : null;
   afterRender.push(() => {
-    if (h) mountChart($("#secchart"), h, { money: false });
+    if (h) mountChart($("#secchart"), h, { money: false, live: secLive, lineOnly: true });
     const again = () => { state.keepScroll = true; route(); };
     document.querySelectorAll("[data-ind]").forEach((b) => b.onclick = (e) => { e.preventDefault(); industryFilter = b.dataset.ind === industryFilter ? "" : b.dataset.ind; again(); });
     document.querySelectorAll("[data-sort]").forEach((b) => b.onclick = (e) => { e.preventDefault(); sortKey = b.dataset.sort; again(); });
@@ -102,7 +107,7 @@ async function sectorPage(key) {
   <div class="card" style="margin-top:12px"><p style="margin:0 0 8px">${esc(info.blurb || "")}</p>
    <p class="small" style="margin:0 0 4px"><b>What moves it:</b> ${esc(info.drivers || "")}</p><p class="small" style="margin:0 0 4px"><b>Watch out for:</b> ${esc(info.watch || "")}</p>
    ${info.type ? `<p class="small muted" style="margin:6px 0 0">${esc(info.type)}: ${esc(TYPE_TIP[info.type])}.</p>` : ""}</div>
-  <div class="card">${h ? '<h3 style="margin-bottom:2px">Sector performance</h3><p class="small muted" style="margin-top:0">Index of the 50 largest companies, starting at 100. Hover or drag to explore.</p><div id="secchart"></div>' : '<p class="muted">Chart not available yet.</p>'}</div>
+  <div class="card">${h ? '<h3 style="margin-bottom:2px">Sector performance</h3><p class="small muted" style="margin-top:0">Index of the 50 largest companies, starting at 100. Hover or drag to explore.</p><div id="secchart"></div>' + (secLive ? `<p class="small muted" style="margin:8px 0 0">1D and 1W follow the sector fund ${esc(etf)} (live, about 15 minutes delayed), shown on this index's scale. Longer ranges use the 50-company index.</p>` : "") : '<p class="muted">Chart not available yet.</p>'}</div>
   <div class="hz">${stat("1M", "Past month")}${stat("3M", "Past 3 months")}${stat("YTD", "This year")}${stat("1Y", "Past year")}
    <div class="card"><div class="small muted">Companies · combined value</div><b>${s.companies.toLocaleString()} · ${capStr(s.total_cap_b)}</b></div>
    ${all50.length ? `<div class="card"><div class="small muted">Best of the 50 (${rowRange})</div><b><a href="#/stock/${esc(all50[0].symbol)}">${esc(all50[0].symbol)}</a> ${pctTxt(all50[0].perf)}</b></div><div class="card"><div class="small muted">Weakest of the 50 (${rowRange})</div><b><a href="#/stock/${esc(all50[all50.length - 1].symbol)}">${esc(all50[all50.length - 1].symbol)}</a> ${pctTxt(all50[all50.length - 1].perf)}</b></div>` : ""}</div>
