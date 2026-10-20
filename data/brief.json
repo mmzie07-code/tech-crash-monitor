@@ -1,41 +1,41 @@
 {
- "date": "2026-10-19",
- "generated": "2026-10-19T22:28:11.484040Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.41%, with 3 of 11 sectors up.",
+ "date": "2026-10-20",
+ "generated": "2026-10-20T22:27:30.564908Z",
+ "headline": "US stocks finished little changed. The S&P 500 rose 0.28%, with 10 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.41% today, +0.53% this month, +12.13% this year",
-    "Dow Jones: -0.07% today, +0.55% this month, +7.41% this year",
-    "Nasdaq Composite: +1.11% today, -0.35% this month, +13.75% this year",
-    "Russell 2000: +0.25% today, -4.62% this month, +8.77% this year"
+    "S&P 500: +0.28% today, -0.67% this month, +12.45% this year",
+    "Dow Jones: +1.02% today, +0.86% this month, +8.50% this year",
+    "Nasdaq Composite: -0.02% today, -2.57% this month, +13.73% this year",
+    "Russell 2000: +1.65% today, -3.55% this month, +10.57% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Consumer Discretionary +1.78%, Technology +1.36%, Materials +0.06%",
-    "Lagging: Utilities -2.01%, Real Estate -1.16%, Financials -0.83%",
-    "3 of 11 sectors rose."
+    "Leading: Health Care +2.37%, Real Estate +1.70%, Utilities +1.26%",
+    "Lagging: Technology -0.28%, Industrials +0.07%, Communication +0.09%",
+    "10 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 18.44 (-7.75% today)",
-    "10-year Treasury yield: 5.14% (+0.04 pts today)",
-    "US dollar index: 101.97 (+0.13% today)",
-    "Crude oil: 98.24 (-3.13% today)",
-    "Gold: 4,160.30 (-0.50% today)",
-    "Bitcoin: 81,943.90 (-0.09% today)"
+    "VIX (fear gauge): 17.31 (-6.13% today)",
+    "10-year Treasury yield: 5.12% (-0.02 pts today)",
+    "US dollar index: 101.71 (-0.27% today)",
+    "Crude oil: 98.18 (-5.29% today)",
+    "Gold: 4,142.50 (-0.42% today)",
+    "Bitcoin: 82,909.40 (+1.29% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil -3.13% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "A 3.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil -5.29% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "A 2.7-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -50,7 +50,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 38 out of 100 (Warning; higher is better) (+13 from 25 on 2026-10-16).",
+    "Market health score 38 out of 100 (Warning; higher is better) (unchanged from 38 on 2026-10-19).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -58,52 +58,52 @@
  ],
  "headlines": [
   {
-   "title": "Tech stocks had a nice oversold bounce on Monday. Earnings this week will determine if it's for real",
+   "title": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/19/tech-stocks-rebound-meta-tesla-earnings.html",
-   "published": "Mon, 19 Oct 2026 20:57:14"
+   "link": "https://www.cnbc.com/2026/10/20/netflix-nflx-earnings-q3-2026.html",
+   "published": "Tue, 20 Oct 2026 21:30:06"
   },
   {
-   "title": "OpenAI bugging suspect Alfozan held without bail after Saudi government offers to pay",
+   "title": "Boeing wins FAA approval for 737 Max 10 after years of delays as Duffy says certification process should be faster",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/19/openai-bugging-suspect-alfozan-saudi-royal-family.html",
-   "published": "Mon, 19 Oct 2026 20:54:40"
+   "link": "https://www.cnbc.com/2026/10/20/boeing-737-max-10-certification.html",
+   "published": "Tue, 20 Oct 2026 22:01:11"
   },
   {
-   "title": "Trump says he'd meet with Putin and Xi, criticizes Zelenskyy",
+   "title": "United Airlines slashes 2026 profit outlook on fuel prices, but travelers keep booking despite higher fares",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/19/trump-putin-xi-zelenskyy.html",
-   "published": "Mon, 19 Oct 2026 21:00:02"
+   "link": "https://www.cnbc.com/2026/10/20/united-airlines-ual-3q-2026-earnings.html",
+   "published": "Tue, 20 Oct 2026 20:23:58"
   },
   {
-   "title": "Saudi Arabia postpones big investor conference to 2027 as Iran-backed Houthis escalate attacks on kingdom",
+   "title": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/19/saudi-arabia-postpones-fii-investor-conference-to-2027.html",
-   "published": "Mon, 19 Oct 2026 19:37:51"
+   "link": "https://www.cnbc.com/2026/10/20/housing-mortgage-rates-real-estate-federal-reserve.html",
+   "published": "Tue, 20 Oct 2026 19:28:43"
   },
   {
-   "title": "Blood clots are \u2018incredibly common,\u2019 even for pro athletes like Jalen Hurts. Here\u2019s what to know.",
+   "title": "Walmart takes aim at Amazon and Costco with new membership program \u2014 but is it a good deal?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/blood-clots-are-incredibly-common-even-for-pro-athletes-like-jalen-hurts-heres-what-to-know-e20071ef?mod=mw_rss_topstories",
-   "published": "Mon, 19 Oct 2026 21:58:00"
+   "link": "https://www.marketwatch.com/story/walmart-takes-aim-at-amazon-and-costco-with-new-membership-program-but-is-it-a-good-deal-8e2292ef?mod=mw_rss_topstories",
+   "published": "Tue, 20 Oct 2026 21:47:00"
   },
   {
-   "title": "When should you dump your target-date funds?",
+   "title": "It\u2019s no secret what the best financial advice for retirement is \u2014 but most people ignore it anyway",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/when-should-you-dump-your-target-date-funds-18082148?mod=mw_rss_topstories",
-   "published": "Mon, 19 Oct 2026 21:37:00"
+   "link": "https://www.marketwatch.com/story/its-no-secret-what-the-best-financial-advice-for-retirement-is-but-most-people-ignore-it-anyway-7c9075c8?mod=mw_rss_topstories",
+   "published": "Tue, 20 Oct 2026 20:57:00"
   },
   {
-   "title": "Credit markets have entered uncharted territory as the riskiest junk bonds send a warning to investors",
+   "title": "Netflix vows to revive viewership trends, but investors hit \u2018sell\u2019 on the stock",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/credit-markets-have-entered-uncharted-territory-as-the-riskiest-junk-bonds-send-a-warning-to-investors-816a05d5?mod=mw_rss_topstories",
-   "published": "Mon, 19 Oct 2026 21:36:00"
+   "link": "https://www.marketwatch.com/story/netflix-vows-to-revive-viewership-trends-but-investors-hit-sell-on-the-stock-3e24420a?mod=mw_rss_topstories",
+   "published": "Tue, 20 Oct 2026 20:54:00"
   },
   {
-   "title": "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life \u2014 but here\u2019s I\u2019m still hopeful",
+   "title": "Bull markets tend to peak with a whimper, not a bang \u2014 but a 15% correction for the S&P 500 may be next",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
-   "published": "Mon, 19 Oct 2026 21:30:00"
+   "link": "https://www.marketwatch.com/story/bull-markets-tend-to-peak-with-a-whimper-not-a-bang-but-a-15-correction-for-the-s-p-500-may-be-next-dab40e2c?mod=mw_rss_topstories",
+   "published": "Tue, 20 Oct 2026 20:45:00"
   }
  ],
  "summary": null,
