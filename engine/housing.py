@@ -218,8 +218,21 @@ def story(series, pay, market):
     return out
 
 
+def keep_last_good(series):
+    """If a source is down tonight, keep its last good series from the previous file (marked stale) instead of dropping it from the page."""
+    try:
+        old = json.load(open(os.path.join(DATA, "housing.json"))).get("series") or {}
+    except Exception:
+        return series
+    for k, v in old.items():
+        if k not in series and v:
+            v["stale"] = True
+            series[k] = v
+    return series
+
+
 def build():
-    series = build_series()
+    series = keep_last_good(build_series())
     pay = build_payment(series) if series else None
     market = build_market()
     return dict(generated=dt.datetime.utcnow().isoformat() + "Z", series=series, payment=pay, market=market, moves=build_moves(), story=story(series, pay, market),
