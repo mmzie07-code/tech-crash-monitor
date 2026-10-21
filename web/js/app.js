@@ -256,7 +256,7 @@ async function route() {
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
   const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
-    explore: () => (h[1] === "overlooked" ? overlookedPage() : h[1] === "heatmap" ? heatmapPage() : h[1] === "screener" ? screenerPage() : h[1] === "compare" ? comparePage(h[2]) : h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), report: () => reportPage(h[1], h[2]), methodology: () => methodologyPage(), watchlist: () => watchlistPage(), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
+    explore: () => (h[1] === "overlooked" ? overlookedPage() : h[1] === "heatmap" ? heatmapPage() : h[1] === "screener" ? screenerPage() : h[1] === "compare" ? comparePage(h[2]) : h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), analysis: () => analysisPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), report: () => reportPage(h[1], h[2]), methodology: () => methodologyPage(), watchlist: () => watchlistPage(), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
   const pending = (typeof gateView === "function" && gateView(a)) || (views[a] || views.home)();
@@ -264,13 +264,14 @@ async function route() {
   const html = await pending;
   if (token !== routeToken) return; // a newer navigation won
   $("#view").innerHTML = html;
-  document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a === "stock" || a === "report" ? "explore" : a)));
+  document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a === "stock" || a === "report" || a === "analysis" ? "explore" : a)));
   if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
   if (a === "practice") wirePractice(h[1] || "", h[2]);
   afterRender.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });   // one failing task (e.g. left over from a page you just left) must not stop the rest
   wireSearch();
   wireHearts();
   if (typeof tickerSync === "function") tickerSync();
+  if (typeof setupSync === "function") setupSync(a, h);
   const wlc = document.querySelector("#wl b"); if (wlc) wlc.textContent = FOLLOWS.length || "";
   if (!keepScroll) window.scrollTo(0, 0);
 }

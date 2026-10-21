@@ -161,8 +161,110 @@ def wavg(pairs):
     return sum(v * w for v, w in pairs) / tw if tw else None
 
 
+def _chk(lst, ok, text, na=False):
+    lst.append(dict(ok=bool(ok), t=text, na=bool(na)))
+
+
+def _score(lst):
+    live = [c for c in lst if not c["na"]]
+    return dict(checks=lst, score=sum(1 for c in live if c["ok"]), total=len(live))
+
+
+def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods):
+    """The full-analysis page: for each section a pass/fail checklist (each check is a plain statement with its numbers) plus the data for its charts."""
+    price, out = m["price"], {}
+    # ---- valuation ----
+    V = []
+    if peer:
+        _chk(V, price < peer["base"], "Priced at $%.2f, %s the $%.2f it would trade at on its sector's typical multiples" % (price, "below" if price < peer["base"] else "above", peer["base"]))
+    else:
+        _chk(V, False, "Sector-typical value can't be worked out (it needs positive earnings or cash flow)", na=True)
+    for key, label in [("pe", "Price/earnings"), ("pfcf", "Price/free cash flow"), ("evebit", "Enterprise value/operating profit"), ("pb", "Price/book value")]:
+        if special and key in ("pfcf", "evebit"):
+            continue
+        v, med = m.get(key), md.get(key)
+        if v is None:
+            _chk(V, False, "%s can't be compared (%s)" % (label, "no positive earnings" if key == "pe" else "no positive free cash flow" if key == "pfcf" else "no positive operating profit" if key == "evebit" else "no positive book value"), na=True)
+        elif med:
+            _chk(V, v < med, "%s of %.1f× is %s its sector's median of %.1f×" % (label, v, "below" if v < med else "above", med))
+    if not special:
+        if mv and mv.get("ok"):
+            _chk(V, price < mv["base"], "Priced at $%.2f, %s the cash-flow model's $%.2f" % (price, "below" if price < mv["base"] else "above", mv["base"]))
+        else:
+            _chk(V, False, (mv or {}).get("note", "The cash-flow model can't value this company"), na=True)
+    out["valuation"] = dict(_score(V), metrics={k: dict(v=m.get(k), med=md.get(k)) for k in ("pe", "pfcf", "evebit", "pb")})
+    # ---- past performance ----
+    P = []
+    if m["cagr"] is not None and m["n"] >= 1:
+        _chk(P, m["cagr"] > 0, "Revenue %s %.0f%% a year over %d years" % ("grew" if m["cagr"] > 0 else "shrank", abs(m["cagr"]) * 100, m["n"]))
+        if m2.get("cagr") is not None:
+            _chk(P, m["cagr"] >= m2["cagr"], "Revenue growth of %.0f%% a year is %s its sector's median of %.0f%%" % (m["cagr"] * 100, "at or above" if m["cagr"] >= m2["cagr"] else "below", m2["cagr"] * 100))
+    if m["ni"] is not None:
+        _chk(P, m["ni"] > 0, "%s %s last year" % ("Earned" if m["ni"] > 0 else "Lost", money(abs(m["ni"]))))
+    if m["ni_growth"] is not None:
+        g = m["ni_growth"]
+        _chk(P, g > 0, "Net income %s" % ("grew %.0f%% a year" % (g * 100) if g > 0 and g != 0.5 else "turned from a loss to a profit" if g == 0.5 else "fell or stayed negative over the period"))
+    if m["opm"] is not None and m2.get("opm") is not None:
+        _chk(P, m["opm"] >= m2["opm"], "Operating margin of %.0f%% is %s its sector's median of %.0f%%" % (m["opm"] * 100, "at or above" if m["opm"] >= m2["opm"] else "below", m2["opm"] * 100))
+    if m["roe"] is not None:
+        _chk(P, m["roe"] >= 0.10, "Return on shareholders' equity is %.0f%% (a healthy level is 10%% or more)" % (m["roe"] * 100))
+    ser = lambda k: [None if v is None else round(v, 1) for v in (F.get(k) or [])]
+    fcf_series = [None if (F.get("ocf") or [None] * 4)[i] is None else round(F["ocf"][i] - nz((F.get("capex") or [None] * 4)[i]), 1) for i in range(len(F.get("ocf") or []))]
+    beats = [e for e in (snap.get("earnings") or []) if e.get("surprise_pct") is not None][:4]
+    out["past"] = dict(_score(P), periods=periods, rev=ser("rev"), ni=ser("ni"), opinc=ser("opinc"), fcf=fcf_series,
+                       surprises=[dict(q=e.get("quarter"), eps=e.get("eps"), est=e.get("estimate"), pct=e.get("surprise_pct")) for e in beats])
+    # ---- financial health ----
+    if sec == "financials":
+        out["health"] = dict(checks=[], score=0, total=0, note="Banks, insurers and asset managers run on borrowed money by design, so ordinary debt checks don't apply to them.")
+    else:
+        H, debt, cash = [], m["debt"], m["cash"]
+        _chk(H, debt <= 0 or cash >= debt, "Holds %s of cash against %s of debt" % (money(cash), money(debt)) if debt > 0 else "Has no borrowings in its filings data")
+        if m["equity"] and m["equity"] > 0:
+            _chk(H, debt <= m["equity"], "Debt is %.0f%% of shareholders' equity" % (debt / m["equity"] * 100) if debt > 0 else "Has no debt against its shareholders' equity")
+        else:
+            _chk(H, False, "Shareholders' equity is zero or negative (liabilities exceed assets)")
+        if debt <= 0:
+            _chk(H, True, "No debt to repay")
+        elif m["ocf"] and m["ocf"] > 0:
+            _chk(H, debt / m["ocf"] <= 4, "Debt equals %.1f years of operating cash flow (4 or fewer is comfortable)" % (debt / m["ocf"]))
+        else:
+            _chk(H, False, "Operations aren't producing cash to repay %s of debt" % money(debt))
+        if m["int_cov"] is not None:
+            _chk(H, m["int_cov"] >= 5, "Operating profit covers its interest bill %.1f times (5 or more is comfortable)" % m["int_cov"])
+        elif debt <= 0:
+            _chk(H, True, "No interest bill")
+        if m["fcf"] is not None:
+            if m["fcf"] >= 0:
+                _chk(H, True, "Free cash flow is positive (%s)" % money(m["fcf"]))
+            else:
+                runway = cash / -m["fcf"] if cash else 0
+                _chk(H, runway >= 3, "Burning %s a year; its cash would last about %.1f years at that pace" % (money(-m["fcf"]), runway))
+        out["health"] = dict(_score(H), cash=round(cash, 1), debt=round(debt, 1), equity=m["equity"], ocf=m["ocf"], rev=m["rev"])
+    # ---- dividends and buybacks ----
+    D, dv, bb = [], m["div"], m["buy"]
+    _chk(D, dv > 0, "Pays a dividend (%s last year)" % money(dv) if dv > 0 else "Doesn't pay a dividend")
+    if dv > 0:
+        yld = dv / m["cap"] * 100
+        _chk(D, yld >= 1, "Dividend yield is %.1f%% (1%% or more)" % yld)
+        if m["fcf"] is not None and m["fcf"] > 0:
+            _chk(D, m["fcf"] >= dv, "Free cash flow (%s) %s the dividend (%s)" % (money(m["fcf"]), "covers" if m["fcf"] >= dv else "does not cover", money(dv)))
+        if m["ni"] and m["ni"] > 0:
+            _chk(D, dv / m["ni"] <= 0.75, "Pays out %.0f%% of its profit as dividends (75%% or less leaves room)" % (dv / m["ni"] * 100))
+        dseries = [v for v in (F.get("dividends") or []) if v is not None and v > 0]
+        if len(dseries) >= 2:
+            _chk(D, dseries[-1] > dseries[0], "Dividend payments %s over the period (%s to %s)" % ("rose" if dseries[-1] > dseries[0] else "did not rise", money(dseries[0]), money(dseries[-1])))
+    _chk(D, bb > 0, "Buys back its own shares (%s last year)" % money(bb) if bb > 0 else "Isn't buying back shares")
+    out["dividend"] = dict(_score(D), yield_pct=round(dv / m["cap"] * 100, 2) if m["cap"] else 0, payout_pct=round(dv / m["ni"] * 100) if m["ni"] and m["ni"] > 0 and dv > 0 else None,
+                           div=ser("dividends"), buy=ser("buyback"), periods=periods, shareholder_yield=round(m["payout_yield"] * 100, 2))
+    # ---- insiders and ownership (no pass/fail: filings tell you what happened, not whether it is good) ----
+    big = [dict(form=f.get("form"), date=f.get("date"), what=f.get("what"), url=f.get("url")) for f in (snap.get("filings") or []) if "13" in (f.get("form") or "")][:6]
+    out["ownership"] = dict(insider_filings_90d=snap.get("insider_filings_90d"), large_holder_filings=big, has_snapshot=bool(snap))
+    return out
+
+
 def build(out_dir):
-    F_all = json.load(open(os.path.join(DATA, "fundamentals.json")))["stocks"]
+    fd = json.load(open(os.path.join(DATA, "fundamentals.json")))
+    F_all, periods = fd["stocks"], [x.replace("CY", "") for x in fd.get("periods", [])]
     S = json.load(open(os.path.join(DATA, "search.json")))["stocks"]
     try:
         mk = json.load(open(os.path.join(DATA, "markets.json")))
@@ -180,6 +282,16 @@ def build(out_dir):
         rankers[sec] = {k: make_ranker(pool, k, rev) for k, rev in [("pe", True), ("pfcf", True), ("evebit", True), ("pb", True), ("cagr", False), ("ni_growth", False), ("opm", False), ("fcfm", False), ("roe", False), ("debt_cover", True), ("int_cov", False)]}
     import statistics
     med = {sec: {k: statistics.median(v) for k in ("pe", "pfcf", "evebit", "pb") for v in [[p[k] for p in pool if p.get(k)]] if len(v) >= 8} for sec, pool in pools.items()}
+    med2 = {sec: {k: statistics.median(v) for k in ("cagr", "opm", "roe", "fcfm") for v in [[p[k] for p in pool if p.get(k) is not None]] if len(v) >= 8} for sec, pool in pools.items()}
+    industry = {}
+    adir = os.path.join(DATA, "about")
+    if os.path.isdir(adir):
+        for f in os.listdir(adir):
+            try:
+                industry[f[:-5]] = json.load(open(os.path.join(adir, f))).get("industry")
+            except Exception:
+                pass
+    payloads, meta = {}, {}
     os.makedirs(out_dir, exist_ok=True)
     snapdir, histdir = os.path.join(DATA, "snap"), os.path.join(DATA, "hist")
     written = 0
@@ -300,9 +412,22 @@ def build(out_dir):
             if parts:
                 vals = sorted(parts.values())
                 peer = dict(base=round(statistics.median(vals), 2), low=vals[0], high=vals[-1], parts=parts, med={k: round(v, 1) for k, v in md.items()})
-        json.dump(dict(s=sym, axes=axes, na=na, summary=summary, rewards=[c["t"] for c in rewards[:4]], risks=[dict(t=c["t"], k=c["k"]) for c in risks[:4]],
-                       all=[dict(t=c["t"], k=c["k"]) for c in sorted(C, key=lambda c: (c["k"] != "good", c["o"]))], model=mv, peer=peer, peers=len(pools.get(sec, []))),
-                  open(os.path.join(out_dir, sym + ".json"), "w"), separators=(",", ":"))
+        payloads[sym] = dict(s=sym, axes=axes, na=na, summary=summary, rewards=[c["t"] for c in rewards[:4]], risks=[dict(t=c["t"], k=c["k"]) for c in risks[:4]],
+                             all=[dict(t=c["t"], k=c["k"]) for c in sorted(C, key=lambda c: (c["k"] != "good", c["o"]))], model=mv, peer=peer, peers=len(pools.get(sec, [])),
+                             sec=build_sections(m, sec, special, med.get(sec, {}), med2.get(sec, {}), peer, mv, snap, F_all[sym], periods))
+        meta[sym] = dict(sector=sec, cap=m["cap"], name=m["name"], price=m["price"], pe=m["pe"], pfcf=m["pfcf"], pb=m["pb"], evebit=m["evebit"])
+    # second pass: similar companies (same industry first when we know it, then nearest in size within the sector), each with its own scorecard
+    by_sec = {}
+    for sym in payloads:
+        by_sec.setdefault(meta[sym]["sector"], []).append(sym)
+    for sym, pl in payloads.items():
+        me = meta[sym]
+        cands = [x for x in by_sec[me["sector"]] if x != sym and meta[x]["cap"] >= 100]
+        cands.sort(key=lambda x: (0 if industry.get(sym) and industry.get(x) == industry.get(sym) else 1, abs(math.log(max(meta[x]["cap"], 1) / max(me["cap"], 1)))))
+        pl["similar"] = [dict(s=x, name=meta[x]["name"], cap_b=round(meta[x]["cap"] / 1000, 2), price=meta[x]["price"], axes=payloads[x]["axes"],
+                              pe=round(meta[x]["pe"], 1) if meta[x]["pe"] else None, pfcf=round(meta[x]["pfcf"], 1) if meta[x]["pfcf"] else None,
+                              pb=round(meta[x]["pb"], 1) if meta[x]["pb"] else None, evebit=round(meta[x]["evebit"], 1) if meta[x]["evebit"] else None) for x in cands[:6]]
+        json.dump(pl, open(os.path.join(out_dir, sym + ".json"), "w"), separators=(",", ":"))
         written += 1
     return written, len(allm)
 

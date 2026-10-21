@@ -40,6 +40,7 @@ async function fillProfile(sym, price) {
   const legend = PROFILE_AXES.map(([k, name, tip]) => `<div class="small" style="margin:4px 0"><b>${name}</b> <span class="muted">${sc.axes[k] == null ? "not scored for this type of company" : sc.axes[k] + " out of 100"}. ${esc(tip)}</span></div>`).join("");
   box.innerHTML = `<div class="prof"><div><h3 style="margin:0 0 2px">Rewards</h3><ul class="rr">${rewards}</ul><h3 style="margin:14px 0 2px">Risks</h3><ul class="rr">${risks}</ul>${all}</div>
     <div>${have >= 3 ? radarSvg(sc.axes) : ""}${sc.summary ? `<p class="small" style="margin:6px 0 0;text-align:center"><b>${esc(sc.summary.split(" Scores compare")[0])}</b></p>` : ""}
+    <p style="margin:10px 0 0;text-align:center"><a class="btn" href="#/analysis/${esc(sym)}">See the full analysis →</a></p>
     <details style="margin-top:8px"><summary class="small muted" style="cursor:pointer">What the five scores mean</summary>${legend}<p class="small muted" style="margin:6px 0 0">Each score compares this company with the ${sc.peers ? sc.peers.toLocaleString() + " others" : "others"} in its sector: 50 is typical, 100 is better than all of them. Built from SEC filings and prices, using fixed rules. Not a rating or advice.</p></details></div></div>`;
   box.hidden = false;
   // value yardsticks under the chart
