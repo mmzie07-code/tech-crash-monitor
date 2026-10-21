@@ -1,7 +1,173 @@
 {
- "generated": "2026-10-20T22:26:34.248256Z",
+ "generated": "2026-10-21T05:32:38.045458Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-10-21",
+   "reported_total": 91,
+   "top": [
+    {
+     "symbol": "META",
+     "name": "Meta Platforms",
+     "market_cap_b": 1797.1,
+     "eps": null,
+     "eps_estimate": 6.54,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $6.54.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=META&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TSLA",
+     "name": "Tesla, Inc.",
+     "market_cap_b": 1453.7,
+     "eps": null,
+     "eps_estimate": 0.22,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.22.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TSLA&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "LRCX",
+     "name": "Lam Research",
+     "market_cap_b": 340.6,
+     "eps": null,
+     "eps_estimate": 2.17,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.17.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LRCX&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "PM",
+     "name": "Philip Morris International",
+     "market_cap_b": 313.4,
+     "eps": null,
+     "eps_estimate": 2.3,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.30.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "SAP",
+     "name": "SAP SE",
+     "market_cap_b": 277.7,
+     "eps": null,
+     "eps_estimate": 2.03,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.03.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SAP&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TXN",
+     "name": "Texas Instruments Incorporated",
+     "market_cap_b": 252.2,
+     "eps": null,
+     "eps_estimate": 2.4,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.40.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TXN&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TMO",
+     "name": "Thermo Fisher Scientific",
+     "market_cap_b": 251.2,
+     "eps": null,
+     "eps_estimate": 6.4,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $6.40.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TMO&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "IBM",
+     "name": "International Business Machines",
+     "market_cap_b": 222.7,
+     "eps": null,
+     "eps_estimate": 2.88,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.88.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IBM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ABT",
+     "name": "Abbott Laboratories",
+     "market_cap_b": 180.1,
+     "eps": null,
+     "eps_estimate": 1.42,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.42.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ABT&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "NEE",
+     "name": "NextEra Energy",
+     "market_cap_b": 163.1,
+     "eps": null,
+     "eps_estimate": 1.19,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.19.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NEE&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-10-20",
    "reported_total": 53,

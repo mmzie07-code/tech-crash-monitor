@@ -1,100 +1,11 @@
 {
- "generated": "2026-10-20T22:27:28.144016Z",
+ "generated": "2026-10-21T05:34:40.405585Z",
  "as_of": "2026-10-20",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
   "today": {
    "label": "Today",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10330,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 2566,
-    "up": 53,
-    "median": 0.0,
-    "p10": -1.0,
-    "p25": -0.4,
-    "p75": 0.5,
-    "p90": 1.0,
-    "below": 10,
-    "above": 11,
-    "worst": -4.1,
-    "best": 2.9
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (1.4% below it).",
-    "VIX at 17.3: investors are relatively calm."
-   ],
-   "bear": [
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "GE Aerospace (GE) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Netflix (NFLX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "RTX (RTX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Intuitive Surgical (ISRG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Chubb Limited (CB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Capital One Financial (COF) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "3M Company (MMM) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "General Motors Company (GM) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
@@ -182,6 +93,95 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10330,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 2566,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (1.4% below it).",
+    "VIX at 17.3: investors are relatively calm."
+   ],
+   "bear": [
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Procter & Gamble Company (The) (PG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Union Pacific (UNP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "After close",
+     "title": "Western Digital (WDC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Lockheed Martin (LMT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Valero Energy (VLO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "After close",
+     "title": "Newmont (NEM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Spotify Technology S.A. (SPOT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Blackstone (BX) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -223,54 +223,6 @@
    ],
    "events": [
     {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "GE Aerospace (GE) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Netflix (NFLX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "RTX (RTX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Intuitive Surgical (ISRG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Chubb Limited (CB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "After close",
-     "title": "Capital One Financial (COF) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "3M Company (MMM) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-20",
-     "time": "Before open",
-     "title": "General Motors Company (GM) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-10-21",
      "time": "After close",
      "title": "Meta Platforms (META) reports earnings",
@@ -292,6 +244,54 @@
      "date": "2026-10-21",
      "time": "Before open",
      "title": "Philip Morris International (PM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "SAP SE (SAP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "Texas Instruments Incorporated (TXN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "Before open",
+     "title": "Thermo Fisher Scientific (TMO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-21",
+     "time": "After close",
+     "title": "International Business Machines (IBM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Procter & Gamble Company (The) (PG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Union Pacific (UNP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "After close",
+     "title": "Western Digital (WDC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Lockheed Martin (LMT) reports earnings",
      "importance": "medium"
     }
    ]
