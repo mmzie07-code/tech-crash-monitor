@@ -34,7 +34,8 @@ jobs:
             data/snap
           key: hist-${{ github.run_id }}
           restore-keys: hist-
-      - name: Restore company-descriptions cache (kept separate from the one above: a cache is identified by its list of folders, so adding a folder there silently discards everything saved)
+      # A cache is identified by its list of folders, so this one stays separate from the cache above (adding a folder there silently discards everything saved)
+      - name: Restore company-descriptions cache
         uses: actions/cache@v4
         with:
           path: data/about
