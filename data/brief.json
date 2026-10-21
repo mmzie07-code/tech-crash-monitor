@@ -1,6 +1,6 @@
 {
  "date": "2026-10-20",
- "generated": "2026-10-21T05:34:42.940567Z",
+ "generated": "2026-10-21T15:11:49.307606Z",
  "headline": "US stocks finished little changed. The S&P 500 rose 0.28%, with 10 of 11 sectors up.",
  "sections": [
   {
@@ -23,18 +23,18 @@
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 17.31 (-6.13% today)",
-    "10-year Treasury yield: 5.12% (-0.02 pts today)",
-    "US dollar index: 101.78 (+0.05% today)",
-    "Crude oil: 99.01 (-2.73% today)",
-    "Gold: 4,132.80 (-0.24% today)",
-    "Bitcoin: 82,700.21 (+1.03% today)"
+    "VIX (fear gauge): 17.01 (-1.73% today)",
+    "10-year Treasury yield: 5.10% (-0.02 pts today)",
+    "US dollar index: 101.71 (-0.02% today)",
+    "Crude oil: 97.24 (-4.47% today)",
+    "Gold: 4,155.60 (+0.31% today)",
+    "Bitcoin: 83,665.72 (+0.87% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil -2.73% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "Oil -4.47% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
     "A 2.7-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
@@ -58,52 +58,52 @@
  ],
  "headlines": [
   {
-   "title": "U.S. eyes refining muscle of Indian billionaire Ambani's Reliance as Rubio visits Jamnagar plant",
+   "title": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/21/rubio-reliance-venezuela-oil-diesel.html",
-   "published": "Wed, 21 Oct 2026 04:47:43"
+   "link": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html",
+   "published": "Wed, 21 Oct 2026 14:21:39"
   },
   {
-   "title": "Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast",
+   "title": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/21/australia-data-center-operator-nexdc-datacenter.html",
-   "published": "Wed, 21 Oct 2026 02:55:38"
+   "link": "https://www.cnbc.com/2026/10/21/nvidia-announces-vera-rubin-racks-that-can-be-shipped-on-a-truck-.html",
+   "published": "Wed, 21 Oct 2026 12:43:49"
   },
   {
-   "title": "Elice's huge stock swings show AI's spending boom is getting more investor scrutiny",
+   "title": "United Airlines set to open its biggest airport lounge in $2.6 billion overhaul at Houston hub",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/21/ai-boom-spending-profit.html",
-   "published": "Wed, 21 Oct 2026 01:02:36"
+   "link": "https://www.cnbc.com/2026/10/21/united-airlines-biggest-airport-lounge-houston.html",
+   "published": "Wed, 21 Oct 2026 13:44:35"
   },
   {
-   "title": "Japan exports post huge miss in September as growth slows to 16.7%",
+   "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/21/japan-trade-exports-semiconductor-yen.html",
-   "published": "Wed, 21 Oct 2026 00:44:16"
+   "link": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
+   "published": "Wed, 21 Oct 2026 13:30:57"
   },
   {
-   "title": "Bull markets tend to peak with a whimper, not a bang \u2014 but a 15% correction for the S&P 500 may be next",
+   "title": "Moderna is about to release the trial results for its cancer vaccine. A lot is riding on this data.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/bull-markets-tend-to-peak-with-a-whimper-not-a-bang-but-a-15-correction-for-the-s-p-500-may-be-next-dab40e2c?mod=mw_rss_topstories",
-   "published": "Wed, 21 Oct 2026 00:24:00"
+   "link": "https://www.marketwatch.com/story/moderna-is-about-to-release-the-trial-results-for-its-cancer-vaccine-a-lot-is-riding-on-this-data-ccbf8c9c?mod=mw_rss_topstories",
+   "published": "Wed, 21 Oct 2026 15:00:00"
   },
   {
-   "title": "Super Micro\u2019s stock soars after surprise update \u2014 with Dell and HPE shares joining the rally",
+   "title": "Money-saving habits to cope with higher prices \u2014 from our readers",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/super-micros-stock-soars-after-surprise-update-with-dell-and-hpe-shares-joining-the-rally-1837a69f?mod=mw_rss_topstories",
-   "published": "Wed, 21 Oct 2026 00:15:00"
+   "link": "https://www.marketwatch.com/story/money-saving-hacks-to-cope-with-higher-prices-from-our-readers-a092767e?mod=mw_rss_topstories",
+   "published": "Wed, 21 Oct 2026 14:49:00"
   },
   {
-   "title": "Tesla\u2019s stock rises as Elon Musk drops new clues about a possible SpaceX merger",
+   "title": "Colleges raced to build massive computer-science departments. Now the boom is turning to bust.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/teslas-stock-rises-as-elon-musk-drops-new-clues-about-a-possible-spacex-merger-8cc44fc2?mod=mw_rss_topstories",
-   "published": "Wed, 21 Oct 2026 00:14:00"
+   "link": "https://www.marketwatch.com/story/colleges-raced-to-build-massive-computer-science-departments-now-the-boom-is-turning-to-bust-692cfe37?mod=mw_rss_topstories",
+   "published": "Wed, 21 Oct 2026 14:46:00"
   },
   {
-   "title": "Netflix vows to revive viewership trends, but investors hit \u2018sell\u2019 on the stock",
+   "title": "I receive 10 calls a day promising me $15,000 loans at 8% interest. Are these legitimate offers?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/netflix-vows-to-revive-viewership-trends-but-investors-hit-sell-on-the-stock-3e24420a?mod=mw_rss_topstories",
-   "published": "Wed, 21 Oct 2026 00:12:00"
+   "link": "https://www.marketwatch.com/story/im-naturally-skeptical-i-receive-10-calls-a-day-offering-me-15-000-loans-at-8-interest-is-this-a-scam-825c3431?mod=mw_rss_topstories",
+   "published": "Wed, 21 Oct 2026 14:45:00"
   }
  ],
  "summary": null,

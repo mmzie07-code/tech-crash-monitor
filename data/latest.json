@@ -1,6 +1,6 @@
 {
  "date": "2026-10-20",
- "generated": "2026-10-21T05:00:28.889752Z",
+ "generated": "2026-10-21T13:28:34.786413Z",
  "level": "High",
  "health": 38,
  "score": 62,
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "warn",
-   "value": 0.41,
+   "value": 0.42,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 5.12%, +0.41 pts over 3 months.",
+   "detail": "10Y yield 5.10%, +0.42 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 17.3,
+   "value": 17.0,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 17.3 is 1.11x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 17.0 is 1.08x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
