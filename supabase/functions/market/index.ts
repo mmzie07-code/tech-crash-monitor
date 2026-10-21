@@ -62,10 +62,18 @@ async function yahoo(url: string, ttlMs: number) {
 // Measure: percent change from the first minute of trading to the latest minute. Rebuilt at most once every 5 minutes while the market is open
 // (once an hour when it's closed), and shared by every visitor, so this costs one set of Yahoo calls per refresh, not one per user.
 const SITE = (Deno.env.get("SITE_URL") ?? "https://mmzie07-code.github.io/tech-crash-monitor").replace(/\/$/, "");
-const MIN_CAP_B = 2, MIN_PRICE = 5, TOP_N = 20, MIN_BARS = 30;
+const MIN_CAP_B = 2, MIN_PRICE = 5, TOP_N = 20, MIN_BARS = 2;   // 2 minute-bars is enough: the list has to work in the first minutes after the open too
 let universe: { at: number; list: string[] } | null = null;
 let gainers: { at: number; ttl: number; body: unknown } | null = null;
 let gainersInflight: Promise<unknown> | null = null;
+
+// True on weekdays from 9:25 to 16:10 Eastern. Inside that window the list is rebuilt every 5 minutes no matter what the newest data looks like (so the open is never served a stale "closed" list).
+function marketHours(): boolean {
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  const get = (t: string) => parts.find((x) => x.type === t)?.value ?? "";
+  const mins = (parseInt(get("hour"), 10) % 24) * 60 + parseInt(get("minute"), 10);
+  return !["Sat", "Sun"].includes(get("weekday")) && mins >= 9 * 60 + 25 && mins <= 16 * 60 + 10;
+}
 
 async function loadUniverse(): Promise<string[]> {
   if (universe && Date.now() - universe.at < 6 * 3600_000) return universe.list;
@@ -111,7 +119,7 @@ async function buildGainers(): Promise<unknown> {
   rows.sort((a, b) => b.o - a.o);
   const open = Date.now() / 1000 - asof < 20 * 60;  // the newest minute bar is fresh only while the market is trading
   const body = { session: open ? "open" : "closed", asof, universe: rows.length, items: rows.slice(0, TOP_N) };
-  gainers = { at: Date.now(), ttl: open ? 300_000 : 3600_000, body };
+  gainers = { at: Date.now(), ttl: open || marketHours() ? 300_000 : 3600_000, body };
   return body;
 }
 
