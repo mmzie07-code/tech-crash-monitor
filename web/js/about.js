@@ -42,7 +42,8 @@ function economyNote(sector, industry, fin, capB, country) {
   if (oil) bits.push(`oil is about $${Math.round(oil.last)} a barrel (${oil.y1 >= 0 ? "up" : "down"} ${Math.abs(oil.y1).toFixed(0)}% in a year)`);
   if (usd) bits.push(`the US dollar is ${aboutDir(usd.m1, 0.5, 1.5)} against other currencies`);
   if (vix) bits.push(`the VIX fear gauge is ${vix.last.toFixed(0)}, ${vix.last >= 25 ? "a nervous market" : vix.last >= 18 ? "a moderately cautious market" : "a calm market"}`);
-  if (bits.length) out.push("Right now " + bits.slice(0, 4).join(", ") + ".");
+  const some = bits.slice(0, 4), list = some.length > 1 ? some.slice(0, -1).join(", ") + ", and " + some[some.length - 1] : some[0];
+  if (some.length) out.push("Right now " + list + ".");
   // 2. how this sector usually reacts
   if (ABOUT_SECTOR[sector]) out.push(ABOUT_SECTOR[sector]);
   // 3. an industry note if one applies, otherwise what today's readings mean for the sector
@@ -60,9 +61,9 @@ function economyNote(sector, industry, fin, capB, country) {
     else if (cash >= fin.debt) parts.push(`it holds more cash (${aboutB(cash)}) than debt (${aboutB(fin.debt)}), which cushions it if borrowing stays expensive`);
     else parts.push(`it owes about ${aboutB(fin.debt)} against ${aboutB(cash)} of cash${cover != null ? `, roughly ${cover.toFixed(1)} years of its yearly operating cash flow` : ""}, so borrowing costs matter ${cover != null && cover > 4 ? "a lot" : "more than for a debt-free company"}`);
   }
-  if (fin && fin.beta != null) parts.push(`its beta of ${fin.beta.toFixed(2)} means its shares have tended to move about ${fin.beta.toFixed(1)} times as much as the overall market`);
+  if (fin && fin.beta != null) parts.push(Math.abs(fin.beta - 1) < 0.1 ? `its beta of ${fin.beta.toFixed(2)} means its shares have tended to move in line with the overall market` : `its beta of ${fin.beta.toFixed(2)} means its shares have tended to move about ${fin.beta.toFixed(1)} times as much as the overall market`);
   if (country && country !== "United States") parts.push(`it is based in ${country}, so exchange rates affect the dollar value of its profits`);
-  if (parts.length) out.push("For this company, " + parts.join("; ") + ".");
+  if (parts.length) out.push("At the company level, " + parts.join("; ") + ".");
   // 5. keep it honest
   out.push("These are general tendencies, not predictions, and news about the company itself often matters more.");
   return out.slice(0, 5);
