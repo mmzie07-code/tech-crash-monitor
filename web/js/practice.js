@@ -54,7 +54,7 @@ function goals() {
 }
 
 function pTabs(cur) {
-  return `<div class="tabs">${[["", "Portfolio"], ["trade", "Trade"], ["history", "History"], ["goals", "Goals"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/practice${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["", "Portfolio"], ["analysis", "Analysis"], ["trade", "Trade"], ["history", "History"], ["goals", "Goals"], ["demo", "Demo portfolio"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/practice${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
 }
 const PNOTE = `<p class="small muted">Practice only: pretend money, no risk. Prices are each day's <b>closing</b> price and trades fill at the latest close, with no fees or bid-ask spread. Real trades fill at live prices and cost a little more. Saved on this device only.</p>`;
 
@@ -68,6 +68,8 @@ function practice(tab, arg) {
   if (tab === "trade") return head + tradeView(arg);
   if (tab === "history") return head + historyView();
   if (tab === "goals") return head + goalsView();
+  if (tab === "demo") return demoPage().then((h) => head + h);
+  if (tab === "analysis") return minePage().then((h) => head + h);
   return head + portfolioView();
 }
 
@@ -88,7 +90,7 @@ function portfolioView() {
     return `<tr><td><a href="#/practice/trade/${s}"><b>${esc(s)}</b></a><div class="small muted">${esc(q[s] ? q[s].name : "")}</div></td><td>${+h.sh.toFixed(4)}</td><td>$${(h.cost / h.sh).toFixed(2)}</td><td>$${px.toFixed(2)}</td><td>${money(val)}</td><td style="color:${colr(Math.abs(pl) < 0.5 ? 0 : pl)}">${Math.abs(pl) < 0.5 ? "" : pl > 0 ? "+" : "-"}${money(Math.abs(pl))}<div class="small">${sgn(pl / h.cost * 100)}%</div></td><td>${(w[s] * 100).toFixed(0)}%</td></tr>`;
   }).join("");
   const hold = rows ? `<div class="card"><h3>Holdings</h3><div class="tw"><table><tr><th>Holding</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Value</th><th>Gain/loss</th><th>Weight</th></tr>${rows}</table></div></div>`
-    : `<div class="card"><h3>Start here</h3><p>You have ${money(START_CASH)} of pretend cash. Before you trade, skim <a href="#/learn/3">Lesson 3 (risk)</a> and <a href="#/learn/4">Lesson 4 (index funds)</a>. Then <a href="#/practice/trade">make your first trade</a>.</p></div>`;
+    : `<div class="card"><h3>Start here</h3><p>You have ${money(START_CASH)} of pretend cash. Before you trade, skim <a href="#/learn/3">Lesson 3 (risk)</a> and <a href="#/learn/4">Lesson 4 (index funds)</a>. Then <a href="#/practice/trade">make your first trade</a>, or explore the <a href="#/practice/demo"><b>demo portfolio</b></a> to see what a finished one looks like.</p></div>`;
   const bySector = {}; Object.entries(w).forEach(([s, x]) => { const k = q[s] ? q[s].sector : "Other"; bySector[k] = (bySector[k] || 0) + x; });
   if (t.cash > 0) bySector.Cash = t.cash / t.total;
   const pal = ["#5b4bff", "#22d3a6", "#f5a524", "#e5484d", "#3b82f6", "#a855f7", "#14b8a6", "#f97316", "#64748b", "#ec4899", "#84cc16", "#0ea5e9"];
