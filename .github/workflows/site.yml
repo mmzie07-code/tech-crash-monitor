@@ -42,6 +42,11 @@ jobs:
           path: data/about
           key: about-none
           restore-keys: about-
+      - name: Refuse to publish if the saved company snapshots are missing
+        run: |
+          n=$(ls data/snap 2>/dev/null | wc -l | tr -d ' ')
+          echo "snapshot files restored: $n"
+          if [ "$n" -lt 100 ]; then echo "The saved snapshots are missing, so publishing now would blank out company pages. Run the Daily update workflow first."; exit 1; fi
       - name: Make sure history exists (full download only if the cache was lost)
         run: |
           if [ ! -f data/hist/_GSPC.json ]; then echo "cache empty: downloading history"; python engine/history.py; fi
