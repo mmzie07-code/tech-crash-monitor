@@ -267,6 +267,7 @@ async function route() {
   afterRender.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });   // one failing task (e.g. left over from a page you just left) must not stop the rest
   wireSearch();
   wireHearts();
+  if (typeof tickerSync === "function") tickerSync();
   const wlc = document.querySelector("#wl b"); if (wlc) wlc.textContent = FOLLOWS.length || "";
   if (!keepScroll) window.scrollTo(0, 0);
 }

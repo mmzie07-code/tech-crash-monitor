@@ -57,6 +57,64 @@ async function yahoo(url: string, ttlMs: number) {
   return body;
 }
 
+// ---- Top risers (powers the ticker at the top of the site) ----
+// Universe: US stocks worth $2B+ and $5+ a share, read from the site's own public search.json (refreshed every 6 hours).
+// Measure: percent change from the first minute of trading to the latest minute. Rebuilt at most once every 5 minutes while the market is open
+// (once an hour when it's closed), and shared by every visitor, so this costs one set of Yahoo calls per refresh, not one per user.
+const SITE = (Deno.env.get("SITE_URL") ?? "https://mmzie07-code.github.io/tech-crash-monitor").replace(/\/$/, "");
+const MIN_CAP_B = 2, MIN_PRICE = 5, TOP_N = 20, MIN_BARS = 30;
+let universe: { at: number; list: string[] } | null = null;
+let gainers: { at: number; ttl: number; body: unknown } | null = null;
+let gainersInflight: Promise<unknown> | null = null;
+
+async function loadUniverse(): Promise<string[]> {
+  if (universe && Date.now() - universe.at < 6 * 3600_000) return universe.list;
+  const r = await fetch(`${SITE}/data/search.json`, { signal: AbortSignal.timeout(15_000) });
+  if (!r.ok) throw new Error("universe " + r.status);
+  const d: any = await r.json();
+  const list: string[] = (d.stocks as any[]).filter((s) => s[3] >= MIN_CAP_B && s[4] >= MIN_PRICE).map((s) => String(s[0]));
+  universe = { at: Date.now(), list };
+  return list;
+}
+
+async function buildGainers(): Promise<unknown> {
+  const syms = await loadUniverse();
+  const batches: string[][] = [];
+  for (let i = 0; i < syms.length; i += 20) batches.push(syms.slice(i, i + 20));  // Yahoo's spark endpoint takes up to 20 symbols per call
+  const rows: { s: string; p: number; o: number; d: number | null }[] = [];
+  let asof = 0, failed = 0;
+  for (let i = 0; i < batches.length; i += 8) {  // 8 calls at a time
+    const settled = await Promise.allSettled(batches.slice(i, i + 8).map(async (b) => {
+      const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/spark?symbols=${b.join(",")}&range=1d&interval=1m`, { headers: { "User-Agent": "Mozilla/5.0" }, signal: AbortSignal.timeout(15_000) });
+      if (!r.ok) throw new Error("spark " + r.status);
+      return await r.json();
+    }));
+    for (const s of settled) {
+      if (s.status !== "fulfilled") { failed++; continue; }
+      for (const [sym, v] of Object.entries(s.value as Record<string, any>)) {
+        const ts: number[] = v?.timestamp ?? [], cl: (number | null)[] = v?.close ?? [];
+        let first: number | null = null, last: number | null = null, n = 0;
+        for (let k = 0; k < cl.length; k++) {
+          const x = cl[k];
+          if (x == null) continue;
+          if (first === null) first = x;
+          last = x; n++;
+          if (ts[k] > asof) asof = ts[k];
+        }
+        if (first === null || last === null || n < MIN_BARS) continue;
+        const prev = typeof v.chartPreviousClose === "number" ? v.chartPreviousClose : null;
+        rows.push({ s: sym, p: Math.round(last * 100) / 100, o: Math.round((last / first - 1) * 10000) / 100, d: prev ? Math.round((last / prev - 1) * 10000) / 100 : null });
+      }
+    }
+  }
+  if (rows.length < 100) throw new Error("not enough data (" + rows.length + " stocks, " + failed + " failed batches)");
+  rows.sort((a, b) => b.o - a.o);
+  const open = Date.now() / 1000 - asof < 20 * 60;  // the newest minute bar is fresh only while the market is trading
+  const body = { session: open ? "open" : "closed", asof, universe: rows.length, items: rows.slice(0, TOP_N) };
+  gainers = { at: Date.now(), ttl: open ? 300_000 : 3600_000, body };
+  return body;
+}
+
 Deno.serve(async (req) => {
   const cors = corsFor(req);
   const json = (body: unknown, status = 200) =>
@@ -90,6 +148,11 @@ Deno.serve(async (req) => {
         return { title: src && title.endsWith(" - " + src) ? title.slice(0, -(src.length + 3)) : title, source: src, link: dec(/<link>([\s\S]*?)<\/link>/.exec(b)?.[1] ?? ""), published: dec(/<pubDate>([\s\S]*?)<\/pubDate>/.exec(b)?.[1] ?? "") };
       });
       return json({ items });
+    }
+    if (action === "gainers") {
+      if (gainers && Date.now() - gainers.at < gainers.ttl) return json(gainers.body);
+      if (!gainersInflight) gainersInflight = buildGainers().finally(() => { gainersInflight = null; });  // everyone waits on the same rebuild
+      return json(await gainersInflight);
     }
     const sym = (u.searchParams.get("symbol") ?? "").toUpperCase();
     if (!SYMBOL.test(sym)) return json({ error: "Bad symbol" }, 400);

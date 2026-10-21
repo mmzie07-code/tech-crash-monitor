@@ -99,3 +99,17 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .gauge{position:relative;text-align:center}.gnum{font-size:46px;font-weight:800;line-height:1;margin-top:-4px;letter-spacing:-.02em}.gnum span{font-size:15px;font-weight:700;opacity:.6;margin-left:2px}.glab{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
 .needle{transform-origin:130px 128px;transform:rotate(var(--a));animation:needle 1.3s cubic-bezier(.2,.9,.3,1.1)}@keyframes needle{from{transform:rotate(-90deg)}}
 @media(prefers-reduced-motion:reduce){.needle{animation:none}}
+
+/* top-of-page ticker (js/ticker.js): top risers, scrolls right to left, pauses on hover */
+.ticker{display:flex;align-items:stretch;height:34px;border-bottom:1px solid var(--line);background:var(--card);font-size:13px;overflow:hidden}.ticker[hidden]{display:none}
+.tk-label{flex:none;display:flex;align-items:center;gap:7px;padding:0 14px;font-weight:800;font-size:11.5px;letter-spacing:.04em;white-space:nowrap;border-right:1px solid var(--line);background:color-mix(in srgb,var(--brand) 8%,var(--card))}
+.tk-long{font-weight:600;letter-spacing:0;color:var(--mut)}
+.tk-dot{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:tkp 1.6s ease-in-out infinite}.tk-dot.off{background:var(--unk);animation:none}
+@keyframes tkp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.tk-track{flex:1;overflow:hidden;min-width:0}
+.tk-move{display:inline-flex;align-items:center;height:100%;white-space:nowrap;animation:tkm 60s linear infinite;will-change:transform}
+@keyframes tkm{to{transform:translateX(-50%)}}
+.ticker:hover .tk-move{animation-play-state:paused}
+.tk-move a{color:var(--tx);font-weight:700;display:inline-flex;gap:6px;margin-right:26px}.tk-up{color:var(--ok)}.tk-dn{color:var(--bad)}
+@media(prefers-reduced-motion:reduce){.tk-move{animation:none}.tk-track{overflow-x:auto}.tk-dot{animation:none}}
+@media(max-width:640px){.tk-long{display:none}.tk-label{padding:0 10px}}
