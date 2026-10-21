@@ -113,3 +113,12 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .tk-move a{color:var(--tx);font-weight:700;display:inline-flex;gap:6px;margin-right:26px}.tk-up{color:var(--ok)}.tk-dn{color:var(--bad)}
 @media(prefers-reduced-motion:reduce){.tk-move{animation:none}.tk-track{overflow-x:auto}.tk-dot{animation:none}}
 @media(max-width:640px){.tk-long{display:none}.tk-label{padding:0 10px}}
+
+/* value line label on the price chart, and the company profile (radar + rewards/risks) */
+.rlab{position:absolute;right:8px;transform:translateY(-100%);font-size:11px;font-weight:800;color:var(--tx);background:color-mix(in srgb,var(--card) 86%,transparent);border:1px solid var(--brand2);padding:1px 7px;border-radius:7px;pointer-events:none;white-space:nowrap}
+.prof{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:start}@media(max-width:760px){.prof{grid-template-columns:1fr}}
+.rr{list-style:none;margin:6px 0 0;padding:0}.rr li{display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-size:15px;line-height:1.4}
+.rr i{flex:none;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;font-size:12px;color:#fff;margin-top:1px}
+.rr i.ok{background:var(--ok)}.rr i.warn{background:var(--warn)}.rr i.bad{background:var(--bad)}
+.radar{width:100%;max-width:340px;display:block;margin:0 auto}.radar text{font:700 11px -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;fill:var(--mut)}.radar .sv{font-weight:800;font-size:12px;fill:var(--tx)}
+.vstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.vstrip>div{border:1px solid var(--line);border-radius:12px;padding:10px 12px}

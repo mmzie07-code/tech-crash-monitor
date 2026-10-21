@@ -13,4 +13,5 @@ cp data/hist-ohlc/*.json site/data/hist-ohlc/ 2>/dev/null || true
 cp data/sparks/*.json site/data/sparks/ 2>/dev/null || true
 cp data/snap/*.json site/data/snap/ 2>/dev/null || true
 cp data/about/*.json site/data/about/ 2>/dev/null || true
+python3 engine/scorecards.py site/data/score || echo "scorecards failed (company profiles will be hidden until the next run)"
 echo "site assembled: build $B, $(ls site/data/hist | wc -l | tr -d ' ') history files"

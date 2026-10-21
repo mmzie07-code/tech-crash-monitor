@@ -47,11 +47,11 @@ function mountChart(el, data, opts = {}) {
   el.innerHTML = `<div class="chh"><div class="chtop"><div class="chp" id="${id}p"></div>${canCandle ? `<div class="ctog" role="group" aria-label="Chart type"><button data-ct="line" class="on">Line</button><button data-ct="candle">Candles</button></div>` : ""}</div>
    <div class="chc small" id="${id}c"></div><div class="small muted"><span class="livetag" id="${id}l" style="display:none"><i></i>LIVE</span><span id="${id}d"></span></div></div>
    <div class="chw"><svg id="${id}s" viewBox="0 0 600 220" preserveAspectRatio="none" style="width:100%;height:220px;touch-action:pan-y;cursor:crosshair"></svg>
-    <div class="cdot" id="${id}h" style="display:none"></div><div class="cdot live" id="${id}o" style="display:none"></div></div>
+    <div class="cdot" id="${id}h" style="display:none"></div><div class="cdot live" id="${id}o" style="display:none"></div><div class="rlab" id="${id}r" style="display:none"></div></div>
    ${opts.noRanges ? "" : `<div class="chr">${RANGES.map((r) => `<button data-r="${r.l}" ${r.live && !r.days && !opts.live ? 'disabled title="Sign in for live intraday charts"' : ""}>${r.l}</button>`).join("")}</div>`}
    ${opts.compare ? `<div class="small" style="margin-top:8px"><label style="cursor:pointer"><input type="checkbox" class="cmpchk"> Compare with ${opts.compare.name} <span class="muted">(dashed line)</span></label></div>` : ""}`;
   const q = (s) => el.querySelector("#" + id + s);
-  const svg = q("s"), P = q("p"), C = q("c"), D = q("d"), L = q("l"), hoverDot = q("h"), liveDot = q("o");
+  const svg = q("s"), P = q("p"), C = q("c"), D = q("d"), L = q("l"), hoverDot = q("h"), liveDot = q("o"), refLab = q("r");
 
   function header(i) {
     const v = view, cur = v.c[i], base = v.base != null ? v.base : v.c[0], ch = cur - base, pc = (cur / base - 1) * 100, up = ch >= 0;
@@ -95,13 +95,24 @@ function mountChart(el, data, opts = {}) {
       view.comp = out.map((x) => (x / out[0]) * view.c[0]);
     }
     const c = view.c, n = c.length, W = 600, H = 220;
-    const all = view.comp ? c.concat(view.comp) : c, lo = Math.min(...all), hi = Math.max(...all), pad = (hi - lo) * 0.08 || 1;
+    // optional value line + band (opts.refLine = {base, low, high, label}): daily views only; stretches the chart only if it is near the price, otherwise parks at the edge with an arrow
+    const R = opts.refLine && !view.intraday ? opts.refLine : null, lo0 = Math.min(...c), hi0 = Math.max(...c);
+    const refs = R ? [R.low, R.base, R.high].filter((v) => v != null && v >= lo0 * 0.55 && v <= hi0 * 1.8) : [];
+    const all = (view.comp ? c.concat(view.comp) : c).concat(refs), lo = Math.min(...all), hi = Math.max(...all), pad = (hi - lo) * 0.08 || 1;
     const X = (i) => (i / (n - 1)) * W, Y = (x) => H - 10 - ((x - lo + pad * 0.5) / (hi - lo + pad)) * (H - 20);
     const base = view.base != null ? view.base : c[0], up = c[n - 1] >= base, col = up ? "var(--ok)" : "var(--bad)", pts = c.map((x, i) => `${X(i).toFixed(1)},${Y(x).toFixed(1)}`).join(" ");
+    let refSvg = "";
+    if (R) {
+      const yb = Y(R.base), yt = Math.max(0, Math.min(H, Y(R.high))), yl = Math.max(0, Math.min(H, Y(R.low))), inside = yb >= 4 && yb <= H - 4;
+      if (Y(R.high) < H && Y(R.low) > 0 && yl - yt > 1) refSvg += `<rect x="0" width="${W}" y="${yt}" height="${yl - yt}" fill="var(--brand2)" fill-opacity=".13"/>`;
+      if (inside) refSvg += `<line x1="0" x2="${W}" y1="${yb}" y2="${yb}" stroke="var(--brand2)" stroke-width="1.8" stroke-dasharray="6 4" vector-effect="non-scaling-stroke"/>`;
+      refLab.textContent = (R.label || "Value") + " " + (money ? "$" : "") + R.base.toLocaleString("en-US", { maximumFractionDigits: 2 }) + (inside ? "" : yb > H ? " ↓" : " ↑");
+      refLab.style.top = Math.max(18, Math.min(H - 4, inside ? yb : yb > H ? H - 4 : 18)) + "px"; refLab.style.display = "";
+    } else refLab.style.display = "none";
     svg.innerHTML = `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".22"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
      <line x1="0" x2="${W}" y1="${Y(base)}" y2="${Y(base)}" stroke="var(--mut)" stroke-opacity=".35" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
      ${view.comp ? `<polyline points="${view.comp.map((x, i) => `${X(i).toFixed(1)},${Y(x).toFixed(1)}`).join(" ")}" fill="none" stroke="var(--mut)" stroke-width="1.8" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/>` : ""}
-     <polygon points="0,${H} ${pts} ${W},${H}" fill="url(#${id}g)"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+     ${refSvg}<polygon points="0,${H} ${pts} ${W},${H}" fill="url(#${id}g)"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
      <line id="${id}x" y1="0" y2="${H}" stroke="var(--mut)" stroke-width="1" vector-effect="non-scaling-stroke" style="display:none"/>`;
     svg._X = X; svg._Y = Y; svg._col = col;
     // live dot on the latest point (a real circle, positioned over the chart)

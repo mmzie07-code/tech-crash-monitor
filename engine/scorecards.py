@@ -1,0 +1,313 @@
+"""Company scorecards -> <out>/<SYM>.json for every company with filing data. Built when the site is assembled, from the latest data.
+Each file holds: five 0-100 scores ranked against the company's own sector (value, growth, profitability, health, payouts), a short rule-based summary,
+rewards and risks with the numbers behind them, and the valuation report's cash-flow model value (base / bear / bull) so the price chart can show it.
+Facts and fixed rules only: no AI, no ratings, no price targets.  Usage: python3 engine/scorecards.py [out_dir]"""
+import json, math, os, sys
+
+DATA = os.path.join(os.path.dirname(__file__), "..", "data")
+SPECIAL = {"financials", "real-estate", "utilities"}          # cash-flow measures don't describe these (same rule as the valuation report)
+SECTOR_TG = {"technology": 3.0, "communication": 2.5, "health-care": 2.5, "financials": 2.5, "consumer-discretionary": 2.5, "industrials": 2.5, "consumer-staples": 2.0, "energy": 1.5, "utilities": 2.0, "real-estate": 2.0, "materials": 2.0}
+POOL_MIN_CAP_M = 300.0
+AXES = [("value", "Value"), ("growth", "Growth"), ("profit", "Profitability"), ("health", "Health"), ("payout", "Payouts")]
+
+
+def clip(x, lo=0.0, hi=1.0):
+    return max(lo, min(hi, x))
+
+
+def last_i(a):
+    for i in range(len(a or []) - 1, -1, -1):
+        if a[i] is not None:
+            return i
+    return -1
+
+
+def at(a, i):
+    return a[i] if a and 0 <= i < len(a) else None
+
+
+def nz(v):
+    return 0.0 if v is None else v
+
+
+def money(m):
+    """$ millions -> '$4.5 billion' / '$850 million'."""
+    a = abs(m)
+    s = "$%.1f trillion" % (a / 1e6) if a >= 1e6 else "$%.1f billion" % (a / 1e3) if a >= 1e3 else "$%.0f million" % a
+    return ("-" if m < 0 else "") + s
+
+
+# ---------- the valuation report's model, ported line for line from web/js/report.js so the chart matches the report ----------
+def model_value(row, F, rf):
+    sym, name, sector, cap_b, price = row[0], row[1], row[2], row[3], row[4]
+    if sector in SPECIAL:
+        return dict(ok=False, note="A cash-flow model doesn't fit this kind of company.")
+    rev_a = F.get("rev") or []
+    ri = last_i(rev_a)
+    if ri < 0:
+        return None
+    rev = rev_a[ri]
+    ocf, capex, sbc = F.get("ocf") or [], F.get("capex") or [], F.get("sbc") or []
+    fcf = [(ocf[i] - nz(at(capex, i))) if at(ocf, i) is not None else None for i in range(len(rev_a))]
+    fcfa = [None if fcf[i] is None else fcf[i] - (at(sbc, i) if at(sbc, i) is not None else 0) for i in range(len(rev_a))]
+
+    def mg(arr):
+        pts = []
+        i = len(rev_a) - 1
+        while i >= 0 and len(pts) < 2:
+            if arr[i] is not None and rev_a[i]:
+                pts.append(arr[i] / rev_a[i])
+            i -= 1
+        return 0.6 * pts[0] + 0.4 * pts[1] if len(pts) == 2 else pts[0] if pts else None
+
+    margin = mg(fcfa)
+    if mg(fcf) is None or margin is None:
+        return dict(ok=False, note="Cash-flow figures are missing, so a model value can't be built.")
+    first = next((i for i, v in enumerate(rev_a) if v is not None and v > 0), None)
+    n = ri - first if first is not None else 0
+    cagr = (rev / rev_a[first]) ** (1.0 / n) - 1 if n >= 1 and rev_a[first] > 0 else None
+    cap_m = cap_b * 1000.0
+    shares = cap_m / price
+    raw_beta = F.get("beta")
+    beta = 0.67 * raw_beta + 0.33 if raw_beta is not None else 1.0
+    cash, debt = nz(F.get("cash")) + nz(F.get("sti")), (F.get("debt") or 0.0)
+    ii = last_i(F.get("interest") or [])
+    interest = F["interest"][ii] if ii >= 0 else None
+    g1 = max(-0.1, min(0.4, cagr if cagr is not None else 0.05))
+    kd = max(rf, min(rf + 0.04, interest / debt)) if debt > 0 and interest else rf + 0.015
+    tg = SECTOR_TG.get(sector, 2.5) / 100.0
+    erp, tax = 0.05, 0.21
+    ke = rf + beta * erp
+    w = cap_m / (cap_m + debt) if debt > 0 else 1.0
+    wacc = max(0.06, min(0.15, w * ke + (1 - w) * kd * (1 - tax)))
+
+    def dcf(g1_, margin_, wacc_):
+        r, pv_sum, last_f = rev, 0.0, 0.0
+        for t in range(1, 8):
+            g = g1_ + (tg - g1_) * (t - 1) / 6.0
+            r *= 1 + g
+            last_f = r * margin_
+            pv_sum += last_f / (1 + wacc_) ** t
+        tv = last_f * (1 + tg) / max(wacc_ - tg, 0.02)
+        return (pv_sum + tv / (1 + wacc_) ** 7 - debt + cash) / shares
+
+    base, bear, bull = dcf(g1, margin, wacc), dcf(g1 - 0.05, margin * 0.85, wacc + 0.01), dcf(g1 + 0.05, margin * 1.1, wacc - 0.005)
+    if margin <= 0.005 or base <= 0:
+        return dict(ok=False, note="Free cash flow is negative or very small, so a cash-flow model can't value it.", margin=round(margin, 4))
+    return dict(ok=True, base=round(base, 2), bear=round(min(bear, base), 2), bull=round(max(bull, base), 2), wacc=round(wacc, 4), g1=round(g1, 4), margin=round(margin, 4), tg=round(tg, 4))
+
+
+# ---------- company metrics ----------
+def metrics(row, F):
+    sym, name, sector, cap_b, price = row[0], row[1], row[2], row[3], row[4]
+    rev_a = F.get("rev") or []
+    ri = last_i(rev_a)
+    if ri < 0 or not rev_a[ri] or rev_a[ri] <= 0:
+        ri = max(last_i(F.get("ocf") or []), last_i(F.get("ni") or []))   # pre-revenue company: use the latest year with any cash-flow or profit figure
+        if ri < 0:
+            return None
+        rev = 0.0
+    else:
+        rev = rev_a[ri]
+    cap = cap_b * 1000.0
+    ni, opinc, ocf = at(F.get("ni"), ri), at(F.get("opinc"), ri), at(F.get("ocf"), ri)
+    capex = nz(at(F.get("capex"), ri))
+    fcf = ocf - capex if ocf is not None else None
+    sbc, div, buy = at(F.get("sbc"), ri), at(F.get("dividends"), ri), at(F.get("buyback"), ri)
+    debt, cash = (F.get("debt") or 0.0), nz(F.get("cash")) + nz(F.get("sti"))
+    ii = last_i(F.get("interest") or [])
+    interest = F["interest"][ii] if ii >= 0 else None
+    equity = F.get("equity")
+    first = next((i for i, v in enumerate(rev_a) if v is not None and v > 0), None)
+    n = ri - first if first is not None else 0
+    cagr = (rev / rev_a[first]) ** (1.0 / n) - 1 if n >= 1 and rev > 0 and rev_a[first] > 0 else None
+    ni_a = F.get("ni") or []
+    ni_first = next((v for v in ni_a if v is not None), None)
+    ni_prev = at(ni_a, ri - 1)
+    ev = cap + debt - cash
+    m = dict(sym=sym, name=name, sector=sector, cap=cap, price=price, rev=rev, ni=ni, opinc=opinc, ocf=ocf, fcf=fcf, sbc=sbc, div=nz(div), buy=nz(buy), debt=debt, cash=cash,
+             interest=interest, equity=equity, cagr=cagr, n=n, beta=F.get("beta"), ni_prev=ni_prev)
+    m["pe"] = cap / ni if ni and ni > 0 else None
+    m["pfcf"] = cap / fcf if fcf and fcf > 0 else None
+    m["evebit"] = ev / opinc if opinc and opinc > 0 and ev > 0 else None
+    m["pb"] = cap / equity if equity and equity > 0 else None
+    m["opm"] = opinc / rev if opinc is not None and rev > 0 else None
+    m["fcfm"] = fcf / rev if fcf is not None and rev > 0 else None
+    m["roe"] = ni / equity if ni is not None and equity and equity > 0 else None
+    m["debt_cover"] = debt / ocf if ocf and ocf > 0 and debt else (0.0 if not debt else None)
+    m["int_cov"] = opinc / interest if opinc is not None and interest and interest > 0 else None
+    m["payout_yield"] = (m["div"] + m["buy"]) / cap if cap else 0.0
+    if ni_first is not None and ni is not None and n >= 1:
+        m["ni_growth"] = (ni / ni_first) ** (1.0 / n) - 1 if ni_first > 0 and ni > 0 else (0.5 if ni_first <= 0 < ni else -0.5 if ni <= 0 else None)
+    else:
+        m["ni_growth"] = None
+    return m
+
+
+def make_ranker(pool, key, reverse=False):
+    vals = sorted(v for v in (p.get(key) for p in pool) if v is not None)
+    def rank(v):
+        if v is None or len(vals) < 8:
+            return None
+        below = sum(1 for x in vals if x < v) + 0.5 * sum(1 for x in vals if x == v)
+        r = 100.0 * below / len(vals)
+        return 100.0 - r if reverse else r
+    return rank
+
+
+def wavg(pairs):
+    pairs = [(v, w) for v, w in pairs if v is not None]
+    tw = sum(w for _, w in pairs)
+    return sum(v * w for v, w in pairs) / tw if tw else None
+
+
+def build(out_dir):
+    F_all = json.load(open(os.path.join(DATA, "fundamentals.json")))["stocks"]
+    S = json.load(open(os.path.join(DATA, "search.json")))["stocks"]
+    try:
+        mk = json.load(open(os.path.join(DATA, "markets.json")))
+        rf = next(r["last"] for r in mk["macro"] if r["symbol"] == "^TNX") / 100.0
+    except Exception:
+        rf = 0.045
+    rows = {r[0]: r for r in S}
+    allm = [m for r in S if r[0] in F_all for m in [metrics(r, F_all[r[0]])] if m]
+    pools = {}
+    for m in allm:
+        if m["cap"] >= POOL_MIN_CAP_M:
+            pools.setdefault(m["sector"], []).append(m)
+    rankers = {}
+    for sec, pool in pools.items():
+        rankers[sec] = {k: make_ranker(pool, k, rev) for k, rev in [("pe", True), ("pfcf", True), ("evebit", True), ("pb", True), ("cagr", False), ("ni_growth", False), ("opm", False), ("fcfm", False), ("roe", False), ("debt_cover", True), ("int_cov", False)]}
+    import statistics
+    med = {sec: {k: statistics.median(v) for k in ("pe", "pfcf", "evebit", "pb") for v in [[p[k] for p in pool if p.get(k)]] if len(v) >= 8} for sec, pool in pools.items()}
+    os.makedirs(out_dir, exist_ok=True)
+    snapdir, histdir = os.path.join(DATA, "snap"), os.path.join(DATA, "hist")
+    written = 0
+    for m in allm:
+        sym, sec = m["sym"], m["sector"]
+        R = rankers.get(sec)
+        if not R:
+            continue
+        special = sec in SPECIAL
+        # ----- the five axes (0-100, ranked against the sector; 50 is typical) -----
+        vkeys = ["pe", "pb"] if special else ["pe", "pfcf", "evebit"]   # banks, insurers, REITs and utilities: earnings and book value instead of cash-flow multiples
+        vr = [R[k](m[k]) for k in vkeys]
+        vr = [v for v in vr if v is not None]
+        value = sum(vr) / len(vr) if len(vr) >= 1 and (len(vr) >= 2 or special) else None
+        growth = wavg([(R["cagr"](m["cagr"]), 0.6), (R["ni_growth"](m["ni_growth"]) if m["ni_growth"] is not None else None, 0.4)])
+        profit = wavg([(R["opm"](m["opm"]), 0.35), (R["fcfm"](m["fcfm"]), 0.35), (R["roe"](m["roe"]), 0.30)])
+        if sec == "financials":
+            health = None
+        elif m["debt"] <= 0.0 or m["cash"] >= m["debt"]:
+            health = 100.0
+        else:
+            health = wavg([(R["debt_cover"](m["debt_cover"]) if m["debt_cover"] is not None else 0.0, 0.5), (R["int_cov"](m["int_cov"]), 0.5)])
+        y = m["payout_yield"]
+        cover = (m["fcf"] / (m["div"] + m["buy"])) if m["fcf"] is not None and (m["div"] + m["buy"]) > 0 else None
+        payout = 0.0 if y <= 0 else 100.0 * (0.6 * clip(y / 0.06) + 0.4 * (clip((cover - 0.5) / 1.0) if cover is not None else 0.3))
+        axes = {"value": value, "growth": growth, "profit": profit, "health": health, "payout": payout}
+        na = [k for k, v in axes.items() if v is None]
+        axes = {k: (round(v) if v is not None else None) for k, v in axes.items()}
+        # ----- extra facts from the nightly snapshot and price history, when we have them -----
+        snap, hist = {}, None
+        try:
+            snap = json.load(open(os.path.join(snapdir, sym + ".json")))
+        except Exception:
+            pass
+        facts = snap.get("facts") or {}
+        hi52, avg_vol = facts.get("week52_high"), facts.get("avg_volume")
+        drop52 = (m["price"] / hi52 - 1) * 100 if hi52 else None
+        # ----- checks: each is good / bad / warn (with the numbers), or skipped -----
+        C = []
+        def add(kind, order, text):
+            C.append(dict(k=kind, o=order, t=text))
+        if m["ni"] is not None:
+            if m["ni"] < 0:
+                add("bad", 1, "Lost %s last year (net income)" % money(-m["ni"]))
+            elif m["ni"] > 0 and m["ni_prev"] is not None and m["ni_prev"] > 0 and m["ni"] < 0.7 * m["ni_prev"]:
+                add("warn", 6, "Profit fell %.0f%% from the year before" % ((1 - m["ni"] / m["ni_prev"]) * 100))
+            elif m["ni"] > 0 and m["rev"] and m["ni"] / m["rev"] >= 0.10:
+                add("good", 2, "Profitable: %.0f%% of revenue is left as net profit" % (m["ni"] / m["rev"] * 100))
+        if m["fcf"] is not None and not special:
+            if m["fcf"] < 0:
+                add("bad", 2, "Free cash flow was negative (%s)" % money(m["fcf"]))
+            elif m["fcfm"] is not None and m["fcfm"] >= 0.15:
+                add("good", 3, "Turns %.0f%% of revenue into free cash flow" % (m["fcfm"] * 100))
+        if m["cagr"] is not None and m["n"] >= 2:
+            if m["cagr"] >= 0.10:
+                add("good", 1, "Revenue has grown %.0f%% a year over %d years" % (m["cagr"] * 100, m["n"]))
+            elif m["cagr"] < -0.02:
+                add("bad", 3, "Revenue has shrunk %.0f%% a year over %d years" % (-m["cagr"] * 100, m["n"]))
+        if m["rev"] < 5:
+            add("bad", 1, "Makes under $5 million a year in revenue")
+        if value is not None and not special:
+            used = [k for k in vkeys if m[k]]
+            label = {"pe": "earnings", "pfcf": "free cash flow", "evebit": "operating profit", "pb": "book value"}
+            if value >= 70:
+                add("good", 4, "Cheaper than %.0f%% of its sector peers (price vs %s)" % (value, label[used[0]] if used else "profits"))
+            elif value <= 20:
+                add("warn", 4, "More expensive than %.0f%% of its sector peers" % (100 - value))
+        if sec != "financials":
+            if m["debt"] <= 0 or m["cash"] >= m["debt"]:
+                add("good", 5, "Holds more cash (%s) than debt" % money(m["cash"]) if m["debt"] > 0 else "Has no borrowings in its filings data")
+            elif m["debt_cover"] is not None and m["debt_cover"] >= 5:
+                add("bad", 4, "Debt (%s) equals %.1f years of its operating cash flow" % (money(m["debt"]), m["debt_cover"]))
+            elif m["debt_cover"] is None and m["debt"] > 0:
+                add("bad", 4, "Owes %s while its operations aren't generating cash" % money(m["debt"]))
+            if m["int_cov"] is not None and m["int_cov"] < 3:
+                add("warn", 5, "Operating profit covers its interest bill only %.1f times" % m["int_cov"])
+        if m["sbc"] and m["rev"] and m["sbc"] / m["rev"] >= 0.10:
+            add("bad" if m["sbc"] / m["rev"] >= 0.20 else "warn", 7, "Stock-based pay is %.0f%% of revenue, which dilutes shareholders" % (m["sbc"] / m["rev"] * 100))
+        if y >= 0.03:
+            add("good", 6, "Returns %.1f%% of its value a year through dividends and buybacks" % (y * 100))
+        if m["div"] > 0 and m["fcf"] is not None and m["fcf"] > 0 and m["div"] > m["fcf"]:
+            add("warn", 8, "Its dividend (%s) is larger than its free cash flow (%s)" % (money(m["div"]), money(m["fcf"])))
+        if m["beta"] is not None:
+            if m["beta"] >= 1.8:
+                add("warn", 9, "Volatile: its shares have swung about %.1f times as much as the market" % m["beta"])
+            elif m["beta"] < 0.3:
+                add("good", 7, "Its shares have barely moved with the market (beta %.1f)" % m["beta"])
+            elif m["beta"] <= 0.6:
+                add("good", 7, "Steady: its shares have moved only %.1f times as much as the market" % m["beta"])
+        if drop52 is not None and drop52 <= -40:
+            add("warn", 10, "Down %.0f%% from its 52-week high" % -drop52)
+        if m["cap"] < 300:
+            add("warn", 11, "A very small company (%s): its shares can be hard to trade and swing widely" % money(m["cap"]))
+        elif avg_vol and m["price"] and avg_vol * m["price"] < 1e6:
+            add("warn", 11, "Thinly traded: under $1 million of shares change hands on a typical day")
+        rewards = sorted([c for c in C if c["k"] == "good"], key=lambda c: c["o"])
+        risks = sorted([c for c in C if c["k"] in ("bad", "warn")], key=lambda c: (0 if c["k"] == "bad" else 1, c["o"]))
+        # ----- one-line read of the profile -----
+        have = [(k, v) for k, v in axes.items() if v is not None]
+        names = dict(AXES)
+        summary = ""
+        if len(have) >= 3:
+            hi, lo = max(have, key=lambda x: x[1]), min(have, key=lambda x: x[1])
+            summary = "Strongest: %s (%d out of 100). Weakest: %s (%d out of 100). Scores compare this company with the other companies in its sector; 50 is typical." % (names[hi[0]], hi[1], names[lo[0]], lo[1])
+        mv = model_value(rows[sym], F_all[sym], rf)
+        peer = None
+        if m["price"] and m["cap"] > 0:
+            sh, md, parts = m["cap"] / m["price"], med.get(sec, {}), {}
+            if md.get("pe") and m["ni"] and m["ni"] > 0:
+                parts["pe"] = md["pe"] * m["ni"] / sh
+            if not special and md.get("pfcf") and m["fcf"] and m["fcf"] > 0:
+                parts["pfcf"] = md["pfcf"] * m["fcf"] / sh
+            if not special and md.get("evebit") and m["opinc"] and m["opinc"] > 0:
+                parts["evebit"] = (md["evebit"] * m["opinc"] - m["debt"] + m["cash"]) / sh
+            if special and md.get("pb") and m["equity"] and m["equity"] > 0:
+                parts["pb"] = md["pb"] * m["equity"] / sh
+            parts = {k: round(v, 2) for k, v in parts.items() if v > 0}
+            if parts:
+                vals = sorted(parts.values())
+                peer = dict(base=round(statistics.median(vals), 2), low=vals[0], high=vals[-1], parts=parts, med={k: round(v, 1) for k, v in md.items()})
+        json.dump(dict(s=sym, axes=axes, na=na, summary=summary, rewards=[c["t"] for c in rewards[:4]], risks=[dict(t=c["t"], k=c["k"]) for c in risks[:4]],
+                       all=[dict(t=c["t"], k=c["k"]) for c in sorted(C, key=lambda c: (c["k"] != "good", c["o"]))], model=mv, peer=peer, peers=len(pools.get(sec, []))),
+                  open(os.path.join(out_dir, sym + ".json"), "w"), separators=(",", ":"))
+        written += 1
+    return written, len(allm)
+
+
+if __name__ == "__main__":
+    out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DATA, "..", "scorecards_preview")
+    w, n = build(out)
+    print("scorecards: wrote %d files (%d companies with revenue data) -> %s" % (w, n, out))

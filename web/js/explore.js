@@ -149,9 +149,13 @@ async function stockPage(sym) {
   const price = h ? h.c[h.c.length - 1] : top ? top.price : row ? row[4] : q ? q.price : null;
   if (price == null) return `<p>We couldn't find “${esc(sym)}”. ${liveOK() ? "" : "Sign in to look up any listed stock. "}<a href="#/explore">Browse sectors</a> or try the search box.</p>`;
   const cap = top ? top.cap_b : row ? row[3] : null, d1 = top ? top.d1 : row ? row[5] : q ? q.d1 : null;
-  afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true, live: liveChartFor(sym), ohlcSym: liveOhlc ? null : sym, ohlcData: liveOhlc, compare: secHist ? { name: SECTOR_NAME(secForCompare) + " sector", data: secHist } : null }); });
+  afterRender.push(async () => {   // wait briefly for the scorecard so the sector-typical value line is drawn on the first paint
+    const sc = h ? await Promise.race([loadScore(sym), new Promise((r) => setTimeout(() => r(null), 1500))]) : null, box = $("#stkchart");
+    if (h && box) mountChart(box, h, { money: true, live: liveChartFor(sym), ohlcSym: liveOhlc ? null : sym, ohlcData: liveOhlc, compare: secHist ? { name: SECTOR_NAME(secForCompare) + " sector", data: secHist } : null, refLine: sc && sc.peer ? { base: sc.peer.base, low: sc.peer.low, high: sc.peer.high, label: "Sector-typical value" } : null });
+  });
   afterRender.push(() => fillHeadlines("#stknews", name, 5));
   afterRender.push(() => fillAbout(sym, name, secKey, cap));
+  afterRender.push(() => fillProfile(sym, price));
   let stats = "";
   if (h) {
     const c = h.c, last252 = c.slice(-252);
@@ -164,8 +168,9 @@ async function stockPage(sym) {
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(name)}</h1>
    <div class="muted">${esc(sym)}${secKey ? ` · <a href="#/explore/${secKey}">${esc(SECTOR_NAME(secKey))}</a>` : ""}${top && top.industry ? ` · ${esc(top.industry)}` : ""}</div></div>
    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn ghost" href="#/explore/compare/${esc(sym)}">Compare</a><a class="btn ghost" href="#/report/${esc(sym)}">Valuation report</a><a class="btn ghost" href="#/report/${esc(sym)}/snapshot">Snapshot</a></div></div>
-  <div class="card" id="stkabout" style="margin-top:14px"><p class="small muted" style="margin:0">Loading…</p></div><div class="card" id="stkeco"></div>
   <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
+  <div class="card" id="stkval" hidden></div>
+  <div class="card" id="stkabout"><p class="small muted" style="margin:0">Loading…</p></div><div class="card" id="stkprofile" hidden></div><div class="card" id="stkeco"></div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   <div class="card"><h3>Recent headlines</h3><div id="stknews"><p class="small muted" style="margin:0">Loading…</p></div><p class="small" style="margin:8px 0 0"><a href="#/report/${esc(sym)}/snapshot">More in the company snapshot →</a></p></div>
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}
