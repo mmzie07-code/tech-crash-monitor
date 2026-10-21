@@ -55,8 +55,10 @@ def main():
     except Exception as e:
         print("universe/history failed:", e)
     try:
-        fo, missing = fundamentals.build()
+        fo, missing, bs = fundamentals.build()
         json.dump(fo, open(os.path.join(DATA, "fundamentals.json"), "w"), separators=(",", ":"))
+        if bs.get("stocks"):
+            json.dump(bs, open(os.path.join(DATA, "balance.json"), "w"), separators=(",", ":"))
         print("fundamentals written: %d companies" % len(fo["stocks"]))
     except Exception as e:
         print("fundamentals failed:", e)

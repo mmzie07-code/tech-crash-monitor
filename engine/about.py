@@ -82,7 +82,9 @@ def fetch(sym):
     """(summary text, industry, sector, employees, city, country, website) from Yahoo, else from Nasdaq's profile."""
     p = YAHOO.profile(sym)
     if p and p.get("longBusinessSummary"):
-        return dict(text=p["longBusinessSummary"], industry=p.get("industry"), sector=p.get("sector"), employees=p.get("fullTimeEmployees"), city=p.get("city"), country=p.get("country"), url=p.get("website"), source="Yahoo Finance")
+        return dict(text=p["longBusinessSummary"], industry=p.get("industry"), sector=p.get("sector"), employees=p.get("fullTimeEmployees"), city=p.get("city"), country=p.get("country"), url=p.get("website"), source="Yahoo Finance",
+                    officers=[dict(name=" ".join((o.get("name") or "").split()), title=o.get("title"), age=o.get("age"), pay=(o.get("totalPay") or {}).get("raw"), year=o.get("fiscalYear")) for o in (p.get("companyOfficers") or [])[:8]],
+                    gov={k: p.get(k) for k in ("auditRisk", "boardRisk", "compensationRisk", "shareHolderRightsRisk", "overallRisk") if p.get(k) is not None})
     url = "https://api.nasdaq.com/api/company/%s/company-profile" % sym.replace("-", ".")
     for attempt in range(2):
         try:
@@ -123,7 +125,7 @@ def build_one(row, F):
     f = F.get(sym) or {}
     fin = dict(rev=last(f.get("rev")), ni=last(f.get("ni")), ocf=last(f.get("ocf")), debt=f.get("debt"), cash=(f.get("cash") or 0) + (f.get("sti") or 0) if f.get("cash") is not None else None,
                beta=f.get("beta"), div=last(f.get("dividends")), interest=last(f.get("interest")))
-    return dict(sym=sym, name=name, desc=sents, industry=industry, sector_label=p.get("sector"), employees=p.get("employees"), city=p.get("city"), country=p.get("country"), url=p.get("url"), source=p.get("source"), generated=dt.date.today().isoformat(), fin={k: v for k, v in fin.items() if v is not None})
+    return dict(sym=sym, name=name, desc=sents, industry=industry, sector_label=p.get("sector"), employees=p.get("employees"), city=p.get("city"), country=p.get("country"), url=p.get("url"), source=p.get("source"), officers=p.get("officers") or [], gov=p.get("gov") or {}, generated=dt.date.today().isoformat(), fin={k: v for k, v in fin.items() if v is not None})
 
 
 def main():
@@ -138,6 +140,12 @@ def main():
             todo.append((0, r))
         elif (today - dt.date.fromtimestamp(os.path.getmtime(path))).days > STALE_DAYS:
             todo.append((1, r))
+        else:
+            try:
+                if "officers" not in json.load(open(path)):   # written before management data was added
+                    todo.append((1, r))
+            except Exception:
+                todo.append((1, r))
     todo = [r for _, r in sorted(todo, key=lambda x: x[0])][: int(os.environ.get("ABOUT_LIMIT", "800"))]
     done = 0
     for i, r in enumerate(todo):

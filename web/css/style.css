@@ -158,3 +158,12 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .an-vt u{position:absolute;top:-3px;bottom:-3px;border-left:2px dashed var(--tx);opacity:.6}.an-vv{width:60px;text-align:right;font-weight:700;flex:none}
 .an-sim{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 .an-sc{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:12px 8px;border:1px solid var(--line);border-radius:14px;color:var(--tx);background:var(--bg)}.an-sc:hover{border-color:var(--brand)}.an-sc .small{line-height:1.25}.an-mr{margin:4px 0}
+
+/* full analysis: balance-sheet stacks, ownership, tags */
+.an-hide{display:none}
+.an-stack{display:flex;height:50px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}.an-stack span{display:flex;flex-direction:column;justify-content:center;padding:4px 8px;min-width:4px;color:#fff;overflow:hidden;white-space:nowrap;line-height:1.2}.an-stack b{font-size:12px}.an-stack small{font-size:11px;opacity:.92}
+.an-stack .s1{background:var(--ok)}.an-stack .s2{background:#3b9ede}.an-stack .s3{background:var(--brand)}.an-stack .s4{background:var(--warn)}.an-stack .s5{background:var(--bad)}.an-stack .s6{background:var(--brand)}.an-stack .s7{background:var(--brand2);color:#0b1b17}.an-stack .s8{background:var(--unk)}
+.an-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.an-two{grid-template-columns:1fr}}
+.an-tag{font-size:12px;font-weight:800;padding:2px 8px;border-radius:6px;background:var(--bg);color:var(--mut);white-space:nowrap}.an-tag.buy{color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}.an-tag.sell{color:var(--warn);background:color-mix(in srgb,var(--warn) 16%,transparent)}
+.an-ul{margin:4px 0 0;padding-left:18px}.an-ul li{margin:7px 0;font-size:15px}
+.an-vt i.o{background:var(--warn)}

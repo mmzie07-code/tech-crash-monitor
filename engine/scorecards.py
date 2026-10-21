@@ -170,7 +170,7 @@ def _score(lst):
     return dict(checks=lst, score=sum(1 for c in live if c["ok"]), total=len(live))
 
 
-def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods):
+def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods, bsr=None, about=None):
     """The full-analysis page: for each section a pass/fail checklist (each check is a plain statement with its numbers) plus the data for its charts."""
     price, out = m["price"], {}
     # ---- valuation ----
@@ -239,7 +239,28 @@ def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods):
             else:
                 runway = cash / -m["fcf"] if cash else 0
                 _chk(H, runway >= 3, "Burning %s a year; its cash would last about %.1f years at that pace" % (money(-m["fcf"]), runway))
-        out["health"] = dict(_score(H), cash=round(cash, 1), debt=round(debt, 1), equity=m["equity"], ocf=m["ocf"], rev=m["rev"])
+        extra = {}
+        if bsr:
+            lastv = lambda k: next((v for v in reversed(bsr.get(k) or []) if v is not None), None)
+            ta, ac, tl, lc, eq = lastv("assets"), lastv("assets_c"), lastv("liab"), lastv("liab_c"), lastv("equity_y")
+            if ac is not None and lc is not None:
+                _chk(H, ac > lc, "Short-term assets (%s) %s its short-term liabilities (%s)" % (money(ac), "exceed" if ac > lc else "don't cover", money(lc)))
+            if None not in (ta, ac, tl, lc):
+                lta, ltl = ta - ac, tl - lc
+                _chk(H, lta > ltl, "Long-term assets (%s) %s its long-term liabilities (%s)" % (money(lta), "exceed" if lta > ltl else "don't cover", money(ltl)))
+            hist = []
+            for i, per in enumerate(periods):
+                d = (bsr.get("debt_y") or [None] * 4)[i] if i < len(bsr.get("debt_y") or []) else None
+                e = (bsr.get("equity_y") or [None] * 4)[i] if i < len(bsr.get("equity_y") or []) else None
+                if e is not None:
+                    hist.append(dict(p=per, debt=d, equity=e, ratio=round(d / e * 100, 1) if d is not None and e > 0 else None))
+            rs = [h["ratio"] for h in hist if h["ratio"] is not None]
+            if len(rs) >= 2:
+                first, lastr = rs[0], rs[-1]
+                _chk(H, lastr <= first or lastr < 40, "Debt-to-equity went from %.0f%% to %.0f%% over %d years" % (first, lastr, len(rs)) if lastr != first else "Debt-to-equity has stayed at about %.0f%%" % lastr)
+            cash_y = lastv("cash_y")
+            extra = dict(debt_equity_history=hist, sheet=dict(assets=ta, cash=cash_y, current_assets=ac, liab=tl, current_liab=lc, equity=eq) if ta is not None else None)
+        out["health"] = dict(_score(H), cash=round(cash, 1), debt=round(debt, 1), equity=m["equity"], ocf=m["ocf"], rev=m["rev"], **extra)
     # ---- dividends and buybacks ----
     D, dv, bb = [], m["div"], m["buy"]
     _chk(D, dv > 0, "Pays a dividend (%s last year)" % money(dv) if dv > 0 else "Doesn't pay a dividend")
@@ -255,10 +276,45 @@ def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods):
             _chk(D, dseries[-1] > dseries[0], "Dividend payments %s over the period (%s to %s)" % ("rose" if dseries[-1] > dseries[0] else "did not rise", money(dseries[0]), money(dseries[-1])))
     _chk(D, bb > 0, "Buys back its own shares (%s last year)" % money(bb) if bb > 0 else "Isn't buying back shares")
     out["dividend"] = dict(_score(D), yield_pct=round(dv / m["cap"] * 100, 2) if m["cap"] else 0, payout_pct=round(dv / m["ni"] * 100) if m["ni"] and m["ni"] > 0 and dv > 0 else None,
-                           div=ser("dividends"), buy=ser("buyback"), periods=periods, shareholder_yield=round(m["payout_yield"] * 100, 2))
-    # ---- insiders and ownership (no pass/fail: filings tell you what happened, not whether it is good) ----
+                           div=ser("dividends"), buy=ser("buyback"), periods=periods, shareholder_yield=round(m["payout_yield"] * 100, 2),
+                           history=[dict(ex=d.get("ex"), amount=d.get("amount"), paid=d.get("paid")) for d in (snap.get("dividends") or [])[:8]])
+    # ---- insiders and ownership ----
+    ins, inst = snap.get("insider") or {}, snap.get("inst") or {}
+    O = []
+    net = ins.get("net")
+    if net and net[0] is not None:
+        _chk(O, net[0] >= 0, "Insiders %s than they sold over the last 3 months (net %s%s shares). Routine, pre-scheduled sales are common, so read the table below." % ("bought more" if net[0] >= 0 else "sold more", "+" if net[0] >= 0 else "-", format(int(abs(net[0])), ",")))
+    else:
+        _chk(O, False, "Not enough recent insider trading data to say whether insiders have been buying or selling", na=True)
+    sh_y = [v for v in ((bsr or {}).get("shares_y") or []) if v]
+    if len(sh_y) >= 2:
+        g1 = sh_y[-1] / sh_y[-2] - 1
+        g3 = sh_y[-1] / sh_y[0] - 1
+        _chk(O, g1 <= 0.05, "Average shares outstanding %s %.1f%% in the past year (%+.1f%% over %d years)%s" % ("grew" if g1 > 0 else "fell", abs(g1) * 100, g3 * 100, len(sh_y) - 1, ", which dilutes existing shareholders" if g1 > 0.05 else ""))
+    else:
+        _chk(O, False, "Share-count history isn't available yet", na=True)
+    shares_out = (inst.get("shares_out_m") or F.get("shares") or 0) * 1e6
+    ins_pct = round(ins["insider_shares"] / shares_out * 100, 2) if ins.get("insider_shares") and shares_out else None
+    inst_pct = inst.get("pct")
+    pub_pct = round(max(0.0, 100 - (ins_pct or 0) - (inst_pct or 0)), 2) if inst_pct is not None else None
     big = [dict(form=f.get("form"), date=f.get("date"), what=f.get("what"), url=f.get("url")) for f in (snap.get("filings") or []) if "13" in (f.get("form") or "")][:6]
-    out["ownership"] = dict(insider_filings_90d=snap.get("insider_filings_90d"), large_holder_filings=big, has_snapshot=bool(snap))
+    out["ownership"] = dict(_score(O), insider_filings_90d=snap.get("insider_filings_90d"), large_holder_filings=big, has_snapshot=bool(snap),
+                            tx=(ins.get("tx") or [])[:15], buys=ins.get("buys"), sells=ins.get("sells"), bought=ins.get("bought"), sold=ins.get("sold"), net=ins.get("net"),
+                            insider_pct=ins_pct, inst_pct=inst_pct, public_pct=pub_pct, holders=(inst.get("holders") or [])[:15], shares_out_m=inst.get("shares_out_m"))
+    # ---- management: named officers and independent governance-risk scores (1 = lowest risk, 10 = highest) ----
+    gov = (about or {}).get("gov") or {}
+    G = []
+    for key, label in [("auditRisk", "Audit risk"), ("boardRisk", "Board-structure risk"), ("compensationRisk", "Executive-pay risk"), ("shareHolderRightsRisk", "Shareholder-rights risk")]:
+        if gov.get(key) is not None:
+            _chk(G, gov[key] <= 5, "%s is %d out of 10 (lower is better)" % (label, gov[key]))
+    off = (about or {}).get("officers") or []
+    ceo = next((o for o in off if "ceo" in (o.get("title") or "").lower() or "chief executive" in (o.get("title") or "").lower()), None)
+    out["management"] = dict(_score(G), officers=off[:8], gov=gov, ceo=ceo, updates=(snap.get("mgmt_updates") or [])[:6],
+                             note=None if off or gov else "Management details are added nightly, largest companies first.")
+    # ---- company information ----
+    fa = snap.get("facts") or {}
+    out["info"] = dict(employees=(about or {}).get("employees"), city=(about or {}).get("city"), country=(about or {}).get("country"), website=(about or {}).get("url"), industry=(about or {}).get("industry") or fa.get("industry"),
+                       exchange=fa.get("exchange"), sic=fa.get("sic"), fiscal_year_end=fa.get("fiscal_year_end"), filer=fa.get("filer_category"), state=fa.get("state"), cik=F.get("cik"), fy_end=F.get("fy_end"))
     return out
 
 
@@ -283,14 +339,19 @@ def build(out_dir):
     import statistics
     med = {sec: {k: statistics.median(v) for k in ("pe", "pfcf", "evebit", "pb") for v in [[p[k] for p in pool if p.get(k)]] if len(v) >= 8} for sec, pool in pools.items()}
     med2 = {sec: {k: statistics.median(v) for k in ("cagr", "opm", "roe", "fcfm") for v in [[p[k] for p in pool if p.get(k) is not None]] if len(v) >= 8} for sec, pool in pools.items()}
-    industry = {}
+    try:
+        BS = json.load(open(os.path.join(DATA, "balance.json")))["stocks"]
+    except Exception:
+        BS = {}
+    ABOUT = {}
     adir = os.path.join(DATA, "about")
     if os.path.isdir(adir):
         for f in os.listdir(adir):
             try:
-                industry[f[:-5]] = json.load(open(os.path.join(adir, f))).get("industry")
+                ABOUT[f[:-5]] = json.load(open(os.path.join(adir, f)))
             except Exception:
                 pass
+    industry = {k: v.get("industry") for k, v in ABOUT.items()}
     payloads, meta = {}, {}
     os.makedirs(out_dir, exist_ok=True)
     snapdir, histdir = os.path.join(DATA, "snap"), os.path.join(DATA, "hist")
@@ -414,7 +475,7 @@ def build(out_dir):
                 peer = dict(base=round(statistics.median(vals), 2), low=vals[0], high=vals[-1], parts=parts, med={k: round(v, 1) for k, v in md.items()})
         payloads[sym] = dict(s=sym, axes=axes, na=na, summary=summary, rewards=[c["t"] for c in rewards[:4]], risks=[dict(t=c["t"], k=c["k"]) for c in risks[:4]],
                              all=[dict(t=c["t"], k=c["k"]) for c in sorted(C, key=lambda c: (c["k"] != "good", c["o"]))], model=mv, peer=peer, peers=len(pools.get(sec, [])),
-                             sec=build_sections(m, sec, special, med.get(sec, {}), med2.get(sec, {}), peer, mv, snap, F_all[sym], periods))
+                             sec=build_sections(m, sec, special, med.get(sec, {}), med2.get(sec, {}), peer, mv, snap, F_all[sym], periods, BS.get(sym), ABOUT.get(sym)))
         meta[sym] = dict(sector=sec, cap=m["cap"], name=m["name"], price=m["price"], pe=m["pe"], pfcf=m["pfcf"], pb=m["pb"], evebit=m["evebit"])
     # second pass: similar companies (same industry first when we know it, then nearest in size within the sector), each with its own scorecard
     by_sec = {}
@@ -427,6 +488,13 @@ def build(out_dir):
         pl["similar"] = [dict(s=x, name=meta[x]["name"], cap_b=round(meta[x]["cap"] / 1000, 2), price=meta[x]["price"], axes=payloads[x]["axes"],
                               pe=round(meta[x]["pe"], 1) if meta[x]["pe"] else None, pfcf=round(meta[x]["pfcf"], 1) if meta[x]["pfcf"] else None,
                               pb=round(meta[x]["pb"], 1) if meta[x]["pb"] else None, evebit=round(meta[x]["evebit"], 1) if meta[x]["evebit"] else None) for x in cands[:6]]
+        disc = {}
+        pool_syms = [x for x in by_sec[me["sector"]] if x != sym and meta[x]["cap"] >= 1000]
+        for axis in ("value", "health", "growth", "payout"):
+            best = sorted((x for x in pool_syms if payloads[x]["axes"].get(axis) is not None), key=lambda x: (-(payloads[x]["axes"][axis]), 0 if industry.get(sym) and industry.get(x) == industry.get(sym) else 1))
+            best.sort(key=lambda x: (0 if industry.get(sym) and industry.get(x) == industry.get(sym) else 1, -payloads[x]["axes"][axis]))
+            disc[axis] = [dict(s=x, name=meta[x]["name"], cap_b=round(meta[x]["cap"] / 1000, 2), price=meta[x]["price"], axes=payloads[x]["axes"]) for x in best[:3]]
+        pl["discover"] = disc
         json.dump(pl, open(os.path.join(out_dir, sym + ".json"), "w"), separators=(",", ":"))
         written += 1
     return written, len(allm)

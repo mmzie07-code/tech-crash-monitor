@@ -35,6 +35,14 @@ BALANCE = {
 }
 
 
+# Year-end balance sheets (4 years) and average share counts: used by the full-analysis page (debt history, current vs long-term, dilution). Kept in their own file.
+BS_YEAR_ENDS = ["CY2022Q4I", "CY2023Q4I", "CY2024Q4I", "CY2025Q4I"]
+BS_TAGS = {"assets": ["Assets"], "assets_c": ["AssetsCurrent"], "liab": ["Liabilities"], "liab_c": ["LiabilitiesCurrent"],
+           "equity_y": ["StockholdersEquity", "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"],
+           "cash_y": BALANCE["cash"], "sti_y": BALANCE["sti"], "debt_y": BALANCE["debt"], "debt_nc_y": BALANCE["debt_nc"], "debt_c_y": BALANCE["debt_c"]}
+SHARES_TAGS = ["WeightedAverageNumberOfDilutedSharesOutstanding", "WeightedAverageNumberOfSharesOutstandingBasic"]
+
+
 def get(url, tries=3):
     for i in range(tries):
         wait = 0.12 - (time.time() - _last[0])
@@ -111,6 +119,12 @@ def build():
     for per in INST:
         for cik, v in frame("dei", "EntityCommonStockSharesOutstanding", "shares", per).items():
             shares.setdefault(cik, v)
+    try:   # the full-analysis extras: failure here must never affect the main file
+        bsf = {k: [merged(tags, "USD", per) for per in BS_YEAR_ENDS] for k, tags in BS_TAGS.items()}
+        shf = [merged(SHARES_TAGS, "shares", y) for y in YEARS]
+    except Exception as e:
+        print("balance-sheet history failed:", e)
+        bsf = shf = None
     sp = json.load(open(os.path.join(DATA, "hist", "_GSPC.json")))
     spx_weekly = {}
     for d, c in zip(sp["t"], sp["c"]):
@@ -153,13 +167,44 @@ def build():
             rec["beta"] = b
         if "rev" in rec or "ocf" in rec:
             out[sym] = rec
-    return dict(generated=dt.datetime.utcnow().isoformat() + "Z", periods=YEARS, units="USD millions (shares in millions)", stocks=out), missing
+    bs = {}
+    if bsf:
+        for sym, rec in out.items():
+            cik = rec["cik"]
+            g = lambda key, i: bsf[key][i].get(cik, (None,))[0]
+            r = {}
+            for key in ("assets", "assets_c", "liab", "liab_c", "equity_y"):
+                arr = [m(g(key, i)) for i in range(len(BS_YEAR_ENDS))]
+                if any(v is not None for v in arr):
+                    r[key] = arr
+            cash = []
+            for i in range(len(BS_YEAR_ENDS)):
+                c, st = g("cash_y", i), g("sti_y", i)
+                cash.append(m((c or 0) + (st or 0)) if (c is not None or st is not None) else None)
+            if any(v is not None for v in cash):
+                r["cash_y"] = cash
+            debt = []
+            for i in range(len(BS_YEAR_ENDS)):
+                d = g("debt_y", i)
+                if d is None:
+                    nc, c = g("debt_nc_y", i), g("debt_c_y", i)
+                    d = (nc or 0) + (c or 0) if (nc is not None or c is not None) else None
+                debt.append(m(d))
+            if any(v is not None for v in debt):
+                r["debt_y"] = debt
+            sh = [m(shf[i].get(cik, (None,))[0]) for i in range(len(YEARS))] if shf else []
+            if any(v is not None for v in sh):
+                r["shares_y"] = sh
+            if r:
+                bs[sym] = r
+    return dict(generated=dt.datetime.utcnow().isoformat() + "Z", periods=YEARS, units="USD millions (shares in millions)", stocks=out), missing, dict(periods=YEARS, stocks=bs)
 
 
 if __name__ == "__main__":
     t0 = time.time()
-    o, missing = build()
+    o, missing, bs = build()
     json.dump(o, open(os.path.join(DATA, "fundamentals.json"), "w"), separators=(",", ":"))
+    json.dump(bs, open(os.path.join(DATA, "balance.json"), "w"), separators=(",", ":"))
     print("fundamentals:", len(o["stocks"]), "companies;", missing, "without SEC data;", round(time.time() - t0), "s;", os.path.getsize(os.path.join(DATA, "fundamentals.json")) // 1024, "KB")
     for s in ["AAPL", "MSFT", "NVDA", "KO", "JPM", "TSLA"]:
         print(s, json.dumps(o["stocks"].get(s))[:330])
