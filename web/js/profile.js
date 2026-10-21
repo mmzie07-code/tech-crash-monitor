@@ -13,7 +13,7 @@ const PROFILE_AXES = [["value", "Value", "How cheap it is compared with other co
   ["payout", "Payouts", "How much of its value comes back to shareholders through dividends and buybacks, and whether cash flow covers it."]];
 
 function radarSvg(axes) {
-  const cx = 170, cy = 150, R = 100, ang = (i) => (-90 + i * 72) * Math.PI / 180, pt = (i, r) => [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))];
+  const cx = 184, cy = 150, R = 100, ang = (i) => (-90 + i * 72) * Math.PI / 180, pt = (i, r) => [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))];
   const ring = (f) => PROFILE_AXES.map((_, i) => pt(i, R * f).map((v) => v.toFixed(1)).join(",")).join(" ");
   const shape = PROFILE_AXES.map(([k], i) => pt(i, R * Math.max(0.04, (axes[k] == null ? 0 : axes[k]) / 100)).map((v) => v.toFixed(1)).join(",")).join(" ");
   const dots = PROFILE_AXES.map(([k], i) => axes[k] == null ? "" : `<circle cx="${pt(i, R * Math.max(0.04, axes[k] / 100))[0].toFixed(1)}" cy="${pt(i, R * Math.max(0.04, axes[k] / 100))[1].toFixed(1)}" r="3.5" fill="var(--brand)"/>`).join("");
@@ -22,7 +22,7 @@ function radarSvg(axes) {
     return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}">${name.toUpperCase()}</text><text class="sv" x="${x.toFixed(1)}" y="${(y + dy + 13).toFixed(1)}" text-anchor="${anchor}">${axes[k] == null ? "n/a" : axes[k]}</text>`;
   }).join("");
   const aria = PROFILE_AXES.map(([k, n]) => n + " " + (axes[k] == null ? "not available" : axes[k] + " out of 100")).join(", ");
-  return `<svg class="radar" viewBox="0 0 340 310" role="img" aria-label="Scorecard: ${esc(aria)}"><defs><linearGradient id="rdg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand)" stop-opacity=".6"/><stop offset="1" stop-color="var(--brand2)" stop-opacity=".6"/></linearGradient></defs>
+  return `<svg class="radar" viewBox="0 0 364 310" role="img" aria-label="Scorecard: ${esc(aria)}"><defs><linearGradient id="rdg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand)" stop-opacity=".6"/><stop offset="1" stop-color="var(--brand2)" stop-opacity=".6"/></linearGradient></defs>
     ${[0.25, 0.5, 0.75, 1].map((f) => `<polygon points="${ring(f)}" fill="none" stroke="var(--line)" stroke-width="${f === 0.5 ? 1.6 : 1}"${f === 0.5 ? ' stroke-dasharray="4 3"' : ""}/>`).join("")}
     ${PROFILE_AXES.map((_, i) => `<line x1="${cx}" y1="${cy}" x2="${pt(i, R)[0].toFixed(1)}" y2="${pt(i, R)[1].toFixed(1)}" stroke="var(--line)"/>`).join("")}
     <polygon points="${shape}" fill="url(#rdg)" stroke="var(--brand)" stroke-width="2" stroke-linejoin="round"/>${dots}${labels}</svg>`;
