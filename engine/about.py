@@ -40,6 +40,7 @@ class Yahoo:
     """Yahoo's profile endpoint needs a cookie and a short-lived 'crumb'. Get both once, reuse them, and start over if Yahoo says they expired."""
     def __init__(self):
         self.op, self.crumb = None, None
+        self.fails, self.dead = 0, False  # circuit breaker: after a few failures in a row, stop trying Yahoo this run and use the backup source
 
     def login(self):
         self.op = urlreq.build_opener(urlreq.HTTPCookieProcessor(http.cookiejar.CookieJar()))
@@ -50,12 +51,15 @@ class Yahoo:
         self.crumb = self.op.open(urlreq.Request("https://query1.finance.yahoo.com/v1/test/getcrumb", headers={"User-Agent": "Mozilla/5.0"}), timeout=15).read().decode()
 
     def profile(self, sym):
+        if self.dead:
+            return None
         for attempt in range(3):
             try:
                 if not self.crumb:
                     self.login()
                 url = "https://query1.finance.yahoo.com/v10/finance/quoteSummary/%s?modules=assetProfile&crumb=%s" % (sym, urlreq.quote(self.crumb))
                 d = json.loads(self.op.open(urlreq.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20).read())
+                self.fails = 0
                 return d["quoteSummary"]["result"][0]["assetProfile"]
             except urlreq.HTTPError as e:
                 if e.code == 404:
@@ -64,6 +68,10 @@ class Yahoo:
                 time.sleep(2 * (attempt + 1))
             except Exception:
                 time.sleep(1.5 * (attempt + 1))
+        self.fails += 1
+        if self.fails >= 4:
+            self.dead = True
+            print("about: Yahoo keeps failing, using Nasdaq for the rest of this run", flush=True)
         return None
 
 
