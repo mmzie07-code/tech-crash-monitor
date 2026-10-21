@@ -1,0 +1,1665 @@
+{
+ "generated": "2026-10-21T04:08:09.898051Z",
+ "asof": "2026-10-21",
+ "priced": [
+  {
+   "sym": "CTY",
+   "name": "City Therapeutics, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": 18.0,
+   "date": "2026-10-16",
+   "shares": 11111111.0,
+   "amount": 199999998.0,
+   "spac": false,
+   "lockup": "2027-04-14",
+   "perf": {
+    "first_day_pct": 24.4,
+    "now_pct": 15.7,
+    "last": 20.83,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-16"
+   }
+  },
+  {
+   "sym": "TCXB",
+   "name": "TCGX Acquisition Corp. II",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-10-16",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-04-14"
+  },
+  {
+   "sym": "AMRO",
+   "name": "Amaero Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": 4.25,
+   "date": "2026-10-15",
+   "shares": 4705883.0,
+   "amount": 20000003.0,
+   "spac": false,
+   "lockup": "2027-04-13",
+   "perf": {
+    "first_day_pct": 3.8,
+    "now_pct": 33.6,
+    "last": 5.68,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-15"
+   }
+  },
+  {
+   "sym": "IAM",
+   "name": "Iambic Therapeutics, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 16.0,
+   "date": "2026-10-15",
+   "shares": 9375000.0,
+   "amount": 150000000.0,
+   "spac": false,
+   "lockup": "2027-04-13",
+   "perf": {
+    "first_day_pct": 18.2,
+    "now_pct": 0.1,
+    "last": 16.01,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-15"
+   }
+  },
+  {
+   "sym": "FLSC",
+   "name": "Frazier Life Sciences Acquisition Corp. II",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-10-14",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2027-04-12"
+  },
+  {
+   "sym": "RTSN",
+   "name": "Retension Pharmaceuticals, Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": 12.0,
+   "date": "2026-10-09",
+   "shares": 3750000.0,
+   "amount": 45000000.0,
+   "spac": false,
+   "lockup": "2027-04-07",
+   "perf": {
+    "first_day_pct": -12.3,
+    "now_pct": 34.8,
+    "last": 16.18,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-09"
+   }
+  },
+  {
+   "sym": "TRXB",
+   "name": "TRex Bio, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 14.0,
+   "date": "2026-10-09",
+   "shares": 8333334.0,
+   "amount": 116666676.0,
+   "spac": false,
+   "lockup": "2027-04-07",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": 3.1,
+    "last": 14.44,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-09"
+   }
+  },
+  {
+   "sym": "PAXGU",
+   "name": "Pine Tree Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-10-06",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-04-04"
+  },
+  {
+   "sym": "CHWM",
+   "name": "Chilwa Minerals Ltd",
+   "exchange": "NASDAQ Capital",
+   "price": 5.6,
+   "date": "2026-10-01",
+   "shares": 625000.0,
+   "amount": 3500000.0,
+   "spac": false,
+   "lockup": "2027-03-30",
+   "perf": {
+    "first_day_pct": 17.9,
+    "now_pct": -7.5,
+    "last": 5.18,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-01"
+   }
+  },
+  {
+   "sym": "PORTU",
+   "name": "Southport Acquisition Corp. II",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-10-01",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-03-30"
+  },
+  {
+   "sym": "ACCV",
+   "name": "Accelevation Holdings Corp.",
+   "exchange": "NASDAQ Global Select",
+   "price": 18.0,
+   "date": "2026-09-30",
+   "shares": 30000000.0,
+   "amount": 540000000.0,
+   "spac": false,
+   "lockup": "2027-03-29",
+   "perf": {
+    "first_day_pct": -8.9,
+    "now_pct": -31.6,
+    "last": 12.31,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-10-06"
+   }
+  },
+  {
+   "sym": "RZAI",
+   "name": "Roze Ai Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-09-29",
+   "shares": 13878565.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-03-28",
+   "perf": null
+  },
+  {
+   "sym": "ADRX",
+   "name": "ADARx Pharmaceuticals, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 17.0,
+   "date": "2026-09-25",
+   "shares": 26250000.0,
+   "amount": 446250000.0,
+   "spac": false,
+   "lockup": "2027-03-24",
+   "perf": {
+    "first_day_pct": 13.8,
+    "now_pct": 4.0,
+    "last": 17.68,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-09-25"
+   }
+  },
+  {
+   "sym": "BRRKU",
+   "name": "Bluerock Acquisition Corp. II",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-09-25",
+   "shares": 15000000.0,
+   "amount": 150000000.0,
+   "spac": true,
+   "lockup": "2027-03-24"
+  },
+  {
+   "sym": "LOVIU",
+   "name": "Live Oak Acquisition Corp. VI",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-09-23",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-03-22"
+  },
+  {
+   "sym": "OIG",
+   "name": "Orion180 Insurance Group Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 12.0,
+   "date": "2026-09-18",
+   "shares": 20000000.0,
+   "amount": 240000000.0,
+   "spac": false,
+   "lockup": "2027-03-17",
+   "perf": {
+    "first_day_pct": -2.8,
+    "now_pct": -21.3,
+    "last": 9.45,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-09-18"
+   }
+  },
+  {
+   "sym": "ETRA",
+   "name": "Electra Therapeutics, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 15.0,
+   "date": "2026-09-18",
+   "shares": 23333334.0,
+   "amount": 350000010.0,
+   "spac": false,
+   "lockup": "2027-03-17",
+   "perf": {
+    "first_day_pct": -11.7,
+    "now_pct": -41.3,
+    "last": 8.81,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-09-18"
+   }
+  },
+  {
+   "sym": "LEDRU",
+   "name": "Leader's Advantage Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-09-18",
+   "shares": 15000000.0,
+   "amount": 150000000.0,
+   "spac": true,
+   "lockup": "2027-03-17"
+  },
+  {
+   "sym": "HYACU",
+   "name": "Haymaker Acquisition Corp V",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-09-17",
+   "shares": 25000000.0,
+   "amount": 250000000.0,
+   "spac": true,
+   "lockup": "2027-03-16"
+  },
+  {
+   "sym": "TRBG",
+   "name": "Turbogen Ltd.",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-09-03",
+   "shares": 2066243.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-03-02",
+   "perf": null
+  },
+  {
+   "sym": "TLACU",
+   "name": "Three Lions Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-09-01",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-02-28"
+  },
+  {
+   "sym": "IPHXU",
+   "name": "Inflection Point Acquisition Corp. VIII",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-28",
+   "shares": 25000000.0,
+   "amount": 250000000.0,
+   "spac": true,
+   "lockup": "2027-02-24"
+  },
+  {
+   "sym": "RNAQU",
+   "name": "Rainier Acquisition Corp",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-08-27",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2027-02-23"
+  },
+  {
+   "sym": "JTTT",
+   "name": "JATT III Acquisition Corp",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-08-26",
+   "shares": 6000000.0,
+   "amount": 60000000.0,
+   "spac": true,
+   "lockup": "2027-02-22"
+  },
+  {
+   "sym": "SCATU",
+   "name": "Southern Cross Acquisition II Corp.",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-08-26",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2027-02-22"
+  },
+  {
+   "sym": "ADBT",
+   "name": "Advasa Holdings, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": null,
+   "date": "2026-08-25",
+   "shares": 94046357.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-02-21",
+   "perf": null
+  },
+  {
+   "sym": "FBDT",
+   "name": "First Breach, Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-08-20",
+   "shares": 70728866.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-02-16",
+   "perf": null
+  },
+  {
+   "sym": "LYNX",
+   "name": "Lyntris Inc.",
+   "exchange": "NYSE",
+   "price": 17.5,
+   "date": "2026-08-19",
+   "shares": 17000000.0,
+   "amount": 297500000.0,
+   "spac": false,
+   "lockup": "2027-02-15",
+   "perf": {
+    "first_day_pct": -14.2,
+    "now_pct": -36.1,
+    "last": 11.19,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-19"
+   }
+  },
+  {
+   "sym": "XTERU",
+   "name": "Karman Line Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-18",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-02-14"
+  },
+  {
+   "sym": "NSAIU",
+   "name": "NorthStrive Acquisition Corp I.",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-08-18",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-02-14"
+  },
+  {
+   "sym": "TBCVU",
+   "name": "Thunder Bridge Capital Partners V, Ltd.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-13",
+   "shares": 26100000.0,
+   "amount": 261000000.0,
+   "spac": false,
+   "lockup": "2027-02-09",
+   "perf": {
+    "first_day_pct": -0.9,
+    "now_pct": -0.7,
+    "last": 9.93,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-13"
+   }
+  },
+  {
+   "sym": "FOIL",
+   "name": "Londian Wason New Energy Tech Inc.",
+   "exchange": "NYSE",
+   "price": 22.0,
+   "date": "2026-08-12",
+   "shares": 4285714.0,
+   "amount": 94285708.0,
+   "spac": false,
+   "lockup": "2027-02-08",
+   "perf": {
+    "first_day_pct": 11.4,
+    "now_pct": -17.9,
+    "last": 18.06,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-12"
+   }
+  },
+  {
+   "sym": "VOGX",
+   "name": "Vogenx, Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": 13.0,
+   "date": "2026-08-12",
+   "shares": 6250000.0,
+   "amount": 81250000.0,
+   "spac": false,
+   "lockup": "2027-02-08",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": 44.2,
+    "last": 18.75,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-12"
+   }
+  },
+  {
+   "sym": "SNSC",
+   "name": "SunScout Holding Ltd",
+   "exchange": "NYSE MKT",
+   "price": 5.0,
+   "date": "2026-08-12",
+   "shares": 3100000.0,
+   "amount": 15500000.0,
+   "spac": false,
+   "lockup": "2027-02-08",
+   "perf": {
+    "first_day_pct": -38.6,
+    "now_pct": -79.4,
+    "last": 1.03,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-12"
+   }
+  },
+  {
+   "sym": "TP",
+   "name": "Ticketplus Ltd.",
+   "exchange": "NYSE MKT",
+   "price": 8.0,
+   "date": "2026-08-07",
+   "shares": 1875000.0,
+   "amount": 15000000.0,
+   "spac": false,
+   "lockup": "2027-02-03",
+   "perf": {
+    "first_day_pct": -12.5,
+    "now_pct": 3.6,
+    "last": 8.29,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-07"
+   }
+  },
+  {
+   "sym": "LTGO",
+   "name": "Latigo Biotherapeutics, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 18.0,
+   "date": "2026-08-07",
+   "shares": 19200000.0,
+   "amount": 345600000.0,
+   "spac": false,
+   "lockup": "2027-02-03",
+   "perf": {
+    "first_day_pct": 1.4,
+    "now_pct": -15.3,
+    "last": 15.25,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-07"
+   }
+  },
+  {
+   "sym": "BLSM",
+   "name": "BlossomHill Therapeutics, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 16.0,
+   "date": "2026-08-07",
+   "shares": 9375000.0,
+   "amount": 150000000.0,
+   "spac": false,
+   "lockup": "2027-02-03",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": -10.0,
+    "last": 14.4,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-07"
+   }
+  },
+  {
+   "sym": "OCLTU",
+   "name": "OceanLight Acquisition Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-07",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-02-03"
+  },
+  {
+   "sym": "PNAQU",
+   "name": "Pinnacle Acquisition Corp",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-08-07",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-02-03"
+  },
+  {
+   "sym": "BRVE",
+   "name": "Braveheart Bio, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": 18.0,
+   "date": "2026-08-06",
+   "shares": 21250000.0,
+   "amount": 382500000.0,
+   "spac": false,
+   "lockup": "2027-02-02",
+   "perf": {
+    "first_day_pct": 65.6,
+    "now_pct": 12.6,
+    "last": 20.27,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-06"
+   }
+  },
+  {
+   "sym": "TCGX",
+   "name": "TCGX Acquisition Corp.",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-08-05",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2027-02-01"
+  },
+  {
+   "sym": "ATTO",
+   "name": "Attovia Therapeutics, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": 17.0,
+   "date": "2026-08-05",
+   "shares": 17000000.0,
+   "amount": 289000000.0,
+   "spac": false,
+   "lockup": "2027-02-01",
+   "perf": {
+    "first_day_pct": 28.8,
+    "now_pct": -17.4,
+    "last": 14.04,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-08-05"
+   }
+  },
+  {
+   "sym": "THEOU",
+   "name": "BOA Acquisition Corp. II",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-04",
+   "shares": 12500000.0,
+   "amount": 125000000.0,
+   "spac": true,
+   "lockup": "2027-01-31"
+  },
+  {
+   "sym": "FJDIU",
+   "name": "ARC Group Securities Acquisition I",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-08-04",
+   "shares": 10500000.0,
+   "amount": 105000000.0,
+   "spac": true,
+   "lockup": "2027-01-31"
+  },
+  {
+   "sym": "APMD",
+   "name": "Apnimed, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 16.0,
+   "date": "2026-07-31",
+   "shares": 12000000.0,
+   "amount": 192000000.0,
+   "spac": false,
+   "lockup": "2027-01-27",
+   "perf": {
+    "first_day_pct": 56.2,
+    "now_pct": 15.7,
+    "last": 18.51,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-31"
+   }
+  },
+  {
+   "sym": "EWAVU",
+   "name": "East West Ave Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-31",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-01-27"
+  },
+  {
+   "sym": "XIIIU",
+   "name": "Churchill Capital Corp XIII",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-31",
+   "shares": 36000000.0,
+   "amount": 360000000.0,
+   "spac": false,
+   "lockup": "2027-01-27",
+   "perf": {
+    "first_day_pct": 3.6,
+    "now_pct": 3.5,
+    "last": 10.35,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-31"
+   }
+  },
+  {
+   "sym": "JMKE",
+   "name": "Jersey Mike's Subs Inc.",
+   "exchange": "NYSE",
+   "price": 23.0,
+   "date": "2026-07-30",
+   "shares": 43478261.0,
+   "amount": 1000000003.0,
+   "spac": false,
+   "lockup": "2027-01-26",
+   "perf": {
+    "first_day_pct": -6.0,
+    "now_pct": -22.5,
+    "last": 17.82,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-30"
+   }
+  },
+  {
+   "sym": "GYGY",
+   "name": "Game Your Game Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-07-30",
+   "shares": 16072730.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-01-26",
+   "perf": null
+  },
+  {
+   "sym": "REF",
+   "name": "Reformation Inc.",
+   "exchange": "NYSE",
+   "price": 15.0,
+   "date": "2026-07-30",
+   "shares": 14062500.0,
+   "amount": 210937500.0,
+   "spac": false,
+   "lockup": "2027-01-26",
+   "perf": {
+    "first_day_pct": 0.5,
+    "now_pct": -3.3,
+    "last": 14.5,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-30"
+   }
+  },
+  {
+   "sym": "IMC",
+   "name": "IMC Rare Earths Ltd",
+   "exchange": "NYSE MKT",
+   "price": 5.0,
+   "date": "2026-07-29",
+   "shares": 4000000.0,
+   "amount": 20000000.0,
+   "spac": false,
+   "lockup": "2027-01-25",
+   "perf": {
+    "first_day_pct": 2.6,
+    "now_pct": 34.0,
+    "last": 6.7,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-29"
+   }
+  },
+  {
+   "sym": "CATLU",
+   "name": "Catalyst Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-28",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-01-24"
+  },
+  {
+   "sym": "IOND",
+   "name": "Ionic Digital Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": null,
+   "date": "2026-07-28",
+   "shares": 10800164.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-01-24",
+   "perf": null
+  },
+  {
+   "sym": "SCTX",
+   "name": "Scribe Therapeutics, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": 15.0,
+   "date": "2026-07-24",
+   "shares": 8580000.0,
+   "amount": 128700000.0,
+   "spac": false,
+   "lockup": "2027-01-20",
+   "perf": {
+    "first_day_pct": 26.5,
+    "now_pct": 32.1,
+    "last": 19.81,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-27"
+   }
+  },
+  {
+   "sym": "PLCIU",
+   "name": "Pelican Acquisition II Corp",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-07-24",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2027-01-20"
+  },
+  {
+   "sym": "MTAKU",
+   "name": "Market Technology Acquisition Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-24",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-01-20"
+  },
+  {
+   "sym": "NCOOU",
+   "name": "Southern Cross Acquisition I Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-21",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2027-01-17"
+  },
+  {
+   "sym": "BRTMU",
+   "name": "B&R Technology Merger Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-21",
+   "shares": 32500000.0,
+   "amount": 325000000.0,
+   "spac": true,
+   "lockup": "2027-01-17"
+  },
+  {
+   "sym": "AMACU",
+   "name": "AMR Resources Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-17",
+   "shares": 25000000.0,
+   "amount": 250000000.0,
+   "spac": true,
+   "lockup": "2027-01-13"
+  },
+  {
+   "sym": "CSQR",
+   "name": "Csquare, Inc.",
+   "exchange": "NYSE",
+   "price": 21.0,
+   "date": "2026-07-16",
+   "shares": 50000000.0,
+   "amount": 1050000000.0,
+   "spac": false,
+   "lockup": "2027-01-12",
+   "perf": {
+    "first_day_pct": -1.6,
+    "now_pct": -20.4,
+    "last": 16.71,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-16"
+   }
+  },
+  {
+   "sym": "QMLS",
+   "name": "QumulusAI, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": null,
+   "date": "2026-07-16",
+   "shares": 39472531.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-01-12",
+   "perf": null
+  },
+  {
+   "sym": "STDN",
+   "name": "Standard Nuclear, Inc.",
+   "exchange": "NYSE",
+   "price": 15.0,
+   "date": "2026-07-16",
+   "shares": 10000000.0,
+   "amount": 150000000.0,
+   "spac": false,
+   "lockup": "2027-01-12",
+   "perf": {
+    "first_day_pct": -18.0,
+    "now_pct": -18.4,
+    "last": 12.24,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-16"
+   }
+  },
+  {
+   "sym": "JONEU",
+   "name": "Jones Ventures INTL Acquisition1 Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-14",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": false,
+   "lockup": "2027-01-10",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": -0.5,
+    "last": 9.95,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-13"
+   }
+  },
+  {
+   "sym": "RACD",
+   "name": "Research Alliance Corp IV",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-07-13",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": false,
+   "lockup": "2027-01-09",
+   "perf": {
+    "first_day_pct": 3.4,
+    "now_pct": 3.7,
+    "last": 10.37,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-13"
+   }
+  },
+  {
+   "sym": "SAMOU",
+   "name": "Samos Energy Acquisition Corp",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-07-10",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-01-06"
+  },
+  {
+   "sym": "SKHY",
+   "name": "SK hynix Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 149.0,
+   "date": "2026-07-10",
+   "shares": 177900000.0,
+   "amount": 26507100000.0,
+   "spac": false,
+   "lockup": "2027-01-06",
+   "perf": {
+    "first_day_pct": 12.8,
+    "now_pct": -6.2,
+    "last": 139.79,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-10"
+   }
+  },
+  {
+   "sym": "CCCTU",
+   "name": "Columbus Circle Capital Corp III",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-09",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": false,
+   "lockup": "2027-01-05",
+   "perf": {
+    "first_day_pct": 0.2,
+    "now_pct": 0.1,
+    "last": 10.01,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-09"
+   }
+  },
+  {
+   "sym": "MRCOU",
+   "name": "Mercator Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-09",
+   "shares": 15000000.0,
+   "amount": 150000000.0,
+   "spac": true,
+   "lockup": "2027-01-05"
+  },
+  {
+   "sym": "FDMMU",
+   "name": "Freedom Metals Acquisition Corp.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-08",
+   "shares": 27500000.0,
+   "amount": 275000000.0,
+   "spac": true,
+   "lockup": "2027-01-04"
+  },
+  {
+   "sym": "BCCQU",
+   "name": "Bleichroeder Acquisition Corp. III",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-07",
+   "shares": 30000000.0,
+   "amount": 300000000.0,
+   "spac": true,
+   "lockup": "2027-01-03"
+  },
+  {
+   "sym": "MIACU",
+   "name": "Meridian3 Industrials Acquisition Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-02",
+   "shares": 17500000.0,
+   "amount": 175000000.0,
+   "spac": true,
+   "lockup": "2026-12-29"
+  },
+  {
+   "sym": "VIIU",
+   "name": "Viking Acquisition Corp. II",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-07-02",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2026-12-29"
+  },
+  {
+   "sym": "LIME",
+   "name": "Neutron Holdings, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 25.0,
+   "date": "2026-07-01",
+   "shares": 6956522.0,
+   "amount": 173913050.0,
+   "spac": false,
+   "lockup": "2026-12-28",
+   "perf": {
+    "first_day_pct": 4.0,
+    "now_pct": 5.1,
+    "last": 26.28,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-01"
+   }
+  },
+  {
+   "sym": "ITG",
+   "name": "ITG, Inc./DE/",
+   "exchange": "NASDAQ Global Select",
+   "price": 16.0,
+   "date": "2026-07-01",
+   "shares": 19512196.0,
+   "amount": 312195136.0,
+   "spac": false,
+   "lockup": "2026-12-28",
+   "perf": {
+    "first_day_pct": 10.7,
+    "now_pct": -68.1,
+    "last": 5.1,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-01"
+   }
+  },
+  {
+   "sym": "BSP",
+   "name": "Bending Spoons S.p.A.",
+   "exchange": "NASDAQ Global Select",
+   "price": 29.0,
+   "date": "2026-07-01",
+   "shares": 57971015.0,
+   "amount": 1681159435.0,
+   "spac": false,
+   "lockup": "2026-12-28",
+   "perf": {
+    "first_day_pct": 39.7,
+    "now_pct": 57.1,
+    "last": 45.55,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-07-01"
+   }
+  },
+  {
+   "sym": "OSPRU",
+   "name": "Osprey Acquisition Corp. III",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-07-01",
+   "shares": 26100000.0,
+   "amount": 261000000.0,
+   "spac": true,
+   "lockup": "2026-12-28"
+  },
+  {
+   "sym": "AAC'U",
+   "name": "Ares Acquisition Corp III",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-06-30",
+   "shares": 34500000.0,
+   "amount": 345000000.0,
+   "spac": true,
+   "lockup": "2026-12-27"
+  },
+  {
+   "sym": "SIND",
+   "name": "Sinda Ltd.",
+   "exchange": "NYSE",
+   "price": 12.0,
+   "date": "2026-06-26",
+   "shares": 17750000.0,
+   "amount": 213000000.0,
+   "spac": false,
+   "lockup": "2026-12-23",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": -9.8,
+    "last": 10.82,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-06-26"
+   }
+  },
+  {
+   "sym": "ALPXU",
+   "name": "Alpex Acquisition Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-06-25",
+   "shares": 10000000.0,
+   "amount": 100000000.0,
+   "spac": true,
+   "lockup": "2026-12-22"
+  },
+  {
+   "sym": "FWACU",
+   "name": "Futurewave Acquisition Corp",
+   "exchange": "NASDAQ Capital",
+   "price": 10.0,
+   "date": "2026-06-25",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2026-12-22"
+  },
+  {
+   "sym": "CGCFU",
+   "name": "Cartesian Growth Corp IV",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-06-25",
+   "shares": 25000000.0,
+   "amount": 250000000.0,
+   "spac": false,
+   "lockup": "2026-12-22",
+   "perf": {
+    "first_day_pct": 0.0,
+    "now_pct": -0.8,
+    "last": 9.92,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-06-25"
+   }
+  },
+  {
+   "sym": "DPC",
+   "name": "DPC Holdings PLC",
+   "exchange": "NYSE",
+   "price": 33.0,
+   "date": "2026-06-25",
+   "shares": 27858585.0,
+   "amount": 919333305.0,
+   "spac": false,
+   "lockup": "2026-12-22",
+   "perf": {
+    "first_day_pct": 42.1,
+    "now_pct": -11.8,
+    "last": 29.12,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-06-25"
+   }
+  },
+  {
+   "sym": "DSC",
+   "name": "DSC Holdings Ltd.",
+   "exchange": "NASDAQ Global",
+   "price": 17.0,
+   "date": "2026-06-25",
+   "shares": 3000000.0,
+   "amount": 51000000.0,
+   "spac": false,
+   "lockup": "2026-12-22",
+   "perf": {
+    "first_day_pct": -46.7,
+    "now_pct": -77.2,
+    "last": 3.88,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-06-25"
+   }
+  },
+  {
+   "sym": "GHXIU",
+   "name": "Gores Holdings XI, Inc.",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-06-23",
+   "shares": 31200000.0,
+   "amount": 312000000.0,
+   "spac": false,
+   "lockup": "2026-12-20",
+   "perf": {
+    "first_day_pct": 0.5,
+    "now_pct": 1.9,
+    "last": 10.19,
+    "last_date": "2026-10-20",
+    "first_trade": "2026-06-23"
+   }
+  }
+ ],
+ "upcoming": [],
+ "filed": [
+  {
+   "sym": "ISTL",
+   "name": "iStep Learning Ltd",
+   "date": "2026-10-19",
+   "amount": 23000000.0,
+   "spac": false
+  },
+  {
+   "sym": null,
+   "name": "EuroSPAC Acquisition Corp.",
+   "date": "2026-10-13",
+   "amount": 143750000.0,
+   "spac": true
+  },
+  {
+   "sym": "APTTU",
+   "name": "Apex Treasury Corp II",
+   "date": "2026-10-13",
+   "amount": 287500000.0,
+   "spac": false
+  },
+  {
+   "sym": "BBTX",
+   "name": "Bambusa Therapeutics, Inc.",
+   "date": "2026-10-09",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "PTRT",
+   "name": "Patriot Mobile Inc.",
+   "date": "2026-10-09",
+   "amount": 10000000.0,
+   "spac": false
+  },
+  {
+   "sym": "ASPE",
+   "name": "Aspen Neuroscience, Inc.",
+   "date": "2026-10-09",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "OPAY",
+   "name": "OPAY Ltd",
+   "date": "2026-10-09",
+   "amount": 50000000.0,
+   "spac": false
+  },
+  {
+   "sym": "VVVV",
+   "name": "vVARDIS Holding AG",
+   "date": "2026-10-09",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "SWA",
+   "name": "Simwon America Corp.",
+   "date": "2026-10-09",
+   "amount": 41250000.0,
+   "spac": false
+  },
+  {
+   "sym": "CNTL",
+   "name": "Centinel Spine Holdco, Inc.",
+   "date": "2026-10-07",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "FFLY",
+   "name": "FireFly Robotics, Inc.",
+   "date": "2026-10-07",
+   "amount": null,
+   "spac": false
+  },
+  {
+   "sym": "TCAA",
+   "name": "TANG CAPITAL ACQUISITION CORP.",
+   "date": "2026-10-06",
+   "amount": 75000000.0,
+   "spac": true
+  },
+  {
+   "sym": "LYCA",
+   "name": "Lycia Therapeutics, Inc.",
+   "date": "2026-10-05",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "DODC",
+   "name": "DayOne Data Centers Ltd",
+   "date": "2026-10-05",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "NIAAU",
+   "name": "New Iceland Arctic Acquisition Corp.",
+   "date": "2026-10-05",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "GBC",
+   "name": "GEORGIA BANKING CO INC",
+   "date": "2026-10-02",
+   "amount": null,
+   "spac": false
+  },
+  {
+   "sym": "LPCI",
+   "name": "LPC LTD",
+   "date": "2026-10-02",
+   "amount": 25875000.0,
+   "spac": false
+  },
+  {
+   "sym": "ANACU",
+   "name": "Arca Nova Acquisition Corp",
+   "date": "2026-10-02",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "PGA",
+   "name": "POP GLOBAL ACQUISITION Ltd",
+   "date": "2026-10-01",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "BHAIU",
+   "name": "BHAV Acquisition Corp II",
+   "date": "2026-09-30",
+   "amount": 172500000.0,
+   "spac": true
+  },
+  {
+   "sym": "YHTE",
+   "name": "Primagrove Ltd",
+   "date": "2026-09-30",
+   "amount": 43125000.0,
+   "spac": false
+  },
+  {
+   "sym": "MNBSU",
+   "name": "MNBS Acquisition Corp.",
+   "date": "2026-09-29",
+   "amount": 86250000.0,
+   "spac": true
+  },
+  {
+   "sym": "SRAV",
+   "name": "Source Agriventures Inc.",
+   "date": "2026-09-28",
+   "amount": 15000000.0,
+   "spac": false
+  },
+  {
+   "sym": "OSACU",
+   "name": "Orange Street Acquisition Corp",
+   "date": "2026-09-28",
+   "amount": 74750000.0,
+   "spac": true
+  },
+  {
+   "sym": "CSEAU",
+   "name": "Calm Seas Acquisition Corp.",
+   "date": "2026-09-28",
+   "amount": 230000000.0,
+   "spac": true
+  },
+  {
+   "sym": "RGNA",
+   "name": "Regenlab USA Inc.",
+   "date": "2026-09-25",
+   "amount": 34500000.0,
+   "spac": false
+  },
+  {
+   "sym": "TFP",
+   "name": "TFP Group Ltd",
+   "date": "2026-09-25",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "MXRX",
+   "name": "MED-X, INC.",
+   "date": "2026-09-25",
+   "amount": null,
+   "spac": false
+  },
+  {
+   "sym": "SVATU",
+   "name": "Silicon Valley Acquisition Corp. II",
+   "date": "2026-09-21",
+   "amount": 253000000.0,
+   "spac": true
+  },
+  {
+   "sym": "FYH",
+   "name": "Sprout Red International Ltd",
+   "date": "2026-09-21",
+   "amount": 1000000.0,
+   "spac": false
+  },
+  {
+   "sym": "STNF",
+   "name": "Santa Ana Global Enterprises, S.A.",
+   "date": "2026-09-18",
+   "amount": 19906500.0,
+   "spac": false
+  },
+  {
+   "sym": "NSCL",
+   "name": "NSCALE Ltd",
+   "date": "2026-09-18",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "VME",
+   "name": "VME Companies, Inc.",
+   "date": "2026-09-18",
+   "amount": 23000000.0,
+   "spac": false
+  },
+  {
+   "sym": "LCACU",
+   "name": "Lower Cross Acquisitions Corp",
+   "date": "2026-09-16",
+   "amount": 230000000.0,
+   "spac": false
+  },
+  {
+   "sym": "SCQCU",
+   "name": "SPACCircle Acquisition Corp.",
+   "date": "2026-09-15",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "OHIIU",
+   "name": "Oceanhawk Acquisition II Corp.",
+   "date": "2026-09-15",
+   "amount": 172500000.0,
+   "spac": true
+  },
+  {
+   "sym": null,
+   "name": "Meey Global Corp",
+   "date": "2026-09-11",
+   "amount": 34500000.0,
+   "spac": false
+  },
+  {
+   "sym": "FTCRU",
+   "name": "FutureCore Acquisition Corp",
+   "date": "2026-09-11",
+   "amount": 86250000.0,
+   "spac": true
+  },
+  {
+   "sym": "HFE",
+   "name": "Hao Feng Group Ltd.",
+   "date": "2026-09-11",
+   "amount": 29440000.0,
+   "spac": false
+  },
+  {
+   "sym": "ALLNU",
+   "name": "Allarity Acquisition Corp.",
+   "date": "2026-09-10",
+   "amount": 92000000.0,
+   "spac": true
+  },
+  {
+   "sym": "ELEVU",
+   "name": "Elevation Acquisition Group Inc.",
+   "date": "2026-09-10",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "FBLLU",
+   "name": "Football Manager SPAC Inc.",
+   "date": "2026-09-09",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "HRIAU",
+   "name": "Harbour Island Acquisition Corp. I",
+   "date": "2026-09-09",
+   "amount": 115000000.0,
+   "spac": true
+  },
+  {
+   "sym": "JRWP",
+   "name": "Jingrui Wang Pu Holdings Group Ltd.",
+   "date": "2026-09-08",
+   "amount": 43125000.0,
+   "spac": false
+  },
+  {
+   "sym": null,
+   "name": "New Iceland Arctic Acquisition Corp.",
+   "date": "2026-09-04",
+   "amount": 143750000.0,
+   "spac": true
+  },
+  {
+   "sym": "RDEV",
+   "name": "Rothe Development, Inc.",
+   "date": "2026-09-04",
+   "amount": 50000000.0,
+   "spac": false
+  },
+  {
+   "sym": "LCADU",
+   "name": "Legion Capital Acquisition Corp.",
+   "date": "2026-09-04",
+   "amount": 230000000.0,
+   "spac": true
+  },
+  {
+   "sym": "OURA",
+   "name": "Oura Inc.",
+   "date": "2026-09-03",
+   "amount": 2530000000.0,
+   "spac": false
+  },
+  {
+   "sym": "LPNE",
+   "name": "LiPower New Energy Holdings Ltd",
+   "date": "2026-09-02",
+   "amount": 34500000.0,
+   "spac": false
+  },
+  {
+   "sym": "BOGD",
+   "name": "Bogd FT Ltd",
+   "date": "2026-09-01",
+   "amount": 43125000.0,
+   "spac": false
+  },
+  {
+   "sym": "RRCKU",
+   "name": "RainRock Acquisition Corp.",
+   "date": "2026-09-01",
+   "amount": 172500000.0,
+   "spac": true
+  },
+  {
+   "sym": "GLG",
+   "name": "GLGHK Ltd",
+   "date": "2026-09-01",
+   "amount": 40250000.0,
+   "spac": false
+  },
+  {
+   "sym": "SBE",
+   "name": "SB Energy, Inc.",
+   "date": "2026-09-01",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "KHG",
+   "name": "Kainan Holding Group Ltd",
+   "date": "2026-08-31",
+   "amount": 27600000.0,
+   "spac": false
+  },
+  {
+   "sym": "WELA",
+   "name": "Wella Co",
+   "date": "2026-08-31",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "LABI",
+   "name": "La Beaute Inc.",
+   "date": "2026-08-31",
+   "amount": 50000000.0,
+   "spac": false
+  },
+  {
+   "sym": "GTOOU",
+   "name": "Graf Industrial Corp. II",
+   "date": "2026-08-28",
+   "amount": 253000000.0,
+   "spac": false
+  },
+  {
+   "sym": "BMB",
+   "name": "Bamboo Insurance Services, Inc.",
+   "date": "2026-08-28",
+   "amount": 805000000.0,
+   "spac": false
+  },
+  {
+   "sym": "SKUB",
+   "name": "Skubbs Holdings Ltd",
+   "date": "2026-08-28",
+   "amount": 30800000.0,
+   "spac": false
+  },
+  {
+   "sym": "SPNV",
+   "name": "Spinnova Plc",
+   "date": "2026-08-27",
+   "amount": 15000000.0,
+   "spac": false
+  },
+  {
+   "sym": "AGKO",
+   "name": "Aggreko Inc.",
+   "date": "2026-08-24",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "EMACU",
+   "name": "Essential Minerals Acquisition Corp",
+   "date": "2026-08-24",
+   "amount": 172500000.0,
+   "spac": true
+  }
+ ],
+ "withdrawn_30d": 7,
+ "stats": {
+  "window_days": 120,
+  "priced": 47,
+  "spacs": 37,
+  "traded": 40,
+  "raised": 38049390824.0,
+  "median_first_day": 0.5,
+  "below_offer": 22
+ },
+ "disclaimer": "Facts from Nasdaq's public IPO calendar and Yahoo Finance prices. Educational only; not investment advice."
+}
