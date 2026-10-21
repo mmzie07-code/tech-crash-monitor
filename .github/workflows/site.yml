@@ -23,6 +23,8 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # always the newest commit, so a quick publish never deploys data older than the last nightly run
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - name: Restore stock history from the last nightly run
