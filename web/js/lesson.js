@@ -33,7 +33,8 @@ function lesson(id) {
   ${m.body.map(block).join("")}
   <h2>Check yourself</h2><p class="muted small">Get ${Math.ceil(m.quiz.length * 0.6)} of ${m.quiz.length} to complete the lesson. Every answer is explained.</p>${quiz}
   <div id="res" class="card" style="display:none"></div>
-  <p class="small muted" style="margin-top:26px">Figures are historical and approximate. Rules for accounts and taxes vary by country and change over time. Check Investor.gov or ask a parent or professional before acting. This is education, not advice.</p>
+  ${m.sources && m.sources.length ? `<details style="margin-top:22px"><summary class="small" style="cursor:pointer;font-weight:700">Sources and further reading</summary><ul class="small">${m.sources.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a></li>`).join("")}</ul></details>` : ""}
+  <p class="small muted" style="margin-top:26px">Facts in this lesson were last checked in October 2026. Figures are historical and approximate. Rules for accounts and taxes vary by country and change over time. Check Investor.gov or ask a parent or professional before acting. This is education, not advice.</p>
   ${next ? `<a class="btn ghost" href="#/learn/${next.id}">Next: ${next.title} →</a>` : ""}</div>`;
 }
 
