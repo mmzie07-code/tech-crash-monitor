@@ -142,7 +142,7 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 
 /* full analysis page (js/analysis.js) */
 .an-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin:6px 0 14px}
-.an{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}@media(max-width:900px){.an{grid-template-columns:1fr}}
+.an{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}.an>*{min-width:0}@media(max-width:900px){.an{grid-template-columns:minmax(0,1fr)}}
 .an-side{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:12px}@media(max-width:900px){.an-side{position:static}}
 .an-nav{padding:8px;display:flex;flex-direction:column;gap:2px}@media(max-width:900px){.an-nav{flex-direction:row;overflow-x:auto;gap:6px;padding:8px 6px}.an-nav a{white-space:nowrap}}
 .an-nav a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 11px;border-radius:10px;color:var(--mut);font-weight:600;font-size:14.5px;border-left:3px solid transparent}.an-nav a.on{background:var(--bg);color:var(--tx);border-left-color:var(--brand)}
