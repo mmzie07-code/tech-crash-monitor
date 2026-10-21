@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked
+import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -74,6 +74,11 @@ def main():
         print("quotes written")
     except Exception as e:
         print("quotes failed:", e)
+    try:
+        json.dump(housing.build(), open(os.path.join(DATA, "housing.json"), "w"), separators=(",", ":"))
+        print("housing written")
+    except Exception as e:
+        print("housing failed:", e)
     try:
         json.dump(overlooked.build(), open(os.path.join(DATA, "overlooked.json"), "w"), separators=(",", ":"))
         print("overlooked written")
