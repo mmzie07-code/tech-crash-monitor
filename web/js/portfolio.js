@@ -128,11 +128,12 @@ function pfHeader(R, agg) {
   return `<div class="pf-stats"><div><b>${pfM(t)}</b><span>Total value · ${n} holdings</span></div><div><b style="color:${pfC(d1)}">${pfS(d1)}</b><span>1-day return <i style="color:${pfC(d1)}">${pfP(t - d1 > 0 ? d1 / (t - d1) * 100 : 0, 2)}</i></span></div>
     <div><b>${pfS(totalRet)}</b><span>Total returns <i style="color:${pfC(totalRet)}">${pfP(R.events.length ? totalRet / (cost + soldCost || 1) * 100 : 0)}</i></span></div><div><b>${R.irr == null ? "-" : pfP(R.irr * 100)}</b><span>Annualized (IRR)</span></div></div>`;
 }
-function pfDivs(s) {   // dividends from the snapshot: per share over the last year, and what the holding received
+function pfDivs(s) {   // dividends per share over the last year: from the snapshot's payment history when we have it, else the filings-based yield on the scorecard; plus the next ex-dividend date
   const rows = (PF.N[s] && PF.N[s].dividends) || [], today = new Date(), yr = new Date(today - 365 * 864e5);
   const parsed = rows.map((d) => { const m = /^(\d+)\/(\d+)\/(\d+)$/.exec(d.ex || ""); return m && d.amount ? { date: new Date(+m[3], +m[1] - 1, +m[2]), amount: d.amount } : null; }).filter(Boolean);
   const past = parsed.filter((d) => d.date <= today && d.date > yr), upcoming = parsed.filter((d) => d.date > today);
-  const perShare = past.reduce((a, d) => a + d.amount, 0);
+  let perShare = past.reduce((a, d) => a + d.amount, 0);
+  if (!perShare) { const sc = PF.S[s], y = sc && sc.sec && sc.sec.dividend ? sc.sec.dividend.yield_pct : 0, px = PF.R && PF.R.pos[s] ? PF.R.pos[s].price : 0; perShare = px * (y || 0) / 100; }
   return { perShare, upcoming: upcoming[upcoming.length - 1] || null };
 }
 
