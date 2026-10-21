@@ -1,7 +1,47 @@
 {
- "generated": "2026-10-21T15:11:46.444738Z",
+ "generated": "2026-10-21T22:55:26.472087Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-21-earnings-tesla-inc-tsla-reports-earnings",
+   "date": "2026-10-21",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Tesla, Inc. (TSLA) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-21-earnings-meta-platforms-meta-reports-earnings",
+   "date": "2026-10-21",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Meta Platforms (META) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
   {
    "headline": "Taiwan Semiconductor Manufacturing Company reported earnings: beat estimates.",
    "bullets": [
