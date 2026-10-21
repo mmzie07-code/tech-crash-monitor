@@ -8,8 +8,20 @@ import providers
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "Accept": "application/json"}
-SPAC = re.compile(r"\b(acquisition|merger|spac|blank check)\b", re.I)
-LOOKBACK_DAYS = 120
+SPAC = re.compile(r"\b(acquisition|merger|spac|blank check|equity partners)\b", re.I)
+ROMAN_END = re.compile(r"\b(I{1,3}|IV|V|VI{0,3}|IX|X{1,2}I{0,3})\.?$")
+
+
+def is_spac(name, sym, price):
+    """Blank-check shells: the name usually says so; the rest are $10.00 units (ticker ending in U) or a numbered 'Capital Corp II' at $10.00."""
+    if SPAC.search(name or ""):
+        return True
+    if price == 10.0 and sym and len(sym) >= 4 and sym.endswith("U"):
+        return True
+    return price == 10.0 and bool(ROMAN_END.search((name or "").strip()))
+
+
+LOOKBACK_DAYS = 190
 LOCKUP_DAYS = 180  # the typical lock-up on insider and early-investor shares; each deal sets its own
 
 
@@ -59,7 +71,7 @@ def build():
     cutoff = today - dt.timedelta(days=LOOKBACK_DAYS)
     priced, filed, upcoming, withdrawn = [], [], [], 0
     seen = set()
-    for ym in months_back(today, 5):
+    for ym in months_back(today, 8):
         d = month_rows(ym)
         for r in ((d.get("priced") or {}).get("rows") or []):
             date = iso(r.get("pricedDate"))
@@ -70,7 +82,7 @@ def build():
             if name.isupper():  # Nasdaq shouts some names
                 name = name.title()
             priced.append(dict(sym=sym, name=name, exchange=r.get("proposedExchange"), price=price, date=date, shares=num(r.get("sharesOffered")),
-                               amount=num(r.get("dollarValueOfSharesOffered")), spac=bool(SPAC.search(name)),
+                               amount=num(r.get("dollarValueOfSharesOffered")), spac=is_spac(name, sym, price),
                                lockup=(dt.date.fromisoformat(date) + dt.timedelta(days=LOCKUP_DAYS)).isoformat()))
         for r in ((d.get("filed") or {}).get("rows") or []):
             date = iso(r.get("filedDate"))
@@ -78,12 +90,12 @@ def build():
                 continue
             seen.add(r.get("dealID"))
             name = (r.get("companyName") or "").strip()
-            filed.append(dict(sym=r.get("proposedTickerSymbol"), name=name, date=date, amount=num(r.get("dollarValueOfSharesOffered")), spac=bool(SPAC.search(name))))
+            filed.append(dict(sym=r.get("proposedTickerSymbol"), name=name, date=date, amount=num(r.get("dollarValueOfSharesOffered")), spac=is_spac(name, r.get("proposedTickerSymbol"), 10.0 if re.search(r"U$", r.get("proposedTickerSymbol") or "") else None)))
         for r in (((d.get("upcoming") or {}).get("upcomingTable") or {}).get("rows") or []):
             name = (r.get("companyName") or "").strip()
             upcoming.append(dict(sym=r.get("proposedTickerSymbol"), name=name, exchange=r.get("proposedExchange"), price=r.get("proposedSharePrice"),
                                  shares=num(r.get("sharesOffered")), amount=num(r.get("dollarValueOfSharesOffered")),
-                                 date=iso(r.get("expectedPriceDate")), spac=bool(SPAC.search(name))))
+                                 date=iso(r.get("expectedPriceDate")), spac=is_spac(name, r.get("proposedTickerSymbol"), num(r.get("proposedSharePrice")))))
         withdrawn += sum(1 for r in ((d.get("withdrawn") or {}).get("rows") or []) if (iso(r.get("withdrawDate")) or "0") >= (today - dt.timedelta(days=30)).isoformat())
     priced.sort(key=lambda x: x["date"], reverse=True)
     filed.sort(key=lambda x: x["date"], reverse=True)

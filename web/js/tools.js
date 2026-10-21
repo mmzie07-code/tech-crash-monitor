@@ -1,6 +1,6 @@
 // Explore tools: heat map, stock screener, compare. Shared tab bar.
 function exploreTabs(cur) {
-  return `<div class="tabs">${[["", "Sectors"], ["heatmap", "Heat map"], ["screener", "Screener"], ["compare", "Compare"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/explore${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["", "Sectors"], ["heatmap", "Heat map"], ["screener", "Screener"], ["overlooked", "Overlooked"], ["compare", "Compare"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/explore${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
 }
 
 // ---------- squarified treemap ----------
