@@ -32,9 +32,14 @@ jobs:
             data/hist
             data/hist-ohlc
             data/snap
-            data/about
           key: hist-none
           restore-keys: hist-
+      - name: Restore company descriptions (a separate cache, so changing it never invalidates the one above)
+        uses: actions/cache/restore@v4
+        with:
+          path: data/about
+          key: about-none
+          restore-keys: about-
       - name: Make sure history exists (full download only if the cache was lost)
         run: |
           if [ ! -f data/hist/_GSPC.json ]; then echo "cache empty: downloading history"; python engine/history.py; fi

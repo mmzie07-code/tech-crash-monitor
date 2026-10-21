@@ -32,9 +32,14 @@ jobs:
             data/hist
             data/hist-ohlc
             data/snap
-            data/about
           key: hist-${{ github.run_id }}
           restore-keys: hist-
+      - name: Restore company-descriptions cache (kept separate from the one above: a cache is identified by its list of folders, so adding a folder there silently discards everything saved)
+        uses: actions/cache@v4
+        with:
+          path: data/about
+          key: about-${{ github.run_id }}
+          restore-keys: about-
       - run: pip install yfinance
       - name: Run engine
         env:
