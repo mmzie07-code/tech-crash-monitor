@@ -233,6 +233,7 @@ function watch() {
   <div class="card"><h3>The ten checks</h3>${s.checks.map((c) => `<div class="item"><div class="dot" style="background:${COL[c.status]}"></div><div>
    <b>${c.id}. ${c.name}</b> <span class="pill">${c.group}</span>${c.proxy ? '<span class="pill w">proxy</span>' : ""}<span class="pill">${wtxt(c)}</span>
    <div class="small muted">${linkTickers(c.detail)}</div>${c.threshold ? `<div class="small muted">Flashes when: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
+  ${typeof ownerDocCard === "function" ? ownerDocCard() : ""}
   <p class="small muted">${s.evaluated} of ${s.total} checks are live. We tested the thresholds on 1999–2026 history: when the health score fell to 75 or below, a 15%+ drop in the next 60 days was only about 1.7–2x as likely as normal. That's a modest tilt, not a prediction. See <a href="#/about">how it works</a>.</p>`;
 }
 

@@ -2,7 +2,7 @@
 # Builds the deployable website into ./site from web/ + the data files. Used by both the nightly job and the quick-publish job.
 set -euo pipefail
 rm -rf site
-mkdir -p site/data/hist site/data/hist-ohlc site/data/sparks site/data/snap
+mkdir -p site/data/hist site/data/hist-ohlc site/data/sparks site/data/snap site/data/about
 cp -R web/. site/
 B=$(date -u +%Y%m%d%H%M%S)
 sed -i.bak "s/__BUILD__/$B/g" site/index.html && rm -f site/index.html.bak
@@ -12,4 +12,5 @@ cp data/hist/*.json site/data/hist/ 2>/dev/null || true
 cp data/hist-ohlc/*.json site/data/hist-ohlc/ 2>/dev/null || true
 cp data/sparks/*.json site/data/sparks/ 2>/dev/null || true
 cp data/snap/*.json site/data/snap/ 2>/dev/null || true
+cp data/about/*.json site/data/about/ 2>/dev/null || true
 echo "site assembled: build $B, $(ls site/data/hist | wc -l | tr -d ' ') history files"

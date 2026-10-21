@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing
+import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -64,6 +64,10 @@ def main():
         snapshots.main()
     except Exception as e:
         print("snapshots failed:", e)
+    try:
+        about.main()
+    except Exception as e:
+        print("about failed:", e)
     try:
         json.dump(earnings.build(), open(os.path.join(DATA, "earnings.json"), "w"), indent=1)
         print("earnings written")

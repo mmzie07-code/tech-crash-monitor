@@ -32,6 +32,7 @@ jobs:
             data/hist
             data/hist-ohlc
             data/snap
+            data/about
           key: hist-none
           restore-keys: hist-
       - name: Make sure history exists (full download only if the cache was lost)

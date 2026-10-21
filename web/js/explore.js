@@ -123,6 +123,7 @@ async function sectorPage(key) {
   <div class="hz">${stat("1M", "Past month")}${stat("3M", "Past 3 months")}${stat("YTD", "This year")}${stat("1Y", "Past year")}
    <div class="card"><div class="small muted">Companies · combined value</div><b>${s.companies.toLocaleString()} · ${capStr(s.total_cap_b)}</b></div>
    ${all50.length ? `<div class="card"><div class="small muted">Best of the 50 (${rowRange})</div><b><a href="#/stock/${esc(all50[0].symbol)}">${esc(all50[0].symbol)}</a> ${pctTxt(all50[0].perf)}</b></div><div class="card"><div class="small muted">Weakest of the 50 (${rowRange})</div><b><a href="#/stock/${esc(all50[all50.length - 1].symbol)}">${esc(all50[all50.length - 1].symbol)}</a> ${pctTxt(all50[all50.length - 1].perf)}</b></div>` : ""}</div>
+  ${key === "real-estate" ? realEstateExtra(s) : ""}
   <div class="card"><h3>The 50 largest companies</h3><p class="small muted" style="margin-top:0">Ranked by market value (share price × number of shares). Tap any row to open its full chart.</p>
    <div class="tabs" style="margin-top:0"><span class="small muted" style="align-self:center">Trend chart:</span>${Object.keys(ROW_PTS).map((l) => `<a href="#" data-rr="${l}" class="${rowRange === l ? "on" : ""}">${l === "1M" ? "1 month" : l === "3M" ? "3 months" : "1 year"}</a>`).join("")}</div>
    <div class="tabs" style="margin-top:0"><span class="small muted" style="align-self:center">Sort:</span><a href="#" data-sort="cap" class="${sortKey === "cap" ? "on" : ""}">Largest</a><a href="#" data-sort="d1" class="${sortKey === "d1" ? "on" : ""}">Today's movers</a><a href="#" data-sort="best" class="${sortKey === "best" ? "on" : ""}">Best ${rowRange}</a><a href="#" data-sort="worst" class="${sortKey === "worst" ? "on" : ""}">Weakest ${rowRange}</a></div>
@@ -150,6 +151,7 @@ async function stockPage(sym) {
   const cap = top ? top.cap_b : row ? row[3] : null, d1 = top ? top.d1 : row ? row[5] : q ? q.d1 : null;
   afterRender.push(() => { if (h) mountChart($("#stkchart"), h, { money: true, live: liveChartFor(sym), ohlcSym: liveOhlc ? null : sym, ohlcData: liveOhlc, compare: secHist ? { name: SECTOR_NAME(secForCompare) + " sector", data: secHist } : null }); });
   afterRender.push(() => fillHeadlines("#stknews", name, 5));
+  afterRender.push(() => fillAbout(sym, name, secKey, cap));
   let stats = "";
   if (h) {
     const c = h.c, last252 = c.slice(-252);
@@ -161,12 +163,13 @@ async function stockPage(sym) {
   return `<a href="#/explore${secKey ? "/" + secKey : ""}" class="small">← ${secKey ? esc(SECTOR_NAME(secKey)) : "Explore"}</a>
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(name)}</h1>
    <div class="muted">${esc(sym)}${secKey ? ` · <a href="#/explore/${secKey}">${esc(SECTOR_NAME(secKey))}</a>` : ""}${top && top.industry ? ` · ${esc(top.industry)}` : ""}</div></div>
-   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn ghost" href="#/explore/compare/${esc(sym)}">Compare</a><a class="btn ghost" href="#/report/${esc(sym)}">Valuation report</a><a class="btn ghost" href="#/report/${esc(sym)}/snapshot">Snapshot</a><a class="btn" href="#/practice/trade/${esc(sym)}">Practice trading</a></div></div>
+   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn ghost" href="#/explore/compare/${esc(sym)}">Compare</a><a class="btn ghost" href="#/report/${esc(sym)}">Valuation report</a><a class="btn ghost" href="#/report/${esc(sym)}/snapshot">Snapshot</a></div></div>
+  <div class="card" id="stkabout" style="margin-top:14px"><p class="small muted" style="margin:0">Loading…</p></div><div class="card" id="stkeco"></div>
   <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   <div class="card"><h3>Recent headlines</h3><div id="stknews"><p class="small muted" style="margin:0">Loading…</p></div><p class="small" style="margin:8px 0 0"><a href="#/report/${esc(sym)}/snapshot">More in the company snapshot →</a></p></div>
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}
-  <p class="small muted">Prices are end-of-day unless you open a 1D or 1W chart (live, about 15 minutes delayed). Learn what these numbers mean in <a href="#/learn/1">Lesson 1</a> and <a href="#/learn/5">Lesson 5</a>. Not investment advice.</p>`;
+  <p class="small muted">Prices are end-of-day unless you open a 1D or 1W chart (live, about 15 minutes delayed). Learn what these numbers mean in <a href="#/learn/1">Lesson 1</a> and <a href="#/learn/5">Lesson 5</a>. Not investment advice. Want to try it with pretend money? <a href="#/practice/trade/${esc(sym)}">Paper trade ${esc(sym)}</a>.</p>`;
 }
 
 // ---- global search ----
