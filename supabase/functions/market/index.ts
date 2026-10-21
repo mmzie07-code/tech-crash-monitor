@@ -154,6 +154,16 @@ Deno.serve(async (req) => {
       if (!gainersInflight) gainersInflight = buildGainers().finally(() => { gainersInflight = null; });  // everyone waits on the same rebuild
       return json(await gainersInflight);
     }
+    if (action === "owner_doc") {  // private write-ups for the owner only. Stored in the database (never in the public repo or the site's files) and readable only with the owner key.
+      if (who !== "owner") return json({ error: "Owner only" }, 403);
+      const id = (u.searchParams.get("id") ?? "").toLowerCase();
+      if (!/^[a-z0-9-]{1,40}$/.test(id)) return json({ error: "Bad id" }, 400);
+      const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
+      const { data, error } = await sb.from("owner_docs").select("id,title,body,updated_at").eq("id", id).maybeSingle();
+      if (error) throw new Error("db " + error.message);
+      if (!data) return json({ error: "Not found" }, 404);
+      return json(data);
+    }
     const sym = (u.searchParams.get("symbol") ?? "").toUpperCase();
     if (!SYMBOL.test(sym)) return json({ error: "Bad symbol" }, 400);
     if (action === "chart") {
