@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-21T22:55:26.414981Z",
- "as_of": "2026-10-21",
+ "generated": "2026-10-22T15:50:55.055477Z",
+ "as_of": "2026-10-22",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10331,
+    "n": 10332,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,96 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2567,
-    "up": 53,
-    "median": 0.0,
-    "p10": -1.0,
-    "p25": -0.4,
-    "p75": 0.5,
-    "p90": 1.0,
-    "below": 10,
-    "above": 11,
-    "worst": -4.1,
-    "best": 2.9
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm."
-   ],
-   "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Meta Platforms (META) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Tesla, Inc. (TSLA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Lam Research (LRCX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "Before open",
-     "title": "Philip Morris International (PM) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "SAP SE (SAP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "Before open",
-     "title": "Thermo Fisher Scientific (TMO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Texas Instruments Incorporated (TXN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "International Business Machines (IBM) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10331,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 2567,
+    "n": 2568,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -182,12 +93,77 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10332,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 2568,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (0.8% below it).",
+    "VIX at 16.7: investors are relatively calm."
+   ],
+   "bear": [
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "American Express Company (AXP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "ENI S.p.A. (E) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "SLB Limited (SLB) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "Infosys Limited (INFY) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10327,
+    "n": 10328,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -200,7 +176,7 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2563,
+    "n": 2564,
     "up": 57,
     "median": 0.3,
     "p10": -2.2,
@@ -222,54 +198,6 @@
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Meta Platforms (META) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Tesla, Inc. (TSLA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Lam Research (LRCX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "Before open",
-     "title": "Philip Morris International (PM) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "SAP SE (SAP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "Before open",
-     "title": "Thermo Fisher Scientific (TMO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Texas Instruments Incorporated (TXN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "International Business Machines (IBM) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-10-22",
      "time": "Before open",
@@ -293,6 +221,54 @@
      "time": "Before open",
      "title": "Lockheed Martin (LMT) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Valero Energy (VLO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "After close",
+     "title": "Newmont (NEM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Spotify Technology S.A. (SPOT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-22",
+     "time": "Before open",
+     "title": "Blackstone (BX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "American Express Company (AXP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "ENI S.p.A. (E) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "SLB Limited (SLB) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-23",
+     "time": "Before open",
+     "title": "Infosys Limited (INFY) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -301,7 +277,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10311,
+    "n": 10312,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -314,9 +290,9 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2549,
+    "n": 2550,
     "up": 64,
-    "median": 1.2,
+    "median": 1.1,
     "p10": -4.1,
     "p25": -1.3,
     "p75": 3.2,
@@ -336,18 +312,6 @@
     "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Meta Platforms (META) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-21",
-     "time": "After close",
-     "title": "Tesla, Inc. (TSLA) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-10-27",
      "time": "After close",
@@ -407,6 +371,18 @@
      "time": "Before open",
      "title": "Mastercard Incorporated (MA) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "ExxonMobil Holdings (XOM) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "AbbVie (ABBV) reports earnings",
+     "importance": "high"
     }
    ]
   },
@@ -415,7 +391,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10080,
+    "n": 10081,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -428,7 +404,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2389,
+    "n": 2390,
     "up": 85,
     "median": 10.6,
     "p10": -7.5,
