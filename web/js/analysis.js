@@ -59,11 +59,23 @@ function anValueBars(sc, row) {
 const anCard = (p) => `<a class="an-sc" href="#/analysis/${esc(p.s)}"><b>${esc(p.s)}</b><span class="small muted">${esc(p.name)}</span><span class="an-mr">${miniRadar(p.axes, 96)}</span><span class="small">${capStr(p.cap_b)} · ${anUsd(p.price)}</span></a>`;
 const anDiscover = (title, note, list) => (list && list.length ? `<h3 style="margin:18px 0 2px">${title}</h3><p class="small muted" style="margin:0 0 8px">${note}</p><div class="an-sim">${list.map(anCard).join("")}</div>` : "");
 
+// The paid parts of an analysis (past performance, financial health, dividends, ownership, management) come from the signed-in-only edge function, not from the public site.
+const AN_PRO_KEYS = ["past", "health", "dividend", "ownership", "management"];
+async function loadPro(sym) {
+  if (!liveOK()) return null;
+  try { return await liveGet("action=pro_data&symbol=" + encodeURIComponent(sym)); } catch (e) { return null; }
+}
+const anLock = (id, title, extra) => `<section class="card an-sec" id="an-${id}"><h2 style="margin:0 0 4px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">${title} ${extra || ""}</h2>
+  <div class="an-lock"><b>This section is part of the Pro plan.</b><p class="small muted" style="margin:4px 0 0">${liveOK() ? "Paid plans aren't open yet. When they are, Pro will unlock the balance sheet and debt history, insider trades and ownership, leadership and pay, and dividend history for every company." : "Sign in to see it."}</p></div></section>`;
+
 async function analysisPage(sym) {
   sym = decodeURIComponent(sym || "").toUpperCase();
   const row = state.search && state.search.stocks.find((r) => r[0] === sym), sc = await loadScore(sym);
   if (!row || !sc) return `<a href="#/stock/${esc(sym)}" class="small">← ${esc(sym)}</a><h1>Full analysis</h1><div class="card"><p>We don't have a full analysis for this company. It needs filing data, so foreign companies and very new listings are often missing.</p></div>`;
-  const [, name, sector, capB, price] = row, S = sc.sec, disc = sc.discover || {};
+  const [, name, sector, capB, price] = row, disc = sc.discover || {};
+  const proDoc = AN_PRO_KEYS.some((k) => sc.sec[k] && sc.sec[k].locked) ? await loadPro(sym) : null, lockedPro = AN_PRO_KEYS.some((k) => sc.sec[k] && sc.sec[k].locked) && !proDoc;
+  const S = Object.assign({}, sc.sec, proDoc || {});
+  if (lockedPro) AN_PRO_KEYS.forEach((k) => { S[k] = Object.assign({ checks: [] }, S[k]); });
   let about = null; try { const r = await fetch((DATA_BASE || "data/") + "about/" + encodeURIComponent(sym) + ".json"); if (r.ok) about = await r.json(); } catch (e) {}
   afterRender.push(() => {
     document.querySelectorAll("[data-sec]").forEach((a) => a.onclick = (e) => { e.preventDefault(); const t = document.getElementById("an-" + a.dataset.sec); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); });
@@ -79,7 +91,7 @@ async function analysisPage(sym) {
   const nav = AN_SECTIONS.map(([k, l], i) => { const n = AN_SCORED.indexOf(k); return `<a href="#" data-sec="${k}" class="${i === 0 ? "on" : ""}"><span>${n >= 0 ? n + 1 + " " : ""}${l}</span>${S[k] ? anScore(S[k]) : ""}</a>`; }).join("");
   const li = (k, t) => `<li><i class="${k}">${k === "ok" ? "✓" : "!"}</i><span>${esc(t)}</span></li>`;
   const pl = sc.peer, m = sc.model, gap = (v) => { const g = (price / v - 1) * 100; return `Today's price is <b>${Math.abs(g).toFixed(0)}% ${g >= 0 ? "above" : "below"}</b> it.`; };
-  const sect = (id, title, extra, body) => `<section class="card an-sec" id="an-${id}"><h2 style="margin:0 0 4px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">${title} ${extra || ""}</h2>${body}</section>`;
+  const sect = (id, title, extra, body) => lockedPro && AN_PRO_KEYS.includes(id) ? anLock(id, title, extra) : `<section class="card an-sec" id="an-${id}"><h2 style="margin:0 0 4px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">${title} ${extra || ""}</h2>${body}</section>`;
   const checks = (sec, blank) => sec && sec.checks && sec.checks.length ? `<ul class="an-ck">${sec.checks.map(anChk).join("")}</ul>` : `<p class="muted small">${esc((sec && sec.note) || blank || "Nothing to check here.")}</p>`;
 
   // ---- 1 valuation ----

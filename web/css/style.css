@@ -181,3 +181,5 @@ nav.main{flex:1}nav.main a.push{margin-left:auto}nav.main a.sec{font-weight:500;
 .pf-panel{position:sticky;top:112px}@media(max-width:1000px){.pf-panel{position:static}}
 .pf-kv{display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-size:14px}.pf-kv span{color:var(--mut)}.pf-kv b{text-align:right}
 .pf-upd{padding:8px 0;border-top:1px solid var(--line)}.pf-upd:first-of-type{border-top:0}
+
+.an-lock{border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:8px;background:var(--card2,transparent)}

@@ -318,7 +318,23 @@ def build_sections(m, sec, special, md, m2, peer, mv, snap, F, periods, bsr=None
     return out
 
 
-def build(out_dir):
+# Sections that belong to the paid plan. The public file keeps only each one's score (so the page can show the badge and the radar still works)
+# plus the few numbers the free pages use; the full section goes into a separate "pro" file that is uploaded to the private database, never to the site.
+PRO_SECTIONS = ("past", "health", "dividend", "ownership", "management")
+PUBLIC_KEEP = {"dividend": ("yield_pct", "payout_pct", "shareholder_yield")}
+
+
+def split_pro(sec):
+    """Returns (public_sec, pro_sec)."""
+    pub, pro = dict(sec), {}
+    for k in PRO_SECTIONS:
+        if k in sec and isinstance(sec[k], dict):
+            pro[k] = sec[k]
+            pub[k] = dict({x: sec[k][x] for x in ("score", "total") if x in sec[k]}, locked=True, **{x: sec[k][x] for x in PUBLIC_KEEP.get(k, ()) if x in sec[k]})
+    return pub, pro
+
+
+def build(out_dir, pro_dir=None):
     fd = json.load(open(os.path.join(DATA, "fundamentals.json")))
     F_all, periods = fd["stocks"], [x.replace("CY", "") for x in fd.get("periods", [])]
     S = json.load(open(os.path.join(DATA, "search.json")))["stocks"]
@@ -495,6 +511,10 @@ def build(out_dir):
             best.sort(key=lambda x: (0 if industry.get(sym) and industry.get(x) == industry.get(sym) else 1, -payloads[x]["axes"][axis]))
             disc[axis] = [dict(s=x, name=meta[x]["name"], cap_b=round(meta[x]["cap"] / 1000, 2), price=meta[x]["price"], axes=payloads[x]["axes"]) for x in best[:3]]
         pl["discover"] = disc
+        if pro_dir:
+            pl["sec"], pro = split_pro(pl["sec"])
+            if pro:
+                json.dump(pro, open(os.path.join(pro_dir, sym + ".json"), "w"), separators=(",", ":"))
         json.dump(pl, open(os.path.join(out_dir, sym + ".json"), "w"), separators=(",", ":"))
         written += 1
     return written, len(allm)
@@ -502,5 +522,8 @@ def build(out_dir):
 
 if __name__ == "__main__":
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DATA, "..", "scorecards_preview")
-    w, n = build(out)
+    pro = sys.argv[2] if len(sys.argv) > 2 else None
+    if pro:
+        os.makedirs(pro, exist_ok=True)
+    w, n = build(out, pro)
     print("scorecards: wrote %d files (%d companies with revenue data) -> %s" % (w, n, out))

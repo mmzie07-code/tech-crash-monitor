@@ -54,6 +54,9 @@ jobs:
         run: python engine/history.py sparks
       - name: Assemble site
         run: bash scripts/assemble_site.sh
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - id: deploy

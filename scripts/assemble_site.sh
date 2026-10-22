@@ -13,5 +13,13 @@ cp data/hist-ohlc/*.json site/data/hist-ohlc/ 2>/dev/null || true
 cp data/sparks/*.json site/data/sparks/ 2>/dev/null || true
 cp data/snap/*.json site/data/snap/ 2>/dev/null || true
 cp data/about/*.json site/data/about/ 2>/dev/null || true
-python3 engine/scorecards.py site/data/score || echo "scorecards failed (company profiles will be hidden until the next run)"
+if [ -n "${SUPABASE_SERVICE_ROLE_KEY:-}" ] && [ -n "${SUPABASE_URL:-}" ]; then
+  # paid-plan parts of each analysis go to the private database, not to the public site
+  rm -rf pro_tmp && mkdir -p pro_tmp
+  python3 engine/scorecards.py site/data/score pro_tmp || echo "scorecards failed (company profiles will be hidden until the next run)"
+  python3 engine/upload_pro.py pro_tmp || echo "WARNING: paid-plan data was not uploaded; the database keeps last night's copy"
+  rm -rf pro_tmp
+else
+  python3 engine/scorecards.py site/data/score || echo "scorecards failed (company profiles will be hidden until the next run)"
+fi
 echo "site assembled: build $B, $(ls site/data/hist | wc -l | tr -d ' ') history files"

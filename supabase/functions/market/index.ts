@@ -162,6 +162,22 @@ Deno.serve(async (req) => {
       if (!gainersInflight) gainersInflight = buildGainers().finally(() => { gainersInflight = null; });  // everyone waits on the same rebuild
       return json(await gainersInflight);
     }
+    if (action === "plan" || action === "pro_data") {  // paid plan: "pro" if the owner, or a subscriptions row that is active. PAYWALL=on turns enforcement on; until then every signed-in user counts as pro.
+      const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
+      let pro = who === "owner" || Deno.env.get("PAYWALL") !== "on";
+      if (!pro) {
+        const { data: sub } = await sb.from("subscriptions").select("plan,status,current_period_end").eq("user_id", who).maybeSingle();
+        pro = !!sub && sub.plan === "pro" && ["active", "trialing"].includes(sub.status) && (!sub.current_period_end || new Date(sub.current_period_end).getTime() > Date.now());
+      }
+      if (action === "plan") return json({ plan: pro ? "pro" : "free" });
+      if (!pro) return json({ locked: true }, 402);
+      const psym = (u.searchParams.get("symbol") ?? "").toUpperCase();
+      if (!SYMBOL.test(psym)) return json({ error: "Bad symbol" }, 400);
+      const { data, error } = await sb.from("pro_data").select("doc").eq("sym", psym).maybeSingle();
+      if (error) throw new Error("db " + error.message);
+      if (!data) return json({ error: "Not found" }, 404);
+      return json(data.doc);
+    }
     if (action === "owner_doc") {  // private write-ups for the owner only. Stored in the database (never in the public repo or the site's files) and readable only with the owner key.
       if (who !== "owner") return json({ error: "Owner only" }, 403);
       const id = (u.searchParams.get("id") ?? "").toLowerCase();
