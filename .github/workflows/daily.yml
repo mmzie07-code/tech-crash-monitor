@@ -2,8 +2,13 @@ name: Daily update
 on:
   schedule:
     - cron: "30 21 * * 1-5"   # 21:30 UTC weekdays = after the US close in both EST and EDT
+    - cron: "45 12 * * 1-5"   # 12:45 UTC weekdays = before the open: fills in after-close earnings results and moves the calendar to today
   workflow_dispatch:
     inputs:
+      mode:
+        description: "Leave empty for the full update, or type morning for the quick earnings/calendar refresh"
+        required: false
+        default: ""
       snap_limit:
         description: "Company snapshots to refresh (default 200; use 600 to refresh all)"
         required: false
@@ -47,7 +52,7 @@ jobs:
           SNAP_LIMIT: ${{ github.event.inputs.snap_limit || '200' }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: adds an AI-written summary paragraph
-        run: python engine/run_daily.py
+        run: python engine/run_daily.py ${{ github.event.inputs.mode || (github.event.schedule == '45 12 * * 1-5' && 'morning' || '') }}
       - name: Save data back to the repo
         run: |
           git config user.name "crash-monitor-bot"

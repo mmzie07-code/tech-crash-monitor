@@ -24,7 +24,26 @@ def summarize(checks):
                 warnings=sum(c["status"] == "warn" for c in known), evaluated=len(known), total=len(checks))
 
 
+def morning():
+    """Early-morning refresh: only the pieces that change overnight (after-close earnings results, today's calendar, recaps). Market numbers stay as of last night's close."""
+    for name, path, make, fmt in (("earnings", "earnings.json", earnings.build, dict(indent=1)), ("ipos", "ipos.json", ipos.build, dict(indent=1)),
+                                  ("calendar", "calendar.json", calendar_feed.build, dict(indent=1)), ("outlook", "outlook.json", outlook.build, dict(indent=1))):
+        try:
+            json.dump(make(), open(os.path.join(DATA, path), "w"), **fmt)
+            print(name, "written")
+        except Exception as e:
+            print(name, "failed:", e)
+    try:
+        rc, tried, done = recaps.build()
+        json.dump(rc, open(os.path.join(DATA, "recaps.json"), "w"), indent=1)
+        print("recaps written (%d new)" % done)
+    except Exception as e:
+        print("recaps failed:", e)
+
+
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "morning":
+        return morning()
     d = load_data()
     checks = run_all(d)
     s = summarize(checks)
