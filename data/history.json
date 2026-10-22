@@ -120,5 +120,13 @@
   "stretch": 33,
   "trigger": 67,
   "level": "High"
+ },
+ {
+  "date": "2026-10-22",
+  "score": 75,
+  "health": 25,
+  "stretch": 33,
+  "trigger": 83,
+  "level": "Severe"
  }
 ]

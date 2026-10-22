@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T15:50:55.055477Z",
+ "generated": "2026-10-22T22:51:47.182046Z",
  "as_of": "2026-10-22",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,12 +35,12 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.0% below it).",
+    "VIX at 19.0: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
+    "10-year yield is high at 4.95%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
    "events": [
     {
@@ -124,12 +124,12 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.0% below it).",
+    "VIX at 19.0: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
+    "10-year yield is high at 4.95%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
    "events": [
     {
@@ -189,13 +189,13 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.0% below it).",
+    "VIX at 19.0: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 4.95%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
     {
@@ -303,13 +303,13 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.0% below it).",
+    "VIX at 19.0: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 4.95%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
     {
@@ -417,14 +417,14 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (0.8% below it).",
-    "VIX at 16.7: investors are relatively calm.",
-    "QQQ trailing P/E is 27.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "S&P 500 is close to its 1-year high (2.0% below it).",
+    "VIX at 19.0: investors are relatively calm.",
+    "QQQ trailing P/E is 27.0, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $511B TTM (+75% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 4.95%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
     {
