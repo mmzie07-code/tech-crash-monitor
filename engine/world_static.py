@@ -137,5 +137,58 @@ def main():
     print("countries:", len(ctry), "| borders without a country record:", miss)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) == 1:
     main()
+
+
+def _dp(pts, tol):
+    """Douglas-Peucker simplification of an open polyline [(x, y), ...]."""
+    if len(pts) < 3:
+        return pts
+    keep = [False] * len(pts)
+    keep[0] = keep[-1] = True
+    stack = [(0, len(pts) - 1)]
+    while stack:
+        a, b = stack.pop()
+        (ax, ay), (bx, by) = pts[a], pts[b]
+        dx, dy = bx - ax, by - ay
+        L = dx * dx + dy * dy
+        best, bi = 0.0, -1
+        for i in range(a + 1, b):
+            px, py = pts[i]
+            if L == 0:
+                d = math.hypot(px - ax, py - ay)
+            else:
+                t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / L))
+                d = math.hypot(px - (ax + t * dx), py - (ay + t * dy))
+            if d > best:
+                best, bi = d, i
+        if best > tol and bi > 0:
+            keep[bi] = True
+            stack += [(a, bi), (bi, b)]
+    return [p for p, k in zip(pts, keep) if k]
+
+
+def timezones():
+    """Real (irregular) time-zone areas from Natural Earth's 1:10m time-zone polygons, simplified. Written to data/world/timezones.json."""
+    g = get("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_time_zones.geojson")
+    out = []
+    for f in g["features"]:
+        pr = f["properties"]
+        polys = f["geometry"]["coordinates"] if f["geometry"]["type"] == "MultiPolygon" else [f["geometry"]["coordinates"]]
+        rings = []
+        for poly in polys:
+            rr = []
+            for ring in poly:
+                s = _dp([(x, y) for x, y in ring], 0.05)
+                if len(s) >= 4:
+                    rr.append([round(c, 2) for p in s for c in p])
+            if rr:
+                rings.append(rr)
+        out.append(dict(o=pr["zone"], c=pr.get("map_color6") or 1, p=rings))
+    json.dump(dict(z=out), open(os.path.join(OUT, "timezones.json"), "w"), separators=(",", ":"))
+    print("timezones:", len(out), "zones,", os.path.getsize(os.path.join(OUT, "timezones.json")) // 1024, "KB")
+
+
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "tz":
+    timezones()

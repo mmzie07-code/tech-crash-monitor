@@ -18,9 +18,9 @@ function gSun(d = new Date()) {
 
 async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
-  const [borders, countries, world] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json")]);
+  const [borders, countries, world, zones] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
-  GLOBE.assets = { borders: borders.c, countries, world };
+  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z };
   return GLOBE.assets;
 }
 
@@ -49,16 +49,42 @@ function gIndex(list) {
 }
 
 function gCanvas(w, h) { const c = document.createElement("canvas"); c.width = w; c.height = h; return c; }
-function gTzTexture(THREE) {
-  const W = 4096, H = 2048, c = gCanvas(W, H), x = c.getContext("2d");
-  for (let k = 0; k < 24; k++) {   // 24 bands, each 15 degrees wide, centered on whole-hour meridians
-    const lon0 = -180 + (k - 0.5) * 15, x0 = ((lon0 + 180) / 360) * W;
-    if (k % 2 === 0) { x.fillStyle = "rgba(140,175,255,0.055)"; x.fillRect(x0, 0, W / 24, H); }
+function gTzTexture(THREE, zones) {
+  const W = 4096, H = 2048, c = gCanvas(W, H), x = c.getContext("2d"), X = (lon) => ((lon + 180) / 360) * W, Y = (lat) => ((90 - lat) / 180) * H;
+  if (zones && zones.length) {   // the real, irregular time-zone areas (Natural Earth), tinted so neighbors differ
+    const pal = ["rgba(120,160,255,0.085)", "rgba(170,205,255,0.040)", "rgba(185,160,255,0.075)", "rgba(110,215,230,0.055)", "rgba(145,185,255,0.100)", "rgba(210,215,255,0.035)"];
+    for (const z of zones) { x.fillStyle = pal[(z.c - 1) % 6]; for (const rings of z.p) { x.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? x.lineTo(X(r[i]), Y(r[i + 1])) : x.moveTo(X(r[i]), Y(r[i + 1])); x.closePath(); } x.fill("evenodd"); } }
+    x.strokeStyle = "rgba(195,218,255,0.24)"; x.lineWidth = 2; x.lineJoin = "round"; x.beginPath();
+    for (const z of zones) for (const rings of z.p) for (const r of rings) {
+      let a = 1e9, b = 1e9, c2 = -1e9, d2 = -1e9; for (let i = 0; i < r.length; i += 2) { a = Math.min(a, r[i]); c2 = Math.max(c2, r[i]); b = Math.min(b, r[i + 1]); d2 = Math.max(d2, r[i + 1]); }
+      if (c2 - a < 9 && d2 - b < 9) continue;   // outlines of tiny island zones look like stray boxes
+      for (let i = 0; i + 3 < r.length; i += 2) {
+      if ((Math.abs(r[i]) > 179.9 && Math.abs(r[i + 2]) > 179.9) || (Math.abs(r[i + 1]) > 89.9 && Math.abs(r[i + 3]) > 89.9)) continue;   // edges of the map, not zone boundaries
+      x.moveTo(X(r[i]), Y(r[i + 1])); x.lineTo(X(r[i + 2]), Y(r[i + 3]));
+    } }
+    x.stroke();
+  } else {   // fallback: 24 straight 15-degree bands
+    for (let k = 0; k < 24; k++) { if (k % 2 === 0) { x.fillStyle = "rgba(140,175,255,0.055)"; x.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); } }
+    x.strokeStyle = "rgba(190,215,255,0.16)"; x.lineWidth = 2; for (let k = 0; k <= 24; k++) { const xx = X(-180 + (k - 0.5) * 15); x.beginPath(); x.moveTo(xx, 0); x.lineTo(xx, H); x.stroke(); }
   }
-  x.strokeStyle = "rgba(190,215,255,0.16)"; x.lineWidth = 2;
-  for (let k = 0; k <= 24; k++) { const xx = (((-180 + (k - 0.5) * 15) + 180) / 360) * W; x.beginPath(); x.moveTo(xx, 0); x.lineTo(xx, H); x.stroke(); }
-  x.fillStyle = "rgba(225,236,255,0.5)"; x.font = "600 26px -apple-system, system-ui, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle";
-  for (let k = 0; k < 24; k++) { const off = k - 12 + 0, lon = off * 15; if (off < -12 || off > 11) continue; x.fillText("UTC" + (off === 0 ? "" : off > 0 ? "+" + off : "−" + -off), ((lon + 180) / 360) * W, H / 2 + 22); }
+  x.fillStyle = "rgba(225,236,255,0.55)"; x.font = "600 26px -apple-system, system-ui, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle";
+  for (let off = -12; off <= 11; off++) x.fillText("UTC" + (off === 0 ? "" : off > 0 ? "+" + off : "\u2212" + -off), X(off * 15), H / 2 + 22);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
+}
+
+// ---- tint every country by its economic-health score (toggle) ----
+function gHealthColor(score) {
+  const stops = [[25, [255, 90, 95]], [55, [245, 181, 70]], [85, [47, 212, 160]]], s = Math.max(25, Math.min(85, score));
+  const i = s <= 55 ? 0 : 1, [a, ca] = stops[i], [b, cb] = stops[i + 1], t = (s - a) / (b - a);
+  return ca.map((v, k) => Math.round(v + (cb[k] - v) * t));
+}
+function gTintTexture(THREE, list, world, coarse) {
+  const W = coarse ? 2048 : 4096, c = gCanvas(W, W / 2), x = c.getContext("2d"), X = (lon) => ((lon + 180) / 360) * W, Y = (lat) => ((90 - lat) / 180) * (W / 2);
+  for (const co of list) {
+    const w = co.i && world.countries[co.i], sc = w && w.score;
+    x.fillStyle = sc != null ? "rgba(" + gHealthColor(sc).join(",") + ",0.46)" : "rgba(150,160,180,0.14)";
+    for (const rings of co.p) { x.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? x.lineTo(X(r[i]), Y(r[i + 1])) : x.moveTo(X(r[i]), Y(r[i + 1])); x.closePath(); } x.fill("evenodd"); }
+  }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
 
@@ -138,10 +164,19 @@ async function globeMount(host) {
   scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ size: 0.16, vertexColors: true, sizeAttenuation: true, transparent: true, opacity: 0.9, depthWrite: false })));
 
   // overlays: time zones, highlight, borders
-  const tz = new THREE.Mesh(new THREE.SphereGeometry(1.0015, 96, 64), new THREE.MeshBasicMaterial({ map: gTzTexture(THREE), transparent: true, depthWrite: false })); scene.add(tz);
+  const tz = new THREE.Mesh(new THREE.SphereGeometry(1.0015, 96, 64), new THREE.MeshBasicMaterial({ map: gTzTexture(THREE, A.zones), transparent: true, depthWrite: false })); scene.add(tz);
   const HW = coarse ? 2048 : 4096, hc = gCanvas(HW, HW / 2), hx = hc.getContext("2d"), htex = new THREE.CanvasTexture(hc); htex.colorSpace = THREE.SRGBColorSpace; htex.anisotropy = 4;
   const hl = new THREE.Mesh(new THREE.SphereGeometry(1.0022, 96, 64), new THREE.MeshBasicMaterial({ map: htex, transparent: true, depthWrite: false })); scene.add(hl);
   const list = A.borders, lookup = gIndex(list);
+  let tintMesh = null; g.tint = { on: false, o: 0 };
+  const setTint = (on) => {
+    g.tint.on = on; try { localStorage.setItem("ml_globe_tint", on ? "1" : "0"); } catch (e) {}
+    if (on && !tintMesh) { tintMesh = new THREE.Mesh(new THREE.SphereGeometry(1.0019, 96, 64), new THREE.MeshBasicMaterial({ map: gTintTexture(THREE, list, A.world, coarse), transparent: true, depthWrite: false, opacity: 0 })); scene.add(tintMesh); }
+    const btn = host.querySelector(".gtoggle"), lg = host.querySelector(".glegend"); btn.setAttribute("aria-pressed", on ? "true" : "false"); btn.classList.toggle("on", on); lg.hidden = !on;
+  };
+  host.querySelector(".gtoggle").addEventListener("click", () => setTint(!g.tint.on));
+  g.cleanup.push(() => { tintMesh = null; });
+  try { if (localStorage.getItem("ml_globe_tint") === "1") setTint(true); } catch (e) {}
   const ringSegs = (rings, out) => {
     for (const r of rings) for (let i = 0; i + 3 < r.length; i += 2) {
       let x0 = r[i], y0 = r[i + 1], x1 = r[i + 2], y1 = r[i + 3];
@@ -279,6 +314,7 @@ async function globeMount(host) {
     g.lon = ((g.lon + 540) % 360) - 180;
     if (now - lastSun > 20000) { const s = gSun(); sunV.set(...gVec(s.lat, s.lon)); lastSun = now; }
     earthMat.uniforms.time.value = (now - g.t0) / 1000;
+    if (tintMesh) { g.tint.o += ((g.tint.on ? 1 : 0) - g.tint.o) * Math.min(1, (force ? 1 : dt * 5)); tintMesh.material.opacity = g.tint.o; tintMesh.visible = g.tint.o > 0.01; }
     const v = gVec(g.lat, g.lon); camera.position.set(v[0] * g.dist, v[1] * g.dist, v[2] * g.dist); camera.lookAt(0, 0, 0); camera.updateMatrixWorld();
     // labels
     cam.set(v[0], v[1], v[2]); const H = stage.clientHeight, W = stage.clientWidth, ppu = H / (2 * Math.tan(17.5 * G_R) * Math.max(0.3, g.dist - 1));
@@ -370,6 +406,7 @@ function globeHtml() {
   return `<section class="globe-wrap" id="globe" aria-label="Interactive globe of the world's economies">
     <div class="globe-stage"><div class="gload"><span>Loading the Earth…</span></div><div class="glabels"></div><div class="gcard" hidden></div>
       <div class="gui-top"><span class="gtag">Live day &amp; night · time zones</span></div>
+      <div class="gui-right"><button class="gtoggle" aria-pressed="false">Color by economic health</button><div class="glegend" hidden><i></i><div><span>Strained</span><span>Healthy</span></div><em>Grey: not enough data</em></div></div>
       <div class="gui-bot"><div class="ghint"><b>Hover</b> a country for two seconds · <b>double-click</b> for its economy · drag to spin</div><button class="gscroll" aria-label="Scroll to markets">Markets today ↓</button></div><div class="gcredit">Imagery: NASA Visible Earth · Borders: Natural Earth · Economy: IMF</div></div>
     <aside class="gpanel" hidden></aside></section>`;
 }
