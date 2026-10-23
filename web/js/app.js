@@ -13,7 +13,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx, state.dollar100] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json"), loadJson("dollar100.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 

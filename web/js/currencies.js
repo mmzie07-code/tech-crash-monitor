@@ -36,6 +36,7 @@ function fxView(sub) {
     <p class="muted" style="margin:6px 0 0">${x ? `The dollar index (DXY) measures the dollar against six big currencies (mostly the euro, then the yen, pound, Canadian dollar, Swedish krona and Swiss franc). It is ${pos != null ? pos + "% of the way up its 52-week range (" + x.lo52.toFixed(1) + " to " + x.hi52.toFixed(1) + ")" : "shown here"}. ` : ""}Against the ${S.ytd_n} free-floating currencies we have a full year for, the dollar is <b>up against ${S.ytd_up}</b> and <b>down against ${S.ytd_down}</b> so far this year${S.ytd_median != null ? ` (typical change ${S.ytd_median > 0 ? "+" : ""}${S.ytd_median}%)` : ""}.</p>
     ${x ? `<div class="hz" style="margin-top:10px"><div class="card"><div class="small muted">Today</div><b>${fxChg(x.d1)}</b></div><div class="card"><div class="small muted">1 month</div><b>${fxChg(x.d30)}</b></div><div class="card"><div class="small muted">1 year</div><b>${fxChg(x.y1)}</b></div><div class="card"><div class="small muted">5 years</div><b>${fxChg(x.y5)}</b></div></div>` : ""}
     <p class="small muted" style="margin:10px 0 0">All changes are from the dollar's side: <b>+</b> means the dollar buys more of the other currency than before (the dollar got stronger against it), <b>−</b> means it buys less. Rates updated ${esc((d.rates_updated || d.generated || "").slice(0, 16))}.</p></div>
+  ${fxCentury()}
   <div class="card"><h3>Currency converter</h3><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><input id="fx-amt" type="number" min="0" step="any" value="100" style="width:120px" aria-label="Amount">
     <select id="fx-from" aria-label="From"><option value="USD">USD – US Dollar</option>${opts}</select><span>→</span><select id="fx-to" aria-label="To"><option value="USD">USD – US Dollar</option>${opts}</select></div>
    <p style="margin:10px 0 0;font-size:20px;font-weight:700" id="fx-out"></p><p class="small muted" style="margin:4px 0 0">Mid-market rates, updated daily. Banks, card networks and exchange kiosks add a margin, so what you actually get is usually a little less.</p></div>
@@ -61,6 +62,28 @@ function fxView(sub) {
    <li><b>Oil, gold and many commodities</b> are priced in dollars, so they often fall when the dollar rises, and the other way round.</li></ul>
    <p class="small muted" style="margin:10px 0 0">None of this is a forecast. Currencies are hard to predict, even for professionals.</p></div>
   <p class="small muted">${esc(d.source)}. Educational information only. Not investment advice. Rates are mid-market and update daily.</p>`;
+}
+
+// What the dollar has been worth over time: its purchasing power since 1913, from the US consumer price index.
+function fxCentury() {
+  const D = state.dollar100;
+  if (!D || !D.cpi || D.cpi.length < 1000) return "";
+  const n = D.cpi.length, last = D.cpi[n - 1], yr = (t) => new Date(Date.UTC(2000, 0, 1) + t * 864e5).getUTCFullYear();
+  const power = D.cpi.map((c) => (D.cpi[0] / c) * 100);   // cents of 1913 buying power
+  const first = new Map(); D.t.forEach((t, i) => { const y = yr(t); if (!first.has(y)) first.set(y, D.cpi[i]); });
+  const avg = (y) => { const v = D.cpi.filter((_, i) => yr(D.t[i]) === y); return v.reduce((a, b) => a + b, 0) / v.length; };
+  const today = (y) => 100 * last / avg(y);
+  const yoy = D.cpi.map((c, i) => (i >= 12 ? { t: D.t[i], v: (c / D.cpi[i - 12] - 1) * 100 } : null)).filter(Boolean);
+  const hi = yoy.reduce((a, b) => (b.v > a.v ? b : a)), lo = yoy.reduce((a, b) => (b.v < a.v ? b : a)), mo = (t) => new Date(Date.UTC(2000, 0, 1) + t * 864e5).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+  const years = [1913, 1926, 1950, 1970, 1980, 2000, 2020].filter((y) => first.has(y));
+  const cagr = (Math.pow(last / D.cpi[0], 1 / ((D.t[n - 1] - D.t[0]) / 365.25)) - 1) * 100;
+  afterRender.push(() => { const box = $("#fxcentury"); if (box) mountChart(box, { t: D.t, c: power }, { money: false, decimals: 1, lineOnly: true, noRanges: true, rangeName: "1913 to now" }); });
+  return `<div class="card"><h3>What a dollar has been worth, 1913 to today</h3>
+   <p style="margin:0 0 8px">A dollar from 1913 buys about <b>${power[n - 1].toFixed(1)} cents</b> of what it bought then. Put the other way, goods that cost $1 in 1913 cost about <b>$${(last / D.cpi[0]).toFixed(2)}</b> today. Prices have risen by about <b>${cagr.toFixed(1)}% a year</b> on average since.</p>
+   <div id="fxcentury"></div><p class="small muted" style="margin:6px 0 0">Purchasing power of the US dollar, in cents of 1913 buying power. The line falls when prices rise.</p>
+   <div class="tw" style="margin-top:10px"><table><tr><th>If you had $100 in</th><th>it would take about this much to buy the same things today</th></tr>${years.map((y) => `<tr><td>${y}</td><td><b>$${today(y).toLocaleString("en-US", { maximumFractionDigits: 0 })}</b></td></tr>`).join("")}</table></div>
+   <div class="hz" style="margin-top:10px"><div class="card"><div class="small muted">Fastest price rise (12 months)</div><b>+${hi.v.toFixed(1)}%</b><div class="small muted">to ${mo(hi.t)}</div></div><div class="card"><div class="small muted">Steepest price fall (12 months)</div><b>${lo.v.toFixed(1)}%</b><div class="small muted">to ${mo(lo.t)}</div></div></div>
+   <p class="small muted" style="margin:10px 0 0">Measured with the US consumer price index (CPI), which tracks a typical basket of what households buy. It is not exact for any one person: housing, health care, education and electronics have all moved very differently. Since the dollar left the gold standard in 1971, it has not been tied to any metal, and its value rests on the Federal Reserve's policy and on people's trust in it. ${esc(D.source)}.</p></div>`;
 }
 
 function fxWire(d, sub) {

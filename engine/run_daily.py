@@ -146,6 +146,11 @@ def main():
     except Exception as e:
         print("currencies failed:", e)
     try:
+        json.dump(currencies.build_dollar100(), open(os.path.join(DATA, "dollar100.json"), "w"), separators=(",", ":"))
+        print("dollar100 written")
+    except Exception as e:
+        print("dollar100 failed:", e)
+    try:
         json.dump(brief.build(), open(os.path.join(DATA, "brief.json"), "w"), indent=1)
         print("brief written")
     except Exception as e:

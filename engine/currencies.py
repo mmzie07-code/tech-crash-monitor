@@ -50,6 +50,22 @@ def stats(series):
                 y5=ex(last, d[0][1]) if len(d) > 1000 else None, lo52=min(y), hi52=max(y), pos52=round((last - min(y)) / (max(y) - min(y)) * 100) if max(y) > min(y) else None)
 
 
+def build_dollar100():
+    """Purchasing power of the dollar since 1913: monthly US consumer price index (FRED CPIAUCNS, not seasonally adjusted)."""
+    req = urlreq.Request("https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS", headers={"User-Agent": "curl/8.4.0"})   # FRED drops browser-style agents
+    rows = [l.split(",") for l in urlreq.urlopen(req, timeout=30).read().decode().splitlines()[1:]]
+    t, c = [], []
+    for d, v in rows:
+        try:
+            t.append(history.day(d))
+            c.append(float(v))
+        except ValueError:
+            pass   # a missing month
+    if len(c) < 1000:
+        raise RuntimeError("short CPI series")
+    return dict(generated=dt.datetime.utcnow().isoformat() + "Z", start=rows[0][0], t=t, cpi=c, source="U.S. Bureau of Labor Statistics consumer price index, via FRED (CPIAUCNS)")
+
+
 def save_fx(code, series):
     """Like history.save, but keeps 6 significant digits (rates near 1, like CAD or SGD, would turn blocky at 2 decimals)."""
     json.dump({"t": [history.day(dd) for dd, _ in series], "c": [float("%.6g" % v) for _, v in series]}, open(os.path.join(history.HIST, "FX_" + code + ".json"), "w"), separators=(",", ":"))
