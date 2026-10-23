@@ -13,7 +13,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -81,7 +81,7 @@ function learn() {
 }
 
 function mTabs(cur) {
-  return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["ipos", "IPOs"], ["housing", "Housing"], ["crypto", "Crypto"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["overview", "Overview"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["ipos", "IPOs"], ["housing", "Housing"], ["crypto", "Crypto"], ["currencies", "Currencies"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
 }
 const SECTOR_ETF_KEY = { XLK: "technology", XLC: "communication", XLY: "consumer-discretionary", XLP: "consumer-staples", XLF: "financials", XLV: "health-care", XLI: "industrials", XLE: "energy", XLU: "utilities", XLB: "materials", XLRE: "real-estate" };
 function heat(v) {
@@ -206,6 +206,8 @@ function markets(tab, sub) {
     b = housingView(sub);
   } else if (tab === "crypto") {
     b = cryptoView(sub);
+  } else if (tab === "currencies") {
+    b = fxView(sub);
   } else {
     b = outlookView(sub);
   }
