@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import crypto, currencies, economy, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
+import crypto, currencies, economy, world, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -155,6 +155,14 @@ def main():
         print("currencies written")
     except Exception as e:
         print("currencies failed:", e)
+    try:
+        w, ws = world.build()
+        os.makedirs(os.path.join(DATA, "world"), exist_ok=True)
+        json.dump(w, open(os.path.join(DATA, "world", "world.json"), "w"), separators=(",", ":"))
+        json.dump(ws, open(os.path.join(DATA, "world", "world-series.json"), "w"), separators=(",", ":"))
+        print("world written")
+    except Exception as e:
+        print("world failed:", e)
     try:
         json.dump(currencies.build_dollar100(), open(os.path.join(DATA, "dollar100.json"), "w"), separators=(",", ":"))
         print("dollar100 written")

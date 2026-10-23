@@ -61,7 +61,8 @@ function home() {
       box.innerHTML = `<p class="small muted" style="margin:0 0 8px">${S.ok} of ${S.n} gauges look healthy, ${S.watch} say watch, ${S.bad} are strained. <a href="#/markets/economy">Full economy dashboard →</a></p><div class="hz">${keys.map((k) => econCard(I[k])).join("")}</div>`;
     } catch (e) {}
   });
-  return `<section class="hero"><span class="pill">For ages 16+</span><h1>Understand the market.<br><span class="grad">Follow it every day.</span></h1>
+  afterRender.push(() => { if (typeof globeMount === "function") globeMount(document.querySelector("#globe")); });
+  return globeHtml() + `<div id="homerest"><section class="hero"><span class="pill">For ages 16+</span><h1>Understand the market.<br><span class="grad">Follow it every day.</span></h1>
   <p class="lead">A daily view of the whole market: stocks, sectors, rates, the economic calendar, and the risks building underneath. Real data, honest limits, no hype.</p>
   <a class="btn" href="#/markets">See today's markets</a><a class="btn ghost" href="#/explore">Explore sectors &amp; stocks</a>
   <p class="small" style="margin-top:14px">New to investing? <a href="#/learn">Take the crash course</a> or <a href="#/practice">try practice trading</a>.</p>
@@ -76,7 +77,7 @@ function home() {
   <h2 style="margin-top:1.4em">Why trust this?</h2>
   <div class="cards"><div class="card"><h3>We show our homework</h3><p class="muted small">Every number links to its data source, and we backtested our warning signs. Some of our own ideas failed, and we say so.</p></div>
   <div class="card"><h3>No stock tips</h3><p class="muted small">We teach how things work. We never tell you what to buy or sell.</p></div>
-  <div class="card"><h3>Honest about limits</h3><p class="muted small">Nobody can reliably predict the market, and neither can we. Forecasts here are scenarios, not promises.</p></div></div>`;
+  <div class="card"><h3>Honest about limits</h3><p class="muted small">Nobody can reliably predict the market, and neither can we. Forecasts here are scenarios, not promises.</p></div></div></div>`;
 }
 
 function learn() {
@@ -269,6 +270,7 @@ function about() {
 const afterRender = [];
 let routeToken = 0;
 async function route() {
+  if (typeof globeDispose === "function") globeDispose();   // free the globe's WebGL context when leaving the home page
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
   const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
