@@ -49,6 +49,7 @@ jobs:
       - run: pip install yfinance
       - name: Run engine
         env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}   # optional: free key from eia.gov/opendata (without it we read EIA's public tables)
           SNAP_LIMIT: ${{ github.event.inputs.snap_limit || '200' }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: adds an AI-written summary paragraph
@@ -57,7 +58,7 @@ jobs:
         run: |
           git config user.name "crash-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/event_archive.json data/outlook.json data/quotes.json data/fundamentals.json data/balance.json data/earnings.json data/sectors.json data/search.json data/ipos.json data/housing.json data/crypto.json data/economy.json data/currencies.json data/dollar100.json data/overlooked.json data/gics.json data/fx/*.json data/world/*.json data/cache/form4_*.json
+          git add data/latest.json data/history.json data/markets.json data/brief.json data/calendar.json data/recaps.json data/event_archive.json data/outlook.json data/quotes.json data/fundamentals.json data/balance.json data/earnings.json data/sectors.json data/search.json data/ipos.json data/housing.json data/crypto.json data/economy.json data/oil.json data/currencies.json data/dollar100.json data/overlooked.json data/gics.json data/fx/*.json data/world/*.json data/cache/form4_*.json
           git commit -m "Daily update $(date -u +%F)" || echo "no changes"
           for i in 1 2 3; do
             git pull --rebase -X theirs origin main && git push && break

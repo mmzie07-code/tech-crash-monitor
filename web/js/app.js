@@ -91,7 +91,7 @@ function learn() {
 }
 
 function mTabs(cur) {
-  return `<div class="tabs">${[["overview", "Overview"], ["economy", "Economy"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["ipos", "IPOs"], ["housing", "Housing"], ["crypto", "Crypto"], ["currencies", "Currencies"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["overview", "Overview"], ["economy", "Economy"], ["oil", "Oil"], ["brief", "Daily brief"], ["earnings", "Earnings"], ["calendar", "Calendar"], ["ipos", "IPOs"], ["housing", "Housing"], ["crypto", "Crypto"], ["currencies", "Currencies"], ["outlook", "Outlook"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/markets/${k}">${l}</a>`).join("")}</div>`;
 }
 const SECTOR_ETF_KEY = { XLK: "technology", XLC: "communication", XLY: "consumer-discretionary", XLP: "consumer-staples", XLF: "financials", XLV: "health-care", XLI: "industrials", XLE: "energy", XLU: "utilities", XLB: "materials", XLRE: "real-estate" };
 function heat(v) {
@@ -216,6 +216,8 @@ function markets(tab, sub) {
     b = housingView(sub);
   } else if (tab === "economy") {
     b = econView(sub);
+  } else if (tab === "oil") {
+    b = oilView(sub);
   } else if (tab === "crypto") {
     b = cryptoView(sub);
   } else if (tab === "currencies") {

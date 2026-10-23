@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import crypto, currencies, economy, world, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
+import crypto, currencies, economy, oil, world, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -41,6 +41,15 @@ def morning():
         print("recaps failed:", e)
     write_crypto()
     write_economy()
+    write_oil()
+
+
+def write_oil():
+    try:
+        json.dump(oil.build(), open(os.path.join(DATA, "oil.json"), "w"), separators=(",", ":"))
+        print("oil written")
+    except Exception as e:
+        print("oil failed:", e)
 
 
 def write_economy():
@@ -150,6 +159,7 @@ def main():
         print("recaps failed:", e)
     write_crypto()
     write_economy()
+    write_oil()
     try:
         json.dump(currencies.build(), open(os.path.join(DATA, "currencies.json"), "w"), separators=(",", ":"))
         print("currencies written")
