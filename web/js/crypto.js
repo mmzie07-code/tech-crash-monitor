@@ -5,11 +5,11 @@ const cgBig = (v) => (v == null ? "-" : v >= 1e12 ? "$" + (v / 1e12).toFixed(2) 
 const cgPrice = (v) => (v == null ? "-" : "$" + (v >= 100 ? v.toLocaleString("en-US", { maximumFractionDigits: 0 }) : v >= 1 ? v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : v >= 0.01 ? v.toFixed(4) : v.toPrecision(3)));
 const cgNum = (v) => (v == null ? "-" : v >= 1e9 ? (v / 1e9).toFixed(2) + "B" : v >= 1e6 ? (v / 1e6).toFixed(2) + "M" : Math.round(v).toLocaleString());
 
-function cgSpark(a, w = 110, h = 32) {
+function cgSpark(a, w = 110, h = 32, color = null) {
   if (!a || a.length < 3) return "";
   const lo = Math.min(...a), hi = Math.max(...a), rng = hi - lo || 1, up = a[a.length - 1] >= a[0];
   const pts = a.map((v, i) => ((i / (a.length - 1)) * w).toFixed(1) + "," + (h - 2 - ((v - lo) / rng) * (h - 4)).toFixed(1)).join(" ");
-  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true" style="display:block"><polyline points="${pts}" fill="none" stroke="var(${up ? "--ok" : "--bad"})" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true" style="display:block"><polyline points="${pts}" fill="none" stroke="${color || `var(${up ? "--ok" : "--bad"})`}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
 }
 const cgFng = (v) => (v <= 24 ? ["Extreme fear", "var(--bad)"] : v <= 44 ? ["Fear", "var(--warn)"] : v <= 55 ? ["Neutral", "var(--mut)"] : v <= 75 ? ["Greed", "var(--ok)"] : ["Extreme greed", "var(--ok)"]);
 

@@ -41,6 +41,8 @@ function mountChart(el, data, opts = {}) {
   try { if (canCandle && typeof mountCandleChart === "function" && localStorage.getItem("ml_ctype") === "candle") return mountCandleChart(el, data, opts); } catch (e) {}
   el._gen = (el._gen || 0) + 1; const gen = el._gen;
   const money = opts.money !== false, id = "ch" + Math.random().toString(36).slice(2, 7);
+  // Color for "went up" / "went down". Default: up is green. opts.tone = "upBad" for measures where a rise is bad (unemployment, inflation), "neutral" where neither direction is good or bad.
+  const tone = (up) => (opts.tone === "neutral" ? "var(--brand)" : (opts.tone === "upBad") === up ? "var(--bad)" : "var(--ok)");
   const dec = opts.decimals != null ? opts.decimals : 2;   // decimals shown (macro series like sales counts want 0)
   let rng = opts.noRanges ? "5Y" : "1Y", view = null, cmpOn = false, info = null, hovering = false, token = 0;
   const fmt = (v) => opts.unit === "yield" ? v.toFixed(2) + "%" : (money ? "$" : "") + v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
@@ -58,7 +60,7 @@ function mountChart(el, data, opts = {}) {
     P.textContent = fmt(cur);
     const cmp = v.comp ? ` <span class="muted">· ${opts.compare.name} ${(v.comp[i] / v.comp[0] - 1) * 100 >= 0 ? "+" : ""}${((v.comp[i] / v.comp[0] - 1) * 100).toFixed(2)}%</span>` : "";
     const span = { "1D": "today", "1W": "past 5 days", "1M": "past month", "3M": "past 3 months" }[rng];
-    C.innerHTML = `<span style="color:${up ? "var(--ok)" : "var(--bad)"};font-weight:700">${up ? "▲" : "▼"} ${opts.unit === "yield" ? Math.abs(ch).toFixed(2) + " pts" : (money ? "$" : "") + Math.abs(ch).toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + " (" + (up ? "+" : "") + pc.toFixed(2) + "%)"}</span> <span class="muted">${i === v.c.length - 1 ? (v.intraday && span ? span : "over " + (opts.rangeName || rng)) : "vs " + (v.base != null ? "previous close" : v.intraday ? fmtStamp(v.t[0]) : fmtDate(v.t[0]))}</span>${cmp}`;
+    C.innerHTML = `<span style="color:${tone(up)};font-weight:700">${up ? "▲" : "▼"} ${opts.unit === "yield" ? Math.abs(ch).toFixed(2) + " pts" : (money ? "$" : "") + Math.abs(ch).toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + " (" + (up ? "+" : "") + pc.toFixed(2) + "%)"}</span> <span class="muted">${i === v.c.length - 1 ? (v.intraday && span ? span : "over " + (opts.rangeName || rng)) : "vs " + (v.base != null ? "previous close" : v.intraday ? fmtStamp(v.t[0]) : fmtDate(v.t[0]))}</span>${cmp}`;
     D.textContent = v.intraday ? fmtStamp(v.t[i]) : fmtDate(v.t[i]);
     L.style.display = info && info.open && i === v.c.length - 1 ? "" : "none";
   }
@@ -100,7 +102,7 @@ function mountChart(el, data, opts = {}) {
     const refs = R ? [R.low, R.base, R.high].filter((v) => v != null && v >= lo0 * 0.55 && v <= hi0 * 1.8) : [];
     const all = (view.comp ? c.concat(view.comp) : c).concat(refs), lo = Math.min(...all), hi = Math.max(...all), pad = (hi - lo) * 0.08 || 1;
     const X = (i) => (i / (n - 1)) * W, Y = (x) => H - 10 - ((x - lo + pad * 0.5) / (hi - lo + pad)) * (H - 20);
-    const base = view.base != null ? view.base : c[0], up = c[n - 1] >= base, col = up ? "var(--ok)" : "var(--bad)", pts = c.map((x, i) => `${X(i).toFixed(1)},${Y(x).toFixed(1)}`).join(" ");
+    const base = view.base != null ? view.base : c[0], up = c[n - 1] >= base, col = tone(up), pts = c.map((x, i) => `${X(i).toFixed(1)},${Y(x).toFixed(1)}`).join(" ");
     let refSvg = "";
     if (R) {
       const yb = Y(R.base), yt = Math.max(0, Math.min(H, Y(R.high))), yl = Math.max(0, Math.min(H, Y(R.low))), inside = yb >= 4 && yb <= H - 4;

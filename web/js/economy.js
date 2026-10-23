@@ -11,6 +11,10 @@ const ECON_GROUPS = [
 const ECON_STATE = { ok: ["Healthy", "var(--ok)"], watch: ["Watch", "var(--warn)"], bad: ["Strained", "var(--bad)"] };
 const ECON_RANGES = [["1Y", 365], ["5Y", 1826], ["10Y", 3652], ["25Y", 9131]];
 const ECON = { d: null };
+// Whether a rise is good, bad or neither, so charts are colored by meaning (a spike in unemployment is red, not green)
+const ECON_UP_BAD = new Set(["cpi", "core_cpi", "pce", "core_pce", "shelter", "food", "energy", "mich", "mortgage", "hy", "unrate", "u6", "claims", "sahm", "vix", "nfci", "stlfsi"]);
+const ECON_UP_GOOD = new Set(["wages_x", "payrolls", "openings", "lfpr", "gdp", "indpro", "retail", "sentiment", "t10y2y", "t10y3m"]);
+const econTone = (k) => (ECON_UP_BAD.has(k) ? "upBad" : ECON_UP_GOOD.has(k) ? "upGood" : "neutral");
 const econMonth = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
 const econDay = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 const econDate = (it) => (it.freq === "M" || it.freq === "Q" ? econMonth(it.date) : econDay(it.date));
@@ -26,7 +30,8 @@ function econFmt(it, v, sign) {
 const econChip = (st, rule) => (st && ECON_STATE[st] ? `<span class="pill" title="${esc(rule || "")}" style="font-size:11px;background:color-mix(in srgb,${ECON_STATE[st][1]} 18%,transparent);color:${ECON_STATE[st][1]};font-weight:700">${ECON_STATE[st][0]}</span>` : "");
 function econSpark(it, w = 120, h = 30, days = 1826) {
   const last = it.t[it.t.length - 1], idx = it.t.map((t, i) => (t >= last - days ? i : -1)).filter((i) => i >= 0), a = idx.map((i) => it.v[i]);
-  return typeof cgSpark === "function" ? cgSpark(a.length > 80 ? a.filter((_, i) => i % Math.ceil(a.length / 80) === 0).concat([a[a.length - 1]]) : a, w, h) : "";
+  const tone = econTone(it.key), up = a[a.length - 1] >= a[0], color = tone === "neutral" ? "var(--brand)" : (tone === "upBad") === up ? "var(--bad)" : "var(--ok)";
+  return typeof cgSpark === "function" ? cgSpark(a.length > 80 ? a.filter((_, i) => i % Math.ceil(a.length / 80) === 0).concat([a[a.length - 1]]) : a, w, h, color) : "";
 }
 function econCard(it) {
   const ch = it.latest - it.prev, up = ch > 0;
@@ -122,7 +127,7 @@ function econDetail(it, d) {
     let cur = it.freq === "D" ? 1826 : 3652;
     const draw = () => {
       const last = it.t[it.t.length - 1], i0 = cur ? it.t.findIndex((t) => t >= last - cur) : 0, a = Math.max(0, i0);
-      box.innerHTML = ""; mountChart(box, { t: it.t.slice(a), c: it.v.slice(a) }, { money: false, decimals: it.dec, noRanges: true, lineOnly: true, unit: it.unit === "%" ? "yield" : undefined, rangeName: cur ? "last " + Math.round(cur / 365.25) + "Y" : "all time" });
+      box.innerHTML = ""; mountChart(box, { t: it.t.slice(a), c: it.v.slice(a) }, { money: false, decimals: it.dec, noRanges: true, lineOnly: true, unit: it.unit === "%" ? "yield" : undefined, tone: econTone(it.key), rangeName: cur ? "last " + Math.round(cur / 365.25) + "Y" : "all time" });
       document.querySelectorAll("[data-er]").forEach((b) => b.classList.toggle("on", +b.dataset.er === cur));
     };
     document.querySelectorAll("[data-er]").forEach((b) => (b.onclick = () => { cur = +b.dataset.er; draw(); }));
