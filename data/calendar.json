@@ -1,140 +1,8 @@
 {
- "generated": "2026-10-22T22:51:39.723073Z",
- "today": "2026-10-22",
+ "generated": "2026-10-23T13:25:09.487522Z",
+ "today": "2026-10-23",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-22-earnings-procter-gamble-company-the-pg-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Procter & Gamble Company (The) (PG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.89.",
-   "extra": {
-    "market_cap_b": 365,
-    "eps_forecast": "$1.89"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-union-pacific-unp-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Union Pacific (UNP) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.47.",
-   "extra": {
-    "market_cap_b": 171,
-    "eps_forecast": "$3.47"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-western-digital-wdc-reports-earnings",
-   "date": "2026-10-22",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Western Digital (WDC) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.99.",
-   "extra": {
-    "market_cap_b": 141,
-    "eps_forecast": "$3.99"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-lockheed-martin-lmt-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Lockheed Martin (LMT) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $7.49.",
-   "extra": {
-    "market_cap_b": 127,
-    "eps_forecast": "$7.49"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-valero-energy-vlo-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Valero Energy (VLO) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $21.28.",
-   "extra": {
-    "market_cap_b": 126,
-    "eps_forecast": "$21.28"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-newmont-nem-reports-earnings",
-   "date": "2026-10-22",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Newmont (NEM) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.94.",
-   "extra": {
-    "market_cap_b": 123,
-    "eps_forecast": "$1.94"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-spotify-technology-s-a-spot-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Spotify Technology S.A. (SPOT) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.10.",
-   "extra": {
-    "market_cap_b": 108,
-    "eps_forecast": "$3.10"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-earnings-blackstone-bx-reports-earnings",
-   "date": "2026-10-22",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Blackstone (BX) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.26.",
-   "extra": {
-    "market_cap_b": 82,
-    "eps_forecast": "$1.26"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-22-data-weekly-jobless-claims",
-   "date": "2026-10-22",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-10-23-earnings-american-express-company-axp-reports-earnings",
    "date": "2026-10-23",
@@ -382,10 +250,10 @@
    "kind": "earnings",
    "title": "Corning Incorporated (GLW) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.88.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.89.",
    "extra": {
     "market_cap_b": 116,
-    "eps_forecast": "$0.88"
+    "eps_forecast": "$0.89"
    },
    "source": "",
    "link": null
@@ -507,6 +375,21 @@
    "link": null
   },
   {
+   "id": "2026-10-28-earnings-banco-santander-s-a-san-reports-earnings",
+   "date": "2026-10-28",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Banco Santander, S.A. (SAN) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.26.",
+   "extra": {
+    "market_cap_b": 192,
+    "eps_forecast": "$0.26"
+   },
+   "source": "",
+   "link": null
+  },
+  {
    "id": "2026-10-28-earnings-t-mobile-us-tmus-reports-earnings",
    "date": "2026-10-28",
    "time": "After close",
@@ -517,21 +400,6 @@
    "extra": {
     "market_cap_b": 165,
     "eps_forecast": "$2.86"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-28-earnings-servicenow-now-reports-earnings",
-   "date": "2026-10-28",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "ServiceNow (NOW) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.56.",
-   "extra": {
-    "market_cap_b": 158,
-    "eps_forecast": "$0.56"
    },
    "source": "",
    "link": null
@@ -759,10 +627,10 @@
    "kind": "earnings",
    "title": "BP p.l.c. (BP) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.57.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.66.",
    "extra": {
     "market_cap_b": 127,
-    "eps_forecast": "$2.57"
+    "eps_forecast": "$2.66"
    },
    "source": "",
    "link": null
@@ -804,10 +672,10 @@
    "kind": "earnings",
    "title": "Regeneron Pharmaceuticals (REGN) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.65.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.76.",
    "extra": {
     "market_cap_b": 83,
-    "eps_forecast": "$13.65"
+    "eps_forecast": "$13.76"
    },
    "source": "",
    "link": null
@@ -942,6 +810,18 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-data-weekly-jobless-claims",
+   "date": "2026-11-12",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {
@@ -1086,6 +966,30 @@
    "time": "4:15 PM",
    "kind": "data",
    "title": "H.8 - Assets and Liabilities of Commercial Banks in the U.S.",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-07-data-g-19-consumer-credit",
+   "date": "2026-12-07",
+   "time": "3:00 PM",
+   "kind": "data",
+   "title": "G.19 - Consumer Credit",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-07-data-h-10-foreign-exchange-rates",
+   "date": "2026-12-07",
+   "time": "4:15 PM",
+   "kind": "data",
+   "title": "H.10 - Foreign Exchange Rates",
    "importance": "low",
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
