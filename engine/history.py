@@ -13,6 +13,11 @@ _OHLC = {}  # filled by fetch(): date, close, open, high, low
 EXTRA = ["SPY", "QQQ", "DIA", "IWM", "VTI", "VOO", "VXUS", "AGG", "GLD",
          # market overview items (indices, global, rates, currency, commodities, crypto)
          "^GSPC", "^DJI", "^IXIC", "^RUT", "^FTSE", "^STOXX50E", "^N225", "^HSI", "^VIX", "^TNX", "DX-Y.NYB", "CL=F", "GC=F", "BTC-USD"]
+try:
+    from crypto import HIST_COINS
+    EXTRA += [c + "-USD" for c in HIST_COINS if c + "-USD" not in EXTRA]   # price history for the crypto section
+except Exception:
+    pass
 
 
 def day(iso):
@@ -40,7 +45,7 @@ def fetch(sym, rng="5y", tries=4):
 
 def save(sym, series):
     os.makedirs(HIST, exist_ok=True)
-    json.dump({"t": [day(d) for d, _ in series], "c": [round(c, 2) for _, c in series]}, open(os.path.join(HIST, sym.replace("^", "_") + ".json"), "w"), separators=(",", ":"))
+    json.dump({"t": [day(d) for d, _ in series], "c": [round(c, 2) if c >= 1 else float("%.6g" % c) for _, c in series]}, open(os.path.join(HIST, sym.replace("^", "_") + ".json"), "w"), separators=(",", ":"))
 
 
 def save_ohlc(sym):
@@ -49,9 +54,9 @@ def save_ohlc(sym):
     if not rows:
         return
     os.makedirs(OHLC, exist_ok=True)
-    r2 = lambda v, c: round(v if v is not None else c, 2)
+    r2 = lambda v, c: (lambda x: round(x, 2) if x >= 1 else float("%.6g" % x))(v if v is not None else c)
     json.dump({"t": [day(d) for d, *_ in rows], "o": [r2(o, c) for _, c, o, _, _ in rows], "h": [r2(h, c) for _, c, _, h, _ in rows],
-               "l": [r2(l, c) for _, c, _, _, l in rows], "c": [round(c, 2) for _, c, *_ in rows]},
+               "l": [r2(l, c) for _, c, _, _, l in rows], "c": [round(c, 2) if c >= 1 else float("%.6g" % c) for _, c, *_ in rows]},
               open(os.path.join(OHLC, sym.replace("^", "_") + ".json"), "w"), separators=(",", ":"))
 
 

@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
+import crypto, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -39,6 +39,15 @@ def morning():
         print("recaps written (%d new)" % done)
     except Exception as e:
         print("recaps failed:", e)
+    write_crypto()
+
+
+def write_crypto():
+    try:
+        json.dump(crypto.build(), open(os.path.join(DATA, "crypto.json"), "w"), separators=(",", ":"))
+        print("crypto written")
+    except Exception as e:
+        print("crypto failed:", e)
 
 
 def main():
@@ -130,6 +139,7 @@ def main():
         print("recaps written (%d new)" % done)
     except Exception as e:
         print("recaps failed:", e)
+    write_crypto()
     try:
         json.dump(brief.build(), open(os.path.join(DATA, "brief.json"), "w"), indent=1)
         print("brief written")
