@@ -1,45 +1,42 @@
 {
- "date": "2026-10-22",
- "generated": "2026-10-22T22:51:50.395234Z",
- "headline": "US stocks finished lower. The S&P 500 fell 1.21%, with 6 of 11 sectors up.",
+ "date": "2026-10-23",
+ "generated": "2026-10-23T22:52:30.787089Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 0.52%, with 3 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -1.21% today, -0.55% this month, +11.74% this year",
-    "Dow Jones: +0.02% today, +2.63% this month, +9.27% this year",
-    "Nasdaq Composite: -2.60% today, -3.44% this month, +11.94% this year",
-    "Russell 2000: +0.11% today, -1.92% this month, +11.00% this year"
+    "S&P 500: -0.52% today, -1.04% this month, +11.16% this year",
+    "Dow Jones: -1.23% today, +1.68% this month, +7.92% this year",
+    "Nasdaq Composite: -0.21% today, -3.65% this month, +11.70% this year",
+    "Russell 2000: -0.29% today, -2.10% this month, +10.67% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Consumer Staples +3.31%, Utilities +2.07%, Health Care +1.32%",
-    "Lagging: Technology -3.29%, Communication -1.42%, Industrials -0.94%",
-    "6 of 11 sectors rose."
+    "Leading: Energy +2.60%, Technology +0.49%, Real Estate +0.12%",
+    "Lagging: Consumer Staples -1.92%, Communication -1.78%, Consumer Discretionary -1.66%",
+    "3 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 19.03 (+14.09% today)",
-    "10-year Treasury yield: 4.95% (-0.19 pts today)",
-    "US dollar index: 101.62 (-0.15% today)",
-    "Crude oil: 99.10 (+2.01% today)",
-    "Gold: 4,039.80 (-2.66% today)",
-    "Bitcoin: 81,363.08 (-3.15% today)"
+    "VIX (fear gauge): 19.45 (+2.21% today)",
+    "10-year Treasury yield: 4.99% (+0.03 pts today)",
+    "US dollar index: 101.75 (+0.14% today)",
+    "Crude oil: 103.44 (+3.99% today)",
+    "Gold: 4,010.00 (-1.24% today)",
+    "Bitcoin: 81,275.92 (-0.04% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +2.01% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved -0.19 points to 4.95%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The VIX (expected volatility) jumped +14.09% to 19.0. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "Gold moved -2.66%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "Bitcoin moved -3.15%, showing appetite (or lack of it) for speculative assets.",
-    "A 6.6-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil +3.99% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "Gold moved -1.24%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 4.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -61,7 +58,7 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 25 out of 100 (Danger; higher is better) (-13 from 38 on 2026-10-21).",
+    "Market health score 25 out of 100 (Danger; higher is better) (unchanged from 25 on 2026-10-22).",
     "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -69,52 +66,52 @@
  ],
  "headlines": [
   {
-   "title": "Trump asked Musk to lift Starlink slowdown, WSJ reports",
+   "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/22/trump-musk-starlink-ukraine.html",
-   "published": "Thu, 22 Oct 2026 21:02:07"
+   "link": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html",
+   "published": "Fri, 23 Oct 2026 21:26:59"
   },
   {
-   "title": "Moderna shares plunge after cancer vaccine data leaks \u2014 despite positive results",
+   "title": "Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/22/moderna-stock-cancer-vaccine-data-leak.html",
-   "published": "Thu, 22 Oct 2026 21:52:02"
+   "link": "https://www.cnbc.com/2026/10/23/trump-mortgage-executive-order-costs.html",
+   "published": "Fri, 23 Oct 2026 22:27:06"
   },
   {
-   "title": "Trump defends Ramaswamy ad with Acton's estranged mom after bipartisan criticism",
+   "title": "Moody's holds steady on France's credit rating as country grapples with turmoil and higher yields",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/22/trump-ramaswamy-ad-acton-mother-ad.html",
-   "published": "Thu, 22 Oct 2026 20:26:48"
+   "link": "https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html",
+   "published": "Fri, 23 Oct 2026 22:49:42"
   },
   {
-   "title": "Meta\u2019s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
+   "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/22/meta-mark-zuckerberg-california-billionaire-tax.html",
-   "published": "Thu, 22 Oct 2026 22:21:08"
+   "link": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
+   "published": "Fri, 23 Oct 2026 20:06:37"
   },
   {
-   "title": "The U.S. stock market is fracturing into two camps, and it\u2019s leaving investors with a brutal case of whiplash",
+   "title": "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-u-s-stock-market-is-fracturing-into-two-camps-and-its-leaving-investors-with-a-brutal-case-of-whiplash-e8580a99?mod=mw_rss_topstories",
-   "published": "Thu, 22 Oct 2026 22:17:00"
+   "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
+   "published": "Fri, 23 Oct 2026 22:49:00"
   },
   {
-   "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here\u2019s what\u2019s going on.",
+   "title": "Will Anthropic pull off a November IPO? Time is running out to file key paperwork.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories",
-   "published": "Thu, 22 Oct 2026 22:07:00"
+   "link": "https://www.marketwatch.com/story/will-anthropic-pull-off-a-november-ipo-time-is-running-out-to-file-key-paperwork-52677343?mod=mw_rss_topstories",
+   "published": "Fri, 23 Oct 2026 22:00:00"
   },
   {
-   "title": "Americans are having fewer babies \u2014 and pampering them with luxury diapers",
+   "title": "Investors piled a record sum into a leveraged semiconductor ETF last week. Things didn\u2019t work out.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/americans-are-having-fewer-babies-and-pampering-them-with-luxury-diapers-a84222cd?mod=mw_rss_topstories",
-   "published": "Thu, 22 Oct 2026 21:28:00"
+   "link": "https://www.marketwatch.com/story/investors-piled-a-record-sum-into-a-leveraged-semiconductor-etf-last-week-things-didnt-work-out-4680b2f3?mod=mw_rss_topstories",
+   "published": "Fri, 23 Oct 2026 21:46:00"
   },
   {
-   "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+   "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/two-big-reasons-micron-and-other-chip-stocks-are-falling-on-thursday-312f1fb2?mod=mw_rss_topstories",
-   "published": "Thu, 22 Oct 2026 21:19:00"
+   "link": "https://www.marketwatch.com/story/this-hot-ai-fueled-stock-has-been-in-a-rut-it-just-beat-earnings-expectations-by-36-4a4188cb?mod=mw_rss_topstories",
+   "published": "Fri, 23 Oct 2026 21:13:00"
   }
  ],
  "summary": null,

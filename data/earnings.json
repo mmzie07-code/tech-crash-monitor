@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-23T13:24:10.800090Z",
+ "generated": "2026-10-23T22:46:08.505827Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-10-23",
-   "reported_total": 30,
+   "reported_total": 29,
    "top": [
     {
      "symbol": "AXP",
      "name": "American Express",
-     "market_cap_b": 218.5,
+     "market_cap_b": 219.6,
      "eps": null,
      "eps_estimate": 4.47,
      "surprise_pct": null,
@@ -17,6 +17,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $4.47.",
+      "Stock moved -3.7% on Oct 23.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -25,7 +26,7 @@
     {
      "symbol": "E",
      "name": "ENI S.p.A.",
-     "market_cap_b": 93.1,
+     "market_cap_b": 93.7,
      "eps": null,
      "eps_estimate": 1.92,
      "surprise_pct": null,
@@ -33,6 +34,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $1.92.",
+      "Stock moved +4.3% on Oct 23.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -41,7 +43,7 @@
     {
      "symbol": "SLB",
      "name": "SLB Limited",
-     "market_cap_b": 75.8,
+     "market_cap_b": 73.5,
      "eps": null,
      "eps_estimate": 0.62,
      "surprise_pct": null,
@@ -49,6 +51,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.62.",
+      "Stock moved +7.1% on Oct 23.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -57,7 +60,7 @@
     {
      "symbol": "INFY",
      "name": "Infosys Limited",
-     "market_cap_b": 51.7,
+     "market_cap_b": 53.6,
      "eps": null,
      "eps_estimate": 0.21,
      "surprise_pct": null,
@@ -73,7 +76,7 @@
     {
      "symbol": "FCNCA",
      "name": "First Citizens BancShares",
-     "market_cap_b": 24.2,
+     "market_cap_b": 24.8,
      "eps": null,
      "eps_estimate": 46.61,
      "surprise_pct": null,
@@ -89,7 +92,7 @@
     {
      "symbol": "RCI",
      "name": "Rogers Communication",
-     "market_cap_b": 17.5,
+     "market_cap_b": 17.9,
      "eps": null,
      "eps_estimate": 0.85,
      "surprise_pct": null,
@@ -97,6 +100,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.85.",
+      "Stock moved -2.4% on Oct 23.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -121,7 +125,7 @@
     {
      "symbol": "BAH",
      "name": "Booz Allen Hamilton Holding",
-     "market_cap_b": 9.0,
+     "market_cap_b": 9.5,
      "eps": null,
      "eps_estimate": 1.44,
      "surprise_pct": null,
@@ -137,7 +141,7 @@
     {
      "symbol": "ALV",
      "name": "Autoliv",
-     "market_cap_b": 8.5,
+     "market_cap_b": 8.7,
      "eps": null,
      "eps_estimate": 2.21,
      "surprise_pct": null,
@@ -153,7 +157,7 @@
     {
      "symbol": "BCPC",
      "name": "Balchem",
-     "market_cap_b": 5.4,
+     "market_cap_b": 5.5,
      "eps": null,
      "eps_estimate": 1.53,
      "surprise_pct": null,
