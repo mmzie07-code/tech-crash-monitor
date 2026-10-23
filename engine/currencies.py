@@ -66,9 +66,13 @@ def build_dollar100():
     return dict(generated=dt.datetime.utcnow().isoformat() + "Z", start=rows[0][0], t=t, cpi=c, source="U.S. Bureau of Labor Statistics consumer price index, via FRED (CPIAUCNS)")
 
 
+FXDIR = os.path.join(DATA, "fx")   # committed to the repo (unlike data/hist, which lives in the Actions cache), so charts survive any cache loss
+
+
 def save_fx(code, series):
     """Like history.save, but keeps 6 significant digits (rates near 1, like CAD or SGD, would turn blocky at 2 decimals)."""
-    json.dump({"t": [history.day(dd) for dd, _ in series], "c": [float("%.6g" % v) for _, v in series]}, open(os.path.join(history.HIST, "FX_" + code + ".json"), "w"), separators=(",", ":"))
+    os.makedirs(FXDIR, exist_ok=True)
+    json.dump({"t": [history.day(dd) for dd, _ in series], "c": [float("%.6g" % v) for _, v in series]}, open(os.path.join(FXDIR, "FX_" + code + ".json"), "w"), separators=(",", ":"))
 
 
 def build(fetch_history=True):

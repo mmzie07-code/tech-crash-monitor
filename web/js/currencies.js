@@ -104,7 +104,8 @@ function fxWire(d, sub) {
 async function fxCurrency(code) {
   const d = state.fx, r = d.rows.find((x) => x.code === code);
   if (!r) return `<a href="#/markets/currencies" class="small">← Currencies</a><div class="card"><p>We don't have “${esc(code)}”. <a href="#/markets/currencies/all">See every currency</a>.</p></div>`;
-  const h = r.hist ? await getHist("FX_" + code) : null;
+  let h = null;
+  if (r.hist) { try { const x = await fetch((DATA_BASE || "data/") + "fx/FX_" + code + ".json"); if (x.ok) h = await x.json(); } catch (e) {} }
   afterRender.push(() => { const box = $("#fxchart"); if (h && box) mountChart(box, h, { money: false, decimals: fxDec(r.per), lineOnly: true, noRanges: false }); });
   const k = (a, b, s) => `<div class="card"><div class="small muted">${a}</div><b>${b}</b>${s ? `<div class="small muted">${s}</div>` : ""}</div>`;
   const ytd = r.ytd, word = (v) => (v > 0 ? "more" : "less");
