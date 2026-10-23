@@ -19,7 +19,7 @@ function miniRadar(axes, size) {
 }
 
 function anBars(vals, labels, money) {
-  const W = 300, H = 150, top = 22, bot = 24, n = vals.length, nn = vals.filter((v) => v != null);
+  const W = 300, H = 150, top = 22, n = vals.length, nn = vals.filter((v) => v != null), bot = nn.some((v) => v < 0) ? 40 : 24;   // negative bars carry their label underneath, so leave room above the year labels
   if (!nn.length) return `<p class="muted small">No data.</p>`;
   const lo = Math.min(0, ...nn), hi = Math.max(0, ...nn), y = (v) => top + ((hi - v) / (hi - lo || 1)) * (H - top - bot), slot = W / n, bw = slot * 0.56;
   const f = (v) => (money ? fM(v) : v.toLocaleString());
