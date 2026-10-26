@@ -1,42 +1,40 @@
 {
- "date": "2026-10-23",
- "generated": "2026-10-23T22:52:30.787089Z",
- "headline": "US stocks finished lower. The S&P 500 fell 0.52%, with 3 of 11 sectors up.",
+ "date": "2026-10-26",
+ "generated": "2026-10-26T22:53:31.348448Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.70%, with 7 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.52% today, -1.04% this month, +11.16% this year",
-    "Dow Jones: -1.23% today, +1.68% this month, +7.92% this year",
-    "Nasdaq Composite: -0.21% today, -3.65% this month, +11.70% this year",
-    "Russell 2000: -0.29% today, -2.10% this month, +10.67% this year"
+    "S&P 500: +0.70% today, -0.86% this month, +11.93% this year",
+    "Dow Jones: +0.28% today, +1.03% this month, +8.22% this year",
+    "Nasdaq Composite: +0.82% today, -3.32% this month, +12.63% this year",
+    "Russell 2000: +0.38% today, -1.80% this month, +11.09% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Energy +2.60%, Technology +0.49%, Real Estate +0.12%",
-    "Lagging: Consumer Staples -1.92%, Communication -1.78%, Consumer Discretionary -1.66%",
-    "3 of 11 sectors rose."
+    "Leading: Technology +1.69%, Industrials +1.42%, Consumer Discretionary +1.03%",
+    "Lagging: Communication -1.57%, Consumer Staples -0.34%, Utilities -0.02%",
+    "7 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 19.45 (+2.21% today)",
-    "10-year Treasury yield: 4.99% (+0.03 pts today)",
-    "US dollar index: 101.75 (+0.14% today)",
-    "Crude oil: 103.44 (+3.99% today)",
-    "Gold: 4,010.00 (-1.24% today)",
-    "Bitcoin: 81,275.92 (-0.04% today)"
+    "VIX (fear gauge): 18.39 (-5.45% today)",
+    "10-year Treasury yield: 4.99% (-0.00 pts today)",
+    "US dollar index: 102.00 (+0.19% today)",
+    "Crude oil: 101.25 (-1.96% today)",
+    "Gold: 4,031.00 (+0.58% today)",
+    "Bitcoin: 79,948.83 (-0.09% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +3.99% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "Gold moved -1.24%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 4.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -49,69 +47,62 @@
    ]
   },
   {
-   "title": "Just happened",
-   "bullets": [
-    "Tesla, Inc.: Tesla, Inc. reported earnings: missed estimates.",
-    "Meta Platforms: Meta Platforms reported earnings: beat estimates."
-   ]
-  },
-  {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 25 out of 100 (Danger; higher is better) (unchanged from 25 on 2026-10-22).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Market health score 50 out of 100 (Warning; higher is better) (+25 from 25 on 2026-10-23).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
+   "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html",
-   "published": "Fri, 23 Oct 2026 21:26:59"
+   "link": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+   "published": "Mon, 26 Oct 2026 20:44:50"
   },
   {
-   "title": "Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers",
+   "title": "DOJ charges ex-FBI Director James Comey in new case",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/23/trump-mortgage-executive-order-costs.html",
-   "published": "Fri, 23 Oct 2026 22:27:06"
+   "link": "https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html",
+   "published": "Mon, 26 Oct 2026 22:24:36"
   },
   {
-   "title": "Moody's holds steady on France's credit rating as country grapples with turmoil and higher yields",
+   "title": "The arc of Trump: How the president lost the coalition that put him in the White House",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html",
-   "published": "Fri, 23 Oct 2026 22:49:42"
+   "link": "https://www.cnbc.com/2026/10/26/trump-approval-midterms-cnbc-survey.html",
+   "published": "Mon, 26 Oct 2026 17:36:55"
   },
   {
-   "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
+   "title": "JetBlue posts bigger loss on fuel costs, but CEO says margins improving",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html",
-   "published": "Fri, 23 Oct 2026 20:06:37"
+   "link": "https://www.cnbc.com/2026/10/26/jetblue-jblu-3q-2026-earnings.html",
+   "published": "Mon, 26 Oct 2026 21:18:07"
   },
   {
-   "title": "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?",
+   "title": "\u2018You need only watch episodes of Judge Judy\u2019: I\u2019m in my 70s. Why do people keep making the same avoidable financial mistakes?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
-   "published": "Fri, 23 Oct 2026 22:49:00"
+   "link": "https://www.marketwatch.com/story/you-need-only-watch-episodes-of-judge-judy-im-in-my-70s-why-do-people-keep-making-the-same-avoidable-financial-mistakes-bbf60fe4?mod=mw_rss_topstories",
+   "published": "Mon, 26 Oct 2026 22:30:00"
   },
   {
-   "title": "Will Anthropic pull off a November IPO? Time is running out to file key paperwork.",
+   "title": "Dividend stocks are having an excellent October as tech sector struggles",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/will-anthropic-pull-off-a-november-ipo-time-is-running-out-to-file-key-paperwork-52677343?mod=mw_rss_topstories",
-   "published": "Fri, 23 Oct 2026 22:00:00"
+   "link": "https://www.marketwatch.com/story/dividend-stocks-are-having-an-excellent-october-as-tech-sector-struggles-5ae40b02?mod=mw_rss_topstories",
+   "published": "Mon, 26 Oct 2026 22:10:00"
   },
   {
-   "title": "Investors piled a record sum into a leveraged semiconductor ETF last week. Things didn\u2019t work out.",
+   "title": "Options traders are seizing control of the S&P 500",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/investors-piled-a-record-sum-into-a-leveraged-semiconductor-etf-last-week-things-didnt-work-out-4680b2f3?mod=mw_rss_topstories",
-   "published": "Fri, 23 Oct 2026 21:46:00"
+   "link": "https://www.marketwatch.com/story/options-traders-are-seizing-control-of-the-s-p-500-1add94ca?mod=mw_rss_topstories",
+   "published": "Mon, 26 Oct 2026 22:03:00"
   },
   {
-   "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
+   "title": "TikTok parent ByteDance\u2019s chatbot is now giving travel-booking sites a run for their money. And yours.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-hot-ai-fueled-stock-has-been-in-a-rut-it-just-beat-earnings-expectations-by-36-4a4188cb?mod=mw_rss_topstories",
-   "published": "Fri, 23 Oct 2026 21:13:00"
+   "link": "https://www.marketwatch.com/story/tiktok-parent-bytedances-chatbot-is-now-giving-travel-booking-sites-a-run-for-their-money-and-yours-028e4aa0?mod=mw_rss_topstories",
+   "published": "Mon, 26 Oct 2026 22:00:00"
   }
  ],
  "summary": null,

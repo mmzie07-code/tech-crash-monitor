@@ -1,12 +1,12 @@
 {
- "date": "2026-10-23",
- "generated": "2026-10-23T21:59:13.070482Z",
- "level": "Severe",
- "health": 25,
- "score": 75,
+ "date": "2026-10-26",
+ "generated": "2026-10-26T22:02:22.725259Z",
+ "level": "High",
+ "health": 50,
+ "score": 50,
  "stretch": 33,
- "trigger": 83,
- "warnings": 5,
+ "trigger": 50,
+ "warnings": 4,
  "evaluated": 9,
  "total": 10,
  "checks": [
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 27.0,
+   "value": 27.3,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 27.0; price is 4.0% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 27.3; price is 5.1% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -2.0,
+   "value": -1.7,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -2.0% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -1.7% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.38,
+   "value": 0.36,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.99%, +0.38 pts over 3 months.",
+   "detail": "10Y yield 4.99%, +0.36 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 19.5,
+   "value": 18.4,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 19.5 is 1.23x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 18.4 is 1.15x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -7.3,
+   "value": -6.2,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -7.3% from 1y high; below 50-day, above 200-day avg.",
+   "detail": "QQQ -6.2% from 1y high; below 50-day, above 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 2.28,
+   "value": 2.3,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1769M in 90 days vs $777M per-90d baseline (2.28x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1767M in 90 days vs $770M per-90d baseline (2.30x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -122,21 +122,17 @@
    "id": 10,
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
-   "status": "warn",
-   "value": -6.4,
+   "status": "ok",
+   "value": -3.8,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -12.6% over 10 days (-6.4 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -8.4% over 10 days (-3.8 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 704.4,
+ "qqq_last": 712.2,
  "qqq_series": [
-  [
-   "2025-10-27",
-   628.09
-  ],
   [
    "2025-10-28",
    632.92
@@ -1132,6 +1128,10 @@
   [
    "2026-10-23",
    704.4
+  ],
+  [
+   "2026-10-26",
+   712.2
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns."

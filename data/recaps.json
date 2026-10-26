@@ -1,7 +1,27 @@
 {
- "generated": "2026-10-26T15:07:13.171283Z",
+ "generated": "2026-10-26T22:48:56.601010Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-26-treasury-treasury-auction-2-year-note",
+   "date": "2026-10-26",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 2-Year Note",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day ('auctionDate')."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/upcoming/",
+   "lesson": 3
+  },
   {
    "id": "2026-10-22-treasury-treasury-auction-5-year-note",
    "date": "2026-10-22",
