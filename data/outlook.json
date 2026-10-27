@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T13:36:18.148390Z",
+ "generated": "2026-10-27T22:51:03.233435Z",
  "as_of": "2026-10-27",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,13 +35,13 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.8% below it).",
-    "VIX at 18.4: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
     "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
    ],
    "events": [
     {
@@ -125,19 +125,25 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.8% below it).",
-    "VIX at 18.4: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
     "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
    ],
    "events": [
     {
      "date": "2026-10-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "After close",
+     "title": "Microsoft (MSFT) reports earnings",
      "importance": "high"
     },
     {
@@ -150,12 +156,6 @@
      "date": "2026-10-28",
      "time": "After close",
      "title": "Alphabet (GOOGL) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-28",
-     "time": "After close",
-     "title": "Microsoft (MSFT) reports earnings",
      "importance": "high"
     },
     {
@@ -221,13 +221,13 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.8% below it).",
-    "VIX at 18.4: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
     "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -288,6 +288,12 @@
     {
      "date": "2026-10-28",
      "time": "After close",
+     "title": "Microsoft (MSFT) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "After close",
      "title": "Alphabet (GOOG) reports earnings",
      "importance": "high"
     },
@@ -295,12 +301,6 @@
      "date": "2026-10-28",
      "time": "After close",
      "title": "Alphabet (GOOGL) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-28",
-     "time": "After close",
-     "title": "Microsoft (MSFT) reports earnings",
      "importance": "high"
     }
    ]
@@ -336,13 +336,13 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.8% below it).",
-    "VIX at 18.4: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
     "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -361,6 +361,12 @@
     {
      "date": "2026-10-28",
      "time": "After close",
+     "title": "Microsoft (MSFT) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "After close",
      "title": "Alphabet (GOOG) reports earnings",
      "importance": "high"
     },
@@ -368,12 +374,6 @@
      "date": "2026-10-28",
      "time": "After close",
      "title": "Alphabet (GOOGL) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-28",
-     "time": "After close",
-     "title": "Microsoft (MSFT) reports earnings",
      "importance": "high"
     },
     {
@@ -451,14 +451,14 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.8% below it).",
-    "VIX at 18.4: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 27.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 27.6, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
     "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [

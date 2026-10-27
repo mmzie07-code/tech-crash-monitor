@@ -1,7 +1,47 @@
 {
- "generated": "2026-10-27T13:36:18.208155Z",
+ "generated": "2026-10-27T22:51:03.283033Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-27-earnings-visa-v-reports-earnings",
+   "date": "2026-10-27",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Visa (V) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-27-treasury-treasury-auction-5-year-note",
+   "date": "2026-10-27",
+   "time": "1:00 PM",
+   "kind": "treasury",
+   "title": "Treasury auction: 5-Year Note",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day ('auctionDate')."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.treasurydirect.gov/auctions/upcoming/",
+   "lesson": 3
+  },
   {
    "id": "2026-10-26-treasury-treasury-auction-2-year-note",
    "date": "2026-10-26",

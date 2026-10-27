@@ -1,40 +1,40 @@
 {
- "date": "2026-10-26",
- "generated": "2026-10-26T22:53:31.348448Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.70%, with 7 of 11 sectors up.",
+ "date": "2026-10-27",
+ "generated": "2026-10-27T22:55:46.076738Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.60%, with 5 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.70% today, -0.86% this month, +11.93% this year",
-    "Dow Jones: +0.28% today, +1.03% this month, +8.22% this year",
-    "Nasdaq Composite: +0.82% today, -3.32% this month, +12.63% this year",
-    "Russell 2000: +0.38% today, -1.80% this month, +11.09% this year"
+    "S&P 500: +0.60% today, +0.51% this month, +12.60% this year",
+    "Dow Jones: +0.03% today, +1.74% this month, +8.26% this year",
+    "Nasdaq Composite: +1.18% today, -1.28% this month, +13.95% this year",
+    "Russell 2000: +1.16% today, +0.03% this month, +12.39% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +1.69%, Industrials +1.42%, Consumer Discretionary +1.03%",
-    "Lagging: Communication -1.57%, Consumer Staples -0.34%, Utilities -0.02%",
-    "7 of 11 sectors rose."
+    "Leading: Technology +1.70%, Consumer Discretionary +1.04%, Materials +0.78%",
+    "Lagging: Energy -2.05%, Consumer Staples -0.92%, Real Estate -0.84%",
+    "5 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 18.39 (-5.45% today)",
-    "10-year Treasury yield: 4.99% (-0.00 pts today)",
-    "US dollar index: 102.00 (+0.19% today)",
-    "Crude oil: 101.25 (-1.96% today)",
-    "Gold: 4,031.00 (+0.58% today)",
-    "Bitcoin: 79,948.83 (-0.09% today)"
+    "VIX (fear gauge): 17.52 (-4.73% today)",
+    "10-year Treasury yield: 4.99% (+0.01 pts today)",
+    "US dollar index: 102.36 (+0.39% today)",
+    "Crude oil: 100.20 (-1.53% today)",
+    "Gold: 4,073.10 (+0.86% today)",
+    "Bitcoin: 80,834.39 (+1.03% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "A 3.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -42,67 +42,67 @@
    "bullets": [
     "Tue Oct 27, After close: Visa (V) reports earnings",
     "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Wed Oct 28, After close: Alphabet (GOOG) reports earnings",
-    "Wed Oct 28, After close: Alphabet (GOOGL) reports earnings"
+    "Wed Oct 28, After close: Microsoft (MSFT) reports earnings",
+    "Wed Oct 28, After close: Alphabet (GOOG) reports earnings"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 50 out of 100 (Warning; higher is better) (+25 from 25 on 2026-10-23).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling.",
+    "Market health score 62 out of 100 (Caution; higher is better) (+12 from 50 on 2026-10-26).",
+    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
+   "title": "Early third-quarter earnings show a 'resilient' U.S. consumer, with signs of strain",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
-   "published": "Mon, 26 Oct 2026 20:44:50"
+   "link": "https://www.cnbc.com/2026/10/27/q3-earnings-resilient-consumer.html",
+   "published": "Tue, 27 Oct 2026 21:12:55"
   },
   {
-   "title": "DOJ charges ex-FBI Director James Comey in new case",
+   "title": "Speaker Mike Johnson calls election-transfer concerns \u2018absurd\u2019",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/26/james-comey-indictment-national-defense-doj-trump.html",
-   "published": "Mon, 26 Oct 2026 22:24:36"
+   "link": "https://www.cnbc.com/2026/10/27/speaker-johnson-peaceful-transfer-midterms.html",
+   "published": "Tue, 27 Oct 2026 22:35:25"
   },
   {
-   "title": "The arc of Trump: How the president lost the coalition that put him in the White House",
+   "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/26/trump-approval-midterms-cnbc-survey.html",
-   "published": "Mon, 26 Oct 2026 17:36:55"
+   "link": "https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html",
+   "published": "Tue, 27 Oct 2026 18:57:45"
   },
   {
-   "title": "JetBlue posts bigger loss on fuel costs, but CEO says margins improving",
+   "title": "Trump administration may let more Russian diesel onto market, energy secretary tells CNBC",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/26/jetblue-jblu-3q-2026-earnings.html",
-   "published": "Mon, 26 Oct 2026 21:18:07"
+   "link": "https://www.cnbc.com/2026/10/27/trump-putin-zelenskyy-russia-ukraine-diesel.html",
+   "published": "Tue, 27 Oct 2026 22:18:59"
   },
   {
-   "title": "\u2018You need only watch episodes of Judge Judy\u2019: I\u2019m in my 70s. Why do people keep making the same avoidable financial mistakes?",
+   "title": "Retail traders buy the dip on chip stocks \u2014 but Robinhood gets burned by the crypto market",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/you-need-only-watch-episodes-of-judge-judy-im-in-my-70s-why-do-people-keep-making-the-same-avoidable-financial-mistakes-bbf60fe4?mod=mw_rss_topstories",
-   "published": "Mon, 26 Oct 2026 22:30:00"
+   "link": "https://www.marketwatch.com/story/retail-traders-buy-the-dip-on-chip-stocks-but-robinhood-gets-burned-by-the-crypto-market-33cea913?mod=mw_rss_topstories",
+   "published": "Tue, 27 Oct 2026 22:51:00"
   },
   {
-   "title": "Dividend stocks are having an excellent October as tech sector struggles",
+   "title": "\u2018She\u2019s living the dream\u2019: My stepmother said I can buy my childhood home for $850,000. Is she taking advantage of me?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/dividend-stocks-are-having-an-excellent-october-as-tech-sector-struggles-5ae40b02?mod=mw_rss_topstories",
-   "published": "Mon, 26 Oct 2026 22:10:00"
+   "link": "https://www.marketwatch.com/story/shes-living-the-dream-my-stepmother-said-i-can-buy-my-childhood-home-for-850-000-is-she-taking-advantage-of-me-1fdda7b5?mod=mw_rss_topstories",
+   "published": "Tue, 27 Oct 2026 22:18:00"
   },
   {
-   "title": "Options traders are seizing control of the S&P 500",
+   "title": "CoreWeave and other AI stocks rise as Anthropic restores the market\u2019s faith in sustained spending",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/options-traders-are-seizing-control-of-the-s-p-500-1add94ca?mod=mw_rss_topstories",
-   "published": "Mon, 26 Oct 2026 22:03:00"
+   "link": "https://www.marketwatch.com/story/coreweave-and-other-ai-stocks-rise-as-anthropic-restores-the-markets-faith-in-sustained-spending-c71d7186?mod=mw_rss_topstories",
+   "published": "Tue, 27 Oct 2026 21:41:00"
   },
   {
-   "title": "TikTok parent ByteDance\u2019s chatbot is now giving travel-booking sites a run for their money. And yours.",
+   "title": "As Trump touts energy companies\u2019 fortunes, U.S. consumers face the most expensive year for gas prices ever",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/tiktok-parent-bytedances-chatbot-is-now-giving-travel-booking-sites-a-run-for-their-money-and-yours-028e4aa0?mod=mw_rss_topstories",
-   "published": "Mon, 26 Oct 2026 22:00:00"
+   "link": "https://www.marketwatch.com/story/as-trump-touts-energy-companies-fortunes-u-s-consumers-face-the-most-expensive-year-for-gas-prices-ever-c467268c?mod=mw_rss_topstories",
+   "published": "Tue, 27 Oct 2026 21:29:00"
   }
  ],
  "summary": null,
