@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-27T22:51:03.233435Z",
- "as_of": "2026-10-27",
+ "generated": "2026-10-28T13:41:43.224247Z",
+ "as_of": "2026-10-28",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10335,
+    "n": 10336,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,97 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2571,
-    "up": 53,
-    "median": 0.0,
-    "p10": -1.0,
-    "p25": -0.4,
-    "p75": 0.5,
-    "p90": 1.0,
-    "below": 10,
-    "above": 11,
-    "worst": -4.1,
-    "best": 2.9
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-10-27",
-     "time": "After close",
-     "title": "Visa (V) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Coca-Cola Company (The) (KO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Time TBA",
-     "title": "HSBC Holdings (HSBC) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Novartis AG (NVS) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Boeing Company (The) (BA) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "After close",
-     "title": "Seagate Technology Holdings PLC (STX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "S&P Global (SPGI) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Corning Incorporated (GLW) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10335,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 2571,
+    "n": 2572,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -190,12 +100,114 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10336,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 2572,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (1.2% below it).",
+    "VIX at 17.5: investors are relatively calm.",
+    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
+   ],
+   "bear": [
+    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-10-29",
+     "time": "8:30 AM",
+     "title": "GDP advance estimate: first look at economic growth",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "After close",
+     "title": "Amazon.com (AMZN) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Eli Lilly and Company (LLY) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Mastercard Incorporated (MA) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "After close",
+     "title": "Intel (INTC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Merck & Company (MRK) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Caterpillar (CAT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Shell PLC (SHEL) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "Before open",
+     "title": "Linde (LIN) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10331,
+    "n": 10332,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -208,7 +220,7 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2567,
+    "n": 2568,
     "up": 57,
     "median": 0.3,
     "p10": -2.2,
@@ -232,54 +244,6 @@
    ],
    "events": [
     {
-     "date": "2026-10-27",
-     "time": "After close",
-     "title": "Visa (V) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Coca-Cola Company (The) (KO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Time TBA",
-     "title": "HSBC Holdings (HSBC) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Novartis AG (NVS) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Boeing Company (The) (BA) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "After close",
-     "title": "Seagate Technology Holdings PLC (STX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "S&P Global (SPGI) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-27",
-     "time": "Before open",
-     "title": "Corning Incorporated (GLW) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-10-28",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
@@ -302,6 +266,54 @@
      "time": "After close",
      "title": "Alphabet (GOOGL) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "Before open",
+     "title": "GE Vernova (GEV) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "After close",
+     "title": "KLA Corporation (KLAC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "Before open",
+     "title": "Banco Santander, S.A. (SAN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "Before open",
+     "title": "Amphenol (APH) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-28",
+     "time": "After close",
+     "title": "ServiceNow (NOW) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "8:30 AM",
+     "title": "GDP advance estimate: first look at economic growth",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
+    },
+    {
+     "date": "2026-10-29",
+     "time": "After close",
+     "title": "Amazon.com (AMZN) reports earnings",
+     "importance": "high"
     }
    ]
   },
@@ -310,7 +322,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10315,
+    "n": 10316,
     "up": 64,
     "median": 1.3,
     "p10": -4.4,
@@ -323,7 +335,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2552,
+    "n": 2553,
     "up": 64,
     "median": 1.1,
     "p10": -4.1,
@@ -346,12 +358,6 @@
     "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-10-27",
-     "time": "After close",
-     "title": "Visa (V) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-10-28",
      "time": "2:00 PM",
@@ -417,6 +423,12 @@
      "time": "Before open",
      "title": "AbbVie (ABBV) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Apple (AAPL) reports earnings",
+     "importance": "high"
     }
    ]
   },
@@ -425,7 +437,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10084,
+    "n": 10085,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -438,11 +450,11 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2393,
+    "n": 2394,
     "up": 85,
     "median": 10.7,
     "p10": -7.5,
-    "p25": 4.3,
+    "p25": 4.4,
     "p75": 19.4,
     "p90": 27.0,
     "below": 6,
