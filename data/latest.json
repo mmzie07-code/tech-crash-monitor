@@ -1,12 +1,12 @@
 {
- "date": "2026-10-27",
- "generated": "2026-10-27T22:04:18.008717Z",
+ "date": "2026-10-28",
+ "generated": "2026-10-28T22:09:51.041517Z",
  "level": "Elevated",
- "health": 62,
- "score": 38,
+ "health": 75,
+ "score": 25,
  "stretch": 33,
- "trigger": 33,
- "warnings": 3,
+ "trigger": 17,
+ "warnings": 2,
  "evaluated": 9,
  "total": 10,
  "checks": [
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 27.6,
+   "value": 27.8,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 27.6; price is 6.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 27.8; price is 6.9% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -1.3,
+   "value": -0.7,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -1.3% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -0.7% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -39,9 +39,9 @@
    "name": "AI capex vs revenue gap",
    "group": "stretch",
    "status": "warn",
-   "value": 54.6,
+   "value": 58.5,
    "threshold": "capex growth exceeds revenue growth by > 25 pts (unvalidated)",
-   "detail": "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%. As of 2026-09-30.",
+   "detail": "MSFT+GOOGL+AMZN+META capex $546B TTM (+78% YoY, 30% of revenue) vs revenue +20%. As of 2026-09-30.",
    "source": "SEC EDGAR XBRL",
    "proxy": false,
    "weight": 1
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.33,
+   "value": 0.3,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.99%, +0.33 pts over 3 months.",
+   "detail": "10Y yield 5.05%, +0.30 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -75,9 +75,9 @@
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
    "status": "ok",
-   "value": -1.5,
+   "value": -1.2,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -1.5% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -1.2% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 17.5,
+   "value": 16.9,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 17.5 is 1.10x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 16.9 is 1.05x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -98,10 +98,10 @@
    "id": 8,
    "name": "Trend breakdown",
    "group": "trigger",
-   "status": "warn",
-   "value": -5.1,
+   "status": "ok",
+   "value": -4.5,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -5.1% from 1y high; below 50-day, above 200-day avg.",
+   "detail": "QQQ -4.5% from 1y high; above 50-day, above 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 2.3,
+   "value": 2.28,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1767M in 90 days vs $768M per-90d baseline (2.30x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1760M in 90 days vs $770M per-90d baseline (2.28x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -123,20 +123,16 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "ok",
-   "value": -2.1,
+   "value": 1.0,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -5.1% over 10 days (-2.1 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH +0.5% over 10 days (+1.0 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 721.25,
+ "qqq_last": 725.61,
  "qqq_series": [
-  [
-   "2025-10-29",
-   635.77
-  ],
   [
    "2025-10-30",
    626.05
@@ -1132,6 +1128,10 @@
   [
    "2026-10-27",
    721.25
+  ],
+  [
+   "2026-10-28",
+   725.61
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns."

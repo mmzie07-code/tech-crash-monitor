@@ -1,108 +1,116 @@
 {
- "date": "2026-10-27",
- "generated": "2026-10-27T22:55:46.076738Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.60%, with 5 of 11 sectors up.",
+ "date": "2026-10-28",
+ "generated": "2026-10-28T23:02:37.743352Z",
+ "headline": "US stocks finished little changed. The S&P 500 rose 0.28%, with 6 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.60% today, +0.51% this month, +12.60% this year",
-    "Dow Jones: +0.03% today, +1.74% this month, +8.26% this year",
-    "Nasdaq Composite: +1.18% today, -1.28% this month, +13.95% this year",
-    "Russell 2000: +1.16% today, +0.03% this month, +12.39% this year"
+    "S&P 500: +0.28% today, +0.95% this month, +12.91% this year",
+    "Dow Jones: +0.19% today, +2.19% this month, +8.46% this year",
+    "Nasdaq Composite: +0.27% today, -0.92% this month, +14.26% this year",
+    "Russell 2000: +0.41% today, +0.80% this month, +12.85% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +1.70%, Consumer Discretionary +1.04%, Materials +0.78%",
-    "Lagging: Energy -2.05%, Consumer Staples -0.92%, Real Estate -0.84%",
-    "5 of 11 sectors rose."
+    "Leading: Technology +0.80%, Financials +0.45%, Energy +0.35%",
+    "Lagging: Utilities -0.84%, Real Estate -0.73%, Communication -0.42%",
+    "6 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 17.52 (-4.73% today)",
-    "10-year Treasury yield: 4.99% (+0.01 pts today)",
-    "US dollar index: 102.36 (+0.39% today)",
-    "Crude oil: 100.20 (-1.53% today)",
-    "Gold: 4,073.10 (+0.86% today)",
-    "Bitcoin: 80,834.39 (+1.03% today)"
+    "VIX (fear gauge): 16.91 (-3.48% today)",
+    "10-year Treasury yield: 5.05% (+0.05 pts today)",
+    "US dollar index: 102.13 (-0.19% today)",
+    "Crude oil: 101.94 (+2.04% today)",
+    "Gold: 4,081.20 (+0.16% today)",
+    "Bitcoin: 81,188.44 (+0.47% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "A 3.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil +2.04% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "The 10-year yield moved +0.05 points to 5.05%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Tue Oct 27, After close: Visa (V) reports earnings",
     "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
     "Wed Oct 28, After close: Microsoft (MSFT) reports earnings",
-    "Wed Oct 28, After close: Alphabet (GOOG) reports earnings"
+    "Wed Oct 28, After close: Alphabet (GOOG) reports earnings",
+    "Wed Oct 28, After close: Alphabet (GOOGL) reports earnings"
+   ]
+  },
+  {
+   "title": "Just happened",
+   "bullets": [
+    "Fed interest-rate decision: The Fed held interest rates.",
+    "Visa: Visa reported earnings: beat estimates."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 62 out of 100 (Caution; higher is better) (+12 from 50 on 2026-10-26).",
-    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling.",
+    "Market health score 75 out of 100 (Caution; higher is better) (+13 from 62 on 2026-10-27).",
+    "Warning signs flashing: AI capex vs revenue gap; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Early third-quarter earnings show a 'resilient' U.S. consumer, with signs of strain",
+   "title": "Alphabet sinks 10% as it holds 2026 capex unchanged, expects significant increase in 2027",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/27/q3-earnings-resilient-consumer.html",
-   "published": "Tue, 27 Oct 2026 21:12:55"
+   "link": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html",
+   "published": "Wed, 28 Oct 2026 22:07:17"
   },
   {
-   "title": "Speaker Mike Johnson calls election-transfer concerns \u2018absurd\u2019",
+   "title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/27/speaker-johnson-peaceful-transfer-midterms.html",
-   "published": "Tue, 27 Oct 2026 22:35:25"
+   "link": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html",
+   "published": "Wed, 28 Oct 2026 22:34:56"
   },
   {
-   "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
+   "title": "Here are five key takeaways from the Fed rate decision and Warsh news conference",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/27/amazon-ai-coding-tokenmaxxing.html",
-   "published": "Tue, 27 Oct 2026 18:57:45"
+   "link": "https://www.cnbc.com/2026/10/28/fed-rate-decision-warsh-takeaways.html",
+   "published": "Wed, 28 Oct 2026 21:31:46"
   },
   {
-   "title": "Trump administration may let more Russian diesel onto market, energy secretary tells CNBC",
+   "title": "Hands-on with Apple's first touchscreen laptop: Touch is totally optional",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/27/trump-putin-zelenskyy-russia-ukraine-diesel.html",
-   "published": "Tue, 27 Oct 2026 22:18:59"
+   "link": "https://www.cnbc.com/2026/10/28/apple-touchscreen-macbook-pro-hands-on.html",
+   "published": "Wed, 28 Oct 2026 22:38:41"
   },
   {
-   "title": "Retail traders buy the dip on chip stocks \u2014 but Robinhood gets burned by the crypto market",
+   "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/retail-traders-buy-the-dip-on-chip-stocks-but-robinhood-gets-burned-by-the-crypto-market-33cea913?mod=mw_rss_topstories",
-   "published": "Tue, 27 Oct 2026 22:51:00"
+   "link": "https://www.marketwatch.com/story/is-it-curtains-for-cola-saving-social-security-could-mean-changing-the-cost-of-living-adjustment-867c6bd8?mod=mw_rss_topstories",
+   "published": "Wed, 28 Oct 2026 22:41:00"
   },
   {
-   "title": "\u2018She\u2019s living the dream\u2019: My stepmother said I can buy my childhood home for $850,000. Is she taking advantage of me?",
+   "title": "Chipotle now has more demand from lower-income diners than higher-income ones",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/shes-living-the-dream-my-stepmother-said-i-can-buy-my-childhood-home-for-850-000-is-she-taking-advantage-of-me-1fdda7b5?mod=mw_rss_topstories",
-   "published": "Tue, 27 Oct 2026 22:18:00"
+   "link": "https://www.marketwatch.com/story/chipotle-expects-modestly-higher-sales-this-year-as-drive-thru-chipotlanes-come-to-more-stores-4f255bbc?mod=mw_rss_topstories",
+   "published": "Wed, 28 Oct 2026 22:25:00"
   },
   {
-   "title": "CoreWeave and other AI stocks rise as Anthropic restores the market\u2019s faith in sustained spending",
+   "title": "Lumentum\u2019s stock pops as investors cheer a possible sale to Marvell",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/coreweave-and-other-ai-stocks-rise-as-anthropic-restores-the-markets-faith-in-sustained-spending-c71d7186?mod=mw_rss_topstories",
-   "published": "Tue, 27 Oct 2026 21:41:00"
+   "link": "https://www.marketwatch.com/story/lumentums-stock-pops-as-investors-cheer-a-possible-sale-to-marvell-07c1d0e8?mod=mw_rss_topstories",
+   "published": "Wed, 28 Oct 2026 22:08:00"
   },
   {
-   "title": "As Trump touts energy companies\u2019 fortunes, U.S. consumers face the most expensive year for gas prices ever",
+   "title": "We stopped helping our neighbors with free home repairs and our friendship cooled. Who\u2019s to blame?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/as-trump-touts-energy-companies-fortunes-u-s-consumers-face-the-most-expensive-year-for-gas-prices-ever-c467268c?mod=mw_rss_topstories",
-   "published": "Tue, 27 Oct 2026 21:29:00"
+   "link": "https://www.marketwatch.com/story/we-stopped-helping-our-neighbors-with-free-home-repairs-and-our-friendship-cooled-whos-to-blame-d20b0720?mod=mw_rss_topstories",
+   "published": "Wed, 28 Oct 2026 22:00:00"
   }
  ],
  "summary": null,

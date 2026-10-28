@@ -152,5 +152,13 @@
   "stretch": 33,
   "trigger": 33,
   "level": "Elevated"
+ },
+ {
+  "date": "2026-10-28",
+  "score": 25,
+  "health": 75,
+  "stretch": 33,
+  "trigger": 17,
+  "level": "Elevated"
  }
 ]

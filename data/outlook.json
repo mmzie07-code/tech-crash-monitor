@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T13:41:43.224247Z",
+ "generated": "2026-10-28T22:57:42.814698Z",
  "as_of": "2026-10-28",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,13 +35,14 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.0% below it).",
+    "VIX at 16.9: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); health score 75 out of 100."
    ],
    "events": [
     {
@@ -83,13 +84,13 @@
     {
      "date": "2026-10-28",
      "time": "Before open",
-     "title": "Banco Santander, S.A. (SAN) reports earnings",
+     "title": "Amphenol (APH) reports earnings",
      "importance": "medium"
     },
     {
      "date": "2026-10-28",
      "time": "Before open",
-     "title": "Amphenol (APH) reports earnings",
+     "title": "Banco Santander, S.A. (SAN) reports earnings",
      "importance": "medium"
     },
     {
@@ -131,13 +132,14 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.0% below it).",
+    "VIX at 16.9: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); health score 75 out of 100."
    ],
    "events": [
     {
@@ -233,14 +235,15 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.0% below it).",
+    "VIX at 16.9: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); health score 75 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $546B TTM (+78% YoY, 30% of revenue) vs revenue +20%."
    ],
    "events": [
     {
@@ -282,13 +285,13 @@
     {
      "date": "2026-10-28",
      "time": "Before open",
-     "title": "Banco Santander, S.A. (SAN) reports earnings",
+     "title": "Amphenol (APH) reports earnings",
      "importance": "medium"
     },
     {
      "date": "2026-10-28",
      "time": "Before open",
-     "title": "Amphenol (APH) reports earnings",
+     "title": "Banco Santander, S.A. (SAN) reports earnings",
      "importance": "medium"
     },
     {
@@ -348,14 +351,15 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.0% below it).",
+    "VIX at 16.9: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); health score 75 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $546B TTM (+78% YoY, 30% of revenue) vs revenue +20%."
    ],
    "events": [
     {
@@ -463,15 +467,16 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.2% below it).",
-    "VIX at 17.5: investors are relatively calm.",
+    "S&P 500 is close to its 1-year high (1.0% below it).",
+    "VIX at 16.9: investors are relatively calm.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 27.6, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 27.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is high at 4.99%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100.",
-    "MSFT+GOOGL+AMZN+META capex $526B TTM (+74% YoY, 29% of revenue) vs revenue +20%."
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 2 warning sign(s) flashing (AI capex vs revenue gap; Insider selling); health score 75 out of 100.",
+    "MSFT+GOOGL+AMZN+META capex $546B TTM (+78% YoY, 30% of revenue) vs revenue +20%."
    ],
    "events": [
     {
