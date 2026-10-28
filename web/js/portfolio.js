@@ -73,6 +73,16 @@ function pfCompute(events, H) {
   return { days, syms, order, pos: hold, total, cost: costArr, groups, twr, mkt, irr: pfXirr(flows), events, L, hasHist: (s) => !!H[s] };
 }
 
+// What the same money would be worth if every purchase (and sale) had gone into the S&P 500 instead, on the same days.
+function pfBench(R) {
+  if (R.bench) return R.bench;
+  const flow = new Array(R.days.length).fill(0);
+  R.events.forEach((e) => { let i = R.days.findIndex((d) => d >= e.day); if (i < 0) return; flow[i] += e.side === "buy" ? e.sh * e.px : -e.sh * e.px; });
+  const out = []; let prev = 0;
+  for (let i = 0; i < R.days.length; i++) { const g = i ? R.mkt[i] / R.mkt[i - 1] : 1; prev = Math.max(0, prev * g + flow[i]); out.push(prev); }
+  return (R.bench = out);
+}
+
 // ---- small views ----
 const pfName = (s) => { const q = (typeof Q === "function" && Q()[s]) || null, r = state.search && state.search.stocks.find((x) => x[0] === s); return (q && q.name) || (r && r[1]) || s; };
 const pfSector = (s) => { const r = state.search && state.search.stocks.find((x) => x[0] === s); return r ? r[2] : null; };
@@ -97,9 +107,9 @@ function pfStackSvg(R, from) {
 // "Value over time" chart: stacked by holding, sized to its container so text stays sharp, with a hover tooltip listing the day's value, cost basis, gain and each holding.
 function pfDrawStack(box, from) {
   const wrap = box.querySelector("#pfchw"); if (!wrap) return;
-  const R = PF.R, W = Math.max(300, Math.min(820, Math.round(wrap.clientWidth || 600))), H = Math.round(Math.max(230, W * 0.4)), pad = { l: W < 480 ? 46 : 54, r: 12, t: 12, b: 28 };
+  const R = PF.R, W = Math.max(300, Math.min(820, Math.round(wrap.clientWidth || 600))), H = Math.round(Math.max(260, W * 0.46)), pad = { l: W < 480 ? 46 : 54, r: 12, t: 12, b: 28 };
   const to = R.L, n0 = to - from + 1, step = Math.max(1, Math.ceil(n0 / 260)), idx = []; for (let i = from; i <= to; i += step) idx.push(i); if (idx[idx.length - 1] !== to) idx.push(to);
-  const peak = Math.max(1, ...idx.map((i) => R.total[i]), ...idx.map((i) => R.cost[i])), nice = (() => { const r = (peak * 1.06) / 4, p = Math.pow(10, Math.floor(Math.log10(r))); return [1, 2, 2.5, 5, 10].map((k) => k * p).find((x) => x >= r) || r; })(), maxV = nice * 4;
+  const B = pfBench(R), peak = Math.max(1, ...idx.map((i) => R.total[i]), ...idx.map((i) => R.cost[i]), ...idx.map((i) => B[i])), nice = (() => { const r = (peak * 1.06) / 4, p = Math.pow(10, Math.floor(Math.log10(r))); return [1, 2, 2.5, 5, 10].map((k) => k * p).find((x) => x >= r) || r; })(), maxV = nice * 4;
   const X = (k) => pad.l + (k / Math.max(1, idx.length - 1)) * (W - pad.l - pad.r), Y = (v) => pad.t + (1 - v / maxV) * (H - pad.t - pad.b);
   const short = (v) => (v >= 1e6 ? "$" + (v / 1e6).toFixed(v >= 1e7 ? 0 : 1) + "M" : v >= 1000 ? "$" + (v / 1000).toFixed(v % 1000 ? 1 : 0).replace(/\.0$/, "") + "K" : "$" + Math.round(v));
   let acc = idx.map(() => 0);
@@ -110,7 +120,9 @@ function pfDrawStack(box, from) {
   const grid = [0, 1, 2, 3, 4].map((f) => `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(nice * f).toFixed(1)}" y2="${Y(nice * f).toFixed(1)}" stroke="var(--line)"/><text x="${pad.l - 7}" y="${(Y(nice * f) + 3.5).toFixed(1)}" text-anchor="end" font-size="11" fill="var(--mut)">${short(nice * f)}</text>`).join("");
   const kx = Math.min(W < 480 ? 3 : 4, idx.length - 1), xl = Array.from({ length: kx + 1 }, (_, j) => Math.round((j / Math.max(1, kx)) * (idx.length - 1))).map((k, j, a) => `<text x="${X(k).toFixed(1)}" y="${H - 8}" text-anchor="${j === 0 ? "start" : j === a.length - 1 ? "end" : "middle"}" font-size="11" fill="var(--mut)">${esc(pfDate(pfIso(R.days[idx[k]])).replace(/, /, " "))}</text>`).join("");
   wrap.innerHTML = `<svg viewBox="0 0 ${W} ${H}" class="pf-svg" role="img" aria-label="Value of your portfolio over time">${grid}${xl}${paths}<polyline points="${top}" fill="none" stroke="var(--tx)" stroke-width="1.6" stroke-linejoin="round" opacity=".55"/>
-    <polyline points="${cost}" fill="none" stroke="var(--tx)" stroke-width="1.8" stroke-dasharray="5 4" stroke-linejoin="round"/>
+    <polyline points="${cost}" fill="none" stroke="var(--tx)" stroke-width="2" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="${idx.map((i, k) => X(k).toFixed(1) + "," + Y(B[i]).toFixed(1)).join(" ")}" fill="none" stroke="var(--card)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+    <polyline points="${idx.map((i, k) => X(k).toFixed(1) + "," + Y(B[i]).toFixed(1)).join(" ")}" fill="none" stroke="var(--tx)" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" stroke-linejoin="round"/>
     <g class="pf-g" style="display:none"><line y1="${pad.t}" y2="${H - pad.b}" stroke="var(--tx)" opacity=".45"/><circle r="5" fill="var(--card)" stroke="var(--tx)" stroke-width="2"/></g>
     <rect class="pf-hit" x="${pad.l}" y="${pad.t}" width="${W - pad.l - pad.r}" height="${H - pad.t - pad.b}" fill="transparent" style="touch-action:pan-y"/></svg><div class="pf-tip" hidden></div>`;
   const svg = wrap.querySelector("svg"), tip = wrap.querySelector(".pf-tip"), g = svg.querySelector(".pf-g"), hit = svg.querySelector(".pf-hit");
@@ -119,7 +131,7 @@ function pfDrawStack(box, from) {
     g.style.display = ""; const ln = g.querySelector("line"); ln.setAttribute("x1", px); ln.setAttribute("x2", px); const c = g.querySelector("circle"); c.setAttribute("cx", px); c.setAttribute("cy", Y(R.total[i]));
     const rows = R.groups.filter((gr) => gr.vals[i] > 0.5).sort((a, b) => b.vals[i] - a.vals[i]).slice(0, 6).map((gr) => `<div class="pf-tr"><span><i style="background:${gr.color}"></i>${esc(gr.label)}</span><b>${pfM(gr.vals[i])}</b></div>`).join("");
     const gain = R.total[i] - R.cost[i];
-    tip.innerHTML = `<b>${esc(pfDate(pfIso(R.days[i])))}</b><div class="pf-tr big"><span>Value</span><b>${pfM(R.total[i])}</b></div><div class="pf-tr"><span>Cost basis</span><b>${pfM(R.cost[i])}</b></div><div class="pf-tr"><span>Gain</span><b style="color:${pfC(gain)}">${pfS(gain)}</b></div><div class="pf-sep"></div>${rows}`;
+    tip.innerHTML = `<b>${esc(pfDate(pfIso(R.days[i])))}</b><div class="pf-tr big"><span>Value</span><b>${pfM(R.total[i])}</b></div><div class="pf-tr"><span>Cost basis</span><b>${pfM(R.cost[i])}</b></div><div class="pf-tr"><span>Gain</span><b style="color:${pfC(gain)}">${pfS(gain)}</b></div><div class="pf-tr"><span>S&amp;P 500 (same money)</span><b>${pfM(B[i])}</b></div><div class="pf-sep"></div>${rows}`;
     tip.hidden = false; const tw = tip.offsetWidth, left = (px / W) * r.width, right = left + 14 + tw > r.width; tip.style.left = Math.max(4, right ? left - tw - 14 : left + 14) + "px";
   };
   const leave = () => { g.style.display = "none"; tip.hidden = true; };
@@ -156,8 +168,10 @@ function pfHeader(R, agg) {
   let d1 = 0; R.syms.forEach((s) => { const v = R.pos[s].value, p = pfD1(s); d1 += v - v / (1 + p / 100); });
   const realized = R.syms.reduce((a, s) => a + R.pos[s].realized, 0), soldCost = R.syms.reduce((a, s) => a + R.pos[s].soldCost, 0), totalRet = unreal + realized;
   const n = R.syms.filter((s) => R.pos[s].sh > 0.0000001).length;
-  return `<div class="pf-stats"><div><b>${pfM(t)}</b><span>Total value · ${n} holdings</span></div><div><b style="color:${pfC(d1)}">${pfS(d1)}</b><span>1-day return <i style="color:${pfC(d1)}">${pfP(t - d1 > 0 ? d1 / (t - d1) * 100 : 0, 2)}</i></span></div>
-    <div><b>${pfS(totalRet)}</b><span>Total returns <i style="color:${pfC(totalRet)}">${pfP(R.events.length ? totalRet / (cost + soldCost || 1) * 100 : 0)}</i></span></div><div><b>${R.irr == null ? "-" : pfP(R.irr * 100)}</b><span>Annualized (IRR)</span></div></div>`;
+  const B = pfBench(R), bv = B[R.L], ahead = t - bv, totPct = R.events.length ? totalRet / (cost + soldCost || 1) * 100 : 0, bPct = cost + soldCost ? (bv - (cost + soldCost)) / (cost + soldCost) * 100 : 0;
+  return `<div class="pc-head" style="margin-top:6px"><div><div class="small muted">Total value · ${n} holdings</div><b class="pc-big">${pfM(t)}</b> <span style="color:${pfC(totalRet)};font-weight:700">${pfS(totalRet)} (${pfP(totPct)})</span></div>
+    <div class="pc-vs"><div class="small muted">Same money in the S&amp;P 500</div><b>${pfP(bPct)}</b> <span class="small" style="color:${pfC(ahead)}">${ahead >= 0 ? "you're ahead by " : "you're behind by "}${pfM(Math.abs(ahead))}</span></div></div>
+    <div class="pf-stats" style="margin-top:10px"><div><b style="color:${pfC(d1)}">${pfS(d1)}</b><span>1-day return <i style="color:${pfC(d1)}">${pfP(t - d1 > 0 ? d1 / (t - d1) * 100 : 0, 2)}</i></span></div><div><b>${R.irr == null ? "-" : pfP(R.irr * 100)}</b><span>Annualized (IRR)</span></div><div><b>${pfM(cost)}</b><span>Cost basis</span></div><div><b>${R.events.length}</b><span>Trades</span></div></div>`;
 }
 function pfDivs(s) {   // dividends per share over the last year: from the snapshot's payment history when we have it, else the filings-based yield on the scorecard; plus the next ex-dividend date
   const rows = (PF.N[s] && PF.N[s].dividends) || [], today = new Date(), yr = new Date(today - 365 * 864e5);
@@ -180,9 +194,9 @@ function pfRender() {
     <div><span>Dividends, last 12 months</span><b>${pfM(divYr)}</b><i class="muted">${R.total[R.L] ? (divYr / R.total[R.L] * 100).toFixed(1) : 0}% of value</i></div>
     <div><span>Cost basis</span><b>${pfM(R.cost[R.L])}</b><i class="muted">what you paid for what you hold</i></div></div>`;
   const top = `<div class="pf-top"><div class="card"><div class="tabs" style="margin:0 0 8px"><a class="on" href="#" onclick="return false">Value over time</a></div>${pfHeader(R, agg)}
-      <div class="pf-legend">${R.groups.map((g) => `<span><i style="background:${g.color}"></i>${esc(g.label)}</span>`).join("")}<span><u></u>Cost basis</span></div>
-      <div class="chw" id="pfchw" style="position:relative;min-height:230px;margin-top:6px"></div>
-      <div class="chr" id="pfrange" style="margin-top:6px">${["1M", "3M", "YTD", "1Y", "2Y", "All"].map((r) => `<button data-r="${r}" class="${PF.range === r ? "on" : ""}">${r}</button>`).join("")}</div></div>
+      <div class="pc-ranges" id="pfrange">${["1M", "3M", "YTD", "1Y", "2Y", "All"].map((r) => `<button data-r="${r}" class="btn ghost ${PF.range === r ? "on" : ""}">${r}</button>`).join("")}</div>
+      <div class="chw" id="pfchw" style="position:relative;min-height:260px;margin-top:6px"></div>
+      <div class="pf-legend" style="margin-top:8px">${R.groups.map((g) => `<span><i style="background:${g.color}"></i>${esc(g.label)}</span>`).join("")}<span><u></u>Cost basis</span><span><u class="dash"></u>S&amp;P 500 (same money)</span></div></div>
     <div class="card"><h3 style="margin:0 0 2px">Portfolio scorecard</h3><p class="small muted" style="margin:0">Each holding's five scores, averaged by how much of your money is in it.</p>${radarSvg(Object.fromEntries(Object.entries(agg.axes)))}
       <p class="small" style="text-align:center;margin:0 0 8px"><b>${esc(pfSummary(agg.axes))}</b></p>
       <div class="pf-badges"><span class="bad">! ${risks} risks</span><span class="good">★ ${rewards} rewards</span><span class="muted">${R.syms.length} holdings</span></div></div></div>`;

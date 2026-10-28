@@ -233,3 +233,5 @@ html,body{overflow-x:clip}
 .pf-svg{width:100%;height:auto;display:block;overflow:visible}.pf-hit{cursor:crosshair}
 .pf-tip{position:absolute;top:4px;z-index:3;pointer-events:none;min-width:190px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:9px 12px;font-size:12.5px;line-height:1.55;white-space:nowrap}
 .pf-tr{display:flex;justify-content:space-between;gap:16px}.pf-tr span{color:var(--mut)}.pf-tr.big b{font-size:15px}.pf-tr i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px}.pf-sep{height:1px;background:var(--line);margin:5px 0}
+.pf-legend u.dash{border-top:2px dashed var(--tx);background:none;height:0}
+.pf-legend u:not(.dash){border-top-style:dotted!important}
