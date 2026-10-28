@@ -80,11 +80,8 @@ function portfolioView() {
    <div class="card"><div class="small muted">Return since start (${esc(P.start)})</div><div class="big2" style="color:${colr(Math.abs(ret) < 0.005 ? 0 : ret)}">${sgn(ret)}%</div></div>
    <div class="card"><div class="small muted">S&amp;P 500 (SPY) same period</div><div class="big2">${spyRet == null ? "-" : sgn(spyRet) + "%"}</div></div>
    <div class="card"><div class="small muted">Cash</div><div class="big2">${money(t.cash)}</div></div></div>`;
-  let chart = `<div class="card"><h3>Your line vs the S&amp;P 500</h3><p class="small muted">Both start at 100. Your chart fills in as days pass. Come back after the next market day.</p></div>`;
-  if (P.hist.length >= 2 && P.hist[0].spy) {
-    const a = P.hist.map((h) => h.v / P.hist[0].v * 100), b = P.hist.map((h) => h.spy / P.hist[0].spy * 100);
-    chart = `<div class="card"><h3>Your line vs the S&amp;P 500</h3>${svgLines([a, b], ["var(--brand)", "var(--unk)"], 120)}<p class="small"><span style="color:var(--brand)">━</span> you &nbsp;<span style="color:var(--unk)">━</span> S&amp;P 500 (both start at 100)</p></div>`;
-  }
+  const chart = `<div class="card"><h3>Your account vs the S&amp;P 500</h3><div id="pcbox"><p class="small muted" style="margin:0">Loading your chart…</p></div></div>`;
+  afterRender.push(() => pcMount(document.querySelector("#pcbox")));
   const rows = Object.entries(P.holdings).sort((x, y) => (w[y[0]] || 0) - (w[x[0]] || 0)).map(([s, h]) => {
     const px = q[s] ? q[s].price : 0, val = h.sh * px, pl = val - h.cost;
     return `<tr><td><a href="#/practice/trade/${s}"><b>${esc(s)}</b></a><div class="small muted">${esc(q[s] ? q[s].name : "")}</div></td><td>${+h.sh.toFixed(4)}</td><td>$${(h.cost / h.sh).toFixed(2)}</td><td>$${px.toFixed(2)}</td><td>${money(val)}</td><td style="color:${colr(Math.abs(pl) < 0.5 ? 0 : pl)}">${Math.abs(pl) < 0.5 ? "" : pl > 0 ? "+" : "-"}${money(Math.abs(pl))}<div class="small">${sgn(pl / h.cost * 100)}%</div></td><td>${(w[s] * 100).toFixed(0)}%</td></tr>`;
