@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T13:43:16.415051Z",
+ "generated": "2026-10-29T22:56:28.392830Z",
  "ai_summaries": false,
  "days": [
   {
@@ -17,6 +17,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $2.01.",
+      "Stock moved -4.2% on Oct 29 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -33,6 +34,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $5.38.",
+      "Stock moved +6.6% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -49,6 +51,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $5.14.",
+      "Stock moved +4.2% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -65,6 +68,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.28.",
+      "Stock moved -3.6% on Oct 29 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -81,6 +85,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $2.12.",
+      "Stock moved +3.8% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -97,6 +102,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $7.12.",
+      "Stock moved -9.2% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -113,6 +119,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $3.54.",
+      "Stock moved +2.4% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -129,6 +136,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $4.52.",
+      "Stock moved -1.0% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -145,6 +153,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $46.19.",
+      "Stock moved -5.3% on Oct 29 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -161,6 +170,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $4.11.",
+      "Stock moved +1.2% on Oct 29.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -170,29 +180,12 @@
   },
   {
    "date": "2026-10-28",
-   "reported_total": 246,
+   "reported_total": 249,
    "top": [
-    {
-     "symbol": "MSFT",
-     "name": "Microsoft",
-     "market_cap_b": 3945.9,
-     "eps": 4.89,
-     "eps_estimate": 4.71,
-     "surprise_pct": 3.82,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $4.89 versus $4.71 expected, so the company beat estimates by 3.8%.",
-      "Stock moved -0.1% on Oct 28.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT&type=8-K&dateb=&owner=include&count=10"
-    },
     {
      "symbol": "GOOG",
      "name": "Alphabet",
-     "market_cap_b": 3920.7,
+     "market_cap_b": 3973.4,
      "eps": 2.12,
      "eps_estimate": 2.94,
      "surprise_pct": -27.89,
@@ -208,7 +201,7 @@
     {
      "symbol": "GOOGL",
      "name": "Alphabet",
-     "market_cap_b": 3920.7,
+     "market_cap_b": 3973.4,
      "eps": 2.12,
      "eps_estimate": 2.94,
      "surprise_pct": -27.89,
@@ -223,9 +216,26 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GOOGL&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "MSFT",
+     "name": "Microsoft",
+     "market_cap_b": 3943.5,
+     "eps": 4.89,
+     "eps_estimate": 4.71,
+     "surprise_pct": 3.82,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.89 versus $4.71 expected, so the company beat estimates by 3.8%.",
+      "Stock moved -0.1% on Oct 28.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "SKHY",
      "name": "SK hynix",
-     "market_cap_b": 1059.5,
+     "market_cap_b": 1200.4,
      "eps": 3.84,
      "eps_estimate": 5.96,
      "surprise_pct": -35.57,
@@ -242,7 +252,7 @@
     {
      "symbol": "GEV",
      "name": "GE Vernova",
-     "market_cap_b": 238.4,
+     "market_cap_b": 233.8,
      "eps": 4.81,
      "eps_estimate": 4.03,
      "surprise_pct": 19.35,
@@ -259,7 +269,7 @@
     {
      "symbol": "KLAC",
      "name": "KLA Corporation",
-     "market_cap_b": 200.5,
+     "market_cap_b": 207.2,
      "eps": 1.22,
      "eps_estimate": 1.18,
      "surprise_pct": 3.39,
@@ -276,7 +286,7 @@
     {
      "symbol": "APH",
      "name": "Amphenol",
-     "market_cap_b": 192.9,
+     "market_cap_b": 199.6,
      "eps": 0.8,
      "eps_estimate": 0.73,
      "surprise_pct": 9.59,
@@ -293,7 +303,7 @@
     {
      "symbol": "SAN",
      "name": "Banco Santander, S.A.",
-     "market_cap_b": 179.2,
+     "market_cap_b": 183.0,
      "eps": 0.26,
      "eps_estimate": 0.26,
      "surprise_pct": null,
@@ -308,26 +318,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SAN&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "NOW",
-     "name": "ServiceNow",
-     "market_cap_b": 160.0,
-     "eps": 0.51,
-     "eps_estimate": 0.56,
-     "surprise_pct": -8.93,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.51 versus $0.56 expected, so the company missed estimates by 8.9%.",
-      "Stock moved -3.0% on Oct 28.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NOW&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "TMUS",
      "name": "T-Mobile US",
-     "market_cap_b": 157.5,
+     "market_cap_b": 158.8,
      "eps": 3.22,
      "eps_estimate": 2.86,
      "surprise_pct": 12.59,
@@ -340,6 +333,23 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TMUS&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "NOW",
+     "name": "ServiceNow",
+     "market_cap_b": 155.2,
+     "eps": 0.51,
+     "eps_estimate": 0.56,
+     "surprise_pct": -8.93,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.51 versus $0.56 expected, so the company missed estimates by 8.9%.",
+      "Stock moved -3.0% on Oct 28.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NOW&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
@@ -350,7 +360,7 @@
     {
      "symbol": "V",
      "name": "Visa",
-     "market_cap_b": 718.0,
+     "market_cap_b": 715.8,
      "eps": 3.48,
      "eps_estimate": 3.43,
      "surprise_pct": 1.46,
@@ -367,7 +377,7 @@
     {
      "symbol": "KO",
      "name": "Coca-Cola Company (The)",
-     "market_cap_b": 392.3,
+     "market_cap_b": 394.7,
      "eps": 0.91,
      "eps_estimate": 0.87,
      "surprise_pct": 4.6,
@@ -382,26 +392,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KO&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "HSBC",
-     "name": "HSBC Holdings",
-     "market_cap_b": 312.8,
-     "eps": 2.1,
-     "eps_estimate": 2.13,
-     "surprise_pct": -1.41,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $2.10 versus $2.13 expected, so the company missed estimates by 1.4%.",
-      "Stock moved -5.7% on Oct 27.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HSBC&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "NVS",
      "name": "Novartis AG",
-     "market_cap_b": 299.3,
+     "market_cap_b": 297.8,
      "eps": 2.46,
      "eps_estimate": 2.25,
      "surprise_pct": 9.33,
@@ -416,9 +409,26 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NVS&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "HSBC",
+     "name": "HSBC Holdings",
+     "market_cap_b": 295.0,
+     "eps": 2.1,
+     "eps_estimate": 2.13,
+     "surprise_pct": -1.41,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.10 versus $2.13 expected, so the company missed estimates by 1.4%.",
+      "Stock moved -5.7% on Oct 27.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HSBC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "STX",
      "name": "Seagate Technology Holdings PLC",
-     "market_cap_b": 152.7,
+     "market_cap_b": 159.6,
      "eps": 7.34,
      "eps_estimate": 7.17,
      "surprise_pct": 2.37,
@@ -435,7 +445,7 @@
     {
      "symbol": "BA",
      "name": "Boeing Company (The)",
-     "market_cap_b": 132.9,
+     "market_cap_b": 132.5,
      "eps": -0.34,
      "eps_estimate": -0.21,
      "surprise_pct": -61.9,
@@ -452,7 +462,7 @@
     {
      "symbol": "SPGI",
      "name": "S&P Global",
-     "market_cap_b": 130.1,
+     "market_cap_b": 130.3,
      "eps": 4.58,
      "eps_estimate": 4.43,
      "surprise_pct": 3.39,
@@ -469,7 +479,7 @@
     {
      "symbol": "GLW",
      "name": "Corning Incorporated",
-     "market_cap_b": 108.8,
+     "market_cap_b": 113.0,
      "eps": 0.91,
      "eps_estimate": 0.89,
      "surprise_pct": 2.25,
@@ -486,7 +496,7 @@
     {
      "symbol": "HCA",
      "name": "HCA Healthcare",
-     "market_cap_b": 97.4,
+     "market_cap_b": 100.3,
      "eps": 7.22,
      "eps_estimate": 6.74,
      "surprise_pct": 7.12,
@@ -503,7 +513,7 @@
     {
      "symbol": "FCX",
      "name": "Freeport-McMoran",
-     "market_cap_b": 94.7,
+     "market_cap_b": 95.6,
      "eps": 0.88,
      "eps_estimate": 0.8,
      "surprise_pct": 10.0,
@@ -526,7 +536,7 @@
     {
      "symbol": "KOF",
      "name": "Coca Cola Femsa S.A.B. de C.V.",
-     "market_cap_b": 191.0,
+     "market_cap_b": 193.7,
      "eps": 1.72,
      "eps_estimate": 1.89,
      "surprise_pct": -8.99,
@@ -542,7 +552,7 @@
     {
      "symbol": "VZ",
      "name": "Verizon Communications",
-     "market_cap_b": 182.5,
+     "market_cap_b": 179.4,
      "eps": 1.31,
      "eps_estimate": 1.27,
      "surprise_pct": 3.15,
@@ -559,7 +569,7 @@
     {
      "symbol": "WELL",
      "name": "Welltower",
-     "market_cap_b": 163.4,
+     "market_cap_b": 166.7,
      "eps": 1.67,
      "eps_estimate": 1.64,
      "surprise_pct": 1.83,
@@ -576,7 +586,7 @@
     {
      "symbol": "CDNS",
      "name": "Cadence Design Systems",
-     "market_cap_b": 94.5,
+     "market_cap_b": 94.3,
      "eps": 1.59,
      "eps_estimate": 1.61,
      "surprise_pct": -1.24,
@@ -593,7 +603,7 @@
     {
      "symbol": "NUE",
      "name": "Nucor",
-     "market_cap_b": 61.4,
+     "market_cap_b": 61.7,
      "eps": 5.8,
      "eps_estimate": 5.71,
      "surprise_pct": 1.58,
@@ -610,7 +620,7 @@
     {
      "symbol": "PSA",
      "name": "Public Storage",
-     "market_cap_b": 58.4,
+     "market_cap_b": 57.9,
      "eps": 4.34,
      "eps_estimate": 4.27,
      "surprise_pct": 1.64,
@@ -625,25 +635,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PSA&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "HIG",
-     "name": "The Hartford Insurance Group",
-     "market_cap_b": 35.7,
-     "eps": 3.5,
-     "eps_estimate": 3.15,
-     "surprise_pct": 11.11,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $3.50 versus $3.15 expected, so the company beat estimates by 11.1%.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HIG&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "CLS",
      "name": "Celestica",
-     "market_cap_b": 34.9,
+     "market_cap_b": 37.7,
      "eps": 3.16,
      "eps_estimate": 2.89,
      "surprise_pct": 9.34,
@@ -657,9 +651,25 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CLS&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "HIG",
+     "name": "The Hartford Insurance Group",
+     "market_cap_b": 34.8,
+     "eps": 3.5,
+     "eps_estimate": 3.15,
+     "surprise_pct": 11.11,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.50 versus $3.15 expected, so the company beat estimates by 11.1%.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HIG&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "CINF",
      "name": "Cincinnati Financial",
-     "market_cap_b": 27.8,
+     "market_cap_b": 27.5,
      "eps": 2.86,
      "eps_estimate": 1.99,
      "surprise_pct": 43.72,
@@ -675,7 +685,7 @@
     {
      "symbol": "PFG",
      "name": "Principal Financial Group",
-     "market_cap_b": 24.0,
+     "market_cap_b": 23.9,
      "eps": 2.22,
      "eps_estimate": 2.46,
      "surprise_pct": -9.76,

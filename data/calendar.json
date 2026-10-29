@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T13:44:10.072018Z",
+ "generated": "2026-10-29T22:58:19.457286Z",
  "today": "2026-10-29",
  "timezone": "US Eastern",
  "events": [
@@ -172,7 +172,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
    "extra": {
-    "market_cap_b": 740,
+    "market_cap_b": 748,
     "eps_forecast": "$3.90"
    },
    "source": "",
@@ -187,7 +187,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.74.",
    "extra": {
-    "market_cap_b": 506,
+    "market_cap_b": 505,
     "eps_forecast": "$3.74"
    },
    "source": "",
@@ -202,7 +202,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.78.",
    "extra": {
-    "market_cap_b": 451,
+    "market_cap_b": 453,
     "eps_forecast": "$4.78"
    },
    "source": "",
@@ -217,7 +217,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.60.",
    "extra": {
-    "market_cap_b": 266,
+    "market_cap_b": 265,
     "eps_forecast": "$2.60"
    },
    "source": "",
@@ -232,7 +232,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.66.",
    "extra": {
-    "market_cap_b": 132,
+    "market_cap_b": 128,
     "eps_forecast": "$2.66"
    },
    "source": "",
@@ -247,7 +247,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.63.",
    "extra": {
-    "market_cap_b": 102,
+    "market_cap_b": 103,
     "eps_forecast": "$1.63"
    },
    "source": "",
@@ -304,7 +304,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.98.",
    "extra": {
-    "market_cap_b": 5066,
+    "market_cap_b": 5018,
     "eps_forecast": "$1.98"
    },
    "source": "",
@@ -319,7 +319,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.33.",
    "extra": {
-    "market_cap_b": 477,
+    "market_cap_b": 473,
     "eps_forecast": "$0.33"
    },
    "source": "",
@@ -334,7 +334,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.36.",
    "extra": {
-    "market_cap_b": 132,
+    "market_cap_b": 134,
     "eps_forecast": "$4.36"
    },
    "source": "",
@@ -349,7 +349,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.87.",
    "extra": {
-    "market_cap_b": 102,
+    "market_cap_b": 103,
     "eps_forecast": "$2.87"
    },
    "source": "",
@@ -379,7 +379,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.92.",
    "extra": {
-    "market_cap_b": 57,
+    "market_cap_b": 58,
     "eps_forecast": "$4.92"
    },
    "source": "",
@@ -394,7 +394,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.11.",
    "extra": {
-    "market_cap_b": 54,
+    "market_cap_b": 53,
     "eps_forecast": "$1.11"
    },
    "source": "",
@@ -409,7 +409,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.71.",
    "extra": {
-    "market_cap_b": 51,
+    "market_cap_b": 50,
     "eps_forecast": "$1.71"
    },
    "source": "",
@@ -484,7 +484,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.68.",
    "extra": {
-    "market_cap_b": 915,
+    "market_cap_b": 944,
     "eps_forecast": "$1.68"
    },
    "source": "",
@@ -499,7 +499,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.74.",
    "extra": {
-    "market_cap_b": 242,
+    "market_cap_b": 244,
     "eps_forecast": "$5.74"
    },
    "source": "",
@@ -514,7 +514,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.99.",
    "extra": {
-    "market_cap_b": 236,
+    "market_cap_b": 235,
     "eps_forecast": "$0.99"
    },
    "source": "",
@@ -529,7 +529,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.33.",
    "extra": {
-    "market_cap_b": 215,
+    "market_cap_b": 217,
     "eps_forecast": "$0.33"
    },
    "source": "",
@@ -544,7 +544,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
    "extra": {
-    "market_cap_b": 170,
+    "market_cap_b": 168,
     "eps_forecast": "$0.72"
    },
    "source": "",
@@ -559,7 +559,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.54.",
    "extra": {
-    "market_cap_b": 149,
+    "market_cap_b": 153,
     "eps_forecast": "$3.54"
    },
    "source": "",
@@ -574,7 +574,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $25.74.",
    "extra": {
-    "market_cap_b": 122,
+    "market_cap_b": 124,
     "eps_forecast": "$25.74"
    },
    "source": "",
@@ -589,7 +589,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.48.",
    "extra": {
-    "market_cap_b": 113,
+    "market_cap_b": 111,
     "eps_forecast": "$4.48"
    },
    "source": "",
@@ -604,7 +604,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 256,
+    "market_cap_b": 254,
     "eps_forecast": ""
    },
    "source": "",
@@ -619,7 +619,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
    "extra": {
-    "market_cap_b": 241,
+    "market_cap_b": 251,
     "eps_forecast": "$0.22"
    },
    "source": "",
@@ -634,7 +634,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.46.",
    "extra": {
-    "market_cap_b": 193,
+    "market_cap_b": 192,
     "eps_forecast": "$1.46"
    },
    "source": "",
@@ -664,7 +664,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.81.",
    "extra": {
-    "market_cap_b": 171,
+    "market_cap_b": 170,
     "eps_forecast": "$0.81"
    },
    "source": "",
@@ -679,7 +679,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.94.",
    "extra": {
-    "market_cap_b": 134,
+    "market_cap_b": 133,
     "eps_forecast": "$0.94"
    },
    "source": "",
@@ -694,7 +694,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.62.",
    "extra": {
-    "market_cap_b": 117,
+    "market_cap_b": 115,
     "eps_forecast": "$1.62"
    },
    "source": "",
@@ -709,7 +709,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $10.69.",
    "extra": {
-    "market_cap_b": 113,
+    "market_cap_b": 112,
     "eps_forecast": "$10.69"
    },
    "source": "",
@@ -736,7 +736,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.97.",
    "extra": {
-    "market_cap_b": 178,
+    "market_cap_b": 179,
     "eps_forecast": "$2.97"
    },
    "source": "",
@@ -751,7 +751,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.38.",
    "extra": {
-    "market_cap_b": 151,
+    "market_cap_b": 149,
     "eps_forecast": "$0.38"
    },
    "source": "",
@@ -773,21 +773,6 @@
    "link": null
   },
   {
-   "id": "2026-11-05-earnings-cloudflare-net-reports-earnings",
-   "date": "2026-11-05",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Cloudflare (NET) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.02.",
-   "extra": {
-    "market_cap_b": 117,
-    "eps_forecast": "$0.02"
-   },
-   "source": "",
-   "link": null
-  },
-  {
    "id": "2026-11-05-earnings-parker-hannifin-ph-reports-earnings",
    "date": "2026-11-05",
    "time": "Before open",
@@ -796,8 +781,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $8.23.",
    "extra": {
-    "market_cap_b": 114,
+    "market_cap_b": 115,
     "eps_forecast": "$8.23"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-05-earnings-cloudflare-net-reports-earnings",
+   "date": "2026-11-05",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Cloudflare (NET) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.02.",
+   "extra": {
+    "market_cap_b": 113,
+    "eps_forecast": "$0.02"
    },
    "source": "",
    "link": null
@@ -811,7 +811,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.05.",
    "extra": {
-    "market_cap_b": 112,
+    "market_cap_b": 113,
     "eps_forecast": "$1.05"
    },
    "source": "",
@@ -826,7 +826,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.71.",
    "extra": {
-    "market_cap_b": 107,
+    "market_cap_b": 105,
     "eps_forecast": "$1.71"
    },
    "source": "",
@@ -841,7 +841,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.89.",
    "extra": {
-    "market_cap_b": 101,
+    "market_cap_b": 99,
     "eps_forecast": "$2.89"
    },
    "source": "",
@@ -880,7 +880,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 1164,
+    "market_cap_b": 1166,
     "eps_forecast": ""
    },
    "source": "",
@@ -895,10 +895,25 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.91.",
    "extra": {
-    "market_cap_b": 1164,
+    "market_cap_b": 1166,
     "eps_forecast": "$5.91"
    },
    "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-06",
+   "time": "12:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: Supervision and Regulation. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the University of Mississippi Banking and Finance Symposium, Oxford, Miss."
+   },
+   "source": "Federal Reserve",
    "link": null
   },
   {
@@ -925,7 +940,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of ($1.10).",
    "extra": {
-    "market_cap_b": 83,
+    "market_cap_b": 86,
     "eps_forecast": "($1.10)"
    },
    "source": "",

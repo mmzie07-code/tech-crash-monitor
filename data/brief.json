@@ -1,116 +1,120 @@
 {
- "date": "2026-10-28",
- "generated": "2026-10-28T23:02:37.743352Z",
- "headline": "US stocks finished little changed. The S&P 500 rose 0.28%, with 6 of 11 sectors up.",
+ "date": "2026-10-29",
+ "generated": "2026-10-29T23:03:15.944469Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.30%, with 9 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.28% today, +0.95% this month, +12.91% this year",
-    "Dow Jones: +0.19% today, +2.19% this month, +8.46% this year",
-    "Nasdaq Composite: +0.27% today, -0.92% this month, +14.26% this year",
-    "Russell 2000: +0.41% today, +0.80% this month, +12.85% this year"
+    "S&P 500: -0.30% today, +0.90% this month, +12.57% this year",
+    "Dow Jones: -0.25% today, +2.82% this month, +8.19% this year",
+    "Nasdaq Composite: -1.38% today, -2.52% this month, +12.69% this year",
+    "Russell 2000: +1.01% today, +2.23% this month, +13.99% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +0.80%, Financials +0.45%, Energy +0.35%",
-    "Lagging: Utilities -0.84%, Real Estate -0.73%, Communication -0.42%",
-    "6 of 11 sectors rose."
+    "Leading: Health Care +2.40%, Real Estate +2.21%, Consumer Staples +1.54%",
+    "Lagging: Communication -1.87%, Technology -1.18%, Energy +0.38%",
+    "9 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.91 (-3.48% today)",
-    "10-year Treasury yield: 5.05% (+0.05 pts today)",
-    "US dollar index: 102.13 (-0.19% today)",
-    "Crude oil: 101.94 (+2.04% today)",
-    "Gold: 4,081.20 (+0.16% today)",
-    "Bitcoin: 81,188.44 (+0.47% today)"
+    "VIX (fear gauge): 17.20 (+1.71% today)",
+    "10-year Treasury yield: 4.99% (-0.06 pts today)",
+    "US dollar index: 101.86 (-0.32% today)",
+    "Crude oil: 102.86 (+0.08% today)",
+    "Gold: 4,033.80 (-0.44% today)",
+    "Bitcoin: 78,573.80 (-3.31% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +2.04% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved +0.05 points to 5.05%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares."
+    "The 10-year yield moved -0.06 points to 4.99%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "Bitcoin moved -3.31%, showing appetite (or lack of it) for speculative assets.",
+    "A 4.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Wed Oct 28, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Wed Oct 28, After close: Microsoft (MSFT) reports earnings",
-    "Wed Oct 28, After close: Alphabet (GOOG) reports earnings",
-    "Wed Oct 28, After close: Alphabet (GOOGL) reports earnings"
+    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth",
+    "Thu Oct 29, 8:30 AM ET: Personal income and spending, including PCE inflation",
+    "Thu Oct 29, After close: Amazon.com (AMZN) reports earnings",
+    "Thu Oct 29, Before open: Eli Lilly and Company (LLY) reports earnings"
    ]
   },
   {
    "title": "Just happened",
    "bullets": [
-    "Fed interest-rate decision: The Fed held interest rates.",
-    "Visa: Visa reported earnings: beat estimates."
+    "GDP advance estimate: first look at economic growth: Real gross domestic product (GDP) increased at an annual rate of 3.4 percent in the third quarter of 2026 (July, August, and September).",
+    "Personal income and spending, including PCE inflation: Personal income increased $54.5 billion (0.2 percent at a monthly rate) in September.",
+    "Alphabet: Alphabet reported earnings: missed estimates.",
+    "Alphabet: Alphabet reported earnings: missed estimates.",
+    "Microsoft: Microsoft reported earnings: beat estimates."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 75 out of 100 (Caution; higher is better) (+13 from 62 on 2026-10-27).",
-    "Warning signs flashing: AI capex vs revenue gap; Insider selling.",
+    "Market health score 62 out of 100 (Caution; higher is better) (-13 from 75 on 2026-10-28).",
+    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Alphabet sinks 10% as it holds 2026 capex unchanged, expects significant increase in 2027",
+   "title": "Amazon posts negative free cash flow of $42.4 billion, holds 2026 capex unchanged",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html",
-   "published": "Wed, 28 Oct 2026 22:07:17"
+   "link": "https://www.cnbc.com/2026/10/29/amazon-amzn-q3-earnings-report-2026.html",
+   "published": "Thu, 29 Oct 2026 22:24:49"
   },
   {
-   "title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
+   "title": "Intel stock plunges 21% as chipmaker blames PC slowdown for weak guidance",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html",
-   "published": "Wed, 28 Oct 2026 22:34:56"
+   "link": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html",
+   "published": "Thu, 29 Oct 2026 22:37:54"
   },
   {
-   "title": "Here are five key takeaways from the Fed rate decision and Warsh news conference",
+   "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/28/fed-rate-decision-warsh-takeaways.html",
-   "published": "Wed, 28 Oct 2026 21:31:46"
+   "link": "https://www.cnbc.com/2026/10/29/servicenow-now-earnings-q3-2026.html",
+   "published": "Thu, 29 Oct 2026 20:02:32"
   },
   {
-   "title": "Hands-on with Apple's first touchscreen laptop: Touch is totally optional",
+   "title": "Circle, Tether freeze funds impacted by potential Binance 'security issue'",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/28/apple-touchscreen-macbook-pro-hands-on.html",
-   "published": "Wed, 28 Oct 2026 22:38:41"
+   "link": "https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html",
+   "published": "Thu, 29 Oct 2026 22:47:32"
+  },
+  {
+   "title": "My abusive ex-husband promised $20,000 for our kids\u2019 education. Now he refuses to pay. Is he legally obligated?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/my-abusive-ex-husband-promised-20-000-for-our-kids-education-now-he-refuses-to-pay-is-he-legally-obligated-325ef50f?mod=mw_rss_topstories",
+   "published": "Thu, 29 Oct 2026 22:45:00"
+  },
+  {
+   "title": "The midterms are crucial to the future of Social Security \u2014 no matter how old you are",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/the-midterms-are-crucial-to-the-future-of-social-security-no-matter-how-old-you-are-0f080a9c?mod=mw_rss_topstories",
+   "published": "Thu, 29 Oct 2026 22:01:00"
+  },
+  {
+   "title": "Our church has a $1.5 million bequest earning 3.75% in a bank account. Is inflation eroding it?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/there-may-be-better-investment-options-my-church-received-1-5-million-from-a-parishioner-is-3-75-interest-enough-5164d790?mod=mw_rss_topstories",
+   "published": "Thu, 29 Oct 2026 22:00:00"
   },
   {
    "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/is-it-curtains-for-cola-saving-social-security-could-mean-changing-the-cost-of-living-adjustment-867c6bd8?mod=mw_rss_topstories",
-   "published": "Wed, 28 Oct 2026 22:41:00"
-  },
-  {
-   "title": "Chipotle now has more demand from lower-income diners than higher-income ones",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/chipotle-expects-modestly-higher-sales-this-year-as-drive-thru-chipotlanes-come-to-more-stores-4f255bbc?mod=mw_rss_topstories",
-   "published": "Wed, 28 Oct 2026 22:25:00"
-  },
-  {
-   "title": "Lumentum\u2019s stock pops as investors cheer a possible sale to Marvell",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/lumentums-stock-pops-as-investors-cheer-a-possible-sale-to-marvell-07c1d0e8?mod=mw_rss_topstories",
-   "published": "Wed, 28 Oct 2026 22:08:00"
-  },
-  {
-   "title": "We stopped helping our neighbors with free home repairs and our friendship cooled. Who\u2019s to blame?",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/we-stopped-helping-our-neighbors-with-free-home-repairs-and-our-friendship-cooled-whos-to-blame-d20b0720?mod=mw_rss_topstories",
-   "published": "Wed, 28 Oct 2026 22:00:00"
+   "published": "Thu, 29 Oct 2026 21:52:00"
   }
  ],
  "summary": null,
