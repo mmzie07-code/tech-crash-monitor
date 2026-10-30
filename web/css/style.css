@@ -239,3 +239,8 @@ html,body{overflow-x:clip}
 /* ---- prediction model page ---- */
 .md-eq{font:500 14px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
 .md-bar{display:inline-block;vertical-align:middle;width:70px;height:7px;background:var(--line);border-radius:5px;overflow:hidden;margin-left:6px}.md-bar i{display:block;height:100%;border-radius:5px}
+
+/* ---- AI Watch v3 ---- */
+.aiw-bar{display:inline-block;vertical-align:middle;width:70px;height:7px;background:var(--line);border-radius:5px;overflow:hidden}.aiw-bar i{display:block;height:100%;border-radius:5px}
+.aiw-pill{display:block;padding:14px}.aiw-pill:hover{border-color:var(--brand)}
+.aiw-t td{vertical-align:top}.aiw-stale{opacity:.55}

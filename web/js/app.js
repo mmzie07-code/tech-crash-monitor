@@ -13,7 +13,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx, state.dollar100] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json"), loadJson("dollar100.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx, state.dollar100, state.aiw] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json"), loadJson("dollar100.json"), loadJson("aiwatch.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -36,9 +36,9 @@ function gauge(h) {
 function snapCard(link) {
   const s = state.snap;
   if (!s) return `<div class="card"><div class="muted">Live monitor unavailable right now.</div></div>`;
-  const h = healthOf(s.score), z = healthZone(h);
+  const h = s.ai_health != null ? s.ai_health : healthOf(s.score), z = healthZone(h);
   return `<div class="card big"><div class="strip" style="align-items:center;gap:22px"><div style="width:230px;max-width:100%">${gauge(h)}</div>
-  <div style="flex:1;min-width:200px"><h3>AI &amp; Tech Watch: ${z[1]}</h3><p class="muted small" style="margin:0 0 6px">${z[3]}: ${s.warnings} of ${s.evaluated} checks are flashing. <b>Higher is better</b>: 100 means all clear, 0 means danger. Updated ${s.date}.</p>
+  <div style="flex:1;min-width:200px"><h3>AI &amp; Tech Watch: ${z[1]}</h3><p class="muted small" style="margin:0 0 6px">${s.ai_health != null ? `Built from ${s.ai_indicators} indicators across AI spending, NVIDIA, financing and markets` : `${z[3]}: ${s.warnings} of ${s.evaluated} checks are flashing`}. <b>Higher is better</b>: 100 means all clear, 0 means danger. Updated ${s.date}.</p>
   ${link ? `<a class="btn ghost" href="#/watch">See what's behind it</a>` : ""}</div></div></div>`;
 }
 
@@ -73,7 +73,7 @@ function home() {
   <div class="cards">
    <a class="card" href="#/markets" style="color:inherit"><span class="pill g">Markets</span><h3>The whole market, daily</h3><p class="muted">Indices, all 11 sectors, rates, the dollar, oil, gold and more, plus a daily briefing and outlooks from today to next year.</p></a>
    <a class="card" href="#/learn" style="color:inherit"><span class="pill">Learn</span><h3>A crash course in 8 short lessons</h3><p class="muted">From "what is a stock?" to spotting bubbles. Quizzes, a glossary, and practice trading with fake money.</p><div class="bar"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><p class="small muted" style="margin:6px 0 0">${doneCount()} of ${MODULES.length} complete</p></a></div>
-  <h2>Featured: AI &amp; Tech Watch</h2><p class="muted">One of the biggest questions in markets right now is whether AI and tech stocks are in a bubble. We track ten warning signs and test them against history.</p>${snapCard(true)}
+  <h2>Featured: AI &amp; Tech Watch</h2><p class="muted">One of the biggest questions in markets right now is whether AI and tech stocks are in a bubble. We track three dozen indicators, from chipmaker receivables to bank loans to SEC filings, and show how each one is scored.</p>${snapCard(true)}
   <h2 style="margin-top:1.4em">Why trust this?</h2>
   <div class="cards"><div class="card"><h3>We show our homework</h3><p class="muted small">Every number links to its data source, and we backtested our warning signs. Some of our own ideas failed, and we say so.</p></div>
   <div class="card"><h3>No stock tips</h3><p class="muted small">We teach how things work. We never tell you what to buy or sell.</p></div>
@@ -203,7 +203,7 @@ function markets(tab, sub) {
     <h2>Rates, currencies &amp; commodities</h2><div class="card">${rowList(m && m.macro)}</div>
     <h2>Around the world</h2><div class="card">${rowList(m && m.global)}</div>
     <p class="small muted">Prices from Yahoo Finance, updated each trading day after the close${m ? " (snapshot " + m.indices[0].date + ")" : ""}. Sector figures use the SPDR sector ETFs.</p>
-    <a class="card" href="#/watch" style="color:inherit;display:block"><span class="pill w">Featured</span><h3>AI &amp; Tech Watch</h3><p class="muted small" style="margin:0">Is there an AI bubble? Ten warning signs, tracked daily.</p></a>`;
+    <a class="card" href="#/watch" style="color:inherit;display:block"><span class="pill w">Featured</span><h3>AI &amp; Tech Watch</h3><p class="muted small" style="margin:0">Is there an AI bubble? Three dozen indicators, refreshed daily.</p></a>`;
   } else if (tab === "brief") {
     b = briefView();
   } else if (tab === "earnings") {
@@ -230,6 +230,7 @@ function markets(tab, sub) {
 }
 
 function watch() {
+  if (state.aiw && state.aiw.indicators && typeof aiWatchView === "function") return aiWatchView();   // the v3 index; the original ten-check page below is the fallback
   const s = state.snap;
   const head = `<span class="pill w">Featured section</span><h1>AI &amp; Tech Watch</h1>
   <p class="muted">Are AI and tech stocks in a bubble, and are the warning signs of a crash flashing? Ten signs, checked every trading day, combined into one health score.</p>`;

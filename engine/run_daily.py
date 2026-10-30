@@ -2,7 +2,7 @@
 import json, os, sys, datetime as dt
 sys.path.insert(0, os.path.dirname(__file__))
 from checks import load_data, run_all
-import crypto, currencies, economy, oil, world, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
+import aiwatch, crypto, currencies, economy, oil, world, markets, brief, calendar_feed, outlook, quotes, earnings, universe, history, recaps, fundamentals, snapshots, ipos, overlooked, housing, about
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -42,6 +42,28 @@ def morning():
     write_crypto()
     write_economy()
     write_oil()
+    try:   # the AI Watch Index changes with filings and credit data, so it is refreshed before the open too
+        write_ai(run_all(load_data()))
+    except Exception as e:
+        print("ai refresh failed:", e)
+
+
+def write_ai(checks):
+    """The AI Watch Index (data/aiwatch.json) and its headline numbers in latest.json. Keeps the previous files if anything fails."""
+    try:
+        try:
+            import mfeatures
+            F2 = mfeatures.index_frame(refresh_days=0)
+        except Exception as e:
+            print("long-history features unavailable:", e); F2 = None
+        r = aiwatch.build(checks, F2)
+        json.dump(r, open(os.path.join(DATA, "aiwatch.json"), "w"), separators=(",", ":"))
+        lp = os.path.join(DATA, "latest.json"); snap = json.load(open(lp))
+        snap.update(ai_heat=r["heat"], ai_health=r["health"], ai_zone=r["zone"], ai_indicators=r["coverage"]["n"], ai_updated=r["generated"])
+        json.dump(snap, open(lp, "w"), indent=1)
+        print("ai index written: health %s (%s), %d indicators" % (r["health"], r["zone"], r["coverage"]["n"]))
+    except Exception as e:
+        print("ai index failed:", e)
 
 
 def write_model():
@@ -171,6 +193,7 @@ def main():
     write_economy()
     write_oil()
     write_model()
+    write_ai(checks)
     try:
         json.dump(currencies.build(), open(os.path.join(DATA, "currencies.json"), "w"), separators=(",", ":"))
         print("currencies written")
