@@ -29,7 +29,7 @@ def fit_signed(X, y, cols, lam):
 
 
 def build_panel():
-    P = pd.read_pickle("/tmp/wtest/prices800.pkl")
+    P = S.load_prices(S.universe(800))   # cached under data/model_cache after the first run
     P = P[P.index >= "1995-06-01"].astype(float)
     P = P.loc[:, P.notna().sum() > 800]
     ndx = mdata.yahoo("^NDX"); sox = mdata.yahoo("^SOX")
@@ -54,7 +54,6 @@ def metrics(D, p, label):
 
 if __name__ == "__main__":
     t = time.time(); D = build_panel(); print("panel", D.shape, round(time.time() - t), "s", flush=True)
-    D.to_pickle("/tmp/wtest/panel.pkl")
     D = D[D["y"].notna()].copy()
     for c in S.NAMES:
         D[c] = D[c].fillna(0.0)

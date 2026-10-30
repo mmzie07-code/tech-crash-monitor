@@ -120,7 +120,7 @@ def market_part():
 
 
 def stock_part():
-    D = pd.read_pickle("/tmp/wtest/panel.pkl") if os.path.exists("/tmp/wtest/panel.pkl") and "--rebuild" not in sys.argv else ST.build_panel()
+    D = ST.build_panel()
     D = D[D["y"].notna()].copy()
     for c in S.NAMES:
         D[c] = D[c].fillna(0.0)
