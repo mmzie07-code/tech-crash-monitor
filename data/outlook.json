@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-29T22:58:28.165688Z",
- "as_of": "2026-10-29",
+ "generated": "2026-10-30T13:45:16.791143Z",
+ "as_of": "2026-10-30",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10337,
+    "n": 10338,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,110 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2573,
-    "up": 53,
-    "median": 0.0,
-    "p10": -1.0,
-    "p25": -0.4,
-    "p75": 0.5,
-    "p90": 1.0,
-    "below": 10,
-    "above": 11,
-    "worst": -4.1,
-    "best": 2.9
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (1.3% below it).",
-    "VIX at 17.2: investors are relatively calm.",
-    "10-year yield fell 0.30 points in a month to 4.99%, which eases pressure on stocks.",
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "Oil is up 14% in a month, which can feed inflation.",
-    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "GDP advance estimate: first look at economic growth",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Amazon.com (AMZN) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Eli Lilly and Company (LLY) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Mastercard Incorporated (MA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Intel (INTC) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Merck & Company (MRK) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Caterpillar (CAT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Shell PLC (SHEL) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Linde (LIN) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10337,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 2573,
+    "n": 2574,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -198,12 +95,103 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10338,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 2574,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (1.3% below it).",
+    "VIX at 17.2: investors are relatively calm.",
+    "10-year yield fell 0.30 points in a month to 4.99%, which eases pressure on stocks.",
+    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
+   ],
+   "bear": [
+    "Oil is up 14% in a month, which can feed inflation.",
+    "AI & Tech Watch has 3 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling); health score 62 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Apple (AAPL) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Palantir Technologies (PLTR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Vertex Pharmaceuticals Incorporated (VRTX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "Before open",
+     "title": "Marriott International (MAR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Williams Companies, Inc. (The) (WMB) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Diamondback Energy (FANG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Realty Income (O) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "Before open",
+     "title": "Entergy (ETR) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10333,
+    "n": 10334,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -216,7 +204,7 @@
     "best": 19.1
    },
    "similar": {
-    "n": 2569,
+    "n": 2570,
     "up": 57,
     "median": 0.3,
     "p10": -2.1,
@@ -241,66 +229,6 @@
    ],
    "events": [
     {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "GDP advance estimate: first look at economic growth",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Amazon.com (AMZN) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Eli Lilly and Company (LLY) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Mastercard Incorporated (MA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Intel (INTC) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Merck & Company (MRK) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Caterpillar (CAT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Shell PLC (SHEL) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Linde (LIN) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-10-30",
      "time": "Before open",
      "title": "ExxonMobil Holdings (XOM) reports earnings",
@@ -311,6 +239,66 @@
      "time": "Before open",
      "title": "AbbVie (ABBV) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "Chevron (CVX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "AstraZeneca PLC (AZN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "BP p.l.c. (BP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "Sanofi (SNY) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "General Dynamics (GD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-10-30",
+     "time": "Before open",
+     "title": "Regeneron Pharmaceuticals (REGN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Apple (AAPL) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Palantir Technologies (PLTR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "After close",
+     "title": "Vertex Pharmaceuticals Incorporated (VRTX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-02",
+     "time": "Before open",
+     "title": "Marriott International (MAR) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -319,7 +307,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10317,
+    "n": 10318,
     "up": 64,
     "median": 1.3,
     "p10": -4.4,
@@ -332,7 +320,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2554,
+    "n": 2555,
     "up": 64,
     "median": 1.1,
     "p10": -4.1,
@@ -356,42 +344,6 @@
     "MSFT+GOOGL+AMZN+META capex $573B TTM (+81% YoY, 31% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "GDP advance estimate: first look at economic growth",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Amazon.com (AMZN) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Eli Lilly and Company (LLY) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "Before open",
-     "title": "Mastercard Incorporated (MA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-10-29",
-     "time": "After close",
-     "title": "Intel (INTC) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-10-30",
      "time": "Before open",
@@ -427,6 +379,18 @@
      "time": "Time TBA",
      "title": "Berkshire Hathaway (BRK.B) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
     }
    ]
   },
@@ -435,7 +399,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10086,
+    "n": 10087,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -448,7 +412,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2395,
+    "n": 2396,
     "up": 85,
     "median": 10.7,
     "p10": -7.5,
