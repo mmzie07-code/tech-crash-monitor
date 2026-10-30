@@ -156,6 +156,7 @@ async function stockPage(sym) {
   afterRender.push(() => fillHeadlines("#stknews", name, 5));
   afterRender.push(() => fillAbout(sym, name, secKey, cap));
   afterRender.push(() => fillProfile(sym, price));
+  afterRender.push(() => { if (typeof fillModel === "function") fillModel(sym); });
   let stats = "";
   if (h) {
     const c = h.c, last252 = c.slice(-252);
@@ -170,7 +171,7 @@ async function stockPage(sym) {
    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${heartBtn("stock", sym, { label: name })}<a class="btn ghost" href="#/analysis/${esc(sym)}">Full analysis</a><a class="btn ghost" href="#/explore/compare/${esc(sym)}">Compare</a><a class="btn ghost" href="#/report/${esc(sym)}">Valuation report</a><a class="btn ghost" href="#/report/${esc(sym)}/snapshot">Snapshot</a></div></div>
   <div class="card" style="margin-top:14px">${h ? '<div id="stkchart"></div>' : `<div class="strip"><div class="num" style="font-size:40px">$${price.toLocaleString()}</div><div class="small">${d1 != null ? pctTxt(d1) + " today<br>" : ""}${liveOK() ? "Live chart unavailable for this stock right now." : "Sign in to see the full interactive chart for every stock."}</div></div>`}</div>
   <div class="card" id="stkval" hidden></div>
-  <div class="card" id="stkabout"><p class="small muted" style="margin:0">Loading…</p></div><div class="card" id="stkprofile" hidden></div><div class="card" id="stkeco"></div>
+  <div class="card" id="stkabout"><p class="small muted" style="margin:0">Loading…</p></div><div class="card" id="stkprofile" hidden></div><div class="card" id="stkeco"></div><div class="card" id="stkmodel" hidden></div>
   ${cap ? `<div class="hz"><div class="card"><div class="small muted">Market value</div><b>${capStr(cap)}</b></div><div class="card"><div class="small muted">Today</div><b>${pctTxt(d1)}</b></div></div>` : ""}${stats}
   <div class="card"><h3>Recent headlines</h3><div id="stknews"><p class="small muted" style="margin:0">Loading…</p></div><p class="small" style="margin:8px 0 0"><a href="#/report/${esc(sym)}/snapshot">More in the company snapshot →</a></p></div>
   ${peers.length ? `<div class="card"><h3>Other big names in ${esc(SECTOR_NAME(secKey))}</h3>${peers.map((t) => `<div class="item" style="align-items:center"><a href="#/stock/${esc(t.symbol)}" style="flex:1"><b>${esc(t.symbol)}</b> <span class="small muted">${esc(t.name)}</span></a><span class="small">${capStr(t.cap_b)} ${pctTxt(t.d1)}</span></div>`).join("")}</div>` : ""}

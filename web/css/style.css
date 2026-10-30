@@ -235,3 +235,7 @@ html,body{overflow-x:clip}
 .pf-tr{display:flex;justify-content:space-between;gap:16px}.pf-tr span{color:var(--mut)}.pf-tr.big b{font-size:15px}.pf-tr i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px}.pf-sep{height:1px;background:var(--line);margin:5px 0}
 .pf-legend u.dash{border-top:2px dashed var(--tx);background:none;height:0}
 .pf-legend u:not(.dash){border-top-style:dotted!important}
+
+/* ---- prediction model page ---- */
+.md-eq{font:500 14px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.md-bar{display:inline-block;vertical-align:middle;width:70px;height:7px;background:var(--line);border-radius:5px;overflow:hidden;margin-left:6px}.md-bar i{display:block;height:100%;border-radius:5px}

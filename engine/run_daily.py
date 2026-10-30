@@ -44,6 +44,16 @@ def morning():
     write_oil()
 
 
+def write_model():
+    """Score the trained crash-risk models (data/model/model.json) on today's data. Keeps yesterday's files if anything fails."""
+    try:
+        import mscore
+        mscore.main()
+        print("model scored")
+    except Exception as e:
+        print("model scoring failed:", e)
+
+
 def write_oil():
     try:
         json.dump(oil.build(), open(os.path.join(DATA, "oil.json"), "w"), separators=(",", ":"))
@@ -160,6 +170,7 @@ def main():
     write_crypto()
     write_economy()
     write_oil()
+    write_model()
     try:
         json.dump(currencies.build(), open(os.path.join(DATA, "currencies.json"), "w"), separators=(",", ":"))
         print("currencies written")

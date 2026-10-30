@@ -1,0 +1,841 @@
+{
+ "version": 2,
+ "trained": "2026-10-30",
+ "design_end": 2017,
+ "market": {
+  "equation": {
+   "h": 60,
+   "drop": 0.15,
+   "mu_annual": 0.1,
+   "ewma_alpha": 0.03,
+   "calib": {
+    "a": -0.5697829086234796,
+    "c": 0.6556659000937093
+   },
+   "mu_lfp": -2.9304739167763114,
+   "sd_lfp": 2.1439641011266795,
+   "base_rate": 0.1255
+  },
+  "structural": {
+   "design": {
+    "n": 3776,
+    "event_rate": 0.0477,
+    "auc": 0.786,
+    "brier": 0.0466,
+    "logloss": 0.1824
+   },
+   "holdout": {
+    "n": 2160,
+    "event_rate": 0.1088,
+    "auc": 0.479,
+    "brier": 0.1084,
+    "logloss": 0.4542
+   },
+   "all": {
+    "n": 5936,
+    "event_rate": 0.0699,
+    "auc": 0.662,
+    "brier": 0.0691,
+    "logloss": 0.2813
+   },
+   "base_design": {
+    "n": 3776,
+    "event_rate": 0.0477,
+    "auc": 0.497,
+    "brier": 0.0725,
+    "logloss": 0.2957
+   },
+   "base_holdout": {
+    "n": 2160,
+    "event_rate": 0.1088,
+    "auc": 0.313,
+    "brier": 0.0979,
+    "logloss": 0.3481
+   },
+   "calibration": [
+    {
+     "pred": 0.0,
+     "obs": 0.012,
+     "n": 594
+    },
+    {
+     "pred": 0.001,
+     "obs": 0.071,
+     "n": 594
+    },
+    {
+     "pred": 0.004,
+     "obs": 0.019,
+     "n": 594
+    },
+    {
+     "pred": 0.011,
+     "obs": 0.017,
+     "n": 594
+    },
+    {
+     "pred": 0.022,
+     "obs": 0.054,
+     "n": 594
+    },
+    {
+     "pred": 0.041,
+     "obs": 0.039,
+     "n": 594
+    },
+    {
+     "pred": 0.066,
+     "obs": 0.16,
+     "n": 593
+    },
+    {
+     "pred": 0.101,
+     "obs": 0.106,
+     "n": 593
+    },
+    {
+     "pred": 0.166,
+     "obs": 0.101,
+     "n": 593
+    },
+    {
+     "pred": 0.342,
+     "obs": 0.121,
+     "n": 593
+    }
+   ]
+  },
+  "fragility": {
+   "intercept": -2.09202,
+   "lam": 0.2,
+   "features": [
+    {
+     "name": "ext200",
+     "meaning": "How far the Nasdaq-100 is above its 200-day average (log)",
+     "sign": "+",
+     "mu": 0.045403,
+     "sd": 0.136207,
+     "coef": 0.0,
+     "auc_design": 0.27,
+     "auc_holdout": 0.389
+    },
+    {
+     "name": "run24",
+     "meaning": "Two-year price run-up (log). Greenwood-Shleifer-You: 100% run-ups raise crash odds",
+     "sign": "+",
+     "mu": 0.258368,
+     "sd": 0.422276,
+     "coef": 0.0,
+     "auc_design": 0.424,
+     "auc_holdout": 0.618
+    },
+    {
+     "name": "mom12",
+     "meaning": "One-year price change (log)",
+     "sign": "?",
+     "mu": 0.1284,
+     "sd": 0.283655,
+     "coef": -0.12804,
+     "auc_design": 0.321,
+     "auc_holdout": 0.443
+    },
+    {
+     "name": "dd252",
+     "meaning": "Current drawdown from the 1-year high (log, 0 = at the high)",
+     "sign": "?",
+     "mu": -0.116549,
+     "sd": 0.192424,
+     "coef": -0.25951,
+     "auc_design": 0.191,
+     "auc_holdout": 0.443
+    },
+    {
+     "name": "vol20",
+     "meaning": "Recent volatility (20-day, annualized)",
+     "sign": "+",
+     "mu": 0.236162,
+     "sd": 0.143345,
+     "coef": 0.23844,
+     "auc_design": 0.859,
+     "auc_holdout": 0.585
+    },
+    {
+     "name": "volratio",
+     "meaning": "Recent volatility relative to its 1-year level",
+     "sign": "+",
+     "mu": 0.955207,
+     "sd": 0.367388,
+     "coef": 0.03676,
+     "auc_design": 0.588,
+     "auc_holdout": 0.694
+    },
+    {
+     "name": "sadf",
+     "meaning": "Explosiveness: right-tailed unit-root statistic (Phillips-Shi-Yu style) on log price",
+     "sign": "+",
+     "mu": -0.842788,
+     "sd": 0.551595,
+     "coef": 0.0,
+     "auc_design": 0.525,
+     "auc_holdout": 0.427
+    },
+    {
+     "name": "semi10",
+     "meaning": "Semiconductors vs Nasdaq-100, 10-day change (AI-narrative leadership)",
+     "sign": "-",
+     "mu": 0.000176,
+     "sd": 0.038111,
+     "coef": 0.0,
+     "auc_design": 0.464,
+     "auc_holdout": 0.572
+    },
+    {
+     "name": "semi60",
+     "meaning": "Semiconductors vs Nasdaq-100, 60-day change",
+     "sign": "?",
+     "mu": 0.000625,
+     "sd": 0.099141,
+     "coef": -0.01465,
+     "auc_design": 0.492,
+     "auc_holdout": 0.36
+    },
+    {
+     "name": "breadth",
+     "meaning": "Cap-weighted vs equal-weighted S&P 500, 126-day change (narrowing breadth)",
+     "sign": "+",
+     "mu": 0.000329,
+     "sd": 0.038904,
+     "coef": 0.04326,
+     "auc_design": 0.628,
+     "auc_holdout": 0.527
+    },
+    {
+     "name": "vixrel",
+     "meaning": "VIX relative to its 50-day average (log)",
+     "sign": "+",
+     "mu": -0.009118,
+     "sd": 0.174321,
+     "coef": 0.03278,
+     "auc_design": 0.554,
+     "auc_holdout": 0.588
+    },
+    {
+     "name": "vixlvl",
+     "meaning": "VIX level (log)",
+     "sign": "?",
+     "mu": 2.938558,
+     "sd": 0.344399,
+     "coef": 0.03585,
+     "auc_design": 0.735,
+     "auc_holdout": 0.531
+    },
+    {
+     "name": "credit",
+     "meaning": "Moody's Baa corporate spread over 10-year Treasury (%)",
+     "sign": "+",
+     "mu": 2.371776,
+     "sd": 0.736754,
+     "coef": 0.0,
+     "auc_design": 0.638,
+     "auc_holdout": 0.489
+    },
+    {
+     "name": "credit60",
+     "meaning": "60-day change in that credit spread",
+     "sign": "+",
+     "mu": -0.001357,
+     "sd": 0.400035,
+     "coef": 0.00971,
+     "auc_design": 0.645,
+     "auc_holdout": 0.59
+    },
+    {
+     "name": "curve",
+     "meaning": "10-year minus 3-month Treasury yield (%)",
+     "sign": "-",
+     "mu": 1.304684,
+     "sd": 1.265134,
+     "coef": -0.00919,
+     "auc_design": 0.559,
+     "auc_holdout": 0.339
+    },
+    {
+     "name": "y10chg",
+     "meaning": "3-month change in the 10-year yield (%)",
+     "sign": "+",
+     "mu": -0.001109,
+     "sd": 0.044493,
+     "coef": 0.02499,
+     "auc_design": 0.411,
+     "auc_holdout": 0.602
+    },
+    {
+     "name": "ffrchg",
+     "meaning": "6-month change in the Fed funds rate (%)",
+     "sign": "+",
+     "mu": -0.035328,
+     "sd": 0.829946,
+     "coef": 0.0,
+     "auc_design": 0.329,
+     "auc_holdout": 0.414
+    },
+    {
+     "name": "m2yoy",
+     "meaning": "Money supply (M2) growth over 12 months (%)",
+     "sign": "?",
+     "mu": 6.303327,
+     "sd": 4.269641,
+     "coef": 0.04525,
+     "auc_design": 0.644,
+     "auc_holdout": 0.627
+    },
+    {
+     "name": "nfci",
+     "meaning": "Chicago Fed financial conditions index (positive = tight)",
+     "sign": "+",
+     "mu": -0.371484,
+     "sd": 0.493788,
+     "coef": 0.0629,
+     "auc_design": 0.736,
+     "auc_holdout": 0.437
+    },
+    {
+     "name": "valgdp",
+     "meaning": "Stock market value relative to nominal GDP, in standard deviations from its own history",
+     "sign": "+",
+     "mu": 1.212663,
+     "sd": 0.915892,
+     "coef": 0.11409,
+     "auc_design": 0.59,
+     "auc_holdout": 0.584
+    },
+    {
+     "name": "margin",
+     "meaning": "Brokers' margin-loan growth over 12 months (%)",
+     "sign": "+",
+     "mu": 10.042554,
+     "sd": 24.21057,
+     "coef": 0.10971,
+     "auc_design": 0.546,
+     "auc_holdout": 0.57
+    }
+   ],
+   "design": {
+    "n": 3776,
+    "event_rate": 0.0477,
+    "auc": 0.801,
+    "brier": 0.0642,
+    "logloss": 0.2556
+   },
+   "holdout": {
+    "n": 2160,
+    "event_rate": 0.1088,
+    "auc": 0.503,
+    "brier": 0.1032,
+    "logloss": 0.3631
+   }
+  },
+  "ladder": [
+   {
+    "model": "M1 volatility",
+    "n_features": 3,
+    "design": {
+     "n": 3776,
+     "event_rate": 0.0477,
+     "auc": 0.426,
+     "brier": 0.0557,
+     "logloss": 0.2394
+    },
+    "holdout": {
+     "n": 2160,
+     "event_rate": 0.1088,
+     "auc": 0.39,
+     "brier": 0.1063,
+     "logloss": 0.3817
+    }
+   },
+   {
+    "model": "M2 + price action",
+    "n_features": 8,
+    "design": {
+     "n": 3776,
+     "event_rate": 0.0477,
+     "auc": 0.684,
+     "brier": 0.058,
+     "logloss": 0.2376
+    },
+    "holdout": {
+     "n": 2160,
+     "event_rate": 0.1088,
+     "auc": 0.565,
+     "brier": 0.1002,
+     "logloss": 0.3526
+    }
+   },
+   {
+    "model": "M3 + market structure",
+    "n_features": 11,
+    "design": {
+     "n": 3776,
+     "event_rate": 0.0477,
+     "auc": 0.652,
+     "brier": 0.0591,
+     "logloss": 0.2408
+    },
+    "holdout": {
+     "n": 2160,
+     "event_rate": 0.1088,
+     "auc": 0.559,
+     "brier": 0.1006,
+     "logloss": 0.354
+    }
+   },
+   {
+    "model": "M4 + credit, rates, liquidity",
+    "n_features": 19,
+    "design": {
+     "n": 3776,
+     "event_rate": 0.0477,
+     "auc": 0.784,
+     "brier": 0.0735,
+     "logloss": 0.2796
+    },
+    "holdout": {
+     "n": 2160,
+     "event_rate": 0.1088,
+     "auc": 0.482,
+     "brier": 0.1032,
+     "logloss": 0.363
+    }
+   },
+   {
+    "model": "M5 full (+ valuation, margin debt)",
+    "n_features": 21,
+    "design": {
+     "n": 3776,
+     "event_rate": 0.0477,
+     "auc": 0.775,
+     "brier": 0.0765,
+     "logloss": 0.2817
+    },
+    "holdout": {
+     "n": 2160,
+     "event_rate": 0.1088,
+     "auc": 0.516,
+     "brier": 0.1024,
+     "logloss": 0.3599
+    }
+   }
+  ],
+  "episodes": [
+   {
+    "peak": "1997-01-22",
+    "trough": "1997-04-02",
+    "depth": -0.153,
+    "p_at_peak": 0.121,
+    "p_30d_before": 0.096,
+    "p_60d_before": 0.094,
+    "fragility_at_peak": null
+   },
+   {
+    "peak": "1997-10-09",
+    "trough": "1997-12-24",
+    "depth": -0.182,
+    "p_at_peak": 0.101,
+    "p_30d_before": 0.131,
+    "p_60d_before": 0.151,
+    "fragility_at_peak": null
+   },
+   {
+    "peak": "1998-07-20",
+    "trough": "1998-10-08",
+    "depth": -0.23,
+    "p_at_peak": 0.12,
+    "p_30d_before": 0.123,
+    "p_60d_before": 0.129,
+    "fragility_at_peak": null
+   },
+   {
+    "peak": "2000-03-27",
+    "trough": "2001-03-21",
+    "depth": -0.659,
+    "p_at_peak": 0.308,
+    "p_30d_before": 0.303,
+    "p_60d_before": 0.196,
+    "fragility_at_peak": null
+   },
+   {
+    "peak": "2004-01-26",
+    "trough": "2004-08-12",
+    "depth": -0.16,
+    "p_at_peak": 0.075,
+    "p_30d_before": 0.119,
+    "p_60d_before": 0.135,
+    "fragility_at_peak": 0.15
+   },
+   {
+    "peak": "2006-01-11",
+    "trough": "2006-07-21",
+    "depth": -0.174,
+    "p_at_peak": 0.017,
+    "p_30d_before": 0.015,
+    "p_60d_before": 0.009,
+    "fragility_at_peak": 0.111
+   },
+   {
+    "peak": "2007-10-31",
+    "trough": "2008-10-27",
+    "depth": -0.478,
+    "p_at_peak": 0.079,
+    "p_30d_before": 0.091,
+    "p_60d_before": 0.046,
+    "fragility_at_peak": 0.172
+   },
+   {
+    "peak": "2010-04-23",
+    "trough": "2010-07-02",
+    "depth": -0.159,
+    "p_at_peak": 0.012,
+    "p_30d_before": 0.047,
+    "p_60d_before": 0.055,
+    "fragility_at_peak": 0.05
+   },
+   {
+    "peak": "2011-07-22",
+    "trough": "2011-08-19",
+    "depth": -0.161,
+    "p_at_peak": 0.054,
+    "p_30d_before": 0.025,
+    "p_60d_before": 0.027,
+    "fragility_at_peak": 0.113
+   },
+   {
+    "peak": "2015-11-03",
+    "trough": "2016-02-09",
+    "depth": -0.163,
+    "p_at_peak": 0.095,
+    "p_30d_before": 0.14,
+    "p_60d_before": 0.021,
+    "fragility_at_peak": 0.071
+   },
+   {
+    "peak": "2018-08-29",
+    "trough": "2018-12-24",
+    "depth": -0.23,
+    "p_at_peak": 0.019,
+    "p_30d_before": 0.039,
+    "p_60d_before": 0.067,
+    "fragility_at_peak": 0.066
+   },
+   {
+    "peak": "2020-02-19",
+    "trough": "2020-03-20",
+    "depth": -0.28,
+    "p_at_peak": 0.021,
+    "p_30d_before": 0.009,
+    "p_60d_before": 0.02,
+    "fragility_at_peak": 0.079
+   },
+   {
+    "peak": "2021-11-19",
+    "trough": "2022-11-03",
+    "depth": -0.355,
+    "p_at_peak": 0.019,
+    "p_30d_before": 0.033,
+    "p_60d_before": 0.013,
+    "fragility_at_peak": 0.114
+   },
+   {
+    "peak": "2025-02-19",
+    "trough": "2025-04-08",
+    "depth": -0.229,
+    "p_at_peak": 0.06,
+    "p_30d_before": 0.072,
+    "p_60d_before": 0.073,
+    "fragility_at_peak": 0.091
+   }
+  ],
+  "trained_through": "2026-08-06",
+  "n_days": 7699,
+  "event_rate": 0.1255
+ },
+ "stock": {
+  "intercept": -2.07113,
+  "lam": 0.001,
+  "horizon": 60,
+  "drop": 0.2,
+  "features": [
+   {
+    "name": "vol60",
+    "meaning": "Volatility, last 60 days (annualized, log)",
+    "sign": "+",
+    "mu": -0.001683,
+    "sd": 0.865842,
+    "coef": 0.09368
+   },
+   {
+    "name": "vol252",
+    "meaning": "Volatility, last year (annualized, log)",
+    "sign": "+",
+    "mu": -0.0023,
+    "sd": 0.976104,
+    "coef": 0.4034
+   },
+   {
+    "name": "volratio",
+    "meaning": "Recent volatility relative to last year's",
+    "sign": "+",
+    "mu": 0.004437,
+    "sd": 0.85255,
+    "coef": 0.01165
+   },
+   {
+    "name": "ret1m",
+    "meaning": "Return, last month",
+    "sign": "?",
+    "mu": 0.000311,
+    "sd": 0.928631,
+    "coef": -0.02785
+   },
+   {
+    "name": "ret3m",
+    "meaning": "Return, last 3 months",
+    "sign": "?",
+    "mu": 0.000415,
+    "sd": 0.932643,
+    "coef": -0.00622
+   },
+   {
+    "name": "ret6m",
+    "meaning": "Return, last 6 months",
+    "sign": "?",
+    "mu": -1.3e-05,
+    "sd": 0.930933,
+    "coef": -0.00256
+   },
+   {
+    "name": "ret12_1",
+    "meaning": "Return, months 2-12 back (momentum, skipping the latest month)",
+    "sign": "?",
+    "mu": -0.00064,
+    "sd": 0.92598,
+    "coef": 0.0062
+   },
+   {
+    "name": "ret24",
+    "meaning": "Return, last 2 years (the run-up measure)",
+    "sign": "+",
+    "mu": -0.000767,
+    "sd": 0.911708,
+    "coef": 0.03909
+   },
+   {
+    "name": "ext200",
+    "meaning": "How far above the 200-day average",
+    "sign": "+",
+    "mu": 0.005078,
+    "sd": 0.926526,
+    "coef": 0.01724
+   },
+   {
+    "name": "dd252",
+    "meaning": "Drawdown from the 1-year high",
+    "sign": "?",
+    "mu": 0.02615,
+    "sd": 0.864606,
+    "coef": -0.15396
+   },
+   {
+    "name": "maxret20",
+    "meaning": "Largest one-day gain in the last 20 days (lottery-like jumps)",
+    "sign": "+",
+    "mu": -0.029417,
+    "sd": 0.837774,
+    "coef": 0.09852
+   },
+   {
+    "name": "skew120",
+    "meaning": "Skewness of daily returns, last 120 days",
+    "sign": "?",
+    "mu": 0.009154,
+    "sd": 0.846452,
+    "coef": 0.03069
+   },
+   {
+    "name": "beta",
+    "meaning": "Sensitivity to the Nasdaq-100 (252-day beta)",
+    "sign": "+",
+    "mu": -0.005413,
+    "sd": 0.967377,
+    "coef": 0.06599
+   },
+   {
+    "name": "aibeta",
+    "meaning": "Extra sensitivity to semiconductors beyond the Nasdaq-100 (AI-factor beta)",
+    "sign": "+",
+    "mu": -0.024297,
+    "sd": 0.885655,
+    "coef": 0.00602
+   },
+   {
+    "name": "lnprice",
+    "meaning": "Share price (log): very low-priced stocks are crash-prone",
+    "sign": "-",
+    "mu": 0.003303,
+    "sd": 0.972465,
+    "coef": 0.0
+   }
+  ],
+  "ladder": [
+   {
+    "model": "S1 volatility",
+    "n_features": 3,
+    "design": {
+     "n": 398193,
+     "crash_rate": 0.1074,
+     "pooled_auc": 0.669,
+     "within_date_auc": 0.781,
+     "deciles": [
+      0.032,
+      0.0418,
+      0.0534,
+      0.0674,
+      0.0857,
+      0.1024,
+      0.1124,
+      0.1425,
+      0.1829,
+      0.2535
+     ]
+    },
+    "holdout": {
+     "n": 319562,
+     "crash_rate": 0.1287,
+     "pooled_auc": 0.689,
+     "within_date_auc": 0.746,
+     "deciles": [
+      0.041,
+      0.0564,
+      0.0685,
+      0.0776,
+      0.095,
+      0.1152,
+      0.1425,
+      0.1615,
+      0.2092,
+      0.3195
+     ]
+    }
+   },
+   {
+    "model": "S2 + momentum and extension",
+    "n_features": 10,
+    "design": {
+     "n": 398193,
+     "crash_rate": 0.1074,
+     "pooled_auc": 0.675,
+     "within_date_auc": 0.788,
+     "deciles": [
+      0.0309,
+      0.0405,
+      0.0506,
+      0.0663,
+      0.0858,
+      0.1026,
+      0.1138,
+      0.1425,
+      0.1835,
+      0.2574
+     ]
+    },
+    "holdout": {
+     "n": 319562,
+     "crash_rate": 0.1287,
+     "pooled_auc": 0.69,
+     "within_date_auc": 0.749,
+     "deciles": [
+      0.0397,
+      0.0554,
+      0.0684,
+      0.0796,
+      0.0926,
+      0.1172,
+      0.1428,
+      0.1585,
+      0.2107,
+      0.3216
+     ]
+    }
+   },
+   {
+    "model": "S3 + beta, AI exposure, jumps, price",
+    "n_features": 15,
+    "design": {
+     "n": 398193,
+     "crash_rate": 0.1074,
+     "pooled_auc": 0.677,
+     "within_date_auc": 0.786,
+     "deciles": [
+      0.0301,
+      0.0402,
+      0.0502,
+      0.0679,
+      0.0848,
+      0.1005,
+      0.1147,
+      0.1461,
+      0.1834,
+      0.2561
+     ]
+    },
+    "holdout": {
+     "n": 319562,
+     "crash_rate": 0.1287,
+     "pooled_auc": 0.691,
+     "within_date_auc": 0.749,
+     "deciles": [
+      0.0402,
+      0.0548,
+      0.0694,
+      0.0811,
+      0.091,
+      0.1136,
+      0.1365,
+      0.1642,
+      0.2117,
+      0.324
+     ]
+    }
+   }
+  ],
+  "by_year_auc": {
+   "2005": 0.802,
+   "2006": 0.79,
+   "2007": 0.692,
+   "2008": 0.638,
+   "2009": 0.655,
+   "2010": 0.732,
+   "2011": 0.719,
+   "2012": 0.784,
+   "2013": 0.812,
+   "2014": 0.781,
+   "2015": 0.775,
+   "2016": 0.766,
+   "2017": 0.796,
+   "2018": 0.698,
+   "2019": 0.689,
+   "2020": 0.554,
+   "2021": 0.778,
+   "2022": 0.723,
+   "2023": 0.751,
+   "2024": 0.758,
+   "2025": 0.717,
+   "2026": 0.743
+  },
+  "n_obs": 918600,
+  "n_stocks": 762,
+  "first_date": "1996-06-11",
+  "last_label_date": "2026-08-05",
+  "base_rate": 0.1299
+ }
+}

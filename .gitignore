@@ -9,3 +9,4 @@ site/
 data/snap/
 private/
 data/about/
+data/model_cache/

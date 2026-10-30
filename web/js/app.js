@@ -253,6 +253,7 @@ function watch() {
    <b>${c.id}. ${c.name}</b> <span class="pill">${c.group}</span>${c.proxy ? '<span class="pill w">proxy</span>' : ""}<span class="pill">${wtxt(c)}</span>
    <div class="small muted">${linkTickers(c.detail)}</div>${c.threshold ? `<div class="small muted">Flashes when: ${c.threshold}</div>` : ""}</div></div>`).join("")}</div>
   ${typeof ownerDocCard === "function" ? ownerDocCard() : ""}
+  ${typeof AUTH !== "undefined" && AUTH.owner ? `<a class="card" href="#/model" style="color:inherit;display:block;border:2px solid var(--brand)"><span class="pill w">Owner only</span><h3 style="margin:6px 0 2px">Prediction model v2: equations, evidence and stock risk scores</h3><p class="muted small" style="margin:0">The crash-probability formula, the 21 bubble indicators we researched with how each held up out of sample, and a 60-day crash-risk estimate for every stock. Includes where it fails.</p></a>` : ""}
   <p class="small muted">${s.evaluated} of ${s.total} checks are live. We tested the thresholds on 1999–2026 history: when the health score fell to 75 or below, a 15%+ drop in the next 60 days was only about 1.7–2x as likely as normal. That's a modest tilt, not a prediction. See <a href="#/about">how it works</a>.</p>`;
 }
 
@@ -275,7 +276,7 @@ async function route() {
   if (typeof globeDispose === "function") globeDispose();   // free the globe's WebGL context when leaving the home page
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
-  const views = { home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
+  const views = { model: () => modelPage(), home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
     explore: () => (h[1] === "overlooked" ? overlookedPage() : h[1] === "heatmap" ? heatmapPage() : h[1] === "screener" ? screenerPage() : h[1] === "compare" ? comparePage(h[2]) : h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), analysis: () => analysisPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), report: () => reportPage(h[1], h[2]), methodology: () => methodologyPage(), watchlist: () => watchlistPage(), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
