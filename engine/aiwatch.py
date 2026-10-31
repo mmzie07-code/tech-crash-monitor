@@ -19,7 +19,8 @@ CACHE = os.path.join(DATA, "model_cache")
 CIK = {"MSFT": 789019, "GOOGL": 1652044, "AMZN": 1018724, "META": 1326801, "ORCL": 1341439, "NVDA": 1045810, "AMD": 2488, "AVGO": 1730168, "MU": 723125, "CRWV": 1769628}
 HYPER = ["MSFT", "GOOGL", "AMZN", "META", "ORCL"]
 PEERS = ["AMD", "AVGO", "MU"]
-PILLARS = [("A", "AI spending and demand", 22), ("B", "NVIDIA and the chip supply chain", 22), ("C", "Financing and credit", 22), ("D", "Market structure and valuation", 24), ("E", "Validated statistical models", 10)]
+PILLARS = [("A", "AI spending and demand", 18), ("B", "NVIDIA and the chip supply chain", 18), ("C", "Financing and credit", 18), ("D", "Market structure and valuation", 16), ("E", "Validated statistical models", 8),
+           ("F", "Macro, liquidity and policy", 10), ("G", "AI supply chain and market leadership", 8), ("H", "Attention and news", 4)]
 QENDS = [(3, 31), (6, 30), (9, 30), (12, 31)]
 
 
@@ -547,6 +548,14 @@ def build(checks, F2=None):
         inds += pillar_e()
     except Exception as e:
         print("pillar E failed:", e)
+    heads = []
+    try:
+        import aiwatch_ext as X
+        inds += X.pillar_f()
+        inds += X.pillar_g()
+        r, heads = X.pillar_h(); inds += r
+    except Exception as e:
+        print("extension pillars failed:", e)
     limit = {"daily": 6, "weekly": 21, "monthly": 75, "quarterly": 135}
     for i in inds:
         if i["age"] is not None and i["age"] > limit.get(i["cadence"], 60):
@@ -578,7 +587,7 @@ def build(checks, F2=None):
     stale = [i["key"] for i in inds if i.get("stale")]
     hist = update_history(heat, health, pillars)
     return dict(generated=dt.datetime.utcnow().isoformat() + "Z", changes=hist["changes"], series=hist["series"], heat=None if heat is None else round(heat, 1), health=health, zone=None if health is None else zone(health), coverage=dict(n=len([i for i in inds if i["heat"] is not None and i["weight"] > 0]), total=len(inds)),
-                pillars=pillars, indicators=inds, drivers=[i["key"] for i in drivers], stale=stale, filings=filings, financing_filings=feed, context=ctx)
+                pillars=pillars, indicators=inds, drivers=[i["key"] for i in drivers], stale=stale, filings=filings, financing_filings=feed, headlines=heads, context=ctx)
 
 
 if __name__ == "__main__":

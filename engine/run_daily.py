@@ -62,6 +62,13 @@ def write_ai(checks):
         snap.update(ai_heat=r["heat"], ai_health=r["health"], ai_zone=r["zone"], ai_indicators=r["coverage"]["n"], ai_updated=r["generated"])
         json.dump(snap, open(lp, "w"), indent=1)
         print("ai index written: health %s (%s), %d indicators" % (r["health"], r["zone"], r["coverage"]["n"]))
+        try:
+            import ai_outlook
+            o = ai_outlook.run(F2, ai=r)
+            json.dump(o, open(os.path.join(DATA, "ai_outlook.json"), "w"), separators=(",", ":"))
+            print("ai outlook written: P(15%% fall in 60d) %s" % o["crash"]["ens15"])
+        except Exception as e:
+            print("ai outlook failed:", e)
     except Exception as e:
         print("ai index failed:", e)
 
