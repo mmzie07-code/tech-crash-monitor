@@ -22,7 +22,7 @@
 
   // ---- scroll reveal ----
   const io = "IntersectionObserver" in window && !still ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: 0.06 }) : null;
-  const SEL = "h1, h2, .hero > *, .card, .mod, .wid, .story, .tabs, .cards > *, .hz > *, .mods > *, .lesson > *";
+  const SEL = "h1, h2, .hero > *, .card, .mod, .wid, .story, .tabs, .ftile, .cards > *, .hz > *, .mods > *, .lesson > *";
   function reveal() {
     if (!io || !view) return;
     const els = [...view.querySelectorAll(SEL)].filter((el) => !el.classList.contains("rv") && !el.closest(".globe-wrap") && !(el.parentElement && el.parentElement.closest(".rv")));

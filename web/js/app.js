@@ -81,11 +81,11 @@ function home() {
 }
 
 function learn() {
-  const rows = MODULES.map((m) => `<a class="mod ${state.done[m.id] ? "done" : ""} ${m.live ? "" : "soon"}" href="${m.live ? "#/learn/" + m.id : "#/learn"}">
-   <div class="n">${state.done[m.id] ? "✓" : m.id}</div><div class="t"><b>${m.title}</b><span class="small muted">${m.blurb}</span></div>
-   <span class="small muted">${m.live ? m.mins + " min" : "Coming soon"}</span></a>`).join("");
+  const hue = [168, 205, 38, 285, 140, 12, 232, 322];
+  const tl = MODULES.map((m, i) => ({ href: m.live ? "#/learn/" + m.id : "#/learn", title: m.title, blurb: m.blurb, tag: state.done[m.id] ? "Completed" : m.live ? "Lesson" : "Coming soon", big: String(m.id).padStart(2, "0"), meta: m.live ? m.mins + " min" : "", seed: "learn-" + m.id + m.title, hue: hue[i % hue.length], soon: !m.live }));
   return `<h1>Crash course</h1><p class="lead muted">Eight short lessons. Go at your own pace; progress saves on this device.</p>
-  <div class="bar" style="margin:14px 0 22px"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><div class="mods">${rows}</div>
+  <div class="bar" style="margin:14px 0 4px"><i style="width:${doneCount() / MODULES.length * 100}%"></i></div><p class="small muted" style="margin:6px 0 0">${doneCount()} of ${MODULES.length} complete</p>
+  ${tileGrid(tl, "learn")}
   <h2 style="margin-top:1.6em">Glossary</h2><div class="cards">${GLOSSARY.map(([t, d]) => `<div class="card"><b>${t}</b><p class="muted small" style="margin:4px 0 0">${d}</p></div>`).join("")}</div>
   <a class="card" href="#/practice" style="color:inherit;display:block"><span class="pill g">New</span><h3>Practice trading</h3><p class="muted" style="margin:0">Try investing with $10,000 of pretend money and real prices. No risk, real lessons, and goals that test what you learned.</p></a>`;
 }
@@ -197,7 +197,20 @@ function markets(tab, sub) {
   tab = tab || "overview"; const m = state.mk; let b = "";
   if (tab === "overview") {
     const sec = m && m.sectors ? [...m.sectors].sort((a, b) => b.d1 - a.d1) : [];
-    b = `<h2>Major indices</h2>${tiles(m && m.indices)}
+    const aiw = state.aiw && state.aiw.health != null ? state.aiw : null;
+    const hub = [
+      { href: "#/watch", title: "AI & Tech Watch", tag: "Featured", big: aiw ? String(aiw.health) : "", blurb: aiw ? aiw.zone + ": " + aiw.coverage.n + " indicators on the AI buildout, plus an outlook for the weeks ahead." : "Is there an AI bubble? Dozens of indicators, refreshed daily.", seed: "ai-watch", hue: 165 },
+      { href: "#/markets/economy", title: "The US economy", tag: "Dashboard", blurb: "Inflation, jobs, growth, yields and stress gauges.", seed: "economy", hue: 212 },
+      { href: "#/markets/oil", title: "Oil", tag: "Energy", blurb: "Prices, supply and what moves them.", seed: "oil", hue: 28 },
+      { href: "#/markets/brief", title: "Daily brief", tag: "Today", blurb: state.brief ? state.brief.headline : "What happened in markets today.", seed: "brief", hue: 262 },
+      { href: "#/markets/earnings", title: "Earnings", tag: "Reports", blurb: "Who reported, who beat, and how stocks reacted.", seed: "earnings", hue: 142 },
+      { href: "#/markets/calendar", title: "Calendar", tag: "Ahead", blurb: "The economic events that move markets.", seed: "calendar", hue: 190 },
+      { href: "#/markets/crypto", title: "Crypto", tag: "Digital assets", blurb: "Bitcoin, Ethereum and the top coins.", seed: "crypto", hue: 288 },
+      { href: "#/markets/currencies", title: "Currencies", tag: "Dollar vs the world", blurb: "The dollar against every major currency, and 100 years of its value.", seed: "currencies", hue: 96 },
+      { href: "#/markets/housing", title: "Housing", tag: "Real estate", blurb: "Prices, rates and affordability.", seed: "housing", hue: 42 },
+      { href: "#/markets/ipos", title: "IPOs", tag: "New listings", blurb: "Companies coming to market.", seed: "ipos", hue: 322 },
+      { href: "#/markets/outlook", title: "Outlook", tag: "Forecasts", blurb: "Where analysts and models see markets heading.", seed: "outlook", hue: 8 }];
+    b = tileGrid(hub, "markets") + `<h2>Major indices</h2>${tiles(m && m.indices)}
     <h2>Sectors today</h2><p class="muted small">Which parts of the economy are leading or lagging. Green is up, red is down.</p>
     <div class="hz">${sec.map((r) => `<a class="card" href="#/explore/${SECTOR_ETF_KEY[r.symbol] || ""}" style="background:${heat(r.d1)};color:inherit;display:block"><div class="small">${r.name}</div><div style="font-weight:800;font-size:20px">${chg(r.d1, r.kind)}</div><div class="small muted">${chg(r.ytd, r.kind)} YTD</div><div class="small" style="margin-top:4px;color:var(--brand)">See sector →</div></a>`).join("")}</div>
     <h2>Rates, currencies &amp; commodities</h2><div class="card">${rowList(m && m.macro)}</div>
@@ -225,7 +238,7 @@ function markets(tab, sub) {
   } else {
     b = outlookView(sub);
   }
-  const wrap = (x) => `<h1>Markets</h1>${mTabs(tab)}${x}`;
+  const wrap = (x) => `<h1>Markets</h1>${tab === "overview" ? "" : mTabs(tab)}${x}`;
   return b && b.then ? b.then(wrap) : wrap(b);
 }
 
