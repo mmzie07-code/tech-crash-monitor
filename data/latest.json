@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generated": "2026-10-29T22:11:14.463419Z",
+ "generated": "2026-10-31T00:58:17.103557Z",
  "level": "Elevated",
  "health": 62,
  "score": 38,
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 27.4,
+   "value": 26.4,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 27.4; price is 5.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 26.4; price is 5.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -39,9 +39,9 @@
    "name": "AI capex vs revenue gap",
    "group": "stretch",
    "status": "warn",
-   "value": 60.8,
+   "value": 67.0,
    "threshold": "capex growth exceeds revenue growth by > 25 pts (unvalidated)",
-   "detail": "MSFT+GOOGL+AMZN+META capex $573B TTM (+81% YoY, 31% of revenue) vs revenue +20%. As of 2026-09-30.",
+   "detail": "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%. As of 2026-09-30.",
    "source": "SEC EDGAR XBRL",
    "proxy": false,
    "weight": 1
@@ -65,7 +65,7 @@
    "status": "ok",
    "value": 0.3,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.99%, +0.30 pts over 3 months.",
+   "detail": "10Y yield 4.93%, +0.30 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 17.2,
+   "value": 19.4,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 17.2 is 1.07x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 19.4 is 1.21x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 2.29,
+   "value": 2.31,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1761M in 90 days vs $771M per-90d baseline (2.29x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1761M in 90 days vs $761M per-90d baseline (2.31x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -1135,9 +1135,9 @@
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 62.9,
- "ai_health": 37,
+ "ai_heat": 60.5,
+ "ai_health": 40,
  "ai_zone": "Warning",
  "ai_indicators": 35,
- "ai_updated": "2026-10-30T17:39:07.263786Z"
+ "ai_updated": "2026-10-31T01:46:00.589390Z"
 }

@@ -1,140 +1,8 @@
 {
- "generated": "2026-10-30T13:45:04.478040Z",
- "today": "2026-10-30",
+ "generated": "2026-10-31T01:44:08.656930Z",
+ "today": "2026-10-31",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-10-30-earnings-exxonmobil-holdings-xom-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "ExxonMobil Holdings (XOM) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
-   "extra": {
-    "market_cap_b": 754,
-    "eps_forecast": "$3.90"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-abbvie-abbv-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "AbbVie (ABBV) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.74.",
-   "extra": {
-    "market_cap_b": 514,
-    "eps_forecast": "$3.74"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-chevron-cvx-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Chevron (CVX) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.78.",
-   "extra": {
-    "market_cap_b": 457,
-    "eps_forecast": "$4.78"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-astrazeneca-plc-azn-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "AstraZeneca PLC (AZN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.60.",
-   "extra": {
-    "market_cap_b": 264,
-    "eps_forecast": "$2.60"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-bp-p-l-c-bp-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "BP p.l.c. (BP) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.66.",
-   "extra": {
-    "market_cap_b": 130,
-    "eps_forecast": "$2.66"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-sanofi-sny-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Sanofi (SNY) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.63.",
-   "extra": {
-    "market_cap_b": 105,
-    "eps_forecast": "$1.63"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-general-dynamics-gd-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "General Dynamics (GD) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.14.",
-   "extra": {
-    "market_cap_b": 100,
-    "eps_forecast": "$4.14"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-earnings-regeneron-pharmaceuticals-regn-reports-earnings",
-   "date": "2026-10-30",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Regeneron Pharmaceuticals (REGN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $13.76.",
-   "extra": {
-    "market_cap_b": 84,
-    "eps_forecast": "$13.76"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-10-30-data-g-20-finance-companies",
-   "date": "2026-10-30",
-   "time": "Time TBA",
-   "kind": "data",
-   "title": "G.20 - Finance Companies",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. Publication date for this release is approximate.",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-11-02-earnings-apple-aapl-reports-earnings",
    "date": "2026-11-02",
@@ -838,6 +706,66 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-constellation-energy-ceg-reports-earnings",
+   "date": "2026-11-09",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Constellation Energy (CEG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
+   "extra": {
+    "market_cap_b": 94,
+    "eps_forecast": "$3.90"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
+   "date": "2026-11-09",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "KKR & (KKR) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.41.",
+   "extra": {
+    "market_cap_b": 86,
+    "eps_forecast": "$1.41"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-barrick-mining-b-reports-earnings",
+   "date": "2026-11-09",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Barrick Mining (B) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.78.",
+   "extra": {
+    "market_cap_b": 64,
+    "eps_forecast": "$0.78"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-occidental-petroleum-oxy-reports-earnings",
+   "date": "2026-11-09",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Occidental Petroleum (OXY) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.43.",
+   "extra": {
+    "market_cap_b": 63,
+    "eps_forecast": "$1.43"
+   },
+   "source": "",
    "link": null
   },
   {

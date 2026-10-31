@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T13:43:55.895322Z",
+ "generated": "2026-10-31T01:42:32.490172Z",
  "ai_summaries": false,
  "days": [
   {
@@ -170,7 +170,7 @@
   },
   {
    "date": "2026-10-29",
-   "reported_total": 326,
+   "reported_total": 325,
    "top": [
     {
      "symbol": "AMZN",
@@ -349,9 +349,26 @@
    "reported_total": 249,
    "top": [
     {
+     "symbol": "MSFT",
+     "name": "Microsoft",
+     "market_cap_b": 3936.9,
+     "eps": 4.89,
+     "eps_estimate": 4.71,
+     "surprise_pct": 3.82,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.89 versus $4.71 expected, so the company beat estimates by 3.8%.",
+      "Stock moved -0.1% on Oct 28.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "GOOG",
      "name": "Alphabet",
-     "market_cap_b": 3973.4,
+     "market_cap_b": 3489.3,
      "eps": 2.12,
      "eps_estimate": 2.94,
      "surprise_pct": -27.89,
@@ -367,7 +384,7 @@
     {
      "symbol": "GOOGL",
      "name": "Alphabet",
-     "market_cap_b": 3973.4,
+     "market_cap_b": 3489.3,
      "eps": 2.12,
      "eps_estimate": 2.94,
      "surprise_pct": -27.89,
@@ -382,26 +399,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GOOGL&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "MSFT",
-     "name": "Microsoft",
-     "market_cap_b": 3943.5,
-     "eps": 4.89,
-     "eps_estimate": 4.71,
-     "surprise_pct": 3.82,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $4.89 versus $4.71 expected, so the company beat estimates by 3.8%.",
-      "Stock moved -0.1% on Oct 28.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "SKHY",
      "name": "SK hynix",
-     "market_cap_b": 1200.4,
+     "market_cap_b": 1181.4,
      "eps": 3.84,
      "eps_estimate": 5.96,
      "surprise_pct": -35.57,
@@ -418,7 +418,7 @@
     {
      "symbol": "GEV",
      "name": "GE Vernova",
-     "market_cap_b": 233.8,
+     "market_cap_b": 235.0,
      "eps": 4.81,
      "eps_estimate": 4.03,
      "surprise_pct": 19.35,
@@ -435,7 +435,7 @@
     {
      "symbol": "KLAC",
      "name": "KLA Corporation",
-     "market_cap_b": 207.2,
+     "market_cap_b": 218.5,
      "eps": 1.22,
      "eps_estimate": 1.18,
      "surprise_pct": 3.39,
@@ -452,7 +452,7 @@
     {
      "symbol": "APH",
      "name": "Amphenol",
-     "market_cap_b": 199.6,
+     "market_cap_b": 202.4,
      "eps": 0.8,
      "eps_estimate": 0.73,
      "surprise_pct": 9.59,
@@ -469,7 +469,7 @@
     {
      "symbol": "SAN",
      "name": "Banco Santander, S.A.",
-     "market_cap_b": 183.0,
+     "market_cap_b": 166.9,
      "eps": 0.26,
      "eps_estimate": 0.26,
      "surprise_pct": null,
@@ -486,7 +486,7 @@
     {
      "symbol": "TMUS",
      "name": "T-Mobile US",
-     "market_cap_b": 158.8,
+     "market_cap_b": 156.0,
      "eps": 3.22,
      "eps_estimate": 2.86,
      "surprise_pct": 12.59,
@@ -501,21 +501,21 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TMUS&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "NOW",
-     "name": "ServiceNow",
-     "market_cap_b": 155.2,
-     "eps": 0.51,
-     "eps_estimate": 0.56,
-     "surprise_pct": -8.93,
+     "symbol": "UBS",
+     "name": "UBS AG",
+     "market_cap_b": 149.4,
+     "eps": 0.85,
+     "eps_estimate": 0.91,
+     "surprise_pct": -6.59,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.51 versus $0.56 expected, so the company missed estimates by 8.9%.",
-      "Stock moved -3.0% on Oct 28.",
+      "Earnings per share were $0.85 versus $0.91 expected, so the company missed estimates by 6.6%.",
+      "Stock moved -0.2% on Oct 28.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NOW&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UBS&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },

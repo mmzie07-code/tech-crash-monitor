@@ -1,7 +1,47 @@
 {
- "generated": "2026-10-30T13:45:16.847352Z",
+ "generated": "2026-10-31T01:44:15.609260Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-10-30-earnings-exxonmobil-holdings-xom-reports-earnings",
+   "date": "2026-10-30",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "ExxonMobil Holdings (XOM) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-10-30-earnings-abbvie-abbv-reports-earnings",
+   "date": "2026-10-30",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "AbbVie (ABBV) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
   {
    "headline": "Eli Lilly and reported earnings: beat estimates.",
    "bullets": [

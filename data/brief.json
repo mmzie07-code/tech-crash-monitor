@@ -1,15 +1,15 @@
 {
- "date": "2026-10-29",
- "generated": "2026-10-29T23:03:15.944469Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.30%, with 9 of 11 sectors up.",
+ "date": "2026-10-30",
+ "generated": "2026-10-31T01:49:14.409300Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 1.82%, with 9 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.30% today, +0.90% this month, +12.57% this year",
-    "Dow Jones: -0.25% today, +2.82% this month, +8.19% this year",
-    "Nasdaq Composite: -1.38% today, -2.52% this month, +12.69% this year",
-    "Russell 2000: +1.01% today, +2.23% this month, +13.99% this year"
+    "S&P 500: -1.82% today, -1.13% this month, +10.52% this year",
+    "Dow Jones: -1.09% today, +1.66% this month, +7.00% this year",
+    "Nasdaq Composite: -2.86% today, -5.34% this month, +9.47% this year",
+    "Russell 2000: -1.66% today, +0.19% this month, +12.11% this year"
    ]
   },
   {
@@ -23,39 +23,40 @@
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 17.20 (+1.71% today)",
-    "10-year Treasury yield: 4.99% (-0.06 pts today)",
-    "US dollar index: 101.86 (-0.32% today)",
-    "Crude oil: 102.86 (+0.08% today)",
-    "Gold: 4,033.80 (-0.44% today)",
-    "Bitcoin: 78,573.80 (-3.31% today)"
+    "VIX (fear gauge): 19.42 (+12.91% today)",
+    "10-year Treasury yield: 4.93% (-0.06 pts today)",
+    "US dollar index: 101.96 (-0.07% today)",
+    "Crude oil: 102.95 (+0.93% today)",
+    "Gold: 3,884.90 (-3.63% today)",
+    "Bitcoin: 77,366.56 (-0.53% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The 10-year yield moved -0.06 points to 4.99%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "Bitcoin moved -3.31%, showing appetite (or lack of it) for speculative assets.",
+    "The 10-year yield moved -0.06 points to 4.93%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "The VIX (expected volatility) jumped +12.91% to 19.4. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "Gold moved -3.63%. Investors often buy gold when they are worried about inflation or turmoil.",
     "A 4.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Thu Oct 29, 8:30 AM ET: GDP advance estimate: first look at economic growth",
-    "Thu Oct 29, 8:30 AM ET: Personal income and spending, including PCE inflation",
-    "Thu Oct 29, After close: Amazon.com (AMZN) reports earnings",
-    "Thu Oct 29, Before open: Eli Lilly and Company (LLY) reports earnings"
+    "Mon Nov 2, After close: Apple (AAPL) reports earnings",
+    "Tue Nov 3, After close: Advanced Micro Devices (AMD) reports earnings",
+    "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.A) reports earnings",
+    "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.B) reports earnings"
    ]
   },
   {
    "title": "Just happened",
    "bullets": [
-    "GDP advance estimate: first look at economic growth: Real gross domestic product (GDP) increased at an annual rate of 3.4 percent in the third quarter of 2026 (July, August, and September).",
-    "Personal income and spending, including PCE inflation: Personal income increased $54.5 billion (0.2 percent at a monthly rate) in September.",
-    "Alphabet: Alphabet reported earnings: missed estimates.",
-    "Alphabet: Alphabet reported earnings: missed estimates.",
-    "Microsoft: Microsoft reported earnings: beat estimates."
+    "Eli Lilly and Company: Eli Lilly and reported earnings: beat estimates.",
+    "Mastercard Incorporated: Mastercard Incorporated reported earnings: beat estimates.",
+    "Amazon.com: Amazon.com reported earnings: missed estimates.",
+    "Intel: Intel reported earnings: beat estimates.",
+    "GDP advance estimate: first look at economic growth: Real gross domestic product (GDP) increased at an annual rate of 3.4 percent in the third quarter of 2026 (July, August, and September)."
    ]
   },
   {
@@ -69,52 +70,52 @@
  ],
  "headlines": [
   {
-   "title": "Amazon posts negative free cash flow of $42.4 billion, holds 2026 capex unchanged",
+   "title": "Intel stock has worst day since 1970s, wiping about $12 billion off government's stake",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/29/amazon-amzn-q3-earnings-report-2026.html",
-   "published": "Thu, 29 Oct 2026 22:24:49"
+   "link": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
+   "published": "Fri, 30 Oct 2026 20:30:57"
   },
   {
-   "title": "Intel stock plunges 21% as chipmaker blames PC slowdown for weak guidance",
+   "title": "Treasury Department announces new Series I bond rate of 5.51% for the next six months",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html",
-   "published": "Thu, 29 Oct 2026 22:37:54"
+   "link": "https://www.cnbc.com/2026/10/30/treasury-i-bond-rate-through-april-2027.html",
+   "published": "Fri, 30 Oct 2026 17:15:53"
   },
   {
-   "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
+   "title": "Alaska Senate election: DOJ wants to 'segregate' all ballots for 2nd Sullivan candidate",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/29/servicenow-now-earnings-q3-2026.html",
-   "published": "Thu, 29 Oct 2026 20:02:32"
+   "link": "https://www.cnbc.com/2026/10/30/alaska-senate-election-doj-lawsuit-sullivan-peltola.html",
+   "published": "Fri, 30 Oct 2026 22:57:55"
   },
   {
-   "title": "Circle, Tether freeze funds impacted by potential Binance 'security issue'",
+   "title": "Halloween gets pricier as chocolate costs climb \u2014 Hershey may feel the pinch",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html",
-   "published": "Thu, 29 Oct 2026 22:47:32"
+   "link": "https://www.cnbc.com/2026/10/30/halloween-gets-pricier-as-chocolate-costs-rise-hershey-could-feel-it.html",
+   "published": "Fri, 30 Oct 2026 16:55:41"
   },
   {
-   "title": "My abusive ex-husband promised $20,000 for our kids\u2019 education. Now he refuses to pay. Is he legally obligated?",
+   "title": "Has the tech bubble burst? Why the Nasdaq\u2019s rough ride looks eerily like 2000.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-abusive-ex-husband-promised-20-000-for-our-kids-education-now-he-refuses-to-pay-is-he-legally-obligated-325ef50f?mod=mw_rss_topstories",
-   "published": "Thu, 29 Oct 2026 22:45:00"
+   "link": "https://www.marketwatch.com/story/has-the-tech-bubble-burst-why-the-nasdaqs-rough-ride-looks-eerily-like-2000-5bcefcb2?mod=mw_rss_topstories",
+   "published": "Fri, 30 Oct 2026 23:14:00"
   },
   {
-   "title": "The midterms are crucial to the future of Social Security \u2014 no matter how old you are",
+   "title": "This cybersecurity stock will be the next to join the S&P 500",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-midterms-are-crucial-to-the-future-of-social-security-no-matter-how-old-you-are-0f080a9c?mod=mw_rss_topstories",
-   "published": "Thu, 29 Oct 2026 22:01:00"
+   "link": "https://www.marketwatch.com/story/this-cybersecurity-stock-will-be-the-next-to-join-the-s-p-500-dc976803?mod=mw_rss_topstories",
+   "published": "Fri, 30 Oct 2026 22:20:00"
   },
   {
-   "title": "Our church has a $1.5 million bequest earning 3.75% in a bank account. Is inflation eroding it?",
+   "title": "Why gold plunged to its lowest price in a year despite renewed Iran jitters",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/there-may-be-better-investment-options-my-church-received-1-5-million-from-a-parishioner-is-3-75-interest-enough-5164d790?mod=mw_rss_topstories",
-   "published": "Thu, 29 Oct 2026 22:00:00"
+   "link": "https://www.marketwatch.com/story/why-gold-plunged-to-its-lowest-price-in-a-year-despite-renewed-iran-jitters-365be0e2?mod=mw_rss_topstories",
+   "published": "Fri, 30 Oct 2026 21:30:00"
   },
   {
-   "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
+   "title": "Warsh wants the Fed to say less. Two officials are pushing for more transparency.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/is-it-curtains-for-cola-saving-social-security-could-mean-changing-the-cost-of-living-adjustment-867c6bd8?mod=mw_rss_topstories",
-   "published": "Thu, 29 Oct 2026 21:52:00"
+   "link": "https://www.marketwatch.com/story/the-fed-held-interest-rates-steady-but-these-officials-see-more-hikes-coming-soon-2098bbd8?mod=mw_rss_topstories",
+   "published": "Fri, 30 Oct 2026 21:23:00"
   }
  ],
  "summary": null,
