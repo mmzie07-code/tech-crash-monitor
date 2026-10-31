@@ -93,6 +93,9 @@ OVERSEAS = [
     ("MTQ", "Martinique", "MQ", "Fort-de-France", [14.6, -61.07], "Americas", "Caribbean", "EUR", "America/Martinique", "FRA", (-61.5, 14, -60.5, 15)),
     ("REU", "Réunion", "RE", "Saint-Denis", [-20.88, 55.45], "Africa", "Eastern Africa", "EUR", "Indian/Reunion", "FRA", (54.5, -22, 56.5, -20)),
     ("MYT", "Mayotte", "YT", "Mamoudzou", [-12.78, 45.23], "Africa", "Eastern Africa", "EUR", "Indian/Mayotte", "FRA", (44.5, -13.5, 45.5, -12)),
+    ("XCN", "Canary Islands", "ES", "Las Palmas / Santa Cruz", [28.29, -16.63], "Africa", "Atlantic Ocean", "EUR", "Atlantic/Canary", "ESP", (-19, 27, -13, 29.6)),
+    ("XMD", "Madeira", "PT", "Funchal", [32.65, -16.91], "Africa", "Atlantic Ocean", "EUR", "Atlantic/Madeira", "PRT", (-17.5, 32, -16, 33.5)),
+    ("XAZ", "Azores", "PT", "Ponta Delgada", [37.74, -25.67], "Europe", "Atlantic Ocean", "EUR", "Atlantic/Azores", "PRT", (-32, 36.5, -24.5, 40)),
     ("BES", "Caribbean Netherlands", "BQ", "Kralendijk", [12.14, -68.27], "Americas", "Caribbean", "USD", "America/Kralendijk", "NLD", (-70, 11.5, -62, 18.5)),
 ]
 
