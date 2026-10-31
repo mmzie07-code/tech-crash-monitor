@@ -138,11 +138,12 @@ function econDetail(it, d) {
    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:6px"><div><h1 style="margin:0">${esc(it.label)}</h1><div class="muted">${econChip(it.state, it.rule)} ${esc(econDate(it))}</div></div>
     <div style="text-align:right"><div class="num" style="font-size:36px">${econFmt(it, it.latest)}</div></div></div>
    <div class="card" style="margin-top:14px"><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">${days()}</div><div id="econchart"></div></div>
+   ${typeof fcEcon === "function" && fcEcon(it.key, it.dec) ? `<div class="card"><h3>What's next</h3>${fcEcon(it.key, it.dec)}</div>` : ""}
    <div class="hz"><div class="card"><div class="small muted">Previous reading</div><b>${econFmt(it, it.prev)}</b><div class="small muted">${esc(econDate({ freq: it.freq, date: it.prev_date }))}</div></div>
     ${it.year_ago != null ? `<div class="card"><div class="small muted">A year ago</div><b>${econFmt(it, it.year_ago)}</b>${yrch != null ? `<div class="small muted">${yrch > 0 ? "Up" : "Down"} ${Math.abs(yrch).toFixed(it.dec)}${it.unit === "%" ? " pts" : ""}</div>` : ""}</div>` : ""}
     <div class="card"><div class="small muted">Highest since 2000</div><b>${econFmt(it, it.hi)}</b></div><div class="card"><div class="small muted">Lowest since 2000</div><b>${econFmt(it, it.lo)}</b></div></div>
    <div class="card"><h3>What it is</h3><p style="margin:0">${esc(it.what)}</p><h3 style="margin-top:14px">Why it matters</h3><p style="margin:0">${esc(it.why)}</p>
-    ${it.rule ? `<h3 style="margin-top:14px">How we rate it</h3><p style="margin:0" class="small">${esc(it.rule)} <span class="muted">These cut-offs are a simple yardstick we chose, not an official standard, and not a forecast.</span></p>` : ""}</div>
+    ${it.rule ? `<h3 style="margin-top:14px">How we rate it</h3><p style="margin:0" class="small">${esc(it.rule)} <span class="muted">These cut-offs are a simple yardstick we chose, not an official standard, and not a forecast; the next-reading range above is tested separately.</span></p>` : ""}</div>
    ${same.length ? `<h2>Related</h2><div class="hz">${same.map((k) => econCard(d.items[k])).join("")}</div>` : ""}
    <p class="small muted">${esc(d.source)}. Educational information only. Not investment advice.</p>`;
 }

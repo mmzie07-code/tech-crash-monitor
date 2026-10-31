@@ -73,6 +73,15 @@ def write_ai(checks):
         print("ai index failed:", e)
 
 
+def write_forecasts():
+    """Volatility ranges and odds for every price on the site, earnings reaction bands, and economy forecasts. Each keeps its previous file if it fails."""
+    for name in ("forecast", "econ_forecast"):
+        try:
+            __import__(name).main()
+        except Exception as e:
+            print(name, "failed:", e)
+
+
 def write_model():
     """Score the trained crash-risk models (data/model/model.json) on today's data. Keeps yesterday's files if anything fails."""
     try:
@@ -201,6 +210,7 @@ def main():
     write_oil()
     write_model()
     write_ai(checks)
+    write_forecasts()
     try:
         json.dump(currencies.build(), open(os.path.join(DATA, "currencies.json"), "w"), separators=(",", ":"))
         print("currencies written")

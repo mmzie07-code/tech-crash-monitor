@@ -118,6 +118,7 @@ async function fxCurrency(code) {
     <div style="text-align:right"><div class="num" style="font-size:30px">${fxPer(r.per)}</div><div class="small muted">${esc(r.code)} per US dollar</div></div></div>
    <div class="card" style="margin-top:14px">${h ? '<div id="fxchart"></div><p class="small muted" style="margin:6px 0 0">How many ' + esc(r.code) + ' one US dollar buys. Up = stronger dollar, down = weaker dollar.</p>' : `<p class="muted small" style="margin:0">No price history is available for this currency yet.</p>`}</div>
    <div class="card">${story}</div>
+   ${typeof fcPanel === "function" ? fcPanel({ entry: fcGet("FX_" + code), price: r.per, hist: h && h.c, pre: "", dec: fxDec(r.per), title: "Where could the dollar be against the " + r.name + " in three months?" }) : ""}
    <div class="hz">${k("$1 buys", fxPer(r.per) + " " + esc(r.code))}${k("1 " + esc(r.code) + " costs", "$" + (r.per ? (1 / r.per >= 1 ? (1 / r.per).toFixed(2) : (1 / r.per).toPrecision(3)) : "-"))}${k("Dollar, 1 month", fxChg(r.d30))}${k("Dollar, this year", fxChg(r.ytd))}${k("Dollar, 1 year", fxChg(r.y1))}${r.y5 != null ? k("Dollar, 5 years", fxChg(r.y5)) : ""}
     ${r.lo52 != null ? k("52-week range", fxPer(r.lo52) + " – " + fxPer(r.hi52), r.pos52 != null ? "Today is " + r.pos52 + "% of the way up it" : "") : ""}</div>
    <p class="small muted">Mid-market rate, updated daily. ${esc(d.source)}. Educational information only. Not investment advice.</p>`;

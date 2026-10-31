@@ -13,7 +13,7 @@ async function loadJson(name) {
   }
   return null;
 }
-async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx, state.dollar100, state.aiw, state.aio] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json"), loadJson("dollar100.json"), loadJson("aiwatch.json"), loadJson("ai_outlook.json")]); }
+async function loadSnap() { [state.snap, state.mk, state.brief, state.cal, state.outlook, state.quotes, state.sectors, state.search, state.earnings, state.recaps, state.ipos, state.housing, state.crypto, state.fx, state.dollar100, state.aiw, state.aio, state.fc, state.em, state.ef] = await Promise.all([loadJson("latest.json"), loadJson("markets.json"), loadJson("brief.json"), loadJson("calendar.json"), loadJson("outlook.json"), loadJson("quotes.json"), loadJson("sectors.json"), loadJson("search.json"), loadJson("earnings.json"), loadJson("recaps.json"), loadJson("ipos.json"), loadJson("housing.json"), loadJson("crypto.json"), loadJson("currencies.json"), loadJson("dollar100.json"), loadJson("aiwatch.json"), loadJson("ai_outlook.json"), loadJson("forecasts.json"), loadJson("earnings_move.json"), loadJson("econ_forecast.json")]); }
 const lvlColor = (l) => ({ Low: "var(--ok)", Elevated: "var(--warn)", High: "var(--bad)", Severe: "var(--bad)" })[l] || "var(--mut)";
 const doneCount = () => MODULES.filter((m) => state.done[m.id]).length;
 
@@ -49,7 +49,7 @@ function chg(v, kind) {
 }
 function tiles(rows) {
   return rows && rows.length ? `<div class="hz">${rows.map((r) => `<a class="card" href="#/market/${encodeURIComponent(r.symbol)}" style="color:inherit;display:block"><div class="small muted">${r.name}</div><div style="font-size:22px;font-weight:800">${r.last.toLocaleString()}</div>
-   <div class="small">${chg(r.d1, r.kind)} today · ${chg(r.ytd, r.kind)} YTD</div><div class="small" style="color:var(--brand);margin-top:4px">View chart →</div></a>`).join("")}</div>` : `<div class="card muted">Data unavailable.</div>`;
+   <div class="small">${chg(r.d1, r.kind)} today · ${chg(r.ytd, r.kind)} YTD</div>${typeof fcChip === "function" ? fcChip(r.symbol) : ""}<div class="small" style="color:var(--brand);margin-top:4px">View chart →</div></a>`).join("")}</div>` : `<div class="card muted">Data unavailable.</div>`;
 }
 
 function home() {
@@ -128,7 +128,8 @@ function outlookView(key) {
    <div class="card" style="padding:12px"><div class="small muted">Rose more than ${thr}%</div><b style="font-size:20px;color:var(--ok)">${st.above}%</b></div></div></div>` : "";
   const evs = h.events.length ? h.events.map((e) => `<div class="item"><span class="dot" style="background:${e.importance === "high" ? "var(--bad)" : "var(--warn)"}"></span><div><b>${esc(e.title)}</b><div class="small muted">${new Date(e.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })} · ${esc(e.time)}${/^\d/.test(e.time) ? " ET" : ""}</div></div></div>`).join("") : `<p class="small muted">No major scheduled events found in this window.</p>`;
   const lst = (arr, c) => arr.length ? `<ul style="margin:.3em 0 0;padding-left:18px">${arr.map((x) => `<li class="small" style="color:var(--tx)">${linkNames(x)}</li>`).join("")}</ul>` : `<p class="small muted">Nothing notable right now.</p>`;
-  return `<p class="muted">How markets <i>have behaved</i> over each time horizon, and what's pushing on them right now. <b>This is not a forecast.</b> Nobody can reliably predict price moves, including us.</p>
+  return `<p class="muted">How markets <i>have behaved</i> over each time horizon, and what's pushing on them right now. <b>We forecast how far prices can move, not which way.</b> Direction and timing are not reliably predictable, by us or anyone; the ranges below were tested on past data.</p>
+  ${typeof fcPanel === "function" ? fcPanel({ entry: fcGet("_GSPC"), title: "Where could the S&P 500 be in three months?", price: null }) : ""}
   <div class="tabs">${pills}</div>
   <div class="card big"><span class="pill">${esc(h.label)}</span><h2 style="margin-top:8px">${key === "today" || key === "tomorrow" ? "One trading day" : "Over the next " + (key === "week" ? "week" : key === "month" ? "month" : "year")}: what history says</h2>
    <p style="margin:0">Across all ${span} since ${yrs}, the S&amp;P 500 rose ${a.up}% of the time. When conditions matched today's (${esc(o.regime)}), it rose ${s ? s.up + "%" : "n/a"} of the time${s ? ` (${s.n.toLocaleString()} similar days).` : "."}</p>
