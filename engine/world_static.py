@@ -85,6 +85,65 @@ def zone_for(cc, lat, lon):
     return best
 
 
+# Overseas parts of a country (French Guiana is France, but it sits in South America): give each its own outline and record, so hovering one never says "France is in South America".
+# (iso3, name, iso2, capital, cap lat/lon, region, sub, currency, tz, parent) and the box (lon0, lat0, lon1, lat1) that its polygons fall in
+OVERSEAS = [
+    ("GUF", "French Guiana", "GF", "Cayenne", [4.94, -52.33], "Americas", "South America", "EUR", "America/Cayenne", "FRA", (-56, 1, -50, 7)),
+    ("GLP", "Guadeloupe", "GP", "Basse-Terre", [16.0, -61.73], "Americas", "Caribbean", "EUR", "America/Guadeloupe", "FRA", (-62.5, 15.5, -60.5, 16.8)),
+    ("MTQ", "Martinique", "MQ", "Fort-de-France", [14.6, -61.07], "Americas", "Caribbean", "EUR", "America/Martinique", "FRA", (-61.5, 14, -60.5, 15)),
+    ("REU", "Réunion", "RE", "Saint-Denis", [-20.88, 55.45], "Africa", "Eastern Africa", "EUR", "Indian/Reunion", "FRA", (54.5, -22, 56.5, -20)),
+    ("MYT", "Mayotte", "YT", "Mamoudzou", [-12.78, 45.23], "Africa", "Eastern Africa", "EUR", "Indian/Mayotte", "FRA", (44.5, -13.5, 45.5, -12)),
+    ("BES", "Caribbean Netherlands", "BQ", "Kralendijk", [12.14, -68.27], "Americas", "Caribbean", "USD", "America/Kralendijk", "NLD", (-70, 11.5, -62, 18.5)),
+]
+
+
+def split_overseas(borders, ctry):
+    """Move each overseas polygon out of its parent's outline into a feature of its own (idempotent)."""
+    have = {o["i"] for o in borders if o["i"]}
+    for iso, name, iso2, cap, ll, reg, sub, cur, tz, parent, box in OVERSEAS:
+        if iso in have:
+            continue
+        par = next((o for o in borders if o["i"] == parent), None)
+        if not par:
+            continue
+        inside = lambda pr: box[0] <= sum(pr[0][0::2]) / len(pr[0][0::2]) <= box[2] and box[1] <= sum(pr[0][1::2]) / len(pr[0][1::2]) <= box[3]
+        mine = [pr for pr in par["p"] if inside(pr)]
+        if not mine:
+            continue
+        par["p"] = [pr for pr in par["p"] if not inside(pr)]
+        bx = lambda polys: [round(min(x for pr in polys for x in pr[0][0::2]), 2), round(min(y for pr in polys for y in pr[0][1::2]), 2), round(max(x for pr in polys for x in pr[0][0::2]), 2), round(max(y for pr in polys for y in pr[0][1::2]), 2)]
+        par["b"] = bx(par["p"])
+        big = max(mine, key=lambda pr: km2(list(zip(pr[0][0::2], pr[0][1::2]))))
+        rx, ry = big[0][0::2], big[0][1::2]
+        borders.append(dict(i=iso, n=name, ar=round(sum(km2(list(zip(pr[0][0::2], pr[0][1::2]))) for pr in mine)), lp=[round(sum(rx) / len(rx), 2), round(sum(ry) / len(ry), 2)], b=bx(mine), p=mine))
+        pm = ctry.get(parent, {})
+        ctry[iso] = dict(iso3=iso, iso2=iso2, name=name, official=name, capital=cap, cap=ll, region=reg, sub=sub, cur=[cur], tz=tz, area=None, income=pm.get("income"), parent=parent, parentName=pm.get("name"))
+
+
+def fix_outlines(borders):
+    """Drop dateline slivers (a 0.05-degree strip that spans the whole map, which put Fiji's label in the Atlantic) and give label points a spot that is really inside the country."""
+    for o in borders:
+        keep = []
+        for pr in o["p"]:
+            r = pr[0]; xs = r[0::2]; ys = r[1::2]
+            if max(xs) - min(xs) > 300 and max(ys) - min(ys) < 1:
+                continue
+            keep.append(pr)
+        if len(keep) != len(o["p"]):
+            o["p"] = keep
+            xs = [x for pr in keep for x in pr[0][0::2]]; ys = [y for pr in keep for y in pr[0][1::2]]
+            o["b"] = [round(min(xs), 2), round(min(ys), 2), round(max(xs), 2), round(max(ys), 2)]
+            big = max(keep, key=lambda pr: km2(list(zip(pr[0][0::2], pr[0][1::2]))))
+            bx, by = big[0][0::2], big[0][1::2]
+            o["lp"] = [round(sum(bx) / len(bx), 2), round(sum(by) / len(by), 2)]
+    for o in borders:   # label points that land outside the outline (Russia's centroid is in the Arctic gap, Israel's in the West Bank)
+        if o["i"] in LP_FIX:
+            o["lp"] = LP_FIX[o["i"]]
+
+
+LP_FIX = {"RUS": [95.0, 62.0], "ISR": [34.9, 31.0]}
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     topo = get("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json")
@@ -116,7 +175,7 @@ def main():
                         p=[[[round(c, 2) for pt in ring for c in pt] for ring in pr] for pr in rings]))
         if iso3:
             seen.add(iso3)
-    json.dump(dict(c=out), open(os.path.join(OUT, "borders.json"), "w"), separators=(",", ":"))
+    json.dump(dict(c=out), open(os.path.join(OUT, "borders.json"), "w"), separators=(",", ":"))   # (overseas parts are split out below, after the country records exist)
     print("borders:", len(out), "countries,", os.path.getsize(os.path.join(OUT, "borders.json")) // 1024, "KB")
     ctry = {}
     for c in mle:
@@ -132,6 +191,9 @@ def main():
                           cap=[round(clat, 2), round(clon, 2)], region=c.get("region"), sub=c.get("subregion"), cur=list((c.get("currencies") or {}).keys()),
                           tz=zone_for(c["cca2"], clat, clon), area=c.get("area"), income=(w.get("incomeLevel") or {}).get("value"))
     ctry["XKX"] = dict(iso3="XKX", iso2="XK", name="Kosovo", official="Republic of Kosovo", capital="Pristina", cap=[42.67, 21.17], region="Europe", sub="Southeast Europe", cur=["EUR"], tz="Europe/Belgrade", area=10887, income="Upper middle income")
+    split_overseas(out, ctry)
+    fix_outlines(out)
+    json.dump(dict(c=out), open(os.path.join(OUT, "borders.json"), "w"), separators=(",", ":"))
     json.dump(ctry, open(os.path.join(OUT, "countries.json"), "w"), separators=(",", ":"))
     miss = [o["n"] for o in out if not o["i"] or o["i"] not in ctry]
     print("countries:", len(ctry), "| borders without a country record:", miss)

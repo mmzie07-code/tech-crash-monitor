@@ -20,6 +20,7 @@ async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
   const [borders, countries, world, zones] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
+  for (const k in countries) { const p = countries[k].parent; if (p && !world.countries[k] && world.countries[p]) world.countries[k] = world.countries[p]; }   // an overseas part is coloured and scored with its country
   GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z };
   return GLOBE.assets;
 }
@@ -242,7 +243,7 @@ async function globeMount(host) {
     }
     card.innerHTML = `<div class="gc-head"><span class="gc-flag">${gFlag(meta && meta.iso2)}</span><div><b class="gc-name">${esc((meta && meta.name) || c.n)}</b><div class="gc-k">${meta ? esc(meta.capital || "") + (meta.region ? " · " + esc(meta.region) : "") : "Disputed or special territory"}</div></div></div>
       ${meta && meta.tz ? `<div class="gc-row"><span class="gc-k">Local time</span><b class="gc-time">${esc(timeFor(meta.tz))}</b></div>` : ""}${sc}${cur}
-      ${meta ? `<div class="gc-hint">Double-click for the full economy</div>` : ""}`;
+      ${meta && meta.parent ? `<div class="gc-hint">Overseas part of ${esc(meta.parentName)}. Scored with ${esc(meta.parentName)}.</div>` : meta ? `<div class="gc-hint">Double-click for the full economy</div>` : ""}`;
     card.hidden = false;
     const cw = 280, chh = card.offsetHeight || 240; let x = cx - r.left + 18, y = cy - r.top + 14;
     if (x + cw > r.width - 8) x = cx - r.left - cw - 18; if (y + chh > r.height - 8) y = r.height - chh - 8; card.style.left = Math.max(8, x) + "px"; card.style.top = Math.max(8, y) + "px";
@@ -251,7 +252,7 @@ async function globeMount(host) {
 
   // opening the side panel for a country
   const panel = host.querySelector(".gpanel");
-  const openPanel = (ci) => {
+  const openPanel = (ci) => {   // (also exposed as g.openCountry)
     const c = list[ci]; if (!c.i || !A.countries[c.i]) return;
     hideCard(); g.sel = ci; g.panelOpen = true; host.classList.add("with-panel"); setHighlight(ci);
     panel.hidden = false; panel.innerHTML = `<div class="muted" style="padding:24px">Loading ${esc(A.countries[c.i].name)}…</div>`;
@@ -262,6 +263,7 @@ async function globeMount(host) {
     setTimeout(resize, 360);
   };
   const closePanel = () => { g.panelOpen = false; g.sel = -1; host.classList.remove("with-panel"); panel.hidden = true; panel.innerHTML = ""; g.userZoom = false; setHighlight(-1); setTimeout(resize, 360); };
+  g.openCountry = openPanel;
   g.onKey = (e) => { if (e.key === "Escape" && g.panelOpen) closePanel(); };
   document.addEventListener("keydown", g.onKey);
 
@@ -368,6 +370,14 @@ function gWireCharts(root, series, years) {
 
 async function gPanelRender(panel, iso, A, onClose) {
   const meta = A.countries[iso], w = A.world.countries[iso], WM = A.world;
+  if (meta && meta.parent) {   // an overseas department or territory: no figures of its own, so point to the country it belongs to
+    panel.innerHTML = `<div class="gp-head"><div><div class="small muted">${gFlag(meta.iso2)} ${esc(meta.region || "")}${meta.sub ? " · " + esc(meta.sub) : ""}</div><h2 style="margin:2px 0 0">${esc(meta.name)}</h2><div class="small muted">Capital ${esc(meta.capital || "-")}</div></div><button class="gp-x" aria-label="Close">✕</button></div>
+      <div class="card" style="margin-top:12px"><p style="margin:0"><b>${esc(meta.name)} is part of ${esc(meta.parentName)}.</b> It sits in ${esc(meta.sub || meta.region)}, far from the rest of the country, but it is governed and counted as ${esc(meta.parentName)}, so its economy figures and health score are ${esc(meta.parentName)}'s.</p>
+      <p style="margin:10px 0 0"><button class="btn" data-parent="${esc(meta.parent)}">Open ${esc(meta.parentName)}</button></p></div>`;
+    panel.querySelector(".gp-x").onclick = onClose;
+    panel.querySelector("[data-parent]").onclick = () => { const ci = A.borders.findIndex((o) => o.i === meta.parent); if (ci >= 0 && GLOBE.g && GLOBE.g.openCountry) GLOBE.g.openCountry(ci); else onClose(); };
+    return;
+  }
   let S = GLOBE.series; if (!S) { S = GLOBE.series = await loadJson("world/world-series.json"); }
   if (!panel.isConnected || panel.hidden) return;
   const ser = (S && S.s[iso]) || {}, usS = (S && S.s.USA) || {}, years = S ? S.years : [], ref = WM.ref_year, st = w && w.state ? G_STATE[w.state] : null;
