@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T01:43:53.773526Z",
+ "generated": "2026-10-31T19:02:36.030135Z",
  "asof": "2026-10-31",
  "priced": [
   {
@@ -2399,32 +2399,12 @@
  ],
  "upcoming": [
   {
-   "sym": "ASPE",
-   "name": "Aspen Neuroscience, Inc.",
-   "exchange": "NASDAQ Global Select",
-   "price": "15.00",
-   "shares": 9375000.0,
-   "amount": 140625000.0,
-   "date": "2026-10-30",
-   "spac": false
-  },
-  {
    "sym": "OPAY",
    "name": "OPAY Ltd",
    "exchange": "NYSE",
    "price": "19.00-21.00",
    "shares": 16000000.0,
    "amount": 386400000.0,
-   "date": "2026-10-30",
-   "spac": false
-  },
-  {
-   "sym": "BBTX",
-   "name": "Bambusa Therapeutics, Inc.",
-   "exchange": "NASDAQ Global Select",
-   "price": "16.00",
-   "shares": 10555555.0,
-   "amount": 168888880.0,
    "date": "2026-10-30",
    "spac": false
   }

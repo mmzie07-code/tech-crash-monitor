@@ -1,12 +1,12 @@
 {
- "date": "2026-10-29",
- "generated": "2026-10-31T00:58:17.103557Z",
- "level": "Elevated",
- "health": 62,
- "score": 38,
+ "date": "2026-10-30",
+ "generated": "2026-10-31T18:13:43.740279Z",
+ "level": "High",
+ "health": 50,
+ "score": 50,
  "stretch": 33,
- "trigger": 33,
- "warnings": 3,
+ "trigger": 50,
+ "warnings": 4,
  "evaluated": 9,
  "total": 10,
  "checks": [
@@ -17,7 +17,7 @@
    "status": "ok",
    "value": 26.4,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 26.4; price is 5.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 26.4; price is 1.6% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -1.8,
+   "value": -2.8,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -1.8% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -2.8% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -74,10 +74,10 @@
    "id": 6,
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
-   "status": "ok",
-   "value": -1.3,
+   "status": "warn",
+   "value": -2.3,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -1.3% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -2.3% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -5.8,
+   "value": -9.1,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -5.8% from 1y high; below 50-day, above 200-day avg.",
+   "detail": "QQQ -9.1% from 1y high; below 50-day, above 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -123,20 +123,16 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "ok",
-   "value": 2.2,
+   "value": -0.5,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH +0.5% over 10 days (+2.2 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -3.2% over 10 days (-0.5 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 715.34,
+ "qqq_last": 690.49,
  "qqq_series": [
-  [
-   "2025-10-31",
-   629.07
-  ],
   [
    "2025-11-03",
    632.08
@@ -1132,12 +1128,16 @@
   [
    "2026-10-29",
    715.34
+  ],
+  [
+   "2026-10-30",
+   690.49
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 62.3,
+ "ai_heat": 61.7,
  "ai_health": 38,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-10-31T18:01:54.957968Z"
+ "ai_updated": "2026-10-31T19:05:32.210491Z"
 }

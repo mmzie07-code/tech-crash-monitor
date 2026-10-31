@@ -1,46 +1,210 @@
 {
- "generated": "2026-10-31T01:44:15.609260Z",
+ "generated": "2026-10-31T19:03:00.228757Z",
  "ai_analysis_enabled": false,
  "recaps": [
   {
+   "headline": "ExxonMobil Holdings reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $4.23 versus $3.90 expected, so the company beat estimates by 8.5%.",
+    "Stock moved +2.2% on Oct 30.",
+    "Covers the quarter ending Sep 2026."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XOM&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "XOM",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -1.82,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -2.86,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -1.09,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -1.66,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.06,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": -0.16,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 12.91,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -3.29,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 2.08,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.74,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Energy",
+     "move": 1.41
+    },
+    "worst": {
+     "name": "Information Technology",
+     "move": -4.58
+    }
+   },
    "id": "2026-10-30-earnings-exxonmobil-holdings-xom-reports-earnings",
    "date": "2026-10-30",
    "time": "Before open",
    "kind": "earnings",
    "title": "ExxonMobil Holdings (XOM) reports earnings",
-   "status": "pending",
-   "headline": "Recap coming soon.",
-   "bullets": [
-    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
-   ],
-   "reaction": [],
-   "sectors": null,
-   "changes": null,
-   "context": [],
-   "sources": [],
+   "status": "final",
    "ai_analysis": null,
    "link": null,
-   "lesson": 3
+   "generated": "2026-10-31T19:03:08.028360Z"
   },
   {
+   "headline": "AbbVie reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $3.82 versus $3.74 expected, so the company beat estimates by 2.1%.",
+    "Stock moved +1.4% on Oct 30.",
+    "Covers the quarter ending Sep 2026."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ABBV&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "ABBV",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -1.82,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -2.86,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -1.09,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -1.66,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.06,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": -0.16,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 12.91,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -3.29,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": 2.08,
+     "unit": "pct",
+     "symbol": "CL=F"
+    },
+    {
+     "name": "Bitcoin",
+     "move": -0.74,
+     "unit": "pct",
+     "symbol": "BTC-USD"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Energy",
+     "move": 1.41
+    },
+    "worst": {
+     "name": "Information Technology",
+     "move": -4.58
+    }
+   },
    "id": "2026-10-30-earnings-abbvie-abbv-reports-earnings",
    "date": "2026-10-30",
    "time": "Before open",
    "kind": "earnings",
    "title": "AbbVie (ABBV) reports earnings",
-   "status": "pending",
-   "headline": "Recap coming soon.",
-   "bullets": [
-    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
-   ],
-   "reaction": [],
-   "sectors": null,
-   "changes": null,
-   "context": [],
-   "sources": [],
+   "status": "final",
    "ai_analysis": null,
    "link": null,
-   "lesson": 3
+   "generated": "2026-10-31T19:03:08.030996Z"
   },
   {
    "headline": "Eli Lilly and reported earnings: beat estimates.",

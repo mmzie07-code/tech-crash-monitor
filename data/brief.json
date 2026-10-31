@@ -1,7 +1,7 @@
 {
  "date": "2026-10-30",
- "generated": "2026-10-31T01:49:14.409300Z",
- "headline": "US stocks finished lower. The S&P 500 fell 1.82%, with 9 of 11 sectors up.",
+ "generated": "2026-10-31T19:09:43.721767Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 1.82%, with 6 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
@@ -15,9 +15,9 @@
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Health Care +2.40%, Real Estate +2.21%, Consumer Staples +1.54%",
-    "Lagging: Communication -1.87%, Technology -1.18%, Energy +0.38%",
-    "9 of 11 sectors rose."
+    "Leading: Energy +1.91%, Consumer Staples +1.41%, Utilities +0.67%",
+    "Lagging: Technology -4.89%, Industrials -1.60%, Communication -1.29%",
+    "6 of 11 sectors rose."
    ]
   },
   {
@@ -25,19 +25,20 @@
    "bullets": [
     "VIX (fear gauge): 19.42 (+12.91% today)",
     "10-year Treasury yield: 4.93% (-0.06 pts today)",
-    "US dollar index: 101.96 (-0.07% today)",
-    "Crude oil: 102.95 (+0.93% today)",
-    "Gold: 3,884.90 (-3.63% today)",
-    "Bitcoin: 77,366.56 (-0.53% today)"
+    "US dollar index: 101.88 (-0.16% today)",
+    "Crude oil: 104.12 (+2.08% today)",
+    "Gold: 3,898.90 (-3.29% today)",
+    "Bitcoin: 77,565.64 (+0.48% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
+    "Oil +2.08% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
     "The 10-year yield moved -0.06 points to 4.93%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
     "The VIX (expected volatility) jumped +12.91% to 19.4. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "Gold moved -3.63%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 4.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Gold moved -3.29%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 6.8-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -52,70 +53,70 @@
   {
    "title": "Just happened",
    "bullets": [
+    "ExxonMobil Holdings: ExxonMobil Holdings reported earnings: beat estimates.",
+    "AbbVie: AbbVie reported earnings: beat estimates.",
     "Eli Lilly and Company: Eli Lilly and reported earnings: beat estimates.",
     "Mastercard Incorporated: Mastercard Incorporated reported earnings: beat estimates.",
-    "Amazon.com: Amazon.com reported earnings: missed estimates.",
-    "Intel: Intel reported earnings: beat estimates.",
-    "GDP advance estimate: first look at economic growth: Real gross domestic product (GDP) increased at an annual rate of 3.4 percent in the third quarter of 2026 (July, August, and September)."
+    "Amazon.com: Amazon.com reported earnings: missed estimates."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 62 out of 100 (Caution; higher is better) (-13 from 75 on 2026-10-28).",
-    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling.",
+    "Market health score 50 out of 100 (Warning; higher is better) (-12 from 62 on 2026-10-29).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Intel stock has worst day since 1970s, wiping about $12 billion off government's stake",
+   "title": "Binance says 90% of $6.3 billion hack losses are now covered, plans to resume withdrawals Sunday",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
-   "published": "Fri, 30 Oct 2026 20:30:57"
+   "link": "https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html",
+   "published": "Sat, 31 Oct 2026 18:12:09"
   },
   {
-   "title": "Treasury Department announces new Series I bond rate of 5.51% for the next six months",
+   "title": "Trump promised to slash energy costs  \u2014 but gasoline, diesel and jet fuel all soared instead",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/30/treasury-i-bond-rate-through-april-2027.html",
-   "published": "Fri, 30 Oct 2026 17:15:53"
+   "link": "https://www.cnbc.com/2026/10/31/trump-gas-diesel-price-midterm-election.html",
+   "published": "Sat, 31 Oct 2026 12:49:58"
   },
   {
-   "title": "Alaska Senate election: DOJ wants to 'segregate' all ballots for 2nd Sullivan candidate",
+   "title": "\u2018Pop-up\u2019 super PACs pour $637 million into 2026 midterm races",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/30/alaska-senate-election-doj-lawsuit-sullivan-peltola.html",
-   "published": "Fri, 30 Oct 2026 22:57:55"
+   "link": "https://www.cnbc.com/2026/10/31/2026-midterm-election-super-pacs-donor-disclosure.html",
+   "published": "Sat, 31 Oct 2026 12:00:01"
   },
   {
-   "title": "Halloween gets pricier as chocolate costs climb \u2014 Hershey may feel the pinch",
+   "title": "Automakers like Rivian and Ford are \u2018democratizing 3D printing\u2019 to reduce costs and increase speed",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/10/30/halloween-gets-pricier-as-chocolate-costs-rise-hershey-could-feel-it.html",
-   "published": "Fri, 30 Oct 2026 16:55:41"
+   "link": "https://www.cnbc.com/2026/10/31/automakers-3d-printing-ford-rivian-gm.html",
+   "published": "Sat, 31 Oct 2026 12:00:01"
   },
   {
-   "title": "Has the tech bubble burst? Why the Nasdaq\u2019s rough ride looks eerily like 2000.",
+   "title": "This is where most people go wrong in their 30s and 40s",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/has-the-tech-bubble-burst-why-the-nasdaqs-rough-ride-looks-eerily-like-2000-5bcefcb2?mod=mw_rss_topstories",
-   "published": "Fri, 30 Oct 2026 23:14:00"
+   "link": "https://www.marketwatch.com/story/the-house-the-kids-college-and-the-raise-where-people-in-their-30s-and-40s-go-wrong-69ec6c90?mod=mw_rss_topstories",
+   "published": "Sat, 31 Oct 2026 19:02:00"
   },
   {
-   "title": "This cybersecurity stock will be the next to join the S&P 500",
+   "title": "We\u2019re in our 70s. Should we pay off our 2.5% mortgage \u2014 or put the money in a high-yield savings account?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-cybersecurity-stock-will-be-the-next-to-join-the-s-p-500-dc976803?mod=mw_rss_topstories",
-   "published": "Fri, 30 Oct 2026 22:20:00"
+   "link": "https://www.marketwatch.com/story/we-are-in-our-70s-should-we-pay-off-our-2-5-mortgage-or-build-up-our-savings-5a35e9c1?mod=mw_rss_topstories",
+   "published": "Sat, 31 Oct 2026 19:00:00"
   },
   {
-   "title": "Why gold plunged to its lowest price in a year despite renewed Iran jitters",
+   "title": "\u2018He was heartbroken\u2019: My husband\u2019s kids abandoned him when he was dying. Was he right to leave everything to me?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/why-gold-plunged-to-its-lowest-price-in-a-year-despite-renewed-iran-jitters-365be0e2?mod=mw_rss_topstories",
-   "published": "Fri, 30 Oct 2026 21:30:00"
+   "link": "https://www.marketwatch.com/story/he-was-heartbroken-my-husbands-kids-never-helped-when-he-was-gravely-ill-was-he-right-to-leave-everything-to-me-1ad0616b?mod=mw_rss_topstories",
+   "published": "Sat, 31 Oct 2026 18:50:00"
   },
   {
-   "title": "Warsh wants the Fed to say less. Two officials are pushing for more transparency.",
+   "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-fed-held-interest-rates-steady-but-these-officials-see-more-hikes-coming-soon-2098bbd8?mod=mw_rss_topstories",
-   "published": "Fri, 30 Oct 2026 21:23:00"
+   "link": "https://www.marketwatch.com/story/is-it-curtains-for-cola-saving-social-security-could-mean-changing-the-cost-of-living-adjustment-867c6bd8?mod=mw_rss_topstories",
+   "published": "Sat, 31 Oct 2026 18:33:00"
   }
  ],
  "summary": null,
