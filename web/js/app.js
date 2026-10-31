@@ -312,6 +312,13 @@ async function route() {
   if (!keepScroll) window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
+// Opening the site lands on the main screen. A bare section address (#/markets, #/learn...) left over in a bookmark, pinned tab or restored tab is sent home;
+// links to something specific (#/stock/NVDA, #/learn/some-lesson) and the in-place refresh offered after an update are left alone.
+(function landHome() {
+  let keep = false; try { keep = sessionStorage.getItem("ml_keep_hash") === "1"; sessionStorage.removeItem("ml_keep_hash"); } catch (e) {}
+  const parts = (location.hash || "").replace(/^#\/?/, "").split("/").filter(Boolean);
+  if (!keep && parts.length && (parts.length <= 1 ? !["login", "home"].includes(parts[0]) : parts[0] === "markets" && parts.length === 2)) history.replaceState(null, "", location.pathname + location.search);
+})();
 Promise.all([loadSnap(), authInit()]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); });
 
 // Stale-page guard: GitHub Pages lets browsers cache index.html for ~10 minutes. If a newer build exists, offer a refresh.
@@ -322,7 +329,7 @@ Promise.all([loadSnap(), authInit()]).then(() => { $("#brand").textContent = BRA
       const b = document.createElement("div");
       b.style.cssText = "position:fixed;left:12px;right:12px;bottom:76px;z-index:50;background:var(--tx);color:var(--bg);padding:12px 16px;border-radius:12px;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:var(--shadow)";
       b.innerHTML = '<span>A new version of The Analytic is available.</span><button class="btn" style="padding:8px 14px">Refresh</button>';
-      b.querySelector("button").onclick = () => { location.href = location.pathname + "?v=" + j.v + location.hash; };
+      b.querySelector("button").onclick = () => { try { sessionStorage.setItem("ml_keep_hash", "1"); } catch (e) {} location.href = location.pathname + "?v=" + j.v + location.hash; };
       document.body.appendChild(b);
     }
   }).catch(() => {});
