@@ -18,10 +18,10 @@ function gSun(d = new Date()) {
 
 async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
-  const [borders, countries, world, zones] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null)]);
+  const [borders, countries, world, zones, mix, conflict] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
   for (const k in countries) { const p = countries[k].parent; if (p && !world.countries[k] && world.countries[p]) world.countries[k] = world.countries[p]; }   // an overseas part is coloured and scored with its country
-  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z };
+  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null };
   return GLOBE.assets;
 }
 
@@ -94,15 +94,24 @@ function gHealthColor(score) {
   const i = s <= 55 ? 0 : 1, [a, ca] = stops[i], [b, cb] = stops[i + 1], t = (s - a) / (b - a);
   return ca.map((v, k) => Math.round(v + (cb[k] - v) * t));
 }
-function gTintTexture(THREE, list, world, coarse) {
+function gTintTexture(THREE, list, colorOf, coarse) {   // colorOf(feature) -> css colour for that country
   const W = coarse ? 2048 : 4096, c = gCanvas(W, W / 2), x = c.getContext("2d"), X = (lon) => ((lon + 180) / 360) * W, Y = (lat) => ((90 - lat) / 180) * (W / 2);
   for (const co of list) {
-    const w = co.i && world.countries[co.i], sc = w && w.score;
-    x.fillStyle = sc != null ? "rgba(" + gHealthColor(sc).join(",") + ",0.46)" : "rgba(150,160,180,0.14)";
-    for (const rings of co.p) { x.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? x.lineTo(X(r[i]), Y(r[i + 1])) : x.moveTo(X(r[i]), Y(r[i + 1])); x.closePath(); } x.fill("evenodd"); }
+    x.fillStyle = colorOf(co);
+    for (const rings of co.p) for (const off of [-360, 0, 360]) {   // unwrap rings that cross the dateline, draw them once on each side so no band is filled across the map
+      x.beginPath();
+      for (const r of rings) { let prev = null, shift = 0; for (let i = 0; i < r.length; i += 2) { let lo = r[i]; if (prev != null) { if (lo + shift - prev > 180) shift -= 360; else if (lo + shift - prev < -180) shift += 360; } lo += shift; prev = lo; i ? x.lineTo(X(lo + off), Y(r[i + 1])) : x.moveTo(X(lo + off), Y(r[i + 1])); } x.closePath(); }
+      x.fill("evenodd");
+    }
   }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
+function gMid(a, b) {   // midpoint of two [lat, lon] points on the sphere, as [lat, lon]
+  const p = gVec(a[0], a[1]), q = gVec(b[0], b[1]), m = [p[0] + q[0], p[1] + q[1], p[2] + q[2]], n = Math.hypot(...m) || 1;
+  return [Math.asin(Math.max(-1, Math.min(1, m[1] / n))) / G_R, Math.atan2(-m[2] / n, m[0] / n) / G_R];
+}
+function gDate(iso) { try { return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return iso; } }
+function gShare(v) { return v >= 10 ? v.toFixed(0) + "%" : v >= 1 ? v.toFixed(1) + "%" : v.toFixed(2) + "%"; }
 
 const G_EARTH_VS = `varying vec2 vUv; varying vec3 vN; varying vec3 vP;
 void main(){ vUv = uv; vN = normal; vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
@@ -216,15 +225,67 @@ async function globeMount(host) {
   const HW = coarse ? 2048 : 4096, hc = gCanvas(HW, HW / 2), hx = hc.getContext("2d"), htex = new THREE.CanvasTexture(hc); htex.colorSpace = THREE.SRGBColorSpace; htex.anisotropy = 4;
   const hl = new THREE.Mesh(new THREE.SphereGeometry(1.0022, 96, 64), new THREE.MeshBasicMaterial({ map: htex, transparent: true, depthWrite: false })); scene.add(hl);
   const list = A.borders, lookup = gIndex(list);
-  let tintMesh = null; g.tint = { on: false, o: 0 };
-  const setTint = (on) => {
-    g.tint.on = on; try { localStorage.setItem("ml_globe_tint", on ? "1" : "0"); } catch (e) {}
-    if (on && !tintMesh) { tintMesh = new THREE.Mesh(new THREE.SphereGeometry(1.0019, 96, 64), new THREE.MeshBasicMaterial({ map: gTintTexture(THREE, list, A.world, coarse), transparent: true, depthWrite: false, opacity: 0 })); scene.add(tintMesh); }
-    const btn = host.querySelector(".gtoggle"), lg = host.querySelector(".glegend"); btn.setAttribute("aria-pressed", on ? "true" : "false"); btn.classList.toggle("on", on); lg.hidden = !on;
+  // ---- map layers: one colour layer at a time (economic health, conflict, goods makers, food growers, big spenders) ----
+  g.layer = null; g.meshes = {}; g.layerO = {};
+  const LAYERS = [["health", "Economic health", true], ["conflict", "Conflict", !!A.conflict], ["goods", "Goods makers", !!A.mix], ["food", "Food growers", !!A.mix], ["spend", "Big spenders", !!A.mix]].filter((l) => l[2]);
+  const LAYER_RGB = { goods: [60, 105, 255], food: [30, 200, 85], spend: [255, 165, 20] }, MIXK = { goods: "manf", food: "agr", spend: "cons" };
+  const MIXWHAT = { manf: "the world's manufacturing", agr: "the world's farm output", cons: "the world's household spending" };
+  const colorOf = (key) => (co) => {
+    const iso = co.i;
+    if (key === "health") { const w = iso && A.world.countries[iso], sc = w && w.score; return sc != null ? "rgba(" + gHealthColor(sc).join(",") + ",0.46)" : "rgba(150,160,180,0.14)"; }
+    if (key === "conflict") { const c = A.conflict && iso && A.conflict.countries[iso]; return c ? (c.lvl === "war" ? "rgba(255,72,72,0.58)" : "rgba(255,168,58,0.48)") : "rgba(150,160,180,0.08)"; }
+    const row = A.mix && iso && A.mix.c[iso], v = row && row[MIXK[key]];
+    if (v == null) return "rgba(150,160,180,0.10)";
+    return "rgba(" + LAYER_RGB[key].join(",") + "," + (0.05 + 0.68 * Math.min(1, Math.pow(v / 10, 0.7))).toFixed(2) + ")";
   };
-  host.querySelector(".gtoggle").addEventListener("click", () => setTint(!g.tint.on));
-  g.cleanup.push(() => { tintMesh = null; });
-  try { if (localStorage.getItem("ml_globe_tint") === "1") setTint(true); } catch (e) {}
+  const cname = (iso) => (A.countries[iso] ? A.countries[iso].name : iso);
+  const fronts = A.conflict ? A.conflict.conflicts.filter((c) => c.arcs && c.arcs.length) : [];
+  const flyTo = (lat, lon, dist) => { g.tLon = { lon, lat: Math.max(-60, Math.min(70, lat)), dist, t0: performance.now(), l0: g.lon, a0: g.lat, d0: g.dist }; g.userZoom = true; };
+  const legendHtml = (key) => {
+    if (key === "health") return `<i></i><div><span>Strained</span><span>Healthy</span></div><em>Grey: not enough data</em>`;
+    if (key === "conflict") return `<div class="gl-sw"><span><u style="background:rgb(255,72,72)"></u>War (1,000+ deaths a year)</span><span><u style="background:rgb(255,168,58)"></u>Smaller conflict</span><span><u class="dash"></u>Fighting between states</span></div>
+      <b class="gl-h">Who is fighting whom</b><div class="gl-list">${fronts.map((c) => `<button data-front="${esc(c.id)}">${esc(c.n)}</button>`).join("")}</div><div class="gl-info small"></div>
+      <em>${esc(A.conflict.caveat)} Snapshot as of ${esc(gDate(A.conflict.asof))}.</em>`;
+    const k = MIXK[key], rgb = LAYER_RGB[key].join(",");
+    return `<i style="background:linear-gradient(90deg,rgba(${rgb},.1),rgba(${rgb},.65))"></i><div><span>Small share</span><span>Large share</span></div><em>Top 10 countries: ${A.mix.top10[k]}% of ${MIXWHAT[k]}. Click a country for what it makes and sells.</em>`;
+  };
+  const setLayer = (key) => {
+    g.layer = key; try { localStorage.setItem("ml_globe_layer", key || ""); } catch (e) {}
+    if (key && !g.meshes[key]) { const m = new THREE.Mesh(new THREE.SphereGeometry(1.0019, 96, 64), new THREE.MeshBasicMaterial({ map: gTintTexture(THREE, list, colorOf(key), coarse), transparent: true, depthWrite: false, opacity: 0 })); scene.add(m); g.meshes[key] = m; g.layerO[key] = 0; }
+    host.querySelectorAll(".glayer").forEach((b) => { const on = b.dataset.layer === key; b.setAttribute("aria-pressed", on ? "true" : "false"); b.classList.toggle("on", on); });
+    const lg = host.querySelector(".glegend"); lg.hidden = !key; if (key) lg.innerHTML = legendHtml(key);
+    lg.querySelectorAll("[data-front]").forEach((b) => b.onclick = () => {
+      const c = fronts.find((x) => x.id === b.dataset.front), p = c.arcs[0], a = A.countries[p[0]].cap, z = A.countries[p[1]].cap, mid = gMid(a, z);
+      flyTo(mid[0], mid[1], 2.6); lg.querySelector(".gl-info").innerHTML = `<b>${esc(c.n)}</b> · ${esc(c.lvl === "war" ? "war" : "smaller conflict")} since ${esc(c.since)}<br>${esc(c.sides)}.${c.note ? " " + esc(c.note) : ""}`;
+    });
+  };
+  const lbar = host.querySelector(".glayers"); lbar.innerHTML = LAYERS.map(([k, l]) => `<button class="gtoggle glayer" data-layer="${k}" aria-pressed="false">${l}</button>`).join("");
+  lbar.querySelectorAll(".glayer").forEach((b) => b.addEventListener("click", () => setLayer(g.layer === b.dataset.layer ? null : b.dataset.layer)));
+  g.cleanup.push(() => { g.meshes = {}; });
+  // dashed arcs through the atmosphere between countries that are fighting each other (shown with the conflict layer)
+  const arcGroup = new THREE.Group(); arcGroup.visible = false; scene.add(arcGroup); const arcMats = [];
+  const ARC_FIX = { PSE: [31.5, 34.45] };
+  const capOf = (iso) => ARC_FIX[iso] || (A.countries[iso] && A.countries[iso].cap);
+  fronts.forEach((c) => c.arcs.forEach(([ia, ib]) => {
+    const pa = capOf(ia), pb = capOf(ib); if (!pa || !pb) return;
+    const a = new THREE.Vector3(...gVec(pa[0], pa[1])), b = new THREE.Vector3(...gVec(pb[0], pb[1])), th = Math.acos(Math.max(-1, Math.min(1, a.dot(b)))); if (th < 0.01) return;
+    const peak = Math.min(0.42, 0.05 + 0.2 * th), pts = [];
+    for (let i = 0; i <= 80; i++) { const t = i / 80, k1 = Math.sin((1 - t) * th) / Math.sin(th), k2 = Math.sin(t * th) / Math.sin(th); pts.push(a.clone().multiplyScalar(k1).add(b.clone().multiplyScalar(k2)).normalize().multiplyScalar(1.004 + peak * Math.sin(Math.PI * t))); }
+    const col = c.lvl === "war" ? 0xff4b4b : 0xffa83a;
+    const mat = new THREE.ShaderMaterial({ uniforms: { time: { value: 0 }, len: { value: th * (1 + peak) }, col: { value: new THREE.Color(col) } },
+      vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+      fragmentShader: "varying vec2 vUv; uniform float time; uniform float len; uniform vec3 col; void main(){ float d = vUv.x * len / 0.05 - time * 0.9; if (fract(d) > 0.58) discard; gl_FragColor = vec4(col, 1.0); }" });
+    arcGroup.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 96, 0.0042, 5, false), mat)); arcMats.push(mat);
+    [a, b].forEach((v) => { const d = new THREE.Mesh(new THREE.SphereGeometry(0.011, 12, 12), new THREE.MeshBasicMaterial({ color: col })); d.position.copy(v.clone().multiplyScalar(1.006)); arcGroup.add(d); });
+  }));
+  g.arcs = arcGroup; g.arcMats = arcMats;
+  const layerRow = (iso) => {
+    if (!iso || !g.layer) return "";
+    if (g.layer === "conflict") { const c = A.conflict && A.conflict.countries[iso]; return `<div class="gc-row"><span class="gc-k">Armed conflict</span><b>${c ? (c.lvl === "war" ? "War" : "Smaller conflict") : "None tracked"}</b></div>`; }
+    const k = MIXK[g.layer], r = A.mix && A.mix.c[iso]; if (!k || !r || r[k] == null) return "";
+    return `<div class="gc-row"><span class="gc-k">${gShare(r[k])} of ${MIXWHAT[k]}</span><b>#${r[k + "_r"]}</b></div>`;
+  };
+  try { const saved = localStorage.getItem("ml_globe_layer"), old = localStorage.getItem("ml_globe_tint") === "1" ? "health" : null; const k = saved === null ? old : saved; if (k && LAYERS.some((l) => l[0] === k)) setLayer(k); } catch (e) {}
   const ringSegs = (rings, out) => {
     for (const r of rings) for (let i = 0; i + 3 < r.length; i += 2) {
       let x0 = r[i], y0 = r[i + 1], x1 = r[i + 2], y1 = r[i + 3];
@@ -289,7 +350,7 @@ async function globeMount(host) {
       }
     }
     card.innerHTML = `<div class="gc-head"><span class="gc-flag">${gFlag(meta && meta.iso2)}</span><div><b class="gc-name">${esc((meta && meta.name) || c.n)}</b><div class="gc-k">${meta ? esc(meta.capital || "") + (meta.region ? " · " + esc(meta.region) : "") : "Disputed or special territory"}</div></div></div>
-      ${meta && meta.tz ? `<div class="gc-row"><span class="gc-k">Local time</span><b class="gc-time">${esc(timeFor(meta.tz))}</b></div>` : ""}${sc}${cur}
+      ${meta && meta.tz ? `<div class="gc-row"><span class="gc-k">Local time</span><b class="gc-time">${esc(timeFor(meta.tz))}</b></div>` : ""}${layerRow(c.i)}${sc}${cur}
       ${meta && meta.parent ? `<div class="gc-hint">Overseas part of ${esc(meta.parentName)}. Scored with ${esc(meta.parentName)}.</div>` : meta ? `<div class="gc-hint">Double-click for the full economy</div>` : ""}`;
     card.hidden = false;
     const cw = 280, chh = card.offsetHeight || 240; let x = cx - r.left + 18, y = cy - r.top + 14;
@@ -311,6 +372,30 @@ async function globeMount(host) {
   };
   const closePanel = () => { g.panelOpen = false; g.sel = -1; host.classList.remove("with-panel"); panel.hidden = true; panel.innerHTML = ""; g.userZoom = false; setHighlight(-1); setTimeout(resize, 360); };
   g.openCountry = openPanel;
+  // floating country search: type a name, a capital or a country code, then pick (or press Enter) to fly there and open its panel
+  const sIn = host.querySelector(".gsearch input"), sList = host.querySelector(".gsr"), norm = (t) => String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const inGlobe = new Set(list.map((o) => o.i).filter(Boolean));
+  const pool = Object.values(A.countries).filter((m) => inGlobe.has(m.iso3)).map((m) => ({ iso: m.iso3, name: m.name, iso2: m.iso2, region: m.region, n1: norm(m.name), n2: norm((m.official || "") + " " + (m.capital || "")), c2: norm(m.iso2), c3: norm(m.iso3), off: m.parent ? 0.5 : 0 }));
+  let sHits = [], sSel = 0;
+  const sRender = () => { sList.innerHTML = sHits.map((h, i) => `<li role="option" data-i="${i}" class="${i === sSel ? "on" : ""}"><span class="gc-flag" style="font-size:18px">${gFlag(h.iso2)}</span><span>${esc(h.name)}</span><span class="gsr-k">${esc(h.region || "")}</span></li>`).join("") || `<li class="gsr-none">No country matches</li>`; sList.hidden = false; };
+  const sFind = (q) => {
+    q = norm(q).trim(); if (!q) return [];
+    const ALIAS = { uk: "united kingdom", britain: "united kingdom", england: "united kingdom", america: "united states", us: "united states", holland: "netherlands", burma: "myanmar", kyiv: "ukraine", turkiye: "turkey", "ivory coast": "cote d'ivoire", czechia: "czech", swaziland: "eswatini", persia: "iran", "south korea": "korea, republic", "north korea": "korea, democratic" };
+    q = ALIAS[q] || q;
+    return pool.map((c) => { let r = 9; if (c.n1 === q || c.c3 === q || c.c2 === q) r = 0; else if (c.n1.startsWith(q)) r = 1; else if (c.n1.split(/[\s-]+/).some((w) => w.startsWith(q))) r = 2; else if (c.n1.includes(q)) r = 3; else if (c.n2.includes(q)) r = 4; return { ...c, r: r + c.off }; })
+      .filter((c) => c.r < 9).sort((a, b) => a.r - b.r || a.name.localeCompare(b.name)).slice(0, 7);
+  };
+  const sPick = (h) => { if (!h) return; const ci = list.findIndex((o) => o.i === h.iso); sIn.value = h.name; sList.hidden = true; sIn.blur(); if (ci >= 0) openPanel(ci); };
+  sIn.addEventListener("input", () => { sHits = sFind(sIn.value); sSel = 0; if (sIn.value.trim()) sRender(); else sList.hidden = true; });
+  sIn.addEventListener("focus", () => { sIn.select(); if (sHits.length && sIn.value.trim()) sRender(); });
+  sIn.addEventListener("keydown", (e) => {
+    e.stopPropagation();
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { if (!sHits.length) return; e.preventDefault(); sSel = (sSel + (e.key === "ArrowDown" ? 1 : -1) + sHits.length) % sHits.length; sRender(); }
+    else if (e.key === "Enter") { e.preventDefault(); sPick(sHits[sSel]); }
+    else if (e.key === "Escape") { sList.hidden = true; sIn.blur(); }
+  });
+  sList.addEventListener("mousedown", (e) => { const li = e.target.closest("li[data-i]"); if (li) { e.preventDefault(); sPick(sHits[+li.dataset.i]); } });
+  sIn.addEventListener("blur", () => setTimeout(() => { sList.hidden = true; }, 120));
   g.onKey = (e) => { if (e.key === "Escape" && g.panelOpen) closePanel(); };
   document.addEventListener("keydown", g.onKey);
 
@@ -363,7 +448,8 @@ async function globeMount(host) {
     g.lon = ((g.lon + 540) % 360) - 180;
     if (now - lastSun > 20000) { const s = gSun(); sunV.set(...gVec(s.lat, s.lon)); lastSun = now; }
     earthMat.uniforms.time.value = (now - g.t0) / 1000;
-    if (tintMesh) { g.tint.o += ((g.tint.on ? 1 : 0) - g.tint.o) * Math.min(1, (force ? 1 : dt * 5)); tintMesh.material.opacity = g.tint.o; tintMesh.visible = g.tint.o > 0.01; }
+    for (const k in g.meshes) { const m = g.meshes[k]; g.layerO[k] += ((g.layer === k ? 1 : 0) - g.layerO[k]) * Math.min(1, (force ? 1 : dt * 5)); m.material.opacity = g.layerO[k]; m.visible = g.layerO[k] > 0.01; }
+    if (g.arcs) { g.arcs.visible = g.layer === "conflict"; if (g.arcs.visible) g.arcMats.forEach((m) => { m.uniforms.time.value = (now - g.t0) / 1000; }); }
     const v = gVec(g.lat, g.lon); camera.position.set(v[0] * g.dist, v[1] * g.dist, v[2] * g.dist); camera.lookAt(0, 0, 0); camera.updateMatrixWorld();
     // labels
     cam.set(v[0], v[1], v[2]); const H = stage.clientHeight, W = stage.clientWidth, ppu = H / (2 * Math.tan(17.5 * G_R) * Math.max(0.3, g.dist - 1));
@@ -415,6 +501,33 @@ function gWireCharts(root, series, years) {
   });
 }
 
+const G_EX_COL = { manuf: "#7f9bff", food: "#5fd37a", fuel: "#f08a3c", ore: "#b39b86", farm: "#b4d65a" };
+function gExtraHtml(iso, A) {   // what a country makes and buys, and any armed conflict on its soil
+  let out = "";
+  const cf = A.conflict && A.conflict.countries[iso];
+  if (cf) {
+    const rows = cf.c.map((id) => A.conflict.conflicts.find((x) => x.id === id)).filter(Boolean);
+    out += `<div class="card" style="border-left:4px solid ${cf.lvl === "war" ? "#ff4b4b" : "#ffa83a"}"><h3 style="margin:0 0 2px">Armed conflict: ${cf.lvl === "war" ? "war" : "smaller conflict"}</h3>
+      <p class="small muted" style="margin:0 0 8px">War means 1,000+ deaths in fighting a year; smaller conflict means 25 to 999.</p>
+      ${rows.map((c) => `<div class="gp-comp"><b>${esc(c.n)}</b> <span class="small muted">since ${esc(c.since)} · ${c.lvl === "war" ? "war" : "smaller conflict"}</span><div class="small">${esc(c.sides)}.${c.note ? " " + esc(c.note) : ""}</div></div>`).join("")}
+      <p class="small muted" style="margin:8px 0 0">${esc(A.conflict.caveat)} Snapshot as of ${esc(gDate(A.conflict.asof))}.</p></div>`;
+  }
+  const m = A.mix && A.mix.c[iso];
+  if (m) {
+    const pills = []; if (m.manf_r && m.manf_r <= 10) pills.push(`Top-10 goods maker (#${m.manf_r})`); if (m.agr_r && m.agr_r <= 10) pills.push(`Top-10 food grower (#${m.agr_r})`); if (m.cons_r && m.cons_r <= 10) pills.push(`Top-10 spender (#${m.cons_r})`);
+    const ex = m.ex, lab = A.mix.label || {}, sum = ex ? Object.values(ex).reduce((a, b) => a + b, 0) : 0, top = ex ? Object.entries(ex).sort((a, b) => b[1] - a[1])[0] : null;
+    const row = (k, name, what) => (m[k] == null ? "" : `<div class="gc-row" style="padding:6px 0;border-top:1px solid var(--line)"><span>${name}<div class="small muted">${gShare(m[k])} of ${what} · ${m[k + "_y"]}</div></span><b>#${m[k + "_r"]} of ${A.mix.n[k]}</b></div>`);
+    out += `<div class="card"><h3 style="margin:0 0 2px">What it makes and buys</h3>${pills.length ? `<p style="margin:4px 0 6px">${pills.map((p) => `<span class="pill">${esc(p)}</span>`).join(" ")}</p>` : ""}
+      ${row("manf", "Goods (manufacturing)", MIXWHAT_TXT.manf)}${row("agr", "Food and farm output", MIXWHAT_TXT.agr)}${row("cons", "Household spending (a buyer)", MIXWHAT_TXT.cons)}
+      ${ex && sum > 0 ? `<h4 style="margin:12px 0 4px">What it sells to the rest of the world</h4><div style="display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--line)">${Object.entries(ex).map(([k, v]) => `<i title="${esc(lab[k] || k)} ${v}%" style="width:${(v / Math.max(sum, 100) * 100).toFixed(1)}%;background:${G_EX_COL[k] || "#999"}"></i>`).join("")}</div>
+        <p class="small" style="margin:6px 0 0">${Object.entries(ex).filter(([, v]) => v >= 3).sort((a, b) => b[1] - a[1]).map(([k, v]) => `<span style="color:${G_EX_COL[k]}">●</span> ${esc(lab[k] || k)} ${Math.round(v)}%`).join(" &nbsp; ")}</p>
+        ${top && top[1] >= 45 ? `<p class="small muted" style="margin:4px 0 0">Mostly sells ${esc(lab[top[0]] || top[0])}.</p>` : ""}` : ""}
+      <p class="small muted" style="margin:8px 0 0">Source: ${esc(A.mix.source)}. Shares are of the countries that report, using each one's latest year.</p></div>`;
+  }
+  return out;
+}
+const MIXWHAT_TXT = { manf: "world manufacturing", agr: "world farm output", cons: "world household spending" };
+
 async function gPanelRender(panel, iso, A, onClose) {
   const meta = A.countries[iso], w = A.world.countries[iso], WM = A.world;
   if (meta && meta.parent) {   // an overseas department or territory: no figures of its own, so point to the country it belongs to
@@ -460,6 +573,7 @@ async function gPanelRender(panel, iso, A, onClose) {
       ${comps ? `<details style="margin-top:12px"><summary style="cursor:pointer;font-weight:700">How the score is built</summary><p class="small muted" style="margin:6px 0 8px">${esc(WM.rules._method)}</p>${comps}</details>` : ""}</div>
     <div class="hz"><div class="card"><div class="small muted">Population</div><b>${pop != null ? pop.toFixed(pop >= 100 ? 0 : 1) + " million" : "-"}</b></div><div class="card"><div class="small muted">Economy size</div><b>${money(w && w.gdp)}</b></div><div class="card"><div class="small muted">Income per person</div><b>${w && w.gdppc != null ? "$" + w.gdppc.toLocaleString() : "-"}</b></div>${meta.income ? `<div class="card"><div class="small muted">Income group</div><b>${esc(meta.income)}</b></div>` : ""}</div>
     ${curHtml}${cards}<p class="small muted">Sources: ${esc(WM.source)}. Years from ${ref} on are IMF estimates and projections and get revised. Educational information only. Not investment advice.</p>`;
+  { const ex = gExtraHtml(iso, A); if (ex) panel.querySelector(".gp-head").insertAdjacentHTML("afterend", ex); }
   panel.scrollTop = 0; panel.querySelector(".gp-x").onclick = onClose;
   const seriesForWire = Object.assign({}, ser, { _us: usS }); gWireCharts(panel, seriesForWire, years);
   if (cur && cur.hist) fetch((DATA_BASE || "data/") + "fx/FX_" + cur.code + ".json").then((r) => (r.ok ? r.json() : null)).then((h) => { const box = panel.querySelector("#gpfx"); if (h && box && typeof mountChart === "function") mountChart(box, h, { money: false, decimals: fxDec(cur.per), lineOnly: true, noRanges: true, rangeName: "5 years" }); }).catch(() => {});
@@ -469,7 +583,8 @@ function globeHtml() {
   return `<section class="globe-wrap" id="globe" aria-label="Interactive globe of the world's economies">
     <div class="globe-stage"><div class="gload"><span>Loading the Earth…</span></div><div class="glabels"></div><div class="gcard" hidden></div>
       <div class="gui-top"><span class="gtag">Live day &amp; night · time zones</span></div>
-      <div class="gui-right"><button class="gtoggle" aria-pressed="false">Color by economic health</button><div class="glegend" hidden><i></i><div><span>Strained</span><span>Healthy</span></div><em>Grey: not enough data</em></div></div>
-      <div class="gui-bot"><div class="ghint"><b>Hover</b> a country for two seconds · <b>double-click</b> for its economy · drag to spin</div><button class="gscroll" aria-label="Scroll to markets">Markets today ↓</button></div><div class="gcredit">Imagery: NASA Visible Earth · Borders: Natural Earth · Economy: IMF</div></div>
+      <div class="gsearch"><input type="search" placeholder="Search a country" aria-label="Search for a country" autocomplete="off" spellcheck="false"><ul class="gsr" role="listbox" hidden></ul></div>
+      <div class="gui-right"><div class="glayers" role="group" aria-label="Map layers"></div><div class="glegend" hidden></div></div>
+      <div class="gui-bot"><div class="ghint"><b>Hover</b> a country for two seconds · <b>double-click</b> for its economy · drag to spin</div><button class="gscroll" aria-label="Scroll to markets">Markets today ↓</button></div><div class="gcredit">Imagery: NASA Visible Earth · Borders: Natural Earth · Economy: IMF, World Bank · Conflict: public trackers</div></div>
     <aside class="gpanel" hidden></aside></section>`;
 }

@@ -98,6 +98,19 @@ def write_model():
         print("model scoring failed:", e)
 
 
+def write_mix():
+    """Who makes goods and food and who spends (data/world/mix.json). World Bank figures change once a year, so refreshed monthly. Keeps the old file if it fails."""
+    p = os.path.join(DATA, "world", "mix.json")
+    try:
+        if os.path.exists(p) and (dt.datetime.now().timestamp() - os.path.getmtime(p)) < 25 * 86400:
+            return
+        import worldmix
+        json.dump(worldmix.build(), open(p, "w"), separators=(",", ":"))
+        print("producer/consumer mix written")
+    except Exception as e:
+        print("mix failed:", e)
+
+
 def write_oil():
     try:
         json.dump(oil.build(), open(os.path.join(DATA, "oil.json"), "w"), separators=(",", ":"))
@@ -214,6 +227,7 @@ def main():
     write_crypto()
     write_economy()
     write_oil()
+    write_mix()
     write_model()
     write_ai(checks)
     write_forecasts()

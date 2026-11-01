@@ -70,7 +70,7 @@ footer{border-top:1px solid var(--line);color:#6f6f77}
 .globe-wrap{background:#000;margin-top:-40px;height:clamp(560px,calc(100svh - 56px),980px)}
 .gtag{letter-spacing:.2em;font-size:10.5px}
 .gcard,.gpanel{border-radius:2px}
-.gtoggle,.gscroll{border-radius:0}
+.gtoggle,.gscroll,.gsearch input,.gsr{border-radius:0}.glegend{border-radius:0}
 .gscroll{transition:transform .6s var(--ease)}.gscroll:hover{transform:translateY(3px)}
 
 /* full-bleed image tiles (Markets and Learn hubs) */
