@@ -97,9 +97,10 @@ async function sectorPage(key) {
   const perfOf = (sym) => { const c = sparks[sym] && sparks[sym].c; if (!c || c.length < 30) return null; const k = Math.min(n, c.length - 1); return (c[c.length - 1] / c[c.length - 1 - k] - 1) * 100; };
   const inds = {}; s.top.forEach((t) => { if (t.industry) inds[t.industry] = (inds[t.industry] || 0) + 1; });
   const chips = Object.entries(inds).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  const exE = (sym) => (typeof fcGet === "function" ? fcGet(sym) : null), exW = (sym) => { const f = exE(sym); return f && f.r && f.r.h21 ? f.r.h21[2] - f.r.h21[1] : 999; };   // width of the likely 1-month range: small = calm, large = wild
   let rows = s.top.filter((t) => !industryFilter || t.industry === industryFilter).map((t) => ({ ...t, perf: perfOf(t.symbol) }));
   const all50 = s.top.map((t) => ({ ...t, perf: perfOf(t.symbol) })).filter((t) => t.perf != null).sort((a, b) => b.perf - a.perf);
-  rows.sort((a, b) => sortKey === "d1" ? b.d1 - a.d1 : sortKey === "best" ? (b.perf ?? -999) - (a.perf ?? -999) : sortKey === "worst" ? (a.perf ?? 999) - (b.perf ?? 999) : b.cap_b - a.cap_b);
+  rows.sort((a, b) => sortKey === "d1" ? b.d1 - a.d1 : sortKey === "best" ? (b.perf ?? -999) - (a.perf ?? -999) : sortKey === "worst" ? (a.perf ?? 999) - (b.perf ?? 999) : sortKey === "calm" ? exW(a.symbol) - exW(b.symbol) : sortKey === "wild" ? exW(b.symbol) - exW(a.symbol) : b.cap_b - a.cap_b);
   // 1D/1W: the sector's ETF, scaled so today's close lands on the index's current level (so the percent moves match the ETF's)
   const etf = Object.keys(SECTOR_ETF_KEY).find((e) => SECTOR_ETF_KEY[e] === key), etfRow = etf && state.mk && state.mk.sectors && state.mk.sectors.find((r) => r.symbol === etf);
   const k = h && etfRow && etfRow.last ? h.c[h.c.length - 1] / etfRow.last : null;
@@ -127,11 +128,11 @@ async function sectorPage(key) {
   ${key === "real-estate" ? realEstateExtra(s) : ""}
   <div class="card"><h3>The 50 largest companies</h3><p class="small muted" style="margin-top:0">Ranked by market value (share price × number of shares). Tap any row to open its full chart.</p>
    <div class="tabs" style="margin-top:0"><span class="small muted" style="align-self:center">Trend chart:</span>${Object.keys(ROW_PTS).map((l) => `<a href="#" data-rr="${l}" class="${rowRange === l ? "on" : ""}">${l === "1M" ? "1 month" : l === "3M" ? "3 months" : "1 year"}</a>`).join("")}</div>
-   <div class="tabs" style="margin-top:0"><span class="small muted" style="align-self:center">Sort:</span><a href="#" data-sort="cap" class="${sortKey === "cap" ? "on" : ""}">Largest</a><a href="#" data-sort="d1" class="${sortKey === "d1" ? "on" : ""}">Today's movers</a><a href="#" data-sort="best" class="${sortKey === "best" ? "on" : ""}">Best ${rowRange}</a><a href="#" data-sort="worst" class="${sortKey === "worst" ? "on" : ""}">Weakest ${rowRange}</a></div>
+   <div class="tabs" style="margin-top:0"><span class="small muted" style="align-self:center">Sort:</span><a href="#" data-sort="cap" class="${sortKey === "cap" ? "on" : ""}">Largest</a><a href="#" data-sort="d1" class="${sortKey === "d1" ? "on" : ""}">Today's movers</a><a href="#" data-sort="best" class="${sortKey === "best" ? "on" : ""}">Best ${rowRange}</a><a href="#" data-sort="worst" class="${sortKey === "worst" ? "on" : ""}">Weakest ${rowRange}</a><a href="#" data-sort="calm" class="${sortKey === "calm" ? "on" : ""}" title="Narrowest likely 1-month range first">Calmest</a><a href="#" data-sort="wild" class="${sortKey === "wild" ? "on" : ""}" title="Widest likely 1-month range first">Wildest</a></div>
    <div class="tabs" style="margin-top:0">${chips.map(([nm, c]) => `<a href="#" data-ind="${esc(nm)}" class="${industryFilter === nm ? "on" : ""}">${esc(nm)} (${c})</a>`).join("")}</div>
-   <div class="tw"><table><tr><th>#</th><th>Company</th><th>Trend</th><th>${rowRange}</th><th>Value</th><th>Price</th><th>Today</th></tr>
+   <div class="tw"><table><tr><th>#</th><th>Company</th><th>Trend</th><th>${rowRange}</th><th>Value</th><th>Price</th><th>Today</th><th title="68% of the time a month's move has landed inside this range, from today's volatility. Size, not direction.">Likely 1-month range</th></tr>
    ${rows.map((t, i) => `<tr style="cursor:pointer" onclick="location.hash='#/stock/${esc(t.symbol)}'"><td class="muted">${i + 1}</td><td><a href="#/stock/${esc(t.symbol)}"><b>${esc(t.symbol)}</b></a><div class="small muted">${esc(t.name)}${t.industry ? " · " + esc(t.industry) : ""}</div></td>
-   <td>${spark(t.symbol)}</td><td>${pctTxt(t.perf)}</td><td>${capStr(t.cap_b)}</td><td>$${t.price.toLocaleString()}</td><td>${pctTxt(t.d1)}</td></tr>`).join("")}</table></div></div>`;
+   <td>${spark(t.symbol)}</td><td>${pctTxt(t.perf)}</td><td>${capStr(t.cap_b)}</td><td>$${t.price.toLocaleString()}</td><td>${pctTxt(t.d1)}</td><td class="small">${(() => { const f = exE(t.symbol); return f && f.r && f.r.h21 ? fcPct(f.r.h21[1]) + " to " + fcPct(f.r.h21[2]) : '<span class="muted">-</span>'; })()}</td></tr>`).join("")}</table></div></div>`;
 }
 
 async function stockPage(sym) {

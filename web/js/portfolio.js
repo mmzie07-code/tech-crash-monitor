@@ -163,6 +163,26 @@ function pfSummary(ax) {
   return `Strongest on ${names[hi[0]]} (${hi[1]}); weakest on ${names[lo[0]]} (${lo[1]}).`;
 }
 
+
+// ---- ranges: how far today's holdings could move (size, not direction) ----
+function pfRng(s, value) {   // a holding's likely 1-month range, in percent and dollars
+  const e = typeof fcGet === "function" ? (fcGet(s) || (PF.H && PF.H[s] ? fcCompute(PF.H[s].c, "stock", 252) : null)) : null;
+  if (!e || !e.r || !e.r.h21) return `<span class="muted">-</span>`;
+  const lo = e.r.h21[1], hi = e.r.h21[2];
+  return `${pfP(lo, 0)} to ${pfP(hi, 0)}<div class="small muted">${pfM(value * (1 + lo / 100))} to ${pfM(value * (1 + hi / 100))}</div>`;
+}
+function pfRiskCard() {   // today's holdings run back over the past ~3 years as one series; its own ups and downs give the portfolio's range (so diversification counts)
+  if (typeof fcPanel !== "function" || typeof fcCompute !== "function") return "";
+  const R = PF.R, H = PF.H, cal = H && H["^GSPC"]; if (!cal) return "";
+  const held = R.order.filter((s) => R.pos[s].sh > 0.0000001), days = cal.t.slice(-760); if (days.length < 200 || !held.length) return "";
+  const out = new Array(days.length).fill(0); let tot = 0, cov = 0;
+  held.forEach((s) => { const v = R.pos[s].value; tot += v; if (PF.H[s]) { cov += v; days.forEach((d, i) => { out[i] += R.pos[s].sh * pfPx(PF.H[s], d); }); } else days.forEach((_, i) => { out[i] += v; }); });
+  if (!tot || cov / tot < 0.7) return "";
+  const e = fcCompute(out, "stock", 252); if (!e) return "";
+  return fcPanel({ entry: e, price: R.total[R.L], hist: out, id: "pffc", title: "Where could this portfolio be in three months?" })
+    + `<p class="small muted" style="margin:-6px 0 12px">Worked out from how your current holdings, taken together, have moved over the past three years, so owning several companies narrows the range. If you bought or sold recently it reflects what you hold now, and it assumes the future is about as bumpy as that stretch.</p>`;
+}
+
 function pfHeader(R, agg) {
   const t = R.total[R.L], cost = R.cost[R.L], unreal = t - cost;
   let d1 = 0; R.syms.forEach((s) => { const v = R.pos[s].value, p = pfD1(s); d1 += v - v / (1 + p / 100); });
@@ -201,11 +221,12 @@ function pfRender() {
       <p class="small" style="text-align:center;margin:0 0 8px"><b>${esc(pfSummary(agg.axes))}</b></p>
       <div class="pf-badges"><span class="bad">! ${risks} risks</span><span class="good">★ ${rewards} rewards</span><span class="muted">${R.syms.length} holdings</span></div></div></div>`;
   const tabs = [["holdings", "Holdings"], ["analysis", "Analysis"], ["valuations", "Valuations"], ["dividends", "Dividends"], ["returns", "Returns"], ["updates", "Updates"]];
-  box.innerHTML = `${top}${tiles}<div class="tabs pf-tabs">${tabs.map(([k, l]) => `<a href="#" data-pt="${k}" class="${PF.tab === k ? "on" : ""}">${l}</a>`).join("")}</div><div id="pftab">${pfTab(agg)}</div>`;
+  box.innerHTML = `${top}${tiles}${pfRiskCard()}<div class="tabs pf-tabs">${tabs.map(([k, l]) => `<a href="#" data-pt="${k}" class="${PF.tab === k ? "on" : ""}">${l}</a>`).join("")}</div><div id="pftab">${pfTab(agg)}</div>`;
   // wiring
   box.querySelectorAll("[data-pt]").forEach((a) => a.onclick = (e) => { e.preventDefault(); PF.tab = a.dataset.pt; box.querySelectorAll("[data-pt]").forEach((x) => x.classList.toggle("on", x === a)); document.querySelector("#pftab").innerHTML = pfTab(agg); pfWireTab(); });
   box.querySelectorAll("#pfrange button").forEach((b) => b.onclick = () => { PF.range = b.dataset.r; pfRender(); });
   pfDrawStack(box, from);
+  if (typeof fcDraw === "function") fcDraw();
   pfWireTab();
 }
 
@@ -242,8 +263,8 @@ function pfTab(agg) {
     const rows = syms.map((s) => { const p = R.pos[s], sc = S[s], gap = sc && sc.peer ? (p.price / sc.peer.base - 1) * 100 : null, d1 = pfD1(s), gain = p.value - p.cost;
       return `<tr data-sel="${esc(s)}" class="${PF.sel === s ? "sel" : ""}" style="cursor:pointer"><td><div style="display:flex;gap:10px;align-items:center">${sc ? miniRadar(sc.axes, 36) : ""}<div><b>${esc(s)}</b><div class="small muted">${esc(pfName(s).slice(0, 22))}</div></div></div></td>
         <td>${pfM(p.price, 2)}<div class="small" style="color:${gap == null ? "var(--mut)" : gap > 0 ? "var(--bad)" : "var(--ok)"}">${gap == null ? "" : Math.abs(gap).toFixed(0) + "% " + (gap > 0 ? "above" : "below") + " typical"}</div></td>
-        <td style="color:${pfC(d1)}">${pfP(d1, 1)}<div class="small">${pfS(p.value - p.value / (1 + d1 / 100))}</div></td><td style="color:${pfC(gain)}">${pfP(p.cost ? gain / p.cost * 100 : 0)}<div class="small">${pfS(gain)}</div></td><td>${pfM(p.value)}<div class="small muted">${pfM(p.cost)}</div></td></tr>`; }).join("");
-    return `<div class="pf-grid"><div><div class="tw"><table class="pf-table"><tr><th>Holding</th><th>Price (vs sector-typical value)</th><th>1 day</th><th>Total return</th><th>Value / cost</th></tr>${rows}</table></div>
+        <td style="color:${pfC(d1)}">${pfP(d1, 1)}<div class="small">${pfS(p.value - p.value / (1 + d1 / 100))}</div></td><td>${pfRng(s, p.value)}</td><td style="color:${pfC(gain)}">${pfP(p.cost ? gain / p.cost * 100 : 0)}<div class="small">${pfS(gain)}</div></td><td>${pfM(p.value)}<div class="small muted">${pfM(p.cost)}</div></td></tr>`; }).join("");
+    return `<div class="pf-grid"><div><div class="tw"><table class="pf-table"><tr><th>Holding</th><th>Price (vs sector-typical value)</th><th>1 day</th><th>Likely 1-month range</th><th>Total return</th><th>Value / cost</th></tr>${rows}</table></div>
       <p class="small muted" style="margin:6px 0 0">"Sector-typical value" is what the stock would trade at if priced like the median company in its sector. A yardstick, not a price target. Tap a row for details.</p></div><aside id="pfpanel">${pfPanel()}</aside></div>`;
   }
   if (PF.tab === "analysis") {
@@ -288,7 +309,7 @@ async function pfPage(events, mine) {
   const syms = [...new Set(events.map((e) => e.sym))], { H, S, N } = await pfLoadData(syms);
   const usable = events.filter((e) => H[e.sym] || mine);
   if (!H["^GSPC"] || !usable.length) return `<div class="card muted">Price history isn't available right now, so the portfolio can't be drawn. Try again in a little while.</div>`;
-  PF.S = S; PF.N = N; PF.mine = mine; PF.R = pfCompute(usable, H); if (!PF.sel || !PF.R.pos[PF.sel]) PF.sel = null;
+  PF.S = S; PF.N = N; PF.H = H; PF.mine = mine; PF.R = pfCompute(usable, H); if (!PF.sel || !PF.R.pos[PF.sel]) PF.sel = null;
   afterRender.push(pfRender);
   return `<div id="pfroot"><div class="card muted">Loading…</div></div>`;
 }

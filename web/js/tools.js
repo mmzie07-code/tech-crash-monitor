@@ -70,14 +70,19 @@ function screenerResults() {
     && (SCR.move === "any" || (SCR.move === "up" && x[5] > 0) || (SCR.move === "down" && x[5] < 0) || (SCR.move === "up2" && x[5] >= 2) || (SCR.move === "down2" && x[5] <= -2))
     && (SCR.pmin === "" || x[4] >= +SCR.pmin) && (SCR.pmax === "" || x[4] <= +SCR.pmax));
   const key = { cap: 3, move: 5, price: 4, name: 1 }[SCR.sort], sgn = SCR.dir === "desc" ? -1 : 1;
+  if (SCR.sort === "swing") {   // width of the likely 1-month range; stocks without a computed range go last
+    const w = (x) => { const f = fcGet(x[0]); return f && f.r && f.r.h21 ? f.r.h21[2] - f.r.h21[1] : null; };
+    r.sort((a, b) => { const wa = w(a), wb = w(b); return wa == null ? (wb == null ? 0 : 1) : wb == null ? -1 : (wa - wb) * sgn; });
+    return r;
+  }
   r.sort((a, b) => (typeof a[key] === "string" ? a[key].localeCompare(b[key]) : a[key] - b[key]) * sgn);
   return r;
 }
 function screenerTable() {
   const r = screenerResults(), shown = r.slice(0, SCR.shown);
   return `<p class="small muted">${r.length.toLocaleString()} matching companies${r.length > SCR.shown ? `, showing the first ${SCR.shown}` : ""}.</p>
-  <div class="tw"><table><tr><th>Company</th><th>Sector</th><th>Value</th><th>Price</th><th>Today</th></tr>${shown.map((x) => `<tr style="cursor:pointer" onclick="location.hash='#/stock/${esc(x[0])}'"><td><a href="#/stock/${esc(x[0])}"><b>${esc(x[0])}</b></a><div class="small muted">${esc(x[1])}</div></td>
-   <td class="small muted">${esc(SECTOR_NAME(x[2]))}</td><td>${capStr(x[3])}</td><td>$${x[4].toLocaleString()}</td><td>${pctTxt(x[5])}</td></tr>`).join("") || '<tr><td colspan="5" class="muted">No companies match. Try loosening a filter.</td></tr>'}</table></div>
+  <div class="tw"><table><tr><th>Company</th><th>Sector</th><th>Value</th><th>Price</th><th>Today</th><th title="68% of the time a month's move has landed inside this range, from today's volatility. Size, not direction. Shown for the largest companies, where we have enough price history.">Likely 1-month range</th></tr>${shown.map((x) => `<tr style="cursor:pointer" onclick="location.hash='#/stock/${esc(x[0])}'"><td><a href="#/stock/${esc(x[0])}"><b>${esc(x[0])}</b></a><div class="small muted">${esc(x[1])}</div></td>
+   <td class="small muted">${esc(SECTOR_NAME(x[2]))}</td><td>${capStr(x[3])}</td><td>$${x[4].toLocaleString()}</td><td>${pctTxt(x[5])}</td><td class="small">${(() => { const f = typeof fcGet === "function" ? fcGet(x[0]) : null; return f && f.r && f.r.h21 ? fcPct(f.r.h21[1]) + " to " + fcPct(f.r.h21[2]) : '<span class="muted">-</span>'; })()}</td></tr>`).join("") || '<tr><td colspan="6" class="muted">No companies match. Try loosening a filter.</td></tr>'}</table></div>
   ${r.length > SCR.shown ? `<button class="btn ghost" id="scrmore">Show 50 more</button>` : ""}`;
 }
 function screenerPage() {
@@ -96,7 +101,7 @@ function screenerPage() {
    <label>Company size${sel("scc", [["any", "Any"], ["mega", "Mega (over $200B)"], ["large", "Large ($10B to $200B)"], ["mid", "Mid ($2B to $10B)"], ["small", "Small ($300M to $2B)"]], SCR.cap)}</label>
    <label>Today's move${sel("scm", [["any", "Any"], ["up", "Up"], ["down", "Down"], ["up2", "Up 2% or more"], ["down2", "Down 2% or more"]], SCR.move)}</label>
    <label>Price from $<input id="scmin" type="number" min="0" step="any" value="${esc(SCR.pmin)}"></label><label>to $<input id="scmax" type="number" min="0" step="any" value="${esc(SCR.pmax)}"></label>
-   <label>Sort by${sel("sso", [["cap", "Market value"], ["move", "Today's move"], ["price", "Price"], ["name", "Name"]], SCR.sort)}</label><label>Order${sel("ssd", [["desc", "High to low"], ["asc", "Low to high"]], SCR.dir)}</label></div>
+   <label>Sort by${sel("sso", [["cap", "Market value"], ["move", "Today's move"], ["price", "Price"], ["name", "Name"], ["swing", "Likely monthly swing"]], SCR.sort)}</label><label>Order${sel("ssd", [["desc", "High to low"], ["asc", "Low to high"]], SCR.dir)}</label></div>
    <div id="scrout"></div></div>`;
 }
 
