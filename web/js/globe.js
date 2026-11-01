@@ -52,9 +52,10 @@ function gIndex(list) {
 function gCanvas(w, h) { const c = document.createElement("canvas"); c.width = w; c.height = h; return c; }
 function gTzTexture(THREE, zones, land) {
   const W = 4096, H = 2048, c = gCanvas(W, H), x = c.getContext("2d"), X = (lon) => ((lon + 180) / 360) * W, Y = (lat) => ((90 - lat) / 180) * H;
+  const fc = gCanvas(W, H), fx = fc.getContext("2d");
   if (zones && zones.length) {   // the real, irregular time-zone areas (Natural Earth), tinted so neighbors differ
     const pal = ["rgba(120,160,255,0.085)", "rgba(170,205,255,0.040)", "rgba(185,160,255,0.075)", "rgba(110,215,230,0.055)", "rgba(145,185,255,0.100)", "rgba(210,215,255,0.035)"];
-    for (const z of zones) { x.fillStyle = pal[(z.c - 1) % 6]; for (const rings of z.p) { x.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? x.lineTo(X(r[i]), Y(r[i + 1])) : x.moveTo(X(r[i]), Y(r[i + 1])); x.closePath(); } x.fill("evenodd"); } }
+    for (const z of zones) { fx.fillStyle = pal[(z.c - 1) % 6]; for (const rings of z.p) { fx.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? fx.lineTo(X(r[i]), Y(r[i + 1])) : fx.moveTo(X(r[i]), Y(r[i + 1])); fx.closePath(); } fx.fill("evenodd"); } }
     x.strokeStyle = "rgba(195,218,255,0.24)"; x.lineWidth = 2; x.lineJoin = "round"; x.beginPath();
     for (const z of zones) for (const rings of z.p) for (const r of rings) {
       let a = 1e9, b = 1e9, c2 = -1e9, d2 = -1e9; for (let i = 0; i < r.length; i += 2) { a = Math.min(a, r[i]); c2 = Math.max(c2, r[i]); b = Math.min(b, r[i + 1]); d2 = Math.max(d2, r[i + 1]); }
@@ -72,6 +73,8 @@ function gTzTexture(THREE, zones, land) {
     const m = gCanvas(W, H), mx = m.getContext("2d"); mx.fillStyle = "#fff"; mx.strokeStyle = "#fff"; mx.lineWidth = 34; mx.lineJoin = "round";
     const trace = (ctx) => { for (const co of land) for (const rings of co.p) { ctx.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? ctx.lineTo(X(r[i]), Y(r[i + 1])) : ctx.moveTo(X(r[i]), Y(r[i + 1])); ctx.closePath(); } ctx.fill("evenodd"); ctx.stroke(); } };
     trace(mx); x.globalCompositeOperation = "destination-in"; x.drawImage(m, 0, 0); x.globalCompositeOperation = "source-over";
+    const lm = gCanvas(W, H), lx = lm.getContext("2d"); lx.fillStyle = "#fff"; for (const co of land) for (const rings of co.p) { lx.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? lx.lineTo(X(r[i]), Y(r[i + 1])) : lx.moveTo(X(r[i]), Y(r[i + 1])); lx.closePath(); } lx.fill("evenodd"); }
+    fx.globalCompositeOperation = "destination-in"; fx.drawImage(lm, 0, 0); x.drawImage(fc, 0, 0);
     const o = gCanvas(W, H), ox = o.getContext("2d");
     for (let k = 0; k < 24; k += 2) { ox.fillStyle = "rgba(140,175,255,0.045)"; ox.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); }
     ox.strokeStyle = "rgba(190,215,255,0.20)"; ox.lineWidth = 2; for (let k = 0; k <= 24; k++) { const xx = X(-180 + (k - 0.5) * 15); ox.beginPath(); ox.moveTo(xx, 0); ox.lineTo(xx, H); ox.stroke(); }
@@ -114,8 +117,10 @@ void main(){
   float ocean = smoothstep(0.0, 0.05, d.b - d.g) * (1.0 - smoothstep(0.30, 0.50, d.r));
   float land = 1.0 - ocean;
   float wide = 0.0;
-  for (int i = 0; i < 8; i++) { float a = float(i) * 0.7854; vec2 o = vec2(cos(a), sin(a)) * px * 14.0; vec3 s = texture2D(dayMap, vUv + o).rgb; wide += 1.0 - smoothstep(0.0, 0.05, s.b - s.g) * (1.0 - smoothstep(0.30, 0.50, s.r)); }
-  wide /= 8.0;
+  for (int i = 0; i < 8; i++) { float a = float(i) * 0.7854; vec2 dir = vec2(cos(a), sin(a)); vec2 dir2 = vec2(cos(a + 0.3927), sin(a + 0.3927));
+    vec3 s1 = texture2D(dayMap, vUv + dir * px * 7.0).rgb; vec3 s2 = texture2D(dayMap, vUv + dir2 * px * 15.0).rgb;
+    wide += 2.0 - smoothstep(0.0, 0.05, s1.b - s1.g) * (1.0 - smoothstep(0.30, 0.50, s1.r)) - smoothstep(0.0, 0.05, s2.b - s2.g) * (1.0 - smoothstep(0.30, 0.50, s2.r)); }
+  wide /= 16.0;
   // land: unsharp mask for crisp detail + a light emboss so ranges and coasts read as relief
   vec3 blur = (texture2D(dayMap, vUv + vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv - vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv + vec2(0.0, px.y) * 2.0).rgb + texture2D(dayMap, vUv - vec2(0.0, px.y) * 2.0).rgb) * 0.25;
   vec3 sharp = d + (d - blur) * 2.2;
@@ -146,13 +151,10 @@ void main(){
   // night side: dark terrain, bold gold city lights with a soft bloom
   vec3 nl = texture2D(nightMap, vUv).rgb;
   float lights = lum(nl);
-  float glow = 0.0;
-  for (int i = 0; i < 8; i++) { float a = float(i) * 0.7854; glow += lum(texture2D(nightMap, vUv + vec2(cos(a), sin(a)) * px * 4.0).rgb); }
-  glow /= 8.0;
-  float L = smoothstep(0.10, 0.65, lights) * 4.2 + max(glow - 0.07, 0.0) * 9.0;
-  vec3 gold = mix(vec3(1.0, 0.46, 0.08), vec3(1.0, 0.82, 0.38), clamp(lights * 1.6, 0.0, 1.0));
-  vec3 terr = mix(sea * 0.30 + vec3(0.004, 0.010, 0.030), lc * vec3(0.17, 0.21, 0.30), land);
-  vec3 nightC = terr + gold * L * (1.0 - cl * 0.55);
+  float L = 1.0 - exp(-smoothstep(0.08, 0.9, lights) * 3.4);
+  vec3 gold = mix(vec3(1.0, 0.42, 0.06), vec3(1.0, 0.74, 0.30), smoothstep(0.2, 0.9, lights));
+  vec3 terr = mix(vec3(0.006, 0.016, 0.045), lc * vec3(0.14, 0.18, 0.26), land);
+  vec3 nightC = terr + gold * L * 1.5 * (1.0 - cl * 0.55);
   vec3 col = mix(nightC, dayC, day);
   // soft warm line along the terminator
   float tw = exp(-pow(nd * 5.0, 2.0));
