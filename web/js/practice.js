@@ -54,7 +54,7 @@ function goals() {
 }
 
 function pTabs(cur) {
-  return `<div class="tabs">${[["", "Portfolio"], ["analysis", "Analysis"], ["trade", "Trade"], ["history", "History"], ["goals", "Goals"], ["demo", "Demo portfolio"]].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/practice${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
+  return `<div class="tabs">${[["", "Portfolio"], ["analysis", "Analysis"], ["trade", "Trade"], ["history", "History"], ["goals", "Goals"], ["demo", "Demo portfolio"], ...(typeof AUTH !== "undefined" && AUTH.owner ? [["fund", "AI fund (owner)"]] : [])].map(([k, l]) => `<a class="${cur === k ? "on" : ""}" href="#/practice${k ? "/" + k : ""}">${l}</a>`).join("")}</div>`;
 }
 const PNOTE = `<p class="small muted">Practice only: pretend money, no risk. Prices are each day's <b>closing</b> price and trades fill at the latest close, with no fees or bid-ask spread. Real trades fill at live prices and cost a little more. Saved on this device only.</p>`;
 
@@ -69,6 +69,7 @@ function practice(tab, arg) {
   if (tab === "history") return head + historyView();
   if (tab === "goals") return head + goalsView();
   if (tab === "demo") return demoPage().then((h) => head + h);
+  if (tab === "fund") return fundPage().then((h) => head + h);
   if (tab === "analysis") return minePage().then((h) => head + h);
   return head + portfolioView();
 }

@@ -74,8 +74,14 @@ def write_ai(checks):
 
 
 def write_forecasts():
-    """Volatility ranges and odds for every price on the site, earnings reaction bands, and economy forecasts. Each keeps its previous file if it fails."""
-    for name in ("forecast", "econ_forecast"):
+    """Volatility ranges and odds for every price on the site, earnings reaction bands, and economy forecasts. Each keeps its previous file if it fails.
+    First refreshes a rotating batch of smaller companies' volatility (data/small.json), then runs the AI-run practice portfolios on the new prices."""
+    try:
+        import smallcaps
+        smallcaps.refresh(max_n=700, budget_s=1200)
+    except Exception as e:
+        print("small-company refresh failed:", e)
+    for name in ("forecast", "econ_forecast", "ai_fund"):
         try:
             __import__(name).main()
         except Exception as e:

@@ -297,6 +297,11 @@ def main(skip_earnings=False):
     t0 = time.time()
     calib, evidence = calibrate()
     fc, asof = site_forecasts(calib)
+    try:   # smaller companies: their own calibration (their volatility per company lives in data/small.json, refreshed by smallcaps.refresh)
+        import smallcaps
+        sc = smallcaps.calibrate(); calib["small"] = sc["calib"]; evidence["small"] = sc["evidence"]
+    except Exception as e:
+        print("small-company calibration skipped:", e)
     out = dict(generated=dt.datetime.utcnow().isoformat() + "Z", asof=asof, calib=calib, evidence=evidence, f=fc, horizons={"std": STD_H, "crypto": CRY_H}, xgrid=XGRID, zgrid=ZGRID, qs=QS)
     json.dump(out, open(os.path.join(DATA, "forecasts.json"), "w"), separators=(",", ":"))
     print("forecasts: %d symbols, calibrated classes %s (%.0fs)" % (len(fc), list(calib), time.time() - t0))

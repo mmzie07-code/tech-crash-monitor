@@ -1,7 +1,7 @@
 // Site-wide forecasts. One method everywhere (see engine/forecast.py): forecast HOW FAR a price can move, never which way.
 // Ranges come from volatility and from how far that class of asset has actually moved in the past; odds from how deep paths really dipped.
 // Pre-computed for every symbol in data/forecasts.json; fcCompute() is the identical math for tickers looked up live.
-const FC_LABEL = { stock: "large US stocks", index: "stock indices", sector: "sector funds", crypto: "major coins", fx: "currencies", commodity: "commodities", rate: "Treasury yields" };
+const FC_LABEL = { stock: "large US stocks", index: "stock indices", sector: "sector funds", small: "smaller companies", crypto: "major coins", fx: "currencies", commodity: "commodities", rate: "Treasury yields" };
 const FC_H = { std: { h5: 5, h21: 21, h63: 63 }, crypto: { h5: 7, h21: 30, h63: 90 } };
 const fcPct = (x, d = 0) => (x == null ? "-" : (x > 0 ? "+" : "") + x.toFixed(d) + "%");
 
@@ -13,7 +13,15 @@ function fcKey(sym) {
   if (/=F$/.test(sym)) return "COM_" + sym;
   return sym;
 }
-function fcGet(sym) { return state.fc && state.fc.f ? state.fc.f[fcKey(sym)] || null : null; }
+function fcGet(sym) { return state.fc && state.fc.f ? state.fc.f[fcKey(sym)] || fcSmall(sym) : null; }
+// smaller companies: data/small.json holds each one's price and daily volatility; the range comes from the "small" calibration (fitted on small companies, not borrowed from large ones)
+function fcSmall(sym) {
+  const v = state.sm && state.sm[sym], F = state.fc; if (!v || !v.s || !v.p || !F || !F.calib || !F.calib.small) return null;
+  const cal = F.calib.small, r = {};
+  for (const hk of ["h5", "h21", "h63"]) { const sd = v.s * Math.sqrt(FC_H.std[hk]), q = cal[hk].q; r[hk] = [0, 1, 3, 4].map((i) => +((Math.exp(sd * q[i]) - 1) * 100).toFixed(2)); }
+  const sd = v.s * Math.sqrt(63), c63 = cal.h63, down = (d) => fcInterp(F.xgrid, c63.dn, Math.abs(Math.log(1 - d)) / sd), up = (u) => 1 - fcInterp(F.zgrid, c63.cdf, Math.log(1 + u) / sd);
+  return { c: "small", p: v.p, s: +(v.s * Math.sqrt(252) * 100).toFixed(1), r, d10: down(0.1), d20: down(0.2), u10: up(0.1), u20: up(0.2), d: v.d };
+}
 
 function fcSigma(c) {   // same as sigma_daily() in Python: 75% EWMA(0.94) + 25% trailing-year variance, last value
   let ew = null, n = 0; const sq = [];
@@ -62,7 +70,7 @@ function fcPanel(o) {
     <div class="card" style="padding:12px"><div class="small muted">Ends 3 months up 10%+</div><b style="font-size:20px;color:var(--ok)">${pr(e.u10)}</b></div>
     <div class="card" style="padding:12px"><div class="small muted">Volatility (a year)</div><b style="font-size:20px">${e.s}%</b></div></div>
    ${earn}
-   <p class="small muted" style="margin:10px 0 0">${ev ? `Tested on ${state.fc.evidence[e.c].symbols} ${FC_LABEL[e.c] || "assets"} since 2018, using only information available at each date: the 68% range held <b>${Math.round(ev.band68 * 100)}%</b> of the time and the 90% range <b>${Math.round(ev.band90 * 100)}%</b>.` : "Method tested across stocks, indices, funds, currencies and commodities."} Direction cannot be forecast reliably, and neither can the day a drop happens: <a href="#/watch">how we test this</a>. Not investment advice.</p></div>`;
+   <p class="small muted" style="margin:10px 0 0">${ev ? `Tested on ${state.fc.evidence[e.c].symbols} ${FC_LABEL[e.c] || "assets"} ${e.c === "small" ? "from 2024 on (the range was fitted on earlier data)" : "since 2018"}, using only information available at each date: the 68% range held <b>${Math.round(ev.band68 * 100)}%</b> of the time and the 90% range <b>${Math.round(ev.band90 * 100)}%</b>.` : "Method tested across stocks, indices, funds, currencies and commodities."} Direction cannot be forecast reliably, and neither can the day a drop happens: <a href="#/watch">how we test this</a>. Not investment advice.</p></div>`;
 }
 
 function fcDraw() {
