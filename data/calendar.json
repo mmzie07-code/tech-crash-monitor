@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31T19:02:51.061631Z",
- "today": "2026-10-31",
+ "generated": "2026-11-01T04:23:17.230918Z",
+ "today": "2026-11-01",
  "timezone": "US Eastern",
  "events": [
   {
@@ -769,6 +769,36 @@
    "link": null
   },
   {
+   "id": "2026-11-10-earnings-petroleo-brasileiro-s-a-petrobras-pbr-reports-ea",
+   "date": "2026-11-10",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Petroleo Brasileiro S.A.- Petrobras (PBR) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.23.",
+   "extra": {
+    "market_cap_b": 141,
+    "eps_forecast": "$1.23"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-10-earnings-petroleo-brasileiro-s-a-petrobras-pbr-a-reports-",
+   "date": "2026-11-10",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Petroleo Brasileiro S.A.- Petrobras (PBR.A) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
+   "extra": {
+    "market_cap_b": 141,
+    "eps_forecast": ""
+   },
+   "source": "",
+   "link": null
+  },
+  {
    "id": "2026-11-12-data-weekly-jobless-claims",
    "date": "2026-11-12",
    "time": "8:30 AM",
@@ -996,6 +1026,18 @@
    "time": "12:00 PM",
    "kind": "data",
    "title": "Z.1 - Financial Accounts of the United States",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-16-data-g-17-industrial-production-and-capacity-utilizat",
+   "date": "2026-12-16",
+   "time": "9:15 AM",
+   "kind": "data",
+   "title": "G.17 - Industrial Production and Capacity Utilization",
    "importance": "low",
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,

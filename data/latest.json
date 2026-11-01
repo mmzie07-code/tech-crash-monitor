@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generated": "2026-10-31T18:13:43.740279Z",
+ "generated": "2026-11-01T03:38:23.427794Z",
  "level": "High",
  "health": 50,
  "score": 50,
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 2.31,
+   "value": 2.33,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1761M in 90 days vs $761M per-90d baseline (2.31x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1761M in 90 days vs $757M per-90d baseline (2.33x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -1135,9 +1135,9 @@
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 61.7,
+ "ai_heat": 62.3,
  "ai_health": 38,
  "ai_zone": "Warning",
- "ai_indicators": 62,
- "ai_updated": "2026-10-31T19:05:32.210491Z"
+ "ai_indicators": 61,
+ "ai_updated": "2026-11-01T04:25:22.418190Z"
 }

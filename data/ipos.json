@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31T19:02:36.030135Z",
- "asof": "2026-10-31",
+ "generated": "2026-11-01T04:23:01.863125Z",
+ "asof": "2026-11-01",
  "priced": [
   {
    "sym": "BHAIU",
@@ -2377,24 +2377,6 @@
    "amount": 220000000.0,
    "spac": true,
    "lockup": "2026-10-25"
-  },
-  {
-   "sym": "XE",
-   "name": "X-Energy, Inc.",
-   "exchange": "NASDAQ Global Select",
-   "price": 23.0,
-   "date": "2026-04-24",
-   "shares": 44254659.0,
-   "amount": 1017857157.0,
-   "spac": false,
-   "lockup": "2026-10-21",
-   "perf": {
-    "first_day_pct": 38.0,
-    "now_pct": -52.5,
-    "last": 10.93,
-    "last_date": "2026-10-30",
-    "first_trade": "2026-04-30"
-   }
   }
  ],
  "upcoming": [
@@ -2787,45 +2769,17 @@
    "date": "2026-09-02",
    "amount": 34500000.0,
    "spac": false
-  },
-  {
-   "sym": "BOGD",
-   "name": "Bogd FT Ltd",
-   "date": "2026-09-01",
-   "amount": 43125000.0,
-   "spac": false
-  },
-  {
-   "sym": "RRCKU",
-   "name": "RainRock Acquisition Corp.",
-   "date": "2026-09-01",
-   "amount": 172500000.0,
-   "spac": true
-  },
-  {
-   "sym": "GLG",
-   "name": "GLGHK Ltd",
-   "date": "2026-09-01",
-   "amount": 40250000.0,
-   "spac": false
-  },
-  {
-   "sym": "SBE",
-   "name": "SB Energy, Inc.",
-   "date": "2026-09-01",
-   "amount": 100000000.0,
-   "spac": false
   }
  ],
  "withdrawn_30d": 7,
  "stats": {
   "window_days": 190,
-  "priced": 82,
+  "priced": 81,
   "spacs": 90,
-  "traded": 70,
-  "raised": 134875844031.0,
-  "median_first_day": 1.1,
-  "below_offer": 46
+  "traded": 69,
+  "raised": 133857986874.0,
+  "median_first_day": 0.8,
+  "below_offer": 45
  },
  "disclaimer": "Facts from Nasdaq's public IPO calendar and Yahoo Finance prices. Educational only; not investment advice."
 }
