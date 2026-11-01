@@ -33,7 +33,7 @@ function fdStats(s, caveat) {
 async function fundPage() {
   if (!FUND.d) FUND.d = await loadJson("ai_fund.json");
   const d = FUND.d;
-  if (!d) return `<h1>AI fund</h1><div class="card muted">The portfolios haven't been generated yet. They appear after the next nightly run.</div>`;
+  if (!d) return `<h1>Practice fund managers</h1><div class="card muted">The portfolios haven't been generated yet. They appear after the next nightly run.</div>`;
   const L = d.levels[FUND.level] || d.levels.experienced;
   afterRender.push(() => document.querySelectorAll("[data-fl]").forEach((b) => b.onclick = (e) => { e.preventDefault(); FUND.level = b.dataset.fl; state.keepScroll = true; route(); }));
   const liveDays = L.stats_live ? L.stats_live.days : 0, bySec = {}; L.holdings.forEach((h) => { bySec[h.sector] = (bySec[h.sector] || 0) + h.w; });
