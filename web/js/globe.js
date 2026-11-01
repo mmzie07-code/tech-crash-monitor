@@ -76,13 +76,15 @@ function gTzTexture(THREE, zones, land) {
     const lm = gCanvas(W, H), lx = lm.getContext("2d"); lx.fillStyle = "#fff"; for (const co of land) for (const rings of co.p) { lx.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? lx.lineTo(X(r[i]), Y(r[i + 1])) : lx.moveTo(X(r[i]), Y(r[i + 1])); lx.closePath(); } lx.fill("evenodd"); }
     fx.globalCompositeOperation = "destination-in"; fx.drawImage(lm, 0, 0); x.drawImage(fc, 0, 0);
     const o = gCanvas(W, H), ox = o.getContext("2d");
-    for (let k = 0; k < 24; k += 2) { ox.fillStyle = "rgba(140,175,255,0.045)"; ox.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); }
+    for (let k = 2; k < 24; k += 2) { ox.fillStyle = "rgba(140,175,255,0.045)"; ox.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); }
+    ox.fillStyle = "rgba(165,170,180,0.13)"; ox.fillRect(0, 0, X(-172.5), H); ox.fillRect(X(172.5), 0, W - X(172.5), H);   // UTC\u00b112 straddles the dateline: both halves, one grey strip
     ox.strokeStyle = "rgba(190,215,255,0.20)"; ox.lineWidth = 2; for (let k = 0; k <= 24; k++) { const xx = X(-180 + (k - 0.5) * 15); ox.beginPath(); ox.moveTo(xx, 0); ox.lineTo(xx, H); ox.stroke(); }
     ox.globalCompositeOperation = "destination-out"; ox.fillStyle = "#000"; for (const co of land) for (const rings of co.p) { ox.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? ox.lineTo(X(r[i]), Y(r[i + 1])) : ox.moveTo(X(r[i]), Y(r[i + 1])); ox.closePath(); } ox.fill("evenodd"); }
     x.drawImage(o, 0, 0);
   }
   x.fillStyle = "rgba(225,236,255,0.55)"; x.font = "600 26px -apple-system, system-ui, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle";
   for (let off = -12; off <= 11; off++) x.fillText("UTC" + (off === 0 ? "" : off > 0 ? "+" + off : "\u2212" + -off), X(off * 15), H / 2 + 22);
+  x.fillText("UTC\u221212", W, H / 2 + 22);   // the dateline strip: its label crosses the texture seam, so draw the other half too
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
 
