@@ -50,7 +50,7 @@ function gIndex(list) {
 }
 
 function gCanvas(w, h) { const c = document.createElement("canvas"); c.width = w; c.height = h; return c; }
-function gTzTexture(THREE, zones) {
+function gTzTexture(THREE, zones, land) {
   const W = 4096, H = 2048, c = gCanvas(W, H), x = c.getContext("2d"), X = (lon) => ((lon + 180) / 360) * W, Y = (lat) => ((90 - lat) / 180) * H;
   if (zones && zones.length) {   // the real, irregular time-zone areas (Natural Earth), tinted so neighbors differ
     const pal = ["rgba(120,160,255,0.085)", "rgba(170,205,255,0.040)", "rgba(185,160,255,0.075)", "rgba(110,215,230,0.055)", "rgba(145,185,255,0.100)", "rgba(210,215,255,0.035)"];
@@ -67,6 +67,16 @@ function gTzTexture(THREE, zones) {
   } else {   // fallback: 24 straight 15-degree bands
     for (let k = 0; k < 24; k++) { if (k % 2 === 0) { x.fillStyle = "rgba(140,175,255,0.055)"; x.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); } }
     x.strokeStyle = "rgba(190,215,255,0.16)"; x.lineWidth = 2; for (let k = 0; k <= 24; k++) { const xx = X(-180 + (k - 0.5) * 15); x.beginPath(); x.moveTo(xx, 0); x.lineTo(xx, H); x.stroke(); }
+  }
+  if (land && zones && zones.length) {   // the odd boxes of ocean zones go; civil zones stay near land, open water gets clean 15-degree lines
+    const m = gCanvas(W, H), mx = m.getContext("2d"); mx.fillStyle = "#fff"; mx.strokeStyle = "#fff"; mx.lineWidth = 34; mx.lineJoin = "round";
+    const trace = (ctx) => { for (const co of land) for (const rings of co.p) { ctx.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? ctx.lineTo(X(r[i]), Y(r[i + 1])) : ctx.moveTo(X(r[i]), Y(r[i + 1])); ctx.closePath(); } ctx.fill("evenodd"); ctx.stroke(); } };
+    trace(mx); x.globalCompositeOperation = "destination-in"; x.drawImage(m, 0, 0); x.globalCompositeOperation = "source-over";
+    const o = gCanvas(W, H), ox = o.getContext("2d");
+    for (let k = 0; k < 24; k += 2) { ox.fillStyle = "rgba(140,175,255,0.045)"; ox.fillRect(X(-180 + (k - 0.5) * 15), 0, W / 24, H); }
+    ox.strokeStyle = "rgba(190,215,255,0.20)"; ox.lineWidth = 2; for (let k = 0; k <= 24; k++) { const xx = X(-180 + (k - 0.5) * 15); ox.beginPath(); ox.moveTo(xx, 0); ox.lineTo(xx, H); ox.stroke(); }
+    ox.globalCompositeOperation = "destination-out"; ox.fillStyle = "#000"; for (const co of land) for (const rings of co.p) { ox.beginPath(); for (const r of rings) { for (let i = 0; i < r.length; i += 2) i ? ox.lineTo(X(r[i]), Y(r[i + 1])) : ox.moveTo(X(r[i]), Y(r[i + 1])); ox.closePath(); } ox.fill("evenodd"); }
+    x.drawImage(o, 0, 0);
   }
   x.fillStyle = "rgba(225,236,255,0.55)"; x.font = "600 26px -apple-system, system-ui, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle";
   for (let off = -12; off <= 11; off++) x.fillText("UTC" + (off === 0 ? "" : off > 0 ? "+" + off : "\u2212" + -off), X(off * 15), H / 2 + 22);
@@ -108,7 +118,7 @@ void main(){
   wide /= 8.0;
   // land: unsharp mask for crisp detail + a light emboss so ranges and coasts read as relief
   vec3 blur = (texture2D(dayMap, vUv + vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv - vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv + vec2(0.0, px.y) * 2.0).rgb + texture2D(dayMap, vUv - vec2(0.0, px.y) * 2.0).rgb) * 0.25;
-  vec3 sharp = d + (d - blur) * 1.6;
+  vec3 sharp = d + (d - blur) * 2.2;
   float hx = lum(texture2D(dayMap, vUv + vec2(px.x, 0.0) * 1.5).rgb) - lum(texture2D(dayMap, vUv - vec2(px.x, 0.0) * 1.5).rgb);
   float hy = lum(texture2D(dayMap, vUv + vec2(0.0, px.y) * 1.5).rgb) - lum(texture2D(dayMap, vUv - vec2(0.0, px.y) * 1.5).rgb);
   float relief = clamp((-hx * 0.8 + hy * 0.6) * 2.6, -0.35, 0.35);
@@ -125,12 +135,13 @@ void main(){
   sea += d * vec3(0.25, 0.55, 0.9) * 0.6;
   vec3 dayC = mix(lc, sea, ocean);
   float cl = texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0)).r;
-  cl = smoothstep(0.38, 0.98, cl);
-  dayC = mix(dayC, vec3(0.96, 0.98, 1.0), cl * 0.42);
+  vec2 cpx = vec2(1.0 / 2048.0, 1.0 / 1024.0); float cb = (texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0) + vec2(cpx.x * 2.0, 0.0)).r + texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0) - vec2(cpx.x * 2.0, 0.0)).r + texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0) + vec2(0.0, cpx.y * 2.0)).r + texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0) - vec2(0.0, cpx.y * 2.0)).r) * 0.25;
+  cl = smoothstep(0.40, 0.92, cl + (cl - cb) * 0.8);
+  dayC = mix(dayC, vec3(0.97, 0.985, 1.0), cl * 0.55);
   float lam = clamp(nd * 0.85 + 0.40, 0.0, 1.25);
   dayC *= lam;
   vec3 h = normalize(sunDir + view);
-  float spec = pow(max(dot(n, h), 0.0), 90.0) * ocean * (1.0 - cl) * 0.65;
+  float spec = pow(max(dot(n, h), 0.0), 320.0) * ocean * (1.0 - cl) * 0.5;
   dayC += vec3(1.0, 0.95, 0.85) * spec * smoothstep(0.0, 0.3, nd);
   // night side: dark terrain, bold gold city lights with a soft bloom
   vec3 nl = texture2D(nightMap, vUv).rgb;
@@ -197,7 +208,7 @@ async function globeMount(host) {
   scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ size: 0.16, vertexColors: true, sizeAttenuation: true, transparent: true, opacity: 0.9, depthWrite: false })));
 
   // overlays: time zones, highlight, borders
-  const tz = new THREE.Mesh(new THREE.SphereGeometry(1.0015, 96, 64), new THREE.MeshBasicMaterial({ map: gTzTexture(THREE, A.zones), transparent: true, depthWrite: false })); scene.add(tz);
+  const tz = new THREE.Mesh(new THREE.SphereGeometry(1.0015, 96, 64), new THREE.MeshBasicMaterial({ map: gTzTexture(THREE, A.zones, A.borders), transparent: true, depthWrite: false })); scene.add(tz);
   const HW = coarse ? 2048 : 4096, hc = gCanvas(HW, HW / 2), hx = hc.getContext("2d"), htex = new THREE.CanvasTexture(hc); htex.colorSpace = THREE.SRGBColorSpace; htex.anisotropy = 4;
   const hl = new THREE.Mesh(new THREE.SphereGeometry(1.0022, 96, 64), new THREE.MeshBasicMaterial({ map: htex, transparent: true, depthWrite: false })); scene.add(hl);
   const list = A.borders, lookup = gIndex(list);
