@@ -93,35 +93,67 @@ const G_EARTH_VS = `varying vec2 vUv; varying vec3 vN; varying vec3 vP;
 void main(){ vUv = uv; vN = normal; vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
 const G_EARTH_FS = `precision highp float; varying vec2 vUv; varying vec3 vN; varying vec3 vP;
 uniform sampler2D dayMap; uniform sampler2D nightMap; uniform sampler2D cloudMap; uniform vec3 sunDir; uniform float time;
+float lum(vec3 c){ return dot(c, vec3(0.299, 0.587, 0.114)); }
 void main(){
   vec3 n = normalize(vN); vec3 view = normalize(cameraPosition - vP);
   float nd = dot(n, sunDir);
-  float day = smoothstep(-0.10, 0.20, nd);
+  float day = smoothstep(-0.16, 0.30, nd);
+  vec2 px = vec2(1.0 / 5400.0, 1.0 / 2700.0);
   vec3 d = texture2D(dayMap, vUv).rgb;
+  // land mask and a wide blur of it: gives coastlines, continental shelves and relief
   float ocean = smoothstep(0.0, 0.05, d.b - d.g) * (1.0 - smoothstep(0.30, 0.50, d.r));
-  vec3 land = pow(d, vec3(0.88)) * 1.16 + vec3(0.012);
-  vec3 sea = vec3(0.020, 0.105, 0.285) + d * vec3(0.9, 2.0, 3.4);
-  sea = mix(sea, vec3(0.05, 0.42, 0.62), smoothstep(0.10, 0.45, d.g) * 0.8);
-  vec3 dayC = mix(land, sea, ocean);
+  float land = 1.0 - ocean;
+  float wide = 0.0;
+  for (int i = 0; i < 8; i++) { float a = float(i) * 0.7854; vec2 o = vec2(cos(a), sin(a)) * px * 14.0; vec3 s = texture2D(dayMap, vUv + o).rgb; wide += 1.0 - smoothstep(0.0, 0.05, s.b - s.g) * (1.0 - smoothstep(0.30, 0.50, s.r)); }
+  wide /= 8.0;
+  // land: unsharp mask for crisp detail + a light emboss so ranges and coasts read as relief
+  vec3 blur = (texture2D(dayMap, vUv + vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv - vec2(px.x, 0.0) * 2.0).rgb + texture2D(dayMap, vUv + vec2(0.0, px.y) * 2.0).rgb + texture2D(dayMap, vUv - vec2(0.0, px.y) * 2.0).rgb) * 0.25;
+  vec3 sharp = d + (d - blur) * 1.6;
+  float hx = lum(texture2D(dayMap, vUv + vec2(px.x, 0.0) * 1.5).rgb) - lum(texture2D(dayMap, vUv - vec2(px.x, 0.0) * 1.5).rgb);
+  float hy = lum(texture2D(dayMap, vUv + vec2(0.0, px.y) * 1.5).rgb) - lum(texture2D(dayMap, vUv - vec2(0.0, px.y) * 1.5).rgb);
+  float relief = clamp((-hx * 0.8 + hy * 0.6) * 2.6, -0.35, 0.35);
+  vec3 lc = pow(max(sharp, 0.0), vec3(0.86));
+  lc = mix(vec3(lum(lc)), lc, 1.28);
+  lc = lc * 1.12 * (1.0 + relief);
+  // ocean: deep navy, bright teal over shallow shelves, a little lighter toward the limb
+  float shelf = smoothstep(0.02, 0.55, wide);
+  vec3 deep = vec3(0.012, 0.050, 0.150);
+  vec3 mid = vec3(0.030, 0.150, 0.330);
+  vec3 shal = vec3(0.070, 0.440, 0.560);
+  vec3 sea = mix(deep, mid, smoothstep(0.0, 0.5, 1.0 - abs(n.y) * 0.4));
+  sea = mix(sea, shal, shelf * 0.9);
+  sea += d * vec3(0.25, 0.55, 0.9) * 0.6;
+  vec3 dayC = mix(lc, sea, ocean);
   float cl = texture2D(cloudMap, vUv + vec2(time * 0.00006, 0.0)).r;
-  cl = smoothstep(0.30, 0.95, cl);
-  dayC = mix(dayC, vec3(1.0), cl * 0.50);
-  float lam = clamp(nd * 0.9 + 0.35, 0.0, 1.2);
+  cl = smoothstep(0.38, 0.98, cl);
+  dayC = mix(dayC, vec3(0.96, 0.98, 1.0), cl * 0.42);
+  float lam = clamp(nd * 0.85 + 0.40, 0.0, 1.25);
   dayC *= lam;
   vec3 h = normalize(sunDir + view);
-  float spec = pow(max(dot(n, h), 0.0), 120.0) * ocean * (1.0 - cl) * 0.55;
+  float spec = pow(max(dot(n, h), 0.0), 90.0) * ocean * (1.0 - cl) * 0.65;
   dayC += vec3(1.0, 0.95, 0.85) * spec * smoothstep(0.0, 0.3, nd);
+  // night side: dark terrain, bold gold city lights with a soft bloom
   vec3 nl = texture2D(nightMap, vUv).rgb;
-  vec3 nightC = d * vec3(0.060, 0.090, 0.175) + vec3(0.006, 0.012, 0.030) + pow(nl, vec3(1.05)) * vec3(2.3, 1.7, 1.05) * (1.0 - cl * 0.7);
+  float lights = lum(nl);
+  float glow = 0.0;
+  for (int i = 0; i < 8; i++) { float a = float(i) * 0.7854; glow += lum(texture2D(nightMap, vUv + vec2(cos(a), sin(a)) * px * 4.0).rgb); }
+  glow /= 8.0;
+  float L = smoothstep(0.10, 0.65, lights) * 4.2 + max(glow - 0.07, 0.0) * 9.0;
+  vec3 gold = mix(vec3(1.0, 0.46, 0.08), vec3(1.0, 0.82, 0.38), clamp(lights * 1.6, 0.0, 1.0));
+  vec3 terr = mix(sea * 0.30 + vec3(0.004, 0.010, 0.030), lc * vec3(0.17, 0.21, 0.30), land);
+  vec3 nightC = terr + gold * L * (1.0 - cl * 0.55);
   vec3 col = mix(nightC, dayC, day);
+  // soft warm line along the terminator
   float tw = exp(-pow(nd * 5.0, 2.0));
-  col += vec3(0.95, 0.42, 0.20) * tw * 0.11 * (0.4 + ocean * 0.6);
-  float f = pow(1.0 - max(dot(n, view), 0.0), 3.2);
-  col += vec3(0.28, 0.55, 1.0) * f * (0.20 + 0.55 * day);
+  col += vec3(0.95, 0.42, 0.20) * tw * 0.08 * (0.4 + ocean * 0.6);
+  // thin bright limb: a sharp cyan edge plus a wider blue halo
+  float ff = 1.0 - max(dot(n, view), 0.0);
+  col += vec3(0.20, 0.55, 1.0) * pow(ff, 4.0) * (0.45 + 0.65 * day);
+  col += vec3(0.55, 0.88, 1.0) * pow(ff, 11.0) * 1.15;
   gl_FragColor = vec4(col, 1.0);
 }`;
 const G_ATM_VS = `varying vec3 vNormal; void main(){ vNormal = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
-const G_ATM_FS = `varying vec3 vNormal; void main(){ float i = pow(clamp(0.78 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0, 1.0), 3.0); gl_FragColor = vec4(0.32, 0.58, 1.0, 1.0) * i * 1.25; }`;
+const G_ATM_FS = `varying vec3 vNormal; void main(){ float i = pow(clamp(0.78 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0, 1.0), 3.4); gl_FragColor = vec4(0.30, 0.62, 1.0, 1.0) * i * 0.85; }`;
 
 function globeDispose() {
   const g = GLOBE.g; if (!g) return;
