@@ -1,4 +1,4 @@
-// The AI-run practice portfolios (owner preview). Three managers on the same stock list, from cautious to hedge-fund style; the numbers come from engine/ai_fund.py (data/ai_fund.json).
+// The AI-run practice portfolios (public). Three managers on the same stock list, from cautious to hedge-fund style; the numbers come from engine/ai_fund.py (data/ai_fund.json).
 // Hypothetical money only. The replay before the live start date is a sanity check and is flattered by hindsight (see the page); only the live record counts.
 let FUND = { level: "experienced", d: null };
 const fdIso = (t) => new Date(Date.UTC(2000, 0, 1) + t * 864e5).toISOString().slice(0, 10);
@@ -31,7 +31,6 @@ function fdStats(s, caveat) {
 }
 
 async function fundPage() {
-  if (!(typeof AUTH !== "undefined" && AUTH.owner)) return `<h1>AI fund</h1><div class="card"><p>This page is for the site owner.</p></div>`;
   if (!FUND.d) FUND.d = await loadJson("ai_fund.json");
   const d = FUND.d;
   if (!d) return `<h1>AI fund</h1><div class="card muted">The portfolios haven't been generated yet. They appear after the next nightly run.</div>`;
@@ -43,14 +42,14 @@ async function fundPage() {
     <td style="color:${fdC(h.ret)}">${fdP(h.ret)}</td><td class="small muted">${esc(h.why || "")}</td></tr>`).join("");
   const trade = (x) => `<tr><td class="small">${esc(fdDate(x.d))}</td><td><b style="color:${x.side === "buy" ? "var(--ok)" : "var(--bad)"}">${x.side === "buy" ? "Bought" : "Sold"}</b> <a href="#/stock/${esc(x.sym)}">${esc(x.sym)}</a></td><td>${(x.w * 100).toFixed(1)}%</td><td class="small muted">${esc(x.why || "")}</td></tr>`;
   const reg = L.regime;
-  return `<span class="pill w">Owner preview, not public</span><h1 style="margin-top:6px">AI-run practice fund</h1>
-  <p class="muted" style="margin-top:0">Three managers working the same list of ${d.universe} large US companies, from cautious to hedge-fund style. Pretend money, long-only, a 0.1% cost on every trade. This page is only visible to you so you can decide whether to offer it to members.</p>
+  return `<h1>Practice fund managers</h1>
+  <p class="muted" style="margin-top:0">Three managers working the same list of ${d.universe} large US companies, from cautious to hedge-fund style. Pretend money, long-only, a 0.1% cost on every trade. Run by a rules-based program, not a person, and not advice: use it to see how different styles of investing behave.</p>
   <div class="tabs">${["beginner", "intermediate", "experienced"].map((k) => `<a href="#" data-fl="${k}" class="${FUND.level === k ? "on" : ""}">${esc(d.levels[k].label)}</a>`).join("")}</div>
   <div class="card"><p style="margin:0 0 6px">${esc(L.blurb)}</p>
    <p class="small muted" style="margin:0">Invested ${((1 - L.cash) * 100).toFixed(0)}%, cash ${(L.cash * 100).toFixed(0)}%. The S&amp;P 500 is ${reg.down ? "<b>below</b>" : "above"} its 200-day average and its 3-month volatility is ${(reg.vol * 100).toFixed(0)}%. Next review: ${L.next_review ? esc(fdDate(L.next_review)) : "-"}.</p></div>
   <div class="card"><h3 style="margin:0 0 2px">Live record</h3>
    ${L.stats_live ? `<p class="small muted" style="margin:0 0 8px">Since ${esc(fdDate(d.inception))}, ${liveDays} trading days. Frozen night by night: past days are never rewritten.</p>${fdStats(L.stats_live)}` :
-     `<p style="margin:0">The live record starts on <b>${esc(fdDate(d.inception))}</b>. Numbers appear after a week of trading. To judge whether this deserves a place on the site you want at least 6 to 12 months, including some weak weeks for the market.</p>`}</div>
+     `<p style="margin:0">The live record starts on <b>${esc(fdDate(d.inception))}</b>. Numbers appear after a week of trading. A fair judgement of any manager needs 6 to 12 months, including some weak weeks for the market.</p>`}</div>
   <div class="card"><h3 style="margin:0 0 2px">Value over time</h3><div style="margin-top:6px">${fdChart(L, d)}</div></div>
   <div class="card" style="border-left:4px solid var(--warn)"><h3 style="margin:0 0 4px">Why the replay can't be trusted</h3>
    <p class="small" style="margin:0 0 6px">Before ${esc(fdDate(d.inception))} this is a <b>replay</b>: the same rules run over past prices, using only prices known on each day and filling orders the next day. It is flattered in two ways. The stock list is today's largest companies, so stocks that went on to win are over-represented. And I chose the rules knowing how the last few years went.</p>
@@ -62,9 +61,5 @@ async function fundPage() {
    <p class="small muted" style="margin:8px 0 0">The rules look only at prices (trend, volatility, distance from the high, the market's own trend). They don't read company scorecards or news, and there's no language model deciding trades. That keeps the replay free of hindsight in the signals and makes every trade explainable.</p></div>
   <div class="card"><h3 style="margin:0 0 4px">Trades</h3>${L.trades.length ? `<div class="tw"><table><tr><th>Date</th><th>Trade</th><th>New weight</th><th>Why</th></tr>${L.trades.slice().reverse().slice(0, 25).map(trade).join("")}</table></div>` : `<p class="small muted" style="margin:0">No live trades yet.</p>`}
    <details style="margin-top:8px"><summary class="small">Most recent replay trades</summary><div class="tw"><table><tr><th>Date</th><th>Trade</th><th>New weight</th><th>Why</th></tr>${L.replay_trades.slice().reverse().map(trade).join("")}</table></div></details></div>
-  <div class="card"><h3 style="margin:0 0 4px">Before you make this public</h3><ul style="margin:0;padding-left:20px">
-   <li class="small" style="margin:4px 0"><b>Time.</b> Wait for a live record of at least 6 to 12 months. Compare it with the S&amp;P 500 on return <i>and</i> on worst drop, and check the managers behave in order (Beginner calmest, Experienced most active).</li>
-   <li class="small" style="margin:4px 0"><b>Wording.</b> Call it a hypothetical practice portfolio run by a rules-based program. Don't say "AI hedge fund" or promise returns.</li>
-   <li class="small" style="margin:4px 0"><b>Legal.</b> Showing model portfolios with specific stocks and weights to the public can count as investment advice in some places, and your members include 16-year-olds. Have a lawyer review it before it goes live, along with the rest of the paid features.</li></ul></div>
   <p class="small muted">Hypothetical results have many limits. They don't reflect real trading, slippage, taxes or fees beyond the 0.1% assumed, and past results don't predict future ones. Not investment advice.</p>`;
 }
