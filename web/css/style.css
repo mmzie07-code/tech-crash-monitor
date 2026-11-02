@@ -264,3 +264,12 @@ html,body{overflow-x:clip}
 .pl-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}.pl-card{display:flex;flex-direction:column;margin:0}.pl-hot{border:2px solid var(--brand)}
 .pl-price{font-size:34px;font-weight:800;line-height:1.1}.pl-price small{font-size:14px;font-weight:600;color:var(--mut)}.pl-list{margin:0;padding-left:18px;flex:1}.pl-list li{font-size:14px;margin:5px 0}
 .pl-lock{text-align:center;padding:28px 18px}
+
+.ask-btn{position:fixed;right:16px;bottom:88px;z-index:60;background:var(--brand);color:#fff;border:0;border-radius:999px;padding:11px 18px;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.ask-panel{position:fixed;right:16px;bottom:88px;z-index:61;width:min(380px,calc(100vw - 32px));height:min(520px,calc(100vh - 140px));display:flex;flex-direction:column;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.45)}.ask-panel[hidden]{display:none}
+.ask-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}.ask-x{all:unset;cursor:pointer;font-size:22px;line-height:1;padding:0 4px;color:var(--mut)}
+.ask-log{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px}.ask-m{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45}.ask-m.u{align-self:flex-end;background:var(--brand);color:#fff}.ask-m.a{align-self:flex-start;background:color-mix(in srgb,var(--tx) 8%,transparent)}
+.ask-ex{display:flex;flex-direction:column;gap:6px;align-items:flex-start}.ask-ex button{all:unset;cursor:pointer;font-size:13px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:var(--tx)}.ask-ex button:hover{background:color-mix(in srgb,var(--tx) 8%,transparent)}
+.ask-f{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}.ask-f input{flex:1;font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);min-width:0}
+.ask-foot{font-size:11px;color:var(--mut);padding:0 14px 10px}.ask-left{font-weight:600}
+@media(min-width:900px){.ask-btn,.ask-panel{bottom:24px}}

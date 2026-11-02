@@ -5,5 +5,7 @@ window.ANALYTIC = {
   supabaseUrl: "https://oyhyrrimnxhwayfgztai.supabase.co",
   supabaseAnonKey: "sb_publishable_7jAzwMFLFiiiT0o9uNnWlw_AAMO7aRv",
   requireLogin: true,
+  ask: false,   // true shows the Ask assistant to signed-in Plus users (needs ANTHROPIC_API_KEY + supabase/ask.sql + the redeployed edge function); the owner always sees it
+  paywall: false,   // true locks Plus features for free users; must match PAYWALL=on in Supabase
   contactEmail: "analytic.systems.inc@gmail.com",  // public contact address shown on the Terms and Privacy pages (set this before launch)
 };

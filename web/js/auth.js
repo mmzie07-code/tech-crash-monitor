@@ -13,7 +13,7 @@ async function authInit() {
     const { data } = await AUTH.sb.auth.getSession();
     AUTH.user = data.session ? data.session.user : null;
     if (AUTH.user) setTimeout(() => typeof syncPull === "function" && syncPull(), 0);
-    AUTH.sb.auth.onAuthStateChange((_e, session) => { const was = AUTH.user; AUTH.user = session ? session.user : null; if (typeof planReset === "function") planReset(); renderAuthButton(); route(); if (AUTH.user && !was && typeof syncPull === "function") setTimeout(syncPull, 0); });
+    AUTH.sb.auth.onAuthStateChange((_e, session) => { const was = AUTH.user; AUTH.user = session ? session.user : null; if (typeof planReset === "function") planReset(); if (typeof askMount === "function") setTimeout(askMount, 0); renderAuthButton(); route(); if (AUTH.user && !was && typeof syncPull === "function") setTimeout(syncPull, 0); });
     const k = (() => { try { return localStorage.getItem("ml_owner"); } catch (e) { return null; } })();
     if (k) AUTH.owner = await checkOwnerKey(k);
   } catch (e) { AUTH.failed = true; }

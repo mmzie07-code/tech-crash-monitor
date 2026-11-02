@@ -321,7 +321,7 @@ window.addEventListener("hashchange", route);
   const parts = (location.hash || "").replace(/^#\/?/, "").split("/").filter(Boolean);
   if (!keep && parts.length && (parts.length <= 1 ? !["login", "home"].includes(parts[0]) : parts[0] === "markets" && parts.length === 2)) history.replaceState(null, "", location.pathname + location.search);
 })();
-Promise.all([loadSnap(), authInit().then(() => (typeof planLoad === "function" ? planLoad() : null))]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); if (typeof alCheck === "function") alCheck(); });
+Promise.all([loadSnap(), authInit().then(() => (typeof planLoad === "function" ? planLoad() : null))]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); if (typeof alCheck === "function") alCheck(); if (typeof askMount === "function") askMount(); });
 
 // Stale-page guard: GitHub Pages lets browsers cache index.html for ~10 minutes. If a newer build exists, offer a refresh.
 (function checkVersion() {
