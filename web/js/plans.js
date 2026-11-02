@@ -44,7 +44,8 @@ async function pricingPage() {
     document.querySelectorAll("[data-pint]").forEach((b) => b.onclick = (e) => { e.preventDefault(); try { localStorage.setItem("ml_plan_yearly", b.dataset.pint); } catch (x) {} state.keepScroll = true; route(); });
     document.querySelectorAll("[data-want]").forEach((b) => b.onclick = async () => {
       const msg = document.querySelector("#plmsg");
-      if (!signedIn() || !AUTH.user) { msg.textContent = "Sign in first, then tell us which plan you want."; msg.style.color = "var(--mut)"; return; }
+      if (AUTH.owner && !AUTH.user) { msg.textContent = "You're in owner mode, which has no account to save this against. Sign out and sign in with a regular account to record interest."; msg.style.color = "var(--mut)"; return; }
+      if (!AUTH.user) { msg.textContent = "Sign in first, then tell us which plan you want."; msg.style.color = "var(--mut)"; return; }
       b.disabled = true;
       const ok = await recordInterest(b.dataset.want, b.dataset.interval);
       msg.textContent = ok ? "Thanks, noted. We'll email you when " + (b.dataset.want === "pro" ? "Pro tools" : "paid plans") + " open. Nothing is charged." : "Couldn't save that just now. Please try again later.";
