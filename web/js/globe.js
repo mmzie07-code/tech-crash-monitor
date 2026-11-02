@@ -19,10 +19,10 @@ function gSun(d = new Date()) {
 
 async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
-  const [borders, countries, world, zones, mix, conflict, oilmap, trade] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null)]);
+  const [borders, countries, world, zones, mix, conflict, oilmap, trade, rare] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null), loadJson("world/rare.json").catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
   for (const k in countries) { const p = countries[k].parent; if (p && !world.countries[k] && world.countries[p]) world.countries[k] = world.countries[p]; }   // an overseas part is coloured and scored with its country
-  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null };
+  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null, rare: rare && rare.fields ? rare : null };
   return GLOBE.assets;
 }
 
@@ -107,7 +107,7 @@ function gTintTexture(THREE, list, colorOf, coarse) {   // colorOf(feature) -> c
   }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
-function gHeatTexture(THREE, fields, coarse) {   // a heat map of oil-producing regions: soft blobs added up, then run through a colour ramp
+function gHeatTexture(THREE, fields, coarse, ramp) {   // a heat map of oil-producing regions: soft blobs added up, then run through a colour ramp
   const W = coarse ? 2048 : 4096, H = W / 2, c = gCanvas(W, H), x = c.getContext("2d");
   x.fillStyle = "#000"; x.fillRect(0, 0, W, H); x.globalCompositeOperation = "lighter";
   for (const f of fields) {
@@ -116,11 +116,11 @@ function gHeatTexture(THREE, fields, coarse) {   // a heat map of oil-producing 
     const gr = x.createRadialGradient(0, 0, 0, 0, 0, r); gr.addColorStop(0, "rgba(255,255,255," + a + ")"); gr.addColorStop(0.45, "rgba(255,255,255," + a * 0.45 + ")"); gr.addColorStop(1, "rgba(255,255,255,0)");
     x.fillStyle = gr; x.beginPath(); x.arc(0, 0, r, 0, 6.2832); x.fill(); x.restore();
   }
-  const im = x.getImageData(0, 0, W, H), d = im.data, mix = (p, q, t) => p + (q - p) * t;
+  const im = x.getImageData(0, 0, W, H), d = im.data, mix = (p, q, t) => p + (q - p) * t, R = ramp || [[150, 20, 20], [255, 90, 20], [255, 200, 60], [255, 245, 190]];
   for (let i = 0; i < d.length; i += 4) {
     const t = d[i] / 255;
     if (t < 0.02) { d[i + 3] = 0; continue; }
-    let rr, gg, bb; if (t < 0.35) { const u = t / 0.35; rr = mix(150, 255, u); gg = mix(20, 90, u); bb = mix(20, 20, u); } else if (t < 0.7) { const u = (t - 0.35) / 0.35; rr = 255; gg = mix(90, 200, u); bb = mix(20, 60, u); } else { const u = (t - 0.7) / 0.3; rr = 255; gg = mix(200, 245, u); bb = mix(60, 190, u); }
+    const seg = t < 0.35 ? [R[0], R[1], t / 0.35] : t < 0.7 ? [R[1], R[2], (t - 0.35) / 0.35] : [R[2], R[3], (t - 0.7) / 0.3], rr = mix(seg[0][0], seg[1][0], seg[2]), gg = mix(seg[0][1], seg[1][1], seg[2]), bb = mix(seg[0][2], seg[1][2], seg[2]);
     d[i] = rr; d[i + 1] = gg; d[i + 2] = bb; d[i + 3] = Math.min(235, 330 * t);
   }
   x.putImageData(im, 0, 0);
@@ -247,14 +247,15 @@ async function globeMount(host) {
   const list = A.borders, lookup = gIndex(list);
   // ---- map layers: one colour layer at a time (economic health, conflict, goods makers, food growers, big spenders) ----
   g.layer = null; g.meshes = {}; g.layerO = {};
-  const LAYERS = [["health", "Economic health", true], ["conflict", "Conflict", !!A.conflict], ["goods", "Goods makers", !!A.mix], ["food", "Food growers", !!A.mix], ["spend", "Big spenders", !!A.mix], ["oil", "Oil", !!A.oil], ["trade", "Trade routes", !!A.trade]].filter((l) => l[2]);
-  const LAYER_RGB = { goods: [60, 105, 255], food: [30, 200, 85], spend: [255, 165, 20], oilg: [236, 150, 40] }, MIXK = { goods: "manf", food: "agr", spend: "cons" };
+  const LAYERS = [["health", "Economic health", true], ["conflict", "Conflict", !!A.conflict], ["goods", "Goods makers", !!A.mix], ["food", "Food growers", !!A.mix], ["spend", "Big spenders", !!A.mix], ["oil", "Oil", !!A.oil], ["rare", "Rare earths", !!A.rare], ["trade", "Trade routes", !!A.trade]].filter((l) => l[2]);
+  const LAYER_RGB = { goods: [60, 105, 255], food: [30, 200, 85], spend: [255, 165, 20], oilg: [236, 150, 40], rareg: [200, 90, 235] }, MIXK = { goods: "manf", food: "agr", spend: "cons" };
   const MIXWHAT = { manf: "the world's manufacturing", agr: "the world's farm output", cons: "the world's household spending" };
   const colorOf = (key) => (co) => {
     const iso = co.i;
     if (key === "health") { const w = iso && A.world.countries[iso], sc = w && w.score; return sc != null ? "rgba(" + gHealthColor(sc).join(",") + ",0.46)" : "rgba(150,160,180,0.14)"; }
     if (key === "conflict") { const c = A.conflict && iso && A.conflict.countries[iso]; return c ? (c.lvl === "war" ? "rgba(255,72,72,0.58)" : "rgba(255,168,58,0.48)") : "rgba(150,160,180,0.08)"; }
     if (key === "oilg") { const o = A.oil && iso && A.oil.c[iso], v = o && o.res; return v ? "rgba(236,150,40," + (0.12 + 0.62 * Math.min(1, Math.pow(v / 300, 0.55))).toFixed(2) + ")" : "rgba(150,160,180,0.07)"; }
+    if (key === "rareg") { const o = A.rare && iso && A.rare.c[iso], v = o && o.res; return v ? "rgba(200,90,235," + (0.14 + 0.6 * Math.min(1, Math.pow(v / 44, 0.5))).toFixed(2) + ")" : "rgba(150,160,180,0.07)"; }
     const row = A.mix && iso && A.mix.c[iso], v = row && row[MIXK[key]];
     if (v == null) return "rgba(150,160,180,0.10)";
     return "rgba(" + LAYER_RGB[key].join(",") + "," + (0.05 + 0.68 * Math.min(1, Math.pow(v / 10, 0.7))).toFixed(2) + ")";
@@ -279,6 +280,17 @@ async function globeMount(host) {
         <b class="gl-h">Biggest producing regions</b><div class="gl-list">${top.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b><br>About ${x.mbd} million barrels a day, ${x.t === "off" ? "offshore" : "on land"}.`, 2.2)}">${esc(x.n)}</button>`).join("")}</div><div class="gl-info small"></div>
         <em>${esc(O.caveat)} Source: ${esc(O.source)}.</em>`;
     }
+    if (key === "rare") {
+      const R = A.rare, ground = g.rareMode === "ground", top = R.fields.slice().sort((p, q) => q.kt - p.kt).slice(0, 6);
+      return `<div class="gl-modes"><button data-raremode="mined" class="${ground ? "" : "on"}">Where it's mined</button><button data-raremode="ground" class="${ground ? "on" : ""}">In the ground</button></div>
+        ${ground ? `<i style="background:linear-gradient(90deg,rgba(200,90,235,.14),rgba(200,90,235,.74))"></i><div><span>Little</span><span>Huge reserves</span></div>`
+          : `<i style="background:linear-gradient(90deg,rgba(70,20,150,.25),#c832c8,#5ac8ff,#ebfaff)"></i><div><span>Little output</span><span>Heavy output</span></div>`}
+        <em>${ground ? `Proven reserves by country. China holds ${R.top.res}% of them; Brazil, India and Australia come next.` : `Glow shows where it's mined. China mines about ${R.top.mine}% of the world's supply, and refines even more of it.`}</em>
+        <div class="gl-sw"><span><u style="background:#38d6ff"></u>Refining and magnets</span><span><u style="background:#ffd24a"></u>Deposit or project, little output yet</span></div>
+        <b class="gl-h">Refining, magnets and projects</b><div class="gl-list">${R.sites.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b> · ${esc(x.kind)}<br>${esc(x.note)}`)}">${esc(x.n)}</button>`).join("")}</div>
+        <b class="gl-h">Biggest mining regions</b><div class="gl-list">${top.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b><br>About ${x.kt} thousand tonnes a year. ${esc(x.note)}`, 2.2)}">${esc(x.n)}</button>`).join("")}</div><div class="gl-info small"></div>
+        <em>${esc(R.uses)} ${esc(R.caveat)} Source: ${esc(R.source)}.</em>`;
+    }
     if (key === "trade") {
       const T = A.trade, KN = { box: "Containers and goods", oil: "Oil and fuel", bulk: "Grain, ore and other bulk" };
       return `<div class="gl-sw">${Object.keys(G_TRADE_COL).map((k) => `<span><u class="dash" style="--c:${G_TRADE_COL[k]}"></u>${KN[k]}</span>`).join("")}<span><u class="ring"></u>Chokepoint</span><span><u style="background:#fff;border-radius:50%"></u>Big port</span></div>
@@ -291,10 +303,10 @@ async function globeMount(host) {
   };
   const ensureMesh = (k) => {
     if (g.meshes[k]) return;
-    const tex = k === "oil" ? gHeatTexture(THREE, A.oil.fields, coarse) : gTintTexture(THREE, list, colorOf(k), coarse);
+    const tex = k === "oil" ? gHeatTexture(THREE, A.oil.fields, coarse) : k === "rare" ? gHeatTexture(THREE, A.rare.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: f.kt / 11 })), coarse, [[70, 20, 150], [200, 50, 200], [90, 200, 255], [235, 250, 255]]) : gTintTexture(THREE, list, colorOf(k), coarse);
     const m = new THREE.Mesh(new THREE.SphereGeometry(1.0019, 96, 64), new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, opacity: 0 })); scene.add(m); g.meshes[k] = m; g.layerO[k] = 0;
   };
-  const meshKey = (key) => (key === "oil" ? (g.oilMode === "ground" ? "oilg" : "oil") : key);
+  const meshKey = (key) => (key === "oil" ? (g.oilMode === "ground" ? "oilg" : "oil") : key === "rare" ? (g.rareMode === "ground" ? "rareg" : "rare") : key);
   const renderLegend = () => {
     const lg = host.querySelector(".glegend"), key = g.layer; lg.hidden = !key; if (!key) return;
     g.flyList = []; lg.innerHTML = legendHtml(key);
@@ -304,6 +316,7 @@ async function globeMount(host) {
     });
     lg.querySelectorAll("[data-fly]").forEach((b) => b.onclick = () => { const f = g.flyList[+b.dataset.fly]; flyTo(f.lat, f.lon, f.dist || 2.7); lg.querySelector(".gl-info").innerHTML = f.html; });
     lg.querySelectorAll("[data-oilmode]").forEach((b) => b.onclick = () => { g.oilMode = b.dataset.oilmode; try { localStorage.setItem("ml_globe_oil", g.oilMode); } catch (e) {} ensureMesh(meshKey("oil")); renderLegend(); });
+    lg.querySelectorAll("[data-raremode]").forEach((b) => b.onclick = () => { g.rareMode = b.dataset.raremode; try { localStorage.setItem("ml_globe_rare", g.rareMode); } catch (e) {} ensureMesh(meshKey("rare")); renderLegend(); });
   };
   const setLayer = (key) => {
     g.layer = key; try { localStorage.setItem("ml_globe_layer", key || ""); } catch (e) {}
@@ -338,6 +351,11 @@ async function globeMount(host) {
     A.oil.stores.forEach((x) => { const v = new THREE.Vector3(...gVec(x.lat, x.lon)), m = new THREE.Mesh(new THREE.OctahedronGeometry(0.016), new THREE.MeshBasicMaterial({ color: SC[x.k] })); m.position.copy(v.clone().multiplyScalar(1.012)); oilGroup.add(m);
       const r = new THREE.Mesh(new THREE.RingGeometry(0.022, 0.027, 28), new THREE.MeshBasicMaterial({ color: SC[x.k], side: THREE.DoubleSide, transparent: true, opacity: 0.8, depthWrite: false })); r.position.copy(v.clone().multiplyScalar(1.008)); r.lookAt(v.clone().multiplyScalar(3)); oilGroup.add(r); }); }
   g.oilG = oilGroup;
+  g.rareMode = "mined"; try { if (localStorage.getItem("ml_globe_rare") === "ground") g.rareMode = "ground"; } catch (e) {}
+  const rareGroup = new THREE.Group(); rareGroup.visible = false; scene.add(rareGroup);
+  if (A.rare) A.rare.sites.forEach((x) => { const col = x.k === "process" ? 0x38d6ff : 0xffd24a, v = new THREE.Vector3(...gVec(x.lat, x.lon)), m = new THREE.Mesh(new THREE.OctahedronGeometry(0.016), new THREE.MeshBasicMaterial({ color: col })); m.position.copy(v.clone().multiplyScalar(1.012)); rareGroup.add(m);
+    const r = new THREE.Mesh(new THREE.RingGeometry(0.022, 0.027, 28), new THREE.MeshBasicMaterial({ color: col, side: THREE.DoubleSide, transparent: true, opacity: 0.8, depthWrite: false })); r.position.copy(v.clone().multiplyScalar(1.008)); r.lookAt(v.clone().multiplyScalar(3)); rareGroup.add(r); });
+  g.rareG = rareGroup;
   // trade: sea lanes with dashes flowing along each route, ring markers on chokepoints, dots on big ports
   const tradeGroup = new THREE.Group(); tradeGroup.visible = false; scene.add(tradeGroup); const tradeMats = [], pulses = [];
   if (A.trade) {
@@ -361,6 +379,7 @@ async function globeMount(host) {
     if (!iso || !g.layer) return "";
     if (g.layer === "conflict") { const c = A.conflict && A.conflict.countries[iso]; return `<div class="gc-row"><span class="gc-k">Armed conflict</span><b>${c ? (c.lvl === "war" ? "War" : "Smaller conflict") : "None tracked"}</b></div>`; }
     if (g.layer === "oil") { const o = A.oil && A.oil.c[iso], gr = g.oilMode === "ground"; if (!o || (gr ? o.res : o.prod) == null) return `<div class="gc-row"><span class="gc-k">${gr ? "Oil reserves" : "Oil pumped"}</span><b>Little or none</b></div>`; return gr ? `<div class="gc-row"><span class="gc-k">Oil in the ground</span><b>${o.res} bn barrels · #${o.res_r}</b></div>` : `<div class="gc-row"><span class="gc-k">Oil pumped</span><b>${o.prod} m barrels/day · #${o.prod_r}</b></div>`; }
+    if (g.layer === "rare") { const o = A.rare && A.rare.c[iso], gr = g.rareMode === "ground"; if (!o || (gr ? o.res : o.kt) == null) return `<div class="gc-row"><span class="gc-k">${gr ? "Rare earth reserves" : "Rare earths mined"}</span><b>Little or none</b></div>`; return gr ? `<div class="gc-row"><span class="gc-k">Rare earths in the ground</span><b>${o.res} m tonnes · #${o.res_r}</b></div>` : `<div class="gc-row"><span class="gc-k">Rare earths mined</span><b>${o.kt} thousand t · ${o.sh}% · #${o.kt_r}</b></div>`; }
     if (g.layer === "trade") return "";
     const k = MIXK[g.layer], r = A.mix && A.mix.c[iso]; if (!k || !r || r[k] == null) return "";
     return `<div class="gc-row"><span class="gc-k">${gShare(r[k])} of ${MIXWHAT[k]}</span><b>#${r[k + "_r"]}</b></div>`;
@@ -528,8 +547,9 @@ async function globeMount(host) {
     g.lon = ((g.lon + 540) % 360) - 180;
     if (now - lastSun > 20000) { const s = gSun(); sunV.set(...gVec(s.lat, s.lon)); lastSun = now; }
     earthMat.uniforms.time.value = (now - g.t0) / 1000;
-    for (const k in g.meshes) { const m = g.meshes[k], want = k === "oil" ? g.layer === "oil" && g.oilMode !== "ground" : k === "oilg" ? g.layer === "oil" && g.oilMode === "ground" : g.layer === k; g.layerO[k] += ((want ? 1 : 0) - g.layerO[k]) * Math.min(1, (force ? 1 : dt * 5)); m.material.opacity = g.layerO[k]; m.visible = g.layerO[k] > 0.01; }
+    for (const k in g.meshes) { const m = g.meshes[k], want = k === "oil" ? g.layer === "oil" && g.oilMode !== "ground" : k === "oilg" ? g.layer === "oil" && g.oilMode === "ground" : k === "rare" ? g.layer === "rare" && g.rareMode !== "ground" : k === "rareg" ? g.layer === "rare" && g.rareMode === "ground" : g.layer === k; g.layerO[k] += ((want ? 1 : 0) - g.layerO[k]) * Math.min(1, (force ? 1 : dt * 5)); m.material.opacity = g.layerO[k]; m.visible = g.layerO[k] > 0.01; }
     if (g.oilG) g.oilG.visible = g.layer === "oil";
+    if (g.rareG) g.rareG.visible = g.layer === "rare";
     if (g.tradeG) { g.tradeG.visible = g.layer === "trade"; if (g.tradeG.visible) { const tt = (now - g.t0) / 1000; g.tradeMats.forEach((m) => { m.uniforms.time.value = tt; }); g.pulses.forEach((r, i) => { const k = 1 + 0.22 * Math.sin(tt * 2.4 + i); r.scale.set(k, k, k); }); } }
     if (g.arcs) { g.arcs.visible = g.layer === "conflict"; if (g.arcs.visible) g.arcMats.forEach((m) => { m.uniforms.time.value = (now - g.t0) / 1000; }); }
     const v = gVec(g.lat, g.lon); camera.position.set(v[0] * g.dist, v[1] * g.dist, v[2] * g.dist); camera.lookAt(0, 0, 0); camera.updateMatrixWorld();
@@ -601,6 +621,14 @@ function gExtraHtml(iso, A) {   // what a country makes and buys, and any armed 
       ${oc.prod != null ? `<div class="gc-row" style="padding:6px 0"><span>Pumped each day<div class="small muted">crude oil and condensate</div></span><b>${oc.prod} million barrels · #${oc.prod_r} of ${A.oil.n.prod}</b></div>` : ""}
       ${oc.res != null ? `<div class="gc-row" style="padding:6px 0;border-top:1px solid var(--line)"><span>Proven reserves<div class="small muted">in the ground</div></span><b>${oc.res} billion barrels · #${oc.res_r} of ${A.oil.n.res}</b></div>` : ""}
       <p class="small muted" style="margin:8px 0 0">${esc(A.oil.caveat)} Source: ${esc(A.oil.source)}.</p></div>`;
+  }
+  const rc = A.rare && A.rare.c[iso];
+  if (rc) {
+    const pill = []; if (rc.kt_r && rc.kt_r <= 5) pill.push(`Top-5 rare earth miner (#${rc.kt_r})`); if (rc.res_r && rc.res_r <= 5) pill.push(`Top-5 for rare earth reserves (#${rc.res_r})`);
+    out += `<div class="card"><h3 style="margin:0 0 2px">Rare earths</h3>${pill.length ? `<p style="margin:4px 0 6px">${pill.map((p) => `<span class="pill">${esc(p)}</span>`).join(" ")}</p>` : ""}
+      ${rc.kt != null ? `<div class="gc-row" style="padding:6px 0"><span>Mined each year<div class="small muted">rare earth oxide</div></span><b>${rc.kt} thousand tonnes · ${rc.sh}% of world · #${rc.kt_r} of ${A.rare.n.kt}</b></div>` : ""}
+      ${rc.res != null ? `<div class="gc-row" style="padding:6px 0;border-top:1px solid var(--line)"><span>Proven reserves<div class="small muted">in the ground</div></span><b>${rc.res} million tonnes · #${rc.res_r} of ${A.rare.n.res}</b></div>` : ""}
+      <p class="small muted" style="margin:8px 0 0">${esc(A.rare.caveat)} Source: ${esc(A.rare.source)}.</p></div>`;
   }
   const m = A.mix && A.mix.c[iso];
   if (m) {
