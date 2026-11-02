@@ -53,7 +53,6 @@ jobs:
           SNAP_LIMIT: ${{ github.event.inputs.snap_limit || '200' }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}   # e.g. "CrashMonitor you@example.com"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: adds an AI-written summary paragraph
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}   # optional: free token with Radar read access; adds who-attacks-whom to the cyber layer
         run: python engine/run_daily.py ${{ github.event.inputs.mode || (github.event.schedule == '45 12 * * 1-5' && 'morning' || '') }}
       - name: Save data back to the repo
         run: |

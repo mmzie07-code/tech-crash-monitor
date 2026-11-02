@@ -19,11 +19,10 @@ function gSun(d = new Date()) {
 
 async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
-  const [borders, countries, world, zones, mix, conflict, oilmap, trade, rare, minerals, macro, chips, cables, money, cyber] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null), loadJson("world/rare.json").catch(() => null), loadJson("world/minerals.json").catch(() => null), loadJson("world/macro.json").catch(() => null), loadJson("world/chips.json").catch(() => null), loadJson("world/cables.json").catch(() => null), loadJson("world/money.json").catch(() => null), loadJson("world/cyber.json").catch(() => null)]);
+  const [borders, countries, world, zones, mix, conflict, oilmap, trade, rare, minerals, macro, chips, cables, money] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null), loadJson("world/rare.json").catch(() => null), loadJson("world/minerals.json").catch(() => null), loadJson("world/macro.json").catch(() => null), loadJson("world/chips.json").catch(() => null), loadJson("world/cables.json").catch(() => null), loadJson("world/money.json").catch(() => null).catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
   for (const k in countries) { const p = countries[k].parent; if (p && !world.countries[k] && world.countries[p]) world.countries[k] = world.countries[p]; }   // an overseas part is coloured and scored with its country
-  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null, rare: rare && rare.fields ? rare : null, min: minerals && minerals.m ? minerals : null, macro: macro && macro.c ? macro : null, chips: chips && chips.fields ? chips : null, cables: cables && cables.cables ? cables : null, money: money && money.corridors ? money : null,
-    cyber: cyber && (Object.keys(cyber.origin || {}).length || (cyber.pairs || []).length || Object.keys(cyber.c2 || {}).length) ? cyber : null };
+  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null, rare: rare && rare.fields ? rare : null, min: minerals && minerals.m ? minerals : null, macro: macro && macro.c ? macro : null, chips: chips && chips.fields ? chips : null, cables: cables && cables.cables ? cables : null, money: money && money.corridors ? money : null };
   return GLOBE.assets;
 }
 
@@ -345,11 +344,23 @@ async function globeMount(host) {
   const setLayer = (key) => {
     g.layer = key; try { localStorage.setItem("ml_globe_layer", key || ""); } catch (e) {}
     if (key) ensureMesh(meshKey(key));
-    host.querySelectorAll(".glayer").forEach((b) => { const on = b.dataset.layer === key; b.setAttribute("aria-pressed", on ? "true" : "false"); b.classList.toggle("on", on); });
+    if (key) grp = grpOf(key);
+    renderBar();
     renderLegend();
   };
-  const lbar = host.querySelector(".glayers"); lbar.innerHTML = LAYERS.map(([k, l]) => `<button class="gtoggle glayer" data-layer="${k}" aria-pressed="false">${l}</button>`).join("");
-  lbar.querySelectorAll(".glayer").forEach((b) => b.addEventListener("click", () => setLayer(g.layer === b.dataset.layer ? null : b.dataset.layer)));
+  const lbar = host.querySelector(".glayers");
+  const GROUPS = [["People & risk", ["health", "conflict"]], ["Trade & goods", ["goods", "food", "spend", "trade"]], ["Resources", ["oil", "rare", "min"]], ["Money & tech", ["macro", "money", "chips", "net"]]];
+  const LNAME = Object.fromEntries(LAYERS.map((l) => [l[0], l[1]]));
+  const groups = GROUPS.map(([n, ks]) => [n, ks.filter((k) => LNAME[k])]).filter((x) => x[1].length);
+  const grpOf = (k) => { const i = groups.findIndex((x) => x[1].includes(k)); return i < 0 ? 0 : i; };
+  let grp = 0; try { const sv = localStorage.getItem("ml_globe_layer"); if (sv) grp = grpOf(sv); } catch (e) {}
+  const renderBar = () => {
+    lbar.innerHTML = `<div class="glgroups" role="tablist">${groups.map(([n, ks], i) => `<button class="glgroup${i === grp ? " on" : ""}" data-grp="${i}" role="tab" aria-selected="${i === grp}">${n}${ks.includes(g.layer) ? " •" : ""}</button>`).join("")}</div>
+      <div class="glchips">${groups[grp][1].map((k) => `<button class="gtoggle glayer${k === g.layer ? " on" : ""}" data-layer="${k}" aria-pressed="${k === g.layer}">${LNAME[k]}</button>`).join("")}</div>`;
+    lbar.querySelectorAll(".glgroup").forEach((b) => b.addEventListener("click", () => { grp = +b.dataset.grp; renderBar(); }));
+    lbar.querySelectorAll(".glayer").forEach((b) => b.addEventListener("click", () => setLayer(g.layer === b.dataset.layer ? null : b.dataset.layer)));
+  };
+  renderBar();
   g.cleanup.push(() => { g.meshes = {}; });
   // dashed arcs through the atmosphere between countries that are fighting each other (shown with the conflict layer)
   const arcGroup = new THREE.Group(); arcGroup.visible = false; scene.add(arcGroup); const arcMats = [];
