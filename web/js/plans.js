@@ -2,11 +2,11 @@
 // Until then the pricing page records who would sign up for what (table plan_interest), which is the demand check before connecting Stripe.
 // The static data files stay public: these locks are a product boundary, not a security one. Only the Pro analysis sections are enforced server-side (see analysis.js).
 const PLANS = [
-  { id: "free", name: "Free", mo: 0, yr: 0, tag: "Learn and look around", feats: ["The 8-lesson crash course", "AI & Tech Watch crash monitor", "Markets: overview, daily brief, economy, calendar", "Stock pages, charts and the practice portfolio", "The public practice fund managers", "The globe: economic health, conflict, goods, food and spending"] },
+  { id: "free", name: "Free", mo: 0, yr: 0, tag: "Learn and look around", feats: ["The 8-lesson crash course", "AI & Tech Watch crash monitor", "Markets: overview, daily brief, economy, calendar", "Stock pages, charts and the practice portfolio", "The public practice fund managers", "The whole globe: every layer, from health and conflict to oil, minerals, debt, chips, cables and trade routes"] },
   { id: "student", name: "Student", mo: 3, yr: 30, tag: "Everything in Plus, for ages 16 to 22", feats: ["Everything in Plus", "For ages 16 to 22, confirmed when you subscribe", "Costs about a coffee a month"] },
-  { id: "plus", name: "Plus", mo: 12, yr: 99, tag: "The full toolkit", feats: ["Everything in Free", "Full company analysis: balance sheet, insider trades, ownership, leadership, dividends", "Stock screener and the Overlooked stocks screen", "Every globe layer: oil, rare earths, minerals, debt, chips, cables, money flows and trade routes"] },
+  { id: "plus", name: "Plus", mo: 12, yr: 99, tag: "The full toolkit", feats: ["Everything in Free", "Full company analysis: balance sheet, insider trades, ownership, leadership, dividends", "Stock screener and the Overlooked stocks screen"] },
 ];
-const PAID_LAYERS = ["oil", "rare", "min", "macro", "chips", "net", "money", "trade"];
+const PAID_LAYERS = [];   // the globe is free: every layer
 const PLAN = { id: "free", paywall: false, loaded: false };
 
 function planReset() { PLAN.loaded = false; PLAN.id = "free"; }
