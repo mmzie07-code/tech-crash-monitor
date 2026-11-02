@@ -292,7 +292,7 @@ async function route() {
   if (typeof globeDispose === "function") globeDispose();   // free the globe's WebGL context when leaving the home page
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
-  const views = { pricing: () => pricingPage(), fund: () => fundPage(), model: () => modelPage(), home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
+  const views = { alerts: () => alertsPage(), pricing: () => pricingPage(), fund: () => fundPage(), model: () => modelPage(), home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
     explore: () => (h[1] === "overlooked" ? overlookedPage() : h[1] === "heatmap" ? heatmapPage() : h[1] === "screener" ? screenerPage() : h[1] === "compare" ? comparePage(h[2]) : h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), analysis: () => analysisPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), report: () => reportPage(h[1], h[2]), methodology: () => methodologyPage(), watchlist: () => watchlistPage(), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
@@ -321,7 +321,7 @@ window.addEventListener("hashchange", route);
   const parts = (location.hash || "").replace(/^#\/?/, "").split("/").filter(Boolean);
   if (!keep && parts.length && (parts.length <= 1 ? !["login", "home"].includes(parts[0]) : parts[0] === "markets" && parts.length === 2)) history.replaceState(null, "", location.pathname + location.search);
 })();
-Promise.all([loadSnap(), authInit()]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); });
+Promise.all([loadSnap(), authInit().then(() => (typeof planLoad === "function" ? planLoad() : null))]).then(() => { $("#brand").textContent = BRAND; $("#disc").textContent = DISC; document.title = BRAND; route(); if (typeof alCheck === "function") alCheck(); });
 
 // Stale-page guard: GitHub Pages lets browsers cache index.html for ~10 minutes. If a newer build exists, offer a refresh.
 (function checkVersion() {
