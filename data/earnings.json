@@ -1,15 +1,181 @@
 {
- "generated": "2026-11-01T04:21:42.180560Z",
+ "generated": "2026-11-02T21:57:12.660841Z",
  "ai_summaries": false,
  "days": [
   {
+   "date": "2026-11-02",
+   "reported_total": 147,
+   "top": [
+    {
+     "symbol": "AAPL",
+     "name": "Apple",
+     "market_cap_b": 5029.6,
+     "eps": null,
+     "eps_estimate": 1.98,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.98.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AAPL&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "PLTR",
+     "name": "Palantir Technologies",
+     "market_cap_b": 442.2,
+     "eps": null,
+     "eps_estimate": 0.32,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.32.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PLTR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "VRTX",
+     "name": "Vertex Pharmaceuticals Incorporated",
+     "market_cap_b": 141.7,
+     "eps": null,
+     "eps_estimate": 4.36,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $4.36.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VRTX&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MAR",
+     "name": "Marriott International",
+     "market_cap_b": 104.1,
+     "eps": null,
+     "eps_estimate": 2.86,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.86.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MAR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "WMB",
+     "name": "Williams Companies, Inc. (The)",
+     "market_cap_b": 90.9,
+     "eps": null,
+     "eps_estimate": 0.55,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.55.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WMB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "FANG",
+     "name": "Diamondback Energy",
+     "market_cap_b": 59.4,
+     "eps": null,
+     "eps_estimate": 4.92,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $4.92.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FANG&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "O",
+     "name": "Realty Income",
+     "market_cap_b": 53.9,
+     "eps": null,
+     "eps_estimate": 1.11,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.11.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=O&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ETR",
+     "name": "Entergy",
+     "market_cap_b": 51.4,
+     "eps": null,
+     "eps_estimate": 1.71,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.71.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ETR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "IDXX",
+     "name": "IDEXX Laboratories",
+     "market_cap_b": 43.4,
+     "eps": null,
+     "eps_estimate": 3.71,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.71.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IDXX&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "EL",
+     "name": "Estee Lauder Companies, Inc. (The)",
+     "market_cap_b": 39.6,
+     "eps": null,
+     "eps_estimate": 0.52,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.52.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EL&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
+  {
    "date": "2026-10-30",
-   "reported_total": 66,
+   "reported_total": 69,
    "top": [
     {
      "symbol": "XOM",
      "name": "ExxonMobil Holdings",
-     "market_cap_b": 753.7,
+     "market_cap_b": 770.0,
      "eps": 4.23,
      "eps_estimate": 3.9,
      "surprise_pct": 8.46,
@@ -26,7 +192,7 @@
     {
      "symbol": "ABBV",
      "name": "AbbVie",
-     "market_cap_b": 513.9,
+     "market_cap_b": 521.1,
      "eps": 3.82,
      "eps_estimate": 3.74,
      "surprise_pct": 2.14,
@@ -43,7 +209,7 @@
     {
      "symbol": "CVX",
      "name": "Chevron",
-     "market_cap_b": 457.3,
+     "market_cap_b": 465.3,
      "eps": 5.28,
      "eps_estimate": 4.78,
      "surprise_pct": 10.46,
@@ -60,7 +226,7 @@
     {
      "symbol": "AZN",
      "name": "AstraZeneca PLC",
-     "market_cap_b": 263.8,
+     "market_cap_b": 290.0,
      "eps": 2.79,
      "eps_estimate": 2.6,
      "surprise_pct": 7.31,
@@ -77,7 +243,7 @@
     {
      "symbol": "BP",
      "name": "BP p.l.c.",
-     "market_cap_b": 129.8,
+     "market_cap_b": 132.0,
      "eps": 3.26,
      "eps_estimate": 2.66,
      "surprise_pct": 22.56,
@@ -94,7 +260,7 @@
     {
      "symbol": "SNY",
      "name": "Sanofi",
-     "market_cap_b": 105.2,
+     "market_cap_b": 108.1,
      "eps": 2.04,
      "eps_estimate": 1.63,
      "surprise_pct": 25.15,
@@ -111,7 +277,7 @@
     {
      "symbol": "GD",
      "name": "General Dynamics",
-     "market_cap_b": 100.3,
+     "market_cap_b": 100.8,
      "eps": 4.49,
      "eps_estimate": 4.14,
      "surprise_pct": 8.45,
@@ -128,7 +294,7 @@
     {
      "symbol": "REGN",
      "name": "Regeneron Pharmaceuticals",
-     "market_cap_b": 84.3,
+     "market_cap_b": 95.5,
      "eps": 18.43,
      "eps_estimate": 13.76,
      "surprise_pct": 33.94,
@@ -143,26 +309,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=REGN&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "CNI",
-     "name": "Canadian National Railway",
-     "market_cap_b": 75.0,
-     "eps": 1.54,
-     "eps_estimate": 1.49,
-     "surprise_pct": 3.36,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $1.54 versus $1.49 expected, so the company beat estimates by 3.4%.",
-      "Stock moved -0.3% on Oct 30.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNI&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "CL",
      "name": "Colgate-Palmolive",
-     "market_cap_b": 74.3,
+     "market_cap_b": 76.0,
      "eps": 0.97,
      "eps_estimate": 0.92,
      "surprise_pct": 5.43,
@@ -175,6 +324,23 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CL&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "CNI",
+     "name": "Canadian National Railway",
+     "market_cap_b": 74.7,
+     "eps": 1.54,
+     "eps_estimate": 1.49,
+     "surprise_pct": 3.36,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.54 versus $1.49 expected, so the company beat estimates by 3.4%.",
+      "Stock moved -0.3% on Oct 30.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNI&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
@@ -2664,28 +2830,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WS&type=8-K&dateb=&owner=include&count=10"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-05",
-   "reported_total": 1,
-   "top": [
-    {
-     "symbol": "AEHR",
-     "name": "Aehr Test Systems",
-     "market_cap_b": 3.0,
-     "eps": -0.05,
-     "eps_estimate": 0.05,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $-0.05 versus $0.05 expected, so the company missed estimates.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AEHR&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   }

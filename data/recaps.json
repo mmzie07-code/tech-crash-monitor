@@ -1,7 +1,27 @@
 {
- "generated": "2026-11-01T04:23:24.679328Z",
+ "generated": "2026-11-02T21:58:34.352551Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-02-earnings-apple-aapl-reports-earnings",
+   "date": "2026-11-02",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Apple (AAPL) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
   {
    "headline": "ExxonMobil Holdings reported earnings: beat estimates.",
    "bullets": [
