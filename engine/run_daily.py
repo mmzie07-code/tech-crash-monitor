@@ -111,6 +111,31 @@ def write_mix():
         print("mix failed:", e)
 
 
+def write_macro():
+    """Debt, inflation, rates, remittances, internet use, high-tech exports (data/world/macro.json). Yearly figures, so refreshed monthly. Keeps the old file if it fails."""
+    p = os.path.join(DATA, "world", "macro.json")
+    try:
+        if os.path.exists(p) and (dt.datetime.now().timestamp() - os.path.getmtime(p)) < 25 * 86400:
+            return
+        import worldmacro
+        worldmacro.build()
+    except Exception as e:
+        print("macro failed:", e)
+
+
+def write_cyber():
+    """Recent attack sources (data/world/cyber.json): a few minutes of polite calls, so skipped when the file is under 20 hours old. Keeps the old file if it fails."""
+    p = os.path.join(DATA, "world", "cyber.json")
+    try:
+        if os.path.exists(p) and (dt.datetime.now().timestamp() - os.path.getmtime(p)) < 20 * 3600:
+            return
+        import cyber
+        cyber.build()
+        print("cyber written")
+    except Exception as e:
+        print("cyber failed:", e)
+
+
 def write_oil():
     try:
         json.dump(oil.build(), open(os.path.join(DATA, "oil.json"), "w"), separators=(",", ":"))
@@ -228,6 +253,8 @@ def main():
     write_economy()
     write_oil()
     write_mix()
+    write_macro()
+    write_cyber()
     write_model()
     write_ai(checks)
     write_forecasts()

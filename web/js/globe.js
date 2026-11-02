@@ -19,10 +19,11 @@ function gSun(d = new Date()) {
 
 async function gLoadAssets() {
   if (GLOBE.assets) return GLOBE.assets;
-  const [borders, countries, world, zones, mix, conflict, oilmap, trade, rare, minerals] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null), loadJson("world/rare.json").catch(() => null), loadJson("world/minerals.json").catch(() => null)]);
+  const [borders, countries, world, zones, mix, conflict, oilmap, trade, rare, minerals, macro, chips, cables, money, cyber] = await Promise.all([loadJson("world/borders.json"), loadJson("world/countries.json"), loadJson("world/world.json"), loadJson("world/timezones.json").catch(() => null), loadJson("world/mix.json").catch(() => null), loadJson("world/conflict.json").catch(() => null), loadJson("world/oilmap.json").catch(() => null), loadJson("world/trade.json").catch(() => null), loadJson("world/rare.json").catch(() => null), loadJson("world/minerals.json").catch(() => null), loadJson("world/macro.json").catch(() => null), loadJson("world/chips.json").catch(() => null), loadJson("world/cables.json").catch(() => null), loadJson("world/money.json").catch(() => null), loadJson("world/cyber.json").catch(() => null)]);
   if (!borders || !countries) throw new Error("globe data missing");
   for (const k in countries) { const p = countries[k].parent; if (p && !world.countries[k] && world.countries[p]) world.countries[k] = world.countries[p]; }   // an overseas part is coloured and scored with its country
-  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null, rare: rare && rare.fields ? rare : null, min: minerals && minerals.m ? minerals : null };
+  GLOBE.assets = { borders: borders.c, countries, world, zones: zones && zones.z, mix: mix && mix.c ? mix : null, conflict: conflict && conflict.conflicts ? conflict : null, oil: oilmap && oilmap.fields ? oilmap : null, trade: trade && trade.routes ? trade : null, rare: rare && rare.fields ? rare : null, min: minerals && minerals.m ? minerals : null, macro: macro && macro.c ? macro : null, chips: chips && chips.fields ? chips : null, cables: cables && cables.cables ? cables : null, money: money && money.corridors ? money : null,
+    cyber: cyber && (Object.keys(cyber.origin || {}).length || (cyber.pairs || []).length || Object.keys(cyber.c2 || {}).length) ? cyber : null };
   return GLOBE.assets;
 }
 
@@ -126,6 +127,12 @@ function gHeatTexture(THREE, fields, coarse, ramp) {   // a heat map of oil-prod
   x.putImageData(im, 0, 0);
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
+function gStops(stops, v) {   // colour for a value on a ramp of [value, [r, g, b, alpha]] stops
+  if (v <= stops[0][0]) return "rgba(" + stops[0][1].join(",") + ")";
+  for (let i = 1; i < stops.length; i++) if (v <= stops[i][0]) { const a = stops[i - 1], b = stops[i], t = (v - a[0]) / (b[0] - a[0]), c = a[1].map((x, k) => x + (b[1][k] - x) * t); return "rgba(" + [Math.round(c[0]), Math.round(c[1]), Math.round(c[2]), c[3].toFixed(2)].join(",") + ")"; }
+  return "rgba(" + stops[stops.length - 1][1].join(",") + ")";
+}
+const G_NODATA = "rgba(150,160,180,0.07)";
 function gMid(a, b) {   // midpoint of two [lat, lon] points on the sphere, as [lat, lon]
   const p = gVec(a[0], a[1]), q = gVec(b[0], b[1]), m = [p[0] + q[0], p[1] + q[1], p[2] + q[2]], n = Math.hypot(...m) || 1;
   return [Math.asin(Math.max(-1, Math.min(1, m[1] / n))) / G_R, Math.atan2(-m[2] / n, m[0] / n) / G_R];
@@ -247,7 +254,7 @@ async function globeMount(host) {
   const list = A.borders, lookup = gIndex(list);
   // ---- map layers: one colour layer at a time (economic health, conflict, goods makers, food growers, big spenders) ----
   g.layer = null; g.meshes = {}; g.layerO = {};
-  const LAYERS = [["health", "Economic health", true], ["conflict", "Conflict", !!A.conflict], ["goods", "Goods makers", !!A.mix], ["food", "Food growers", !!A.mix], ["spend", "Big spenders", !!A.mix], ["oil", "Oil", !!A.oil], ["rare", "Rare earths", !!A.rare], ["min", "Critical minerals", !!A.min], ["trade", "Trade routes", !!A.trade]].filter((l) => l[2]);
+  const LAYERS = [["health", "Economic health", true], ["conflict", "Conflict", !!A.conflict], ["goods", "Goods makers", !!A.mix], ["food", "Food growers", !!A.mix], ["spend", "Big spenders", !!A.mix], ["oil", "Oil", !!A.oil], ["rare", "Rare earths", !!A.rare], ["min", "Critical minerals", !!A.min], ["macro", "Debt & prices", !!A.macro], ["chips", "Chips", !!A.chips], ["net", "Cables & internet", !!(A.cables || A.macro)], ["money", "Money flows", !!(A.macro && A.money)], ["cyber", "Cyber", !!A.cyber], ["trade", "Trade routes", !!A.trade]].filter((l) => l[2]);
   const LAYER_RGB = { goods: [60, 105, 255], food: [30, 200, 85], spend: [255, 165, 20], oilg: [236, 150, 40], rareg: [200, 90, 235] }, MIXK = { goods: "manf", food: "agr", spend: "cons" };
   const MIXWHAT = { manf: "the world's manufacturing", agr: "the world's farm output", cons: "the world's household spending" };
   const colorOf = (key) => (co) => {
@@ -255,6 +262,7 @@ async function globeMount(host) {
     if (key === "health") { const w = iso && A.world.countries[iso], sc = w && w.score; return sc != null ? "rgba(" + gHealthColor(sc).join(",") + ",0.46)" : "rgba(150,160,180,0.14)"; }
     if (key === "conflict") { const c = A.conflict && iso && A.conflict.countries[iso]; return c ? (c.lvl === "war" ? "rgba(255,72,72,0.58)" : "rgba(255,168,58,0.48)") : "rgba(150,160,180,0.08)"; }
     if (key === "oilg") { const o = A.oil && iso && A.oil.c[iso], v = o && o.res; return v ? "rgba(236,150,40," + (0.12 + 0.62 * Math.min(1, Math.pow(v / 300, 0.55))).toFixed(2) + ")" : "rgba(150,160,180,0.07)"; }
+    if (key.startsWith("x:")) { const sp = xShade(key.slice(2)); if (!sp) return G_NODATA; const v = iso && sp.get(iso); return v == null ? G_NODATA : gStops(sp.stops, v); }
     if (key.startsWith("ming:")) { const mm = A.min.m[key.slice(5)], o = A.min && iso && A.min.c[iso], v = o && o[key.slice(5)] && o[key.slice(5)].r, mx = Math.max(...Object.values(A.min.c).map((q) => (q[key.slice(5)] && q[key.slice(5)].r) || 0)); return v ? "rgba(" + mm.tint.join(",") + "," + (0.14 + 0.6 * Math.min(1, Math.pow(v / mx, 0.5))).toFixed(2) + ")" : "rgba(150,160,180,0.07)"; }
     if (key === "rareg") { const o = A.rare && iso && A.rare.c[iso], v = o && o.res; return v ? "rgba(200,90,235," + (0.14 + 0.6 * Math.min(1, Math.pow(v / 44, 0.5))).toFixed(2) + ")" : "rgba(150,160,180,0.07)"; }
     const row = A.mix && iso && A.mix.c[iso], v = row && row[MIXK[key]];
@@ -270,6 +278,7 @@ async function globeMount(host) {
       <b class="gl-h">Who is fighting whom</b><div class="gl-list">${fronts.map((c) => `<button data-front="${esc(c.id)}">${esc(c.n)}</button>`).join("")}</div><div class="gl-info small"></div>
       <em>${esc(A.conflict.caveat)} Snapshot as of ${esc(gDate(A.conflict.asof))}.</em>`;
     const fly = (lat, lon, html, dist) => { g.flyList.push({ lat, lon, html, dist }); return g.flyList.length - 1; };
+    if (XMODES[key]) return xLegend(key, fly);
     if (key === "oil") {
       const O = A.oil, ground = g.oilMode === "ground", top = O.fields.slice().sort((p, q) => q.mbd - p.mbd).slice(0, 8);
       return `<div class="gl-modes"><button data-oilmode="pumped" class="${ground ? "" : "on"}">Where it's pumped</button><button data-oilmode="ground" class="${ground ? "on" : ""}">In the ground</button></div>
@@ -314,11 +323,11 @@ async function globeMount(host) {
     return `<i style="background:linear-gradient(90deg,rgba(${rgb},.1),rgba(${rgb},.65))"></i><div><span>Small share</span><span>Large share</span></div><em>Top 10 countries: ${A.mix.top10[k]}% of ${MIXWHAT[k]}. Click a country for what it makes and sells.</em>`;
   };
   const ensureMesh = (k) => {
-    if (g.meshes[k]) return;
-    const tex = k === "oil" ? gHeatTexture(THREE, A.oil.fields, coarse) : k.startsWith("min:") ? (() => { const mm = A.min.m[k.slice(4)], mxt = Math.max(...mm.fields.map((f) => f.t)); return gHeatTexture(THREE, mm.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: (f.t / mxt) * 6.5 })), coarse, mm.ramp); })() : k === "rare" ? gHeatTexture(THREE, A.rare.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: f.kt / 11 })), coarse, [[70, 20, 150], [200, 50, 200], [90, 200, 255], [235, 250, 255]]) : gTintTexture(THREE, list, colorOf(k), coarse);
+    if (g.meshes[k] || !k || k === "x:net:cables" || k === "x:money:arcs") return;
+    const tex = k === "oil" ? gHeatTexture(THREE, A.oil.fields, coarse) : k === "x:chips:fab" ? gHeatTexture(THREE, A.chips.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: f.w * 0.65 })), coarse, [[20, 40, 140], [40, 120, 255], [90, 210, 255], [235, 250, 255]]) : k.startsWith("min:") ? (() => { const mm = A.min.m[k.slice(4)], mxt = Math.max(...mm.fields.map((f) => f.t)); return gHeatTexture(THREE, mm.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: (f.t / mxt) * 6.5 })), coarse, mm.ramp); })() : k === "rare" ? gHeatTexture(THREE, A.rare.fields.map((f) => ({ lat: f.lat, lon: f.lon, mbd: f.kt / 11 })), coarse, [[70, 20, 150], [200, 50, 200], [90, 200, 255], [235, 250, 255]]) : gTintTexture(THREE, list, colorOf(k), coarse);
     const m = new THREE.Mesh(new THREE.SphereGeometry(1.0019, 96, 64), new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, opacity: 0 })); scene.add(m); g.meshes[k] = m; g.layerO[k] = 0;
   };
-  const meshKey = (key) => (key === "oil" ? (g.oilMode === "ground" ? "oilg" : "oil") : key === "rare" ? (g.rareMode === "ground" ? "rareg" : "rare") : key === "min" ? (g.minMode === "ground" ? "ming:" : "min:") + g.minSel : key);
+  const meshKey = (key) => (key === "oil" ? (g.oilMode === "ground" ? "oilg" : "oil") : key === "rare" ? (g.rareMode === "ground" ? "rareg" : "rare") : key === "min" ? (g.minMode === "ground" ? "ming:" : "min:") + g.minSel : XMODES[key] ? "x:" + key + ":" + g.xs[key] : key);
   const renderLegend = () => {
     const lg = host.querySelector(".glegend"), key = g.layer; lg.hidden = !key; if (!key) return;
     g.flyList = []; lg.innerHTML = legendHtml(key);
@@ -328,6 +337,7 @@ async function globeMount(host) {
     });
     lg.querySelectorAll("[data-fly]").forEach((b) => b.onclick = () => { const f = g.flyList[+b.dataset.fly]; flyTo(f.lat, f.lon, f.dist || 2.7); lg.querySelector(".gl-info").innerHTML = f.html; });
     lg.querySelectorAll("[data-oilmode]").forEach((b) => b.onclick = () => { g.oilMode = b.dataset.oilmode; try { localStorage.setItem("ml_globe_oil", g.oilMode); } catch (e) {} ensureMesh(meshKey("oil")); renderLegend(); });
+    lg.querySelectorAll("[data-xmode]").forEach((b) => b.onclick = () => { g.xs[g.layer] = b.dataset.xmode; try { localStorage.setItem("ml_globe_x", JSON.stringify(g.xs)); } catch (e) {} ensureMesh(meshKey(g.layer)); renderLegend(); });
     lg.querySelectorAll("[data-minsel]").forEach((b) => b.onclick = () => { g.minSel = b.dataset.minsel; saveMin(); buildMinMarkers(); ensureMesh(meshKey("min")); renderLegend(); });
     lg.querySelectorAll("[data-minmode]").forEach((b) => b.onclick = () => { g.minMode = b.dataset.minmode; saveMin(); ensureMesh(meshKey("min")); renderLegend(); });
     lg.querySelectorAll("[data-raremode]").forEach((b) => b.onclick = () => { g.rareMode = b.dataset.raremode; try { localStorage.setItem("ml_globe_rare", g.rareMode); } catch (e) {} ensureMesh(meshKey("rare")); renderLegend(); });
@@ -380,6 +390,97 @@ async function globeMount(host) {
       const r = new THREE.Mesh(new THREE.RingGeometry(0.022, 0.027, 28), new THREE.MeshBasicMaterial({ color: col, side: THREE.DoubleSide, transparent: true, opacity: 0.8, depthWrite: false })); r.position.copy(v.clone().multiplyScalar(1.008)); r.lookAt(v.clone().multiplyScalar(3)); minGroup.add(r); });
   };
   buildMinMarkers(); g.minG = minGroup;
+  // ---- extra layers: debt & prices, chips, cables & internet, money flows, cyber ----
+  const XMODES = { macro: [["debt", "Debt"], ["infl", "Inflation"], ["rate", "Interest rates"]], chips: [["fab", "Where chips are made"], ["tech", "High-tech exports"]], net: [["cables", "Cables"], ["users", "Internet users"]],
+    money: [["remit", "Remittances"], ["fdi", "Foreign investment"]], cyber: [["origin", "Where attacks come from"]].concat(A.cyber && Object.keys(A.cyber.targets || {}).length ? [["target", "Who is hit"]] : []) };
+  g.xs = { macro: "debt", chips: "fab", net: "cables", money: "remit", cyber: "origin" };
+  try { const sv = JSON.parse(localStorage.getItem("ml_globe_x") || "{}"); for (const k in g.xs) if (XMODES[k].some((m) => m[0] === sv[k])) g.xs[k] = sv[k]; } catch (e) {}
+  const MC = (iso) => (A.macro && A.macro.c[iso]) || null, CY = A.cyber || {};
+  const XS = {
+    "macro:debt": { get: (i) => (MC(i) || {}).debt, stops: [[30, [70, 190, 130, 0.35]], [80, [245, 205, 70, 0.5]], [130, [240, 80, 60, 0.62]], [200, [170, 20, 90, 0.74]]], lo: "Under 30%", hi: "200%+", what: "Government debt as a share of a year's economic output (IMF estimate for 2024)." },
+    "macro:infl": { get: (i) => (MC(i) || {}).infl, stops: [[0, [80, 150, 255, 0.45]], [3, [70, 190, 130, 0.35]], [10, [245, 190, 60, 0.55]], [30, [240, 70, 60, 0.65]], [100, [170, 20, 120, 0.76]]], lo: "Falling prices", hi: "100%+ a year", what: "How fast consumer prices rose in the latest year reported (World Bank)." },
+    "macro:rate": { get: (i) => { const m = MC(i) || {}; return m.pol != null ? m.pol : m.lend; }, stops: [[0, [80, 150, 255, 0.4]], [4, [70, 190, 130, 0.35]], [10, [245, 190, 60, 0.55]], [25, [240, 70, 60, 0.65]], [50, [170, 20, 120, 0.76]]], lo: "Near 0%", hi: "50%+", what: "The central bank's policy rate where the IMF reports one (mostly mid-2025), otherwise the typical bank lending rate (World Bank)." },
+    "money:remit": { get: (i) => (MC(i) || {}).rem, stops: [[0, [255, 200, 60, 0.06]], [3, [255, 190, 50, 0.35]], [10, [255, 140, 30, 0.56]], [25, [240, 70, 40, 0.74]]], lo: "Under 1% of GDP", hi: "25%+ of GDP", what: "Money sent home by workers abroad, as a share of the receiving country's economy (World Bank)." },
+    "money:fdi": { get: (i) => (MC(i) || {}).fdi, stops: [[0, [90, 140, 255, 0.15]], [2, [90, 160, 255, 0.35]], [6, [60, 200, 230, 0.56]], [15, [200, 250, 255, 0.72]]], lo: "Little", hi: "15%+ of GDP", what: "Foreign companies' investment flowing into the country in a year, as a share of GDP (World Bank). It swings a lot from year to year." },
+    "net:users": { get: (i) => (MC(i) || {}).net, stops: [[0, [240, 80, 70, 0.55]], [40, [245, 190, 60, 0.45]], [70, [90, 200, 160, 0.4]], [100, [60, 200, 255, 0.45]]], lo: "Few online", hi: "Nearly everyone", what: "Share of people using the internet (World Bank / ITU)." },
+    "chips:tech": { get: (i) => (MC(i) || {}).tech, stops: [[0, [150, 120, 255, 0.1]], [10, [150, 120, 255, 0.3]], [25, [190, 90, 255, 0.56]], [50, [250, 150, 255, 0.74]]], lo: "Little", hi: "50%+ of exports", what: "High-technology goods (chips, computers, aircraft, drugs) as a share of the country's manufactured exports (World Bank)." },
+    "cyber:origin": { get: (i) => (CY.origin || {})[i], stops: [[0, [255, 80, 80, 0.2]], [5, [255, 80, 80, 0.45]], [20, [255, 60, 60, 0.7]]], lo: "Few", hi: "Many attacks", what: "Share of the busiest attacking addresses seen by a worldwide set of sensors, by the country of their network." },
+    "cyber:target": { get: (i) => (CY.targets || {})[i], stops: [[0, [255, 190, 60, 0.25]], [10, [255, 150, 40, 0.5]], [40, [255, 80, 40, 0.74]]], lo: "Few", hi: "Most attacked", what: "Countries hit most often by attacks, from Cloudflare Radar's last 7 days." } };
+  const xShade = (key) => XS[key.replace(/^x:/, "")];
+  g.xShade = xShade;
+  const fmtX = { debt: (v) => v + "% of GDP", infl: (v) => v + "% a year", rate: (v) => v + "%" };
+  const xLegend = (key, fly) => {
+    const mode = g.xs[key], sp = XS[key + ":" + mode], chips = XMODES[key].map(([m, l]) => `<button data-xmode="${m}" class="${mode === m ? "on" : ""}">${esc(l)}</button>`).join("");
+    const bar = (sp2) => `<i style="background:linear-gradient(90deg,${sp2.stops.map((s) => "rgba(" + s[1].slice(0, 3).join(",") + ",.85)").join(",")})"></i><div><span>${esc(sp2.lo)}</span><span>${esc(sp2.hi)}</span></div>`;
+    let h = `<div class="gl-modes" style="flex-wrap:wrap">${chips}</div>`;
+    if (key === "macro") h += `${bar(sp)}<em>${esc(sp.what)} Grey: no recent figure. ${key === "macro" && mode === "debt" ? "Debt covers " + A.macro.n.debt + " countries." : ""} Source: ${esc(A.macro.source)}. The IMF figures come through an open mirror that lags the IMF's newest release.</em>`;
+    if (key === "chips") {
+      const C = A.chips, KC = { tool: "#ffb03a", design: "#e0e8ff", material: "#5ee6a8" };
+      h += mode === "fab" ? `<i style="background:linear-gradient(90deg,rgba(20,40,140,.4),#2878ff,#5ad2ff,#ebfaff)"></i><div><span>Little</span><span>Biggest clusters</span></div><em>Glow: relative chip-making size by cluster (a rough index, not measured capacity).</em>` : `${bar(sp)}<em>${esc(sp.what)}</em>`;
+      h += `<div class="gl-sw">${Object.entries({ tool: "Machines and tools", design: "Chip design", material: "Key materials" }).map(([k, l]) => `<span><u style="background:${KC[k]}"></u>${l}</span>`).join("")}</div>
+        <ul class="small" style="margin:4px 0 6px;padding-left:16px">${C.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+        <b class="gl-h">Chokepoints</b><div class="gl-list">${C.sites.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b> · ${esc(x.kind)}<br>${esc(x.note)}`)}">${esc(x.n)}</button>`).join("")}</div>
+        <b class="gl-h">Biggest chip-making clusters</b><div class="gl-list">${C.fields.slice().sort((p, q) => q.w - p.w).slice(0, 6).map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b><br>${esc(x.note)}`, 2.2)}">${esc(x.n)}</button>`).join("")}</div><div class="gl-info small"></div><em>${esc(C.caveat)} Source: ${esc(C.source)}.</em>`;
+    }
+    if (key === "net") {
+      const C = A.cables;
+      if (mode === "users") h += `${bar(sp)}<em>${esc(sp.what)}</em>`;
+      if (C) h += `<div class="gl-sw"><span><u class="dash" style="--c:#7aa2ff"></u>Undersea cable (simplified route)</span><span><u style="background:#38d6ff"></u>Cable landing hub</span><span><u style="background:#ff7ad9"></u>Data-centre hub</span><span><u class="ring"></u>Cable damage</span></div>
+        <ul class="small" style="margin:4px 0 6px;padding-left:16px">${C.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+        <b class="gl-h">Cables</b><div class="gl-list">${C.cables.map((c) => { const m = c.pts[Math.floor(c.pts.length / 2)]; return `<button data-fly="${fly(m[0], m[1], `<b>${esc(c.n)}</b><br>${esc(c.note)}`, 3.3)}">${esc(c.n)}</button>`; }).join("")}</div>
+        <b class="gl-h">Hubs</b><div class="gl-list">${C.hubs.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b> · ${x.k === "dc" ? "data-centre hub" : "cable landing hub"}<br>${esc(x.note)}`, 2.2)}">${esc(x.n)}</button>`).join("")}</div>
+        <b class="gl-h">Cable damage</b><div class="gl-list">${C.incidents.map((x) => `<button data-fly="${fly(x.lat, x.lon, `<b>${esc(x.n)}</b><br>${esc(x.note)}`, 2)}">${esc(x.n)}</button>`).join("")}</div><div class="gl-info small"></div><em>${esc(C.caveat)} ${esc(C.source)}.</em>`;
+    }
+    if (key === "money") {
+      const M = A.money, top = Object.entries(A.macro.c).filter(([, r]) => r.remd != null).sort((p, q) => q[1].remd - p[1].remd).slice(0, 6);
+      h += `${bar(sp)}<em>${esc(sp.what)}</em><div class="gl-sw"><span><u class="dash" style="--c:#ffc83c"></u>Big remittance corridor</span></div>
+        <ul class="small" style="margin:4px 0 6px;padding-left:16px">${M.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+        <b class="gl-h">Biggest corridors</b><div class="gl-list">${M.corridors.map((c) => { const a = capOf(c.a), z = capOf(c.b), m = gMid(a, z); return `<button data-fly="${fly(m[0], m[1], `<b>${esc(cname(c.a))} to ${esc(cname(c.b))}</b><br>${esc(c.note)}`, 3)}">${esc(cname(c.a))} to ${esc(cname(c.b))}</button>`; }).join("")}</div>
+        <b class="gl-h">Biggest receivers (US$ a year)</b><p class="small" style="margin:0 0 6px">${top.map(([i, r]) => `${esc(cname(i))} $${Math.round(r.remd)}bn`).join(" · ")}</p><div class="gl-info small"></div><em>${esc(M.caveat)} ${esc(M.source)}.</em>`;
+    }
+    if (key === "cyber") {
+      const top = Object.entries(CY.origin || {}).sort((p, q) => q[1] - p[1]).slice(0, 8), c2 = Object.entries(CY.c2 || {}).sort((p, q) => q[1] - p[1]);
+      h += `${bar(sp)}<em>${esc(sp.what)}</em>`;
+      if (CY.pairs && CY.pairs.length) h += `<div class="gl-sw"><span><u class="dash"></u>Attack route, origin to target</span></div><b class="gl-h">Biggest routes this week</b><div class="gl-list">${CY.pairs.slice().sort((p, q) => q[2] - p[2]).slice(0, 8).map((p) => { const m = gMid(capOf(p[0]), capOf(p[1])); return `<button data-fly="${fly(m[0], m[1], `<b>${esc(cname(p[0]))} to ${esc(cname(p[1]))}</b><br>One of the biggest ${p[3] === "layer7" ? "web (application-layer)" : "network-layer"} attack routes in the last 7 days.`, 3)}">${esc(cname(p[0]))} to ${esc(cname(p[1]))}</button>`; }).join("")}</div>`;
+      else h += `<em>Who is being targeted needs a free Cloudflare Radar token, which isn't connected yet, so no origin-to-target lines are drawn. The shading shows only where attacks come from.</em>`;
+      h += `<b class="gl-h">Top sources</b><p class="small" style="margin:0 0 6px">${top.map(([i, v]) => `${esc(cname(i))} ${v}%`).join(" · ") || "No data yet."}</p>${c2.length ? `<b class="gl-h">Botnet control servers online</b><p class="small" style="margin:0 0 6px">${c2.map(([i, v]) => `${esc(cname(i))} ${v}`).join(" · ")}</p>` : ""}
+        <em>Updated ${esc(CY.asof || "")} (with each nightly run, not live). Sources: ${esc((CY.sources || []).join(", "))}. ${esc(CY.caveat)}</em>`;
+    }
+    return h;
+  };
+  // overlays for these layers
+  g.xg = {}; g.xm = {}; g.xp = [];
+  const xGroup = (k) => { const gr = new THREE.Group(); gr.visible = false; scene.add(gr); g.xg[k] = gr; g.xm[k] = []; return gr; };
+  const dashMat = (len, col, dash, speed) => new THREE.ShaderMaterial({ uniforms: { time: { value: 0 }, len: { value: len }, col: { value: new THREE.Color(col) } }, vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+    fragmentShader: "varying vec2 vUv; uniform float time; uniform float len; uniform vec3 col; void main(){ float d = vUv.x * len / " + dash.toFixed(3) + " - time * " + speed.toFixed(2) + "; if (fract(d) > 0.6) discard; gl_FragColor = vec4(col, 1.0); }" });
+  const markerAt = (gr, lat, lon, col, ring) => {
+    const v = new THREE.Vector3(...gVec(lat, lon)), m = new THREE.Mesh(new THREE.OctahedronGeometry(0.014), new THREE.MeshBasicMaterial({ color: col })); m.position.copy(v.clone().multiplyScalar(1.012)); gr.add(m);
+    const r = new THREE.Mesh(new THREE.RingGeometry(0.02, 0.026, 28), new THREE.MeshBasicMaterial({ color: col, side: THREE.DoubleSide, transparent: true, opacity: 0.8, depthWrite: false })); r.position.copy(v.clone().multiplyScalar(1.008)); r.lookAt(v.clone().multiplyScalar(3)); gr.add(r); if (ring) g.xp.push(r);
+  };
+  const arcBetween = (gr, mats, pa, pb, col) => {
+    const a = new THREE.Vector3(...gVec(pa[0], pa[1])), b = new THREE.Vector3(...gVec(pb[0], pb[1])), th = Math.acos(Math.max(-1, Math.min(1, a.dot(b)))); if (th < 0.01) return;
+    const peak = Math.min(0.42, 0.05 + 0.2 * th), pts = [];
+    for (let i = 0; i <= 80; i++) { const t = i / 80, k1 = Math.sin((1 - t) * th) / Math.sin(th), k2 = Math.sin(t * th) / Math.sin(th); pts.push(a.clone().multiplyScalar(k1).add(b.clone().multiplyScalar(k2)).normalize().multiplyScalar(1.004 + peak * Math.sin(Math.PI * t))); }
+    const mat = dashMat(th * (1 + peak), col, 0.05, 0.9); gr.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 96, 0.0042, 5, false), mat)); mats.push(mat);
+    [a, b].forEach((v, i) => { const d = new THREE.Mesh(new THREE.SphereGeometry(i ? 0.012 : 0.008, 12, 12), new THREE.MeshBasicMaterial({ color: col })); d.position.copy(v.clone().multiplyScalar(1.006)); gr.add(d); });
+  };
+  if (A.chips) { const gr = xGroup("chips"), KC = { tool: 0xffb03a, design: 0xe0e8ff, material: 0x5ee6a8 }; A.chips.sites.forEach((x) => markerAt(gr, x.lat, x.lon, KC[x.k], false)); }
+  if (A.cables) {
+    const gr = xGroup("net");
+    A.cables.cables.forEach((c) => {
+      const pts = []; let len = 0;
+      for (let i = 0; i + 1 < c.pts.length; i++) {
+        const a = new THREE.Vector3(...gVec(c.pts[i][0], c.pts[i][1])), b = new THREE.Vector3(...gVec(c.pts[i + 1][0], c.pts[i + 1][1])), th = Math.acos(Math.max(-1, Math.min(1, a.dot(b)))), n = Math.max(2, Math.ceil(th / (1.2 * G_R)));
+        for (let j = i ? 1 : 0; j <= n; j++) { const t = j / n, k1 = Math.sin((1 - t) * th) / Math.sin(th), k2 = Math.sin(t * th) / Math.sin(th); pts.push(a.clone().multiplyScalar(k1).add(b.clone().multiplyScalar(k2)).normalize().multiplyScalar(1.0042)); }
+        len += th;
+      }
+      const mat = dashMat(len, 0x7aa2ff, 0.05, 0.4); gr.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, false, "centripetal"), Math.min(1600, pts.length * 3), 0.0028, 4, false), mat)); g.xm.net.push(mat);
+    });
+    A.cables.hubs.forEach((x) => markerAt(gr, x.lat, x.lon, x.k === "dc" ? 0xff7ad9 : 0x38d6ff, false));
+    A.cables.incidents.forEach((x) => { const v = new THREE.Vector3(...gVec(x.lat, x.lon)), r = new THREE.Mesh(new THREE.RingGeometry(0.02, 0.03, 32), new THREE.MeshBasicMaterial({ color: 0xff5a5a, side: THREE.DoubleSide, transparent: true, opacity: 0.9, depthWrite: false })); r.position.copy(v.clone().multiplyScalar(1.009)); r.lookAt(v.clone().multiplyScalar(3)); gr.add(r); g.xp.push(r); });
+  }
+  if (A.money) { const gr = xGroup("money"); A.money.corridors.forEach((c) => { const pa = capOf(c.a), pb = capOf(c.b); if (pa && pb) arcBetween(gr, g.xm.money, pa, pb, 0xffc83c); }); }
+  if (A.cyber && A.cyber.pairs && A.cyber.pairs.length) { const gr = xGroup("cyber"); A.cyber.pairs.forEach((p) => { const pa = capOf(p[0]), pb = capOf(p[1]); if (pa && pb) arcBetween(gr, g.xm.cyber, pa, pb, 0xff4b4b); }); }
   // trade: sea lanes with dashes flowing along each route, ring markers on chokepoints, dots on big ports
   const tradeGroup = new THREE.Group(); tradeGroup.visible = false; scene.add(tradeGroup); const tradeMats = [], pulses = [];
   if (A.trade) {
@@ -405,6 +506,7 @@ async function globeMount(host) {
     if (g.layer === "oil") { const o = A.oil && A.oil.c[iso], gr = g.oilMode === "ground"; if (!o || (gr ? o.res : o.prod) == null) return `<div class="gc-row"><span class="gc-k">${gr ? "Oil reserves" : "Oil pumped"}</span><b>Little or none</b></div>`; return gr ? `<div class="gc-row"><span class="gc-k">Oil in the ground</span><b>${o.res} bn barrels · #${o.res_r}</b></div>` : `<div class="gc-row"><span class="gc-k">Oil pumped</span><b>${o.prod} m barrels/day · #${o.prod_r}</b></div>`; }
     if (g.layer === "rare") { const o = A.rare && A.rare.c[iso], gr = g.rareMode === "ground"; if (!o || (gr ? o.res : o.kt) == null) return `<div class="gc-row"><span class="gc-k">${gr ? "Rare earth reserves" : "Rare earths mined"}</span><b>Little or none</b></div>`; return gr ? `<div class="gc-row"><span class="gc-k">Rare earths in the ground</span><b>${o.res} m tonnes · #${o.res_r}</b></div>` : `<div class="gc-row"><span class="gc-k">Rare earths mined</span><b>${o.kt} thousand t · ${o.sh}% · #${o.kt_r}</b></div>`; }
     if (g.layer === "min") { const mm = A.min.m[g.minSel], o = A.min.c[iso] && A.min.c[iso][g.minSel], gr = g.minMode === "ground", v = o && (gr ? o.r : o.p); if (v == null) return `<div class="gc-row"><span class="gc-k">${esc(mm.n)} ${gr ? "reserves" : "mined"}</span><b>Little or none</b></div>`; return gr ? `<div class="gc-row"><span class="gc-k">${esc(mm.n)} in the ground</span><b>${o.r} m tonnes · #${o.rr}</b></div>` : `<div class="gc-row"><span class="gc-k">${esc(mm.n)} mined</span><b>${o.p} thousand t · ${o.sh}% · #${o.pr}</b></div>`; }
+    if (XMODES[g.layer]) { const sp = XS[g.layer + ":" + g.xs[g.layer]]; if (!sp) return ""; const v = sp.get(iso), m = MC(iso) || {}, lab = { "macro:debt": ["Government debt", (x) => x + "% of GDP"], "macro:infl": ["Inflation", (x) => x + "% a year"], "macro:rate": ["Interest rate", (x) => x + "%"], "money:remit": ["Remittances received", (x) => x + "% of GDP"], "money:fdi": ["Foreign investment in", (x) => x + "% of GDP"], "net:users": ["People online", (x) => x + "%"], "chips:tech": ["High-tech share of exports", (x) => x + "%"], "cyber:origin": ["Share of attack sources", (x) => x + "%"], "cyber:target": ["Attack targeting", (x) => String(x)] }[g.layer + ":" + g.xs[g.layer]]; return lab && v != null ? `<div class="gc-row"><span class="gc-k">${lab[0]}</span><b>${lab[1](v)}</b></div>` : ""; }
     if (g.layer === "trade") return "";
     const k = MIXK[g.layer], r = A.mix && A.mix.c[iso]; if (!k || !r || r[k] == null) return "";
     return `<div class="gc-row"><span class="gc-k">${gShare(r[k])} of ${MIXWHAT[k]}</span><b>#${r[k + "_r"]}</b></div>`;
@@ -576,6 +678,8 @@ async function globeMount(host) {
     if (g.oilG) g.oilG.visible = g.layer === "oil";
     if (g.rareG) g.rareG.visible = g.layer === "rare";
     if (g.minG) g.minG.visible = g.layer === "min";
+    for (const k in g.xg) { g.xg[k].visible = g.layer === k; if (g.xg[k].visible) { const tt = (now - g.t0) / 1000; g.xm[k].forEach((m) => { m.uniforms.time.value = tt; }); } }
+    if (g.xp.length && XMODES[g.layer]) { const tt = (now - g.t0) / 1000; g.xp.forEach((r, i) => { const k = 1 + 0.2 * Math.sin(tt * 2.4 + i); r.scale.set(k, k, k); }); }
     if (g.tradeG) { g.tradeG.visible = g.layer === "trade"; if (g.tradeG.visible) { const tt = (now - g.t0) / 1000; g.tradeMats.forEach((m) => { m.uniforms.time.value = tt; }); g.pulses.forEach((r, i) => { const k = 1 + 0.22 * Math.sin(tt * 2.4 + i); r.scale.set(k, k, k); }); } }
     if (g.arcs) { g.arcs.visible = g.layer === "conflict"; if (g.arcs.visible) g.arcMats.forEach((m) => { m.uniforms.time.value = (now - g.t0) / 1000; }); }
     const v = gVec(g.lat, g.lon); camera.position.set(v[0] * g.dist, v[1] * g.dist, v[2] * g.dist); camera.lookAt(0, 0, 0); camera.updateMatrixWorld();
@@ -647,6 +751,15 @@ function gExtraHtml(iso, A) {   // what a country makes and buys, and any armed 
       ${oc.prod != null ? `<div class="gc-row" style="padding:6px 0"><span>Pumped each day<div class="small muted">crude oil and condensate</div></span><b>${oc.prod} million barrels · #${oc.prod_r} of ${A.oil.n.prod}</b></div>` : ""}
       ${oc.res != null ? `<div class="gc-row" style="padding:6px 0;border-top:1px solid var(--line)"><span>Proven reserves<div class="small muted">in the ground</div></span><b>${oc.res} billion barrels · #${oc.res_r} of ${A.oil.n.res}</b></div>` : ""}
       <p class="small muted" style="margin:8px 0 0">${esc(A.oil.caveat)} Source: ${esc(A.oil.source)}.</p></div>`;
+  }
+  const xm = A.macro && A.macro.c[iso];
+  if (xm) {
+    const row = (lab, v, sub) => (v == null ? "" : `<div class="gc-row" style="padding:6px 0;border-top:1px solid var(--line)"><span>${lab}${sub ? `<div class="small muted">${sub}</div>` : ""}</span><b>${v}</b></div>`);
+    const body = row("Government debt", xm.debt != null ? xm.debt + "% of GDP" : null, "IMF estimate for 2024") + row("Inflation", xm.infl != null ? xm.infl + "% a year" : null, "World Bank, " + xm.infl_y) + row("Central bank rate", xm.pol != null ? xm.pol + "%" : null, "IMF, " + xm.pol_d)
+      + row("Bank lending rate", xm.lend != null ? xm.lend + "%" : null, "World Bank, " + xm.lend_y + (xm.rr != null ? ", real rate " + xm.rr + "%" : "")) + row("Money sent home by workers abroad", xm.rem != null ? xm.rem + "% of GDP" + (xm.remd ? " · $" + xm.remd + "bn" : "") : null, "World Bank, " + xm.rem_y)
+      + row("Foreign investment coming in", xm.fdi != null ? xm.fdi + "% of GDP" : null, "World Bank, " + xm.fdi_y) + row("People online", xm.net != null ? xm.net + "%" : null, "World Bank, " + xm.net_y) + row("High-tech share of exports", xm.tech != null ? xm.tech + "%" : null, xm.techd ? "$" + xm.techd + "bn a year, " + xm.tech_y : "")
+      + (A.cyber && A.cyber.origin && A.cyber.origin[iso] != null ? row("Share of attack sources", A.cyber.origin[iso] + "%", "recent snapshot") : "");
+    if (body) out += `<div class="card"><h3 style="margin:0 0 2px">Debt, prices, money and tech</h3>${body}<p class="small muted" style="margin:8px 0 0">${esc(A.macro.source)}. Latest year each country reports; the year is shown under each figure.</p></div>`;
   }
   const mc = A.min && A.min.c[iso];
   if (mc) {
