@@ -354,11 +354,17 @@ async function globeMount(host) {
   const groups = GROUPS.map(([n, ks]) => [n, ks.filter((k) => LNAME[k])]).filter((x) => x[1].length);
   const grpOf = (k) => { const i = groups.findIndex((x) => x[1].includes(k)); return i < 0 ? 0 : i; };
   let grp = 0; try { const sv = localStorage.getItem("ml_globe_layer"); if (sv) grp = grpOf(sv); } catch (e) {}
+  const locked = (k) => typeof planPaid === "function" && typeof PAID_LAYERS !== "undefined" && PAID_LAYERS.includes(k) && !planPaid();
+  if (typeof planLoad === "function") planLoad().then(() => { if (host.isConnected) renderBar(); });
   const renderBar = () => {
     lbar.innerHTML = `<div class="glgroups" role="tablist">${groups.map(([n, ks], i) => `<button class="glgroup${i === grp ? " on" : ""}" data-grp="${i}" role="tab" aria-selected="${i === grp}">${n}${ks.includes(g.layer) ? " •" : ""}</button>`).join("")}</div>
-      <div class="glchips">${groups[grp][1].map((k) => `<button class="gtoggle glayer${k === g.layer ? " on" : ""}" data-layer="${k}" aria-pressed="${k === g.layer}">${LNAME[k]}</button>`).join("")}</div>`;
+      <div class="glchips">${groups[grp][1].map((k) => `<button class="gtoggle glayer${k === g.layer ? " on" : ""}" data-layer="${k}" aria-pressed="${k === g.layer}">${locked(k) ? "🔒 " : ""}${LNAME[k]}</button>`).join("")}</div>`;
     lbar.querySelectorAll(".glgroup").forEach((b) => b.addEventListener("click", () => { grp = +b.dataset.grp; renderBar(); }));
-    lbar.querySelectorAll(".glayer").forEach((b) => b.addEventListener("click", () => setLayer(g.layer === b.dataset.layer ? null : b.dataset.layer)));
+    lbar.querySelectorAll(".glayer").forEach((b) => b.addEventListener("click", () => {
+      const k = b.dataset.layer;
+      if (locked(k)) { const lg = host.querySelector(".glegend"); lg.hidden = false; lg.innerHTML = `<span class="gl-h">${LNAME[k]} is part of Plus</span><span class="gl-info">The data layers for oil, minerals, debt, chips, cables, money flows and trade routes come with Plus.</span><a class="btn" href="#/pricing" style="font-size:12px;padding:7px 12px;margin-top:6px">See plans</a>`; return; }
+      setLayer(g.layer === k ? null : k);
+    }));
   };
   renderBar();
   g.cleanup.push(() => { g.meshes = {}; });
@@ -522,7 +528,7 @@ async function globeMount(host) {
     const k = MIXK[g.layer], r = A.mix && A.mix.c[iso]; if (!k || !r || r[k] == null) return "";
     return `<div class="gc-row"><span class="gc-k">${gShare(r[k])} of ${MIXWHAT[k]}</span><b>#${r[k + "_r"]}</b></div>`;
   };
-  try { const saved = localStorage.getItem("ml_globe_layer"), old = localStorage.getItem("ml_globe_tint") === "1" ? "health" : null; const k = saved === null ? old : saved; if (k && LAYERS.some((l) => l[0] === k)) setLayer(k); } catch (e) {}
+  try { const saved = localStorage.getItem("ml_globe_layer"), old = localStorage.getItem("ml_globe_tint") === "1" ? "health" : null; const k = saved === null ? old : saved; if (k && LAYERS.some((l) => l[0] === k) && !locked(k)) setLayer(k); } catch (e) {}
   const ringSegs = (rings, out) => {
     for (const r of rings) for (let i = 0; i + 3 < r.length; i += 2) {
       let x0 = r[i], y0 = r[i + 1], x1 = r[i + 2], y1 = r[i + 3];

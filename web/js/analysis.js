@@ -66,7 +66,7 @@ async function loadPro(sym) {
   try { return await liveGet("action=pro_data&symbol=" + encodeURIComponent(sym)); } catch (e) { return null; }
 }
 const anLock = (id, title, extra) => `<section class="card an-sec" id="an-${id}"><h2 style="margin:0 0 4px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">${title} ${extra || ""}</h2>
-  <div class="an-lock"><b>This section is part of the Pro plan.</b><p class="small muted" style="margin:4px 0 0">${liveOK() ? "Paid plans aren't open yet. When they are, Pro will unlock the balance sheet and debt history, insider trades and ownership, leadership and pay, and dividend history for every company." : "Sign in to see it."}</p></div></section>`;
+  <div class="an-lock"><b>This section is part of Plus.</b><p class="small muted" style="margin:4px 0 0">${liveOK() ? "Plus unlocks the balance sheet and debt history, insider trades and ownership, leadership and pay, and dividend history for every company. <a href=\"#/pricing\">See plans</a>." : "Sign in to see it."}</p></div></section>`;
 
 async function analysisPage(sym) {
   sym = decodeURIComponent(sym || "").toUpperCase();

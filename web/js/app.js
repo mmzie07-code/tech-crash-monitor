@@ -292,11 +292,12 @@ async function route() {
   if (typeof globeDispose === "function") globeDispose();   // free the globe's WebGL context when leaving the home page
   const token = ++routeToken, keepScroll = state.keepScroll; state.keepScroll = false;
   const h = (location.hash || "#/").slice(2).split("/"), a = h[0] || "home";
-  const views = { fund: () => fundPage(), model: () => modelPage(), home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
+  const views = { pricing: () => pricingPage(), fund: () => fundPage(), model: () => modelPage(), home: () => home(), learn: () => (h[1] ? lesson(h[1]) : learn()), markets: () => markets(h[1], h[2]), practice: () => practice(h[1] || "", h[2]),
     explore: () => (h[1] === "overlooked" ? overlookedPage() : h[1] === "heatmap" ? heatmapPage() : h[1] === "screener" ? screenerPage() : h[1] === "compare" ? comparePage(h[2]) : h[1] ? sectorPage(h[1]) : exploreHome()), stock: () => stockPage(h[1] || ""), analysis: () => analysisPage(h[1] || ""), watch: () => watch(), about: () => about(), market: () => marketPage(h[1]), report: () => reportPage(h[1], h[2]), methodology: () => methodologyPage(), watchlist: () => watchlistPage(), recap: () => recapPage(h[1]), terms: () => termsPage(), privacy: () => privacyPage(), login: () => loginView() };
   afterRender.length = 0;
   if (typeof AUTH !== "undefined" && !AUTH.ready) { $("#view").innerHTML = `<div class="card muted">Loading…</div>`; return; }
-  const pending = (typeof gateView === "function" && gateView(a)) || (views[a] || views.home)();
+  const gv = (typeof gateView === "function" && gateView(a)) || null, pg = !gv && typeof planGate === "function" ? planGate(a, h) : null;
+  const pending = gv || (pg ? pg.then((lock) => lock || (views[a] || views.home)()) : (views[a] || views.home)());
   if (pending && pending.then) $("#view").innerHTML = `<div class="card muted">Loading…</div>`;
   const html = await pending;
   if (token !== routeToken) return; // a newer navigation won

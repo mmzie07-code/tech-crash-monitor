@@ -162,14 +162,16 @@ Deno.serve(async (req) => {
       if (!gainersInflight) gainersInflight = buildGainers().finally(() => { gainersInflight = null; });  // everyone waits on the same rebuild
       return json(await gainersInflight);
     }
-    if (action === "plan" || action === "pro_data") {  // paid plan: "pro" if the owner, or a subscriptions row that is active. PAYWALL=on turns enforcement on; until then every signed-in user counts as pro.
+    if (action === "plan" || action === "pro_data") {  // plans: free, student, plus (student and plus unlock the same things), pro later. Owner always counts as paid. PAYWALL=on turns enforcement on; until then everyone is let through and "paywall": false tells the site not to lock anything.
       const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
-      let pro = who === "owner" || Deno.env.get("PAYWALL") !== "on";
-      if (!pro) {
+      const paywall = Deno.env.get("PAYWALL") === "on";
+      let plan = who === "owner" ? "owner" : "free";
+      if (who !== "owner") {
         const { data: sub } = await sb.from("subscriptions").select("plan,status,current_period_end").eq("user_id", who).maybeSingle();
-        pro = !!sub && sub.plan === "pro" && ["active", "trialing"].includes(sub.status) && (!sub.current_period_end || new Date(sub.current_period_end).getTime() > Date.now());
+        if (sub && ["student", "plus", "pro"].includes(sub.plan) && ["active", "trialing"].includes(sub.status) && (!sub.current_period_end || new Date(sub.current_period_end).getTime() > Date.now())) plan = sub.plan;
       }
-      if (action === "plan") return json({ plan: pro ? "pro" : "free" });
+      const pro = !paywall || plan !== "free";
+      if (action === "plan") return json({ plan, paywall });
       if (!pro) return json({ locked: true }, 402);
       const psym = (u.searchParams.get("symbol") ?? "").toUpperCase();
       if (!SYMBOL.test(psym)) return json({ error: "Bad symbol" }, 400);

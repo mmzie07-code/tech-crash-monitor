@@ -1,6 +1,6 @@
 // Accounts (Supabase Auth) + owner bypass key. Dormant until js/config.js has a supabaseUrl.
 const AUTH = { enabled: !!(window.ANALYTIC && window.ANALYTIC.supabaseUrl), sb: null, user: null, owner: false, ready: false };
-const OPEN_ROUTES = ["home", "about", "login", "terms", "privacy", "methodology"];
+const OPEN_ROUTES = ["home", "about", "login", "terms", "privacy", "methodology", "pricing"];
 const fnUrl = () => window.ANALYTIC.supabaseUrl.replace(/\/$/, "") + "/functions/v1/market";
 
 function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
@@ -13,7 +13,7 @@ async function authInit() {
     const { data } = await AUTH.sb.auth.getSession();
     AUTH.user = data.session ? data.session.user : null;
     if (AUTH.user) setTimeout(() => typeof syncPull === "function" && syncPull(), 0);
-    AUTH.sb.auth.onAuthStateChange((_e, session) => { const was = AUTH.user; AUTH.user = session ? session.user : null; renderAuthButton(); route(); if (AUTH.user && !was && typeof syncPull === "function") setTimeout(syncPull, 0); });
+    AUTH.sb.auth.onAuthStateChange((_e, session) => { const was = AUTH.user; AUTH.user = session ? session.user : null; if (typeof planReset === "function") planReset(); renderAuthButton(); route(); if (AUTH.user && !was && typeof syncPull === "function") setTimeout(syncPull, 0); });
     const k = (() => { try { return localStorage.getItem("ml_owner"); } catch (e) { return null; } })();
     if (k) AUTH.owner = await checkOwnerKey(k);
   } catch (e) { AUTH.failed = true; }

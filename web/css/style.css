@@ -260,3 +260,7 @@ html,body{overflow-x:clip}
 .aiw-bar{display:inline-block;vertical-align:middle;width:70px;height:7px;background:var(--line);border-radius:5px;overflow:hidden}.aiw-bar i{display:block;height:100%;border-radius:5px}
 .aiw-pill{display:block;padding:14px}.aiw-pill:hover{border-color:var(--brand)}
 .aiw-t td{vertical-align:top}.aiw-stale{opacity:.55}
+
+.pl-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}.pl-card{display:flex;flex-direction:column;margin:0}.pl-hot{border:2px solid var(--brand)}
+.pl-price{font-size:34px;font-weight:800;line-height:1.1}.pl-price small{font-size:14px;font-weight:600;color:var(--mut)}.pl-list{margin:0;padding-left:18px;flex:1}.pl-list li{font-size:14px;margin:5px 0}
+.pl-lock{text-align:center;padding:28px 18px}
