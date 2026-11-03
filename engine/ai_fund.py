@@ -216,9 +216,12 @@ def run_level(key, cfg, days, G, P, sym, meta):
                 plan = dict(target=w, reg=reg, sg=sg, score=score, ok=ok)
     L = T - 1; sg = signals(P, L); reg = regime(G, L); val = nav[L]
     holds = []
+    def last_px(i):   # a stock whose price feed has gone quiet is valued at its last known close, so its weight is a number, not NaN
+        col = P[:L + 1, i]; ok = np.flatnonzero(np.isfinite(col)); return float(col[ok[-1]]) if len(ok) else 0.0
     for i in np.argsort(-(sh * np.nan_to_num(P[L]))):
         if sh[i] > 1e-12:
-            holds.append(dict(sym=sym[i], name=meta[sym[i]]["name"], sector=sector[i], w=round(float(sh[i] * P[L, i] / val), 4), since=entry_day[i], ret=round(float(P[L, i] / entry[i] - 1), 4) if entry[i] else None,
+            px = last_px(i)
+            holds.append(dict(sym=sym[i], name=meta[sym[i]]["name"], sector=sector[i], w=round(float(sh[i] * px / val), 4), since=entry_day[i], ret=round(float(px / entry[i] - 1), 4) if entry[i] and px else None,
                               why=reasons.get(i, ""), vol=round(float(sg["vol"][i]), 3) if np.isfinite(sg["vol"][i]) else None))
     cashw = round(float(cash / val), 4)
     nxt = None; y, m = dates[L].year, dates[L].month
@@ -278,7 +281,12 @@ def main():
                                 trades=trades, replay_trades=recent, regime=dict(down=r["regime"]["down"], vol=round(r["regime"]["vol"], 3)), next_review=r["next_review"],
                                 stats_replay=stats(nav[i0:], bench[i0:], days, 0),
                                 stats_live=stats(np.array(list(liveseries.values())), bench[live0:live0 + len(liveseries)], days, 0) if len(liveseries) > 5 else None)
-    json.dump(out, open(OUT, "w"), separators=(",", ":"))
+    def clean(x):   # browsers reject NaN and Infinity in JSON, so any that slip through become null
+        if isinstance(x, float): return x if np.isfinite(x) else None
+        if isinstance(x, dict): return {k: clean(v) for k, v in x.items()}
+        if isinstance(x, (list, tuple)): return [clean(v) for v in x]
+        return x
+    json.dump(clean(out), open(OUT, "w"), separators=(",", ":"), allow_nan=False)
     for k, v in out["levels"].items():
         s = v["stats_replay"] or {}
         print("%-12s replay %s -> return %+.1f%% vs S&P %+.1f%%, max drawdown %.1f%% (S&P %.1f%%), vol %s, %d holdings, cash %.0f%%" % (k, out["start"], 100 * s.get("ret", 0), 100 * s.get("bench", 0), 100 * s.get("maxdd", 0), 100 * s.get("bench_maxdd", 0), s.get("vol"), len(v["holdings"]), 100 * v["cash"]))
