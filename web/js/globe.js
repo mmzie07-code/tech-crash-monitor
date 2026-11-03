@@ -580,7 +580,7 @@ async function globeMount(host) {
   const showCard = (ci, cx, cy) => {
     const c = list[ci], meta = c.i && A.countries[c.i], w = c.i && A.world.countries[c.i], r = host.getBoundingClientRect();
     g.shown = ci;
-    const sc = w && w.score != null ? `<div class="gc-score"><svg viewBox="0 0 44 44" width="52" height="52"><circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="5"/><circle cx="22" cy="22" r="18" fill="none" stroke="${G_STATE[w.state][1]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(w.score / 100) * 113.1} 113.1" transform="rotate(-90 22 22)"/><text x="22" y="26.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${w.score}</text></svg>
+    const sc = w && w.score != null ? `<div class="gc-score"><svg viewBox="0 0 44 44" width="52" height="52" role="img" aria-label="Economic health score ring"><circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="5"/><circle cx="22" cy="22" r="18" fill="none" stroke="${G_STATE[w.state][1]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(w.score / 100) * 113.1} 113.1" transform="rotate(-90 22 22)"/><text x="22" y="26.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${w.score}</text></svg>
       <div><div class="gc-k">Economic health</div><b style="color:${G_STATE[w.state][1]}">${G_STATE[w.state][0]}</b> <span class="gc-k">${w.score} / 100${w.conf && w.conf.level === "low" ? " · low confidence" : ""}</span></div></div>` : `<div class="gc-k" style="margin-top:8px">Not enough economic data to score this one.</div>`;
     let cur = "";
     if (w && w.cur) {
@@ -647,6 +647,16 @@ async function globeMount(host) {
   const setHover = (ci, cx, cy) => {
     if (ci !== g.hover) { g.hover = ci; clearTimeout(g.hoverTimer); if (g.shown !== -1) hideCard(); if (g.sel < 0) setHighlight(ci); el.style.cursor = ci >= 0 ? "pointer" : "grab"; if (ci >= 0 && !coarse) g.hoverTimer = setTimeout(() => { if (g.hover === ci && !drag) showCard(ci, g.pointer.x, g.pointer.y); }, 2000); }
   };
+  // keyboard and screen-reader access: the globe takes focus, arrow keys turn it, + and - zoom, and the country search above does the same job by name
+  el.tabIndex = 0; el.setAttribute("role", "group"); el.setAttribute("aria-roledescription", "interactive globe"); el.setAttribute("aria-label", "Globe of the world economy. Use the arrow keys to turn it and plus or minus to zoom. To go to a country, use the country search.");
+  el.addEventListener("keydown", (e) => {
+    const k = e.key, step = e.shiftKey ? 14 : 6; let used = true;
+    if (k === "ArrowLeft") g.lon -= step * Math.min(1.2, (g.dist - 0.8) / 2.2); else if (k === "ArrowRight") g.lon += step * Math.min(1.2, (g.dist - 0.8) / 2.2);
+    else if (k === "ArrowUp") g.lat = Math.min(85, g.lat + step); else if (k === "ArrowDown") g.lat = Math.max(-85, g.lat - step);
+    else if (k === "+" || k === "=") { g.dist = Math.max(g.minD, g.dist * 0.85); g.userZoom = true; } else if (k === "-" || k === "_") { g.dist = Math.min(g.maxD, g.dist / 0.85); g.userZoom = true; }
+    else used = false;
+    if (used) { e.preventDefault(); g.tLon = null; g.vLon = g.vLat = 0; }
+  });
   el.addEventListener("pointerdown", (e) => { el.setPointerCapture(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); drag = { x: e.clientX, y: e.clientY, moved: 0, t: performance.now() }; g.tLon = null; g.vLon = g.vLat = 0; if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch0 = { d: Math.hypot(a.x - b.x, a.y - b.y), dist: g.dist }; } hideCard(); });
   el.addEventListener("pointermove", (e) => {
     g.pointer = { x: e.clientX, y: e.clientY };
@@ -822,7 +832,7 @@ async function gPanelRender(panel, iso, A, onClose) {
   const ser = (S && S.s[iso]) || {}, usS = (S && S.s.USA) || {}, years = S ? S.years : [], ref = WM.ref_year, st = w && w.state ? G_STATE[w.state] : null;
   const pop = w && w.pop, tzStr = meta.tz ? (() => { try { return new Intl.DateTimeFormat([], { hour: "numeric", minute: "2-digit", timeZone: meta.tz, timeZoneName: "short" }).format(new Date()); } catch (e) { return ""; } })() : "";
   const money = (v) => (v == null ? "-" : v >= 1000 ? "$" + (v / 1000).toFixed(2) + " trillion" : "$" + v.toFixed(v >= 100 ? 0 : 1) + " billion");
-  const ring = w && w.score != null ? `<svg viewBox="0 0 44 44" width="92" height="92"><circle cx="22" cy="22" r="18" fill="none" stroke="var(--line)" stroke-width="5"/><circle cx="22" cy="22" r="18" fill="none" stroke="${st[1]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(w.score / 100) * 113.1} 113.1" transform="rotate(-90 22 22)"/><text x="22" y="26" text-anchor="middle" font-size="12" font-weight="800" fill="var(--tx)">${w.score}</text></svg>` : "";
+  const ring = w && w.score != null ? `<svg viewBox="0 0 44 44" width="92" height="92" role="img" aria-label="Economic health score ring"><circle cx="22" cy="22" r="18" fill="none" stroke="var(--line)" stroke-width="5"/><circle cx="22" cy="22" r="18" fill="none" stroke="${st[1]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(w.score / 100) * 113.1} 113.1" transform="rotate(-90 22 22)"/><text x="22" y="26" text-anchor="middle" font-size="12" font-weight="800" fill="var(--tx)">${w.score}</text></svg>` : "";
   const compOne = (c) => { const r = WM.rules[c.k], m = WM.meta[c.k], stc = c.s >= 65 ? "#2fd4a0" : c.s >= 45 ? "#f5b546" : "#ff6b6b";
     return `<div class="gp-comp"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(r.label)}</b><span class="small">${c.k === "currency" ? (c.v > 0 ? "+" : "") + c.v + "% (dollar, 1y)" : c.v + " " + (m ? esc(m.unit) : "")} <span class="muted">${c.y}</span></span></div>
       <div class="gp-bar"><i style="width:${c.s}%;background:${stc}"></i></div><div class="small muted">${c.s} of 100 points · weight ${r.w} · ${esc(r.rule)}</div></div>`; };

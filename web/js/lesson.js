@@ -66,7 +66,7 @@ function fv(monthly, years, annual) {
 }
 function svgLines(series, colors, h) {
   const all = series.flat().filter((v) => v != null), lo = Math.min(...all), hi = Math.max(...all), n = series[0].length;
-  return `<svg class="spark" style="height:${h}px" viewBox="0 0 600 ${h}" preserveAspectRatio="none">${series.map((s, k) =>
+  return `<svg class="spark" role="img" aria-label="Illustrative chart for this lesson" style="height:${h}px" viewBox="0 0 600 ${h}" preserveAspectRatio="none">${series.map((s, k) =>
     `<polyline fill="none" stroke="${colors[k]}" stroke-width="2" vector-effect="non-scaling-stroke" points="${s.map((y, i) => y == null ? "" : `${i / (n - 1) * 600},${h - 5 - (y - lo) / (hi - lo) * (h - 10)}`).filter(Boolean).join(" ")}"/>`).join("")}</svg>`;
 }
 

@@ -14,7 +14,7 @@ function fdChart(L, d) {
   const live0 = Math.max(0, d.t.findIndex((t) => fdIso(t) >= d.inception)), hasLive = live0 > 0 && live0 < n - 1;
   const line = (arr, from, to) => idx.filter((i) => i >= from && i <= to).map((i) => X(i).toFixed(1) + "," + Y(arr[i]).toFixed(1)).join(" ");
   const x0 = X(live0).toFixed(1);
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" class="pf-chart" style="height:220px">
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Line chart: the practice manager's value over time against the S&amp;P 500" preserveAspectRatio="none" class="pf-chart" style="height:220px">
     <line x1="0" x2="${W}" y1="${Y(100).toFixed(1)}" y2="${Y(100).toFixed(1)}" stroke="var(--line)" stroke-dasharray="4 4"/>
     <polyline points="${line(d.bench, 0, n - 1)}" fill="none" stroke="var(--mut)" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
     <polyline points="${line(L.nav, 0, hasLive ? live0 : n - 1)}" fill="none" stroke="var(--brand)" stroke-opacity="${hasLive ? 0.45 : 1}" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"${hasLive ? ' stroke-dasharray="5 4"' : ""}/>

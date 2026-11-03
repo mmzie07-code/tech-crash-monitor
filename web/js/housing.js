@@ -21,7 +21,7 @@ const hsPct = (v) => (v == null ? "-" : (v > 0 ? "+" : "") + v.toFixed(1) + "%")
 const hsCol = (v) => (v > 0 ? "var(--ok)" : v < 0 ? "var(--bad)" : "var(--mut)");
 const hsPctTxt = (v) => `<span style="color:${hsCol(v)};font-weight:600">${hsPct(v)}</span>`;
 const hsSpark = (c) => { const lo = Math.min(...c), hi = Math.max(...c), up = c[c.length - 1] >= c[0];
-  return `<svg viewBox="0 0 100 30" preserveAspectRatio="none" style="width:84px;height:28px;display:block"><polyline fill="none" stroke="${up ? "var(--ok)" : "var(--bad)"}" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke" points="${c.map((y, i) => `${(i / (c.length - 1) * 100).toFixed(1)},${(28 - ((y - lo) / (hi - lo || 1)) * 26).toFixed(1)}`).join(" ")}"/></svg>`; };
+  return `<svg viewBox="0 0 100 30" aria-hidden="true" focusable="false" preserveAspectRatio="none" style="width:84px;height:28px;display:block"><polyline fill="none" stroke="${up ? "var(--ok)" : "var(--bad)"}" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke" points="${c.map((y, i) => `${(i / (c.length - 1) * 100).toFixed(1)},${(28 - ((y - lo) / (hi - lo || 1)) * 26).toFixed(1)}`).join(" ")}"/></svg>`; };
 
 function hsSpanYears(s) { return (new Date(s.pts[s.pts.length - 1][0]) - new Date(s.pts[0][0])) / (365.25 * 864e5); }
 function hsMount(key, years) {

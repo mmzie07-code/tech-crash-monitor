@@ -102,7 +102,7 @@ function pfStackSvg(R, from) {
   const ticks = [0, 0.25, 0.5, 0.75, 1].map((f) => { return `<line x1="0" x2="${W}" y1="${Y(maxV * f).toFixed(1)}" y2="${Y(maxV * f).toFixed(1)}" stroke="var(--line)"/>`; }).join("");
   const labs = [0.25, 0.5, 0.75].map((f) => `<text x="4" y="${(Y(maxV * f) - 3).toFixed(1)}" class="pf-ax">${pfM(maxV * f / 1000)}K</text>`).join("");
   const xl = [0, 0.33, 0.66, 1].map((f) => { const k = Math.round(f * (idx.length - 1)), a = f === 0 ? "start" : f === 1 ? "end" : "middle"; return `<text x="${X(k).toFixed(1)}" y="${H - 5}" text-anchor="${a}" class="pf-ax">${pfDate(pfIso(R.days[idx[k]])).replace(/, /, " ")}</text>`; }).join("");
-  return { svg: `<svg id="pfsvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" class="pf-chart">${ticks}${paths}${costLine}<line id="pfx" y1="0" y2="${H}" stroke="var(--tx)" stroke-width="1" vector-effect="non-scaling-stroke" style="display:none"/>${labs}${xl}</svg>`, idx };
+  return { svg: `<svg id="pfsvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Chart of portfolio value over time. The totals are in the figures above." preserveAspectRatio="none" class="pf-chart">${ticks}${paths}${costLine}<line id="pfx" y1="0" y2="${H}" stroke="var(--tx)" stroke-width="1" vector-effect="non-scaling-stroke" style="display:none"/>${labs}${xl}</svg>`, idx };
 }
 // "Value over time" chart: stacked by holding, sized to its container so text stays sharp, with a hover tooltip listing the day's value, cost basis, gain and each holding.
 function pfDrawStack(box, from) {
@@ -142,7 +142,7 @@ function pfLines(series, colors, labels) {   // 2 or more normalized lines (star
   const idx = []; for (let i = 0; i < n; i += step) idx.push(i); if (idx[idx.length - 1] !== n - 1) idx.push(n - 1);
   const X = (k) => (k / (idx.length - 1)) * W, Y = (v) => top + (1 - (v - lo) / (hi - lo || 1)) * (H - top - bot);
   const y100 = Y(100);
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" class="pf-chart" style="height:200px"><line x1="0" x2="${W}" y1="${y100.toFixed(1)}" y2="${y100.toFixed(1)}" stroke="var(--line)" stroke-dasharray="4 4"/>
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Line chart comparing the portfolio with benchmarks" preserveAspectRatio="none" class="pf-chart" style="height:200px"><line x1="0" x2="${W}" y1="${y100.toFixed(1)}" y2="${y100.toFixed(1)}" stroke="var(--line)" stroke-dasharray="4 4"/>
     ${series.map((s, j) => `<polyline points="${idx.map((i, k) => X(k).toFixed(1) + "," + Y(s[i]).toFixed(1)).join(" ")}" fill="none" stroke="${colors[j]}" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>`).join("")}
     <text x="4" y="${(Y(hi) + 11).toFixed(1)}" class="pf-ax">${hi.toFixed(0)}</text><text x="4" y="${(Y(lo) - 4).toFixed(1)}" class="pf-ax">${lo.toFixed(0)}</text></svg>
    <p class="small" style="margin:6px 0 0">${labels.map((l, j) => `<span style="color:${colors[j]}">━</span> ${l}`).join(" &nbsp; ")} <span class="muted">(both start at 100)</span></p>`;
@@ -231,6 +231,7 @@ function pfRender() {
 }
 
 function pfWireTab() {
+  document.querySelectorAll("[data-sel]").forEach((tr) => { tr.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); tr.click(); } }; });
   document.querySelectorAll("[data-sel]").forEach((tr) => tr.onclick = () => { PF.sel = tr.dataset.sel; document.querySelectorAll("[data-sel]").forEach((x) => x.classList.toggle("sel", x === tr)); const p = document.querySelector("#pfpanel"); if (p) p.innerHTML = pfPanel(); });
 }
 
@@ -261,7 +262,7 @@ function pfTab(agg) {
   if (!PF.sel || !R.pos[PF.sel]) PF.sel = syms[0];
   if (PF.tab === "holdings") {
     const rows = syms.map((s) => { const p = R.pos[s], sc = S[s], gap = sc && sc.peer ? (p.price / sc.peer.base - 1) * 100 : null, d1 = pfD1(s), gain = p.value - p.cost;
-      return `<tr data-sel="${esc(s)}" class="${PF.sel === s ? "sel" : ""}" style="cursor:pointer"><td><div style="display:flex;gap:10px;align-items:center">${sc ? miniRadar(sc.axes, 36) : ""}<div><b>${esc(s)}</b><div class="small muted">${esc(pfName(s).slice(0, 22))}</div></div></div></td>
+      return `<tr data-sel="${esc(s)}" tabindex="0" aria-selected="${PF.sel === s}" class="${PF.sel === s ? "sel" : ""}" style="cursor:pointer"><td><div style="display:flex;gap:10px;align-items:center">${sc ? miniRadar(sc.axes, 36) : ""}<div><b>${esc(s)}</b><div class="small muted">${esc(pfName(s).slice(0, 22))}</div></div></div></td>
         <td>${pfM(p.price, 2)}<div class="small" style="color:${gap == null ? "var(--mut)" : gap > 0 ? "var(--bad)" : "var(--ok)"}">${gap == null ? "" : Math.abs(gap).toFixed(0) + "% " + (gap > 0 ? "above" : "below") + " typical"}</div></td>
         <td style="color:${pfC(d1)}">${pfP(d1, 1)}<div class="small">${pfS(p.value - p.value / (1 + d1 / 100))}</div></td><td>${pfRng(s, p.value)}</td><td style="color:${pfC(gain)}">${pfP(p.cost ? gain / p.cost * 100 : 0)}<div class="small">${pfS(gain)}</div></td><td>${pfM(p.value)}<div class="small muted">${pfM(p.cost)}</div></td></tr>`; }).join("");
     return `<div class="pf-grid"><div><div class="tw"><table class="pf-table"><tr><th>Holding</th><th>Price (vs sector-typical value)</th><th>1 day</th><th>Likely 1-month range</th><th>Total return</th><th>Value / cost</th></tr>${rows}</table></div>

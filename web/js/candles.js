@@ -22,7 +22,7 @@ function mountCandleChart(el, data, opts = {}) {
 
   el.innerHTML = `<div class="chh"><div class="chtop"><div class="chp" id="${id}p"></div><div class="ctog" role="group" aria-label="Chart type"><button data-ct="line">Line</button><button data-ct="candle" class="on">Candles</button></div></div>
    <div class="chc small" id="${id}c"></div><div class="small muted"><span class="livetag" id="${id}l" style="display:none"><i></i>LIVE</span><span id="${id}d"></span></div></div>
-   <div class="chw"><svg id="${id}s" viewBox="0 0 600 240" preserveAspectRatio="none" style="width:100%;height:240px;touch-action:pan-y;cursor:grab;user-select:none"></svg>
+   <div class="chw"><svg id="${id}s" role="img" aria-label="Candlestick price chart. The latest price and change are in the text above." viewBox="0 0 600 240" preserveAspectRatio="none" style="width:100%;height:240px;touch-action:pan-y;cursor:grab;user-select:none"></svg>
     <div class="ylab" id="${id}hi" style="top:2px"></div><div class="ylab" id="${id}lo" style="bottom:2px"></div>
     <div class="cdot" id="${id}h" style="display:none"></div><div class="cdot live" id="${id}o" style="display:none"></div></div>
    <div class="xaxis small muted"><span id="${id}x0"></span><span id="${id}xm"></span><span id="${id}x1"></span></div>

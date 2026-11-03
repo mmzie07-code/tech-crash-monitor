@@ -48,7 +48,7 @@ function mountChart(el, data, opts = {}) {
   const fmt = (v) => opts.unit === "yield" ? v.toFixed(2) + "%" : (money ? "$" : "") + v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
   el.innerHTML = `<div class="chh"><div class="chtop"><div class="chp" id="${id}p"></div>${canCandle ? `<div class="ctog" role="group" aria-label="Chart type"><button data-ct="line" class="on">Line</button><button data-ct="candle">Candles</button></div>` : ""}</div>
    <div class="chc small" id="${id}c"></div><div class="small muted"><span class="livetag" id="${id}l" style="display:none"><i></i>LIVE</span><span id="${id}d"></span></div></div>
-   <div class="chw"><svg id="${id}s" viewBox="0 0 600 220" preserveAspectRatio="none" style="width:100%;height:220px;touch-action:pan-y;cursor:crosshair"></svg>
+   <div class="chw"><svg id="${id}s" role="img" aria-label="Price chart. The latest price and change are in the text above." viewBox="0 0 600 220" preserveAspectRatio="none" style="width:100%;height:220px;touch-action:pan-y;cursor:crosshair"></svg>
     <div class="cdot" id="${id}h" style="display:none"></div><div class="cdot live" id="${id}o" style="display:none"></div><div class="rlab" id="${id}r" style="display:none"></div></div>
    ${opts.noRanges ? "" : `<div class="chr">${RANGES.map((r) => `<button data-r="${r.l}" ${r.live && !r.days && !opts.live ? 'disabled title="Sign in for live intraday charts"' : ""}>${r.l}</button>`).join("")}</div>`}
    ${opts.compare ? `<div class="small" style="margin-top:8px"><label style="cursor:pointer"><input type="checkbox" class="cmpchk"> Compare with ${opts.compare.name} <span class="muted">(dashed line)</span></label></div>` : ""}`;

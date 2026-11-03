@@ -48,12 +48,13 @@ function askMount() {
   if (document.querySelector("#askbtn") || !(window.ANALYTIC && window.ANALYTIC.ask || (typeof AUTH !== "undefined" && AUTH.owner))) return;
   if (typeof signedIn !== "function" || !signedIn()) return;
   const b = document.createElement("button"); b.id = "askbtn"; b.className = "ask-btn"; b.textContent = "✦ Ask"; b.setAttribute("aria-label", "Ask the assistant");
-  const p = document.createElement("div"); p.id = "askpanel"; p.className = "ask-panel"; p.hidden = true;
-  p.innerHTML = `<div class="ask-h"><b>Ask The Analytic</b><button class="ask-x" aria-label="Close">×</button></div><div class="ask-log"></div>
+  const p = document.createElement("div"); p.id = "askpanel"; p.className = "ask-panel"; p.hidden = true; p.setAttribute("role", "dialog"); p.setAttribute("aria-label", "Ask The Analytic");
+  p.innerHTML = `<div class="ask-h"><b>Ask The Analytic</b><button class="ask-x" aria-label="Close">×</button></div><div class="ask-log" aria-live="polite"></div>
     <form class="ask-f"><input maxlength="600" placeholder="Ask a question…" autocomplete="off"><button class="btn" style="padding:8px 14px;font-size:14px">Send</button></form>
     <div class="ask-foot"><span class="ask-left"></span> Educational, not investment advice. It can be wrong.</div>`;
   document.body.append(b, p);
   const toggle = () => { p.hidden = !p.hidden; b.style.display = p.hidden ? "" : "none"; if (!p.hidden) { askRender(); p.querySelector("input").focus(); } };
-  b.onclick = toggle; p.querySelector(".ask-x").onclick = toggle;
+  b.onclick = toggle; p.querySelector(".ask-x").onclick = () => { toggle(); b.focus(); };
+  p.addEventListener("keydown", (e) => { if (e.key === "Escape") { toggle(); b.focus(); } });
   p.querySelector("form").onsubmit = (e) => { e.preventDefault(); const i = p.querySelector("input"), q = i.value; i.value = ""; askSend(q); };
 }

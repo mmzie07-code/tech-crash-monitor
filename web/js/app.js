@@ -275,7 +275,7 @@ function watch() {
 
 function spark(v) {
   const lo = Math.min(...v), hi = Math.max(...v);
-  return `<svg class="spark" viewBox="0 0 600 110" preserveAspectRatio="none"><polyline fill="none" stroke="var(--brand)" stroke-width="2.5" vector-effect="non-scaling-stroke" points="${v.map((y, i) => `${i / (v.length - 1) * 600},${105 - (y - lo) / (hi - lo) * 100}`).join(" ")}"/></svg>`;
+  return `<svg class="spark" role="img" aria-label="Chart of the recent trend" viewBox="0 0 600 110" preserveAspectRatio="none"><polyline fill="none" stroke="var(--brand)" stroke-width="2.5" vector-effect="non-scaling-stroke" points="${v.map((y, i) => `${i / (v.length - 1) * 600},${105 - (y - lo) / (hi - lo) * 100}`).join(" ")}"/></svg>`;
 }
 
 function about() {
@@ -305,7 +305,8 @@ async function route() {
   document.querySelectorAll("[data-nav]").forEach((n) => n.classList.toggle("on", n.dataset.nav === (a === "home" ? "" : a === "stock" || a === "report" || a === "analysis" ? "explore" : a)));
   if (a === "learn" && h[1]) { wireQuiz(h[1]); wireWidgets(); }
   if (a === "practice") wirePractice(h[1] || "", h[2]);
-  afterRender.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });   // one failing task (e.g. left over from a page you just left) must not stop the rest
+  afterRender.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
+  document.querySelectorAll(".tw").forEach((e) => { if (e.scrollWidth > e.clientWidth + 1 && !e.hasAttribute("tabindex")) { e.tabIndex = 0; e.setAttribute("role", "region"); e.setAttribute("aria-label", "Scrollable table. Use the arrow keys to scroll."); } });   // one failing task (e.g. left over from a page you just left) must not stop the rest
   wireSearch();
   wireHearts();
   if (typeof tickerSync === "function") tickerSync();

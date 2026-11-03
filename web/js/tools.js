@@ -152,7 +152,7 @@ function mountMultiChart(el, items, label) {
   const start = Math.max(...sl.map((s) => s.t[0])), series = items.map((x, i) => { const k = sl[i].t.findIndex((t) => t >= start); const t = sl[i].t.slice(k), c = sl[i].c.slice(k); return { ...x, t, pct: c.map((v) => (v / c[0] - 1) * 100) }; });
   const ref = series.reduce((a, b) => (b.t.length > a.t.length ? b : a)), all = series.flatMap((s) => s.pct), lo = Math.min(...all, 0), hi = Math.max(...all, 0), pad = (hi - lo) * 0.08 || 1, H = 240;
   const Y = (v) => H - 8 - ((v - lo + pad * 0.5) / (hi - lo + pad)) * (H - 16), X = (i, n) => (n > 1 ? (i / (n - 1)) * 600 : 0);
-  el.innerHTML = `<div class="chh"><div id="mchead" class="small"></div></div><svg viewBox="0 0 600 ${H}" preserveAspectRatio="none" style="width:100%;height:${H}px;touch-action:pan-y;cursor:crosshair">
+  el.innerHTML = `<div class="chh"><div id="mchead" class="small"></div></div><svg viewBox="0 0 600 ${H}" role="img" aria-label="Comparison chart of the selected stocks" preserveAspectRatio="none" style="width:100%;height:${H}px;touch-action:pan-y;cursor:crosshair">
    <line x1="0" x2="600" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--mut)" stroke-opacity=".5" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
    ${series.map((s) => `<polyline fill="none" stroke="${s.color}" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke" points="${s.pct.map((v, i) => `${X(i, s.pct.length).toFixed(1)},${Y(v).toFixed(1)}`).join(" ")}"/>`).join("")}
    <line id="mcx" y1="0" y2="${H}" stroke="var(--mut)" vector-effect="non-scaling-stroke" style="display:none"/></svg>`;
