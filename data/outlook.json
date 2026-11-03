@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T21:58:34.305775Z",
+ "generated": "2026-11-03T03:49:16.354294Z",
  "as_of": "2026-11-02",
  "regime": "S&P 500 above its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -35,105 +35,13 @@
     "best": 4.8
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.1% below it).",
-    "VIX at 19.4: investors are relatively calm.",
-    "10-year yield fell 0.31 points in a month to 4.93%, which eases pressure on stocks.",
+    "S&P 500 is close to its 1-year high (3.5% below it).",
+    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "Oil is up 12% in a month, which can feed inflation.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Apple (AAPL) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Palantir Technologies (PLTR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Vertex Pharmaceuticals Incorporated (VRTX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "Before open",
-     "title": "Marriott International (MAR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Williams Companies, Inc. (The) (WMB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Diamondback Energy (FANG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Realty Income (O) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "Before open",
-     "title": "Entergy (ETR) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10339,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 1493,
-    "up": 55,
-    "median": 0.1,
-    "p10": -1.3,
-    "p25": -0.6,
-    "p75": 0.8,
-    "p90": 1.4,
-    "below": 14,
-    "above": 20,
-    "worst": -6.9,
-    "best": 4.8
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (3.1% below it).",
-    "VIX at 19.4: investors are relatively calm.",
-    "10-year yield fell 0.31 points in a month to 4.93%, which eases pressure on stocks.",
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "Oil is up 12% in a month, which can feed inflation.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
+    "VIX at 21.1: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100."
    ],
    "events": [
     {
@@ -186,6 +94,96 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10339,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1493,
+    "up": 55,
+    "median": 0.1,
+    "p10": -1.3,
+    "p25": -0.6,
+    "p75": 0.8,
+    "p90": 1.4,
+    "below": 14,
+    "above": 20,
+    "worst": -6.9,
+    "best": 4.8
+   },
+   "bull": [
+    "S&P 500 is close to its 1-year high (3.5% below it).",
+    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
+    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
+   ],
+   "bear": [
+    "VIX at 21.1: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-04",
+     "time": "Time TBA",
+     "title": "Toyota Motor Corp Ltd Ord (TM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "After close",
+     "title": "Arm Holdings (ARM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "McDonald's (MCD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "Novo Nordisk A/S (NVO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "After close",
+     "title": "QUALCOMM Incorporated (QCOM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "Uber Technologies (UBER) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "After close",
+     "title": "McKesson (MCK) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "CVS Health (CVS) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -217,65 +215,16 @@
     "best": 7.8
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.1% below it).",
-    "VIX at 19.4: investors are relatively calm.",
-    "10-year yield fell 0.31 points in a month to 4.93%, which eases pressure on stocks.",
+    "S&P 500 is close to its 1-year high (3.5% below it).",
+    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "Oil is up 12% in a month, which can feed inflation.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "VIX at 21.1: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Apple (AAPL) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Palantir Technologies (PLTR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Vertex Pharmaceuticals Incorporated (VRTX) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "Before open",
-     "title": "Marriott International (MAR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Williams Companies, Inc. (The) (WMB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Diamondback Energy (FANG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Realty Income (O) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-02",
-     "time": "Before open",
-     "title": "Entergy (ETR) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-03",
      "time": "After close",
@@ -298,6 +247,54 @@
      "date": "2026-11-03",
      "time": "Before open",
      "title": "Shopify (SHOP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-03",
+     "time": "Before open",
+     "title": "Pfizer (PFE) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-03",
+     "time": "Before open",
+     "title": "Eaton Corporation, PLC (ETN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-03",
+     "time": "Before open",
+     "title": "Marathon Petroleum (MPC) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-03",
+     "time": "After close",
+     "title": "Booking Holdings (BKNG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Time TBA",
+     "title": "Toyota Motor Corp Ltd Ord (TM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "After close",
+     "title": "Arm Holdings (ARM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "McDonald's (MCD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-04",
+     "time": "Before open",
+     "title": "Novo Nordisk A/S (NVO) reports earnings",
      "importance": "medium"
     }
    ]
@@ -333,23 +330,16 @@
     "best": 14.5
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.1% below it).",
-    "VIX at 19.4: investors are relatively calm.",
-    "10-year yield fell 0.31 points in a month to 4.93%, which eases pressure on stocks.",
+    "S&P 500 is close to its 1-year high (3.5% below it).",
+    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "Oil is up 12% in a month, which can feed inflation.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "VIX at 21.1: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-02",
-     "time": "After close",
-     "title": "Apple (AAPL) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-11-03",
      "time": "After close",
@@ -413,15 +403,14 @@
     "best": 49.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.1% below it).",
-    "VIX at 19.4: investors are relatively calm.",
-    "10-year yield fell 0.31 points in a month to 4.93%, which eases pressure on stocks.",
+    "S&P 500 is close to its 1-year high (3.5% below it).",
+    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 26.4, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 26.1, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "Oil is up 12% in a month, which can feed inflation.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "VIX at 21.1: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [

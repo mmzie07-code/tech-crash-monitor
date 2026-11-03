@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T21:58:04.561727Z",
- "asof": "2026-11-02",
+ "generated": "2026-11-03T03:48:46.326704Z",
+ "asof": "2026-11-03",
  "priced": [
   {
    "sym": "BBTX",
@@ -162,7 +162,7 @@
    "perf": {
     "first_day_pct": 18.2,
     "now_pct": -19.0,
-    "last": 12.95,
+    "last": 12.96,
     "last_date": "2026-11-02",
     "first_trade": "2026-10-15"
    }
@@ -2773,13 +2773,6 @@
    "date": "2026-09-04",
    "amount": 230000000.0,
    "spac": true
-  },
-  {
-   "sym": "OURA",
-   "name": "Oura Inc.",
-   "date": "2026-09-03",
-   "amount": 2530000000.0,
-   "spac": false
   }
  ],
  "withdrawn_30d": 7,

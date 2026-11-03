@@ -1,188 +1,8 @@
 {
- "generated": "2026-11-02T21:58:24.152670Z",
- "today": "2026-11-02",
+ "generated": "2026-11-03T03:49:07.616382Z",
+ "today": "2026-11-03",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-02-earnings-apple-aapl-reports-earnings",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Apple (AAPL) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.98.",
-   "extra": {
-    "market_cap_b": 5030,
-    "eps_forecast": "$1.98"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-palantir-technologies-pltr-reports-earnings",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Palantir Technologies (PLTR) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.32.",
-   "extra": {
-    "market_cap_b": 442,
-    "eps_forecast": "$0.32"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-vertex-pharmaceuticals-incorporated-vrtx-reports",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Vertex Pharmaceuticals Incorporated (VRTX) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.36.",
-   "extra": {
-    "market_cap_b": 142,
-    "eps_forecast": "$4.36"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-marriott-international-mar-reports-earnings",
-   "date": "2026-11-02",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Marriott International (MAR) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.86.",
-   "extra": {
-    "market_cap_b": 104,
-    "eps_forecast": "$2.86"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-williams-companies-inc-the-wmb-reports-earnings",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Williams Companies, Inc. (The) (WMB) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.55.",
-   "extra": {
-    "market_cap_b": 91,
-    "eps_forecast": "$0.55"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-diamondback-energy-fang-reports-earnings",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Diamondback Energy (FANG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.92.",
-   "extra": {
-    "market_cap_b": 59,
-    "eps_forecast": "$4.92"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-realty-income-o-reports-earnings",
-   "date": "2026-11-02",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Realty Income (O) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.11.",
-   "extra": {
-    "market_cap_b": 54,
-    "eps_forecast": "$1.11"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-earnings-entergy-etr-reports-earnings",
-   "date": "2026-11-02",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Entergy (ETR) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.71.",
-   "extra": {
-    "market_cap_b": 51,
-    "eps_forecast": "$1.71"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-data-g-5-foreign-exchange-rates",
-   "date": "2026-11-02",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "G.5 - Foreign Exchange Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-data-senior-loan-officer-opinion-survey-on-bank-lendi",
-   "date": "2026-11-02",
-   "time": "2:00 PM",
-   "kind": "data",
-   "title": "Senior Loan Officer Opinion Survey on Bank Lending Practices (SLOOS)",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-data-h-10-foreign-exchange-rates",
-   "date": "2026-11-02",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.10 - Foreign Exchange Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-data-cp-commercial-paper",
-   "date": "2026-11-02",
-   "time": "1:00 PM",
-   "kind": "data",
-   "title": "CP - Commercial Paper",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-02-data-h-15-selected-interest-rates",
-   "date": "2026-11-02",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.15 - Selected Interest Rates",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-11-03-earnings-advanced-micro-devices-amd-reports-earnings",
    "date": "2026-11-03",
@@ -809,6 +629,51 @@
    "extra": {
     "market_cap_b": 63,
     "eps_forecast": "$11.43"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-applied-materials-amat-reports-earnings",
+   "date": "2026-11-12",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Applied Materials (AMAT) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.06.",
+   "extra": {
+    "market_cap_b": 310,
+    "eps_forecast": "$4.06"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-brookfield-bn-reports-earnings",
+   "date": "2026-11-12",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Brookfield (BN) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
+   "extra": {
+    "market_cap_b": 96,
+    "eps_forecast": "$0.72"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-nu-holdings-nu-reports-earnings",
+   "date": "2026-11-12",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Nu Holdings (NU) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
+   "extra": {
+    "market_cap_b": 56,
+    "eps_forecast": "$0.22"
    },
    "source": "",
    "link": null

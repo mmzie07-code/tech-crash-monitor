@@ -1,7 +1,173 @@
 {
- "generated": "2026-11-02T21:57:12.660841Z",
+ "generated": "2026-11-03T03:47:10.009017Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-11-03",
+   "reported_total": 279,
+   "top": [
+    {
+     "symbol": "AMD",
+     "name": "Advanced Micro Devices",
+     "market_cap_b": 824.1,
+     "eps": null,
+     "eps_estimate": 1.68,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.68.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMD&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "AMGN",
+     "name": "Amgen",
+     "market_cap_b": 251.9,
+     "eps": null,
+     "eps_estimate": 5.74,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $5.74.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMGN&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ANET",
+     "name": "Arista Networks",
+     "market_cap_b": 213.0,
+     "eps": null,
+     "eps_estimate": 0.99,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.99.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANET&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "SHOP",
+     "name": "Shopify",
+     "market_cap_b": 204.3,
+     "eps": null,
+     "eps_estimate": 0.33,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.33.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SHOP&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "PFE",
+     "name": "Pfizer",
+     "market_cap_b": 174.0,
+     "eps": null,
+     "eps_estimate": 0.72,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.72.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PFE&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ETN",
+     "name": "Eaton Corporation, PLC",
+     "market_cap_b": 143.7,
+     "eps": null,
+     "eps_estimate": 3.54,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.54.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ETN&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MPC",
+     "name": "Marathon Petroleum",
+     "market_cap_b": 124.9,
+     "eps": null,
+     "eps_estimate": 25.74,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $25.74.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MPC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BKNG",
+     "name": "Booking Holdings",
+     "market_cap_b": 111.3,
+     "eps": null,
+     "eps_estimate": 4.48,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $4.48.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BKNG&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "SU",
+     "name": "Suncor Energy",
+     "market_cap_b": 93.0,
+     "eps": null,
+     "eps_estimate": 2.35,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.35.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SU&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "RACE",
+     "name": "Ferrari N.V.",
+     "market_cap_b": 92.6,
+     "eps": null,
+     "eps_estimate": 2.66,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.66.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RACE&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-11-02",
    "reported_total": 147,
@@ -17,6 +183,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $1.98.",
+      "Stock moved -1.8% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -33,6 +200,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.32.",
+      "Stock moved -3.1% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -49,6 +217,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $4.36.",
+      "Stock moved -1.0% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -65,6 +234,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $2.86.",
+      "Stock moved +4.3% on Nov 2.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -81,6 +251,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.55.",
+      "Stock moved -4.2% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -97,6 +268,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $4.92.",
+      "Stock moved -5.8% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -113,6 +285,7 @@
      "bullets": [
       "Scheduled to report after the close.",
       "Results aren't posted in our data yet. Analysts expected EPS of $1.11.",
+      "Stock moved +1.1% on Nov 2 (before the report came out). Reaction comes the next session.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -129,6 +302,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $1.71.",
+      "Stock moved -0.2% on Nov 2.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -145,6 +319,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $3.71.",
+      "Stock moved +21.9% on Nov 2.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -161,6 +336,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.52.",
+      "Stock moved -4.1% on Nov 2.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -2726,110 +2902,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APLD&type=8-K&dateb=&owner=include&count=10"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-06",
-   "reported_total": 10,
-   "top": [
-    {
-     "symbol": "STZ",
-     "name": "Constellation Brands",
-     "market_cap_b": 20.9,
-     "eps": 3.74,
-     "eps_estimate": 3.62,
-     "surprise_pct": 3.31,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $3.74 versus $3.62 expected, so the company beat estimates by 3.3%.",
-      "Stock moved +2.1% on Oct 6.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=STZ&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "RPM",
-     "name": "RPM International",
-     "market_cap_b": 12.7,
-     "eps": 1.98,
-     "eps_estimate": 1.95,
-     "surprise_pct": 1.54,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $1.98 versus $1.95 expected, so the company beat estimates by 1.5%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RPM&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "LW",
-     "name": "Lamb Weston Holdings",
-     "market_cap_b": 6.8,
-     "eps": 0.75,
-     "eps_estimate": 0.59,
-     "surprise_pct": 27.12,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.75 versus $0.59 expected, so the company beat estimates by 27.1%.",
-      "Stock moved +7.5% on Oct 6.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LW&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "PENG",
-     "name": "Penguin Solutions",
-     "market_cap_b": 3.7,
-     "eps": 0.91,
-     "eps_estimate": 0.61,
-     "surprise_pct": 49.18,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.91 versus $0.61 expected, so the company beat estimates by 49.2%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PENG&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "NEOG",
-     "name": "Neogen",
-     "market_cap_b": 2.6,
-     "eps": 0.07,
-     "eps_estimate": 0.04,
-     "surprise_pct": 75.0,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.07 versus $0.04 expected, so the company beat estimates by 75.0%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NEOG&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "WS",
-     "name": "Worthington Steel",
-     "market_cap_b": 1.8,
-     "eps": 0.57,
-     "eps_estimate": 1.16,
-     "surprise_pct": -50.86,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.57 versus $1.16 expected, so the company missed estimates by 50.9%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WS&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   }
