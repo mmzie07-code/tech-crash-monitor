@@ -6,7 +6,7 @@ create table if not exists public.follows (
   label text,                             -- display name when followed
   event_date date,                        -- events only (used later for reminder emails)
   event_time text,
-  notify_email boolean not null default true,
+  notify_email boolean not null default false,   -- never opted in by default: email needs a consent row in email_consent (see consent.sql)
   created_at timestamptz not null default now(),
   primary key (user_id, kind, ref)
 );

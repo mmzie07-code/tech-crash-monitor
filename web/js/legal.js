@@ -36,7 +36,7 @@ function privacyPage() {
   <div class="callout"><b>The short version:</b> We collect only what we need to run your account: your email, a password (which we never see), and your practice progress. We don't show ads, sell your data, or use tracking or analytics tools.</div>
   <h2>1. What we collect</h2>
   <div class="tw"><table><tr><th>What</th><th>Why</th></tr>
-   <tr><td><b>Email address</b></td><td>To create and secure your account, send confirmation and password-reset emails, and contact you about your account.</td></tr>
+   <tr><td><b>Email address</b></td><td>To create and secure your account, send confirmation and password-reset emails, and contact you about your account. We send alerts, reminders or news only if you opt in, and you can withdraw at any time. We do not send text messages.</td></tr>
    <tr><td><b>Password</b></td><td>Stored only as a one-way encrypted hash by our sign-in provider. We can't read it.</td></tr>
    <tr><td><b>Age confirmation</b> (16+) and the time you accepted the terms</td><td>To show you agreed to the terms and meet the minimum age.</td></tr>
    <tr><td><b>Practice trading data</b>: your pretend holdings, trades, and any notes you write about why you made a trade</td><td>To run the practice tool and sync it across your devices. <i>Please don't put sensitive personal information in trade notes.</i></td></tr>

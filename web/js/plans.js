@@ -33,7 +33,7 @@ function planGate(a, h) {
 
 async function recordInterest(plan, interval) {
   if (typeof AUTH === "undefined" || !AUTH.sb || !AUTH.user) return false;
-  try { const { error } = await AUTH.sb.from("plan_interest").upsert({ user_id: AUTH.user.id, plan, interval }, { onConflict: "user_id,plan" }); return !error; } catch (e) { return false; }
+  try { let { error } = await AUTH.sb.from("plan_interest").upsert({ user_id: AUTH.user.id, plan, interval, email_consent_at: new Date().toISOString() }, { onConflict: "user_id,plan" }); if (error) ({ error } = await AUTH.sb.from("plan_interest").upsert({ user_id: AUTH.user.id, plan, interval }, { onConflict: "user_id,plan" })); return !error; } catch (e) { return false; }
 }
 
 const plPrice = (p, yearly) => (p.mo === 0 ? "$0" : yearly ? "$" + p.yr + "<small>/year</small>" : "$" + p.mo + "<small>/month</small>");
@@ -50,7 +50,7 @@ async function pricingPage() {
       if (!AUTH.user) { msg.textContent = "Sign in first, then tell us which plan you want."; msg.style.color = "var(--mut)"; return; }
       b.disabled = true;
       const ok = await recordInterest(b.dataset.want, b.dataset.interval);
-      msg.textContent = ok ? "Thanks, noted. We'll email you when " + (b.dataset.want === "pro" ? "Pro tools" : "paid plans") + " open. Nothing is charged." : "Couldn't save that just now. Please try again later.";
+      msg.textContent = ok ? "Thanks, noted. You'll get one email when " + (b.dataset.want === "pro" ? "Pro tools" : "paid plans") + " open, and nothing else. Nothing is charged." : "Couldn't save that just now. Please try again later.";
       msg.style.color = ok ? "var(--ok)" : "var(--bad)";
       if (ok) b.textContent = "Noted";
     });
@@ -69,6 +69,7 @@ async function pricingPage() {
   <div class="tabs"><a href="#" data-pint="1" class="${yearly ? "on" : ""}">Yearly</a><a href="#" data-pint="0" class="${yearly ? "" : "on"}">Monthly</a></div>
   <div class="pl-grid">${PLANS.map(card).join("")}</div>
   <p id="plmsg" class="small" style="min-height:20px"></p>
+  <p class="small muted" style="margin-top:-8px">Pressing a "Notify me" or "pro tools" button means you agree to one email when that plan opens. We send no other email, and no texts, unless you agree to them separately.</p>
   <div class="card"><h3 style="margin:0 0 4px">Who is Student for?</h3><p class="small" style="margin:0">Anyone aged 16 to 22. When payments open you'll confirm your age (and, for 18 and over, a school email also works). It has the same features as Plus. Plus is for everyone else.</p></div>
   <div class="card"><h3 style="margin:0 0 4px">Need exports or data access?</h3><p class="small muted" style="margin:0 0 10px">If you'd use CSV exports or an API, say so. We only build a professional tier if enough people want it.</p><button class="btn ghost" data-want="pro" data-interval="${yearly ? "year" : "month"}">I'd use pro tools</button></div>
   <p class="small muted">Prices are in US dollars and may change before payments open. The Analytic is educational and does not give investment advice. See the <a href="#/terms">Terms</a>.</p>`;

@@ -29,7 +29,15 @@ async function alCheck() {
   alBell();
 }
 
+const AL_CONSENT_TEXT = "Yes, email me alerts about the stocks and events I follow. I can turn this off at any time on this page.";
+async function alConsentGet() { if (typeof AUTH === "undefined" || !AUTH.sb || !AUTH.user) return null; try { const { data } = await AUTH.sb.from("email_consent").select("granted,granted_at").eq("user_id", AUTH.user.id).maybeSingle(); return data || { granted: false }; } catch (e) { return null; } }
+async function alConsentSet(on) {
+  const now = new Date().toISOString(), row = on ? { user_id: AUTH.user.id, granted: true, granted_at: now, withdrawn_at: null, consent_text: AL_CONSENT_TEXT, source: "alerts_page", updated_at: now } : { user_id: AUTH.user.id, granted: false, withdrawn_at: now, updated_at: now };
+  try { const { error } = await AUTH.sb.from("email_consent").upsert(row, { onConflict: "user_id" }); return !error; } catch (e) { return false; }
+}
+
 async function alertsPage() {
+  const consent = await alConsentGet();
   const rules = alRules(), feed = alFeed(), ago = (t) => { const m = Math.round((Date.now() - t) / 60000); return m < 60 ? Math.max(1, m) + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago"; };
   afterRender.push(() => {
     const save = () => { alSet(AL_RULES, { move: +document.querySelector("#alm").value, zone: document.querySelector("#alz").checked, events: document.querySelector("#ale").checked }); };
@@ -37,12 +45,14 @@ async function alertsPage() {
     const c = document.querySelector("#alclear"); if (c) c.onclick = () => { alSet(AL_FEED, []); state.keepScroll = true; route(); };
     const f = alFeed(); f.forEach((x) => { x.read = true; }); alSet(AL_FEED, f); alBell();
   });
+  afterRender.push(() => { const c = document.querySelector("#alemail"); if (c) c.onchange = async () => { const m = document.querySelector("#alemsg"); c.disabled = true; const ok = await alConsentSet(c.checked); c.disabled = false; if (!ok) c.checked = !c.checked; m.textContent = ok ? (c.checked ? "Saved. You opted in on " + new Date().toLocaleDateString() + ". Email alerts aren't switched on yet; we'll only email once they are." : "Done. We won't email you.") : "Couldn't save that. Nothing changed."; m.style.color = ok ? "var(--ok)" : "var(--bad)"; }; });
   return `<h1>Alerts</h1><p class="muted" style="margin-top:0">Checked each time you open The Analytic, using the latest data. Email and phone alerts aren't set up yet.</p>
   <div class="card"><h3 style="margin:0 0 8px">What to alert me about</h3>
    <label style="display:flex;gap:10px;align-items:center;margin:8px 0;font-weight:400">A stock on my watchlist moves more than <select id="alm">${[[0, "never"], [3, "3%"], [5, "5%"], [8, "8%"], [10, "10%"]].map(([v, l]) => `<option value="${v}" ${v === rules.move ? "selected" : ""}>${l}</option>`).join("")}</select> in a day</label>
    <label style="display:flex;gap:10px;align-items:center;margin:8px 0;font-weight:400"><input id="alz" type="checkbox" ${rules.zone ? "checked" : ""}> The AI &amp; Tech Watch changes zone</label>
    <label style="display:flex;gap:10px;align-items:center;margin:8px 0;font-weight:400"><input id="ale" type="checkbox" ${rules.events ? "checked" : ""}> An event I follow is today or tomorrow</label>
    <p class="small muted" style="margin:8px 0 0">Add stocks and events with the ♡ <a href="#/watchlist">on your watchlist</a>. Settings save on this device.</p></div>
+  <div class="card"><h3 style="margin:0 0 6px">Email (optional)</h3>${consent ? `<label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input id="alemail" type="checkbox" style="margin-top:4px" ${consent.granted ? "checked" : ""}><span>${esc(AL_CONSENT_TEXT)}</span></label><p id="alemsg" class="small" style="min-height:18px;margin:6px 0 0"></p>` : `<p class="small muted" style="margin:0">Sign in with an account to choose email alerts.</p>`}<p class="small muted" style="margin:6px 0 0">Off unless you tick it. We never send texts.</p></div>
   <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">Recent alerts</h3>${feed.length ? `<button class="btn ghost" id="alclear" style="font-size:13px;padding:6px 12px">Clear</button>` : ""}</div>
    ${feed.length ? feed.map((x) => `<a class="item" href="${esc(x.link)}" style="align-items:center;color:inherit"><span style="flex:1">${esc(x.text)}${x.read ? "" : ' <span class="pill g">new</span>'}</span><span class="small muted">${ago(x.t)}</span></a>`).join("") : `<p class="small muted" style="margin:8px 0 0">Nothing yet. Alerts show up here when something you asked about happens.</p>`}</div>`;
 }
