@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-04T02:21:20.358501Z",
- "as_of": "2026-11-03",
- "regime": "S&P 500 above its 200-day average and the market is nervous (VIX 20-30)",
+ "generated": "2026-11-04T20:06:03.221689Z",
+ "as_of": "2026-11-04",
+ "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
   "today": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10340,
+    "n": 10341,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,17 +22,17 @@
     "best": 11.6
    },
    "similar": {
-    "n": 1494,
-    "up": 55,
-    "median": 0.1,
-    "p10": -1.3,
-    "p25": -0.6,
-    "p75": 0.8,
-    "p90": 1.4,
-    "below": 14,
-    "above": 20,
-    "worst": -6.9,
-    "best": 4.8
+    "n": 2575,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
    },
    "bull": [
     "S&P 500 is close to its 1-year high (3.2% below it).",
@@ -82,14 +82,14 @@
     },
     {
      "date": "2026-11-04",
-     "time": "After close",
-     "title": "McKesson (MCK) reports earnings",
+     "time": "Before open",
+     "title": "CVS Health (CVS) reports earnings",
      "importance": "medium"
     },
     {
      "date": "2026-11-04",
-     "time": "Before open",
-     "title": "CVS Health (CVS) reports earnings",
+     "time": "After close",
+     "title": "McKesson (MCK) reports earnings",
      "importance": "medium"
     }
    ]
@@ -99,7 +99,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10340,
+    "n": 10341,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -112,17 +112,17 @@
     "best": 11.6
    },
    "similar": {
-    "n": 1494,
-    "up": 55,
-    "median": 0.1,
-    "p10": -1.3,
-    "p25": -0.6,
-    "p75": 0.8,
-    "p90": 1.4,
-    "below": 14,
-    "above": 20,
-    "worst": -6.9,
-    "best": 4.8
+    "n": 2575,
+    "up": 53,
+    "median": 0.0,
+    "p10": -1.0,
+    "p25": -0.4,
+    "p75": 0.5,
+    "p90": 1.0,
+    "below": 10,
+    "above": 11,
+    "worst": -4.1,
+    "best": 2.9
    },
    "bull": [
     "S&P 500 is close to its 1-year high (3.2% below it).",
@@ -189,7 +189,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10336,
+    "n": 10337,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -202,17 +202,17 @@
     "best": 19.1
    },
    "similar": {
-    "n": 1493,
-    "up": 60,
-    "median": 0.7,
-    "p10": -2.9,
-    "p25": -1.0,
-    "p75": 2.1,
-    "p90": 3.3,
-    "below": 13,
-    "above": 19,
-    "worst": -13.0,
-    "best": 7.8
+    "n": 2573,
+    "up": 57,
+    "median": 0.3,
+    "p10": -2.1,
+    "p25": -0.9,
+    "p75": 1.3,
+    "p90": 2.2,
+    "below": 7,
+    "above": 7,
+    "worst": -11.7,
+    "best": 7.3
    },
    "bull": [
     "S&P 500 is close to its 1-year high (3.2% below it).",
@@ -263,14 +263,14 @@
     },
     {
      "date": "2026-11-04",
-     "time": "After close",
-     "title": "McKesson (MCK) reports earnings",
+     "time": "Before open",
+     "title": "CVS Health (CVS) reports earnings",
      "importance": "medium"
     },
     {
      "date": "2026-11-04",
-     "time": "Before open",
-     "title": "CVS Health (CVS) reports earnings",
+     "time": "After close",
+     "title": "McKesson (MCK) reports earnings",
      "importance": "medium"
     },
     {
@@ -304,7 +304,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10320,
+    "n": 10321,
     "up": 64,
     "median": 1.3,
     "p10": -4.4,
@@ -317,17 +317,17 @@
     "best": 25.1
    },
    "similar": {
-    "n": 1493,
-    "up": 69,
-    "median": 2.1,
-    "p10": -4.3,
-    "p25": -1.1,
-    "p75": 4.3,
-    "p90": 6.1,
-    "below": 8,
-    "above": 19,
-    "worst": -24.1,
-    "best": 14.5
+    "n": 2558,
+    "up": 64,
+    "median": 1.1,
+    "p10": -4.1,
+    "p25": -1.3,
+    "p75": 3.1,
+    "p90": 4.6,
+    "below": 7,
+    "above": 8,
+    "worst": -33.0,
+    "best": 13.6
    },
    "bull": [
     "S&P 500 is close to its 1-year high (3.2% below it).",
@@ -371,12 +371,12 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10089,
+    "n": 10090,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
     "p25": 2.8,
-    "p75": 20.4,
+    "p75": 20.3,
     "p90": 28.1,
     "below": 8,
     "above": 40,
@@ -384,17 +384,17 @@
     "best": 74.8
    },
    "similar": {
-    "n": 1461,
-    "up": 81,
-    "median": 12.8,
-    "p10": -11.8,
-    "p25": 5.1,
-    "p75": 21.6,
-    "p90": 29.8,
+    "n": 2399,
+    "up": 85,
+    "median": 10.7,
+    "p10": -7.5,
+    "p25": 4.4,
+    "p75": 19.4,
+    "p90": 27.0,
     "below": 6,
-    "above": 43,
-    "worst": -43.1,
-    "best": 49.3
+    "above": 37,
+    "worst": -44.7,
+    "best": 50.4
    },
    "bull": [
     "S&P 500 is close to its 1-year high (3.2% below it).",

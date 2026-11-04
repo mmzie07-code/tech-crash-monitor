@@ -1,26 +1,74 @@
 {
- "generated": "2026-11-04T02:21:20.414551Z",
+ "generated": "2026-11-04T20:06:03.262726Z",
  "ai_analysis_enabled": false,
  "recaps": [
   {
+   "headline": "Advanced Micro Devices reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $1.84 versus $1.68 expected, so the company beat estimates by 9.5%.",
+    "Covers the quarter ending Sep 2026."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMD&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "AMD",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": 0.36,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.83,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -0.38,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": 0.23,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": 0.06,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": -1.51,
+     "unit": "pct",
+     "symbol": "^VIX"
+    }
+   ],
+   "sectors": null,
    "id": "2026-11-03-earnings-advanced-micro-devices-amd-reports-earnings",
    "date": "2026-11-03",
    "time": "After close",
    "kind": "earnings",
    "title": "Advanced Micro Devices (AMD) reports earnings",
-   "status": "pending",
-   "headline": "Recap coming soon.",
-   "bullets": [
-    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
-   ],
-   "reaction": [],
-   "sectors": null,
-   "changes": null,
-   "context": [],
-   "sources": [],
+   "status": "final",
    "ai_analysis": null,
    "link": null,
-   "lesson": 3
+   "generated": "2026-11-04T20:06:09.914860Z"
   },
   {
    "headline": "Apple reported earnings: beat estimates.",
