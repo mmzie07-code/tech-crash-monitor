@@ -1,7 +1,173 @@
 {
- "generated": "2026-11-03T19:51:01.861323Z",
+ "generated": "2026-11-04T02:19:33.364836Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-11-04",
+   "reported_total": 479,
+   "top": [
+    {
+     "symbol": "TM",
+     "name": "Toyota Motor Corp Ltd Ord",
+     "market_cap_b": 255.2,
+     "eps": null,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ARM",
+     "name": "Arm Holdings",
+     "market_cap_b": 209.4,
+     "eps": null,
+     "eps_estimate": 0.22,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.22.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ARM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MCD",
+     "name": "McDonald's",
+     "market_cap_b": 188.0,
+     "eps": null,
+     "eps_estimate": 3.36,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.36.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCD&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "NVO",
+     "name": "Novo Nordisk A/S",
+     "market_cap_b": 179.1,
+     "eps": null,
+     "eps_estimate": 0.81,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.81.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NVO&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "QCOM",
+     "name": "QUALCOMM Incorporated",
+     "market_cap_b": 170.2,
+     "eps": null,
+     "eps_estimate": 1.46,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.46.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=QCOM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "UBER",
+     "name": "Uber Technologies",
+     "market_cap_b": 136.3,
+     "eps": null,
+     "eps_estimate": 0.94,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.94.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UBER&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MCK",
+     "name": "McKesson",
+     "market_cap_b": 116.4,
+     "eps": null,
+     "eps_estimate": 10.69,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $10.69.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCK&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "CVS",
+     "name": "CVS Health",
+     "market_cap_b": 113.2,
+     "eps": null,
+     "eps_estimate": 1.62,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.62.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CVS&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "EMR",
+     "name": "Emerson Electric",
+     "market_cap_b": 92.6,
+     "eps": null,
+     "eps_estimate": 1.85,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.85.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EMR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MELI",
+     "name": "MercadoLibre",
+     "market_cap_b": 85.0,
+     "eps": null,
+     "eps_estimate": 9.41,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $9.41.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MELI&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-11-03",
    "reported_total": 264,
@@ -2864,44 +3030,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ODC&type=8-K&dateb=&owner=include&count=10"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-07",
-   "reported_total": 6,
-   "top": [
-    {
-     "symbol": "LEVI",
-     "name": "Levi Strauss &",
-     "market_cap_b": 7.3,
-     "eps": 0.48,
-     "eps_estimate": 0.36,
-     "surprise_pct": 33.33,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.48 versus $0.36 expected, so the company beat estimates by 33.3%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LEVI&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "APLD",
-     "name": "Applied Digital",
-     "market_cap_b": 7.2,
-     "eps": -0.76,
-     "eps_estimate": -0.26,
-     "surprise_pct": -192.31,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $-0.76 versus $-0.26 expected, so the company missed estimates by 192.3%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APLD&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   }

@@ -1,15 +1,15 @@
 {
- "date": "2026-11-02",
- "generated": "2026-11-03T04:05:38.484404Z",
- "headline": "US stocks finished lower. The S&P 500 fell 0.51%, with 8 of 11 sectors up.",
+ "date": "2026-11-03",
+ "generated": "2026-11-04T02:33:39.878298Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.36%, with 8 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.51% today, -2.35% this month, +9.96% this year",
-    "Dow Jones: +0.41% today, +1.58% this month, +7.44% this year",
-    "Nasdaq Composite: -1.07% today, -7.45% this month, +8.30% this year",
-    "Russell 2000: -0.21% today, -0.95% this month, +11.87% this year"
+    "S&P 500: +0.36% today, -2.64% this month, +10.36% this year",
+    "Dow Jones: -0.38% today, +1.01% this month, +7.04% this year",
+    "Nasdaq Composite: +0.83% today, -7.66% this month, +9.19% this year",
+    "Russell 2000: +0.23% today, -1.22% this month, +12.13% this year"
    ]
   },
   {
@@ -23,30 +23,34 @@
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 21.15 (+8.91% today)",
-    "10-year Treasury yield: 4.89% (-0.03 pts today)",
-    "US dollar index: 101.82 (+0.07% today)",
-    "Crude oil: 96.59 (-7.23% today)",
-    "Gold: 3,960.00 (+1.57% today)",
-    "Bitcoin: 76,472.18 (-2.27% today)"
+    "VIX (fear gauge): 20.83 (-1.51% today)",
+    "10-year Treasury yield: 4.95% (+0.06 pts today)",
+    "US dollar index: 101.47 (-0.28% today)",
+    "Crude oil: 96.18 (-0.29% today)",
+    "Gold: 3,968.10 (-0.04% today)",
+    "Bitcoin: 76,884.69 (+0.27% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil -7.23% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The VIX (expected volatility) jumped +8.91% to 21.1. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "Gold moved +1.57%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "The 10-year yield moved +0.06 points to 4.95%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
     "A 6.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Tue Nov 3, After close: Advanced Micro Devices (AMD) reports earnings",
     "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.A) reports earnings",
     "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.B) reports earnings",
-    "Wed Nov 18, 2:00 PM ET: FOMC minutes (meeting of October 27-28)"
+    "Wed Nov 18, 2:00 PM ET: FOMC minutes (meeting of October 27-28)",
+    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation"
+   ]
+  },
+  {
+   "title": "Just happened",
+   "bullets": [
+    "Apple: Apple reported earnings: beat estimates."
    ]
   },
   {
@@ -60,52 +64,52 @@
  ],
  "headlines": [
   {
-   "title": "U.S. reportedly strikes Iran's Qeshm Island as Vance hopes for \u2018negotiated settlement\u2019 with Tehran",
+   "title": "Midterm elections could jolt stocks if Democrats sweep Congress",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/03/iran-us-vance-trump-strikes.html",
-   "published": "Tue, 03 Nov 2026 02:51:33"
+   "link": "https://www.cnbc.com/2026/11/03/midterm-election-stock-market.html",
+   "published": "Wed, 04 Nov 2026 01:49:58"
   },
   {
-   "title": "Australia hikes rates to 18-year high to fight inflation",
+   "title": "Stock market after midterm elections: What S&P 500 history shows",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/03/australia-hikes-rates-18-year-high-finflation.html",
-   "published": "Tue, 03 Nov 2026 03:46:20"
+   "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
+   "published": "Tue, 03 Nov 2026 18:21:05"
   },
   {
-   "title": "Palantir reports booming U.S. commercial revenue growth, topping government for first time",
+   "title": "Google responds to political backlash over removing search from schools that ban AI",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/02/palantir-pltr-earnings-q3-2026.html",
-   "published": "Mon, 02 Nov 2026 22:53:20"
+   "link": "https://www.cnbc.com/2026/11/03/google-responds-to-outrage-over-removing-search-in-schools-that-ban-ai.html",
+   "published": "Wed, 04 Nov 2026 01:07:01"
   },
   {
-   "title": "North Korea denies links to Binance hack as researchers trace stolen billions",
+   "title": "AMD stock jumps 8% on earnings as data center revenue nearly doubles",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/03/north-korea-binance-elliptic-chainalysis.html",
-   "published": "Tue, 03 Nov 2026 03:27:18"
+   "link": "https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html",
+   "published": "Tue, 03 Nov 2026 23:04:37"
   },
   {
-   "title": "Here\u2019s why Palantir\u2019s stock is down despite a \u2018bombastic\u2019 quarter",
+   "title": "Here\u2019s why AMD\u2019s stock is rising \u2014 and sending a confident message about the AI trade",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/heres-why-palantirs-stock-is-down-despite-a-bombastic-quarter-42c9fdb8?mod=mw_rss_topstories",
-   "published": "Tue, 03 Nov 2026 00:59:00"
+   "link": "https://www.marketwatch.com/story/heres-why-amds-stock-is-rising-and-sending-a-confident-message-about-the-ai-trade-11cb4d8a?mod=mw_rss_topstories",
+   "published": "Wed, 04 Nov 2026 01:16:00"
   },
   {
-   "title": "Apple\u2019s iPhone business is booming. Here\u2019s why the stock is falling anyway.",
+   "title": "Super Micro\u2019s stock pops as earnings show booming demand for AI servers",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/apples-iphone-business-is-booming-heres-why-the-stock-is-falling-anyway-07de9fff?mod=mw_rss_topstories",
-   "published": "Tue, 03 Nov 2026 00:52:00"
+   "link": "https://www.marketwatch.com/story/super-micros-stock-pops-as-earnings-show-booming-demand-for-ai-servers-2d179658?mod=mw_rss_topstories",
+   "published": "Wed, 04 Nov 2026 01:12:00"
   },
   {
-   "title": "Nasdaq-100 tumbles into its third correction this year as AI worries mount",
+   "title": "What analysts are telling us while Apple\u2019s stock falls after earnings report",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nasdaq-100-tumbles-into-its-third-correction-this-year-as-ai-worries-mount-abee4c0d?mod=mw_rss_topstories",
-   "published": "Tue, 03 Nov 2026 00:03:00"
+   "link": "https://www.marketwatch.com/story/what-analysts-are-saying-as-apples-stock-falls-after-earnings-report-f0afa357?mod=mw_rss_topstories",
+   "published": "Tue, 03 Nov 2026 22:48:00"
   },
   {
-   "title": "Marvell and Lumentum shareholders unite in panning merger deal: \u2018It\u2019s a trash offer\u2019",
+   "title": "Shopify\u2019s stock slides after earnings. This is what\u2019s worrying Wall Street.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/marvell-and-lumentum-shareholders-unite-in-panning-merger-deal-its-a-trash-offer-53a9f307?mod=mw_rss_topstories",
-   "published": "Mon, 02 Nov 2026 23:39:00"
+   "link": "https://www.marketwatch.com/story/shopifys-stock-slides-after-earnings-this-is-whats-worrying-wall-street-e2e8d52b?mod=mw_rss_topstories",
+   "published": "Tue, 03 Nov 2026 22:45:00"
   }
  ],
  "summary": null,

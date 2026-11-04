@@ -1,128 +1,8 @@
 {
- "generated": "2026-11-03T19:52:11.958560Z",
- "today": "2026-11-03",
+ "generated": "2026-11-04T02:21:12.763778Z",
+ "today": "2026-11-04",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-03-earnings-advanced-micro-devices-amd-reports-earnings",
-   "date": "2026-11-03",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Advanced Micro Devices (AMD) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.68.",
-   "extra": {
-    "market_cap_b": 762,
-    "eps_forecast": "$1.68"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-amgen-amgn-reports-earnings",
-   "date": "2026-11-03",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Amgen (AMGN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.74.",
-   "extra": {
-    "market_cap_b": 252,
-    "eps_forecast": "$5.74"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-arista-networks-anet-reports-earnings",
-   "date": "2026-11-03",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Arista Networks (ANET) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.99.",
-   "extra": {
-    "market_cap_b": 207,
-    "eps_forecast": "$0.99"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-shopify-shop-reports-earnings",
-   "date": "2026-11-03",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Shopify (SHOP) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.33.",
-   "extra": {
-    "market_cap_b": 202,
-    "eps_forecast": "$0.33"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-pfizer-pfe-reports-earnings",
-   "date": "2026-11-03",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Pfizer (PFE) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
-   "extra": {
-    "market_cap_b": 175,
-    "eps_forecast": "$0.72"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-eaton-corporation-plc-etn-reports-earnings",
-   "date": "2026-11-03",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Eaton Corporation, PLC (ETN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.54.",
-   "extra": {
-    "market_cap_b": 142,
-    "eps_forecast": "$3.54"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-marathon-petroleum-mpc-reports-earnings",
-   "date": "2026-11-03",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Marathon Petroleum (MPC) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $25.74.",
-   "extra": {
-    "market_cap_b": 121,
-    "eps_forecast": "$25.74"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-03-earnings-booking-holdings-bkng-reports-earnings",
-   "date": "2026-11-03",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Booking Holdings (BKNG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.48.",
-   "extra": {
-    "market_cap_b": 116,
-    "eps_forecast": "$4.48"
-   },
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-04-earnings-toyota-motor-corp-ltd-ord-tm-reports-earnings",
    "date": "2026-11-04",
@@ -687,6 +567,51 @@
    "importance": "low",
    "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
    "extra": null,
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-earnings-mitsubishi-ufj-financial-group-mufg-reports-earn",
+   "date": "2026-11-13",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
+   "extra": {
+    "market_cap_b": 255,
+    "eps_forecast": "$0.45"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-earnings-sumitomo-mitsui-financial-group-smfg-reports-ear",
+   "date": "2026-11-13",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
+   "extra": {
+    "market_cap_b": 153,
+    "eps_forecast": "$0.24"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-earnings-mizuho-financial-group-mfg-reports-earnings",
+   "date": "2026-11-13",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Mizuho Financial Group (MFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
+   "extra": {
+    "market_cap_b": 120,
+    "eps_forecast": "$0.21"
+   },
    "source": "",
    "link": null
   },

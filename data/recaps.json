@@ -1,7 +1,27 @@
 {
- "generated": "2026-11-03T19:52:21.092745Z",
+ "generated": "2026-11-04T02:21:20.414551Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-03-earnings-advanced-micro-devices-amd-reports-earnings",
+   "date": "2026-11-03",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Advanced Micro Devices (AMD) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
   {
    "headline": "Apple reported earnings: beat estimates.",
    "bullets": [
