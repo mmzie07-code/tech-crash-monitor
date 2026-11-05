@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T02:31:38.150855Z",
+ "generated": "2026-11-05T20:19:48.152411Z",
  "today": "2026-11-05",
  "timezone": "US Eastern",
  "events": [
@@ -12,7 +12,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.06.",
    "extra": {
-    "market_cap_b": 173,
+    "market_cap_b": 165,
     "eps_forecast": "$3.06"
    },
    "source": "",
@@ -27,7 +27,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.38.",
    "extra": {
-    "market_cap_b": 150,
+    "market_cap_b": 153,
     "eps_forecast": "$0.38"
    },
    "source": "",
@@ -42,7 +42,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.30.",
    "extra": {
-    "market_cap_b": 139,
+    "market_cap_b": 143,
     "eps_forecast": "$0.30"
    },
    "source": "",
@@ -57,23 +57,8 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $8.23.",
    "extra": {
-    "market_cap_b": 119,
+    "market_cap_b": 115,
     "eps_forecast": "$8.23"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-canadian-natural-resources-limited-cnq-reports-e",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Canadian Natural Resources Limited (CNQ) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.05.",
-   "extra": {
-    "market_cap_b": 111,
-    "eps_forecast": "$1.05"
    },
    "source": "",
    "link": null
@@ -87,7 +72,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.71.",
    "extra": {
-    "market_cap_b": 108,
+    "market_cap_b": 107,
     "eps_forecast": "$1.71"
    },
    "source": "",
@@ -102,8 +87,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.86.",
    "extra": {
-    "market_cap_b": 100,
+    "market_cap_b": 106,
     "eps_forecast": "$2.86"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-05-earnings-canadian-natural-resources-limited-cnq-reports-e",
+   "date": "2026-11-05",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Canadian Natural Resources Limited (CNQ) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.05.",
+   "extra": {
+    "market_cap_b": 102,
+    "eps_forecast": "$1.05"
    },
    "source": "",
    "link": null
@@ -117,7 +117,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.87.",
    "extra": {
-    "market_cap_b": 99,
+    "market_cap_b": 101,
     "eps_forecast": "$1.87"
    },
    "source": "",
@@ -156,7 +156,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 1202,
+    "market_cap_b": 1249,
     "eps_forecast": ""
    },
    "source": "",
@@ -171,7 +171,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $5.91.",
    "extra": {
-    "market_cap_b": 1202,
+    "market_cap_b": 1249,
     "eps_forecast": "$5.91"
    },
    "source": "",
@@ -201,7 +201,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.36.",
    "extra": {
-    "market_cap_b": 107,
+    "market_cap_b": 106,
     "eps_forecast": "$0.36"
    },
    "source": "",
@@ -216,7 +216,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of ($1.10).",
    "extra": {
-    "market_cap_b": 91,
+    "market_cap_b": 103,
     "eps_forecast": "($1.10)"
    },
    "source": "",
@@ -231,7 +231,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.44.",
    "extra": {
-    "market_cap_b": 81,
+    "market_cap_b": 86,
     "eps_forecast": "$0.44"
    },
    "source": "",
@@ -277,21 +277,6 @@
    "link": null
   },
   {
-   "id": "2026-11-09-earnings-constellation-energy-ceg-reports-earnings",
-   "date": "2026-11-09",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Constellation Energy (CEG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
-   "extra": {
-    "market_cap_b": 93,
-    "eps_forecast": "$3.90"
-   },
-   "source": "",
-   "link": null
-  },
-  {
    "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
    "date": "2026-11-09",
    "time": "Before open",
@@ -300,8 +285,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.41.",
    "extra": {
-    "market_cap_b": 86,
+    "market_cap_b": 91,
     "eps_forecast": "$1.41"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-constellation-energy-ceg-reports-earnings",
+   "date": "2026-11-09",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Constellation Energy (CEG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
+   "extra": {
+    "market_cap_b": 87,
+    "eps_forecast": "$3.90"
    },
    "source": "",
    "link": null
@@ -315,7 +315,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.78.",
    "extra": {
-    "market_cap_b": 61,
+    "market_cap_b": 66,
     "eps_forecast": "$0.78"
    },
    "source": "",
@@ -330,7 +330,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.43.",
    "extra": {
-    "market_cap_b": 60,
+    "market_cap_b": 57,
     "eps_forecast": "$1.43"
    },
    "source": "",
@@ -345,7 +345,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.23.",
    "extra": {
-    "market_cap_b": 136,
+    "market_cap_b": 126,
     "eps_forecast": "$1.23"
    },
    "source": "",
@@ -360,7 +360,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 136,
+    "market_cap_b": 126,
     "eps_forecast": ""
    },
    "source": "",
@@ -382,15 +382,15 @@
    "link": null
   },
   {
-   "id": "2026-11-11-earnings-cisco-systems-csco-reports-earnings",
-   "date": "2026-11-11",
-   "time": "Time TBA",
+   "id": "2026-11-12-earnings-cisco-systems-csco-reports-earnings",
+   "date": "2026-11-12",
+   "time": "After close",
    "kind": "earnings",
    "title": "Cisco Systems (CSCO) reports earnings",
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.15.",
    "extra": {
-    "market_cap_b": 406,
+    "market_cap_b": 408,
     "eps_forecast": "$1.15"
    },
    "source": "",
@@ -405,7 +405,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.06.",
    "extra": {
-    "market_cap_b": 303,
+    "market_cap_b": 293,
     "eps_forecast": "$4.06"
    },
    "source": "",
@@ -420,7 +420,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
    "extra": {
-    "market_cap_b": 99,
+    "market_cap_b": 106,
     "eps_forecast": "$0.72"
    },
    "source": "",
@@ -435,7 +435,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
    "extra": {
-    "market_cap_b": 56,
+    "market_cap_b": 58,
     "eps_forecast": "$0.22"
    },
    "source": "",
@@ -462,7 +462,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
    "extra": {
-    "market_cap_b": 252,
+    "market_cap_b": 261,
     "eps_forecast": "$0.45"
    },
    "source": "",
@@ -477,7 +477,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
    "extra": {
-    "market_cap_b": 152,
+    "market_cap_b": 157,
     "eps_forecast": "$0.24"
    },
    "source": "",
@@ -492,7 +492,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
    "extra": {
-    "market_cap_b": 119,
+    "market_cap_b": 122,
     "eps_forecast": "$0.21"
    },
    "source": "",
