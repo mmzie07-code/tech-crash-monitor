@@ -1,47 +1,15 @@
 {
- "generated": "2026-11-06T02:27:41.176268Z",
+ "generated": "2026-11-06T19:43:09.867895Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-06",
-   "reported_total": 118,
+   "reported_total": 105,
    "top": [
-    {
-     "symbol": "BRK.A",
-     "name": "Berkshire Hathaway",
-     "market_cap_b": 1248.7,
-     "eps": null,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.A&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "BRK.B",
-     "name": "Berkshire Hathaway",
-     "market_cap_b": 1248.7,
-     "eps": null,
-     "eps_estimate": 5.91,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $5.91.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B&type=8-K&dateb=&owner=include&count=10"
-    },
     {
      "symbol": "ENB",
      "name": "Enbridge",
-     "market_cap_b": 106.3,
+     "market_cap_b": 104.9,
      "eps": null,
      "eps_estimate": 0.36,
      "surprise_pct": null,
@@ -57,7 +25,7 @@
     {
      "symbol": "MRNA",
      "name": "Moderna",
-     "market_cap_b": 103.2,
+     "market_cap_b": 96.4,
      "eps": null,
      "eps_estimate": -1.1,
      "surprise_pct": null,
@@ -73,7 +41,7 @@
     {
      "symbol": "BAM",
      "name": "Brookfield Asset Management",
-     "market_cap_b": 86.4,
+     "market_cap_b": 83.9,
      "eps": null,
      "eps_estimate": 0.44,
      "surprise_pct": null,
@@ -89,7 +57,7 @@
     {
      "symbol": "HUM",
      "name": "Humana",
-     "market_cap_b": 50.1,
+     "market_cap_b": 49.4,
      "eps": null,
      "eps_estimate": -1.03,
      "surprise_pct": null,
@@ -105,7 +73,7 @@
     {
      "symbol": "HMC",
      "name": "Honda Motor Company",
-     "market_cap_b": 45.7,
+     "market_cap_b": 47.0,
      "eps": null,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -121,14 +89,14 @@
     {
      "symbol": "VST",
      "name": "Vistra",
-     "market_cap_b": 40.4,
+     "market_cap_b": 37.9,
      "eps": null,
-     "eps_estimate": 2.89,
+     "eps_estimate": 2.94,
      "surprise_pct": null,
      "timing": "time-pre-market",
      "bullets": [
       "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.89.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.94.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -137,7 +105,7 @@
     {
      "symbol": "UI",
      "name": "Ubiquiti",
-     "market_cap_b": 33.9,
+     "market_cap_b": 31.1,
      "eps": null,
      "eps_estimate": 3.82,
      "surprise_pct": null,
@@ -151,38 +119,86 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UI&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "ECHO",
-     "name": "EchoStar",
-     "market_cap_b": 28.7,
+     "symbol": "PPL",
+     "name": "PPL",
+     "market_cap_b": 27.1,
      "eps": null,
-     "eps_estimate": 0.02,
+     "eps_estimate": 0.53,
      "surprise_pct": null,
      "timing": "time-pre-market",
      "bullets": [
       "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.02.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.53.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PPL&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ECHO",
+     "name": "EchoStar",
+     "market_cap_b": 26.2,
+     "eps": null,
+     "eps_estimate": -0.42,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-0.42.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ECHO&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BIP",
+     "name": "Brookfield Infrastructure Partners LP",
+     "market_cap_b": 17.3,
+     "eps": null,
+     "eps_estimate": 0.89,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.89.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BIP&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
   {
    "date": "2026-11-05",
-   "reported_total": 567,
+   "reported_total": 624,
    "top": [
+    {
+     "symbol": "TM",
+     "name": "Toyota Motor Corp Ltd Ord",
+     "market_cap_b": 284.3,
+     "eps": 4.1,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.10 (no analyst consensus available).",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TM&type=8-K&dateb=&owner=include&count=10"
+    },
     {
      "symbol": "COP",
      "name": "ConocoPhillips",
-     "market_cap_b": 164.5,
-     "eps": null,
+     "market_cap_b": 162.7,
+     "eps": 3.27,
      "eps_estimate": 3.06,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 6.86,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $3.06.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.27 versus $3.06 expected, so the company beat estimates by 6.9%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -191,14 +207,14 @@
     {
      "symbol": "SONY",
      "name": "Sony Group",
-     "market_cap_b": 153.0,
-     "eps": null,
+     "market_cap_b": 162.4,
+     "eps": 0.48,
      "eps_estimate": 0.38,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 26.32,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.38.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.48 versus $0.38 expected, so the company beat estimates by 26.3%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -207,14 +223,14 @@
     {
      "symbol": "MNST",
      "name": "Monster Beverage",
-     "market_cap_b": 143.3,
-     "eps": null,
+     "market_cap_b": 140.6,
+     "eps": 0.3,
      "eps_estimate": 0.3,
      "surprise_pct": null,
-     "timing": "time-after-hours",
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.30.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.30 versus $0.30 expected, so the company matched estimates.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -223,14 +239,14 @@
     {
      "symbol": "PH",
      "name": "Parker-Hannifin",
-     "market_cap_b": 114.8,
-     "eps": null,
+     "market_cap_b": 112.5,
+     "eps": 8.9,
      "eps_estimate": 8.23,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 8.14,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $8.23.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $8.90 versus $8.23 expected, so the company beat estimates by 8.1%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -239,14 +255,14 @@
     {
      "symbol": "SO",
      "name": "Southern Company (The)",
-     "market_cap_b": 107.1,
-     "eps": null,
+     "market_cap_b": 107.4,
+     "eps": 1.94,
      "eps_estimate": 1.71,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 13.45,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.71.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.94 versus $1.71 expected, so the company beat estimates by 13.4%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -255,127 +271,77 @@
     {
      "symbol": "ABNB",
      "name": "Airbnb",
-     "market_cap_b": 105.6,
-     "eps": null,
+     "market_cap_b": 101.9,
+     "eps": 3.16,
      "eps_estimate": 2.86,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 10.49,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.86.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.16 versus $2.86 expected, so the company beat estimates by 10.5%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ABNB&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "CNQ",
-     "name": "Canadian Natural Resources Limited",
-     "market_cap_b": 102.5,
-     "eps": null,
-     "eps_estimate": 1.05,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.05.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNQ&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "DUK",
      "name": "Duke Energy",
-     "market_cap_b": 101.0,
-     "eps": null,
+     "market_cap_b": 101.4,
+     "eps": 1.99,
      "eps_estimate": 1.87,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 6.42,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.87.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.99 versus $1.87 expected, so the company beat estimates by 6.4%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DUK&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "CNQ",
+     "name": "Canadian Natural Resources Limited",
+     "market_cap_b": 101.1,
+     "eps": 1.18,
+     "eps_estimate": 1.05,
+     "surprise_pct": 12.38,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.18 versus $1.05 expected, so the company beat estimates by 12.4%.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNQ&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "NET",
      "name": "Cloudflare",
-     "market_cap_b": 94.9,
-     "eps": null,
+     "market_cap_b": 87.1,
+     "eps": -0.09,
      "eps_estimate": 0.02,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -550.0,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.02.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $-0.09 versus $0.02 expected, so the company missed estimates by 550.0%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NET&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "CI",
-     "name": "The Cigna Group",
-     "market_cap_b": 80.7,
-     "eps": null,
-     "eps_estimate": 7.46,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $7.46.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CI&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
   {
    "date": "2026-11-04",
-   "reported_total": 499,
+   "reported_total": 488,
    "top": [
-    {
-     "symbol": "TM",
-     "name": "Toyota Motor Corp Ltd Ord",
-     "market_cap_b": 260.0,
-     "eps": 4.85,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $4.85 (no analyst consensus available).",
-      "Stock moved +3.4% on Nov 4.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TM&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "ARM",
-     "name": "Arm Holdings",
-     "market_cap_b": 204.1,
-     "eps": 0.15,
-     "eps_estimate": 0.22,
-     "surprise_pct": -31.82,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.15 versus $0.22 expected, so the company missed estimates by 31.8%.",
-      "Stock moved -5.3% on Nov 4.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ARM&type=8-K&dateb=&owner=include&count=10"
-    },
     {
      "symbol": "MCD",
      "name": "McDonald's",
-     "market_cap_b": 198.3,
+     "market_cap_b": 196.8,
      "eps": 3.57,
      "eps_estimate": 3.36,
      "surprise_pct": 6.25,
@@ -392,7 +358,7 @@
     {
      "symbol": "NVO",
      "name": "Novo Nordisk A/S",
-     "market_cap_b": 186.8,
+     "market_cap_b": 178.4,
      "eps": 0.89,
      "eps_estimate": 0.81,
      "surprise_pct": 9.88,
@@ -407,9 +373,26 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NVO&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "ARM",
+     "name": "Arm Holdings",
+     "market_cap_b": 177.4,
+     "eps": 0.15,
+     "eps_estimate": 0.22,
+     "surprise_pct": -31.82,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.15 versus $0.22 expected, so the company missed estimates by 31.8%.",
+      "Stock moved -5.3% on Nov 4.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ARM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "QCOM",
      "name": "QUALCOMM Incorporated",
-     "market_cap_b": 181.9,
+     "market_cap_b": 167.7,
      "eps": 1.45,
      "eps_estimate": 1.46,
      "surprise_pct": -0.68,
@@ -426,7 +409,7 @@
     {
      "symbol": "UBER",
      "name": "Uber Technologies",
-     "market_cap_b": 142.7,
+     "market_cap_b": 140.4,
      "eps": 0.25,
      "eps_estimate": 0.94,
      "surprise_pct": -73.4,
@@ -443,7 +426,7 @@
     {
      "symbol": "MCK",
      "name": "McKesson",
-     "market_cap_b": 124.7,
+     "market_cap_b": 123.8,
      "eps": 11.68,
      "eps_estimate": 10.69,
      "surprise_pct": 9.26,
@@ -458,9 +441,26 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCK&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "APP",
+     "name": "Applovin",
+     "market_cap_b": 118.0,
+     "eps": 4.3,
+     "eps_estimate": 3.94,
+     "surprise_pct": 9.14,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.30 versus $3.94 expected, so the company beat estimates by 9.1%.",
+      "Stock moved +10.7% on Nov 4.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APP&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "CVS",
      "name": "CVS Health",
-     "market_cap_b": 102.3,
+     "market_cap_b": 104.1,
      "eps": 2.09,
      "eps_estimate": 1.62,
      "surprise_pct": 29.01,
@@ -477,7 +477,7 @@
     {
      "symbol": "EMR",
      "name": "Emerson Electric",
-     "market_cap_b": 95.1,
+     "market_cap_b": 90.7,
      "eps": 1.86,
      "eps_estimate": 1.85,
      "surprise_pct": 0.54,
@@ -492,32 +492,32 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EMR&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "APP",
-     "name": "Applovin",
-     "market_cap_b": 90.9,
-     "eps": 4.3,
-     "eps_estimate": 3.94,
-     "surprise_pct": 9.14,
+     "symbol": "MSI",
+     "name": "Motorola Solutions",
+     "market_cap_b": 85.5,
+     "eps": 4.21,
+     "eps_estimate": 3.99,
+     "surprise_pct": 5.51,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Earnings per share were $4.30 versus $3.94 expected, so the company beat estimates by 9.1%.",
-      "Stock moved +10.7% on Nov 4.",
+      "Earnings per share were $4.21 versus $3.99 expected, so the company beat estimates by 5.5%.",
+      "Stock moved +1.2% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APP&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSI&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
   {
    "date": "2026-11-03",
-   "reported_total": 278,
+   "reported_total": 254,
    "top": [
     {
      "symbol": "AMD",
      "name": "Advanced Micro Devices",
-     "market_cap_b": 797.9,
+     "market_cap_b": 663.3,
      "eps": 1.84,
      "eps_estimate": 1.68,
      "surprise_pct": 9.52,
@@ -534,7 +534,7 @@
     {
      "symbol": "AMGN",
      "name": "Amgen",
-     "market_cap_b": 258.7,
+     "market_cap_b": 249.0,
      "eps": 6.45,
      "eps_estimate": 5.74,
      "surprise_pct": 12.37,
@@ -551,7 +551,7 @@
     {
      "symbol": "ANET",
      "name": "Arista Networks",
-     "market_cap_b": 225.1,
+     "market_cap_b": 201.1,
      "eps": 1.11,
      "eps_estimate": 0.99,
      "surprise_pct": 12.12,
@@ -568,7 +568,7 @@
     {
      "symbol": "SHOP",
      "name": "Shopify",
-     "market_cap_b": 195.8,
+     "market_cap_b": 184.7,
      "eps": 0.42,
      "eps_estimate": 0.33,
      "surprise_pct": 27.27,
@@ -585,7 +585,7 @@
     {
      "symbol": "PFE",
      "name": "Pfizer",
-     "market_cap_b": 175.5,
+     "market_cap_b": 170.3,
      "eps": 0.87,
      "eps_estimate": 0.72,
      "surprise_pct": 20.83,
@@ -602,7 +602,7 @@
     {
      "symbol": "ETN",
      "name": "Eaton Corporation, PLC",
-     "market_cap_b": 137.2,
+     "market_cap_b": 127.0,
      "eps": 3.68,
      "eps_estimate": 3.54,
      "surprise_pct": 3.95,
@@ -619,7 +619,7 @@
     {
      "symbol": "BKNG",
      "name": "Booking Holdings",
-     "market_cap_b": 127.2,
+     "market_cap_b": 125.5,
      "eps": 4.66,
      "eps_estimate": 4.48,
      "surprise_pct": 4.02,
@@ -636,7 +636,7 @@
     {
      "symbol": "MPC",
      "name": "Marathon Petroleum",
-     "market_cap_b": 106.9,
+     "market_cap_b": 102.7,
      "eps": 26.93,
      "eps_estimate": 25.74,
      "surprise_pct": 4.62,
@@ -653,7 +653,7 @@
     {
      "symbol": "RACE",
      "name": "Ferrari N.V.",
-     "market_cap_b": 101.2,
+     "market_cap_b": 98.8,
      "eps": 2.81,
      "eps_estimate": 2.66,
      "surprise_pct": 5.64,
@@ -670,7 +670,7 @@
     {
      "symbol": "SU",
      "name": "Suncor Energy",
-     "market_cap_b": 84.4,
+     "market_cap_b": 80.7,
      "eps": 2.84,
      "eps_estimate": 2.35,
      "surprise_pct": 20.85,
