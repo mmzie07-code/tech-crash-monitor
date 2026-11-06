@@ -1,45 +1,44 @@
 {
- "date": "2026-11-04",
- "generated": "2026-11-05T02:46:46.611891Z",
- "headline": "US stocks finished higher. The S&P 500 rose 1.58%, with 4 of 11 sectors up.",
+ "date": "2026-11-05",
+ "generated": "2026-11-06T02:43:51.955995Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 4.36%, with 8 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +1.58% today, -1.67% this month, +12.10% this year",
-    "Dow Jones: +3.03% today, +3.56% this month, +10.28% this year",
-    "Nasdaq Composite: +1.44% today, -6.75% this month, +10.76% this year",
-    "Russell 2000: +1.58% today, +0.94% this month, +13.90% this year"
+    "S&P 500: -4.36% today, -5.74% this month, +7.22% this year",
+    "Dow Jones: -3.44% today, +0.67% this month, +6.49% this year",
+    "Nasdaq Composite: -5.52% today, -11.71% this month, +4.65% this year",
+    "Russell 2000: -4.45% today, -2.27% this month, +8.84% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +1.31%, Communication +1.18%, Industrials +0.95%",
-    "Lagging: Consumer Staples -2.07%, Materials -2.01%, Energy -0.85%",
-    "4 of 11 sectors rose."
+    "Leading: Consumer Discretionary +4.26%, Financials +3.51%, Communication +3.47%",
+    "Lagging: Energy -4.74%, Industrials -1.09%, Technology -0.01%",
+    "8 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 16.61 (-20.26% today)",
-    "10-year Treasury yield: 4.89% (-0.06 pts today)",
-    "US dollar index: 101.35 (-0.51% today)",
-    "Crude oil: 87.58 (-0.61% today)",
-    "Gold: 4,113.60 (+1.00% today)",
-    "Bitcoin: 80,627.67 (+4.24% today)"
+    "VIX (fear gauge): 28.18 (+69.66% today)",
+    "10-year Treasury yield: 4.84% (-0.06 pts today)",
+    "US dollar index: 101.62 (+0.11% today)",
+    "Crude oil: 91.25 (+3.55% today)",
+    "Gold: 4,080.10 (+0.17% today)",
+    "Bitcoin: 76,031.55 (-5.44% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The 10-year yield moved -0.06 points to 4.89%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The VIX fell -20.26% to 16.6, a sign of calming nerves.",
-    "The US dollar moved -0.51%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "Gold moved +1.00%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "Bitcoin moved +4.24%, showing appetite (or lack of it) for speculative assets.",
-    "A 3.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Oil +3.55% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
+    "The 10-year yield moved -0.06 points to 4.84%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "The VIX (expected volatility) jumped +69.66% to 28.2. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "Bitcoin moved -5.44%, showing appetite (or lack of it) for speculative assets.",
+    "A 9.0-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -52,68 +51,62 @@
    ]
   },
   {
-   "title": "Just happened",
-   "bullets": [
-    "Advanced Micro Devices: Advanced Micro Devices reported earnings: beat estimates."
-   ]
-  },
-  {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 50 out of 100 (Warning; higher is better) (+12 from 38 on 2026-11-02).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling.",
+    "Market health score 38 out of 100 (Warning; higher is better) (-12 from 50 on 2026-11-03).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling.",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "What was really behind Wednesday's monster rally? Trump quickly making peace",
+   "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/04/stock-market-rally-trump-midterms.html",
-   "published": "Wed, 04 Nov 2026 22:55:22"
+   "link": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html",
+   "published": "Fri, 06 Nov 2026 02:40:15"
   },
   {
-   "title": "Democrats flip dozens of GOP seats. Republicans haven't flipped a single one",
+   "title": "Magnificent 7 loses $1 trillion. The most eye-popping stats from Thursday's tech stock plunge",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/04/democrats-2026-midterm-election-results.html",
-   "published": "Wed, 04 Nov 2026 23:44:18"
+   "link": "https://www.cnbc.com/2026/11/05/stock-market-selloff-ai-fears.html",
+   "published": "Thu, 05 Nov 2026 23:39:32"
   },
   {
-   "title": "What Wall Street billionaires are saying about Democrats' midterm sweep",
+   "title": "Elon Musk's Tesla and SpaceX lose over $420 billion in combined market cap after midterms",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/04/billionaires-musk-branson-democrats-midterms-ai-wall-street.html",
-   "published": "Wed, 04 Nov 2026 23:17:56"
+   "link": "https://www.cnbc.com/2026/11/05/tesla-spacex-stocks-fall-after-2026-midterms.html",
+   "published": "Thu, 05 Nov 2026 22:31:13"
   },
   {
-   "title": "Inside India newsletter: India weighs a tax cut to win over foreign investors. Will it work?",
+   "title": "Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now'",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/05/india-tax-foreign-investors-nifty.html",
-   "published": "Thu, 05 Nov 2026 00:04:36"
+   "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
+   "published": "Thu, 05 Nov 2026 20:17:16"
   },
   {
-   "title": "Qualcomm\u2019s stock falls as twin forces pressure sales",
+   "title": "Here\u2019s what\u2019s driving Iren\u2019s stock higher after a brutal selloff",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/qualcomms-stock-falls-as-twin-forces-pressure-sales-fa161159?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 01:06:00"
+   "link": "https://www.marketwatch.com/story/heres-whats-driving-irens-stock-higher-after-a-brutal-selloff-0ced09b0?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 01:07:00"
   },
   {
-   "title": "This year\u2019s worst-performing S&P 500 stock is finally seeing some major relief",
+   "title": "Cloudflare\u2019s stock mounts a big comeback after fastest sales surge in nearly 4 years",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/this-years-worst-performing-s-p-500-stock-is-finally-seeing-some-major-relief-fff3fa85?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 01:05:00"
+   "link": "https://www.marketwatch.com/story/cloudflares-stock-mounts-a-big-comeback-after-fastest-sales-surge-in-nearly-4-years-d80d994d?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 01:06:00"
   },
   {
-   "title": "Figma\u2019s stock dips as investors worry that AI momentum is coming at a high price",
+   "title": "Here are the 2027 capital-gains tax rates for each income level",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/figmas-stock-falls-as-investors-worry-that-ai-momentum-is-coming-at-a-high-price-1aa2134d?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 01:03:00"
+   "link": "https://www.marketwatch.com/story/here-are-the-2027-capital-gains-tax-rates-for-each-income-level-166fc306?mod=mw_rss_topstories",
+   "published": "Thu, 05 Nov 2026 23:48:00"
   },
   {
-   "title": "McDonald\u2019s tests new value menu as fast-food discount wars heat up",
+   "title": "Tech stocks log worst day since 2020 as carnage comes to the AI trade",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/mcdonalds-tests-new-value-menu-as-fast-food-discount-wars-heat-up-bfc57caf?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 01:01:00"
+   "link": "https://www.marketwatch.com/story/tech-stocks-log-worst-day-since-2020-as-carnage-comes-to-the-ai-trade-56109845?mod=mw_rss_topstories",
+   "published": "Thu, 05 Nov 2026 22:48:00"
   }
  ],
  "summary": null,

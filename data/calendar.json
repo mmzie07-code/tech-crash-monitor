@@ -1,152 +1,8 @@
 {
- "generated": "2026-11-05T20:19:48.152411Z",
- "today": "2026-11-05",
+ "generated": "2026-11-06T02:29:30.709643Z",
+ "today": "2026-11-06",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-05-earnings-conocophillips-cop-reports-earnings",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "ConocoPhillips (COP) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.06.",
-   "extra": {
-    "market_cap_b": 165,
-    "eps_forecast": "$3.06"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-sony-group-sony-reports-earnings",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Sony Group (SONY) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.38.",
-   "extra": {
-    "market_cap_b": 153,
-    "eps_forecast": "$0.38"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-monster-beverage-mnst-reports-earnings",
-   "date": "2026-11-05",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Monster Beverage (MNST) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.30.",
-   "extra": {
-    "market_cap_b": 143,
-    "eps_forecast": "$0.30"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-parker-hannifin-ph-reports-earnings",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Parker-Hannifin (PH) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $8.23.",
-   "extra": {
-    "market_cap_b": 115,
-    "eps_forecast": "$8.23"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-southern-company-the-so-reports-earnings",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Southern Company (The) (SO) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.71.",
-   "extra": {
-    "market_cap_b": 107,
-    "eps_forecast": "$1.71"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-airbnb-abnb-reports-earnings",
-   "date": "2026-11-05",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Airbnb (ABNB) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.86.",
-   "extra": {
-    "market_cap_b": 106,
-    "eps_forecast": "$2.86"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-canadian-natural-resources-limited-cnq-reports-e",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Canadian Natural Resources Limited (CNQ) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.05.",
-   "extra": {
-    "market_cap_b": 102,
-    "eps_forecast": "$1.05"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-earnings-duke-energy-duk-reports-earnings",
-   "date": "2026-11-05",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Duke Energy (DUK) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.87.",
-   "extra": {
-    "market_cap_b": 101,
-    "eps_forecast": "$1.87"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-data-h-4-1-factors-affecting-reserve-balances",
-   "date": "2026-11-05",
-   "time": "4:30 PM",
-   "kind": "data",
-   "title": "H.4.1 - Factors Affecting Reserve Balances",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-05-data-weekly-jobless-claims",
-   "date": "2026-11-05",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-06-earnings-berkshire-hathaway-brk-a-reports-earnings",
    "date": "2026-11-06",
@@ -190,7 +46,7 @@
     "location": "At the University of Mississippi Banking and Finance Symposium, Oxford, Miss."
    },
    "source": "Federal Reserve",
-   "link": null
+   "link": "https://olemiss.zoom.us/j/83516188915?pwd=wHQgE4aZSqUdn2oBqJ93yHDWHT56cY.1&from=addon"
   },
   {
    "id": "2026-11-06-earnings-enbridge-enb-reports-earnings",
@@ -277,6 +133,21 @@
    "link": null
   },
   {
+   "id": "2026-11-09-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-09",
+   "time": "8:40 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: Community Banking. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the Mutual Board Summit Conference, Boston, Mass."
+   },
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
    "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
    "date": "2026-11-09",
    "time": "Before open",
@@ -337,6 +208,36 @@
    "link": null
   },
   {
+   "id": "2026-11-10-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-10",
+   "time": "6:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: Economic Outlook. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At A View from the Federal Reserve Board (virtual)"
+   },
+   "source": "Federal Reserve",
+   "link": "https://us06web.zoom.us/j/82913231287?pwd=LVtmihv49gUcWXnQz4q9by5b5aixiP.1"
+  },
+  {
+   "id": "2026-11-10-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-10",
+   "time": "4:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "importance": "medium",
+   "why": "Topic: Economic Outlook. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Christopher J. Waller",
+    "location": "At The Bank of England and its Watchers Conference 2026, London, United Kingdom"
+   },
+   "source": "Federal Reserve",
+   "link": "https://teams.microsoft.com/meet/3555893727932509?p=Jzb3qhkJr8SKStNZlD"
+  },
+  {
    "id": "2026-11-10-earnings-petroleo-brasileiro-s-a-petrobras-pbr-reports-ea",
    "date": "2026-11-10",
    "time": "After close",
@@ -380,6 +281,36 @@
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-11-11-earnings-cisco-systems-csco-reports-earnings",
+   "date": "2026-11-11",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Cisco Systems (CSCO) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.15.",
+   "extra": {
+    "market_cap_b": 406,
+    "eps_forecast": "$1.15"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-12",
+   "time": "10:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "importance": "medium",
+   "why": "Topic: Artificial Intelligence and Inequality. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Michael S. Barr",
+    "location": "At A Conversation with Michael S. Barr (virtual)"
+   },
+   "source": "Federal Reserve",
+   "link": "https://youtube.com/live/O2NvR1shSI0?feature=share"
   },
   {
    "id": "2026-11-12-earnings-cisco-systems-csco-reports-earnings",
@@ -451,6 +382,36 @@
    "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
    "extra": null,
    "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-fed-fed-speaks-vice-chair-philip-n-jefferson",
+   "date": "2026-11-13",
+   "time": "7:00 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+   "importance": "medium",
+   "why": "Topic: New Technology, Old Questions: Assessing Productivity Puzzles and Their Implications for Macroeconomic Activity. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair Philip N. Jefferson",
+    "location": "At the University of California San Diego Economics Roundtable, La Jolla, Calif."
+   },
+   "source": "Federal Reserve",
+   "link": "https://cvent.me/8AmwNV"
+  },
+  {
+   "id": "2026-11-13-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-13",
+   "time": "10:50 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "importance": "medium",
+   "why": "Topic: Supervision and Regulation. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual)"
+   },
+   "source": "Federal Reserve",
    "link": null
   },
   {
@@ -584,6 +545,18 @@
     "bea_key": "gdp"
    },
    "source": "BEA",
+   "link": null
+  },
+  {
+   "id": "2026-11-26-data-weekly-jobless-claims",
+   "date": "2026-11-26",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {

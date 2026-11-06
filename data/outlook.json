@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T20:19:57.731919Z",
+ "generated": "2026-11-06T02:29:40.027796Z",
  "as_of": "2026-11-05",
  "regime": "S&P 500 above its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -35,103 +35,13 @@
     "best": 4.8
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.7% below it).",
-    "VIX at 16.6: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
+    "10-year yield fell 0.44 points in a month to 4.84%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "ConocoPhillips (COP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Sony Group (SONY) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "After close",
-     "title": "Monster Beverage (MNST) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Parker-Hannifin (PH) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Southern Company (The) (SO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "After close",
-     "title": "Airbnb (ABNB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Canadian Natural Resources Limited (CNQ) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Duke Energy (DUK) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10342,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 1495,
-    "up": 55,
-    "median": 0.1,
-    "p10": -1.3,
-    "p25": -0.6,
-    "p75": 0.8,
-    "p90": 1.4,
-    "below": 14,
-    "above": 20,
-    "worst": -6.9,
-    "best": 4.8
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (1.7% below it).",
-    "VIX at 16.6: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100."
+    "S&P 500 is 5.9% below its 1-year high.",
+    "VIX at 28.2: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100."
    ],
    "events": [
     {
@@ -178,6 +88,78 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10342,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1495,
+    "up": 55,
+    "median": 0.1,
+    "p10": -1.3,
+    "p25": -0.6,
+    "p75": 0.8,
+    "p90": 1.4,
+    "below": 14,
+    "above": 20,
+    "worst": -6.9,
+    "best": 4.8
+   },
+   "bull": [
+    "10-year yield fell 0.44 points in a month to 4.84%, which eases pressure on stocks.",
+    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
+   ],
+   "bear": [
+    "S&P 500 is 5.9% below its 1-year high.",
+    "VIX at 28.2: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-09",
+     "time": "8:40 AM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "KKR & (KKR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "Constellation Energy (CEG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "Barrick Mining (B) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "After close",
+     "title": "Occidental Petroleum (OXY) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -209,64 +191,16 @@
     "best": 7.8
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.7% below it).",
-    "VIX at 16.6: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
+    "10-year yield fell 0.44 points in a month to 4.84%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 5.9% below its 1-year high.",
+    "VIX at 28.2: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "ConocoPhillips (COP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Sony Group (SONY) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "After close",
-     "title": "Monster Beverage (MNST) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Parker-Hannifin (PH) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Southern Company (The) (SO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "After close",
-     "title": "Airbnb (ABNB) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Canadian Natural Resources Limited (CNQ) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-05",
-     "time": "Before open",
-     "title": "Duke Energy (DUK) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-06",
      "time": "Time TBA",
@@ -289,6 +223,54 @@
      "date": "2026-11-06",
      "time": "Before open",
      "title": "Enbridge (ENB) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-06",
+     "time": "Before open",
+     "title": "Moderna (MRNA) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-06",
+     "time": "Before open",
+     "title": "Brookfield Asset Management (BAM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-06",
+     "time": "Before open",
+     "title": "Humana (HUM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "8:40 AM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "KKR & (KKR) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "Constellation Energy (CEG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "Before open",
+     "title": "Barrick Mining (B) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-09",
+     "time": "After close",
+     "title": "Occidental Petroleum (OXY) reports earnings",
      "importance": "medium"
     }
    ]
@@ -324,13 +306,13 @@
     "best": 14.5
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.7% below it).",
-    "VIX at 16.6: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
+    "10-year yield fell 0.44 points in a month to 4.84%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 5.9% below its 1-year high.",
+    "VIX at 28.2: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -391,14 +373,14 @@
     "best": 49.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (1.7% below it).",
-    "VIX at 16.6: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.89%, which eases pressure on stocks.",
+    "10-year yield fell 0.44 points in a month to 4.84%, which eases pressure on stocks.",
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 28.5, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 26.7, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 5.9% below its 1-year high.",
+    "VIX at 28.2: investors are nervous.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [

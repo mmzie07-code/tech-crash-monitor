@@ -1,7 +1,173 @@
 {
- "generated": "2026-11-05T20:18:36.831960Z",
+ "generated": "2026-11-06T02:27:41.176268Z",
  "ai_summaries": false,
  "days": [
+  {
+   "date": "2026-11-06",
+   "reported_total": 118,
+   "top": [
+    {
+     "symbol": "BRK.A",
+     "name": "Berkshire Hathaway",
+     "market_cap_b": 1248.7,
+     "eps": null,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.A&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BRK.B",
+     "name": "Berkshire Hathaway",
+     "market_cap_b": 1248.7,
+     "eps": null,
+     "eps_estimate": 5.91,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $5.91.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ENB",
+     "name": "Enbridge",
+     "market_cap_b": 106.3,
+     "eps": null,
+     "eps_estimate": 0.36,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.36.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ENB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "MRNA",
+     "name": "Moderna",
+     "market_cap_b": 103.2,
+     "eps": null,
+     "eps_estimate": -1.1,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-1.10.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRNA&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BAM",
+     "name": "Brookfield Asset Management",
+     "market_cap_b": 86.4,
+     "eps": null,
+     "eps_estimate": 0.44,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.44.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BAM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "HUM",
+     "name": "Humana",
+     "market_cap_b": 50.1,
+     "eps": null,
+     "eps_estimate": -1.03,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-1.03.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HUM&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "HMC",
+     "name": "Honda Motor Company",
+     "market_cap_b": 45.7,
+     "eps": null,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HMC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "VST",
+     "name": "Vistra",
+     "market_cap_b": 40.4,
+     "eps": null,
+     "eps_estimate": 2.89,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.89.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VST&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "UI",
+     "name": "Ubiquiti",
+     "market_cap_b": 33.9,
+     "eps": null,
+     "eps_estimate": 3.82,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.82.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UI&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ECHO",
+     "name": "EchoStar",
+     "market_cap_b": 28.7,
+     "eps": null,
+     "eps_estimate": 0.02,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.02.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ECHO&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
   {
    "date": "2026-11-05",
    "reported_total": 567,
@@ -183,6 +349,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $4.85 (no analyst consensus available).",
+      "Stock moved +3.4% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -199,6 +366,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.15 versus $0.22 expected, so the company missed estimates by 31.8%.",
+      "Stock moved -5.3% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -215,6 +383,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $3.57 versus $3.36 expected, so the company beat estimates by 6.2%.",
+      "Stock moved +6.5% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -231,6 +400,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.89 versus $0.81 expected, so the company beat estimates by 9.9%.",
+      "Stock moved +5.0% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -247,6 +417,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.45 versus $1.46 expected, so the company missed estimates by 0.7%.",
+      "Stock moved +5.3% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -263,6 +434,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.25 versus $0.94 expected, so the company missed estimates by 73.4%.",
+      "Stock moved +4.9% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -279,6 +451,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $11.68 versus $10.69 expected, so the company beat estimates by 9.3%.",
+      "Stock moved +7.0% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -295,6 +468,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $2.09 versus $1.62 expected, so the company beat estimates by 29.0%.",
+      "Stock moved -12.5% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -311,6 +485,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.86 versus $1.85 expected, so the company beat estimates by 0.5%.",
+      "Stock moved +2.4% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -327,6 +502,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $4.30 versus $3.94 expected, so the company beat estimates by 9.1%.",
+      "Stock moved +10.7% on Nov 4.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -3112,28 +3288,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NRIX&type=8-K&dateb=&owner=include&count=10"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-09",
-   "reported_total": 7,
-   "top": [
-    {
-     "symbol": "DAL",
-     "name": "Delta Air Lines",
-     "market_cap_b": 54.0,
-     "eps": 1.72,
-     "eps_estimate": 1.8,
-     "surprise_pct": -4.44,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $1.72 versus $1.80 expected, so the company missed estimates by 4.4%.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAL&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   }
