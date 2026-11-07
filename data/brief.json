@@ -1,112 +1,110 @@
 {
- "date": "2026-11-05",
- "generated": "2026-11-06T02:43:51.955995Z",
- "headline": "US stocks finished lower. The S&P 500 fell 4.36%, with 8 of 11 sectors up.",
+ "date": "2026-11-06",
+ "generated": "2026-11-07T01:59:32.256390Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 0.31%, with 0 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -4.36% today, -5.74% this month, +7.22% this year",
-    "Dow Jones: -3.44% today, +0.67% this month, +6.49% this year",
-    "Nasdaq Composite: -5.52% today, -11.71% this month, +4.65% this year",
-    "Russell 2000: -4.45% today, -2.27% this month, +8.84% this year"
+    "S&P 500: +0.31% today, -5.00% this month, +7.56% this year",
+    "Dow Jones: -0.46% today, +0.11% this month, +6.00% this year",
+    "Nasdaq Composite: +1.09% today, -9.61% this month, +5.78% this year",
+    "Russell 2000: +0.89% today, -1.43% this month, +9.80% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Consumer Discretionary +4.26%, Financials +3.51%, Communication +3.47%",
-    "Lagging: Energy -4.74%, Industrials -1.09%, Technology -0.01%",
-    "8 of 11 sectors rose."
+    "Leading: Communication -0.59%, Utilities -0.71%, Consumer Staples -0.75%",
+    "Lagging: Technology -8.00%, Industrials -4.12%, Consumer Discretionary -3.83%",
+    "0 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 28.18 (+69.66% today)",
-    "10-year Treasury yield: 4.84% (-0.06 pts today)",
-    "US dollar index: 101.62 (+0.11% today)",
-    "Crude oil: 91.25 (+3.55% today)",
-    "Gold: 4,080.10 (+0.17% today)",
-    "Bitcoin: 76,031.55 (-5.44% today)"
+    "VIX (fear gauge): 25.64 (-9.01% today)",
+    "10-year Treasury yield: 4.86% (+0.02 pts today)",
+    "US dollar index: 102.28 (+0.72% today)",
+    "Crude oil: 90.34 (-0.20% today)",
+    "Gold: 4,079.50 (-0.83% today)",
+    "Bitcoin: 75,860.14 (-0.11% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +3.55% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved -0.06 points to 4.84%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The VIX (expected volatility) jumped +69.66% to 28.2. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "Bitcoin moved -5.44%, showing appetite (or lack of it) for speculative assets.",
-    "A 9.0-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX fell -9.01% to 25.6, a sign of calming nerves.",
+    "The US dollar moved +0.72%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
+    "A 7.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.A) reports earnings",
-    "Fri Nov 6, Time TBA: Berkshire Hathaway (BRK.B) reports earnings",
     "Wed Nov 18, 2:00 PM ET: FOMC minutes (meeting of October 27-28)",
-    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation"
+    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation",
+    "Wed Dec 9, 2:00 PM ET: Fed interest-rate decision (FOMC)",
+    "Wed Jan 27, 2:00 PM ET: Fed interest-rate decision (FOMC)"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 38 out of 100 (Warning; higher is better) (-12 from 50 on 2026-11-03).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling.",
+    "Market health score 12 out of 100 (Danger; higher is better) (-26 from 38 on 2026-11-04).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+   "title": "A disturbing employment trend is hiding beneath the latest strong job numbers",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html",
-   "published": "Fri, 06 Nov 2026 02:40:15"
+   "link": "https://www.cnbc.com/2026/11/06/long-term-unemployment-october-jobs-report.html",
+   "published": "Fri, 06 Nov 2026 20:11:17"
   },
   {
-   "title": "Magnificent 7 loses $1 trillion. The most eye-popping stats from Thursday's tech stock plunge",
+   "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/05/stock-market-selloff-ai-fears.html",
-   "published": "Thu, 05 Nov 2026 23:39:32"
+   "link": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html",
+   "published": "Fri, 06 Nov 2026 21:07:07"
   },
   {
-   "title": "Elon Musk's Tesla and SpaceX lose over $420 billion in combined market cap after midterms",
+   "title": "Trump says Stephen Miller to replace Susie Wiles as White House chief of staff",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/05/tesla-spacex-stocks-fall-after-2026-midterms.html",
-   "published": "Thu, 05 Nov 2026 22:31:13"
+   "link": "https://www.cnbc.com/2026/11/06/trump-stephen-miller-wiles-chief-of-staff.html",
+   "published": "Fri, 06 Nov 2026 22:22:53"
   },
   {
-   "title": "Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now'",
+   "title": "Mississippi Senate: Longshot Ty Pinkins says he aimed to spoil Hyde-Smith, boost Colom vote",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
-   "published": "Thu, 05 Nov 2026 20:17:16"
+   "link": "https://www.cnbc.com/2026/11/06/mississippi-senate-ty-pinkins-colom-hyde-smith.html",
+   "published": "Fri, 06 Nov 2026 19:44:33"
   },
   {
-   "title": "Here\u2019s what\u2019s driving Iren\u2019s stock higher after a brutal selloff",
+   "title": "\u2018I have no financial safety net\u2019: I\u2019m 66, rely on Social Security and have just $500 in savings. What hope do I have?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/heres-whats-driving-irens-stock-higher-after-a-brutal-selloff-0ced09b0?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 01:07:00"
+   "link": "https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 21:45:00"
   },
   {
-   "title": "Cloudflare\u2019s stock mounts a big comeback after fastest sales surge in nearly 4 years",
+   "title": "Elon Musk opens the door for a big SpaceX acquisition",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/cloudflares-stock-mounts-a-big-comeback-after-fastest-sales-surge-in-nearly-4-years-d80d994d?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 01:06:00"
+   "link": "https://www.marketwatch.com/story/elon-musk-opens-the-door-for-a-big-spacex-acquisition-4f62bcad?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 21:45:00"
   },
   {
-   "title": "Here are the 2027 capital-gains tax rates for each income level",
+   "title": "Data centers run on debt. That was a problem for bonds this year \u2014 and it\u2019s only going to get worse.",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/here-are-the-2027-capital-gains-tax-rates-for-each-income-level-166fc306?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 23:48:00"
+   "link": "https://www.marketwatch.com/story/data-centers-run-on-debt-that-was-a-problem-for-bonds-this-year-and-its-only-going-to-get-worse-09c03be6?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 21:37:00"
   },
   {
-   "title": "Tech stocks log worst day since 2020 as carnage comes to the AI trade",
+   "title": "Nvidia, AMD and other chip stocks rebound \u2014 but is relief from the \u2018violent\u2019 selloff only temporary?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/tech-stocks-log-worst-day-since-2020-as-carnage-comes-to-the-ai-trade-56109845?mod=mw_rss_topstories",
-   "published": "Thu, 05 Nov 2026 22:48:00"
+   "link": "https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories",
+   "published": "Fri, 06 Nov 2026 21:24:00"
   }
  ],
  "summary": null,

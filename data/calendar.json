@@ -1,92 +1,8 @@
 {
- "generated": "2026-11-06T19:44:00.380996Z",
- "today": "2026-11-06",
+ "generated": "2026-11-07T01:49:07.346035Z",
+ "today": "2026-11-07",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-11-06",
-   "time": "12:15 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Supervision and Regulation. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At the University of Mississippi Banking and Finance Symposium, Oxford, Miss."
-   },
-   "source": "Federal Reserve",
-   "link": "https://olemiss.zoom.us/j/83516188915?pwd=wHQgE4aZSqUdn2oBqJ93yHDWHT56cY.1&from=addon"
-  },
-  {
-   "id": "2026-11-06-earnings-enbridge-enb-reports-earnings",
-   "date": "2026-11-06",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Enbridge (ENB) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.36.",
-   "extra": {
-    "market_cap_b": 105,
-    "eps_forecast": "$0.36"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-06-earnings-moderna-mrna-reports-earnings",
-   "date": "2026-11-06",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Moderna (MRNA) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of ($1.10).",
-   "extra": {
-    "market_cap_b": 96,
-    "eps_forecast": "($1.10)"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-06-earnings-brookfield-asset-management-bam-reports-earnings",
-   "date": "2026-11-06",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Brookfield Asset Management (BAM) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.44.",
-   "extra": {
-    "market_cap_b": 84,
-    "eps_forecast": "$0.44"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-06-data-g-19-consumer-credit",
-   "date": "2026-11-06",
-   "time": "3:00 PM",
-   "kind": "data",
-   "title": "G.19 - Consumer Credit",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-06-data-h-8-assets-and-liabilities-of-commercial-banks-i",
-   "date": "2026-11-06",
-   "time": "4:15 PM",
-   "kind": "data",
-   "title": "H.8 - Assets and Liabilities of Commercial Banks in the U.S.",
-   "importance": "low",
-   "why": "A routine Federal Reserve statistical release. ",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-11-09-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
    "date": "2026-11-09",
@@ -199,10 +115,10 @@
    "kind": "earnings",
    "title": "Petroleo Brasileiro S.A.- Petrobras (PBR) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.38.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.23.",
    "extra": {
-    "market_cap_b": 121,
-    "eps_forecast": "$1.38"
+    "market_cap_b": 126,
+    "eps_forecast": "$1.23"
    },
    "source": "",
    "link": null
@@ -216,7 +132,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 121,
+    "market_cap_b": 126,
     "eps_forecast": ""
    },
    "source": "",
@@ -231,7 +147,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $11.43.",
    "extra": {
-    "market_cap_b": 66,
+    "market_cap_b": 67,
     "eps_forecast": "$11.43"
    },
    "source": "",
@@ -363,7 +279,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
    "extra": {
-    "market_cap_b": 261,
+    "market_cap_b": 251,
     "eps_forecast": "$0.45"
    },
    "source": "",
@@ -378,7 +294,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
    "extra": {
-    "market_cap_b": 157,
+    "market_cap_b": 150,
     "eps_forecast": "$0.24"
    },
    "source": "",
@@ -393,7 +309,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
    "extra": {
-    "market_cap_b": 122,
+    "market_cap_b": 117,
     "eps_forecast": "$0.21"
    },
    "source": "",
@@ -651,6 +567,18 @@
    "time": "2:00 PM",
    "kind": "data",
    "title": "Senior Credit Officer Opinion Survey on Dealer Financing Terms (SCOOS)",
+   "importance": "low",
+   "why": "A routine Federal Reserve statistical release. ",
+   "extra": null,
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-22-data-h-6-money-stock-measures",
+   "date": "2026-12-22",
+   "time": "1:00 PM",
+   "kind": "data",
+   "title": "H.6 - Money Stock Measures",
    "importance": "low",
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,

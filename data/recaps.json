@@ -1,7 +1,67 @@
 {
- "generated": "2026-11-06T19:44:07.589042Z",
+ "generated": "2026-11-07T01:49:13.926804Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-06-earnings-berkshire-hathaway-brk-a-reports-earnings",
+   "date": "2026-11-06",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Berkshire Hathaway (BRK.A) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-06-earnings-berkshire-hathaway-brk-b-reports-earnings",
+   "date": "2026-11-06",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Berkshire Hathaway (BRK.B) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-06-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-06",
+   "time": "12:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://olemiss.zoom.us/j/83516188915?pwd=wHQgE4aZSqUdn2oBqJ93yHDWHT56cY.1&from=addon",
+   "lesson": 3
+  },
   {
    "headline": "Advanced Micro Devices reported earnings: beat estimates.",
    "bullets": [

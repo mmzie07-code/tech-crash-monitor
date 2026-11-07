@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T19:43:09.867895Z",
+ "generated": "2026-11-07T01:47:39.354457Z",
  "ai_summaries": false,
  "days": [
   {
@@ -183,6 +183,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $4.10 (no analyst consensus available).",
+      "Stock moved +9.3% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -199,6 +200,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $3.27 versus $3.06 expected, so the company beat estimates by 6.9%.",
+      "Stock moved -1.1% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -215,6 +217,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.48 versus $0.38 expected, so the company beat estimates by 26.3%.",
+      "Stock moved +6.1% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -231,6 +234,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.30 versus $0.30 expected, so the company matched estimates.",
+      "Stock moved -1.9% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -247,6 +251,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $8.90 versus $8.23 expected, so the company beat estimates by 8.1%.",
+      "Stock moved -2.0% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -263,6 +268,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.94 versus $1.71 expected, so the company beat estimates by 13.4%.",
+      "Stock moved +0.2% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -279,6 +285,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $3.16 versus $2.86 expected, so the company beat estimates by 10.5%.",
+      "Stock moved -3.5% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -295,6 +302,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.99 versus $1.87 expected, so the company beat estimates by 6.4%.",
+      "Stock moved +0.4% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -311,6 +319,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.18 versus $1.05 expected, so the company beat estimates by 12.4%.",
+      "Stock moved -1.4% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -327,6 +336,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $-0.09 versus $0.02 expected, so the company missed estimates by 550.0%.",
+      "Stock moved -8.3% on Nov 5.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -336,7 +346,7 @@
   },
   {
    "date": "2026-11-04",
-   "reported_total": 488,
+   "reported_total": 489,
    "top": [
     {
      "symbol": "MCD",
