@@ -1,22 +1,188 @@
 {
- "generated": "2026-11-07T01:47:39.354457Z",
+ "generated": "2026-11-09T22:43:43.868557Z",
  "ai_summaries": false,
  "days": [
   {
-   "date": "2026-11-06",
-   "reported_total": 105,
+   "date": "2026-11-09",
+   "reported_total": 227,
    "top": [
     {
-     "symbol": "ENB",
-     "name": "Enbridge",
-     "market_cap_b": 104.9,
+     "symbol": "CEG",
+     "name": "Constellation Energy",
+     "market_cap_b": 88.6,
      "eps": null,
-     "eps_estimate": 0.36,
+     "eps_estimate": 3.9,
      "surprise_pct": null,
      "timing": "time-pre-market",
      "bullets": [
       "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.36.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $3.90.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CEG&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "KKR",
+     "name": "KKR & Co.",
+     "market_cap_b": 86.6,
+     "eps": null,
+     "eps_estimate": 1.41,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.41.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KKR&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "B",
+     "name": "Barrick Mining",
+     "market_cap_b": 66.7,
+     "eps": null,
+     "eps_estimate": 0.74,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.74.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=B&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "OXY",
+     "name": "Occidental Petroleum",
+     "market_cap_b": 56.4,
+     "eps": null,
+     "eps_estimate": 1.43,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $1.43.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=OXY&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "SKYD",
+     "name": "Skydance",
+     "market_cap_b": 40.4,
+     "eps": null,
+     "eps_estimate": 0.18,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.18.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SKYD&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "TTWO",
+     "name": "Take-Two Interactive Software",
+     "market_cap_b": 40.2,
+     "eps": null,
+     "eps_estimate": 0.49,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $0.49.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TTWO&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "IX",
+     "name": "ORIX",
+     "market_cap_b": 38.0,
+     "eps": null,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IX&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "RKLB",
+     "name": "Rocket Lab",
+     "market_cap_b": 33.3,
+     "eps": null,
+     "eps_estimate": -0.05,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-0.05.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RKLB&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "ROIV",
+     "name": "Roivant Sciences",
+     "market_cap_b": 28.1,
+     "eps": null,
+     "eps_estimate": -0.52,
+     "surprise_pct": null,
+     "timing": "time-pre-market",
+     "bullets": [
+      "Scheduled to report before the open.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $-0.52.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROIV&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BAP",
+     "name": "Credicorp",
+     "market_cap_b": 27.6,
+     "eps": null,
+     "eps_estimate": 7.51,
+     "surprise_pct": null,
+     "timing": "time-after-hours",
+     "bullets": [
+      "Scheduled to report after the close.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $7.51.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BAP&type=8-K&dateb=&owner=include&count=10"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "reported_total": 142,
+   "top": [
+    {
+     "symbol": "ENB",
+     "name": "Enbridge",
+     "market_cap_b": 102.3,
+     "eps": 0.39,
+     "eps_estimate": 0.36,
+     "surprise_pct": 8.33,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.39 versus $0.36 expected, so the company beat estimates by 8.3%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -25,14 +191,14 @@
     {
      "symbol": "MRNA",
      "name": "Moderna",
-     "market_cap_b": 96.4,
-     "eps": null,
+     "market_cap_b": 101.5,
+     "eps": 0.38,
      "eps_estimate": -1.1,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 134.55,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-1.10.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.38 versus $-1.10 expected, so the company beat estimates by 134.6%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -41,14 +207,14 @@
     {
      "symbol": "BAM",
      "name": "Brookfield Asset Management",
-     "market_cap_b": 83.9,
-     "eps": null,
+     "market_cap_b": 84.7,
+     "eps": 0.47,
      "eps_estimate": 0.44,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 6.82,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.44.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.47 versus $0.44 expected, so the company beat estimates by 6.8%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -57,14 +223,14 @@
     {
      "symbol": "HUM",
      "name": "Humana",
-     "market_cap_b": 49.4,
-     "eps": null,
+     "market_cap_b": 52.1,
+     "eps": -0.7,
      "eps_estimate": -1.03,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 32.04,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-1.03.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $-0.70 versus $-1.03 expected, so the company beat estimates by 32.0%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -73,14 +239,14 @@
     {
      "symbol": "HMC",
      "name": "Honda Motor Company",
-     "market_cap_b": 47.0,
-     "eps": null,
+     "market_cap_b": 46.4,
+     "eps": 0.6,
      "eps_estimate": null,
      "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
+      "Earnings per share were $0.60 (no analyst consensus available).",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -89,14 +255,14 @@
     {
      "symbol": "VST",
      "name": "Vistra",
-     "market_cap_b": 37.9,
-     "eps": null,
+     "market_cap_b": 41.9,
+     "eps": 3.23,
      "eps_estimate": 2.94,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 9.86,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.94.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.23 versus $2.94 expected, so the company beat estimates by 9.9%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -105,14 +271,14 @@
     {
      "symbol": "UI",
      "name": "Ubiquiti",
-     "market_cap_b": 31.1,
-     "eps": null,
+     "market_cap_b": 35.9,
+     "eps": 5.29,
      "eps_estimate": 3.82,
-     "surprise_pct": null,
+     "surprise_pct": 38.48,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $3.82.",
+      "Earnings per share were $5.29 versus $3.82 expected, so the company beat estimates by 38.5%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -121,50 +287,50 @@
     {
      "symbol": "PPL",
      "name": "PPL",
-     "market_cap_b": 27.1,
-     "eps": null,
+     "market_cap_b": 26.9,
+     "eps": 0.54,
      "eps_estimate": 0.53,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1.89,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.53.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.54 versus $0.53 expected, so the company beat estimates by 1.9%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=PPL&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "ECHO",
-     "name": "EchoStar",
-     "market_cap_b": 26.2,
-     "eps": null,
-     "eps_estimate": -0.42,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.42.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ECHO&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "BIP",
      "name": "Brookfield Infrastructure Partners LP",
-     "market_cap_b": 17.3,
-     "eps": null,
-     "eps_estimate": 0.89,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "market_cap_b": 18.0,
+     "eps": 0.91,
+     "eps_estimate": 0.9,
+     "surprise_pct": 1.11,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.89.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.91 versus $0.90 expected, so the company beat estimates by 1.1%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BIP&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "BEN",
+     "name": "Franklin Templeton",
+     "market_cap_b": 17.1,
+     "eps": 0.94,
+     "eps_estimate": 0.78,
+     "surprise_pct": 20.51,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.94 versus $0.78 expected, so the company beat estimates by 20.5%.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BEN&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
@@ -3276,28 +3442,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FBK&type=8-K&dateb=&owner=include&count=10"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-12",
-   "reported_total": 1,
-   "top": [
-    {
-     "symbol": "NRIX",
-     "name": "Nurix Therapeutics",
-     "market_cap_b": 2.6,
-     "eps": 4.73,
-     "eps_estimate": -0.56,
-     "surprise_pct": 944.64,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $4.73 versus $-0.56 expected, so the company beat estimates by 944.6%.",
-      "Covers the quarter ending Aug 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NRIX&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   }

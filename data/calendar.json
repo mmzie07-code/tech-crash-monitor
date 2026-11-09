@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-07T01:49:07.346035Z",
- "today": "2026-11-07",
+ "generated": "2026-11-09T22:44:53.879774Z",
+ "today": "2026-11-09",
  "timezone": "US Eastern",
  "events": [
   {
@@ -19,21 +19,6 @@
    "link": null
   },
   {
-   "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
-   "date": "2026-11-09",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "KKR & (KKR) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.41.",
-   "extra": {
-    "market_cap_b": 88,
-    "eps_forecast": "$1.41"
-   },
-   "source": "",
-   "link": null
-  },
-  {
    "id": "2026-11-09-earnings-constellation-energy-ceg-reports-earnings",
    "date": "2026-11-09",
    "time": "Before open",
@@ -42,8 +27,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
    "extra": {
-    "market_cap_b": 85,
+    "market_cap_b": 89,
     "eps_forecast": "$3.90"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
+   "date": "2026-11-09",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "KKR & (KKR) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.41.",
+   "extra": {
+    "market_cap_b": 87,
+    "eps_forecast": "$1.41"
    },
    "source": "",
    "link": null
@@ -57,7 +57,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.74.",
    "extra": {
-    "market_cap_b": 66,
+    "market_cap_b": 67,
     "eps_forecast": "$0.74"
    },
    "source": "",
@@ -115,10 +115,10 @@
    "kind": "earnings",
    "title": "Petroleo Brasileiro S.A.- Petrobras (PBR) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.23.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.38.",
    "extra": {
-    "market_cap_b": 126,
-    "eps_forecast": "$1.23"
+    "market_cap_b": 119,
+    "eps_forecast": "$1.38"
    },
    "source": "",
    "link": null
@@ -132,7 +132,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 126,
+    "market_cap_b": 119,
     "eps_forecast": ""
    },
    "source": "",
@@ -147,7 +147,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $11.43.",
    "extra": {
-    "market_cap_b": 67,
+    "market_cap_b": 66,
     "eps_forecast": "$11.43"
    },
    "source": "",
@@ -177,7 +177,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.15.",
    "extra": {
-    "market_cap_b": 377,
+    "market_cap_b": 370,
     "eps_forecast": "$1.15"
    },
    "source": "",
@@ -192,7 +192,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.06.",
    "extra": {
-    "market_cap_b": 253,
+    "market_cap_b": 264,
     "eps_forecast": "$4.06"
    },
    "source": "",
@@ -216,13 +216,13 @@
   {
    "id": "2026-11-12-earnings-nu-holdings-nu-reports-earnings",
    "date": "2026-11-12",
-   "time": "Time TBA",
+   "time": "After close",
    "kind": "earnings",
    "title": "Nu Holdings (NU) reports earnings",
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
    "extra": {
-    "market_cap_b": 57,
+    "market_cap_b": 58,
     "eps_forecast": "$0.22"
    },
    "source": "",
@@ -279,7 +279,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
    "extra": {
-    "market_cap_b": 251,
+    "market_cap_b": 249,
     "eps_forecast": "$0.45"
    },
    "source": "",
@@ -294,7 +294,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
    "extra": {
-    "market_cap_b": 150,
+    "market_cap_b": 149,
     "eps_forecast": "$0.24"
    },
    "source": "",
@@ -311,6 +311,81 @@
    "extra": {
     "market_cap_b": 117,
     "eps_forecast": "$0.21"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-nvidia-nvda-reports-earnings",
+   "date": "2026-11-17",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "NVIDIA (NVDA) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.49.",
+   "extra": {
+    "market_cap_b": 4498,
+    "eps_forecast": "$2.49"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-home-depot-inc-the-hd-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Home Depot, Inc. (The) (HD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.86.",
+   "extra": {
+    "market_cap_b": 343,
+    "eps_forecast": "$3.86"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-bhp-group-limited-bhp-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "BHP Group Limited (BHP) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
+   "extra": {
+    "market_cap_b": 203,
+    "eps_forecast": ""
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-walt-disney-company-the-dis-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Walt Disney Company (The) (DIS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.67.",
+   "extra": {
+    "market_cap_b": 202,
+    "eps_forecast": "$1.67"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-pdd-holdings-pdd-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "PDD Holdings (PDD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.60.",
+   "extra": {
+    "market_cap_b": 118,
+    "eps_forecast": "$2.60"
    },
    "source": "",
    "link": null
@@ -340,6 +415,66 @@
    },
    "source": "Federal Reserve",
    "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "2026-11-18-earnings-palo-alto-networks-panw-reports-earnings",
+   "date": "2026-11-18",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Palo Alto Networks (PANW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.52.",
+   "extra": {
+    "market_cap_b": 257,
+    "eps_forecast": "$0.52"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-tjx-companies-inc-the-tjx-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "TJX Companies, Inc. (The) (TJX) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.33.",
+   "extra": {
+    "market_cap_b": 149,
+    "eps_forecast": "$1.33"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-lowe-s-companies-low-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Lowe's Companies (LOW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.86.",
+   "extra": {
+    "market_cap_b": 126,
+    "eps_forecast": "$2.86"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-target-tgt-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Target (TGT) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.04.",
+   "extra": {
+    "market_cap_b": 72,
+    "eps_forecast": "$2.04"
+   },
+   "source": "",
+   "link": null
   },
   {
    "id": "2026-11-19-data-weekly-jobless-claims",
@@ -583,6 +718,32 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-23-data-personal-income-and-spending-including-pce-infla",
+   "date": "2026-12-23",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Personal income and spending, including PCE inflation",
+   "importance": "high",
+   "why": "Includes the PCE price index, the inflation gauge the Fed watches most closely, plus how much households earn and spend. Hot inflation can push rate-cut hopes back and hit stocks.",
+   "extra": null,
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-23-data-gdp-third-estimate-revised-economic-growth",
+   "date": "2026-12-23",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "GDP third estimate: revised economic growth",
+   "importance": "medium",
+   "why": "A revision to the earlier GDP number. Big revisions can change the story about how strong the economy is.",
+   "extra": {
+    "bea_key": "gdp"
+   },
+   "source": "BEA",
    "link": null
   },
   {
