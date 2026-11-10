@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-09T22:44:35.020354Z",
- "asof": "2026-11-09",
+ "generated": "2026-11-10T04:29:39.187820Z",
+ "asof": "2026-11-10",
  "priced": [
   {
    "sym": "NARA",
@@ -257,7 +257,7 @@
     "first_day_pct": 17.9,
     "now_pct": -35.2,
     "last": 3.63,
-    "last_date": "2026-11-06",
+    "last_date": "2026-11-09",
     "first_trade": "2026-10-01"
    }
   },
@@ -285,7 +285,7 @@
    "perf": {
     "first_day_pct": -8.9,
     "now_pct": -32.9,
-    "last": 12.07,
+    "last": 12.08,
     "last_date": "2026-11-09",
     "first_trade": "2026-10-06"
    }
@@ -590,7 +590,7 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": -38.6,
-    "now_pct": -85.9,
+    "now_pct": -85.8,
     "last": 0.71,
     "last_date": "2026-11-09",
     "first_trade": "2026-08-12"
@@ -1899,7 +1899,7 @@
    "lockup": "2026-11-11",
    "perf": {
     "first_day_pct": -37.0,
-    "now_pct": -82.2,
+    "now_pct": -82.3,
     "last": 0.71,
     "last_date": "2026-11-09",
     "first_trade": "2026-05-15"
@@ -2566,20 +2566,6 @@
    "date": "2026-09-11",
    "amount": 29440000.0,
    "spac": false
-  },
-  {
-   "sym": "ALLNU",
-   "name": "Allarity Acquisition Corp.",
-   "date": "2026-09-10",
-   "amount": 92000000.0,
-   "spac": true
-  },
-  {
-   "sym": "ELEVU",
-   "name": "Elevation Acquisition Group Inc.",
-   "date": "2026-09-10",
-   "amount": 115000000.0,
-   "spac": true
   }
  ],
  "withdrawn_30d": 7,

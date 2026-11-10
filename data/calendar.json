@@ -1,83 +1,8 @@
 {
- "generated": "2026-11-09T22:44:53.879774Z",
- "today": "2026-11-09",
+ "generated": "2026-11-10T04:29:57.112181Z",
+ "today": "2026-11-10",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-09-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-11-09",
-   "time": "8:40 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Community Banking. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At the Mutual Board Summit Conference, Boston, Mass."
-   },
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-09-earnings-constellation-energy-ceg-reports-earnings",
-   "date": "2026-11-09",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Constellation Energy (CEG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.90.",
-   "extra": {
-    "market_cap_b": 89,
-    "eps_forecast": "$3.90"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-09-earnings-kkr-kkr-reports-earnings",
-   "date": "2026-11-09",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "KKR & (KKR) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.41.",
-   "extra": {
-    "market_cap_b": 87,
-    "eps_forecast": "$1.41"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-09-earnings-barrick-mining-b-reports-earnings",
-   "date": "2026-11-09",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Barrick Mining (B) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.74.",
-   "extra": {
-    "market_cap_b": 67,
-    "eps_forecast": "$0.74"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-09-earnings-occidental-petroleum-oxy-reports-earnings",
-   "date": "2026-11-09",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Occidental Petroleum (OXY) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.43.",
-   "extra": {
-    "market_cap_b": 56,
-    "eps_forecast": "$1.43"
-   },
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-10-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
    "date": "2026-11-10",
@@ -472,6 +397,81 @@
    "extra": {
     "market_cap_b": 72,
     "eps_forecast": "$2.04"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-walmart-wmt-reports-earnings",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Walmart (WMT) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.64.",
+   "extra": {
+    "market_cap_b": 996,
+    "eps_forecast": "$0.64"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-alibaba-group-holding-limited-baba-reports-earni",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Alibaba Group Holding Limited (BABA) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.31.",
+   "extra": {
+    "market_cap_b": 265,
+    "eps_forecast": "$1.31"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-intuit-intu-reports-earnings",
+   "date": "2026-11-19",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Intuit (INTU) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.47.",
+   "extra": {
+    "market_cap_b": 91,
+    "eps_forecast": "$2.47"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-netease-ntes-reports-earnings",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "NetEase (NTES) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.40.",
+   "extra": {
+    "market_cap_b": 83,
+    "eps_forecast": "$2.40"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-ross-stores-rost-reports-earnings",
+   "date": "2026-11-19",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Ross Stores (ROST) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.82.",
+   "extra": {
+    "market_cap_b": 74,
+    "eps_forecast": "$1.82"
    },
    "source": "",
    "link": null

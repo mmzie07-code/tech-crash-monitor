@@ -1,110 +1,109 @@
 {
- "date": "2026-11-06",
- "generated": "2026-11-07T01:59:32.256390Z",
- "headline": "US stocks finished higher. The S&P 500 rose 0.31%, with 0 of 11 sectors up.",
+ "date": "2026-11-09",
+ "generated": "2026-11-10T04:43:37.860751Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 2.35%, with 11 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +0.31% today, -5.00% this month, +7.56% this year",
-    "Dow Jones: -0.46% today, +0.11% this month, +6.00% this year",
-    "Nasdaq Composite: +1.09% today, -9.61% this month, +5.78% this year",
-    "Russell 2000: +0.89% today, -1.43% this month, +9.80% this year"
+    "S&P 500: +2.35% today, -3.35% this month, +10.08% this year",
+    "Dow Jones: +2.15% today, +1.42% this month, +8.28% this year",
+    "Nasdaq Composite: +2.74% today, -7.72% this month, +8.68% this year",
+    "Russell 2000: +3.15% today, +1.21% this month, +13.26% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Communication -0.59%, Utilities -0.71%, Consumer Staples -0.75%",
-    "Lagging: Technology -8.00%, Industrials -4.12%, Consumer Discretionary -3.83%",
-    "0 of 11 sectors rose."
+    "Leading: Industrials +3.82%, Technology +3.73%, Consumer Discretionary +2.92%",
+    "Lagging: Energy +0.52%, Consumer Staples +0.90%, Real Estate +1.45%",
+    "11 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 25.64 (-9.01% today)",
-    "10-year Treasury yield: 4.86% (+0.02 pts today)",
-    "US dollar index: 102.28 (+0.72% today)",
-    "Crude oil: 90.34 (-0.20% today)",
-    "Gold: 4,079.50 (-0.83% today)",
-    "Bitcoin: 75,860.14 (-0.11% today)"
+    "VIX (fear gauge): 19.92 (-22.31% today)",
+    "10-year Treasury yield: 4.86% (+0.00 pts today)",
+    "US dollar index: 101.68 (+0.03% today)",
+    "Crude oil: 85.81 (-1.20% today)",
+    "Gold: 4,122.00 (+0.18% today)",
+    "Bitcoin: 74,329.31 (-0.34% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The VIX fell -9.01% to 25.6, a sign of calming nerves.",
-    "The US dollar moved +0.72%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "A 7.4-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX fell -22.31% to 19.9, a sign of calming nerves.",
+    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
+    "Tue Nov 17, After close: NVIDIA (NVDA) reports earnings",
     "Wed Nov 18, 2:00 PM ET: FOMC minutes (meeting of October 27-28)",
-    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation",
-    "Wed Dec 9, 2:00 PM ET: Fed interest-rate decision (FOMC)",
-    "Wed Jan 27, 2:00 PM ET: Fed interest-rate decision (FOMC)"
+    "Thu Nov 19, Before open: Walmart (WMT) reports earnings",
+    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 12 out of 100 (Danger; higher is better) (-26 from 38 on 2026-11-04).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Market health score 25 out of 100 (Danger; higher is better) (+13 from 12 on 2026-11-05).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "A disturbing employment trend is hiding beneath the latest strong job numbers",
+   "title": "Jensen Huang affair puts Nvidia's future at risk, with no clear successor to the renowned CEO",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/06/long-term-unemployment-october-jobs-report.html",
-   "published": "Fri, 06 Nov 2026 20:11:17"
+   "link": "https://www.cnbc.com/2026/11/09/jensen-huang-affair-nvidia-succession.html",
+   "published": "Mon, 09 Nov 2026 22:56:39"
   },
   {
-   "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+   "title": "Trump says Jensen Huang told him Monday he didn't know paramour 'was a spy'",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html",
-   "published": "Fri, 06 Nov 2026 21:07:07"
+   "link": "https://www.cnbc.com/2026/11/09/trump-jensen-huang-nvidia-chinese-spy.html",
+   "published": "Tue, 10 Nov 2026 01:43:47"
   },
   {
-   "title": "Trump says Stephen Miller to replace Susie Wiles as White House chief of staff",
+   "title": "Hegseth impeachment articles introduced by Rep. Massie",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/06/trump-stephen-miller-wiles-chief-of-staff.html",
-   "published": "Fri, 06 Nov 2026 22:22:53"
+   "link": "https://www.cnbc.com/2026/11/09/pete-hegseth-impeachment-articles-massie.html",
+   "published": "Mon, 09 Nov 2026 22:41:12"
   },
   {
-   "title": "Mississippi Senate: Longshot Ty Pinkins says he aimed to spoil Hyde-Smith, boost Colom vote",
+   "title": "China exports, imports soar past expectations in October \u2014 surplus narrows sharply",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/06/mississippi-senate-ty-pinkins-colom-hyde-smith.html",
-   "published": "Fri, 06 Nov 2026 19:44:33"
+   "link": "https://www.cnbc.com/2026/11/10/china-trade-october-exports-imports-surplus-.html",
+   "published": "Tue, 10 Nov 2026 03:56:15"
   },
   {
-   "title": "\u2018I have no financial safety net\u2019: I\u2019m 66, rely on Social Security and have just $500 in savings. What hope do I have?",
+   "title": "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 21:45:00"
+   "link": "https://www.marketwatch.com/story/we-had-the-worst-fight-weve-ever-had-i-want-my-husband-to-retire-at-65-but-i-dont-want-to-lose-his-280-000-salary-48511469?mod=mw_rss_topstories",
+   "published": "Tue, 10 Nov 2026 03:38:00"
   },
   {
-   "title": "Elon Musk opens the door for a big SpaceX acquisition",
+   "title": "The short seller who saw signs of Nvidia\u2019s China scandal months ago claims Megaspeed isn\u2019t the only company helping China access chips",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/elon-musk-opens-the-door-for-a-big-spacex-acquisition-4f62bcad?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 21:45:00"
+   "link": "https://www.marketwatch.com/story/the-short-seller-who-saw-signs-of-nvidias-china-scandal-months-ago-claims-megaspeed-isnt-the-ony-company-helping-china-access-chips-9877f544?mod=mw_rss_topstories",
+   "published": "Tue, 10 Nov 2026 00:48:00"
   },
   {
-   "title": "Data centers run on debt. That was a problem for bonds this year \u2014 and it\u2019s only going to get worse.",
+   "title": "This retired professor has reinvented himself \u2014 as a Taylor Swift scholar",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/data-centers-run-on-debt-that-was-a-problem-for-bonds-this-year-and-its-only-going-to-get-worse-09c03be6?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 21:37:00"
+   "link": "https://www.marketwatch.com/story/this-retired-professor-has-reinvented-himself-as-a-taylor-swift-scholar-88456c8d?mod=mw_rss_topstories",
+   "published": "Mon, 09 Nov 2026 23:52:00"
   },
   {
-   "title": "Nvidia, AMD and other chip stocks rebound \u2014 but is relief from the \u2018violent\u2019 selloff only temporary?",
+   "title": "Rocket Lab shares dip after the company\u2019s \u2018defining\u2019 quarter misses the mark",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories",
-   "published": "Fri, 06 Nov 2026 21:24:00"
+   "link": "https://www.marketwatch.com/story/rocket-lab-shares-dip-after-the-companys-defining-quarter-misses-the-mark-9f74c3b5?mod=mw_rss_topstories",
+   "published": "Mon, 09 Nov 2026 22:49:00"
   }
  ],
  "summary": null,
