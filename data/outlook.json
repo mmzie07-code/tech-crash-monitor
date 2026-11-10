@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-10T04:30:04.296135Z",
- "as_of": "2026-11-09",
+ "generated": "2026-11-10T20:02:07.139695Z",
+ "as_of": "2026-11-10",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10344,
+    "n": 10345,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,7 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2576,
+    "n": 2577,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -54,24 +54,6 @@
      "time": "4:00 AM",
      "title": "Fed speaks: Governor Christopher J. Waller",
      "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "After close",
-     "title": "Petroleo Brasileiro S.A.- Petrobras (PBR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "After close",
-     "title": "Petroleo Brasileiro S.A.- Petrobras (PBR.A) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "Before open",
-     "title": "Transdigm Group Incorporated (TDG) reports earnings",
-     "importance": "medium"
     }
    ]
   },
@@ -80,7 +62,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10344,
+    "n": 10345,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -93,7 +75,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2576,
+    "n": 2577,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -120,7 +102,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10340,
+    "n": 10341,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -168,51 +150,9 @@
      "importance": "medium"
     },
     {
-     "date": "2026-11-10",
-     "time": "After close",
-     "title": "Petroleo Brasileiro S.A.- Petrobras (PBR) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "After close",
-     "title": "Petroleo Brasileiro S.A.- Petrobras (PBR.A) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "Before open",
-     "title": "Transdigm Group Incorporated (TDG) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-11-12",
      "time": "10:00 AM",
      "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Cisco Systems (CSCO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Applied Materials (AMAT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "Before open",
-     "title": "Brookfield (BN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Nu Holdings (NU) reports earnings",
      "importance": "medium"
     },
     {
@@ -234,7 +174,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10324,
+    "n": 10325,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -247,7 +187,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2560,
+    "n": 2561,
     "up": 63,
     "median": 1.1,
     "p10": -4.1,
@@ -270,21 +210,9 @@
    ],
    "events": [
     {
-     "date": "2026-11-17",
-     "time": "After close",
-     "title": "NVIDIA (NVDA) reports earnings",
-     "importance": "high"
-    },
-    {
      "date": "2026-11-18",
      "time": "2:00 PM",
      "title": "FOMC minutes (meeting of October 27-28)",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Walmart (WMT) reports earnings",
      "importance": "high"
     },
     {
@@ -306,7 +234,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10093,
+    "n": 10094,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -319,7 +247,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2402,
+    "n": 2403,
     "up": 85,
     "median": 10.7,
     "p10": -7.5,
