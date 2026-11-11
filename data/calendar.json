@@ -1,38 +1,8 @@
 {
- "generated": "2026-11-10T20:01:59.888132Z",
- "today": "2026-11-10",
+ "generated": "2026-11-11T01:53:03.383126Z",
+ "today": "2026-11-11",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-10-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-11-10",
-   "time": "6:30 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Economic Outlook. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At A View from the Federal Reserve Board (virtual)"
-   },
-   "source": "Federal Reserve",
-   "link": "https://us06web.zoom.us/j/82913231287?pwd=LVtmihv49gUcWXnQz4q9by5b5aixiP.1"
-  },
-  {
-   "id": "2026-11-10-fed-fed-speaks-governor-christopher-j-waller",
-   "date": "2026-11-10",
-   "time": "4:00 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Christopher J. Waller",
-   "importance": "medium",
-   "why": "Topic: Economic Outlook. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Christopher J. Waller",
-    "location": "At The Bank of England and its Watchers Conference 2026, London, United Kingdom"
-   },
-   "source": "Federal Reserve",
-   "link": "https://teams.microsoft.com/meet/3555893727932509?p=Jzb3qhkJr8SKStNZlD"
-  },
   {
    "id": "2026-11-12-fed-fed-speaks-governor-michael-s-barr",
    "date": "2026-11-12",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T20:02:07.139695Z",
+ "generated": "2026-11-11T01:53:10.515926Z",
  "as_of": "2026-11-10",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,27 +35,14 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.4% below it).",
-    "VIX at 19.9: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.86%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (3.8% below it).",
+    "VIX at 19.5: investors are relatively calm.",
+    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
    ],
    "bear": [
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
-   "events": [
-    {
-     "date": "2026-11-10",
-     "time": "6:30 PM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "4:00 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -88,14 +75,21 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.4% below it).",
-    "VIX at 19.9: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.86%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (3.8% below it).",
+    "VIX at 19.5: investors are relatively calm.",
+    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
    ],
    "bear": [
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
-   "events": []
+   "events": [
+    {
+     "date": "2026-11-12",
+     "time": "10:00 AM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    }
+   ]
   },
   "week": {
    "label": "Next week",
@@ -128,27 +122,15 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.4% below it).",
-    "VIX at 19.9: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.86%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (3.8% below it).",
+    "VIX at 19.5: investors are relatively calm.",
+    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
    ],
    "bear": [
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-10",
-     "time": "6:30 PM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-10",
-     "time": "4:00 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-12",
      "time": "10:00 AM",
@@ -166,6 +148,12 @@
      "time": "10:50 AM",
      "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
      "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
+     "importance": "high"
     }
    ]
   },
@@ -200,9 +188,9 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.4% below it).",
-    "VIX at 19.9: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.86%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (3.8% below it).",
+    "VIX at 19.5: investors are relatively calm.",
+    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
    ],
    "bear": [
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
@@ -260,10 +248,10 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.4% below it).",
-    "VIX at 19.9: investors are relatively calm.",
-    "10-year yield fell 0.38 points in a month to 4.86%, which eases pressure on stocks.",
-    "QQQ trailing P/E is 28.0, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "S&P 500 is close to its 1-year high (3.8% below it).",
+    "VIX at 19.5: investors are relatively calm.",
+    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks.",
+    "QQQ trailing P/E is 27.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",

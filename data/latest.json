@@ -1,6 +1,6 @@
 {
  "date": "2026-11-09",
- "generated": "2026-11-10T03:44:56.130350Z",
+ "generated": "2026-11-11T01:24:43.909546Z",
  "level": "Severe",
  "health": 25,
  "score": 75,
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 28.0,
+   "value": 27.8,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 28.0; price is -0.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 27.8; price is -0.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.18,
+   "value": 0.34,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.86%, +0.18 pts over 3 months.",
+   "detail": "10Y yield 4.98%, +0.34 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 19.9,
+   "value": 19.5,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 19.9 is 1.18x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 19.5 is 1.14x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -113,7 +113,7 @@
    "status": "warn",
    "value": 1.63,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1421M in 90 days vs $872M per-90d baseline (1.63x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1424M in 90 days vs $873M per-90d baseline (1.63x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -1135,9 +1135,9 @@
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 63.7,
+ "ai_heat": 63.6,
  "ai_health": 36,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-11-10T20:04:08.214321Z"
+ "ai_updated": "2026-11-11T01:55:23.518017Z"
 }

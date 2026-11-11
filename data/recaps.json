@@ -1,7 +1,47 @@
 {
- "generated": "2026-11-10T20:02:07.176937Z",
+ "generated": "2026-11-11T01:53:10.578436Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-10-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-10",
+   "time": "6:30 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://us06web.zoom.us/j/82913231287?pwd=LVtmihv49gUcWXnQz4q9by5b5aixiP.1",
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-10-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-10",
+   "time": "4:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://teams.microsoft.com/meet/3555893727932509?p=Jzb3qhkJr8SKStNZlD",
+   "lesson": 3
+  },
   {
    "id": "2026-11-09-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
    "date": "2026-11-09",
