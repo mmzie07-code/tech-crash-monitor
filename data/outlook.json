@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T19:53:07.262796Z",
+ "generated": "2026-11-12T02:52:33.083451Z",
  "as_of": "2026-11-11",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,14 +35,21 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.8% below it).",
-    "VIX at 19.5: investors are relatively calm.",
-    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (2.6% below it).",
+    "VIX at 17.5: investors are relatively calm."
    ],
    "bear": [
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
+    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
-   "events": []
+   "events": [
+    {
+     "date": "2026-11-12",
+     "time": "10:00 AM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    }
+   ]
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -75,18 +82,24 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.8% below it).",
-    "VIX at 19.5: investors are relatively calm.",
-    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (2.6% below it).",
+    "VIX at 17.5: investors are relatively calm."
    ],
    "bear": [
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
+    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
    "events": [
     {
-     "date": "2026-11-12",
-     "time": "10:00 AM",
-     "title": "Fed speaks: Governor Michael S. Barr",
+     "date": "2026-11-13",
+     "time": "7:00 PM",
+     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "10:50 AM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
      "importance": "medium"
     }
    ]
@@ -122,12 +135,12 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.8% below it).",
-    "VIX at 19.5: investors are relatively calm.",
-    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (2.6% below it).",
+    "VIX at 17.5: investors are relatively calm."
    ],
    "bear": [
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -188,12 +201,12 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.8% below it).",
-    "VIX at 19.5: investors are relatively calm.",
-    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks."
+    "S&P 500 is close to its 1-year high (2.6% below it).",
+    "VIX at 17.5: investors are relatively calm."
    ],
    "bear": [
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -248,13 +261,13 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.8% below it).",
-    "VIX at 19.5: investors are relatively calm.",
-    "10-year yield fell 0.26 points in a month to 4.98%, which eases pressure on stocks.",
-    "QQQ trailing P/E is 27.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "S&P 500 is close to its 1-year high (2.6% below it).",
+    "VIX at 17.5: investors are relatively calm.",
+    "QQQ trailing P/E is 28.4, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
+    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [

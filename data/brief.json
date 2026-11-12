@@ -1,43 +1,41 @@
 {
- "date": "2026-11-10",
- "generated": "2026-11-11T02:03:50.924533Z",
- "headline": "US stocks finished lower. The S&P 500 fell 0.38%, with 11 of 11 sectors up.",
+ "date": "2026-11-11",
+ "generated": "2026-11-12T03:07:13.235873Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 1.31%, with 6 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.38% today, -3.67% this month, +9.66% this year",
-    "Dow Jones: -0.30% today, +0.74% this month, +7.96% this year",
-    "Nasdaq Composite: -0.74% today, -8.00% this month, +7.88% this year",
-    "Russell 2000: -0.68% today, +0.96% this month, +12.49% this year"
+    "S&P 500: +1.31% today, -2.38% this month, +11.09% this year",
+    "Dow Jones: +0.49% today, +1.58% this month, +8.48% this year",
+    "Nasdaq Composite: +1.60% today, -6.39% this month, +9.60% this year",
+    "Russell 2000: +0.88% today, +2.26% this month, +13.48% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Industrials +3.82%, Technology +3.73%, Consumer Discretionary +2.92%",
-    "Lagging: Energy +0.52%, Consumer Staples +0.90%, Real Estate +1.45%",
-    "11 of 11 sectors rose."
+    "Leading: Financials +0.52%, Energy +0.44%, Communication +0.37%",
+    "Lagging: Technology -1.15%, Materials -0.17%, Utilities -0.14%",
+    "6 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 19.46 (-2.31% today)",
-    "10-year Treasury yield: 4.98% (+0.12 pts today)",
-    "US dollar index: 102.27 (+0.61% today)",
-    "Crude oil: 86.61 (-0.28% today)",
-    "Gold: 4,034.80 (-1.94% today)",
-    "Bitcoin: 73,411.36 (-2.41% today)"
+    "VIX (fear gauge): 17.49 (-10.12% today)",
+    "10-year Treasury yield: 5.00% (+0.02 pts today)",
+    "US dollar index: 102.88 (+0.64% today)",
+    "Crude oil: 85.98 (-0.07% today)",
+    "Gold: 3,991.60 (-0.96% today)",
+    "Bitcoin: 73,842.24 (+0.17% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The 10-year yield moved +0.12 points to 4.98%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "The US dollar moved +0.61%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them.",
-    "Gold moved -1.94%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 3.3-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX fell -10.12% to 17.5, a sign of calming nerves.",
+    "The US dollar moved +0.64%. A stronger dollar can squeeze the overseas profits of US multinationals; a weaker one tends to help them."
    ]
   },
   {
@@ -52,60 +50,60 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 25 out of 100 (Danger; higher is better) (+13 from 12 on 2026-11-05).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Market health score 38 out of 100 (Warning; higher is better) (+13 from 25 on 2026-11-09).",
+    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Nvidia's Huang tries to project 'business as usual' in return to office after affair revelation",
+   "title": "Nvidia prepares to oust Jensen Huang, WSJ reports \u2014 stock sinks",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/10/nvidia-jensen-huang-affair-office.html",
-   "published": "Tue, 10 Nov 2026 23:11:34"
+   "link": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html",
+   "published": "Thu, 12 Nov 2026 00:21:27"
   },
   {
-   "title": "Hegseth impeachment effort torpedoed in House",
+   "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/10/pete-hegseth-impeachment-massie-iran.html",
-   "published": "Tue, 10 Nov 2026 23:46:41"
+   "link": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html",
+   "published": "Wed, 11 Nov 2026 22:46:29"
   },
   {
-   "title": "White House vows to press ahead with tariffs despite midterm backlash over rising prices",
+   "title": "What we know so far about Nvidia partner Megaspeed\u2019s Asia footprint",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html",
-   "published": "Tue, 10 Nov 2026 21:45:46"
+   "link": "https://www.cnbc.com/2026/11/12/nvidia-megaspeed-alice-huang-jensen-.html",
+   "published": "Thu, 12 Nov 2026 03:02:03"
   },
   {
-   "title": "CoreWeave beats on revenue and lifts guidance, easing AI slowdown concerns",
+   "title": "Cramer's stance on Nvidia's stock amid reports that CEO Jensen Huang may be ousted",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html",
-   "published": "Tue, 10 Nov 2026 23:16:15"
+   "link": "https://www.cnbc.com/investingclub/2026/11/11/jim-cramer-jensen-huang-nvidia-stock-advice.html",
+   "published": "Thu, 12 Nov 2026 01:14:21"
   },
   {
-   "title": "One reason Children\u2019s Place is filing for bankruptcy? Not enough children.",
+   "title": "Nvidia\u2019s stock drops as the board reportedly prepares to remove CEO Jensen Huang",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/one-reason-the-childrens-place-is-going-bankrupt-not-enough-children-b275eab0?mod=mw_rss_topstories",
-   "published": "Wed, 11 Nov 2026 01:54:00"
+   "link": "https://www.marketwatch.com/story/nvidias-stock-drops-as-the-board-reportedly-prepares-to-remove-ceo-jensen-huang-9edee58d?mod=mw_rss_topstories",
+   "published": "Thu, 12 Nov 2026 02:52:00"
   },
   {
-   "title": "CoreWeave\u2019s stock pops as new financing playbook eases debt concerns",
+   "title": "\u2018I\u2019m sick of flying\u2019: I paid for priority boarding, but the overhead bins were full. Was I duped?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/coreweaves-stock-pops-as-new-financing-playbook-eases-debt-concerns-70241525?mod=mw_rss_topstories",
-   "published": "Wed, 11 Nov 2026 01:12:00"
+   "link": "https://www.marketwatch.com/story/im-sick-of-flying-i-paid-for-priority-boarding-but-the-overhead-bins-were-full-was-i-duped-0badcc80?mod=mw_rss_topstories",
+   "published": "Thu, 12 Nov 2026 02:45:00"
   },
   {
-   "title": "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?",
+   "title": "I\u2019m 63 and spending $95,000 on a roof deck for my $500,000 home. Am I being extravagant?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/we-had-the-worst-fight-weve-ever-had-i-want-my-husband-to-retire-at-65-but-i-dont-want-to-lose-his-280-000-salary-48511469?mod=mw_rss_topstories",
-   "published": "Wed, 11 Nov 2026 00:30:00"
+   "link": "https://www.marketwatch.com/story/im-63-and-want-to-spend-95-000-on-a-roof-deck-for-my-500-000-home-is-that-a-good-investment-f1a59c27?mod=mw_rss_topstories",
+   "published": "Thu, 12 Nov 2026 02:31:00"
   },
   {
-   "title": "Should a widow leave her late partner\u2019s home to her stepkids \u2014 or cut off contact with them?",
+   "title": "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/she-can-always-change-her-mind-should-a-widow-leave-the-family-home-to-her-stepchildren-649b06af?mod=mw_rss_topstories",
-   "published": "Wed, 11 Nov 2026 00:00:00"
+   "link": "https://www.marketwatch.com/story/nasdaq-futures-fall-as-nvidia-sinks-8-after-hours-on-report-board-may-oust-huang-e99b898d?mod=mw_rss_topstories",
+   "published": "Thu, 12 Nov 2026 01:12:00"
   }
  ],
  "summary": null,

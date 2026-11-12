@@ -1,12 +1,12 @@
 {
- "date": "2026-11-09",
- "generated": "2026-11-11T01:24:43.909546Z",
- "level": "Severe",
- "health": 25,
- "score": 75,
+ "date": "2026-11-10",
+ "generated": "2026-11-12T02:24:22.507532Z",
+ "level": "High",
+ "health": 38,
+ "score": 62,
  "stretch": 33,
- "trigger": 83,
- "warnings": 5,
+ "trigger": 67,
+ "warnings": 4,
  "evaluated": 9,
  "total": 10,
  "checks": [
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 27.8,
+   "value": 28.4,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 27.8; price is -0.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 28.4; price is -1.0% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -6.1,
+   "value": -7.2,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -6.1% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -7.2% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.34,
+   "value": 0.3,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.98%, +0.34 pts over 3 months.",
+   "detail": "10Y yield 5.00%, +0.30 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -74,10 +74,10 @@
    "id": 6,
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
-   "status": "warn",
-   "value": -2.3,
+   "status": "ok",
+   "value": -1.5,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -2.3% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -1.5% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "ok",
-   "value": 19.5,
+   "value": 17.5,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 19.5 is 1.14x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 17.5 is 1.02x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -10.6,
+   "value": -11.2,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -10.6% from 1y high; below 50-day, below 200-day avg.",
+   "detail": "QQQ -11.2% from 1y high; below 50-day, below 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -123,20 +123,16 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "warn",
-   "value": -5.4,
+   "value": -6.9,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -10.0% over 10 days (-5.4 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -13.3% over 10 days (-6.9 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 679.35,
+ "qqq_last": 674.76,
  "qqq_series": [
-  [
-   "2025-11-11",
-   621.57
-  ],
   [
    "2025-11-12",
    621.08
@@ -1132,12 +1128,16 @@
   [
    "2026-11-09",
    679.35
+  ],
+  [
+   "2026-11-10",
+   674.76
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 62.2,
- "ai_health": 38,
+ "ai_heat": 63.1,
+ "ai_health": 37,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-11-11T19:54:51.708770Z"
+ "ai_updated": "2026-11-12T02:54:30.829715Z"
 }
