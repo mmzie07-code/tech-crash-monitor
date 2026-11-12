@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-10T04:29:39.187820Z",
- "asof": "2026-11-10",
+ "generated": "2026-11-12T20:29:49.487728Z",
+ "asof": "2026-11-12",
  "priced": [
   {
    "sym": "NARA",
@@ -14,9 +14,9 @@
    "lockup": "2027-05-01",
    "perf": {
     "first_day_pct": 8.0,
-    "now_pct": 6.5,
-    "last": 10.65,
-    "last_date": "2026-11-09",
+    "now_pct": 6.1,
+    "last": 10.61,
+    "last_date": "2026-11-12",
     "first_trade": "2026-11-02"
    }
   },
@@ -32,9 +32,9 @@
    "lockup": "2027-04-28",
    "perf": {
     "first_day_pct": -6.3,
-    "now_pct": 5.9,
-    "last": 16.94,
-    "last_date": "2026-11-09",
+    "now_pct": 4.1,
+    "last": 16.66,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-30"
    }
   },
@@ -50,9 +50,9 @@
    "lockup": "2027-04-28",
    "perf": {
     "first_day_pct": -0.7,
-    "now_pct": -17.3,
-    "last": 12.4,
-    "last_date": "2026-11-09",
+    "now_pct": -10.1,
+    "last": 13.48,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-30"
    }
   },
@@ -102,9 +102,9 @@
    "lockup": "2027-04-21",
    "perf": {
     "first_day_pct": 66.7,
-    "now_pct": 68.7,
-    "last": 30.36,
-    "last_date": "2026-11-09",
+    "now_pct": 83.6,
+    "last": 33.05,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-23"
    }
   },
@@ -132,9 +132,9 @@
    "lockup": "2027-04-14",
    "perf": {
     "first_day_pct": 24.4,
-    "now_pct": 3.7,
-    "last": 18.67,
-    "last_date": "2026-11-09",
+    "now_pct": 5.5,
+    "last": 18.99,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-16"
    }
   },
@@ -161,9 +161,9 @@
    "lockup": "2027-04-13",
    "perf": {
     "first_day_pct": 3.8,
-    "now_pct": 51.1,
-    "last": 6.42,
-    "last_date": "2026-11-09",
+    "now_pct": 48.5,
+    "last": 6.31,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-15"
    }
   },
@@ -179,9 +179,9 @@
    "lockup": "2027-04-13",
    "perf": {
     "first_day_pct": 18.2,
-    "now_pct": -16.4,
-    "last": 13.38,
-    "last_date": "2026-11-09",
+    "now_pct": -7.1,
+    "last": 14.86,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-15"
    }
   },
@@ -208,9 +208,9 @@
    "lockup": "2027-04-07",
    "perf": {
     "first_day_pct": -12.3,
-    "now_pct": 3.3,
-    "last": 12.39,
-    "last_date": "2026-11-09",
+    "now_pct": 1.7,
+    "last": 12.2,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-09"
    }
   },
@@ -226,9 +226,9 @@
    "lockup": "2027-04-07",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": -2.9,
-    "last": 13.59,
-    "last_date": "2026-11-09",
+    "now_pct": 0.8,
+    "last": 14.11,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-09"
    }
   },
@@ -255,9 +255,9 @@
    "lockup": "2027-03-30",
    "perf": {
     "first_day_pct": 17.9,
-    "now_pct": -35.2,
-    "last": 3.63,
-    "last_date": "2026-11-09",
+    "now_pct": -42.0,
+    "last": 3.25,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-01"
    }
   },
@@ -284,9 +284,9 @@
    "lockup": "2027-03-29",
    "perf": {
     "first_day_pct": -8.9,
-    "now_pct": -32.9,
-    "last": 12.08,
-    "last_date": "2026-11-09",
+    "now_pct": -31.8,
+    "last": 12.28,
+    "last_date": "2026-11-12",
     "first_trade": "2026-10-06"
    }
   },
@@ -314,9 +314,9 @@
    "lockup": "2027-03-24",
    "perf": {
     "first_day_pct": 13.8,
-    "now_pct": -18.8,
-    "last": 13.8,
-    "last_date": "2026-11-09",
+    "now_pct": -11.3,
+    "last": 15.09,
+    "last_date": "2026-11-12",
     "first_trade": "2026-09-25"
    }
   },
@@ -354,9 +354,9 @@
    "lockup": "2027-03-17",
    "perf": {
     "first_day_pct": -2.8,
-    "now_pct": -22.9,
-    "last": 9.25,
-    "last_date": "2026-11-09",
+    "now_pct": -10.5,
+    "last": 10.74,
+    "last_date": "2026-11-12",
     "first_trade": "2026-09-18"
    }
   },
@@ -372,9 +372,9 @@
    "lockup": "2027-03-17",
    "perf": {
     "first_day_pct": -11.7,
-    "now_pct": -45.2,
-    "last": 8.22,
-    "last_date": "2026-11-09",
+    "now_pct": -38.5,
+    "last": 9.22,
+    "last_date": "2026-11-12",
     "first_trade": "2026-09-18"
    }
   },
@@ -503,9 +503,9 @@
    "lockup": "2027-02-15",
    "perf": {
     "first_day_pct": -14.2,
-    "now_pct": -17.0,
-    "last": 14.53,
-    "last_date": "2026-11-09",
+    "now_pct": -18.1,
+    "last": 14.32,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-19"
    }
   },
@@ -554,9 +554,9 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": 11.4,
-    "now_pct": -33.7,
-    "last": 14.59,
-    "last_date": "2026-11-09",
+    "now_pct": -35.0,
+    "last": 14.29,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-12"
    }
   },
@@ -572,9 +572,9 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": 41.1,
-    "last": 18.34,
-    "last_date": "2026-11-09",
+    "now_pct": 47.1,
+    "last": 19.12,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-12"
    }
   },
@@ -590,9 +590,9 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": -38.6,
-    "now_pct": -85.8,
-    "last": 0.71,
-    "last_date": "2026-11-09",
+    "now_pct": -86.2,
+    "last": 0.69,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-12"
    }
   },
@@ -608,9 +608,9 @@
    "lockup": "2027-02-03",
    "perf": {
     "first_day_pct": -12.5,
-    "now_pct": -0.5,
-    "last": 7.96,
-    "last_date": "2026-11-09",
+    "now_pct": 5.0,
+    "last": 8.4,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-07"
    }
   },
@@ -626,9 +626,9 @@
    "lockup": "2027-02-03",
    "perf": {
     "first_day_pct": 1.4,
-    "now_pct": -25.8,
-    "last": 13.35,
-    "last_date": "2026-11-09",
+    "now_pct": -28.4,
+    "last": 12.88,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-07"
    }
   },
@@ -644,9 +644,9 @@
    "lockup": "2027-02-03",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": -9.6,
-    "last": 14.46,
-    "last_date": "2026-11-09",
+    "now_pct": -3.8,
+    "last": 15.4,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-07"
    }
   },
@@ -684,9 +684,9 @@
    "lockup": "2027-02-02",
    "perf": {
     "first_day_pct": 65.6,
-    "now_pct": 8.1,
-    "last": 19.46,
-    "last_date": "2026-11-09",
+    "now_pct": 14.6,
+    "last": 20.63,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-06"
    }
   },
@@ -713,9 +713,9 @@
    "lockup": "2027-02-01",
    "perf": {
     "first_day_pct": 28.8,
-    "now_pct": -6.1,
-    "last": 15.96,
-    "last_date": "2026-11-09",
+    "now_pct": -6.8,
+    "last": 15.85,
+    "last_date": "2026-11-12",
     "first_trade": "2026-08-05"
    }
   },
@@ -753,9 +753,9 @@
    "lockup": "2027-01-27",
    "perf": {
     "first_day_pct": 56.2,
-    "now_pct": -1.2,
-    "last": 15.81,
-    "last_date": "2026-11-09",
+    "now_pct": 5.3,
+    "last": 16.84,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-31"
    }
   },
@@ -793,9 +793,9 @@
    "lockup": "2027-01-26",
    "perf": {
     "first_day_pct": -6.0,
-    "now_pct": -15.5,
-    "last": 19.43,
-    "last_date": "2026-11-09",
+    "now_pct": -13.3,
+    "last": 19.93,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-30"
    }
   },
@@ -823,9 +823,9 @@
    "lockup": "2027-01-26",
    "perf": {
     "first_day_pct": 0.5,
-    "now_pct": 35.6,
-    "last": 20.34,
-    "last_date": "2026-11-09",
+    "now_pct": 21.4,
+    "last": 18.21,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-30"
    }
   },
@@ -841,9 +841,9 @@
    "lockup": "2027-01-25",
    "perf": {
     "first_day_pct": 2.6,
-    "now_pct": 102.0,
-    "last": 10.1,
-    "last_date": "2026-11-09",
+    "now_pct": 57.6,
+    "last": 7.88,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-29"
    }
   },
@@ -882,9 +882,9 @@
    "lockup": "2027-01-20",
    "perf": {
     "first_day_pct": 26.5,
-    "now_pct": 11.2,
-    "last": 16.68,
-    "last_date": "2026-11-09",
+    "now_pct": 12.7,
+    "last": 16.91,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-27"
    }
   },
@@ -955,9 +955,9 @@
    "lockup": "2027-01-12",
    "perf": {
     "first_day_pct": -1.6,
-    "now_pct": -27.3,
-    "last": 15.27,
-    "last_date": "2026-11-09",
+    "now_pct": -18.2,
+    "last": 17.18,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-16"
    }
   },
@@ -985,9 +985,9 @@
    "lockup": "2027-01-12",
    "perf": {
     "first_day_pct": -18.0,
-    "now_pct": -15.5,
-    "last": 12.68,
-    "last_date": "2026-11-09",
+    "now_pct": -26.2,
+    "last": 11.07,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-16"
    }
   },
@@ -1036,9 +1036,9 @@
    "lockup": "2027-01-06",
    "perf": {
     "first_day_pct": 12.8,
-    "now_pct": -9.8,
-    "last": 134.38,
-    "last_date": "2026-11-09",
+    "now_pct": -8.0,
+    "last": 137.07,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-10"
    }
   },
@@ -1120,9 +1120,9 @@
    "lockup": "2026-12-28",
    "perf": {
     "first_day_pct": 4.0,
-    "now_pct": -27.1,
-    "last": 18.22,
-    "last_date": "2026-11-09",
+    "now_pct": -25.2,
+    "last": 18.71,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-01"
    }
   },
@@ -1138,9 +1138,9 @@
    "lockup": "2026-12-28",
    "perf": {
     "first_day_pct": 10.7,
-    "now_pct": -66.4,
-    "last": 5.38,
-    "last_date": "2026-11-09",
+    "now_pct": -67.4,
+    "last": 5.21,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-01"
    }
   },
@@ -1156,9 +1156,9 @@
    "lockup": "2026-12-28",
    "perf": {
     "first_day_pct": 39.7,
-    "now_pct": 43.2,
-    "last": 41.54,
-    "last_date": "2026-11-09",
+    "now_pct": 40.3,
+    "last": 40.69,
+    "last_date": "2026-11-12",
     "first_trade": "2026-07-01"
    }
   },
@@ -1196,9 +1196,9 @@
    "lockup": "2026-12-23",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": 7.2,
-    "last": 12.87,
-    "last_date": "2026-11-09",
+    "now_pct": -0.4,
+    "last": 11.95,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-26"
    }
   },
@@ -1247,9 +1247,9 @@
    "lockup": "2026-12-22",
    "perf": {
     "first_day_pct": 42.1,
-    "now_pct": -0.8,
-    "last": 32.73,
-    "last_date": "2026-11-09",
+    "now_pct": 2.3,
+    "last": 33.77,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-25"
    }
   },
@@ -1265,9 +1265,9 @@
    "lockup": "2026-12-22",
    "perf": {
     "first_day_pct": -46.7,
-    "now_pct": -84.8,
-    "last": 2.59,
-    "last_date": "2026-11-09",
+    "now_pct": -86.3,
+    "last": 2.33,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-25"
    }
   },
@@ -1294,9 +1294,9 @@
    "lockup": "2026-12-15",
    "perf": {
     "first_day_pct": 0.8,
-    "now_pct": 7.9,
-    "last": 13.49,
-    "last_date": "2026-11-09",
+    "now_pct": 6.8,
+    "last": 13.35,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-18"
    }
   },
@@ -1312,9 +1312,9 @@
    "lockup": "2026-12-15",
    "perf": {
     "first_day_pct": 37.5,
-    "now_pct": -5.1,
-    "last": 15.18,
-    "last_date": "2026-11-09",
+    "now_pct": -9.8,
+    "last": 14.44,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-18"
    }
   },
@@ -1352,9 +1352,9 @@
    "lockup": "2026-12-15",
    "perf": {
     "first_day_pct": -9.0,
-    "now_pct": -82.3,
-    "last": 2.83,
-    "last_date": "2026-11-09",
+    "now_pct": -87.1,
+    "last": 2.06,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-18"
    }
   },
@@ -1392,9 +1392,9 @@
    "lockup": "2026-12-09",
    "perf": {
     "first_day_pct": 19.2,
-    "now_pct": 5.2,
-    "last": 142.07,
-    "last_date": "2026-11-09",
+    "now_pct": 4.0,
+    "last": 140.46,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-12"
    }
   },
@@ -1410,9 +1410,9 @@
    "lockup": "2026-12-08",
    "perf": {
     "first_day_pct": 0.6,
-    "now_pct": 8.7,
-    "last": 19.56,
-    "last_date": "2026-11-09",
+    "now_pct": 7.6,
+    "last": 19.36,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-11"
    }
   },
@@ -1439,9 +1439,9 @@
    "lockup": "2026-12-07",
    "perf": {
     "first_day_pct": -12.8,
-    "now_pct": -61.6,
-    "last": 8.25,
-    "last_date": "2026-11-09",
+    "now_pct": -61.0,
+    "last": 8.4,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-10"
    }
   },
@@ -1457,9 +1457,9 @@
    "lockup": "2026-12-07",
    "perf": {
     "first_day_pct": 58.0,
-    "now_pct": 51.9,
-    "last": 30.37,
-    "last_date": "2026-11-09",
+    "now_pct": 39.0,
+    "last": 27.79,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-10"
    }
   },
@@ -1486,9 +1486,9 @@
    "lockup": "2026-12-06",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": -5.6,
-    "last": 24.55,
-    "last_date": "2026-11-09",
+    "now_pct": -1.2,
+    "last": 25.68,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-09"
    }
   },
@@ -1515,9 +1515,9 @@
    "lockup": "2026-12-06",
    "perf": {
     "first_day_pct": 0.1,
-    "now_pct": 22.8,
-    "last": 13.51,
-    "last_date": "2026-11-09",
+    "now_pct": 17.6,
+    "last": 12.94,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-09"
    }
   },
@@ -1566,9 +1566,9 @@
    "lockup": "2026-12-01",
    "perf": {
     "first_day_pct": 23.7,
-    "now_pct": -18.7,
-    "last": 18.71,
-    "last_date": "2026-11-09",
+    "now_pct": -19.0,
+    "last": 18.63,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-04"
    }
   },
@@ -1584,9 +1584,9 @@
    "lockup": "2026-12-01",
    "perf": {
     "first_day_pct": 27.0,
-    "now_pct": 9.6,
-    "last": 14.8,
-    "last_date": "2026-11-09",
+    "now_pct": 0.3,
+    "last": 13.53,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-04"
    }
   },
@@ -1613,9 +1613,9 @@
    "lockup": "2026-12-01",
    "perf": {
     "first_day_pct": 0.6,
-    "now_pct": -33.3,
-    "last": 40.04,
-    "last_date": "2026-11-09",
+    "now_pct": -36.2,
+    "last": 38.29,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-04"
    }
   },
@@ -1631,9 +1631,9 @@
    "lockup": "2026-12-01",
    "perf": {
     "first_day_pct": 24.9,
-    "now_pct": -44.8,
-    "last": 14.91,
-    "last_date": "2026-11-09",
+    "now_pct": -44.2,
+    "last": 15.07,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-08"
    }
   },
@@ -1649,9 +1649,9 @@
    "lockup": "2026-11-30",
    "perf": {
     "first_day_pct": -4.9,
-    "now_pct": -45.5,
-    "last": 10.9,
-    "last_date": "2026-11-09",
+    "now_pct": -56.6,
+    "last": 8.67,
+    "last_date": "2026-11-12",
     "first_trade": "2026-06-03"
    }
   },
@@ -1801,9 +1801,9 @@
    "lockup": "2026-11-16",
    "perf": {
     "first_day_pct": -2.7,
-    "now_pct": -60.0,
-    "last": 2.5,
-    "last_date": "2026-11-09",
+    "now_pct": -64.8,
+    "last": 2.2,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-20"
    }
   },
@@ -1830,9 +1830,9 @@
    "lockup": "2026-11-16",
    "perf": {
     "first_day_pct": 12.6,
-    "now_pct": 34.8,
-    "last": 26.97,
-    "last_date": "2026-11-09",
+    "now_pct": 30.6,
+    "last": 26.11,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-20"
    }
   },
@@ -1870,9 +1870,9 @@
    "lockup": "2026-11-11",
    "perf": {
     "first_day_pct": -32.9,
-    "now_pct": -70.3,
-    "last": 2.3,
-    "last_date": "2026-11-09",
+    "now_pct": -73.9,
+    "last": 2.02,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-15"
    }
   },
@@ -1899,9 +1899,9 @@
    "lockup": "2026-11-11",
    "perf": {
     "first_day_pct": -37.0,
-    "now_pct": -82.3,
+    "now_pct": -82.2,
     "last": 0.71,
-    "last_date": "2026-11-09",
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-15"
    }
   },
@@ -1938,11 +1938,11 @@
    "spac": false,
    "lockup": "2026-11-11",
    "perf": {
-    "first_day_pct": 14.0,
-    "now_pct": -64.5,
-    "last": 2.91,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "first_day_pct": 11.3,
+    "now_pct": -69.8,
+    "last": 2.47,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -1968,9 +1968,9 @@
    "lockup": "2026-11-10",
    "perf": {
     "first_day_pct": 68.1,
-    "now_pct": -47.7,
-    "last": 96.7,
-    "last_date": "2026-11-09",
+    "now_pct": -46.4,
+    "last": 99.21,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-14"
    }
   },
@@ -1998,9 +1998,9 @@
    "lockup": "2026-11-10",
    "perf": {
     "first_day_pct": 18.1,
-    "now_pct": 14.8,
-    "last": 21.24,
-    "last_date": "2026-11-09",
+    "now_pct": 14.5,
+    "last": 21.18,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-14"
    }
   },
@@ -2016,9 +2016,9 @@
    "lockup": "2026-11-10",
    "perf": {
     "first_day_pct": -1.0,
-    "now_pct": -16.5,
-    "last": 16.7,
-    "last_date": "2026-11-09",
+    "now_pct": -16.6,
+    "last": 16.67,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-14"
    }
   },
@@ -2034,9 +2034,9 @@
    "lockup": "2026-11-10",
    "perf": {
     "first_day_pct": 2.5,
-    "now_pct": -85.4,
-    "last": 1.17,
-    "last_date": "2026-11-09",
+    "now_pct": -84.0,
+    "last": 1.28,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-14"
    }
   },
@@ -2052,9 +2052,9 @@
    "lockup": "2026-11-09",
    "perf": {
     "first_day_pct": -6.8,
-    "now_pct": -24.9,
-    "last": 11.27,
-    "last_date": "2026-11-09",
+    "now_pct": -24.5,
+    "last": 11.33,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-13"
    }
   },
@@ -2070,9 +2070,9 @@
    "lockup": "2026-11-09",
    "perf": {
     "first_day_pct": 35.3,
-    "now_pct": -57.9,
-    "last": 11.38,
-    "last_date": "2026-11-09",
+    "now_pct": -56.4,
+    "last": 11.76,
+    "last_date": "2026-11-12",
     "first_trade": "2026-05-13"
    }
   },
@@ -2109,11 +2109,11 @@
    "spac": false,
    "lockup": "2026-11-04",
    "perf": {
-    "first_day_pct": -3.1,
-    "now_pct": 6.4,
-    "last": 19.15,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "first_day_pct": -0.6,
+    "now_pct": 11.0,
+    "last": 19.98,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -2127,11 +2127,11 @@
    "spac": false,
    "lockup": "2026-11-04",
    "perf": {
-    "first_day_pct": -20.0,
-    "now_pct": -18.3,
-    "last": 12.26,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "first_day_pct": -19.3,
+    "now_pct": -13.2,
+    "last": 13.02,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -2145,11 +2145,11 @@
    "spac": false,
    "lockup": "2026-11-03",
    "perf": {
-    "first_day_pct": 27.7,
+    "first_day_pct": 33.3,
     "now_pct": -42.1,
-    "last": 15.06,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "last": 15.04,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -2174,11 +2174,11 @@
    "spac": false,
    "lockup": "2026-11-03",
    "perf": {
-    "first_day_pct": -16.3,
-    "now_pct": -50.4,
-    "last": 10.42,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "first_day_pct": -15.3,
+    "now_pct": -61.2,
+    "last": 8.15,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -2192,11 +2192,11 @@
    "spac": false,
    "lockup": "2026-11-02",
    "perf": {
-    "first_day_pct": 26.8,
-    "now_pct": -57.9,
-    "last": 7.99,
-    "last_date": "2026-11-09",
-    "first_trade": "2026-05-11"
+    "first_day_pct": 45.3,
+    "now_pct": -69.7,
+    "last": 5.75,
+    "last_date": "2026-11-12",
+    "first_trade": "2026-05-12"
    }
   },
   {
@@ -2213,17 +2213,68 @@
  ],
  "upcoming": [
   {
-   "sym": "RZRA",
-   "name": "Rezera Inc.",
+   "sym": "ANT",
+   "name": "ANTHROPIC, PBC",
+   "exchange": "NASDAQ Global Select",
+   "price": "70.00-78.00",
+   "shares": 825000000.0,
+   "amount": 74002500000.0,
+   "date": "2026-11-19",
+   "spac": false
+  },
+  {
+   "sym": "WWB",
+   "name": "WINDWARD BIO GROUP AG",
    "exchange": "NASDAQ Global",
-   "price": "11.00-13.00",
-   "shares": 16666667.0,
-   "amount": 249166671.0,
-   "date": "2026-11-12",
+   "price": "16.00-18.00",
+   "shares": 10294117.0,
+   "amount": 213088212.0,
+   "date": "2026-11-13",
+   "spac": false
+  },
+  {
+   "sym": "TRCX",
+   "name": "Tracx Logis Ltd.",
+   "exchange": "NASDAQ Capital",
+   "price": "18.00-22.00",
+   "shares": 1000000.0,
+   "amount": 25300000.0,
+   "date": "2026-11-13",
+   "spac": false
+  },
+  {
+   "sym": "VVVV",
+   "name": "vVARDIS Holding AG",
+   "exchange": "NYSE",
+   "price": "21.00-24.00",
+   "shares": 9523810.0,
+   "amount": 262857144.0,
+   "date": "2026-11-13",
    "spac": false
   }
  ],
  "filed": [
+  {
+   "sym": "ABGC",
+   "name": "American Barrick Gold Corp",
+   "date": "2026-11-10",
+   "amount": 100000000.0,
+   "spac": false
+  },
+  {
+   "sym": "RACV",
+   "name": "Research Alliance Corp V",
+   "date": "2026-11-09",
+   "amount": 62000000.0,
+   "spac": false
+  },
+  {
+   "sym": "ZACAU",
+   "name": "ZA Acquisition Corp. I",
+   "date": "2026-11-09",
+   "amount": 86250000.0,
+   "spac": true
+  },
   {
    "sym": null,
    "name": "UC Automotive Holdings Inc.",
@@ -2310,16 +2361,16 @@
   },
   {
    "sym": "ANT",
-   "name": "Anthropic, PBC",
+   "name": "ANTHROPIC, PBC",
    "date": "2026-10-26",
-   "amount": 1000000000.0,
+   "amount": 74002500000.0,
    "spac": false
   },
   {
    "sym": "WWB",
    "name": "WINDWARD BIO GROUP AG",
    "date": "2026-10-23",
-   "amount": 100000000.0,
+   "amount": 213088212.0,
    "spac": false
   },
   {
@@ -2545,30 +2596,9 @@
    "date": "2026-09-15",
    "amount": 172500000.0,
    "spac": true
-  },
-  {
-   "sym": null,
-   "name": "Meey Global Corp",
-   "date": "2026-09-11",
-   "amount": 34500000.0,
-   "spac": false
-  },
-  {
-   "sym": "FTPKU",
-   "name": "FuturePeak Acquisition Corp",
-   "date": "2026-09-11",
-   "amount": 86250000.0,
-   "spac": true
-  },
-  {
-   "sym": "HFE",
-   "name": "Hao Feng Group Ltd.",
-   "date": "2026-09-11",
-   "amount": 29440000.0,
-   "spac": false
   }
  ],
- "withdrawn_30d": 7,
+ "withdrawn_30d": 8,
  "stats": {
   "window_days": 190,
   "priced": 79,
@@ -2576,7 +2606,7 @@
   "traded": 67,
   "raised": 131316460748.0,
   "median_first_day": 0.8,
-  "below_offer": 45
+  "below_offer": 42
  },
  "disclaimer": "Facts from Nasdaq's public IPO calendar and Yahoo Finance prices. Educational only; not investment advice."
 }

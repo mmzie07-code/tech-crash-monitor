@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-12T02:52:33.083451Z",
- "as_of": "2026-11-11",
+ "generated": "2026-11-12T20:30:13.148071Z",
+ "as_of": "2026-11-12",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10346,
+    "n": 10347,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,7 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2578,
+    "n": 2579,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -48,6 +48,30 @@
      "time": "10:00 AM",
      "title": "Fed speaks: Governor Michael S. Barr",
      "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Cisco Systems (CSCO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Applied Materials (AMAT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "Before open",
+     "title": "Brookfield (BN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Nu Holdings (NU) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -56,7 +80,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10346,
+    "n": 10347,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -69,7 +93,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2578,
+    "n": 2579,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -101,6 +125,24 @@
      "time": "10:50 AM",
      "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
      "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "Time TBA",
+     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "Before open",
+     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "Before open",
+     "title": "Mizuho Financial Group (MFG) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -109,7 +151,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10342,
+    "n": 10343,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -151,6 +193,30 @@
      "importance": "medium"
     },
     {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Cisco Systems (CSCO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Applied Materials (AMAT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "Before open",
+     "title": "Brookfield (BN) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "After close",
+     "title": "Nu Holdings (NU) reports earnings",
+     "importance": "medium"
+    },
+    {
      "date": "2026-11-13",
      "time": "7:00 PM",
      "title": "Fed speaks: Vice Chair Philip N. Jefferson",
@@ -163,10 +229,34 @@
      "importance": "medium"
     },
     {
-     "date": "2026-11-18",
-     "time": "2:00 PM",
-     "title": "FOMC minutes (meeting of October 27-28)",
+     "date": "2026-11-13",
+     "time": "Time TBA",
+     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "Before open",
+     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-13",
+     "time": "Before open",
+     "title": "Mizuho Financial Group (MFG) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-17",
+     "time": "After close",
+     "title": "NVIDIA (NVDA) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-11-17",
+     "time": "Before open",
+     "title": "Home Depot, Inc. (The) (HD) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -175,7 +265,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10326,
+    "n": 10327,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -188,7 +278,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2562,
+    "n": 2563,
     "up": 63,
     "median": 1.1,
     "p10": -4.1,
@@ -211,9 +301,21 @@
    ],
    "events": [
     {
+     "date": "2026-11-17",
+     "time": "After close",
+     "title": "NVIDIA (NVDA) reports earnings",
+     "importance": "high"
+    },
+    {
      "date": "2026-11-18",
      "time": "2:00 PM",
      "title": "FOMC minutes (meeting of October 27-28)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "Walmart (WMT) reports earnings",
      "importance": "high"
     },
     {
@@ -235,7 +337,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10095,
+    "n": 10096,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -248,7 +350,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2404,
+    "n": 2405,
     "up": 85,
     "median": 10.7,
     "p10": -7.5,

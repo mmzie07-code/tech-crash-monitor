@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T02:52:25.910234Z",
+ "generated": "2026-11-12T20:30:06.359641Z",
  "today": "2026-11-12",
  "timezone": "US Eastern",
  "events": [
@@ -17,6 +17,66 @@
    },
    "source": "Federal Reserve",
    "link": "https://youtube.com/live/O2NvR1shSI0?feature=share"
+  },
+  {
+   "id": "2026-11-12-earnings-cisco-systems-csco-reports-earnings",
+   "date": "2026-11-12",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Cisco Systems (CSCO) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.15.",
+   "extra": {
+    "market_cap_b": 397,
+    "eps_forecast": "$1.15"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-applied-materials-amat-reports-earnings",
+   "date": "2026-11-12",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Applied Materials (AMAT) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.06.",
+   "extra": {
+    "market_cap_b": 314,
+    "eps_forecast": "$4.06"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-brookfield-bn-reports-earnings",
+   "date": "2026-11-12",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Brookfield (BN) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
+   "extra": {
+    "market_cap_b": 103,
+    "eps_forecast": "$0.72"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-12-earnings-nu-holdings-nu-reports-earnings",
+   "date": "2026-11-12",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Nu Holdings (NU) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
+   "extra": {
+    "market_cap_b": 60,
+    "eps_forecast": "$0.22"
+   },
+   "source": "",
+   "link": null
   },
   {
    "id": "2026-11-12-data-weekly-jobless-claims",
@@ -61,6 +121,126 @@
    "link": null
   },
   {
+   "id": "2026-11-13-earnings-mitsubishi-ufj-financial-group-mufg-reports-earn",
+   "date": "2026-11-13",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
+   "extra": {
+    "market_cap_b": 260,
+    "eps_forecast": "$0.45"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-earnings-sumitomo-mitsui-financial-group-smfg-reports-ear",
+   "date": "2026-11-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
+   "extra": {
+    "market_cap_b": 158,
+    "eps_forecast": "$0.24"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-13-earnings-mizuho-financial-group-mfg-reports-earnings",
+   "date": "2026-11-13",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Mizuho Financial Group (MFG) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
+   "extra": {
+    "market_cap_b": 126,
+    "eps_forecast": "$0.21"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-nvidia-nvda-reports-earnings",
+   "date": "2026-11-17",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "NVIDIA (NVDA) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.49.",
+   "extra": {
+    "market_cap_b": 4187,
+    "eps_forecast": "$2.49"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-home-depot-inc-the-hd-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Home Depot, Inc. (The) (HD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.87.",
+   "extra": {
+    "market_cap_b": 350,
+    "eps_forecast": "$3.87"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-bhp-group-limited-bhp-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "BHP Group Limited (BHP) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
+   "extra": {
+    "market_cap_b": 208,
+    "eps_forecast": ""
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-walt-disney-company-the-dis-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Walt Disney Company (The) (DIS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.67.",
+   "extra": {
+    "market_cap_b": 207,
+    "eps_forecast": "$1.67"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-17-earnings-pdd-holdings-pdd-reports-earnings",
+   "date": "2026-11-17",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "PDD Holdings (PDD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.61.",
+   "extra": {
+    "market_cap_b": 112,
+    "eps_forecast": "$2.61"
+   },
+   "source": "",
+   "link": null
+  },
+  {
    "id": "2026-11-17-data-g-17-industrial-production-and-capacity-utilizat",
    "date": "2026-11-17",
    "time": "9:15 AM",
@@ -85,6 +265,156 @@
    },
    "source": "Federal Reserve",
    "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "2026-11-18-earnings-palo-alto-networks-panw-reports-earnings",
+   "date": "2026-11-18",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Palo Alto Networks (PANW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.52.",
+   "extra": {
+    "market_cap_b": 274,
+    "eps_forecast": "$0.52"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-tjx-companies-inc-the-tjx-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "TJX Companies, Inc. (The) (TJX) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.33.",
+   "extra": {
+    "market_cap_b": 150,
+    "eps_forecast": "$1.33"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-lowe-s-companies-low-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Lowe's Companies (LOW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.86.",
+   "extra": {
+    "market_cap_b": 130,
+    "eps_forecast": "$2.86"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-18-earnings-target-tgt-reports-earnings",
+   "date": "2026-11-18",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Target (TGT) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.03.",
+   "extra": {
+    "market_cap_b": 74,
+    "eps_forecast": "$2.03"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-walmart-wmt-reports-earnings",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Walmart (WMT) reports earnings",
+   "importance": "high",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.64.",
+   "extra": {
+    "market_cap_b": 997,
+    "eps_forecast": "$0.64"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-alibaba-group-holding-limited-baba-reports-earni",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Alibaba Group Holding Limited (BABA) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.56.",
+   "extra": {
+    "market_cap_b": 246,
+    "eps_forecast": "$1.56"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-intuit-intu-reports-earnings",
+   "date": "2026-11-19",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Intuit (INTU) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.47.",
+   "extra": {
+    "market_cap_b": 92,
+    "eps_forecast": "$2.47"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-netease-ntes-reports-earnings",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "NetEase (NTES) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.40.",
+   "extra": {
+    "market_cap_b": 78,
+    "eps_forecast": "$2.40"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-ross-stores-rost-reports-earnings",
+   "date": "2026-11-19",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Ross Stores (ROST) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.82.",
+   "extra": {
+    "market_cap_b": 77,
+    "eps_forecast": "$1.82"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-19-earnings-keysight-technologies-keys-reports-earnings",
+   "date": "2026-11-19",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Keysight Technologies (KEYS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.09.",
+   "extra": {
+    "market_cap_b": 52,
+    "eps_forecast": "$3.09"
+   },
+   "source": "",
+   "link": null
   },
   {
    "id": "2026-11-19-data-weekly-jobless-claims",
@@ -377,7 +707,7 @@
    "kind": "fed",
    "title": "Fed interest-rate decision (FOMC)",
    "importance": "high",
-   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM. This meeting also includes new economic projections.",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM.",
    "extra": {
     "meeting": "2027-03-17"
    },
