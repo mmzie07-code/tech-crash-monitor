@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-13T02:49:06.867094Z",
- "as_of": "2026-11-12",
+ "generated": "2026-11-13T20:05:45.878100Z",
+ "as_of": "2026-11-13",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
  "horizons": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10347,
+    "n": 10348,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,7 +22,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2579,
+    "n": 2580,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -80,7 +80,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10347,
+    "n": 10348,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -93,7 +93,7 @@
     "best": 11.6
    },
    "similar": {
-    "n": 2579,
+    "n": 2580,
     "up": 53,
     "median": 0.0,
     "p10": -1.0,
@@ -133,7 +133,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10343,
+    "n": 10344,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -247,7 +247,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10327,
+    "n": 10328,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -260,7 +260,7 @@
     "best": 25.1
    },
    "similar": {
-    "n": 2563,
+    "n": 2564,
     "up": 63,
     "median": 1.1,
     "p10": -4.1,
@@ -319,7 +319,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10096,
+    "n": 10097,
     "up": 80,
     "median": 12.1,
     "p10": -11.8,
@@ -332,7 +332,7 @@
     "best": 74.8
    },
    "similar": {
-    "n": 2405,
+    "n": 2406,
     "up": 85,
     "median": 10.7,
     "p10": -7.5,
