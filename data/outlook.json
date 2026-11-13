@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T20:30:13.148071Z",
+ "generated": "2026-11-13T02:49:06.867094Z",
  "as_of": "2026-11-12",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,42 +35,42 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.6% below it).",
-    "VIX at 17.5: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.9% below it).",
+    "VIX at 18.7: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
    "events": [
     {
-     "date": "2026-11-12",
-     "time": "10:00 AM",
-     "title": "Fed speaks: Governor Michael S. Barr",
+     "date": "2026-11-13",
+     "time": "7:00 PM",
+     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
      "importance": "medium"
     },
     {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Cisco Systems (CSCO) reports earnings",
+     "date": "2026-11-13",
+     "time": "10:50 AM",
+     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
      "importance": "medium"
     },
     {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Applied Materials (AMAT) reports earnings",
+     "date": "2026-11-13",
+     "time": "Time TBA",
+     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
      "importance": "medium"
     },
     {
-     "date": "2026-11-12",
+     "date": "2026-11-13",
      "time": "Before open",
-     "title": "Brookfield (BN) reports earnings",
+     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
      "importance": "medium"
     },
     {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Nu Holdings (NU) reports earnings",
+     "date": "2026-11-13",
+     "time": "Before open",
+     "title": "Mizuho Financial Group (MFG) reports earnings",
      "importance": "medium"
     }
    ]
@@ -106,42 +106,24 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.6% below it).",
-    "VIX at 17.5: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.9% below it).",
+    "VIX at 18.7: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
    "events": [
     {
-     "date": "2026-11-13",
-     "time": "7:00 PM",
-     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+     "date": "2026-11-16",
+     "time": "12:00 PM",
+     "title": "Fed speaks: Chairman Kevin Warsh",
      "importance": "medium"
     },
     {
-     "date": "2026-11-13",
-     "time": "10:50 AM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Time TBA",
-     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Mizuho Financial Group (MFG) reports earnings",
+     "date": "2026-11-16",
+     "time": "5:00 AM",
+     "title": "Fed speaks: Governor Michael S. Barr",
      "importance": "medium"
     }
    ]
@@ -177,45 +159,15 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.6% below it).",
-    "VIX at 17.5: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.9% below it).",
+    "VIX at 18.7: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-12",
-     "time": "10:00 AM",
-     "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Cisco Systems (CSCO) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Applied Materials (AMAT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "Before open",
-     "title": "Brookfield (BN) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "After close",
-     "title": "Nu Holdings (NU) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-13",
      "time": "7:00 PM",
@@ -247,6 +199,18 @@
      "importance": "medium"
     },
     {
+     "date": "2026-11-16",
+     "time": "12:00 PM",
+     "title": "Fed speaks: Chairman Kevin Warsh",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-16",
+     "time": "5:00 AM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    },
+    {
      "date": "2026-11-17",
      "time": "After close",
      "title": "NVIDIA (NVDA) reports earnings",
@@ -254,8 +218,26 @@
     },
     {
      "date": "2026-11-17",
+     "time": "9:10 AM",
+     "title": "Fed speaks: Governor Christopher J. Waller",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-17",
      "time": "Before open",
      "title": "Home Depot, Inc. (The) (HD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-17",
+     "time": "Time TBA",
+     "title": "BHP Group Limited (BHP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-17",
+     "time": "Before open",
+     "title": "Walt Disney Company (The) (DIS) reports earnings",
      "importance": "medium"
     }
    ]
@@ -291,11 +273,11 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.6% below it).",
-    "VIX at 17.5: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (2.9% below it).",
+    "VIX at 18.7: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
@@ -363,12 +345,12 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.6% below it).",
-    "VIX at 17.5: investors are relatively calm.",
-    "QQQ trailing P/E is 28.4, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "S&P 500 is close to its 1-year high (2.9% below it).",
+    "VIX at 18.7: investors are relatively calm.",
+    "QQQ trailing P/E is 28.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is high at 5.00%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],

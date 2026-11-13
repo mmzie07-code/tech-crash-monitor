@@ -1,95 +1,8 @@
 {
- "generated": "2026-11-12T20:30:06.359641Z",
- "today": "2026-11-12",
+ "generated": "2026-11-13T02:48:57.799333Z",
+ "today": "2026-11-13",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-12-fed-fed-speaks-governor-michael-s-barr",
-   "date": "2026-11-12",
-   "time": "10:00 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Michael S. Barr",
-   "importance": "medium",
-   "why": "Topic: Artificial Intelligence and Inequality. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Michael S. Barr",
-    "location": "At A Conversation with Michael S. Barr (virtual)"
-   },
-   "source": "Federal Reserve",
-   "link": "https://youtube.com/live/O2NvR1shSI0?feature=share"
-  },
-  {
-   "id": "2026-11-12-earnings-cisco-systems-csco-reports-earnings",
-   "date": "2026-11-12",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Cisco Systems (CSCO) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.15.",
-   "extra": {
-    "market_cap_b": 397,
-    "eps_forecast": "$1.15"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-12-earnings-applied-materials-amat-reports-earnings",
-   "date": "2026-11-12",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Applied Materials (AMAT) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.06.",
-   "extra": {
-    "market_cap_b": 314,
-    "eps_forecast": "$4.06"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-12-earnings-brookfield-bn-reports-earnings",
-   "date": "2026-11-12",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Brookfield (BN) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.72.",
-   "extra": {
-    "market_cap_b": 103,
-    "eps_forecast": "$0.72"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-12-earnings-nu-holdings-nu-reports-earnings",
-   "date": "2026-11-12",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Nu Holdings (NU) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.22.",
-   "extra": {
-    "market_cap_b": 60,
-    "eps_forecast": "$0.22"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-12-data-weekly-jobless-claims",
-   "date": "2026-11-12",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-13-fed-fed-speaks-vice-chair-philip-n-jefferson",
    "date": "2026-11-13",
@@ -118,7 +31,7 @@
     "location": "At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual)"
    },
    "source": "Federal Reserve",
-   "link": null
+   "link": "https://us06web.zoom.us/j/81123215463"
   },
   {
    "id": "2026-11-13-earnings-mitsubishi-ufj-financial-group-mufg-reports-earn",
@@ -129,7 +42,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
    "extra": {
-    "market_cap_b": 260,
+    "market_cap_b": 257,
     "eps_forecast": "$0.45"
    },
    "source": "",
@@ -144,7 +57,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
    "extra": {
-    "market_cap_b": 158,
+    "market_cap_b": 155,
     "eps_forecast": "$0.24"
    },
    "source": "",
@@ -159,11 +72,41 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
    "extra": {
-    "market_cap_b": 126,
+    "market_cap_b": 124,
     "eps_forecast": "$0.21"
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-11-16-fed-fed-speaks-chairman-kevin-warsh",
+   "date": "2026-11-16",
+   "time": "12:00 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Chairman Kevin Warsh",
+   "importance": "medium",
+   "why": "Topic: Opening Remarks. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Chairman Kevin Warsh",
+    "location": "At the Federal Reserve\u2019s Productivity and Jobs Task Force Conference, Federal Reserve Bank of San Francisco, San Francisco, Calif."
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/"
+  },
+  {
+   "id": "2026-11-16-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-16",
+   "time": "5:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "importance": "medium",
+   "why": "Topic: Artificial Intelligence and Financial Stability. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Michael S. Barr",
+    "location": "At the 7th ACM International Conference on AI in Finance, Milan, Italy"
+   },
+   "source": "Federal Reserve",
+   "link": "https://us06web.zoom.us/j/84433320946?pwd=zq5qHzI0IgCBc7QKytDbJ5X90yXZKC.1 "
   },
   {
    "id": "2026-11-17-earnings-nvidia-nvda-reports-earnings",
@@ -179,6 +122,21 @@
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-11-17-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-17",
+   "time": "9:10 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "importance": "medium",
+   "why": "Topic: Payments. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Christopher J. Waller",
+    "location": "At The Clearing House (TCH) Annual Conference, New York, N.Y."
+   },
+   "source": "Federal Reserve",
+   "link": "https://avdusa.zoom.us/j/81071533579"
   },
   {
    "id": "2026-11-17-earnings-home-depot-inc-the-hd-reports-earnings",
@@ -267,6 +225,21 @@
    "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
   },
   {
+   "id": "2026-11-18-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-18",
+   "time": "1:35 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "importance": "medium",
+   "why": "Topic: Community Development Investments. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Michael S. Barr",
+    "location": "At Making Missing Markets: Catalyzing Capital and Igniting Innovation, Federal Reserve Bank of New York, New York, N.Y."
+   },
+   "source": "Federal Reserve",
+   "link": "https://web.cvent.com/event/c6c9732e-65f1-42c9-8b92-fd955396ec06/register?rp=276284ef-6a44-4895-b452-f3b63709581b"
+  },
+  {
    "id": "2026-11-18-earnings-palo-alto-networks-panw-reports-earnings",
    "date": "2026-11-18",
    "time": "After close",
@@ -340,6 +313,21 @@
    },
    "source": "",
    "link": null
+  },
+  {
+   "id": "2026-11-19-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-19",
+   "time": "2:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "importance": "medium",
+   "why": "Topic: Artificial Intelligence. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Michael S. Barr",
+    "location": "At the FinRegLab 2026 AI Symposium, Washington, D.C."
+   },
+   "source": "Federal Reserve",
+   "link": "https://aisymposium.finreglab.org/press"
   },
   {
    "id": "2026-11-19-earnings-alibaba-group-holding-limited-baba-reports-earni",
@@ -426,6 +414,36 @@
    "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
    "extra": null,
    "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-20-fed-fed-speaks-governor-lisa-d-cook",
+   "date": "2026-11-20",
+   "time": "12:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Lisa D. Cook",
+   "importance": "medium",
+   "why": "Topic: The U.S. Economy in Global Context. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Lisa D. Cook",
+    "location": "At the Annual Conference of the Central Bank of Chile, Santiago, Chile"
+   },
+   "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-11-20-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-20",
+   "time": "8:25 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "importance": "medium",
+   "why": "Topic: Welcoming Remarks. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
+   "extra": {
+    "speaker": "Governor Christopher J. Waller",
+    "location": "At the College Fed Challenge Finals"
+   },
+   "source": "Federal Reserve",
    "link": null
   },
   {
@@ -548,6 +566,18 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-03-data-weekly-jobless-claims",
+   "date": "2026-12-03",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {

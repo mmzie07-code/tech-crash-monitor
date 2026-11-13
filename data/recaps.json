@@ -1,7 +1,27 @@
 {
- "generated": "2026-11-12T20:30:13.202053Z",
+ "generated": "2026-11-13T02:49:06.933342Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-12-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-12",
+   "time": "10:00 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://youtube.com/live/O2NvR1shSI0?feature=share",
+   "lesson": 3
+  },
   {
    "id": "2026-11-10-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
    "date": "2026-11-10",
