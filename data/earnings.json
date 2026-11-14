@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-13T20:04:47.601003Z",
+ "generated": "2026-11-14T02:25:04.263581Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-13",
-   "reported_total": 170,
+   "reported_total": 168,
    "top": [
     {
      "symbol": "MUFG",
@@ -17,6 +17,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.45.",
+      "Stock moved +0.4% on Nov 13.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -33,6 +34,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.24.",
+      "Stock moved +1.5% on Nov 13.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -49,6 +51,7 @@
      "bullets": [
       "Scheduled to report before the open.",
       "Results aren't posted in our data yet. Analysts expected EPS of $0.21.",
+      "Stock moved +2.2% on Nov 13.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -113,6 +116,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Results aren't posted in our data yet.",
+      "Stock moved +0.9% on Nov 13.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -183,6 +187,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.21 versus $1.15 expected, so the company beat estimates by 5.2%.",
+      "Stock moved +1.2% on Nov 12.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -199,6 +204,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $4.16 versus $4.06 expected, so the company beat estimates by 2.5%.",
+      "Stock moved -3.6% on Nov 12.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -215,6 +221,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.73 versus $0.72 expected, so the company beat estimates by 1.4%.",
+      "Stock moved -1.0% on Nov 12.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -247,6 +254,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $-0.42 versus $-0.44 expected, so the company beat estimates by 4.5%.",
+      "Stock moved -0.1% on Nov 12.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,

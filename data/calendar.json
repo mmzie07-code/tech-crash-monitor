@@ -1,83 +1,8 @@
 {
- "generated": "2026-11-13T20:05:38.457706Z",
- "today": "2026-11-13",
+ "generated": "2026-11-14T02:27:06.752481Z",
+ "today": "2026-11-14",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-13-fed-fed-speaks-vice-chair-philip-n-jefferson",
-   "date": "2026-11-13",
-   "time": "7:00 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-   "importance": "medium",
-   "why": "Topic: New Technology, Old Questions: Assessing Productivity Puzzles and Their Implications for Macroeconomic Activity. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair Philip N. Jefferson",
-    "location": "At the University of California San Diego Economics Roundtable, La Jolla, Calif."
-   },
-   "source": "Federal Reserve",
-   "link": "https://cvent.me/8AmwNV"
-  },
-  {
-   "id": "2026-11-13-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-11-13",
-   "time": "10:50 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Supervision and Regulation. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At the Connecticut Bankers Association Annual Meeting and Conference 2026 (virtual)"
-   },
-   "source": "Federal Reserve",
-   "link": "https://us06web.zoom.us/j/81123215463"
-  },
-  {
-   "id": "2026-11-13-earnings-mitsubishi-ufj-financial-group-mufg-reports-earn",
-   "date": "2026-11-13",
-   "time": "Time TBA",
-   "kind": "earnings",
-   "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.45.",
-   "extra": {
-    "market_cap_b": 258,
-    "eps_forecast": "$0.45"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-13-earnings-sumitomo-mitsui-financial-group-smfg-reports-ear",
-   "date": "2026-11-13",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.24.",
-   "extra": {
-    "market_cap_b": 156,
-    "eps_forecast": "$0.24"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-13-earnings-mizuho-financial-group-mfg-reports-earnings",
-   "date": "2026-11-13",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Mizuho Financial Group (MFG) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.21.",
-   "extra": {
-    "market_cap_b": 126,
-    "eps_forecast": "$0.21"
-   },
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-16-fed-fed-speaks-chairman-kevin-warsh",
    "date": "2026-11-16",
@@ -459,6 +384,21 @@
     "location": "At the College Fed Challenge Finals"
    },
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-11-23-earnings-hewlett-packard-enterprise-company-hpe-reports-e",
+   "date": "2026-11-23",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.17.",
+   "extra": {
+    "market_cap_b": 67,
+    "eps_forecast": "$1.17"
+   },
+   "source": "",
    "link": null
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T20:05:45.878100Z",
+ "generated": "2026-11-14T02:27:14.958279Z",
  "as_of": "2026-11-13",
  "regime": "S&P 500 above its 200-day average and the market is normal (VIX 15-20)",
  "history_from": "1985-01-02",
@@ -35,45 +35,14 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.9% below it).",
-    "VIX at 18.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (3.3% below it).",
+    "VIX at 19.3: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
-   "events": [
-    {
-     "date": "2026-11-13",
-     "time": "7:00 PM",
-     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "10:50 AM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Time TBA",
-     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Mizuho Financial Group (MFG) reports earnings",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -106,11 +75,11 @@
     "best": 2.9
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.9% below it).",
-    "VIX at 18.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (3.3% below it).",
+    "VIX at 19.3: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
    ],
    "events": [
@@ -159,45 +128,15 @@
     "best": 7.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.9% below it).",
-    "VIX at 18.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (3.3% below it).",
+    "VIX at 19.3: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-13",
-     "time": "7:00 PM",
-     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "10:50 AM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Time TBA",
-     "title": "Mitsubishi UFJ Financial Group (MUFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Sumitomo Mitsui Financial Group (SMFG) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-13",
-     "time": "Before open",
-     "title": "Mizuho Financial Group (MFG) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-16",
      "time": "12:00 PM",
@@ -239,6 +178,36 @@
      "time": "Before open",
      "title": "Walt Disney Company (The) (DIS) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "1:35 PM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "After close",
+     "title": "Palo Alto Networks (PANW) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "TJX Companies, Inc. (The) (TJX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "Lowe's Companies (LOW) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -273,11 +242,11 @@
     "best": 13.6
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.9% below it).",
-    "VIX at 18.7: investors are relatively calm."
+    "S&P 500 is close to its 1-year high (3.3% below it).",
+    "VIX at 19.3: investors are relatively calm."
    ],
    "bear": [
-    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
@@ -345,12 +314,12 @@
     "best": 50.4
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (2.9% below it).",
-    "VIX at 18.7: investors are relatively calm.",
-    "QQQ trailing P/E is 28.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "S&P 500 is close to its 1-year high (3.3% below it).",
+    "VIX at 19.3: investors are relatively calm.",
+    "QQQ trailing P/E is 28.0, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],

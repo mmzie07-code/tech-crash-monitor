@@ -1,7 +1,47 @@
 {
- "generated": "2026-11-13T20:05:45.934610Z",
+ "generated": "2026-11-14T02:27:15.014145Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-13-fed-fed-speaks-vice-chair-philip-n-jefferson",
+   "date": "2026-11-13",
+   "time": "7:00 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://cvent.me/8AmwNV",
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-13-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-13",
+   "time": "10:50 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://us06web.zoom.us/j/81123215463",
+   "lesson": 3
+  },
   {
    "id": "2026-11-12-fed-fed-speaks-governor-michael-s-barr",
    "date": "2026-11-12",
