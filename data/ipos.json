@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-16T22:34:00.390138Z",
- "asof": "2026-11-16",
+ "generated": "2026-11-17T04:51:43.114093Z",
+ "asof": "2026-11-17",
  "priced": [
   {
    "sym": "MDRN",
@@ -1174,8 +1174,8 @@
    "lockup": "2026-12-28",
    "perf": {
     "first_day_pct": 4.0,
-    "now_pct": -19.3,
-    "last": 20.18,
+    "now_pct": -19.2,
+    "last": 20.19,
     "last_date": "2026-11-16",
     "first_trade": "2026-07-01"
    }
@@ -1953,7 +1953,7 @@
    "lockup": "2026-11-11",
    "perf": {
     "first_day_pct": -44.0,
-    "now_pct": -83.1,
+    "now_pct": -83.0,
     "last": 0.68,
     "last_date": "2026-11-16",
     "first_trade": "2026-05-18"

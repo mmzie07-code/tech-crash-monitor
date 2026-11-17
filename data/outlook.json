@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T22:34:25.757313Z",
+ "generated": "2026-11-17T04:52:08.517159Z",
  "as_of": "2026-11-16",
  "regime": "S&P 500 above its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -34,66 +34,12 @@
     "worst": -6.9,
     "best": 4.8
    },
-   "bull": [
-    "S&P 500 is close to its 1-year high (3.3% below it).",
-    "VIX at 19.3: investors are relatively calm."
-   ],
+   "bull": [],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-11-16",
-     "time": "12:00 PM",
-     "title": "Fed speaks: Chairman Kevin Warsh",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-16",
-     "time": "5:00 AM",
-     "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10349,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 1497,
-    "up": 55,
-    "median": 0.1,
-    "p10": -1.3,
-    "p25": -0.6,
-    "p75": 0.8,
-    "p90": 1.4,
-    "below": 14,
-    "above": 20,
-    "worst": -6.9,
-    "best": 4.8
-   },
-   "bull": [
-    "S&P 500 is close to its 1-year high (3.3% below it).",
-    "VIX at 19.3: investors are relatively calm."
-   ],
-   "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100."
+    "S&P 500 is 5.1% below its 1-year high.",
+    "VIX at 22.9: investors are nervous.",
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
    "events": [
     {
@@ -128,6 +74,82 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10349,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1497,
+    "up": 55,
+    "median": 0.1,
+    "p10": -1.3,
+    "p25": -0.6,
+    "p75": 0.8,
+    "p90": 1.4,
+    "below": 14,
+    "above": 20,
+    "worst": -6.9,
+    "best": 4.8
+   },
+   "bull": [],
+   "bear": [
+    "S&P 500 is 5.1% below its 1-year high.",
+    "VIX at 22.9: investors are nervous.",
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-18",
+     "time": "2:00 PM",
+     "title": "FOMC minutes (meeting of October 27-28)",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "1:35 PM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "After close",
+     "title": "Palo Alto Networks (PANW) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "TJX Companies, Inc. (The) (TJX) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "Lowe's Companies (LOW) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "Target (TGT) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -158,28 +180,15 @@
     "worst": -13.0,
     "best": 7.8
    },
-   "bull": [
-    "S&P 500 is close to its 1-year high (3.3% below it).",
-    "VIX at 19.3: investors are relatively calm."
-   ],
+   "bull": [],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
+    "S&P 500 is 5.1% below its 1-year high.",
+    "VIX at 22.9: investors are nervous.",
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-16",
-     "time": "12:00 PM",
-     "title": "Fed speaks: Chairman Kevin Warsh",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-16",
-     "time": "5:00 AM",
-     "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-17",
      "time": "After close",
@@ -239,6 +248,18 @@
      "time": "Before open",
      "title": "Lowe's Companies (LOW) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "Before open",
+     "title": "Target (TGT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "Walmart (WMT) reports earnings",
+     "importance": "high"
     }
    ]
   },
@@ -272,13 +293,12 @@
     "worst": -24.1,
     "best": 14.5
    },
-   "bull": [
-    "S&P 500 is close to its 1-year high (3.3% below it).",
-    "VIX at 19.3: investors are relatively calm."
-   ],
+   "bull": [],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
+    "S&P 500 is 5.1% below its 1-year high.",
+    "VIX at 22.9: investors are nervous.",
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -345,13 +365,13 @@
     "best": 49.3
    },
    "bull": [
-    "S&P 500 is close to its 1-year high (3.3% below it).",
-    "VIX at 19.3: investors are relatively calm.",
-    "QQQ trailing P/E is 28.0, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 27.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "10-year yield is high at 5.15%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 38 out of 100.",
+    "S&P 500 is 5.1% below its 1-year high.",
+    "VIX at 22.9: investors are nervous.",
+    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [

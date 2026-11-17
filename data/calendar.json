@@ -1,38 +1,8 @@
 {
- "generated": "2026-11-16T22:34:18.271726Z",
- "today": "2026-11-16",
+ "generated": "2026-11-17T04:52:01.902034Z",
+ "today": "2026-11-17",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-16-fed-fed-speaks-chairman-kevin-warsh",
-   "date": "2026-11-16",
-   "time": "12:00 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Chairman Kevin Warsh",
-   "importance": "medium",
-   "why": "Topic: Opening Remarks. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Chairman Kevin Warsh",
-    "location": "At the Federal Reserve\u2019s Productivity and Jobs Task Force Conference, Federal Reserve Bank of San Francisco, San Francisco, Calif."
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/"
-  },
-  {
-   "id": "2026-11-16-fed-fed-speaks-governor-michael-s-barr",
-   "date": "2026-11-16",
-   "time": "5:00 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Michael S. Barr",
-   "importance": "medium",
-   "why": "Topic: Artificial Intelligence and Financial Stability. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Michael S. Barr",
-    "location": "At the 7th ACM International Conference on AI in Finance, Milan, Italy"
-   },
-   "source": "Federal Reserve",
-   "link": "https://us06web.zoom.us/j/84433320946?pwd=zq5qHzI0IgCBc7QKytDbJ5X90yXZKC.1 "
-  },
   {
    "id": "2026-11-17-earnings-nvidia-nvda-reports-earnings",
    "date": "2026-11-17",
@@ -410,7 +380,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.41.",
    "extra": {
-    "market_cap_b": 219,
+    "market_cap_b": 236,
     "eps_forecast": "$6.41"
    },
    "source": "",
@@ -425,7 +395,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.89.",
    "extra": {
-    "market_cap_b": 193,
+    "market_cap_b": 198,
     "eps_forecast": "$3.89"
    },
    "source": "",
@@ -440,7 +410,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.34.",
    "extra": {
-    "market_cap_b": 132,
+    "market_cap_b": 129,
     "eps_forecast": "$1.34"
    },
    "source": "",
@@ -455,7 +425,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.27.",
    "extra": {
-    "market_cap_b": 55,
+    "market_cap_b": 54,
     "eps_forecast": "$2.27"
    },
    "source": "",
