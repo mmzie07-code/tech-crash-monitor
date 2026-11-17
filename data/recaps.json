@@ -1,7 +1,47 @@
 {
- "generated": "2026-11-17T04:52:08.571826Z",
+ "generated": "2026-11-17T21:23:33.669698Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-17-earnings-nvidia-nvda-reports-earnings",
+   "date": "2026-11-17",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "NVIDIA (NVDA) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-17-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-17",
+   "time": "9:10 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://avdusa.zoom.us/j/81071533579",
+   "lesson": 3
+  },
   {
    "id": "2026-11-16-fed-fed-speaks-governor-michael-s-barr",
    "date": "2026-11-16",
