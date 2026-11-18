@@ -1,56 +1,56 @@
 {
- "date": "2026-11-16",
- "generated": "2026-11-17T05:10:42.158946Z",
- "headline": "US stocks finished lower. The S&P 500 fell 1.92%, with 2 of 11 sectors up.",
+ "date": "2026-11-17",
+ "generated": "2026-11-18T04:12:13.174001Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 1.03%, with 0 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -1.92% today, -3.17% this month, +8.14% this year",
-    "Dow Jones: -1.41% today, -0.76% this month, +6.67% this year",
-    "Nasdaq Composite: -2.49% today, -6.24% this month, +5.48% this year",
-    "Russell 2000: -1.70% today, +0.79% this month, +9.36% this year"
+    "S&P 500: -1.03% today, -4.55% this month, +7.03% this year",
+    "Dow Jones: -1.64% today, -2.32% this month, +4.91% this year",
+    "Nasdaq Composite: -0.74% today, -7.95% this month, +4.70% this year",
+    "Russell 2000: -1.50% today, -0.97% this month, +7.72% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Consumer Staples +0.27%, Utilities +0.18%, Real Estate -0.27%",
-    "Lagging: Technology -3.24%, Energy -1.96%, Industrials -1.85%",
-    "2 of 11 sectors rose."
+    "Leading: Energy -0.52%, Industrials -0.55%, Consumer Discretionary -0.89%",
+    "Lagging: Financials -1.91%, Utilities -1.59%, Real Estate -1.49%",
+    "0 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 22.91 (+18.70% today)",
-    "10-year Treasury yield: 5.12% (-0.03 pts today)",
-    "US dollar index: 103.49 (-0.05% today)",
-    "Crude oil: 85.01 (-0.83% today)",
-    "Gold: 3,873.70 (+0.54% today)",
-    "Bitcoin: 64,855.55 (-0.69% today)"
+    "VIX (fear gauge): 25.46 (+11.13% today)",
+    "10-year Treasury yield: 5.10% (-0.02 pts today)",
+    "US dollar index: 103.60 (+0.11% today)",
+    "Crude oil: 85.08 (-1.08% today)",
+    "Gold: 3,798.10 (-1.71% today)",
+    "Bitcoin: 64,365.84 (-0.76% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The VIX (expected volatility) jumped +18.70% to 22.9. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "A 3.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The VIX (expected volatility) jumped +11.13% to 25.5. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "Gold moved -1.71%. Investors often buy gold when they are worried about inflation or turmoil."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Tue Nov 17, After close: NVIDIA (NVDA) reports earnings",
     "Wed Nov 18, 2:00 PM ET: FOMC minutes (meeting of October 27-28)",
     "Thu Nov 19, Before open: Walmart (WMT) reports earnings",
-    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation"
+    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation",
+    "Wed Dec 9, 2:00 PM ET: Fed interest-rate decision (FOMC)"
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 25 out of 100 (Danger; higher is better) (-13 from 38 on 2026-11-13).",
+    "Market health score 25 out of 100 (Danger; higher is better) (unchanged from 25 on 2026-11-16).",
     "Warning signs flashing: AI capex vs revenue gap; Rates rising; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -58,52 +58,52 @@
  ],
  "headlines": [
   {
-   "title": "Trump\u2019s accounts traded up to $97.5 million in Nvidia as Huang gained White House access",
+   "title": "Putin says EU is losing industry, falling behind competition ahead of meeting with Trump, Xi",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/16/trump-nvidia-stock-trades-jensen-huang.html",
-   "published": "Mon, 16 Nov 2026 22:37:45"
+   "link": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html",
+   "published": "Wed, 18 Nov 2026 04:11:03"
   },
   {
-   "title": "Third U.S. carrier arrives, stoking concerns about renewed conflicts with Iran",
+   "title": "Democrat Mary Peltola wins Alaska Senate election",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html",
-   "published": "Tue, 17 Nov 2026 04:50:19"
+   "link": "https://www.cnbc.com/2026/11/18/alaska-senate-mary-peltola-wins-election.html",
+   "published": "Wed, 18 Nov 2026 04:10:45"
   },
   {
-   "title": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means",
+   "title": "China\u2019s Xi calls for removing trade and investment barriers ahead of his meeting with Trump and Putin",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html",
-   "published": "Tue, 17 Nov 2026 00:42:33"
+   "link": "https://www.cnbc.com/2026/11/18/china-xi-trade-investment-barriers.html",
+   "published": "Wed, 18 Nov 2026 03:30:51"
   },
   {
-   "title": "Aschenbrenner\u2019s Situational Awareness made AI bets again before October rout",
+   "title": "Zelenskyy says Starshield speed curbs still in place over 'occupied territories' of Ukraine",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/16/situational-awareness-aschenbrenner-new-ai-bets.html",
-   "published": "Mon, 16 Nov 2026 23:05:12"
+   "link": "https://www.cnbc.com/2026/11/18/ukraine-starshield-starlink-musk-spacex.html",
+   "published": "Wed, 18 Nov 2026 02:50:16"
   },
   {
-   "title": "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
+   "title": "CoreWeave\u2019s stock pops \u2014 even as Nvidia talks up a \u2018disciplined\u2019 approach to financing",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/im-in-my-40s-should-i-accept-a-lower-pension-in-exchange-for-naming-my-husband-or-child-as-a-beneficiary-b2352059?mod=mw_rss_topstories",
-   "published": "Tue, 17 Nov 2026 02:30:00"
+   "link": "https://www.marketwatch.com/story/coreweaves-stock-pops-even-as-nvidia-talks-up-a-disciplined-approach-to-financing-e7f00876?mod=mw_rss_topstories",
+   "published": "Wed, 18 Nov 2026 01:59:00"
   },
   {
-   "title": "United Airlines resolves system outage that delayed flights Monday",
+   "title": "Medicare Part B premiums rise due higher healthcare spending",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/united-airlines-suffers-system-outage-amid-lingering-faa-ground-stop-delays-5e33f94c?mod=mw_rss_topstories",
-   "published": "Mon, 16 Nov 2026 23:42:00"
+   "link": "https://www.marketwatch.com/story/medicare-part-b-premiums-rise-due-higher-healthcare-spending-f2daba13?mod=mw_rss_topstories",
+   "published": "Wed, 18 Nov 2026 01:45:00"
   },
   {
-   "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
+   "title": "Nvidia\u2019s stock rises as blowout numbers help ease CEO transition fears",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/stanley-druckenmiller-dumped-these-chip-stocks-while-buying-into-spacex-and-palantir-9ae1f078?mod=mw_rss_topstories",
-   "published": "Mon, 16 Nov 2026 23:28:00"
+   "link": "https://www.marketwatch.com/story/nvidias-stock-rises-as-blowout-numbers-help-ease-ceo-transition-fears-2f20d38a?mod=mw_rss_topstories",
+   "published": "Wed, 18 Nov 2026 01:28:00"
   },
   {
-   "title": "Do Amazon\u2019s Black Friday deals really save you money? A new report casts doubt.",
+   "title": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/do-amazons-black-friday-deals-really-save-you-money-03859cf3?mod=mw_rss_topstories",
-   "published": "Mon, 16 Nov 2026 23:04:00"
+   "link": "https://www.marketwatch.com/story/my-husband-is-happily-retired-at-64-and-thinks-i-should-keep-working-is-he-being-fair-325c5f38?mod=mw_rss_topstories",
+   "published": "Tue, 17 Nov 2026 23:30:00"
   }
  ],
  "summary": null,

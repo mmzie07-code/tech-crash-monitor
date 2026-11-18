@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-17T21:23:06.683663Z",
- "asof": "2026-11-17",
+ "generated": "2026-11-18T03:50:30.294809Z",
+ "asof": "2026-11-18",
  "priced": [
   {
    "sym": "MDRN",
@@ -1924,7 +1924,7 @@
    "lockup": "2026-11-11",
    "perf": {
     "first_day_pct": -35.5,
-    "now_pct": -76.2,
+    "now_pct": -76.1,
     "last": 1.85,
     "last_date": "2026-11-17",
     "first_trade": "2026-05-18"
@@ -2468,27 +2468,6 @@
    "name": "Sprout Red International Ltd",
    "date": "2026-09-21",
    "amount": 1000000.0,
-   "spac": false
-  },
-  {
-   "sym": "STNF",
-   "name": "Santa Ana Global Enterprises, S.A.",
-   "date": "2026-09-18",
-   "amount": 19906500.0,
-   "spac": false
-  },
-  {
-   "sym": "NSCL",
-   "name": "Nscale plc",
-   "date": "2026-09-18",
-   "amount": 100000000.0,
-   "spac": false
-  },
-  {
-   "sym": "VME",
-   "name": "VME Companies, Inc.",
-   "date": "2026-09-18",
-   "amount": 23000000.0,
    "spac": false
   }
  ],

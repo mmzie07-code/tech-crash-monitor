@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T21:23:33.627561Z",
+ "generated": "2026-11-18T03:50:55.605271Z",
  "as_of": "2026-11-17",
  "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -36,79 +36,9 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 5.1% below its 1-year high.",
-    "VIX at 22.9: investors are nervous.",
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-11-17",
-     "time": "After close",
-     "title": "NVIDIA (NVDA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "9:10 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Before open",
-     "title": "Home Depot, Inc. (The) (HD) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Before open",
-     "title": "Walt Disney Company (The) (DIS) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Time TBA",
-     "title": "BHP Group Limited (BHP) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10350,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 1199,
-    "up": 50,
-    "median": 0.0,
-    "p10": -1.7,
-    "p25": -0.8,
-    "p75": 0.8,
-    "p90": 1.7,
-    "below": 23,
-    "above": 21,
-    "worst": -4.8,
-    "best": 5.5
-   },
-   "bull": [],
-   "bear": [
-    "S&P 500 is 5.1% below its 1-year high.",
-    "VIX at 22.9: investors are nervous.",
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 6.1% below its 1-year high.",
+    "VIX at 25.5: investors are nervous.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
    "events": [
@@ -150,6 +80,94 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10350,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1199,
+    "up": 50,
+    "median": 0.0,
+    "p10": -1.7,
+    "p25": -0.8,
+    "p75": 0.8,
+    "p90": 1.7,
+    "below": 23,
+    "above": 21,
+    "worst": -4.8,
+    "best": 5.5
+   },
+   "bull": [],
+   "bear": [
+    "S&P 500 is 6.1% below its 1-year high.",
+    "VIX at 25.5: investors are nervous.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "Walmart (WMT) reports earnings",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "9:25 AM",
+     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "2:15 PM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "Alibaba Group Holding Limited (BABA) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "PDD Holdings (PDD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "After close",
+     "title": "Intuit (INTU) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "NetEase (NTES) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "After close",
+     "title": "Ross Stores (ROST) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -182,43 +200,13 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 5.1% below its 1-year high.",
-    "VIX at 22.9: investors are nervous.",
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 6.1% below its 1-year high.",
+    "VIX at 25.5: investors are nervous.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-17",
-     "time": "After close",
-     "title": "NVIDIA (NVDA) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "9:10 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Before open",
-     "title": "Home Depot, Inc. (The) (HD) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Before open",
-     "title": "Walt Disney Company (The) (DIS) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-17",
-     "time": "Time TBA",
-     "title": "BHP Group Limited (BHP) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-18",
      "time": "2:00 PM",
@@ -260,6 +248,36 @@
      "time": "Before open",
      "title": "Walmart (WMT) reports earnings",
      "importance": "high"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "9:25 AM",
+     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "2:15 PM",
+     "title": "Fed speaks: Governor Michael S. Barr",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "Alibaba Group Holding Limited (BABA) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "Before open",
+     "title": "PDD Holdings (PDD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "After close",
+     "title": "Intuit (INTU) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -295,19 +313,13 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 5.1% below its 1-year high.",
-    "VIX at 22.9: investors are nervous.",
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 6.1% below its 1-year high.",
+    "VIX at 25.5: investors are nervous.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-17",
-     "time": "After close",
-     "title": "NVIDIA (NVDA) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-11-18",
      "time": "2:00 PM",
@@ -365,12 +377,12 @@
     "best": 49.5
    },
    "bull": [
-    "QQQ trailing P/E is 27.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 27.1, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "S&P 500 is 5.1% below its 1-year high.",
-    "VIX at 22.9: investors are nervous.",
-    "10-year yield is high at 5.12%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 6.1% below its 1-year high.",
+    "VIX at 25.5: investors are nervous.",
+    "10-year yield is high at 5.10%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
