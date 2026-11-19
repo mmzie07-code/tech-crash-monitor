@@ -1,7 +1,119 @@
 {
- "generated": "2026-11-18T20:56:26.298462Z",
+ "generated": "2026-11-19T03:31:59.161267Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "headline": "The Fed published the minutes of its last meeting.",
+   "bullets": [
+    "Markets read the minutes for hints about future rate changes and how divided officials were."
+   ],
+   "changes": null,
+   "context": [
+    "Minutes are backward-looking, so they move markets mainly when they reveal more disagreement or urgency than the original statement showed."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Minutes",
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+    }
+   ],
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -0.23,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": 0.42,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -1.11,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": 0.46,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.03,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.36,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": -3.53,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -3.16,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -3.2,
+     "unit": "pct",
+     "symbol": "CL=F"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Consumer Discretionary",
+     "move": 1.83
+    },
+    "worst": {
+     "name": "Energy",
+     "move": -3.41
+    }
+   },
+   "id": "2026-11-18-fed-fomc-minutes-meeting-of-october-27-28",
+   "date": "2026-11-18",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "FOMC minutes (meeting of October 27-28)",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "generated": "2026-11-19T03:32:06.640161Z"
+  },
+  {
+   "id": "2026-11-18-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-18",
+   "time": "1:35 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://web.cvent.com/event/c6c9732e-65f1-42c9-8b92-fd955396ec06/register?rp=276284ef-6a44-4895-b452-f3b63709581b",
+   "lesson": 3
+  },
   {
    "headline": "NVIDIA reported earnings: beat estimates.",
    "bullets": [
