@@ -1,7 +1,67 @@
 {
- "generated": "2026-11-19T03:31:59.161267Z",
+ "generated": "2026-11-19T21:01:17.716275Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-19-earnings-walmart-wmt-reports-earnings",
+   "date": "2026-11-19",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Walmart (WMT) reports earnings",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-19-fed-fed-speaks-vice-chair-philip-n-jefferson",
+   "date": "2026-11-19",
+   "time": "9:25 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://teams.microsoft.com/meet/2130457444862160?p=ynp4cqfcaAtsBBBsTM",
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-19-fed-fed-speaks-governor-michael-s-barr",
+   "date": "2026-11-19",
+   "time": "2:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Michael S. Barr",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://aisymposium.finreglab.org/press",
+   "lesson": 3
+  },
   {
    "headline": "The Fed published the minutes of its last meeting.",
    "bullets": [

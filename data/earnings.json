@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-19T03:30:04.344853Z",
+ "generated": "2026-11-19T21:00:04.015061Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-19",
-   "reported_total": 63,
+   "reported_total": 56,
    "top": [
     {
      "symbol": "WMT",
      "name": "Walmart",
-     "market_cap_b": 1011.7,
+     "market_cap_b": 1010.4,
      "eps": null,
      "eps_estimate": 0.64,
      "surprise_pct": null,
@@ -25,7 +25,7 @@
     {
      "symbol": "BABA",
      "name": "Alibaba Group Holding Limited",
-     "market_cap_b": 209.9,
+     "market_cap_b": 204.4,
      "eps": null,
      "eps_estimate": 1.56,
      "surprise_pct": null,
@@ -57,7 +57,7 @@
     {
      "symbol": "INTU",
      "name": "Intuit",
-     "market_cap_b": 85.7,
+     "market_cap_b": 83.7,
      "eps": null,
      "eps_estimate": 2.47,
      "surprise_pct": null,
@@ -73,14 +73,14 @@
     {
      "symbol": "NTES",
      "name": "NetEase",
-     "market_cap_b": 76.3,
+     "market_cap_b": 75.6,
      "eps": null,
-     "eps_estimate": 2.4,
+     "eps_estimate": 2.37,
      "surprise_pct": null,
      "timing": "time-pre-market",
      "bullets": [
       "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.40.",
+      "Results aren't posted in our data yet. Analysts expected EPS of $2.37.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -89,7 +89,7 @@
     {
      "symbol": "ROST",
      "name": "Ross Stores",
-     "market_cap_b": 70.4,
+     "market_cap_b": 72.7,
      "eps": null,
      "eps_estimate": 1.85,
      "surprise_pct": null,
@@ -105,7 +105,7 @@
     {
      "symbol": "KEYS",
      "name": "Keysight Technologies",
-     "market_cap_b": 48.4,
+     "market_cap_b": 48.7,
      "eps": null,
      "eps_estimate": 3.09,
      "surprise_pct": null,
@@ -121,7 +121,7 @@
     {
      "symbol": "WSM",
      "name": "Williams-Sonoma",
-     "market_cap_b": 29.5,
+     "market_cap_b": 30.6,
      "eps": null,
      "eps_estimate": 2.18,
      "surprise_pct": null,
@@ -137,7 +137,7 @@
     {
      "symbol": "WMG",
      "name": "Warner Music Group",
-     "market_cap_b": 17.0,
+     "market_cap_b": 17.2,
      "eps": null,
      "eps_estimate": 0.39,
      "surprise_pct": null,
@@ -153,7 +153,7 @@
     {
      "symbol": "FUTU",
      "name": "Futu Holdings Limited",
-     "market_cap_b": 12.2,
+     "market_cap_b": 11.7,
      "eps": null,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -170,20 +170,20 @@
   },
   {
    "date": "2026-11-18",
-   "reported_total": 62,
+   "reported_total": 57,
    "top": [
     {
      "symbol": "PANW",
      "name": "Palo Alto Networks",
-     "market_cap_b": 253.1,
-     "eps": null,
+     "market_cap_b": 278.2,
+     "eps": 0.46,
      "eps_estimate": 0.52,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -11.54,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.52.",
-      "Stock moved +9.9% on Nov 18 (before the report came out). Reaction comes the next session.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.46 versus $0.52 expected, so the company missed estimates by 11.5%.",
+      "Stock moved +9.9% on Nov 18.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -192,14 +192,14 @@
     {
      "symbol": "TJX",
      "name": "TJX Companies, Inc. (The)",
-     "market_cap_b": 142.8,
-     "eps": null,
+     "market_cap_b": 154.3,
+     "eps": 1.34,
      "eps_estimate": 1.33,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 0.75,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.33.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.34 versus $1.33 expected, so the company beat estimates by 0.8%.",
       "Stock moved +8.1% on Nov 18.",
       "Covers the quarter ending Oct 2026."
      ],
@@ -209,14 +209,14 @@
     {
      "symbol": "LOW",
      "name": "Lowe's Companies",
-     "market_cap_b": 123.7,
-     "eps": null,
+     "market_cap_b": 125.0,
+     "eps": 3.1,
      "eps_estimate": 2.86,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 8.39,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.86.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.10 versus $2.86 expected, so the company beat estimates by 8.4%.",
       "Stock moved +1.1% on Nov 18.",
       "Covers the quarter ending Oct 2026."
      ],
@@ -226,14 +226,14 @@
     {
      "symbol": "TGT",
      "name": "Target",
-     "market_cap_b": 72.5,
-     "eps": null,
+     "market_cap_b": 75.4,
+     "eps": 2.15,
      "eps_estimate": 2.05,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 4.88,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.05.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.15 versus $2.05 expected, so the company beat estimates by 4.9%.",
       "Stock moved +4.0% on Nov 18.",
       "Covers the quarter ending Oct 2026."
      ],
@@ -243,14 +243,14 @@
     {
      "symbol": "P",
      "name": "Everpure",
-     "market_cap_b": 33.9,
-     "eps": null,
+     "market_cap_b": 33.6,
+     "eps": 0.32,
      "eps_estimate": 0.28,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 14.29,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.28.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.32 versus $0.28 expected, so the company beat estimates by 14.3%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -259,15 +259,15 @@
     {
      "symbol": "WWD",
      "name": "Woodward",
-     "market_cap_b": 18.3,
-     "eps": null,
+     "market_cap_b": 18.8,
+     "eps": 2.83,
      "eps_estimate": 2.5,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 13.2,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.50.",
-      "Stock moved +3.0% on Nov 18 (before the report came out). Reaction comes the next session.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.83 versus $2.50 expected, so the company beat estimates by 13.2%.",
+      "Stock moved +3.0% on Nov 18.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -276,62 +276,62 @@
     {
      "symbol": "UGI",
      "name": "UGI",
-     "market_cap_b": 8.0,
-     "eps": null,
+     "market_cap_b": 8.2,
+     "eps": -0.17,
      "eps_estimate": -0.32,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 46.88,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.32.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $-0.17 versus $-0.32 expected, so the company beat estimates by 46.9%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UGI&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "GLBE",
-     "name": "Global-E Online",
-     "market_cap_b": 6.7,
-     "eps": null,
-     "eps_estimate": 0.25,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.25.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GLBE&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "SNEX",
      "name": "StoneX Group",
-     "market_cap_b": 6.6,
-     "eps": null,
+     "market_cap_b": 6.5,
+     "eps": 0.66,
      "eps_estimate": 0.86,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -23.26,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.86.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.66 versus $0.86 expected, so the company missed estimates by 23.3%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SNEX&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "GLBE",
+     "name": "Global-E Online",
+     "market_cap_b": 6.4,
+     "eps": 0.3,
+     "eps_estimate": 0.26,
+     "surprise_pct": 15.38,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.30 versus $0.26 expected, so the company beat estimates by 15.4%.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GLBE&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "NJR",
      "name": "NewJersey Resources",
-     "market_cap_b": 5.6,
-     "eps": null,
+     "market_cap_b": 5.7,
+     "eps": 0.11,
      "eps_estimate": 0.12,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -8.33,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.12.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.11 versus $0.12 expected, so the company missed estimates by 8.3%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -346,7 +346,7 @@
     {
      "symbol": "NVDA",
      "name": "NVIDIA",
-     "market_cap_b": 3746.6,
+     "market_cap_b": 3638.1,
      "eps": 2.68,
      "eps_estimate": 2.47,
      "surprise_pct": 8.5,
@@ -363,7 +363,7 @@
     {
      "symbol": "HD",
      "name": "Home Depot, Inc. (The)",
-     "market_cap_b": 338.2,
+     "market_cap_b": 336.9,
      "eps": 3.86,
      "eps_estimate": 3.86,
      "surprise_pct": null,
@@ -380,7 +380,7 @@
     {
      "symbol": "DIS",
      "name": "Walt Disney Company (The)",
-     "market_cap_b": 201.9,
+     "market_cap_b": 209.0,
      "eps": 1.77,
      "eps_estimate": 1.67,
      "surprise_pct": 5.99,
@@ -397,7 +397,7 @@
     {
      "symbol": "BHP",
      "name": "BHP Group Limited",
-     "market_cap_b": 189.4,
+     "market_cap_b": 179.0,
      "eps": null,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -414,7 +414,7 @@
     {
      "symbol": "VIK",
      "name": "Viking Holdings",
-     "market_cap_b": 42.0,
+     "market_cap_b": 44.7,
      "eps": 1.11,
      "eps_estimate": 1.23,
      "surprise_pct": -9.76,
@@ -431,7 +431,7 @@
     {
      "symbol": "JD",
      "name": "JD.com",
-     "market_cap_b": 34.2,
+     "market_cap_b": 33.5,
      "eps": 0.77,
      "eps_estimate": 0.89,
      "surprise_pct": -13.48,
@@ -448,7 +448,7 @@
     {
      "symbol": "ESLT",
      "name": "Elbit Systems",
-     "market_cap_b": 33.5,
+     "market_cap_b": 32.5,
      "eps": 4.2,
      "eps_estimate": 3.85,
      "surprise_pct": 9.09,
@@ -464,7 +464,7 @@
     {
      "symbol": "AS",
      "name": "Amer Sports",
-     "market_cap_b": 16.9,
+     "market_cap_b": 17.3,
      "eps": 0.42,
      "eps_estimate": 0.34,
      "surprise_pct": 23.53,
@@ -480,7 +480,7 @@
     {
      "symbol": "ZTO",
      "name": "ZTO Express (Cayman)",
-     "market_cap_b": 15.8,
+     "market_cap_b": 15.7,
      "eps": 0.48,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -496,7 +496,7 @@
     {
      "symbol": "TME",
      "name": "Tencent Music Entertainment Group",
-     "market_cap_b": 14.9,
+     "market_cap_b": 14.7,
      "eps": 0.21,
      "eps_estimate": 0.21,
      "surprise_pct": null,
@@ -513,12 +513,12 @@
   },
   {
    "date": "2026-11-16",
-   "reported_total": 274,
+   "reported_total": 266,
    "top": [
     {
      "symbol": "KB",
      "name": "KB Financial Group",
-     "market_cap_b": 41.1,
+     "market_cap_b": 40.6,
      "eps": 3.42,
      "eps_estimate": 3.94,
      "surprise_pct": -13.2,
@@ -532,26 +532,9 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KB&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "TCOM",
-     "name": "Trip.com Group Limited",
-     "market_cap_b": 27.5,
-     "eps": 3.76,
-     "eps_estimate": 1.07,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $3.76 versus $1.07 expected, so the company beat estimates.",
-      "Stock moved +1.6% on Nov 16.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TCOM&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "BIDU",
      "name": "Baidu",
-     "market_cap_b": 24.2,
+     "market_cap_b": 23.5,
      "eps": 0.58,
      "eps_estimate": 0.57,
      "surprise_pct": 1.75,
@@ -567,7 +550,7 @@
     {
      "symbol": "TSN",
      "name": "Tyson Foods",
-     "market_cap_b": 21.9,
+     "market_cap_b": 22.1,
      "eps": 0.61,
      "eps_estimate": 0.65,
      "surprise_pct": -6.15,
@@ -584,7 +567,7 @@
     {
      "symbol": "BEKE",
      "name": "KE Holdings",
-     "market_cap_b": 20.8,
+     "market_cap_b": 20.9,
      "eps": 0.3,
      "eps_estimate": 0.21,
      "surprise_pct": 42.86,
@@ -600,7 +583,7 @@
     {
      "symbol": "WF",
      "name": "Woori Bank",
-     "market_cap_b": 17.6,
+     "market_cap_b": 17.4,
      "eps": 2.94,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -616,7 +599,7 @@
     {
      "symbol": "HTHT",
      "name": "H World Group Limited",
-     "market_cap_b": 16.5,
+     "market_cap_b": 16.1,
      "eps": 0.89,
      "eps_estimate": 0.75,
      "surprise_pct": 18.67,
@@ -632,7 +615,7 @@
     {
      "symbol": "ARMK",
      "name": "Aramark",
-     "market_cap_b": 14.9,
+     "market_cap_b": 15.0,
      "eps": 0.78,
      "eps_estimate": 0.75,
      "surprise_pct": 4.0,
@@ -648,7 +631,7 @@
     {
      "symbol": "ACM",
      "name": "AECOM",
-     "market_cap_b": 10.4,
+     "market_cap_b": 10.6,
      "eps": 1.63,
      "eps_estimate": 1.59,
      "surprise_pct": 2.52,
@@ -662,9 +645,25 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ACM&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "FRHC",
+     "name": "Freedom Holding",
+     "market_cap_b": 9.6,
+     "eps": 0.76,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.76 (no analyst consensus available).",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FRHC&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "XPEV",
      "name": "XPeng",
-     "market_cap_b": 9.6,
+     "market_cap_b": 9.3,
      "eps": -0.14,
      "eps_estimate": null,
      "surprise_pct": null,

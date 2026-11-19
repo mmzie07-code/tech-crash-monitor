@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T03:31:52.411774Z",
+ "generated": "2026-11-19T21:01:07.374210Z",
  "today": "2026-11-19",
  "timezone": "US Eastern",
  "events": [
@@ -12,7 +12,7 @@
    "importance": "high",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.64.",
    "extra": {
-    "market_cap_b": 1012,
+    "market_cap_b": 1010,
     "eps_forecast": "$0.64"
    },
    "source": "",
@@ -57,7 +57,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.56.",
    "extra": {
-    "market_cap_b": 210,
+    "market_cap_b": 204,
     "eps_forecast": "$1.56"
    },
    "source": "",
@@ -87,7 +87,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.47.",
    "extra": {
-    "market_cap_b": 86,
+    "market_cap_b": 84,
     "eps_forecast": "$2.47"
    },
    "source": "",
@@ -100,10 +100,10 @@
    "kind": "earnings",
    "title": "NetEase (NTES) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.40.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.37.",
    "extra": {
     "market_cap_b": 76,
-    "eps_forecast": "$2.40"
+    "eps_forecast": "$2.37"
    },
    "source": "",
    "link": null
@@ -117,7 +117,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
    "extra": {
-    "market_cap_b": 70,
+    "market_cap_b": 73,
     "eps_forecast": "$1.85"
    },
    "source": "",
@@ -187,10 +187,10 @@
    "kind": "earnings",
    "title": "Dell Technologies (DELL) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.41.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.48.",
    "extra": {
-    "market_cap_b": 205,
-    "eps_forecast": "$6.41"
+    "market_cap_b": 199,
+    "eps_forecast": "$6.48"
    },
    "source": "",
    "link": null
@@ -204,7 +204,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.89.",
    "extra": {
-    "market_cap_b": 186,
+    "market_cap_b": 185,
     "eps_forecast": "$3.89"
    },
    "source": "",
@@ -219,7 +219,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.34.",
    "extra": {
-    "market_cap_b": 131,
+    "market_cap_b": 129,
     "eps_forecast": "$1.34"
    },
    "source": "",
@@ -299,7 +299,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.07.",
    "extra": {
-    "market_cap_b": 175,
+    "market_cap_b": 174,
     "eps_forecast": "$4.07"
    },
    "source": "",
