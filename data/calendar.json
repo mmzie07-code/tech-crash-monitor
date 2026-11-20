@@ -1,140 +1,8 @@
 {
- "generated": "2026-11-19T21:01:07.374210Z",
- "today": "2026-11-19",
+ "generated": "2026-11-20T03:17:07.014648Z",
+ "today": "2026-11-20",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-19-earnings-walmart-wmt-reports-earnings",
-   "date": "2026-11-19",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Walmart (WMT) reports earnings",
-   "importance": "high",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.64.",
-   "extra": {
-    "market_cap_b": 1010,
-    "eps_forecast": "$0.64"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-fed-fed-speaks-vice-chair-philip-n-jefferson",
-   "date": "2026-11-19",
-   "time": "9:25 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-   "importance": "medium",
-   "why": "Topic: Economic Shocks. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair Philip N. Jefferson",
-    "location": "At the International Monetary Fund (IMF) and Central Bank of Brazil conference \"A Quarter Century of Inflation Targeting in Latin America: Progress, Challenges, and the Road Ahead\" (virtual)"
-   },
-   "source": "Federal Reserve",
-   "link": "https://teams.microsoft.com/meet/2130457444862160?p=ynp4cqfcaAtsBBBsTM"
-  },
-  {
-   "id": "2026-11-19-fed-fed-speaks-governor-michael-s-barr",
-   "date": "2026-11-19",
-   "time": "2:15 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Michael S. Barr",
-   "importance": "medium",
-   "why": "Topic: Artificial Intelligence. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Michael S. Barr",
-    "location": "At the FinRegLab 2026 AI Symposium, Washington, D.C."
-   },
-   "source": "Federal Reserve",
-   "link": "https://aisymposium.finreglab.org/press"
-  },
-  {
-   "id": "2026-11-19-earnings-alibaba-group-holding-limited-baba-reports-earni",
-   "date": "2026-11-19",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Alibaba Group Holding Limited (BABA) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.56.",
-   "extra": {
-    "market_cap_b": 204,
-    "eps_forecast": "$1.56"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-earnings-pdd-holdings-pdd-reports-earnings",
-   "date": "2026-11-19",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "PDD Holdings (PDD) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.61.",
-   "extra": {
-    "market_cap_b": 110,
-    "eps_forecast": "$2.61"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-earnings-intuit-intu-reports-earnings",
-   "date": "2026-11-19",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Intuit (INTU) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.47.",
-   "extra": {
-    "market_cap_b": 84,
-    "eps_forecast": "$2.47"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-earnings-netease-ntes-reports-earnings",
-   "date": "2026-11-19",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "NetEase (NTES) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.37.",
-   "extra": {
-    "market_cap_b": 76,
-    "eps_forecast": "$2.37"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-earnings-ross-stores-rost-reports-earnings",
-   "date": "2026-11-19",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Ross Stores (ROST) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.85.",
-   "extra": {
-    "market_cap_b": 73,
-    "eps_forecast": "$1.85"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-19-data-weekly-jobless-claims",
-   "date": "2026-11-19",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-20-fed-fed-speaks-governor-lisa-d-cook",
    "date": "2026-11-20",
@@ -461,6 +329,18 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-10-data-weekly-jobless-claims",
+   "date": "2026-12-10",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {

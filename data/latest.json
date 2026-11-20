@@ -1,6 +1,6 @@
 {
- "date": "2026-11-18",
- "generated": "2026-11-19T02:44:44.882801Z",
+ "date": "2026-11-19",
+ "generated": "2026-11-20T02:30:41.237249Z",
  "level": "High",
  "health": 50,
  "score": 50,
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 27.2,
+   "value": 26.6,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 27.2; price is -3.4% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 26.6; price is -5.6% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.33,
+   "value": 0.35,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 5.07%, +0.33 pts over 3 months.",
+   "detail": "10Y yield 5.05%, +0.35 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -75,9 +75,9 @@
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
    "status": "ok",
-   "value": -0.9,
+   "value": -0.3,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -0.9% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -0.3% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "warn",
-   "value": 24.6,
+   "value": 28.4,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 24.6 is 1.39x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 28.4 is 1.60x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -13.2,
+   "value": -15.1,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -13.2% from 1y high; below 50-day, below 200-day avg.",
+   "detail": "QQQ -15.1% from 1y high; below 50-day, below 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 1.64,
+   "value": 1.65,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1418M in 90 days vs $867M per-90d baseline (1.64x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1429M in 90 days vs $867M per-90d baseline (1.65x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -123,20 +123,16 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "ok",
-   "value": -4.2,
+   "value": 0.3,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -8.9% over 10 days (-4.2 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -0.1% over 10 days (+0.3 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 659.51,
+ "qqq_last": 645.04,
  "qqq_series": [
-  [
-   "2025-11-20",
-   585.67
-  ],
   [
    "2025-11-21",
    590.07
@@ -1132,12 +1128,16 @@
   [
    "2026-11-18",
    659.51
+  ],
+  [
+   "2026-11-19",
+   645.04
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 61.4,
- "ai_health": 39,
+ "ai_heat": 62.0,
+ "ai_health": 38,
  "ai_zone": "Warning",
  "ai_indicators": 61,
- "ai_updated": "2026-11-19T21:04:04.802631Z"
+ "ai_updated": "2026-11-20T03:19:35.938534Z"
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T21:01:17.666137Z",
+ "generated": "2026-11-20T03:17:13.599195Z",
  "as_of": "2026-11-19",
  "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -38,58 +38,22 @@
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "S&P 500 is 6.3% below its 1-year high.",
-    "VIX at 24.6: investors are nervous.",
-    "10-year yield is high at 5.07%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.2% below its 1-year high.",
+    "VIX at 28.4: investors are nervous.",
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
    ],
    "events": [
     {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Walmart (WMT) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "9:25 AM",
-     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
+     "date": "2026-11-20",
+     "time": "12:15 PM",
+     "title": "Fed speaks: Governor Lisa D. Cook",
      "importance": "medium"
     },
     {
-     "date": "2026-11-19",
-     "time": "2:15 PM",
-     "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Alibaba Group Holding Limited (BABA) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "PDD Holdings (PDD) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "After close",
-     "title": "Intuit (INTU) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "NetEase (NTES) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "After close",
-     "title": "Ross Stores (ROST) reports earnings",
+     "date": "2026-11-20",
+     "time": "8:25 AM",
+     "title": "Fed speaks: Governor Christopher J. Waller",
      "importance": "medium"
     }
    ]
@@ -128,22 +92,16 @@
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "S&P 500 is 6.3% below its 1-year high.",
-    "VIX at 24.6: investors are nervous.",
-    "10-year yield is high at 5.07%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.2% below its 1-year high.",
+    "VIX at 28.4: investors are nervous.",
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
    ],
    "events": [
     {
-     "date": "2026-11-20",
-     "time": "12:15 PM",
-     "title": "Fed speaks: Governor Lisa D. Cook",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-20",
-     "time": "8:25 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
+     "date": "2026-11-23",
+     "time": "After close",
+     "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
      "importance": "medium"
     }
    ]
@@ -182,61 +140,13 @@
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "S&P 500 is 6.3% below its 1-year high.",
-    "VIX at 24.6: investors are nervous.",
-    "10-year yield is high at 5.07%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.2% below its 1-year high.",
+    "VIX at 28.4: investors are nervous.",
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Walmart (WMT) reports earnings",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "9:25 AM",
-     "title": "Fed speaks: Vice Chair Philip N. Jefferson",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "2:15 PM",
-     "title": "Fed speaks: Governor Michael S. Barr",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Alibaba Group Holding Limited (BABA) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "PDD Holdings (PDD) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "After close",
-     "title": "Intuit (INTU) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "NetEase (NTES) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "After close",
-     "title": "Ross Stores (ROST) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-20",
      "time": "12:15 PM",
@@ -259,6 +169,48 @@
      "date": "2026-11-24",
      "time": "After close",
      "title": "Dell Technologies (DELL) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Before open",
+     "title": "Analog Devices (ADI) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Before open",
+     "title": "Medtronic (MDT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "After close",
+     "title": "Autodesk (ADSK) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "2:00 PM",
+     "title": "Fed Beige Book",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "8:30 AM",
+     "title": "GDP second estimate: revised economic growth",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "Before open",
+     "title": "Deere & Company (DE) reports earnings",
      "importance": "medium"
     }
    ]
@@ -297,19 +249,13 @@
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
    ],
    "bear": [
-    "S&P 500 is 6.3% below its 1-year high.",
-    "VIX at 24.6: investors are nervous.",
-    "10-year yield is high at 5.07%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.2% below its 1-year high.",
+    "VIX at 28.4: investors are nervous.",
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-19",
-     "time": "Before open",
-     "title": "Walmart (WMT) reports earnings",
-     "importance": "high"
-    },
     {
      "date": "2026-11-25",
      "time": "8:30 AM",
@@ -356,12 +302,12 @@
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 27.2, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 26.6, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "S&P 500 is 6.3% below its 1-year high.",
-    "VIX at 24.6: investors are nervous.",
-    "10-year yield is high at 5.07%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.2% below its 1-year high.",
+    "VIX at 28.4: investors are nervous.",
+    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
