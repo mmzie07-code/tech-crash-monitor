@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-20T03:17:13.599195Z",
- "as_of": "2026-11-19",
- "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
+ "generated": "2026-11-20T20:46:24.720829Z",
+ "as_of": "2026-11-20",
+ "regime": "S&P 500 below its 200-day average and the market is fearful (VIX over 30)",
  "history_from": "1985-01-02",
  "horizons": {
   "today": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10352,
+    "n": 10353,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,17 +22,17 @@
     "best": 11.6
    },
    "similar": {
-    "n": 1201,
-    "up": 50,
-    "median": 0.0,
-    "p10": -1.7,
-    "p25": -0.9,
-    "p75": 0.8,
-    "p90": 1.7,
-    "below": 23,
-    "above": 21,
-    "worst": -4.8,
-    "best": 5.5
+    "n": 645,
+    "up": 54,
+    "median": 0.2,
+    "p10": -2.9,
+    "p25": -1.3,
+    "p75": 1.6,
+    "p90": 3.2,
+    "below": 29,
+    "above": 34,
+    "worst": -12.0,
+    "best": 11.6
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
@@ -63,7 +63,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10352,
+    "n": 10353,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -76,17 +76,17 @@
     "best": 11.6
    },
    "similar": {
-    "n": 1201,
-    "up": 50,
-    "median": 0.0,
-    "p10": -1.7,
-    "p25": -0.9,
-    "p75": 0.8,
-    "p90": 1.7,
-    "below": 23,
-    "above": 21,
-    "worst": -4.8,
-    "best": 5.5
+    "n": 645,
+    "up": 54,
+    "median": 0.2,
+    "p10": -2.9,
+    "p25": -1.3,
+    "p75": 1.6,
+    "p90": 3.2,
+    "below": 29,
+    "above": 34,
+    "worst": -12.0,
+    "best": 11.6
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
@@ -111,7 +111,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10348,
+    "n": 10349,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -124,17 +124,17 @@
     "best": 19.1
    },
    "similar": {
-    "n": 1199,
-    "up": 52,
-    "median": 0.2,
-    "p10": -3.7,
-    "p25": -1.9,
-    "p75": 1.8,
-    "p90": 3.5,
-    "below": 19,
-    "above": 17,
-    "worst": -11.5,
-    "best": 9.9
+    "n": 645,
+    "up": 59,
+    "median": 0.9,
+    "p10": -5.0,
+    "p25": -2.1,
+    "p75": 3.8,
+    "p90": 6.0,
+    "below": 22,
+    "above": 37,
+    "worst": -18.3,
+    "best": 19.1
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
@@ -175,6 +175,12 @@
      "date": "2026-11-24",
      "time": "Before open",
      "title": "Analog Devices (ADI) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Time TBA",
+     "title": "BHP Group Limited (BHP) reports earnings",
      "importance": "medium"
     },
     {
@@ -220,7 +226,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10332,
+    "n": 10333,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -233,17 +239,17 @@
     "best": 25.1
    },
    "similar": {
-    "n": 1199,
-    "up": 51,
-    "median": 0.3,
-    "p10": -8.0,
-    "p25": -4.4,
-    "p75": 4.2,
-    "p90": 7.2,
-    "below": 21,
-    "above": 22,
-    "worst": -28.0,
-    "best": 14.6
+    "n": 645,
+    "up": 71,
+    "median": 3.5,
+    "p10": -7.9,
+    "p25": -1.2,
+    "p75": 7.2,
+    "p90": 11.4,
+    "below": 13,
+    "above": 41,
+    "worst": -30.0,
+    "best": 25.1
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet)."
@@ -275,9 +281,9 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10101,
+    "n": 10102,
     "up": 80,
-    "median": 12.1,
+    "median": 12.0,
     "p10": -11.8,
     "p25": 2.9,
     "p75": 20.3,
@@ -288,17 +294,17 @@
     "best": 74.8
    },
    "similar": {
-    "n": 1188,
-    "up": 53,
-    "median": 4.3,
-    "p10": -31.0,
-    "p25": -19.8,
-    "p75": 16.6,
-    "p90": 24.1,
-    "below": 34,
-    "above": 29,
-    "worst": -48.8,
-    "best": 49.5
+    "n": 643,
+    "up": 86,
+    "median": 22.9,
+    "p10": -7.2,
+    "p25": 15.0,
+    "p75": 33.3,
+    "p90": 44.9,
+    "below": 6,
+    "above": 75,
+    "worst": -41.5,
+    "best": 74.8
    },
    "bull": [
     "Chip stocks are not lagging the market (our best-tested warning is quiet).",

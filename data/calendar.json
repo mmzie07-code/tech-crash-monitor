@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T03:17:07.014648Z",
+ "generated": "2026-11-20T20:46:17.322016Z",
  "today": "2026-11-20",
  "timezone": "US Eastern",
  "events": [
@@ -16,7 +16,7 @@
     "location": "At the Annual Conference of the Central Bank of Chile, Santiago, Chile"
    },
    "source": "Federal Reserve",
-   "link": null
+   "link": "https://www.youtube.com/watch?v=v_WEWJgJdHw"
   },
   {
    "id": "2026-11-20-fed-fed-speaks-governor-christopher-j-waller",
@@ -55,10 +55,10 @@
    "kind": "earnings",
    "title": "Dell Technologies (DELL) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.48.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.55.",
    "extra": {
     "market_cap_b": 199,
-    "eps_forecast": "$6.48"
+    "eps_forecast": "$6.55"
    },
    "source": "",
    "link": null
@@ -72,8 +72,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.89.",
    "extra": {
-    "market_cap_b": 185,
+    "market_cap_b": 183,
     "eps_forecast": "$3.89"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-24-earnings-bhp-group-limited-bhp-reports-earnings",
+   "date": "2026-11-24",
+   "time": "Time TBA",
+   "kind": "earnings",
+   "title": "BHP Group Limited (BHP) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
+   "extra": {
+    "market_cap_b": 176,
+    "eps_forecast": ""
    },
    "source": "",
    "link": null
@@ -102,7 +117,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.27.",
    "extra": {
-    "market_cap_b": 53,
+    "market_cap_b": 51,
     "eps_forecast": "$2.27"
    },
    "source": "",

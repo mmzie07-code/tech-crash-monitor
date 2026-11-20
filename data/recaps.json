@@ -1,26 +1,102 @@
 {
- "generated": "2026-11-20T03:17:13.643271Z",
+ "generated": "2026-11-20T20:46:24.769514Z",
  "ai_analysis_enabled": false,
  "recaps": [
   {
+   "headline": "Walmart reported earnings: beat estimates.",
+   "bullets": [
+    "Report time wasn't listed by the data source.",
+    "Earnings per share were $0.65 versus $0.64 expected, so the company beat estimates by 1.6%.",
+    "Stock moved -1.0% on Nov 19.",
+    "Covers the quarter ending Oct 2026."
+   ],
+   "changes": null,
+   "context": [
+    "Stocks often move on how results compare with expectations and on the company's outlook, not on the results alone."
+   ],
+   "lesson": 1,
+   "sources": [
+    {
+     "label": "SEC filings",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WMT&type=8-K&dateb=&owner=include&count=10"
+    }
+   ],
+   "stock": "WMT",
+   "reaction": [
+    {
+     "name": "S&P 500",
+     "move": -2.02,
+     "unit": "pct",
+     "symbol": "^GSPC"
+    },
+    {
+     "name": "Nasdaq",
+     "move": -2.25,
+     "unit": "pct",
+     "symbol": "^IXIC"
+    },
+    {
+     "name": "Dow",
+     "move": -2.19,
+     "unit": "pct",
+     "symbol": "^DJI"
+    },
+    {
+     "name": "Russell 2000",
+     "move": -2.18,
+     "unit": "pct",
+     "symbol": "^RUT"
+    },
+    {
+     "name": "10-year yield",
+     "move": -0.02,
+     "unit": "pts",
+     "symbol": "^TNX"
+    },
+    {
+     "name": "US dollar",
+     "move": 0.04,
+     "unit": "pct",
+     "symbol": "DX-Y.NYB"
+    },
+    {
+     "name": "VIX (fear gauge)",
+     "move": 15.8,
+     "unit": "pct",
+     "symbol": "^VIX"
+    },
+    {
+     "name": "Gold",
+     "move": -1.51,
+     "unit": "pct",
+     "symbol": "GC=F"
+    },
+    {
+     "name": "Oil",
+     "move": -0.06,
+     "unit": "pct",
+     "symbol": "CL=F"
+    }
+   ],
+   "sectors": {
+    "best": {
+     "name": "Utilities",
+     "move": -0.99
+    },
+    "worst": {
+     "name": "Consumer Discretionary",
+     "move": -2.96
+    }
+   },
    "id": "2026-11-19-earnings-walmart-wmt-reports-earnings",
    "date": "2026-11-19",
    "time": "Before open",
    "kind": "earnings",
    "title": "Walmart (WMT) reports earnings",
-   "status": "pending",
-   "headline": "Recap coming soon.",
-   "bullets": [
-    "The official results for this event haven't been published yet. We check again after each market day (results not posted yet)."
-   ],
-   "reaction": [],
-   "sectors": null,
-   "changes": null,
-   "context": [],
-   "sources": [],
+   "status": "final",
    "ai_analysis": null,
    "link": null,
-   "lesson": 3
+   "generated": "2026-11-20T20:46:26.658311Z"
   },
   {
    "id": "2026-11-19-fed-fed-speaks-vice-chair-philip-n-jefferson",
