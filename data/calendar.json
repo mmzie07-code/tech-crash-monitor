@@ -1,38 +1,8 @@
 {
- "generated": "2026-11-20T20:46:17.322016Z",
- "today": "2026-11-20",
+ "generated": "2026-11-21T03:30:04.238755Z",
+ "today": "2026-11-21",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-20-fed-fed-speaks-governor-lisa-d-cook",
-   "date": "2026-11-20",
-   "time": "12:15 PM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Lisa D. Cook",
-   "importance": "medium",
-   "why": "Topic: The U.S. Economy in Global Context. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Lisa D. Cook",
-    "location": "At the Annual Conference of the Central Bank of Chile, Santiago, Chile"
-   },
-   "source": "Federal Reserve",
-   "link": "https://www.youtube.com/watch?v=v_WEWJgJdHw"
-  },
-  {
-   "id": "2026-11-20-fed-fed-speaks-governor-christopher-j-waller",
-   "date": "2026-11-20",
-   "time": "8:25 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Governor Christopher J. Waller",
-   "importance": "medium",
-   "why": "Topic: Welcoming Remarks. Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Governor Christopher J. Waller",
-    "location": "At the College Fed Challenge Finals"
-   },
-   "source": "Federal Reserve",
-   "link": null
-  },
   {
    "id": "2026-11-23-earnings-hewlett-packard-enterprise-company-hpe-reports-e",
    "date": "2026-11-23",
@@ -40,10 +10,10 @@
    "kind": "earnings",
    "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.17.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.18.",
    "extra": {
-    "market_cap_b": 61,
-    "eps_forecast": "$1.17"
+    "market_cap_b": 60,
+    "eps_forecast": "$1.18"
    },
    "source": "",
    "link": null
@@ -182,7 +152,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.07.",
    "extra": {
-    "market_cap_b": 174,
+    "market_cap_b": 168,
     "eps_forecast": "$4.07"
    },
    "source": "",
@@ -484,6 +454,20 @@
    "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM.",
    "extra": {
     "meeting": "2027-04-28"
+   },
+   "source": "Federal Reserve",
+   "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "2027-06-09-fed-fed-interest-rate-decision-fomc",
+   "date": "2027-06-09",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed interest-rate decision (FOMC)",
+   "importance": "high",
+   "why": "The Fed sets short-term interest rates. Changes ripple through mortgage and loan rates, savings yields, and stock valuations, especially growth and tech stocks. A press conference follows at 2:30 PM.",
+   "extra": {
+    "meeting": "2027-06-09"
    },
    "source": "Federal Reserve",
    "link": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"

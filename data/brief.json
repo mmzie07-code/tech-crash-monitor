@@ -1,42 +1,44 @@
 {
- "date": "2026-11-19",
- "generated": "2026-11-20T03:34:10.011843Z",
- "headline": "US stocks finished lower. The S&P 500 fell 2.02%, with 2 of 11 sectors up.",
+ "date": "2026-11-20",
+ "generated": "2026-11-21T03:43:08.620775Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 3.70%, with 1 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -2.02% today, -7.49% this month, +4.63% this year",
-    "Dow Jones: -2.19% today, -7.11% this month, +1.48% this year",
-    "Nasdaq Composite: -2.25% today, -10.57% this month, +2.77% this year",
-    "Russell 2000: -2.18% today, -4.53% this month, +5.86% this year"
+    "S&P 500: -3.70% today, -9.83% this month, +0.76% this year",
+    "Dow Jones: -1.93% today, -8.93% this month, -0.49% this year",
+    "Nasdaq Composite: -5.28% today, -13.04% this month, -2.66% this year",
+    "Russell 2000: -2.76% today, -7.26% this month, +2.93% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Communication +0.30%, Real Estate +0.07%, Energy -0.65%",
-    "Lagging: Consumer Discretionary -2.79%, Materials -2.06%, Health Care -2.05%",
-    "2 of 11 sectors rose."
+    "Leading: Consumer Staples +0.67%, Health Care -0.12%, Energy -0.62%",
+    "Lagging: Technology -7.27%, Industrials -3.09%, Consumer Discretionary -2.95%",
+    "1 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 28.44 (+15.80% today)",
-    "10-year Treasury yield: 5.05% (-0.01 pts today)",
-    "US dollar index: 103.91 (+0.01% today)",
-    "Crude oil: 82.82 (-0.47% today)",
-    "Gold: 3,538.40 (-3.99% today)",
-    "Bitcoin: 61,404.02 (-2.51% today)"
+    "VIX (fear gauge): 35.89 (+26.20% today)",
+    "10-year Treasury yield: 4.91% (-0.14 pts today)",
+    "US dollar index: 103.84 (-0.06% today)",
+    "Crude oil: 83.62 (+0.49% today)",
+    "Gold: 3,539.00 (-3.98% today)",
+    "Bitcoin: 58,500.00 (-5.50% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The VIX (expected volatility) jumped +15.80% to 28.4. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
-    "Gold moved -3.99%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 3.1-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The 10-year yield moved -0.14 points to 4.91%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "The VIX (expected volatility) jumped +26.20% to 35.9. Rising fear often accompanies sharp stock drops, but spikes usually fade quickly.",
+    "Gold moved -3.98%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "Bitcoin moved -5.50%, showing appetite (or lack of it) for speculative assets.",
+    "A 7.9-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -51,66 +53,66 @@
   {
    "title": "Just happened",
    "bullets": [
-    "FOMC minutes: The Fed published the minutes of its last meeting."
+    "Walmart: Walmart reported earnings: beat estimates."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 50 out of 100 (Warning; higher is better) (unchanged from 50 on 2026-11-18).",
-    "Warning signs flashing: AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling.",
+    "Market health score 25 out of 100 (Danger; higher is better) (-25 from 50 on 2026-11-19).",
+    "Warning signs flashing: AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "AMD dives on short seller report of alleged China exposure",
+   "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html",
-   "published": "Fri, 20 Nov 2026 00:08:34"
+   "link": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
+   "published": "Fri, 20 Nov 2026 22:59:33"
   },
   {
-   "title": "Anthropic IPO 'exactly what the markets need', but analysts warn of volatility",
+   "title": "A massive bearish trade just happened in the chip stocks",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/20/anthropic-ipo-stocks-market.html",
-   "published": "Fri, 20 Nov 2026 03:31:21"
+   "link": "https://www.cnbc.com/2026/11/20/a-massive-bearish-trade-just-happened-in-the-chip-stocks.html",
+   "published": "Fri, 20 Nov 2026 19:33:31"
   },
   {
-   "title": "California attorney general issues Nvidia subpoena in probe of China chip diversion",
+   "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/19/nvidia-california-bonta-subpoena-china-chips.html",
-   "published": "Thu, 19 Nov 2026 23:21:23"
+   "link": "https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html",
+   "published": "Fri, 20 Nov 2026 21:35:24"
   },
   {
-   "title": "Commerce approved sales of more than 879,000 AI chips to Chinese companies, Rep. Mast says",
+   "title": "The bull market has a new problem. The 'smart money' is selling",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html",
-   "published": "Fri, 20 Nov 2026 00:53:55"
+   "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
+   "published": "Fri, 20 Nov 2026 14:15:29"
   },
   {
-   "title": "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Should I sell my stocks and buy real estate \u2014 or ride out the storm?",
+   "title": "Tech outages are rattling Americans so much that they\u2019re stockpiling cash and supplies",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?mod=mw_rss_topstories",
-   "published": "Fri, 20 Nov 2026 03:31:00"
+   "link": "https://www.marketwatch.com/story/why-are-these-tech-outages-rattling-americans-so-much-that-theyre-stockpiling-cash-and-supplies-07516bdd?mod=mw_rss_topstories",
+   "published": "Sat, 21 Nov 2026 03:20:00"
   },
   {
-   "title": "I\u2019m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?",
+   "title": "Dow, S&P 500 enter correction as Nasdaq suffers worst week since 2020",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/were-in-our-50s-and-terrified-of-a-market-crash-should-we-put-400-000-of-our-1-million-retirement-savings-into-an-annuity-1943f240?mod=mw_rss_topstories",
-   "published": "Fri, 20 Nov 2026 01:30:00"
+   "link": "https://www.marketwatch.com/story/dow-s-p-500-enter-correction-as-nasdaq-suffers-worst-week-since-2020-bd74dadf?mod=mw_rss_topstories",
+   "published": "Fri, 20 Nov 2026 22:46:00"
   },
   {
-   "title": "My wife is bankrolling her family\u2019s trips to New York and it\u2019s draining our savings. Should I ask her to stop?",
+   "title": "Chip stocks see $2.3 trillion weekly wipeout as panic grips the AI trade",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-wife-pays-thousands-of-dollars-for-her-family-to-visit-from-argentina-how-can-i-convince-her-to-stop-9381351c?mod=mw_rss_topstories",
-   "published": "Fri, 20 Nov 2026 01:22:00"
+   "link": "https://www.marketwatch.com/story/chip-stocks-see-2-3-trillion-weekly-wipeout-as-panic-grips-the-ai-trade-371f2f03?mod=mw_rss_topstories",
+   "published": "Fri, 20 Nov 2026 22:44:00"
   },
   {
-   "title": "After Anthropic\u2019s \u2018bittersweet\u2019 IPO, here\u2019s what lies ahead",
+   "title": "These stocks were crushed the most this week as the tech wreck accelerated",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/after-anthropics-bittersweet-ipo-heres-what-lies-ahead-8c32fdb7?mod=mw_rss_topstories",
-   "published": "Thu, 19 Nov 2026 23:56:00"
+   "link": "https://www.marketwatch.com/story/these-stocks-were-crushed-the-most-this-week-as-the-tech-wreck-accelerated-8d6f7323?mod=mw_rss_topstories",
+   "published": "Fri, 20 Nov 2026 22:44:00"
   }
  ],
  "summary": null,

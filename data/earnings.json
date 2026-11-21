@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T20:45:30.458529Z",
+ "generated": "2026-11-21T03:28:21.693482Z",
  "ai_summaries": false,
  "days": [
   {
@@ -49,6 +49,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Results aren't posted in our data yet.",
+      "Stock moved -4.9% on Nov 20.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -74,12 +75,12 @@
   },
   {
    "date": "2026-11-19",
-   "reported_total": 63,
+   "reported_total": 52,
    "top": [
     {
      "symbol": "WMT",
      "name": "Walmart",
-     "market_cap_b": 1010.4,
+     "market_cap_b": 1000.0,
      "eps": 0.65,
      "eps_estimate": 0.64,
      "surprise_pct": 1.56,
@@ -96,7 +97,7 @@
     {
      "symbol": "BABA",
      "name": "Alibaba Group Holding Limited",
-     "market_cap_b": 204.4,
+     "market_cap_b": 201.8,
      "eps": 1.04,
      "eps_estimate": 1.56,
      "surprise_pct": -33.33,
@@ -104,6 +105,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.04 versus $1.56 expected, so the company missed estimates by 33.3%.",
+      "Stock moved -1.3% on Nov 19.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -112,7 +114,7 @@
     {
      "symbol": "PDD",
      "name": "PDD Holdings",
-     "market_cap_b": 110.2,
+     "market_cap_b": 122.4,
      "eps": 2.99,
      "eps_estimate": 2.61,
      "surprise_pct": 14.56,
@@ -120,6 +122,7 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $2.99 versus $2.61 expected, so the company beat estimates by 14.6%.",
+      "Stock moved +11.0% on Nov 19.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -128,24 +131,41 @@
     {
      "symbol": "INTU",
      "name": "Intuit",
-     "market_cap_b": 83.7,
-     "eps": 1.88,
+     "market_cap_b": 82.8,
+     "eps": 2.91,
      "eps_estimate": 2.47,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 17.81,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Reported after the close.",
-      "Earnings per share were $1.88 versus $2.47 expected, so the company missed estimates.",
-      "Stock moved -1.0% on Nov 19 (before the report came out). Reaction comes the next session.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.91 versus $2.47 expected, so the company beat estimates by 17.8%.",
+      "Stock moved -1.0% on Nov 19.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=INTU&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "ROST",
+     "name": "Ross Stores",
+     "market_cap_b": 70.2,
+     "eps": 1.91,
+     "eps_estimate": 1.85,
+     "surprise_pct": 3.24,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.91 versus $1.85 expected, so the company beat estimates by 3.2%.",
+      "Stock moved -3.4% on Nov 19.",
+      "Covers the quarter ending Oct 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROST&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "NTES",
      "name": "NetEase",
-     "market_cap_b": 75.6,
+     "market_cap_b": 67.0,
      "eps": 1.94,
      "eps_estimate": 2.37,
      "surprise_pct": -18.14,
@@ -160,42 +180,41 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NTES&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "ROST",
-     "name": "Ross Stores",
-     "market_cap_b": 72.7,
-     "eps": 1.58,
-     "eps_estimate": 1.85,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
-     "bullets": [
-      "Reported after the close.",
-      "Earnings per share were $1.58 versus $1.85 expected, so the company missed estimates.",
-      "Stock moved -3.4% on Nov 19 (before the report came out). Reaction comes the next session.",
-      "Covers the quarter ending Oct 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROST&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
      "symbol": "KEYS",
      "name": "Keysight Technologies",
-     "market_cap_b": 48.7,
-     "eps": 1.65,
+     "market_cap_b": 47.9,
+     "eps": 3.36,
      "eps_estimate": 3.09,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 8.74,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Reported after the close.",
-      "Earnings per share were $1.65 versus $3.09 expected, so the company missed estimates.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.36 versus $3.09 expected, so the company beat estimates by 8.7%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KEYS&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "BSP",
+     "name": "Bending Spoons S.p.A.",
+     "market_cap_b": 29.0,
+     "eps": 0.42,
+     "eps_estimate": 0.26,
+     "surprise_pct": 61.54,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.42 versus $0.26 expected, so the company beat estimates by 61.5%.",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BSP&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "WSM",
      "name": "Williams-Sonoma",
-     "market_cap_b": 30.6,
+     "market_cap_b": 26.0,
      "eps": 2.19,
      "eps_estimate": 2.18,
      "surprise_pct": 0.46,
@@ -212,7 +231,7 @@
     {
      "symbol": "WMG",
      "name": "Warner Music Group",
-     "market_cap_b": 17.2,
+     "market_cap_b": 17.1,
      "eps": 0.34,
      "eps_estimate": 0.39,
      "surprise_pct": -12.82,
@@ -224,22 +243,6 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WMG&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "FUTU",
-     "name": "Futu Holdings Limited",
-     "market_cap_b": 11.7,
-     "eps": 2.96,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Earnings per share were $2.96 (no analyst consensus available).",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FUTU&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },

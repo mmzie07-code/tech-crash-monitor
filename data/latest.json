@@ -1,12 +1,12 @@
 {
- "date": "2026-11-19",
- "generated": "2026-11-20T02:30:41.237249Z",
- "level": "High",
- "health": 50,
- "score": 50,
+ "date": "2026-11-20",
+ "generated": "2026-11-21T02:42:29.181443Z",
+ "level": "Severe",
+ "health": 25,
+ "score": 75,
  "stretch": 33,
- "trigger": 50,
- "warnings": 4,
+ "trigger": 83,
+ "warnings": 5,
  "evaluated": 9,
  "total": 10,
  "checks": [
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 26.6,
+   "value": 25.1,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 26.6; price is -5.6% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 25.1; price is -10.9% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -4.8,
+   "value": -6.4,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -4.8% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -6.4% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.35,
+   "value": 0.27,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 5.05%, +0.35 pts over 3 months.",
+   "detail": "10Y yield 4.91%, +0.27 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -75,9 +75,9 @@
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
    "status": "ok",
-   "value": -0.3,
+   "value": -1.6,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -0.3% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -1.6% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "warn",
-   "value": 28.4,
+   "value": 35.9,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 28.4 is 1.60x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 35.9 is 1.99x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -15.1,
+   "value": -19.9,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -15.1% from 1y high; below 50-day, below 200-day avg.",
+   "detail": "QQQ -19.9% from 1y high; below 50-day, below 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -111,9 +111,9 @@
    "name": "Insider selling",
    "group": "trigger",
    "status": "warn",
-   "value": 1.65,
+   "value": 1.66,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1429M in 90 days vs $867M per-90d baseline (1.65x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1430M in 90 days vs $862M per-90d baseline (1.66x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -122,21 +122,17 @@
    "id": 10,
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
-   "status": "ok",
-   "value": 0.3,
+   "status": "warn",
+   "value": -6.5,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -0.1% over 10 days (+0.3 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -13.8% over 10 days (-6.5 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 645.04,
+ "qqq_last": 608.45,
  "qqq_series": [
-  [
-   "2025-11-21",
-   590.07
-  ],
   [
    "2025-11-24",
    605.16
@@ -1132,12 +1128,16 @@
   [
    "2026-11-19",
    645.04
+  ],
+  [
+   "2026-11-20",
+   608.45
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 63.6,
- "ai_health": 36,
+ "ai_heat": 64.7,
+ "ai_health": 35,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-11-20T20:48:55.335179Z"
+ "ai_updated": "2026-11-21T03:32:11.841370Z"
 }

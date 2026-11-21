@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T20:46:24.720829Z",
+ "generated": "2026-11-21T03:30:10.891726Z",
  "as_of": "2026-11-20",
  "regime": "S&P 500 below its 200-day average and the market is fearful (VIX over 30)",
  "history_from": "1985-01-02",
@@ -34,29 +34,14 @@
     "worst": -12.0,
     "best": 11.6
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 8.2% below its 1-year high.",
-    "VIX at 28.4: investors are nervous.",
-    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
-   "events": [
-    {
-     "date": "2026-11-20",
-     "time": "12:15 PM",
-     "title": "Fed speaks: Governor Lisa D. Cook",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-20",
-     "time": "8:25 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -88,14 +73,12 @@
     "worst": -12.0,
     "best": 11.6
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 8.2% below its 1-year high.",
-    "VIX at 28.4: investors are nervous.",
-    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
    ],
    "events": [
     {
@@ -136,29 +119,15 @@
     "worst": -18.3,
     "best": 19.1
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 8.2% below its 1-year high.",
-    "VIX at 28.4: investors are nervous.",
-    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-20",
-     "time": "12:15 PM",
-     "title": "Fed speaks: Governor Lisa D. Cook",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-20",
-     "time": "8:25 AM",
-     "title": "Fed speaks: Governor Christopher J. Waller",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-23",
      "time": "After close",
@@ -251,14 +220,12 @@
     "worst": -30.0,
     "best": 25.1
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 8.2% below its 1-year high.",
-    "VIX at 28.4: investors are nervous.",
-    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -307,14 +274,13 @@
     "best": 74.8
    },
    "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 26.6, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 25.1, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "S&P 500 is 8.2% below its 1-year high.",
-    "VIX at 28.4: investors are nervous.",
-    "10-year yield is high at 5.05%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -344,6 +310,12 @@
     },
     {
      "date": "2027-04-28",
+     "time": "2:00 PM",
+     "title": "Fed interest-rate decision (FOMC)",
+     "importance": "high"
+    },
+    {
+     "date": "2027-06-09",
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
      "importance": "high"

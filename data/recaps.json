@@ -1,7 +1,47 @@
 {
- "generated": "2026-11-20T20:46:24.769514Z",
+ "generated": "2026-11-21T03:30:10.929839Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "id": "2026-11-20-fed-fed-speaks-governor-christopher-j-waller",
+   "date": "2026-11-20",
+   "time": "8:25 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Christopher J. Waller",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "id": "2026-11-20-fed-fed-speaks-governor-lisa-d-cook",
+   "date": "2026-11-20",
+   "time": "12:15 PM",
+   "kind": "fed",
+   "title": "Fed speaks: Governor Lisa D. Cook",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": "https://www.youtube.com/watch?v=v_WEWJgJdHw",
+   "lesson": 3
+  },
   {
    "headline": "Walmart reported earnings: beat estimates.",
    "bullets": [
