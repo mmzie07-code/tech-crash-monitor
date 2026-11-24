@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-21T03:30:10.891726Z",
- "as_of": "2026-11-20",
- "regime": "S&P 500 below its 200-day average and the market is fearful (VIX over 30)",
+ "generated": "2026-11-24T00:25:41.025184Z",
+ "as_of": "2026-11-23",
+ "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
  "horizons": {
   "today": {
@@ -9,7 +9,7 @@
    "trading_days": 1,
    "threshold": 1.0,
    "all": {
-    "n": 10353,
+    "n": 10354,
     "up": 54,
     "median": 0.1,
     "p10": -1.1,
@@ -22,56 +22,17 @@
     "best": 11.6
    },
    "similar": {
-    "n": 645,
-    "up": 54,
-    "median": 0.2,
-    "p10": -2.9,
-    "p25": -1.3,
-    "p75": 1.6,
-    "p90": 3.2,
-    "below": 29,
-    "above": 34,
-    "worst": -12.0,
-    "best": 11.6
-   },
-   "bull": [],
-   "bear": [
-    "S&P 500 is 11.6% below its 1-year high.",
-    "VIX at 35.9: investors are nervous.",
-    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
-   ],
-   "events": []
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10353,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 645,
-    "up": 54,
-    "median": 0.2,
-    "p10": -2.9,
-    "p25": -1.3,
-    "p75": 1.6,
-    "p90": 3.2,
-    "below": 29,
-    "above": 34,
-    "worst": -12.0,
-    "best": 11.6
+    "n": 1202,
+    "up": 50,
+    "median": -0.0,
+    "p10": -1.7,
+    "p25": -0.9,
+    "p75": 0.8,
+    "p90": 1.7,
+    "below": 23,
+    "above": 21,
+    "worst": -4.8,
+    "best": 5.5
    },
    "bull": [],
    "bear": [
@@ -82,9 +43,97 @@
    ],
    "events": [
     {
-     "date": "2026-11-23",
+     "date": "2026-11-24",
      "time": "After close",
-     "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
+     "title": "Dell Technologies (DELL) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Time TBA",
+     "title": "BHP Group Limited (BHP) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Before open",
+     "title": "Analog Devices (ADI) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "Before open",
+     "title": "Medtronic (MDT) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-24",
+     "time": "After close",
+     "title": "Autodesk (ADSK) reports earnings",
+     "importance": "medium"
+    }
+   ]
+  },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10354,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1202,
+    "up": 50,
+    "median": -0.0,
+    "p10": -1.7,
+    "p25": -0.9,
+    "p75": 0.8,
+    "p90": 1.7,
+    "below": 23,
+    "above": 21,
+    "worst": -4.8,
+    "best": 5.5
+   },
+   "bull": [],
+   "bear": [
+    "S&P 500 is 11.6% below its 1-year high.",
+    "VIX at 35.9: investors are nervous.",
+    "10-year yield is high at 4.91%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 5 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 25 out of 100."
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "2:00 PM",
+     "title": "Fed Beige Book",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "8:30 AM",
+     "title": "GDP second estimate: revised economic growth",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "Before open",
+     "title": "Deere & Company (DE) reports earnings",
      "importance": "medium"
     }
    ]
@@ -94,7 +143,7 @@
    "trading_days": 5,
    "threshold": 2.5,
    "all": {
-    "n": 10349,
+    "n": 10350,
     "up": 58,
     "median": 0.4,
     "p10": -2.5,
@@ -107,17 +156,17 @@
     "best": 19.1
    },
    "similar": {
-    "n": 645,
-    "up": 59,
-    "median": 0.9,
-    "p10": -5.0,
-    "p25": -2.1,
-    "p75": 3.8,
-    "p90": 6.0,
-    "below": 22,
-    "above": 37,
-    "worst": -18.3,
-    "best": 19.1
+    "n": 1199,
+    "up": 52,
+    "median": 0.2,
+    "p10": -3.7,
+    "p25": -1.9,
+    "p75": 1.8,
+    "p90": 3.5,
+    "below": 19,
+    "above": 17,
+    "worst": -11.5,
+    "best": 9.9
    },
    "bull": [],
    "bear": [
@@ -129,12 +178,6 @@
    ],
    "events": [
     {
-     "date": "2026-11-23",
-     "time": "After close",
-     "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
-     "importance": "medium"
-    },
-    {
      "date": "2026-11-24",
      "time": "After close",
      "title": "Dell Technologies (DELL) reports earnings",
@@ -142,14 +185,14 @@
     },
     {
      "date": "2026-11-24",
-     "time": "Before open",
-     "title": "Analog Devices (ADI) reports earnings",
+     "time": "Time TBA",
+     "title": "BHP Group Limited (BHP) reports earnings",
      "importance": "medium"
     },
     {
      "date": "2026-11-24",
-     "time": "Time TBA",
-     "title": "BHP Group Limited (BHP) reports earnings",
+     "time": "Before open",
+     "title": "Analog Devices (ADI) reports earnings",
      "importance": "medium"
     },
     {
@@ -187,6 +230,18 @@
      "time": "Before open",
      "title": "Deere & Company (DE) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-12-01",
+     "time": "After close",
+     "title": "CrowdStrike Holdings (CRWD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-01",
+     "time": "After close",
+     "title": "Marvell Technology (MRVL) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -195,7 +250,7 @@
    "trading_days": 21,
    "threshold": 5.0,
    "all": {
-    "n": 10333,
+    "n": 10334,
     "up": 64,
     "median": 1.3,
     "p10": -4.5,
@@ -208,17 +263,17 @@
     "best": 25.1
    },
    "similar": {
-    "n": 645,
-    "up": 71,
-    "median": 3.5,
-    "p10": -7.9,
-    "p25": -1.2,
-    "p75": 7.2,
-    "p90": 11.4,
-    "below": 13,
-    "above": 41,
-    "worst": -30.0,
-    "best": 25.1
+    "n": 1199,
+    "up": 51,
+    "median": 0.3,
+    "p10": -8.0,
+    "p25": -4.4,
+    "p75": 4.2,
+    "p90": 7.2,
+    "below": 21,
+    "above": 22,
+    "worst": -28.0,
+    "best": 14.6
    },
    "bull": [],
    "bear": [
@@ -240,6 +295,12 @@
      "time": "2:00 PM",
      "title": "Fed interest-rate decision (FOMC)",
      "importance": "high"
+    },
+    {
+     "date": "2026-12-23",
+     "time": "8:30 AM",
+     "title": "Personal income and spending, including PCE inflation",
+     "importance": "high"
     }
    ]
   },
@@ -248,7 +309,7 @@
    "trading_days": 252,
    "threshold": 15.0,
    "all": {
-    "n": 10102,
+    "n": 10103,
     "up": 80,
     "median": 12.0,
     "p10": -11.8,
@@ -261,17 +322,17 @@
     "best": 74.8
    },
    "similar": {
-    "n": 643,
-    "up": 86,
-    "median": 22.9,
-    "p10": -7.2,
-    "p25": 15.0,
-    "p75": 33.3,
-    "p90": 44.9,
-    "below": 6,
-    "above": 75,
-    "worst": -41.5,
-    "best": 74.8
+    "n": 1188,
+    "up": 53,
+    "median": 4.3,
+    "p10": -31.0,
+    "p25": -19.8,
+    "p75": 16.6,
+    "p90": 24.1,
+    "below": 34,
+    "above": 29,
+    "worst": -48.8,
+    "best": 49.5
    },
    "bull": [
     "QQQ trailing P/E is 25.1, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."

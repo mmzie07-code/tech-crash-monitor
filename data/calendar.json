@@ -1,23 +1,8 @@
 {
- "generated": "2026-11-21T03:30:04.238755Z",
- "today": "2026-11-21",
+ "generated": "2026-11-24T00:25:30.999988Z",
+ "today": "2026-11-24",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-23-earnings-hewlett-packard-enterprise-company-hpe-reports-e",
-   "date": "2026-11-23",
-   "time": "After close",
-   "kind": "earnings",
-   "title": "Hewlett Packard Enterprise Company (HPE) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.18.",
-   "extra": {
-    "market_cap_b": 60,
-    "eps_forecast": "$1.18"
-   },
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-24-earnings-dell-technologies-dell-reports-earnings",
    "date": "2026-11-24",
@@ -27,23 +12,8 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $6.55.",
    "extra": {
-    "market_cap_b": 199,
+    "market_cap_b": 177,
     "eps_forecast": "$6.55"
-   },
-   "source": "",
-   "link": null
-  },
-  {
-   "id": "2026-11-24-earnings-analog-devices-adi-reports-earnings",
-   "date": "2026-11-24",
-   "time": "Before open",
-   "kind": "earnings",
-   "title": "Analog Devices (ADI) reports earnings",
-   "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.89.",
-   "extra": {
-    "market_cap_b": 183,
-    "eps_forecast": "$3.89"
    },
    "source": "",
    "link": null
@@ -57,8 +27,23 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations.",
    "extra": {
-    "market_cap_b": 176,
+    "market_cap_b": 174,
     "eps_forecast": ""
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-11-24-earnings-analog-devices-adi-reports-earnings",
+   "date": "2026-11-24",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Analog Devices (ADI) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $3.89.",
+   "extra": {
+    "market_cap_b": 168,
+    "eps_forecast": "$3.89"
    },
    "source": "",
    "link": null
@@ -72,7 +57,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.34.",
    "extra": {
-    "market_cap_b": 129,
+    "market_cap_b": 128,
     "eps_forecast": "$1.34"
    },
    "source": "",
@@ -152,7 +137,7 @@
    "importance": "medium",
    "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $4.07.",
    "extra": {
-    "market_cap_b": 168,
+    "market_cap_b": 164,
     "eps_forecast": "$4.07"
    },
    "source": "",
@@ -180,6 +165,36 @@
    "why": "A routine Federal Reserve statistical release. Publication date for this release is approximate.",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-01-earnings-crowdstrike-holdings-crwd-reports-earnings",
+   "date": "2026-12-01",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "CrowdStrike Holdings (CRWD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.",
+   "extra": {
+    "market_cap_b": 235,
+    "eps_forecast": "$0"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-01-earnings-marvell-technology-mrvl-reports-earnings",
+   "date": "2026-12-01",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Marvell Technology (MRVL) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $0.79.",
+   "extra": {
+    "market_cap_b": 107,
+    "eps_forecast": "$0.79"
+   },
+   "source": "",
    "link": null
   },
   {
@@ -216,6 +231,111 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-02-earnings-salesforce-crm-reports-earnings",
+   "date": "2026-12-02",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Salesforce (CRM) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.41.",
+   "extra": {
+    "market_cap_b": 149,
+    "eps_forecast": "$2.41"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-02-earnings-bank-of-montreal-bmo-reports-earnings",
+   "date": "2026-12-02",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Bank Of Montreal (BMO) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.69.",
+   "extra": {
+    "market_cap_b": 109,
+    "eps_forecast": "$2.69"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-02-earnings-bank-of-nova-scotia-the-bns-reports-earnings",
+   "date": "2026-12-02",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Bank of Nova Scotia (The) (BNS) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.55.",
+   "extra": {
+    "market_cap_b": 102,
+    "eps_forecast": "$1.55"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-02-earnings-snowflake-snow-reports-earnings",
+   "date": "2026-12-02",
+   "time": "After close",
+   "kind": "earnings",
+   "title": "Snowflake (SNOW) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of ($0.32).",
+   "extra": {
+    "market_cap_b": 90,
+    "eps_forecast": "($0.32)"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-03-earnings-royal-bank-of-canada-ry-reports-earnings",
+   "date": "2026-12-03",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Royal Bank Of Canada (RY) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.93.",
+   "extra": {
+    "market_cap_b": 254,
+    "eps_forecast": "$2.93"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-03-earnings-toronto-dominion-bank-the-td-reports-earnings",
+   "date": "2026-12-03",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Toronto Dominion Bank (The) (TD) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.77.",
+   "extra": {
+    "market_cap_b": 184,
+    "eps_forecast": "$1.77"
+   },
+   "source": "",
+   "link": null
+  },
+  {
+   "id": "2026-12-03-earnings-canadian-imperial-bank-of-commerce-cm-reports-ea",
+   "date": "2026-12-03",
+   "time": "Before open",
+   "kind": "earnings",
+   "title": "Canadian Imperial Bank of Commerce (CM) reports earnings",
+   "importance": "medium",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.72.",
+   "extra": {
+    "market_cap_b": 93,
+    "eps_forecast": "$1.72"
+   },
+   "source": "",
    "link": null
   },
   {
