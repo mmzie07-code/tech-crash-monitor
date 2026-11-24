@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:25:10.533086Z",
+ "generated": "2026-11-24T06:14:35.308962Z",
  "asof": "2026-11-24",
  "priced": [
   {
@@ -662,7 +662,7 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": -38.6,
-    "now_pct": -91.3,
+    "now_pct": -91.4,
     "last": 0.43,
     "last_date": "2026-11-23",
     "first_trade": "2026-08-12"
@@ -1425,7 +1425,7 @@
    "perf": {
     "first_day_pct": -9.0,
     "now_pct": -81.6,
-    "last": 2.94,
+    "last": 2.95,
     "last_date": "2026-11-23",
     "first_trade": "2026-06-18"
    }
