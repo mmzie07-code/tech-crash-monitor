@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T22:48:02.278200Z",
+ "generated": "2026-11-25T05:14:50.883839Z",
  "as_of": "2026-11-24",
  "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -34,86 +34,12 @@
     "worst": -4.8,
     "best": 5.5
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 7.4% below its 1-year high.",
-    "VIX at 26.6: investors are nervous.",
-    "10-year yield is high at 4.92%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
-   ],
-   "events": [
-    {
-     "date": "2026-11-24",
-     "time": "After close",
-     "title": "Dell Technologies (DELL) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Before open",
-     "title": "Analog Devices (ADI) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Time TBA",
-     "title": "BHP Group Limited (BHP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Before open",
-     "title": "Medtronic (MDT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "After close",
-     "title": "Autodesk (ADSK) reports earnings",
-     "importance": "medium"
-    }
-   ]
-  },
-  "tomorrow": {
-   "label": "Tomorrow",
-   "trading_days": 1,
-   "threshold": 1.0,
-   "all": {
-    "n": 10355,
-    "up": 54,
-    "median": 0.1,
-    "p10": -1.1,
-    "p25": -0.4,
-    "p75": 0.6,
-    "p90": 1.2,
-    "below": 12,
-    "above": 13,
-    "worst": -20.5,
-    "best": 11.6
-   },
-   "similar": {
-    "n": 1203,
-    "up": 50,
-    "median": -0.0,
-    "p10": -1.7,
-    "p25": -0.9,
-    "p75": 0.8,
-    "p90": 1.7,
-    "below": 23,
-    "above": 21,
-    "worst": -4.8,
-    "best": 5.5
-   },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
-   "bear": [
-    "S&P 500 is 7.4% below its 1-year high.",
-    "VIX at 26.6: investors are nervous.",
-    "10-year yield is high at 4.92%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100."
+    "S&P 500 is 7.9% below its 1-year high.",
+    "VIX at 26.4: investors are nervous.",
+    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100."
    ],
    "events": [
     {
@@ -148,6 +74,45 @@
     }
    ]
   },
+  "tomorrow": {
+   "label": "Tomorrow",
+   "trading_days": 1,
+   "threshold": 1.0,
+   "all": {
+    "n": 10355,
+    "up": 54,
+    "median": 0.1,
+    "p10": -1.1,
+    "p25": -0.4,
+    "p75": 0.6,
+    "p90": 1.2,
+    "below": 12,
+    "above": 13,
+    "worst": -20.5,
+    "best": 11.6
+   },
+   "similar": {
+    "n": 1203,
+    "up": 50,
+    "median": -0.0,
+    "p10": -1.7,
+    "p25": -0.9,
+    "p75": 0.8,
+    "p90": 1.7,
+    "below": 23,
+    "above": 21,
+    "worst": -4.8,
+    "best": 5.5
+   },
+   "bull": [],
+   "bear": [
+    "S&P 500 is 7.9% below its 1-year high.",
+    "VIX at 26.4: investors are nervous.",
+    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100."
+   ],
+   "events": []
+  },
   "week": {
    "label": "Next week",
    "trading_days": 5,
@@ -178,47 +143,15 @@
     "worst": -11.5,
     "best": 9.9
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 7.4% below its 1-year high.",
-    "VIX at 26.6: investors are nervous.",
-    "10-year yield is high at 4.92%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 7.9% below its 1-year high.",
+    "VIX at 26.4: investors are nervous.",
+    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-24",
-     "time": "After close",
-     "title": "Dell Technologies (DELL) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Before open",
-     "title": "Analog Devices (ADI) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Time TBA",
-     "title": "BHP Group Limited (BHP) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "Before open",
-     "title": "Medtronic (MDT) reports earnings",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-24",
-     "time": "After close",
-     "title": "Autodesk (ADSK) reports earnings",
-     "importance": "medium"
-    },
     {
      "date": "2026-11-25",
      "time": "8:30 AM",
@@ -254,6 +187,30 @@
      "time": "After close",
      "title": "Marvell Technology (MRVL) reports earnings",
      "importance": "medium"
+    },
+    {
+     "date": "2026-12-02",
+     "time": "After close",
+     "title": "Salesforce (CRM) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-02",
+     "time": "Before open",
+     "title": "Bank Of Montreal (BMO) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-02",
+     "time": "Before open",
+     "title": "Bank of Nova Scotia (The) (BNS) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-02",
+     "time": "After close",
+     "title": "Snowflake (SNOW) reports earnings",
+     "importance": "medium"
     }
    ]
   },
@@ -287,14 +244,12 @@
     "worst": -28.0,
     "best": 14.6
    },
-   "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet)."
-   ],
+   "bull": [],
    "bear": [
-    "S&P 500 is 7.4% below its 1-year high.",
-    "VIX at 26.6: investors are nervous.",
-    "10-year yield is high at 4.92%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 7.9% below its 1-year high.",
+    "VIX at 26.4: investors are nervous.",
+    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
@@ -349,14 +304,13 @@
     "best": 49.5
    },
    "bull": [
-    "Chip stocks are not lagging the market (our best-tested warning is quiet).",
-    "QQQ trailing P/E is 26.8, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 26.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "S&P 500 is 7.4% below its 1-year high.",
-    "VIX at 26.6: investors are nervous.",
-    "10-year yield is high at 4.92%, which makes bonds a strong competitor to stocks.",
-    "AI & Tech Watch has 4 warning sign(s) flashing (AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling); health score 50 out of 100.",
+    "S&P 500 is 7.9% below its 1-year high.",
+    "VIX at 26.4: investors are nervous.",
+    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [

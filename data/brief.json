@@ -1,41 +1,41 @@
 {
- "date": "2026-11-23",
- "generated": "2026-11-24T06:30:37.959912Z",
- "headline": "US stocks finished higher. The S&P 500 rose 4.73%, with 9 of 11 sectors up.",
+ "date": "2026-11-24",
+ "generated": "2026-11-25T05:25:49.197205Z",
+ "headline": "US stocks finished lower. The S&P 500 fell 0.50%, with 9 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: +4.73% today, -5.07% this month, +5.52% this year",
-    "Dow Jones: +3.01% today, -5.02% this month, +2.51% this year",
-    "Nasdaq Composite: +6.51% today, -7.19% this month, +3.68% this year",
-    "Russell 2000: +3.40% today, -3.83% this month, +6.44% this year"
+    "S&P 500: -0.50% today, -6.20% this month, +5.00% this year",
+    "Dow Jones: +0.85% today, -4.47% this month, +3.38% this year",
+    "Nasdaq Composite: -1.48% today, -9.31% this month, +2.14% this year",
+    "Russell 2000: +0.57% today, -3.64% this month, +7.05% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Technology +8.97%, Consumer Discretionary +3.97%, Industrials +3.90%",
-    "Lagging: Energy -1.06%, Consumer Staples -0.09%, Real Estate +1.04%",
+    "Leading: Health Care +2.95%, Consumer Staples +1.66%, Real Estate +1.31%",
+    "Lagging: Technology -3.26%, Industrials -0.53%, Utilities +0.18%",
     "9 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 26.62 (-25.83% today)",
-    "10-year Treasury yield: 4.92% (+0.01 pts today)",
-    "US dollar index: 104.30 (-0.02% today)",
-    "Crude oil: 79.40 (-0.96% today)",
-    "Gold: 3,635.40 (-0.44% today)",
-    "Bitcoin: 60,572.47 (-0.96% today)"
+    "VIX (fear gauge): 26.36 (-0.98% today)",
+    "10-year Treasury yield: 4.90% (-0.01 pts today)",
+    "US dollar index: 103.98 (+0.16% today)",
+    "Crude oil: 80.76 (-1.57% today)",
+    "Gold: 3,553.20 (-0.24% today)",
+    "Bitcoin: 59,160.73 (-3.35% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "The VIX fell -25.83% to 26.6, a sign of calming nerves.",
-    "A 10.0-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "Bitcoin moved -3.35%, showing appetite (or lack of it) for speculative assets.",
+    "A 6.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -50,60 +50,60 @@
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 50 out of 100 (Warning; higher is better) (+25 from 25 on 2026-11-20).",
-    "Warning signs flashing: AI capex vs revenue gap; Fear spike; Trend breakdown; Insider selling.",
+    "Market health score 12 out of 100 (Danger; higher is better) (-38 from 50 on 2026-11-23).",
+    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Nvidia surge: What investors should do with the stock and the AI trade now",
+   "title": "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/23/nvidia-stock-jensen-huang-ai-trade.html",
-   "published": "Mon, 23 Nov 2026 22:43:38"
+   "link": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-employee-meeting.html",
+   "published": "Tue, 24 Nov 2026 23:13:49"
   },
   {
-   "title": "Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions",
+   "title": "Houthi attack on Saudi Arabian sovereign wealth fund PIF's tower injures 11",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html",
-   "published": "Tue, 24 Nov 2026 05:05:08"
+   "link": "https://www.cnbc.com/2026/11/25/us-iran-war-trump-hormuz-houthi-saudi-pif-tower.html",
+   "published": "Wed, 25 Nov 2026 02:36:43"
   },
   {
-   "title": "Jensen Huang is \u2018too big to fire,\u2019 putting Nvidia\u2019s governance in focus: analysts",
+   "title": "\u2018Ready for any storm\u2019: UAE minister optimistic on economy as IMF lifts forecast",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-governance.html",
-   "published": "Tue, 24 Nov 2026 05:09:34"
+   "link": "https://www.cnbc.com/2026/11/25/uae-iran-war-economy-oil.html",
+   "published": "Wed, 25 Nov 2026 04:06:01"
   },
   {
-   "title": "Trump sealed deal for Nvidia to rehire Jensen Huang as CEO",
+   "title": "SoftBank drops 15% as Wall Street AI sell-off ripples across Asian tech names",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/23/trump-nvidia-jensen-huang.html",
-   "published": "Mon, 23 Nov 2026 23:42:17"
+   "link": "https://www.cnbc.com/2026/11/25/tech-stocks-softbank-group-advantest-sk-hynix-samsung.html",
+   "published": "Wed, 25 Nov 2026 03:52:03"
   },
   {
-   "title": "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?",
+   "title": "I\u2019m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
-   "published": "Tue, 24 Nov 2026 01:01:00"
+   "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
+   "published": "Wed, 25 Nov 2026 02:00:00"
   },
   {
-   "title": "HPE just posted its strongest growth ever \u2014 but its stock is sinking",
+   "title": "Dell\u2019s stock rises as the AI boom helps sales more than double",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/hpe-just-posted-its-strongest-growth-ever-and-its-stock-is-tacking-on-more-big-gains-4421cebb?mod=mw_rss_topstories",
-   "published": "Tue, 24 Nov 2026 01:01:00"
+   "link": "https://www.marketwatch.com/story/dells-stock-rises-as-the-ai-boom-helps-sales-more-than-double-cfb8cf65?mod=mw_rss_topstories",
+   "published": "Wed, 25 Nov 2026 01:11:00"
   },
   {
-   "title": "The newest addition to the S&P 500 is a maker of viral ice-cream machines",
+   "title": "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/the-newest-addition-to-the-s-p-500-is-a-maker-of-viral-ice-cream-machines-5c6e209a?mod=mw_rss_topstories",
-   "published": "Mon, 23 Nov 2026 23:18:00"
+   "link": "https://www.marketwatch.com/story/my-husband-secretly-sends-his-ex-wife-1-500-a-month-after-she-lost-her-job-we-have-2-4-million-saved-has-he-lied-by-omission-ede1972a?mod=mw_rss_topstories",
+   "published": "Wed, 25 Nov 2026 00:05:00"
   },
   {
-   "title": "Nvidia\u2019s stock is surging again. What to know before chasing the AI rally.",
+   "title": "Micron boosted CEO Sanjay Mehrotra\u2019s security budget by 2,000%, new filing shows",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/nvidias-stock-is-surging-again-what-to-know-before-chasing-the-ai-rally-226688d7?mod=mw_rss_topstories",
-   "published": "Mon, 23 Nov 2026 22:04:00"
+   "link": "https://www.marketwatch.com/story/micron-boosted-ceo-sanjay-mehrotras-security-budget-by-2-000-new-filing-shows-d6202acc?mod=mw_rss_topstories",
+   "published": "Tue, 24 Nov 2026 23:11:00"
   }
  ],
  "summary": null,
