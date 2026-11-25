@@ -1,27 +1,11 @@
 {
- "generated": "2026-11-25T05:13:12.525455Z",
+ "generated": "2026-11-25T21:59:54.549487Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-25",
-   "reported_total": 39,
+   "reported_total": 32,
    "top": [
-    {
-     "symbol": "DE",
-     "name": "Deere &",
-     "market_cap_b": 170.7,
-     "eps": null,
-     "eps_estimate": 4.07,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $4.07.",
-      "Covers the quarter ending Oct 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DE&type=8-K&dateb=&owner=include&count=10"
-    },
     {
      "symbol": "LI",
      "name": "Li Auto",
@@ -41,7 +25,7 @@
     {
      "symbol": "BZ",
      "name": "KANZHUN LIMITED",
-     "market_cap_b": 6.1,
+     "market_cap_b": 6.0,
      "eps": null,
      "eps_estimate": -0.02,
      "surprise_pct": null,
@@ -57,7 +41,7 @@
     {
      "symbol": "BMA",
      "name": "Macro Bank",
-     "market_cap_b": 3.2,
+     "market_cap_b": 3.1,
      "eps": null,
      "eps_estimate": 1.44,
      "surprise_pct": null,
@@ -73,7 +57,7 @@
     {
      "symbol": "GDS",
      "name": "GDS Holdings Limited",
-     "market_cap_b": 3.0,
+     "market_cap_b": 2.8,
      "eps": null,
      "eps_estimate": 1.31,
      "surprise_pct": null,
@@ -85,41 +69,24 @@
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GDS&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "IMKTA",
-     "name": "Ingles Markets, Incorporated",
-     "market_cap_b": 1.6,
-     "eps": null,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IMKTA&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
   {
    "date": "2026-11-24",
-   "reported_total": 42,
+   "reported_total": 45,
    "top": [
     {
      "symbol": "DELL",
      "name": "Dell Technologies",
-     "market_cap_b": 212.9,
-     "eps": null,
+     "market_cap_b": 187.7,
+     "eps": 9.16,
      "eps_estimate": 6.55,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 39.85,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $6.55.",
-      "Stock moved -11.8% on Nov 24 (before the report came out). Reaction comes the next session.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $9.16 versus $6.55 expected, so the company beat estimates by 39.9%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -128,49 +95,30 @@
     {
      "symbol": "ADI",
      "name": "Analog Devices",
-     "market_cap_b": 183.5,
-     "eps": null,
+     "market_cap_b": 151.6,
+     "eps": 4.06,
      "eps_estimate": 3.89,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 4.37,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $3.89.",
-      "Stock moved -17.4% on Nov 24.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $4.06 versus $3.89 expected, so the company beat estimates by 4.4%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ADI&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "BHP",
-     "name": "BHP Group Limited",
-     "market_cap_b": 179.7,
-     "eps": null,
-     "eps_estimate": null,
+     "symbol": "MDT",
+     "name": "Medtronic",
+     "market_cap_b": 123.0,
+     "eps": 1.34,
+     "eps_estimate": 1.34,
      "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
-      "Stock moved -1.4% on Nov 24.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BHP&type=8-K&dateb=&owner=include&count=10"
-    },
-    {
-     "symbol": "MDT",
-     "name": "Medtronic",
-     "market_cap_b": 128.8,
-     "eps": null,
-     "eps_estimate": 1.34,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
-     "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.34.",
-      "Stock moved -4.6% on Nov 24.",
+      "Earnings per share were $1.34 versus $1.34 expected, so the company matched estimates.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -180,13 +128,13 @@
      "symbol": "ADSK",
      "name": "Autodesk",
      "market_cap_b": 53.4,
-     "eps": null,
+     "eps": 2.86,
      "eps_estimate": 2.27,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 25.99,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $2.27.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $2.86 versus $2.27 expected, so the company beat estimates by 26.0%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -195,14 +143,14 @@
     {
      "symbol": "WDAY",
      "name": "Workday",
-     "market_cap_b": 42.4,
-     "eps": null,
+     "market_cap_b": 43.2,
+     "eps": 1.07,
      "eps_estimate": 1.28,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": -16.41,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.28.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.07 versus $1.28 expected, so the company missed estimates by 16.4%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -211,15 +159,14 @@
     {
      "symbol": "DLTR",
      "name": "Dollar Tree",
-     "market_cap_b": 26.1,
-     "eps": null,
+     "market_cap_b": 29.0,
+     "eps": 1.16,
      "eps_estimate": 0.89,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 30.34,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.89.",
-      "Stock moved +11.2% on Nov 24.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.16 versus $0.89 expected, so the company beat estimates by 30.3%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -228,14 +175,14 @@
     {
      "symbol": "HPQ",
      "name": "HP",
-     "market_cap_b": 26.1,
-     "eps": null,
+     "market_cap_b": 25.2,
+     "eps": 0.83,
      "eps_estimate": 0.74,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 12.16,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.74.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.83 versus $0.74 expected, so the company beat estimates by 12.2%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -244,30 +191,46 @@
     {
      "symbol": "BBY",
      "name": "Best Buy Co.",
-     "market_cap_b": 20.3,
-     "eps": null,
+     "market_cap_b": 20.9,
+     "eps": 1.62,
      "eps_estimate": 1.48,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 9.46,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.48.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.62 versus $1.48 expected, so the company beat estimates by 9.5%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BBY&type=8-K&dateb=&owner=include&count=10"
     },
     {
+     "symbol": "BURL",
+     "name": "Burlington Stores",
+     "market_cap_b": 15.3,
+     "eps": 1.73,
+     "eps_estimate": 1.67,
+     "surprise_pct": 3.59,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.73 versus $1.67 expected, so the company beat estimates by 3.6%.",
+      "Covers the quarter ending Oct 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BURL&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
      "symbol": "NTNX",
      "name": "Nutanix",
-     "market_cap_b": 15.7,
-     "eps": null,
+     "market_cap_b": 14.9,
+     "eps": 0.54,
      "eps_estimate": 0.29,
-     "surprise_pct": null,
-     "timing": "time-after-hours",
+     "surprise_pct": 86.21,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report after the close.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $0.29.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.54 versus $0.29 expected, so the company beat estimates by 86.2%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -277,12 +240,12 @@
   },
   {
    "date": "2026-11-23",
-   "reported_total": 60,
+   "reported_total": 61,
    "top": [
     {
      "symbol": "CRWD",
      "name": "CrowdStrike Holdings",
-     "market_cap_b": 214.0,
+     "market_cap_b": 217.3,
      "eps": 0.05,
      "eps_estimate": 0.0,
      "surprise_pct": null,
@@ -290,7 +253,6 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $0.05 versus $0.00 expected, so the company beat estimates.",
-      "Stock moved -8.9% on Nov 23.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -299,7 +261,7 @@
     {
      "symbol": "HPE",
      "name": "Hewlett Packard Enterprise",
-     "market_cap_b": 63.7,
+     "market_cap_b": 53.4,
      "eps": 1.37,
      "eps_estimate": 1.18,
      "surprise_pct": 16.1,
@@ -315,7 +277,7 @@
     {
      "symbol": "A",
      "name": "Agilent Technologies",
-     "market_cap_b": 49.6,
+     "market_cap_b": 51.7,
      "eps": 1.86,
      "eps_estimate": 1.72,
      "surprise_pct": 8.14,
@@ -323,7 +285,6 @@
      "bullets": [
       "Report time wasn't listed by the data source.",
       "Earnings per share were $1.86 versus $1.72 expected, so the company beat estimates by 8.1%.",
-      "Stock moved +3.3% on Nov 23.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
@@ -332,7 +293,7 @@
     {
      "symbol": "ZS",
      "name": "Zscaler",
-     "market_cap_b": 37.4,
+     "market_cap_b": 38.0,
      "eps": -0.03,
      "eps_estimate": 0.12,
      "surprise_pct": -125.0,
@@ -348,7 +309,7 @@
     {
      "symbol": "ZM",
      "name": "Zoom Communications",
-     "market_cap_b": 25.1,
+     "market_cap_b": 25.8,
      "eps": 1.13,
      "eps_estimate": 1.0,
      "surprise_pct": 13.0,
@@ -364,7 +325,7 @@
     {
      "symbol": "SYM",
      "name": "Symbotic",
-     "market_cap_b": 21.1,
+     "market_cap_b": 24.9,
      "eps": 0.09,
      "eps_estimate": 0.08,
      "surprise_pct": 12.5,
@@ -380,7 +341,7 @@
     {
      "symbol": "J",
      "name": "Jacobs Solutions",
-     "market_cap_b": 18.4,
+     "market_cap_b": 17.7,
      "eps": 2.2,
      "eps_estimate": 2.11,
      "surprise_pct": 4.27,
@@ -396,7 +357,7 @@
     {
      "symbol": "SMTC",
      "name": "Semtech",
-     "market_cap_b": 9.7,
+     "market_cap_b": 8.1,
      "eps": 0.9,
      "eps_estimate": 0.92,
      "surprise_pct": -2.17,
@@ -412,7 +373,7 @@
     {
      "symbol": "AMTM",
      "name": "Amentum Holdings",
-     "market_cap_b": 5.0,
+     "market_cap_b": 6.1,
      "eps": 0.67,
      "eps_estimate": 0.63,
      "surprise_pct": 6.35,
@@ -426,20 +387,20 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMTM&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "CENT",
-     "name": "Central Garden & Pet",
-     "market_cap_b": 2.8,
-     "eps": -0.04,
-     "eps_estimate": -0.06,
-     "surprise_pct": 33.33,
+     "symbol": "DAC",
+     "name": "Danaos",
+     "market_cap_b": 2.6,
+     "eps": 8.32,
+     "eps_estimate": null,
+     "surprise_pct": null,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Earnings per share were $-0.04 versus $-0.06 expected, so the company beat estimates by 33.3%.",
+      "Earnings per share were $8.32 (no analyst consensus available).",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CENT&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAC&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },

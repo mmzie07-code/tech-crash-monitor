@@ -1,7 +1,115 @@
 {
- "generated": "2026-11-25T05:14:50.936850Z",
+ "generated": "2026-11-25T22:00:59.764131Z",
  "ai_analysis_enabled": false,
  "recaps": [
+  {
+   "headline": "Real gross domestic product (GDP) increased at an annual rate of 4.3 percent in the third quarter of 2026 (July, August, and September).",
+   "bullets": [
+    "Bureau of Economic Analysis (BEA).",
+    "In the second quarter, real GDP increased 2.2 percent.",
+    "The contributors to the increase in real GDP in the third quarter were increases in investment, consumer spending, and government spending that were partly offset by a decrease in exports."
+   ],
+   "changes": null,
+   "lesson": 3,
+   "context": [
+    "Headline economic numbers matter most when they differ from what analysts expected. We don't have consensus forecasts, so judge the market reaction below as a guide to whether this was a surprise."
+   ],
+   "sources": [
+    {
+     "label": "BEA release",
+     "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
+    }
+   ],
+   "reaction": [],
+   "sectors": null,
+   "id": "2026-11-25-data-gdp-second-estimate-revised-economic-growth",
+   "date": "2026-11-25",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "GDP second estimate: revised economic growth",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026",
+   "generated": "2026-11-25T22:01:06.950726Z"
+  },
+  {
+   "headline": "Personal income increased $201.8 billion (0.7 percent at a monthly rate) in October.",
+   "bullets": [
+    "Bureau of Economic Analysis (BEA).",
+    "Disposable personal income (DPI)\u2013personal income less personal current taxes\u2013increased $200.5 billion (0.8 percent), and personal consumption expenditures (PCE) increased $63.8 billion (0.3 percent).",
+    "Personal outlays\u2013the sum of PCE, personal interest payments, and personal current transfer payments\u2013increased $69.3 billion in October."
+   ],
+   "changes": null,
+   "lesson": 3,
+   "context": [
+    "Headline economic numbers matter most when they differ from what analysts expected. We don't have consensus forecasts, so judge the market reaction below as a guide to whether this was a surprise."
+   ],
+   "sources": [
+    {
+     "label": "BEA release",
+     "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    }
+   ],
+   "reaction": [],
+   "sectors": null,
+   "id": "2026-11-25-data-personal-income-and-spending-including-pce-infla",
+   "date": "2026-11-25",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Personal income and spending, including PCE inflation",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+   "generated": "2026-11-25T22:01:07.312112Z"
+  },
+  {
+   "id": "2026-11-25-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
+   "date": "2026-11-25",
+   "time": "7:25 AM",
+   "kind": "fed",
+   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
+   "status": "pending",
+   "headline": "Recap coming soon.",
+   "bullets": [
+    "The official results for this event haven't been published yet. We check again after each market day (speech text not published yet)."
+   ],
+   "reaction": [],
+   "sectors": null,
+   "changes": null,
+   "context": [],
+   "sources": [],
+   "ai_analysis": null,
+   "link": null,
+   "lesson": 3
+  },
+  {
+   "headline": "The Fed published its Beige Book on regional business conditions.",
+   "bullets": [
+    "It summarizes anecdotes from businesses in each Fed district about hiring, prices and demand."
+   ],
+   "changes": null,
+   "context": [
+    "Words like 'softening' or 'slight growth' are compared with the previous edition."
+   ],
+   "lesson": 3,
+   "sources": [
+    {
+     "label": "Beige Book",
+     "url": "https://www.federalreserve.gov/monetarypolicy/beigebook/"
+    }
+   ],
+   "reaction": [],
+   "sectors": null,
+   "id": "2026-11-25-fed-fed-beige-book",
+   "date": "2026-11-25",
+   "time": "2:00 PM",
+   "kind": "fed",
+   "title": "Fed Beige Book",
+   "status": "final",
+   "ai_analysis": null,
+   "link": "https://www.federalreserve.gov/monetarypolicy/beigebook/",
+   "generated": "2026-11-25T22:01:06.827596Z"
+  },
   {
    "id": "2026-11-20-fed-fed-speaks-governor-christopher-j-waller",
    "date": "2026-11-20",
