@@ -1,27 +1,11 @@
 {
- "generated": "2026-11-26T04:29:22.895393Z",
+ "generated": "2026-11-26T21:58:06.191994Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-26",
-   "reported_total": 15,
+   "reported_total": 14,
    "top": [
-    {
-     "symbol": "FORTY",
-     "name": "Formula Systems (1985)",
-     "market_cap_b": 1.7,
-     "eps": null,
-     "eps_estimate": null,
-     "surprise_pct": null,
-     "timing": "time-not-supplied",
-     "bullets": [
-      "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet.",
-      "Covers the quarter ending Sep 2026."
-     ],
-     "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FORTY&type=8-K&dateb=&owner=include&count=10"
-    },
     {
      "symbol": "HUBG",
      "name": "Hub Group",
@@ -42,19 +26,36 @@
   },
   {
    "date": "2026-11-25",
-   "reported_total": 32,
+   "reported_total": 25,
    "top": [
+    {
+     "symbol": "DE",
+     "name": "Deere &",
+     "market_cap_b": 165.5,
+     "eps": 3.89,
+     "eps_estimate": 4.07,
+     "surprise_pct": -4.42,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $3.89 versus $4.07 expected, so the company missed estimates by 4.4%.",
+      "Stock moved +4.4% on Nov 25.",
+      "Covers the quarter ending Oct 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DE&type=8-K&dateb=&owner=include&count=10"
+    },
     {
      "symbol": "LI",
      "name": "Li Auto",
      "market_cap_b": 10.5,
-     "eps": null,
+     "eps": -0.05,
      "eps_estimate": -0.08,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 37.5,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.08.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $-0.05 versus $-0.08 expected, so the company beat estimates by 37.5%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -64,13 +65,13 @@
      "symbol": "BZ",
      "name": "KANZHUN LIMITED",
      "market_cap_b": 6.0,
-     "eps": null,
+     "eps": 0.27,
      "eps_estimate": -0.02,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": 1450.0,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $-0.02.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.27 versus $-0.02 expected, so the company beat estimates by 1450.0%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -80,13 +81,13 @@
      "symbol": "BMA",
      "name": "Macro Bank",
      "market_cap_b": 3.1,
-     "eps": null,
+     "eps": 1.07,
      "eps_estimate": 1.44,
-     "surprise_pct": null,
+     "surprise_pct": -25.69,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.44.",
+      "Earnings per share were $1.07 versus $1.44 expected, so the company missed estimates by 25.7%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
@@ -96,17 +97,49 @@
      "symbol": "GDS",
      "name": "GDS Holdings Limited",
      "market_cap_b": 2.8,
-     "eps": null,
+     "eps": 0.0,
      "eps_estimate": 1.31,
-     "surprise_pct": null,
-     "timing": "time-pre-market",
+     "surprise_pct": -100.0,
+     "timing": "time-not-supplied",
      "bullets": [
-      "Scheduled to report before the open.",
-      "Results aren't posted in our data yet. Analysts expected EPS of $1.31.",
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.00 versus $1.31 expected, so the company missed estimates by 100.0%.",
       "Covers the quarter ending Sep 2026."
      ],
      "ai_summary": null,
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GDS&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "FORTY",
+     "name": "Formula Systems (1985)",
+     "market_cap_b": 1.7,
+     "eps": 1.71,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $1.71 (no analyst consensus available).",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FORTY&type=8-K&dateb=&owner=include&count=10"
+    },
+    {
+     "symbol": "IMKTA",
+     "name": "Ingles Markets, Incorporated",
+     "market_cap_b": 1.6,
+     "eps": 0.97,
+     "eps_estimate": null,
+     "surprise_pct": null,
+     "timing": "time-not-supplied",
+     "bullets": [
+      "Report time wasn't listed by the data source.",
+      "Earnings per share were $0.97 (no analyst consensus available).",
+      "Covers the quarter ending Sep 2026."
+     ],
+     "ai_summary": null,
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IMKTA&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
@@ -282,7 +315,7 @@
   },
   {
    "date": "2026-11-23",
-   "reported_total": 61,
+   "reported_total": 57,
    "top": [
     {
      "symbol": "CRWD",

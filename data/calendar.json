@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T04:31:20.220827Z",
+ "generated": "2026-11-26T21:59:01.609635Z",
  "today": "2026-11-26",
  "timezone": "US Eastern",
  "events": [
@@ -130,10 +130,10 @@
    "kind": "earnings",
    "title": "Bank of Nova Scotia (The) (BNS) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.55.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.54.",
    "extra": {
     "market_cap_b": 104,
-    "eps_forecast": "$1.55"
+    "eps_forecast": "$1.54"
    },
    "source": "",
    "link": null
@@ -160,10 +160,10 @@
    "kind": "earnings",
    "title": "Royal Bank Of Canada (RY) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.93.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $2.94.",
    "extra": {
     "market_cap_b": 262,
-    "eps_forecast": "$2.93"
+    "eps_forecast": "$2.94"
    },
    "source": "",
    "link": null
@@ -175,10 +175,10 @@
    "kind": "earnings",
    "title": "Toronto Dominion Bank (The) (TD) reports earnings",
    "importance": "medium",
-   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.77.",
+   "why": "Companies report profits and give guidance for the future. Stocks often move sharply on the gap between results and expectations. Analysts expect EPS of $1.76.",
    "extra": {
     "market_cap_b": 189,
-    "eps_forecast": "$1.77"
+    "eps_forecast": "$1.76"
    },
    "source": "",
    "link": null
