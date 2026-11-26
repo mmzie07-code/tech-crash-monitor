@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-25T22:00:35.381197Z",
- "asof": "2026-11-25",
+ "generated": "2026-11-26T04:31:06.739401Z",
+ "asof": "2026-11-26",
  "priced": [
   {
    "sym": "ANT",
@@ -33,7 +33,7 @@
    "perf": {
     "first_day_pct": 67.6,
     "now_pct": 50.6,
-    "last": 25.59,
+    "last": 25.6,
     "last_date": "2026-11-25",
     "first_trade": "2026-11-13"
    }
@@ -93,24 +93,6 @@
    }
   },
   {
-   "sym": "BBTX",
-   "name": "Bambusa Therapeutics, Inc.",
-   "exchange": "NASDAQ Global Select",
-   "price": 16.0,
-   "date": "2026-10-30",
-   "shares": 10555555.0,
-   "amount": 168888880.0,
-   "spac": false,
-   "lockup": "2027-04-28",
-   "perf": {
-    "first_day_pct": -6.3,
-    "now_pct": 0.6,
-    "last": 16.1,
-    "last_date": "2026-11-25",
-    "first_trade": "2026-10-30"
-   }
-  },
-  {
    "sym": "ASPE",
    "name": "Aspen Neuroscience, Inc.",
    "exchange": "NASDAQ Global Select",
@@ -129,16 +111,22 @@
    }
   },
   {
-   "sym": "GBC",
-   "name": "Georgia Banking Co Inc",
-   "exchange": "NASDAQ Capital",
-   "price": null,
-   "date": "2026-10-29",
-   "shares": 7074016.0,
-   "amount": null,
+   "sym": "BBTX",
+   "name": "Bambusa Therapeutics, Inc.",
+   "exchange": "NASDAQ Global Select",
+   "price": 16.0,
+   "date": "2026-10-30",
+   "shares": 10555555.0,
+   "amount": 168888880.0,
    "spac": false,
-   "lockup": "2027-04-27",
-   "perf": null
+   "lockup": "2027-04-28",
+   "perf": {
+    "first_day_pct": -6.3,
+    "now_pct": 0.6,
+    "last": 16.1,
+    "last_date": "2026-11-25",
+    "first_trade": "2026-10-30"
+   }
   },
   {
    "sym": "BHAIU",
@@ -150,6 +138,18 @@
    "amount": 100000000.0,
    "spac": true,
    "lockup": "2027-04-27"
+  },
+  {
+   "sym": "GBC",
+   "name": "Georgia Banking Co Inc",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-10-29",
+   "shares": 7074016.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2027-04-27",
+   "perf": null
   },
   {
    "sym": "SCQCU",
@@ -222,24 +222,6 @@
    "lockup": "2027-04-14"
   },
   {
-   "sym": "AMRO",
-   "name": "Amaero Inc.",
-   "exchange": "NASDAQ Capital",
-   "price": 4.25,
-   "date": "2026-10-15",
-   "shares": 4705883.0,
-   "amount": 20000003.0,
-   "spac": false,
-   "lockup": "2027-04-13",
-   "perf": {
-    "first_day_pct": 3.8,
-    "now_pct": 20.0,
-    "last": 5.1,
-    "last_date": "2026-11-25",
-    "first_trade": "2026-10-15"
-   }
-  },
-  {
    "sym": "IAM",
    "name": "Iambic Therapeutics, Inc.",
    "exchange": "NASDAQ Global Select",
@@ -258,6 +240,24 @@
    }
   },
   {
+   "sym": "AMRO",
+   "name": "Amaero Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": 4.25,
+   "date": "2026-10-15",
+   "shares": 4705883.0,
+   "amount": 20000003.0,
+   "spac": false,
+   "lockup": "2027-04-13",
+   "perf": {
+    "first_day_pct": 3.8,
+    "now_pct": 20.0,
+    "last": 5.1,
+    "last_date": "2026-11-25",
+    "first_trade": "2026-10-15"
+   }
+  },
+  {
    "sym": "FLSC",
    "name": "Frazier Life Sciences Acquisition Corp. II",
    "exchange": "NASDAQ Capital",
@@ -267,24 +267,6 @@
    "amount": 75000000.0,
    "spac": true,
    "lockup": "2027-04-12"
-  },
-  {
-   "sym": "RTSN",
-   "name": "Retension Pharmaceuticals, Inc.",
-   "exchange": "NASDAQ Capital",
-   "price": 12.0,
-   "date": "2026-10-09",
-   "shares": 3750000.0,
-   "amount": 45000000.0,
-   "spac": false,
-   "lockup": "2027-04-07",
-   "perf": {
-    "first_day_pct": -12.3,
-    "now_pct": -6.0,
-    "last": 11.27,
-    "last_date": "2026-11-25",
-    "first_trade": "2026-10-09"
-   }
   },
   {
    "sym": "TRXB",
@@ -305,6 +287,24 @@
    }
   },
   {
+   "sym": "RTSN",
+   "name": "Retension Pharmaceuticals, Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": 12.0,
+   "date": "2026-10-09",
+   "shares": 3750000.0,
+   "amount": 45000000.0,
+   "spac": false,
+   "lockup": "2027-04-07",
+   "perf": {
+    "first_day_pct": -12.3,
+    "now_pct": -6.0,
+    "last": 11.28,
+    "last_date": "2026-11-25",
+    "first_trade": "2026-10-09"
+   }
+  },
+  {
    "sym": "PAXGU",
    "name": "Pine Tree Acquisition Corp.",
    "exchange": "NASDAQ Global",
@@ -314,6 +314,17 @@
    "amount": 100000000.0,
    "spac": true,
    "lockup": "2027-04-04"
+  },
+  {
+   "sym": "PORTU",
+   "name": "Southport Acquisition Corp. II",
+   "exchange": "NYSE",
+   "price": 10.0,
+   "date": "2026-10-01",
+   "shares": 20000000.0,
+   "amount": 200000000.0,
+   "spac": true,
+   "lockup": "2027-03-30"
   },
   {
    "sym": "CHWM",
@@ -332,17 +343,6 @@
     "last_date": "2026-11-25",
     "first_trade": "2026-10-01"
    }
-  },
-  {
-   "sym": "PORTU",
-   "name": "Southport Acquisition Corp. II",
-   "exchange": "NYSE",
-   "price": 10.0,
-   "date": "2026-10-01",
-   "shares": 20000000.0,
-   "amount": 200000000.0,
-   "spac": true,
-   "lockup": "2027-03-30"
   },
   {
    "sym": "ACCV",
@@ -662,7 +662,7 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": -38.6,
-    "now_pct": -93.1,
+    "now_pct": -93.2,
     "last": 0.34,
     "last_date": "2026-11-25",
     "first_trade": "2026-08-12"
@@ -1704,7 +1704,7 @@
    "perf": {
     "first_day_pct": 24.9,
     "now_pct": -51.9,
-    "last": 12.98,
+    "last": 12.99,
     "last_date": "2026-11-25",
     "first_trade": "2026-06-08"
    }
@@ -1783,17 +1783,6 @@
    "lockup": "2026-11-23"
   },
   {
-   "sym": "FXACU",
-   "name": "FortuneX Acquisition Corp",
-   "exchange": "NASDAQ Global",
-   "price": 10.0,
-   "date": "2026-05-22",
-   "shares": 7500000.0,
-   "amount": 75000000.0,
-   "spac": true,
-   "lockup": "2026-11-18"
-  },
-  {
    "sym": "PECEU",
    "name": "Peace Acquisition Corp.",
    "exchange": "NASDAQ Capital",
@@ -1814,6 +1803,29 @@
    "amount": 80000000.0,
    "spac": true,
    "lockup": "2026-11-18"
+  },
+  {
+   "sym": "FXACU",
+   "name": "FortuneX Acquisition Corp",
+   "exchange": "NASDAQ Global",
+   "price": 10.0,
+   "date": "2026-05-22",
+   "shares": 7500000.0,
+   "amount": 75000000.0,
+   "spac": true,
+   "lockup": "2026-11-18"
+  },
+  {
+   "sym": "CNXU",
+   "name": "Conexeu Sciences Inc.",
+   "exchange": "NASDAQ Capital",
+   "price": null,
+   "date": "2026-05-21",
+   "shares": 9481123.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2026-11-17",
+   "perf": null
   },
   {
    "sym": "OHACU",
@@ -1838,30 +1850,6 @@
    "lockup": "2026-11-17"
   },
   {
-   "sym": "CNXU",
-   "name": "Conexeu Sciences Inc.",
-   "exchange": "NASDAQ Capital",
-   "price": null,
-   "date": "2026-05-21",
-   "shares": 9481123.0,
-   "amount": null,
-   "spac": false,
-   "lockup": "2026-11-17",
-   "perf": null
-  },
-  {
-   "sym": "AMSS",
-   "name": "Amass Brands",
-   "exchange": "NASDAQ Global",
-   "price": null,
-   "date": "2026-05-20",
-   "shares": 14293298.0,
-   "amount": null,
-   "spac": false,
-   "lockup": "2026-11-16",
-   "perf": null
-  },
-  {
    "sym": "OPTH",
    "name": "Optimi Health Corp.",
    "exchange": "NASDAQ Capital",
@@ -1878,6 +1866,18 @@
     "last_date": "2026-11-25",
     "first_trade": "2026-05-26"
    }
+  },
+  {
+   "sym": "AMSS",
+   "name": "Amass Brands",
+   "exchange": "NASDAQ Global",
+   "price": null,
+   "date": "2026-05-20",
+   "shares": 14293298.0,
+   "amount": null,
+   "spac": false,
+   "lockup": "2026-11-16",
+   "perf": null
   },
   {
    "sym": "RACC",
@@ -1907,17 +1907,6 @@
     "last_date": "2026-11-25",
     "first_trade": "2026-05-26"
    }
-  },
-  {
-   "sym": "AMAN",
-   "name": "Amanat Acquisition Corp.",
-   "exchange": "NASDAQ Capital",
-   "price": 10.0,
-   "date": "2026-05-19",
-   "shares": 7500000.0,
-   "amount": 75000000.0,
-   "spac": true,
-   "lockup": "2026-11-15"
   }
  ],
  "upcoming": [],
@@ -2224,11 +2213,11 @@
    "spac": true
   }
  ],
- "withdrawn_30d": 8,
+ "withdrawn_30d": 7,
  "stats": {
   "window_days": 190,
   "priced": 68,
-  "spacs": 69,
+  "spacs": 68,
   "traded": 57,
   "raised": 201896287395.0,
   "median_first_day": 0.8,

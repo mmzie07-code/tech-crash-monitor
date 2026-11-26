@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T22:00:59.712956Z",
+ "generated": "2026-11-26T04:31:28.739565Z",
  "as_of": "2026-11-25",
  "regime": "S&P 500 below its 200-day average and the market is nervous (VIX 20-30)",
  "history_from": "1985-01-02",
@@ -36,37 +36,12 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 7.9% below its 1-year high.",
-    "VIX at 26.4: investors are nervous.",
-    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.1% below its 1-year high.",
+    "VIX at 28.3: investors are nervous.",
+    "10-year yield is high at 4.85%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100."
    ],
-   "events": [
-    {
-     "date": "2026-11-25",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "7:25 AM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "2:00 PM",
-     "title": "Fed Beige Book",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "8:30 AM",
-     "title": "GDP second estimate: revised economic growth",
-     "importance": "medium"
-    }
-   ]
+   "events": []
   },
   "tomorrow": {
    "label": "Tomorrow",
@@ -100,9 +75,9 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 7.9% below its 1-year high.",
-    "VIX at 26.4: investors are nervous.",
-    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.1% below its 1-year high.",
+    "VIX at 28.3: investors are nervous.",
+    "10-year yield is high at 4.85%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100."
    ],
    "events": []
@@ -139,37 +114,13 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 7.9% below its 1-year high.",
-    "VIX at 26.4: investors are nervous.",
-    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.1% below its 1-year high.",
+    "VIX at 28.3: investors are nervous.",
+    "10-year yield is high at 4.85%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-25",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "7:25 AM",
-     "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "2:00 PM",
-     "title": "Fed Beige Book",
-     "importance": "medium"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "8:30 AM",
-     "title": "GDP second estimate: revised economic growth",
-     "importance": "medium"
-    },
     {
      "date": "2026-12-01",
      "time": "Time TBA",
@@ -204,6 +155,24 @@
      "date": "2026-12-02",
      "time": "After close",
      "title": "Snowflake (SNOW) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-03",
+     "time": "Before open",
+     "title": "Royal Bank Of Canada (RY) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-03",
+     "time": "Before open",
+     "title": "Toronto Dominion Bank (The) (TD) reports earnings",
+     "importance": "medium"
+    },
+    {
+     "date": "2026-12-03",
+     "time": "Before open",
+     "title": "Canadian Imperial Bank of Commerce (CM) reports earnings",
      "importance": "medium"
     }
    ]
@@ -240,19 +209,13 @@
    },
    "bull": [],
    "bear": [
-    "S&P 500 is 7.9% below its 1-year high.",
-    "VIX at 26.4: investors are nervous.",
-    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.1% below its 1-year high.",
+    "VIX at 28.3: investors are nervous.",
+    "10-year yield is high at 4.85%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],
    "events": [
-    {
-     "date": "2026-11-25",
-     "time": "8:30 AM",
-     "title": "Personal income and spending, including PCE inflation",
-     "importance": "high"
-    },
     {
      "date": "2026-12-09",
      "time": "2:00 PM",
@@ -298,12 +261,12 @@
     "best": 49.5
    },
    "bull": [
-    "QQQ trailing P/E is 26.3, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
+    "QQQ trailing P/E is 26.1, under our 32 warning line. Over a year, profit growth and interest rates have mattered more than starting valuation."
    ],
    "bear": [
-    "S&P 500 is 7.9% below its 1-year high.",
-    "VIX at 26.4: investors are nervous.",
-    "10-year yield is high at 4.90%, which makes bonds a strong competitor to stocks.",
+    "S&P 500 is 8.1% below its 1-year high.",
+    "VIX at 28.3: investors are nervous.",
+    "10-year yield is high at 4.85%, which makes bonds a strong competitor to stocks.",
     "AI & Tech Watch has 6 warning sign(s) flashing (AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy)); health score 12 out of 100.",
     "MSFT+GOOGL+AMZN+META capex $615B TTM (+87% YoY, 33% of revenue) vs revenue +20%."
    ],

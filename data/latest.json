@@ -1,6 +1,6 @@
 {
- "date": "2026-11-24",
- "generated": "2026-11-25T04:30:16.591063Z",
+ "date": "2026-11-25",
+ "generated": "2026-11-26T03:42:40.163770Z",
  "level": "Severe",
  "health": 12,
  "score": 88,
@@ -15,9 +15,9 @@
    "name": "Valuation (QQQ trailing P/E)",
    "group": "stretch",
    "status": "ok",
-   "value": 26.3,
+   "value": 26.1,
    "threshold": "P/E > 32 (2021 peak zone ~35-40; 2015-24 typical ~22-28)",
-   "detail": "QQQ trailing P/E 26.3; price is -6.6% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
+   "detail": "QQQ trailing P/E 26.1; price is -7.3% above its 200-day avg. Measures fragility, not timing: stretch showed no short-term crash edge in backtests.",
    "source": "Yahoo Finance (yfinance)",
    "proxy": false,
    "weight": 0
@@ -27,9 +27,9 @@
    "name": "Mega-cap concentration",
    "group": "stretch",
    "status": "ok",
-   "value": -6.3,
+   "value": -6.8,
    "threshold": "> +5% in 6mo and at 1y high",
-   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -6.3% over 6 months.",
+   "detail": "Cap-weighted QQQ vs equal-weight QQQE: ratio moved -6.8% over 6 months.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 1
@@ -63,9 +63,9 @@
    "name": "Rates rising",
    "group": "trigger",
    "status": "ok",
-   "value": 0.23,
+   "value": 0.13,
    "threshold": "> +0.40 pts in 3mo",
-   "detail": "10Y yield 4.90%, +0.23 pts over 3 months.",
+   "detail": "10Y yield 4.85%, +0.13 pts over 3 months.",
    "source": "Yahoo Finance (^TNX)",
    "proxy": false,
    "weight": 0
@@ -75,9 +75,9 @@
    "name": "Credit stress (junk bonds vs Treasuries)",
    "group": "trigger",
    "status": "warn",
-   "value": -2.1,
+   "value": -2.7,
    "threshold": "HYG falls > 2% vs IEF in 20 days",
-   "detail": "High-yield bond fund is -2.1% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
+   "detail": "High-yield bond fund is -2.7% vs Treasuries over 20 trading days. Falling = investors demanding more to hold risky debt.",
    "source": "Yahoo Finance (HYG, IEF)",
    "proxy": true,
    "weight": 1
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "warn",
-   "value": 26.4,
+   "value": 28.3,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 26.4 is 1.42x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 28.3 is 1.50x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -99,9 +99,9 @@
    "name": "Trend breakdown",
    "group": "trigger",
    "status": "warn",
-   "value": -16.0,
+   "value": -16.6,
    "threshold": "below 50-day avg or > 7% off high",
-   "detail": "QQQ -16.0% from 1y high; below 50-day, below 200-day avg.",
+   "detail": "QQQ -16.6% from 1y high; below 50-day, below 200-day avg.",
    "source": "Yahoo Finance",
    "proxy": false,
    "weight": 1
@@ -113,7 +113,7 @@
    "status": "warn",
    "value": 1.65,
    "threshold": "last-90d sales > 1.5x prior average, with ~no buying (unvalidated)",
-   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1434M in 90 days vs $867M per-90d baseline (1.65x); bought $0.0M.",
+   "detail": "NVDA/MSFT/GOOGL/AMZN/META/AVGO insiders sold $1435M in 90 days vs $867M per-90d baseline (1.65x); bought $0.0M.",
    "source": "SEC EDGAR Form 4",
    "proxy": false,
    "weight": 1
@@ -123,20 +123,16 @@
    "name": "Semiconductor leadership break (AI narrative proxy)",
    "group": "trigger",
    "status": "warn",
-   "value": -6.3,
+   "value": -8.5,
    "threshold": "SMH lags QQQ by > 5pts over 10 days",
-   "detail": "SMH -11.8% over 10 days (-6.3 pts vs QQQ). Best-performing signal in backtests.",
+   "detail": "SMH -16.7% over 10 days (-8.5 pts vs QQQ). Best-performing signal in backtests.",
    "source": "Yahoo Finance",
    "proxy": true,
    "weight": 2
   }
  ],
- "qqq_last": 638.1,
+ "qqq_last": 633.93,
  "qqq_series": [
-  [
-   "2025-11-26",
-   614.27
-  ],
   [
    "2025-11-28",
    619.25
@@ -1132,12 +1128,16 @@
   [
    "2026-11-24",
    638.1
+  ],
+  [
+   "2026-11-25",
+   633.93
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 65.9,
- "ai_health": 34,
+ "ai_heat": 65.3,
+ "ai_health": 35,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-11-25T22:03:30.461085Z"
+ "ai_updated": "2026-11-26T04:33:49.110829Z"
 }

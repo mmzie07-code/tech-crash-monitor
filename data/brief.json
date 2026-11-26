@@ -1,56 +1,65 @@
 {
- "date": "2026-11-24",
- "generated": "2026-11-25T05:25:49.197205Z",
- "headline": "US stocks finished lower. The S&P 500 fell 0.50%, with 9 of 11 sectors up.",
+ "date": "2026-11-25",
+ "generated": "2026-11-26T04:43:27.728514Z",
+ "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 8 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.50% today, -6.20% this month, +5.00% this year",
-    "Dow Jones: +0.85% today, -4.47% this month, +3.38% this year",
-    "Nasdaq Composite: -1.48% today, -9.31% this month, +2.14% this year",
-    "Russell 2000: +0.57% today, -3.64% this month, +7.05% this year"
+    "S&P 500: -0.25% today, -6.99% this month, +4.73% this year",
+    "Dow Jones: +0.33% today, -4.19% this month, +3.72% this year",
+    "Nasdaq Composite: -0.62% today, -10.92% this month, +1.51% this year",
+    "Russell 2000: +0.71% today, -4.07% this month, +7.81% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Health Care +2.95%, Consumer Staples +1.66%, Real Estate +1.31%",
-    "Lagging: Technology -3.26%, Industrials -0.53%, Utilities +0.18%",
-    "9 of 11 sectors rose."
+    "Leading: Materials +2.07%, Real Estate +0.92%, Communication +0.89%",
+    "Lagging: Technology -0.83%, Health Care -0.56%, Consumer Discretionary -0.20%",
+    "8 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 26.36 (-0.98% today)",
-    "10-year Treasury yield: 4.90% (-0.01 pts today)",
-    "US dollar index: 103.98 (+0.16% today)",
-    "Crude oil: 80.76 (-1.57% today)",
-    "Gold: 3,553.20 (-0.24% today)",
-    "Bitcoin: 59,160.73 (-3.35% today)"
+    "VIX (fear gauge): 28.29 (+7.32% today)",
+    "10-year Treasury yield: 4.85% (-0.06 pts today)",
+    "US dollar index: 103.81 (+0.13% today)",
+    "Crude oil: 84.37 (+0.82% today)",
+    "Gold: 3,604.40 (+1.94% today)",
+    "Bitcoin: 60,626.62 (+1.47% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Bitcoin moved -3.35%, showing appetite (or lack of it) for speculative assets.",
-    "A 6.2-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The 10-year yield moved -0.06 points to 4.85%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "Gold moved +1.94%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 2.9-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
    "title": "Coming up",
    "bullets": [
-    "Wed Nov 25, 8:30 AM ET: Personal income and spending, including PCE inflation",
     "Wed Dec 9, 2:00 PM ET: Fed interest-rate decision (FOMC)",
     "Wed Dec 23, 8:30 AM ET: Personal income and spending, including PCE inflation",
-    "Wed Dec 30, 2:00 PM ET: FOMC minutes (meeting of December 8-9)"
+    "Wed Dec 30, 2:00 PM ET: FOMC minutes (meeting of December 8-9)",
+    "Wed Jan 27, 2:00 PM ET: Fed interest-rate decision (FOMC)"
+   ]
+  },
+  {
+   "title": "Just happened",
+   "bullets": [
+    "GDP second estimate: revised economic growth: Real gross domestic product (GDP) increased at an annual rate of 4.3 percent in the third quarter of 2026 (July, August, and September).",
+    "Personal income and spending, including PCE inflation: Personal income increased $201.8 billion (0.7 percent at a monthly rate) in October.",
+    "Fed Beige Book: The Fed published its Beige Book on regional business conditions."
    ]
   },
   {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 12 out of 100 (Danger; higher is better) (-38 from 50 on 2026-11-23).",
+    "Market health score 12 out of 100 (Danger; higher is better) (unchanged from 12 on 2026-11-24).",
     "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
@@ -58,52 +67,52 @@
  ],
  "headlines": [
   {
-   "title": "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
+   "title": "S&P warns Nvidia credit rating could be cut over 'rising' management and governance risk",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-employee-meeting.html",
-   "published": "Tue, 24 Nov 2026 23:13:49"
+   "link": "https://www.cnbc.com/2026/11/26/nvidia-market-governance-risk.html",
+   "published": "Thu, 26 Nov 2026 03:19:44"
   },
   {
-   "title": "Houthi attack on Saudi Arabian sovereign wealth fund PIF's tower injures 11",
+   "title": "U.S. proposes new tariffs on 14 trading partners, including China and the EU",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/25/us-iran-war-trump-hormuz-houthi-saudi-pif-tower.html",
-   "published": "Wed, 25 Nov 2026 02:36:43"
+   "link": "https://www.cnbc.com/2026/11/25/us-tariffs-trump-section-301.html",
+   "published": "Wed, 25 Nov 2026 16:02:52"
   },
   {
-   "title": "\u2018Ready for any storm\u2019: UAE minister optimistic on economy as IMF lifts forecast",
+   "title": "How Trump\u2019s latest tariff moves hand India an edge over rival Asian exporters",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/25/uae-iran-war-economy-oil.html",
-   "published": "Wed, 25 Nov 2026 04:06:01"
+   "link": "https://www.cnbc.com/2026/11/26/trump-us-tariff-india-trade.html",
+   "published": "Thu, 26 Nov 2026 04:12:18"
   },
   {
-   "title": "SoftBank drops 15% as Wall Street AI sell-off ripples across Asian tech names",
+   "title": "South Korea's Kospi leads gains as tech rebound lifts Asia markets",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/25/tech-stocks-softbank-group-advantest-sk-hynix-samsung.html",
-   "published": "Wed, 25 Nov 2026 03:52:03"
+   "link": "https://www.cnbc.com/2026/11/26/stock-markets-today-.html",
+   "published": "Thu, 26 Nov 2026 01:45:52"
+  },
+  {
+   "title": "We are living in perilous times if Nvidia\u2019s Jensen Huang dictates your 401(k) balance",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/we-are-living-in-perilous-times-if-nvidias-jensen-huang-dictates-your-401-k-balance-e0942d1e?mod=mw_rss_topstories",
+   "published": "Thu, 26 Nov 2026 01:15:00"
+  },
+  {
+   "title": "Why this stock-market selloff is probably going to get worse before it gets better",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/why-this-stock-market-selloff-is-probably-going-to-get-worse-before-it-gets-better-fce63a89?mod=mw_rss_topstories",
+   "published": "Thu, 26 Nov 2026 00:33:00"
+  },
+  {
+   "title": "A 66-year-old nurse is facing down retirement with just $500 saved. Who\u2019s to blame?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories",
+   "published": "Wed, 25 Nov 2026 23:30:00"
   },
   {
    "title": "I\u2019m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
-   "published": "Wed, 25 Nov 2026 02:00:00"
-  },
-  {
-   "title": "Dell\u2019s stock rises as the AI boom helps sales more than double",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/dells-stock-rises-as-the-ai-boom-helps-sales-more-than-double-cfb8cf65?mod=mw_rss_topstories",
-   "published": "Wed, 25 Nov 2026 01:11:00"
-  },
-  {
-   "title": "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/my-husband-secretly-sends-his-ex-wife-1-500-a-month-after-she-lost-her-job-we-have-2-4-million-saved-has-he-lied-by-omission-ede1972a?mod=mw_rss_topstories",
-   "published": "Wed, 25 Nov 2026 00:05:00"
-  },
-  {
-   "title": "Micron boosted CEO Sanjay Mehrotra\u2019s security budget by 2,000%, new filing shows",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/micron-boosted-ceo-sanjay-mehrotras-security-budget-by-2-000-new-filing-shows-d6202acc?mod=mw_rss_topstories",
-   "published": "Tue, 24 Nov 2026 23:11:00"
+   "published": "Wed, 25 Nov 2026 23:30:00"
   }
  ],
  "summary": null,

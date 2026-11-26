@@ -1,63 +1,8 @@
 {
- "generated": "2026-11-25T22:00:50.803525Z",
- "today": "2026-11-25",
+ "generated": "2026-11-26T04:31:20.220827Z",
+ "today": "2026-11-26",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-25-data-personal-income-and-spending-including-pce-infla",
-   "date": "2026-11-25",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Personal income and spending, including PCE inflation",
-   "importance": "high",
-   "why": "A US government economic release.",
-   "extra": {
-    "bea_key": "personal income and outlays, october 202"
-   },
-   "source": "BEA",
-   "link": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
-  },
-  {
-   "id": "2026-11-25-fed-fed-speaks-vice-chair-for-supervision-michelle-w",
-   "date": "2026-11-25",
-   "time": "7:25 AM",
-   "kind": "fed",
-   "title": "Fed speaks: Vice Chair for Supervision Michelle W. Bowman",
-   "importance": "medium",
-   "why": "Topic: Modernizing Banking Supervision: A Shared Agenda for the Americas (via pre-recorded video). Fed officials' remarks can move markets when they hint at where interest rates are headed. The Chair's words carry the most weight.",
-   "extra": {
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At a meeting with the Association of Supervisors of Banks of the Americas, Basel Committee on Banking Supervision, and Financial Stability Institute"
-   },
-   "source": "Federal Reserve",
-   "link": null
-  },
-  {
-   "id": "2026-11-25-fed-fed-beige-book",
-   "date": "2026-11-25",
-   "time": "2:00 PM",
-   "kind": "fed",
-   "title": "Fed Beige Book",
-   "importance": "medium",
-   "why": "A report on how businesses across the country say the economy is doing, gathered before each Fed meeting.",
-   "extra": null,
-   "source": "Federal Reserve",
-   "link": "https://www.federalreserve.gov/monetarypolicy/beigebook/"
-  },
-  {
-   "id": "2026-11-25-data-gdp-second-estimate-revised-economic-growth",
-   "date": "2026-11-25",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "GDP second estimate: revised economic growth",
-   "importance": "medium",
-   "why": "A US government economic release.",
-   "extra": {
-    "bea_key": "gdp, (second estimate) and corporate pro"
-   },
-   "source": "BEA",
-   "link": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
-  },
   {
    "id": "2026-11-26-data-weekly-jobless-claims",
    "date": "2026-11-26",
