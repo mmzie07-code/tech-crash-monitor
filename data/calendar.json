@@ -1,20 +1,8 @@
 {
- "generated": "2026-11-26T21:59:01.609635Z",
- "today": "2026-11-26",
+ "generated": "2026-11-27T04:30:28.033835Z",
+ "today": "2026-11-27",
  "timezone": "US Eastern",
  "events": [
-  {
-   "id": "2026-11-26-data-weekly-jobless-claims",
-   "date": "2026-11-26",
-   "time": "8:30 AM",
-   "kind": "data",
-   "title": "Weekly jobless claims",
-   "importance": "low",
-   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
-   "extra": null,
-   "source": "",
-   "link": null
-  },
   {
    "id": "2026-11-30-data-g-20-finance-companies",
    "date": "2026-11-30",
@@ -330,6 +318,18 @@
    "why": "A routine Federal Reserve statistical release. ",
    "extra": null,
    "source": "Federal Reserve",
+   "link": null
+  },
+  {
+   "id": "2026-12-17-data-weekly-jobless-claims",
+   "date": "2026-12-17",
+   "time": "8:30 AM",
+   "kind": "data",
+   "title": "Weekly jobless claims",
+   "importance": "low",
+   "why": "How many people filed for unemployment benefits last week. A quick read on the job market; a sustained rise can signal a weakening economy.",
+   "extra": null,
+   "source": "",
    "link": null
   },
   {

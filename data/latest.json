@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "generated": "2026-11-26T03:42:40.163770Z",
+ "generated": "2026-11-27T03:43:51.831766Z",
  "level": "Severe",
  "health": 12,
  "score": 88,
@@ -87,9 +87,9 @@
    "name": "Fear spike",
    "group": "trigger",
    "status": "warn",
-   "value": 28.3,
+   "value": 26.8,
    "threshold": "VIX > 1.25x its 50-day avg",
-   "detail": "VIX 28.3 is 1.50x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
+   "detail": "VIX 26.8 is 1.41x its 50-day average. (Low VIX was NOT a useful warning in backtests.)",
    "source": "Yahoo Finance (^VIX)",
    "proxy": true,
    "weight": 1
@@ -1135,9 +1135,9 @@
   ]
  ],
  "disclaimer": "Educational analysis only. Not investment advice. Past signals do not predict future returns.",
- "ai_heat": 65.3,
+ "ai_heat": 65.2,
  "ai_health": 35,
  "ai_zone": "Warning",
  "ai_indicators": 62,
- "ai_updated": "2026-11-26T22:01:34.647006Z"
+ "ai_updated": "2026-11-27T04:32:48.812312Z"
 }

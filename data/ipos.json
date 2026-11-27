@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-26T21:58:41.877122Z",
- "asof": "2026-11-26",
+ "generated": "2026-11-27T04:30:13.217230Z",
+ "asof": "2026-11-27",
  "priced": [
   {
    "sym": "ANT",
@@ -1848,65 +1848,6 @@
    "spac": false,
    "lockup": "2026-11-17",
    "perf": null
-  },
-  {
-   "sym": "AMSS",
-   "name": "Amass Brands",
-   "exchange": "NASDAQ Global",
-   "price": null,
-   "date": "2026-05-20",
-   "shares": 14293298.0,
-   "amount": null,
-   "spac": false,
-   "lockup": "2026-11-16",
-   "perf": null
-  },
-  {
-   "sym": "OPTH",
-   "name": "Optimi Health Corp.",
-   "exchange": "NASDAQ Capital",
-   "price": 6.25,
-   "date": "2026-05-20",
-   "shares": 2400000.0,
-   "amount": 15000000.0,
-   "spac": false,
-   "lockup": "2026-11-16",
-   "perf": {
-    "first_day_pct": -8.6,
-    "now_pct": -65.6,
-    "last": 2.15,
-    "last_date": "2026-11-25",
-    "first_trade": "2026-05-26"
-   }
-  },
-  {
-   "sym": "RACC",
-   "name": "Research Alliance Corp III",
-   "exchange": "NASDAQ Capital",
-   "price": 10.0,
-   "date": "2026-05-20",
-   "shares": 7500000.0,
-   "amount": 75000000.0,
-   "spac": true,
-   "lockup": "2026-11-16"
-  },
-  {
-   "sym": "LCLN",
-   "name": "Lincoln International, Inc.",
-   "exchange": "NYSE",
-   "price": 20.0,
-   "date": "2026-05-20",
-   "shares": 21049988.0,
-   "amount": 420999760.0,
-   "spac": false,
-   "lockup": "2026-11-16",
-   "perf": {
-    "first_day_pct": 17.5,
-    "now_pct": 38.0,
-    "last": 27.6,
-    "last_date": "2026-11-25",
-    "first_trade": "2026-05-26"
-   }
   }
  ],
  "upcoming": [],
@@ -2244,12 +2185,12 @@
  "withdrawn_30d": 8,
  "stats": {
   "window_days": 190,
-  "priced": 68,
-  "spacs": 68,
-  "traded": 57,
-  "raised": 201896287395.0,
+  "priced": 65,
+  "spacs": 67,
+  "traded": 55,
+  "raised": 201460287635.0,
   "median_first_day": 0.8,
-  "below_offer": 39
+  "below_offer": 38
  },
  "disclaimer": "Facts from Nasdaq's public IPO calendar and Yahoo Finance prices. Educational only; not investment advice."
 }
