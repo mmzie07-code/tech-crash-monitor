@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-27T04:28:53.268407Z",
+ "generated": "2026-11-27T21:39:56.199443Z",
  "ai_summaries": false,
  "days": [
   {
    "date": "2026-11-27",
-   "reported_total": 12,
+   "reported_total": 11,
    "top": [
     {
      "symbol": "KT",
      "name": "KT",
-     "market_cap_b": 7.9,
+     "market_cap_b": 8.3,
      "eps": null,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -69,7 +69,7 @@
     {
      "symbol": "DE",
      "name": "Deere &",
-     "market_cap_b": 165.5,
+     "market_cap_b": 172.8,
      "eps": 3.89,
      "eps_estimate": 4.07,
      "surprise_pct": -4.42,
@@ -86,7 +86,7 @@
     {
      "symbol": "LI",
      "name": "Li Auto",
-     "market_cap_b": 10.5,
+     "market_cap_b": 11.6,
      "eps": -0.05,
      "eps_estimate": -0.08,
      "surprise_pct": 37.5,
@@ -102,7 +102,7 @@
     {
      "symbol": "BZ",
      "name": "KANZHUN LIMITED",
-     "market_cap_b": 6.0,
+     "market_cap_b": 6.8,
      "eps": 0.27,
      "eps_estimate": -0.02,
      "surprise_pct": 1450.0,
@@ -166,7 +166,7 @@
     {
      "symbol": "IMKTA",
      "name": "Ingles Markets, Incorporated",
-     "market_cap_b": 1.6,
+     "market_cap_b": 1.4,
      "eps": 0.97,
      "eps_estimate": null,
      "surprise_pct": null,
@@ -183,12 +183,12 @@
   },
   {
    "date": "2026-11-24",
-   "reported_total": 45,
+   "reported_total": 41,
    "top": [
     {
      "symbol": "DELL",
      "name": "Dell Technologies",
-     "market_cap_b": 187.7,
+     "market_cap_b": 188.9,
      "eps": 9.16,
      "eps_estimate": 6.55,
      "surprise_pct": 39.85,
@@ -205,7 +205,7 @@
     {
      "symbol": "ADI",
      "name": "Analog Devices",
-     "market_cap_b": 151.6,
+     "market_cap_b": 160.8,
      "eps": 4.06,
      "eps_estimate": 3.89,
      "surprise_pct": 4.37,
@@ -222,7 +222,7 @@
     {
      "symbol": "MDT",
      "name": "Medtronic",
-     "market_cap_b": 123.0,
+     "market_cap_b": 122.9,
      "eps": 1.34,
      "eps_estimate": 1.34,
      "surprise_pct": null,
@@ -239,7 +239,7 @@
     {
      "symbol": "ADSK",
      "name": "Autodesk",
-     "market_cap_b": 53.4,
+     "market_cap_b": 51.6,
      "eps": 2.86,
      "eps_estimate": 2.27,
      "surprise_pct": 25.99,
@@ -255,7 +255,7 @@
     {
      "symbol": "WDAY",
      "name": "Workday",
-     "market_cap_b": 43.2,
+     "market_cap_b": 42.9,
      "eps": 1.07,
      "eps_estimate": 1.28,
      "surprise_pct": -16.41,
@@ -271,7 +271,7 @@
     {
      "symbol": "DLTR",
      "name": "Dollar Tree",
-     "market_cap_b": 29.0,
+     "market_cap_b": 28.3,
      "eps": 1.16,
      "eps_estimate": 0.89,
      "surprise_pct": 30.34,
@@ -288,7 +288,7 @@
     {
      "symbol": "HPQ",
      "name": "HP",
-     "market_cap_b": 25.2,
+     "market_cap_b": 28.1,
      "eps": 0.83,
      "eps_estimate": 0.74,
      "surprise_pct": 12.16,
@@ -304,7 +304,7 @@
     {
      "symbol": "BBY",
      "name": "Best Buy Co.",
-     "market_cap_b": 20.9,
+     "market_cap_b": 21.5,
      "eps": 1.62,
      "eps_estimate": 1.48,
      "surprise_pct": 9.46,
@@ -320,7 +320,7 @@
     {
      "symbol": "BURL",
      "name": "Burlington Stores",
-     "market_cap_b": 15.3,
+     "market_cap_b": 15.6,
      "eps": 1.73,
      "eps_estimate": 1.67,
      "surprise_pct": 3.59,
@@ -334,20 +334,20 @@
      "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BURL&type=8-K&dateb=&owner=include&count=10"
     },
     {
-     "symbol": "NTNX",
-     "name": "Nutanix",
-     "market_cap_b": 14.9,
-     "eps": 0.54,
-     "eps_estimate": 0.29,
-     "surprise_pct": 86.21,
+     "symbol": "DKS",
+     "name": "Dick's Sporting Goods",
+     "market_cap_b": 14.1,
+     "eps": 1.94,
+     "eps_estimate": 1.38,
+     "surprise_pct": 40.58,
      "timing": "time-not-supplied",
      "bullets": [
       "Report time wasn't listed by the data source.",
-      "Earnings per share were $0.54 versus $0.29 expected, so the company beat estimates by 86.2%.",
+      "Earnings per share were $1.94 versus $1.38 expected, so the company beat estimates by 40.6%.",
       "Covers the quarter ending Oct 2026."
      ],
      "ai_summary": null,
-     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NTNX&type=8-K&dateb=&owner=include&count=10"
+     "filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DKS&type=8-K&dateb=&owner=include&count=10"
     }
    ]
   },
