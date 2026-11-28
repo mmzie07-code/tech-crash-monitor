@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-27T21:40:31.030313Z",
- "asof": "2026-11-27",
+ "generated": "2026-11-28T04:15:14.678395Z",
+ "asof": "2026-11-28",
  "priced": [
   {
    "sym": "FBLLU",
@@ -655,7 +655,7 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": 0.0,
-    "now_pct": 11.0,
+    "now_pct": 11.1,
     "last": 14.44,
     "last_date": "2026-11-27",
     "first_trade": "2026-08-12"
@@ -673,7 +673,7 @@
    "lockup": "2027-02-08",
    "perf": {
     "first_day_pct": -38.6,
-    "now_pct": -92.7,
+    "now_pct": -92.6,
     "last": 0.37,
     "last_date": "2026-11-27",
     "first_trade": "2026-08-12"
@@ -1825,40 +1825,6 @@
    "amount": 80000000.0,
    "spac": true,
    "lockup": "2026-11-18"
-  },
-  {
-   "sym": "OHACU",
-   "name": "Oceanhawk Acquisition Corp.",
-   "exchange": "NASDAQ Capital",
-   "price": 10.0,
-   "date": "2026-05-21",
-   "shares": 16000000.0,
-   "amount": 160000000.0,
-   "spac": true,
-   "lockup": "2026-11-17"
-  },
-  {
-   "sym": "APURU",
-   "name": "Aperture AC",
-   "exchange": "NASDAQ Global",
-   "price": 10.0,
-   "date": "2026-05-21",
-   "shares": 9000000.0,
-   "amount": 90000000.0,
-   "spac": true,
-   "lockup": "2026-11-17"
-  },
-  {
-   "sym": "CNXU",
-   "name": "Conexeu Sciences Inc.",
-   "exchange": "NASDAQ Capital",
-   "price": null,
-   "date": "2026-05-21",
-   "shares": 9481123.0,
-   "amount": null,
-   "spac": false,
-   "lockup": "2026-11-17",
-   "perf": null
   }
  ],
  "upcoming": [],
@@ -2170,34 +2136,13 @@
    "date": "2026-09-29",
    "amount": 86250000.0,
    "spac": true
-  },
-  {
-   "sym": "SRAV",
-   "name": "Source Agriventures Inc.",
-   "date": "2026-09-28",
-   "amount": 15000000.0,
-   "spac": false
-  },
-  {
-   "sym": "OSACU",
-   "name": "Orange Street Acquisition Corp",
-   "date": "2026-09-28",
-   "amount": 74750000.0,
-   "spac": true
-  },
-  {
-   "sym": "CSEAU",
-   "name": "Calm Seas Acquisition Corp.",
-   "date": "2026-09-28",
-   "amount": 230000000.0,
-   "spac": true
   }
  ],
  "withdrawn_30d": 8,
  "stats": {
   "window_days": 190,
-  "priced": 65,
-  "spacs": 68,
+  "priced": 64,
+  "spacs": 66,
   "traded": 55,
   "raised": 201460287635.0,
   "median_first_day": 0.8,

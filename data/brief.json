@@ -1,43 +1,43 @@
 {
- "date": "2026-11-25",
- "generated": "2026-11-27T04:43:35.480536Z",
- "headline": "US stocks finished little changed. The S&P 500 fell 0.25%, with 8 of 11 sectors up.",
+ "date": "2026-11-27",
+ "generated": "2026-11-28T04:29:07.141770Z",
+ "headline": "US stocks finished higher. The S&P 500 rose 1.60%, with 11 of 11 sectors up.",
  "sections": [
   {
    "title": "How the market did",
    "bullets": [
-    "S&P 500: -0.25% today, -6.99% this month, +4.73% this year",
-    "Dow Jones: +0.33% today, -4.19% this month, +3.72% this year",
-    "Nasdaq Composite: -0.62% today, -10.92% this month, +1.51% this year",
-    "Russell 2000: +0.71% today, -4.07% this month, +7.81% this year"
+    "S&P 500: +1.60% today, -5.77% this month, +6.40% this year",
+    "Dow Jones: +1.18% today, -3.24% this month, +4.95% this year",
+    "Nasdaq Composite: +2.31% today, -9.12% this month, +3.85% this year",
+    "Russell 2000: +1.71% today, -2.83% this month, +9.65% this year"
    ]
   },
   {
    "title": "Sectors: leaders and laggards",
    "bullets": [
-    "Leading: Materials +2.07%, Real Estate +0.92%, Communication +0.89%",
-    "Lagging: Technology -0.83%, Health Care -0.56%, Consumer Discretionary -0.20%",
-    "8 of 11 sectors rose."
+    "Leading: Technology +2.80%, Consumer Discretionary +2.11%, Communication +1.99%",
+    "Lagging: Utilities +0.28%, Health Care +0.28%, Consumer Staples +0.41%",
+    "11 of 11 sectors rose."
    ]
   },
   {
    "title": "Rates, currencies, commodities",
    "bullets": [
-    "VIX (fear gauge): 26.80 (-5.27% today)",
-    "10-year Treasury yield: 4.85% (-0.06 pts today)",
-    "US dollar index: 103.67 (+0.00% today)",
-    "Crude oil: 85.74 (+2.46% today)",
-    "Gold: 3,657.80 (+3.45% today)",
-    "Bitcoin: 61,447.53 (+1.77% today)"
+    "VIX (fear gauge): 23.81 (-11.16% today)",
+    "10-year Treasury yield: 4.94% (+0.09 pts today)",
+    "US dollar index: 104.01 (+0.33% today)",
+    "Crude oil: 83.08 (-0.72% today)",
+    "Gold: 3,668.50 (+3.75% today)",
+    "Bitcoin: 59,865.53 (-1.04% today)"
    ]
   },
   {
    "title": "Why it may matter",
    "bullets": [
-    "Oil +2.46% today. Energy prices feed into inflation expectations, which can influence interest rates and airline, shipping and energy stocks.",
-    "The 10-year yield moved -0.06 points to 4.85%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
-    "Gold moved +3.45%. Investors often buy gold when they are worried about inflation or turmoil.",
-    "A 2.9-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
+    "The 10-year yield moved +0.09 points to 4.94%. Higher yields make safer bonds more competitive with stocks and can weigh on expensive growth and tech shares.",
+    "The VIX fell -11.16% to 23.8, a sign of calming nerves.",
+    "Gold moved +3.75%. Investors often buy gold when they are worried about inflation or turmoil.",
+    "A 2.5-point gap between the best and worst sectors means money is rotating between parts of the economy, not moving as one."
    ]
   },
   {
@@ -50,70 +50,62 @@
    ]
   },
   {
-   "title": "Just happened",
-   "bullets": [
-    "GDP second estimate: revised economic growth: Real gross domestic product (GDP) increased at an annual rate of 4.3 percent in the third quarter of 2026 (July, August, and September).",
-    "Personal income and spending, including PCE inflation: Personal income increased $201.8 billion (0.7 percent at a monthly rate) in October.",
-    "Fed Beige Book: The Fed published its Beige Book on regional business conditions."
-   ]
-  },
-  {
    "title": "AI & Tech Watch",
    "bullets": [
-    "Market health score 12 out of 100 (Danger; higher is better) (unchanged from 12 on 2026-11-24).",
-    "Warning signs flashing: AI capex vs revenue gap; Credit stress (junk bonds vs Treasuries); Fear spike; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
+    "Market health score 38 out of 100 (Warning; higher is better) (+26 from 12 on 2026-11-25).",
+    "Warning signs flashing: AI capex vs revenue gap; Trend breakdown; Insider selling; Semiconductor leadership break (AI narrative proxy).",
     "9 of 10 checks are live. The score is a modest tilt in odds, not a prediction."
    ]
   }
  ],
  "headlines": [
   {
-   "title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends \u2018whenever I want it\u2019",
+   "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/27/us-iran-war-trump-hormuz-italian-killed-trump.html",
-   "published": "Fri, 27 Nov 2026 03:30:23"
+   "link": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html",
+   "published": "Fri, 27 Nov 2026 22:00:57"
   },
   {
-   "title": "SpaceX shares jump on alternative trading platform after Musk says he will expand share donations",
-   "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/27/spacex-shares-musk-donations.html",
-   "published": "Fri, 27 Nov 2026 04:20:55"
-  },
-  {
-   "title": "Trump demands probe into \u2018record setting error\u2019 after third-quarter GDP data gets massive revision higher",
+   "title": "Trump demands probe into 'record setting error' after third-quarter GDP data gets massive revision higher",
    "source": "CNBC",
    "link": "https://www.cnbc.com/2026/11/26/trump-gdp-revision-investigation.html",
-   "published": "Thu, 26 Nov 2026 21:13:17"
+   "published": "Fri, 27 Nov 2026 15:52:00"
   },
   {
-   "title": "Sovereign wealth funds are acting more like private equity giants \u2014 and inheriting their risks",
+   "title": "The S&P 500 is in a correction. Bear markets and recessions don't always follow",
    "source": "CNBC",
-   "link": "https://www.cnbc.com/2026/11/27/swf-private-equity-risks.html",
-   "published": "Fri, 27 Nov 2026 00:22:29"
+   "link": "https://www.cnbc.com/2026/11/27/the-sp-500-is-in-a-correction-bear-markets-and-recessions-dont-always-follow.html",
+   "published": "Fri, 27 Nov 2026 13:21:56"
+  },
+  {
+   "title": "Budget airline Norse Atlantic files for bankruptcy in Europe after failing to secure funding",
+   "source": "CNBC",
+   "link": "https://www.cnbc.com/2026/11/27/norse-atlantic-bankruptcy-fuel-costs.html",
+   "published": "Fri, 27 Nov 2026 18:20:32"
+  },
+  {
+   "title": "I\u2019m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
+   "source": "MarketWatch",
+   "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
+   "published": "Sat, 28 Nov 2026 00:00:00"
   },
   {
    "title": "I hate that Jensen Huang is back at Nvidia, but I love what it\u2019s done for my 401(k). Am I a hypocrite?",
    "source": "MarketWatch",
    "link": "https://www.marketwatch.com/story/i-hate-that-jensen-huang-is-back-at-nvidia-but-i-love-what-its-done-for-my-401-k-am-i-a-hypocrite-f63c0303?mod=mw_rss_topstories",
-   "published": "Fri, 27 Nov 2026 01:15:00"
+   "published": "Fri, 27 Nov 2026 23:30:00"
   },
   {
-   "title": "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?",
+   "title": "Clearing out my parents\u2019 house was a legal nightmare. How can I downsize without putting my kids through the same ordeal?",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
-   "published": "Fri, 27 Nov 2026 01:00:00"
+   "link": "https://www.marketwatch.com/story/clearing-out-my-parents-house-was-a-legal-nightmare-how-can-i-downsize-without-putting-my-children-through-the-same-ordeal-6537d804?mod=mw_rss_topstories",
+   "published": "Fri, 27 Nov 2026 23:15:00"
   },
   {
-   "title": "We are living in perilous times if Nvidia CEO Jensen Huang dictates your 401(k) balance",
+   "title": "These stocks soared the most during a wild week highlighted by Huang\u2019s return to Nvidia",
    "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/we-are-living-in-perilous-times-if-nvidias-jensen-huang-dictates-your-401-k-balance-e0942d1e?mod=mw_rss_topstories",
-   "published": "Fri, 27 Nov 2026 00:31:00"
-  },
-  {
-   "title": "\u2018I\u2019ve been a stay-at-home mom\u2019: I\u2019m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?",
-   "source": "MarketWatch",
-   "link": "https://www.marketwatch.com/story/ive-been-a-stay-at-home-mom-im-50-and-have-a-chronic-illness-my-husband-lost-his-job-should-he-raid-his-401-k-63e59123?mod=mw_rss_topstories",
-   "published": "Thu, 26 Nov 2026 22:00:00"
+   "link": "https://www.marketwatch.com/story/these-stocks-soared-the-most-during-a-wild-week-highlighted-by-huangs-return-to-nvidia-578b3f9a?mod=mw_rss_topstories",
+   "published": "Fri, 27 Nov 2026 20:16:00"
   }
  ],
  "summary": null,
